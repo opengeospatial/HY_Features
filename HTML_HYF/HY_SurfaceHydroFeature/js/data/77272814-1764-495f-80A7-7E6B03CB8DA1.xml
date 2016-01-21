@@ -1,8 +1,0 @@
-tocTab[tocTab.length] = new Array("0.2:1", "", "«FeatureType» HY_Bank", "EARoot/EA2/EA13.htm", "5.png", "7805", "0", "", "Class0","{05047BD0-DD24-4531-9DC4-CA1C0A54E2C4}");
-tocTab[tocTab.length] = new Array("0.2:2", "", "«FeatureType» HY_Channel", "EARoot/EA2/EA14.htm", "5.png", "7808", "0", "", "Class0","{68C40568-F042-4b27-8E75-FCC7A7D4B74F}");
-tocTab[tocTab.length] = new Array("0.2:3", "", "«CodeList» HY_DrainagePattern", "EARoot/EA2/EA15.htm", "5.png", "7810", "0", "", "Class0","{6EBBE152-21F5-4f1b-9E5C-A7E2935052DB}");
-tocTab[tocTab.length] = new Array("0.2:4", "", "«FeatureType» HY_ChannelNetwork", "EARoot/EA2/EA16.htm", "5.png", "7809", "0", "", "Class0","{6E3108BD-7B97-4be1-A022-836984D0D1B8}");
-tocTab[tocTab.length] = new Array("0.2:5", "", "«FeatureType» HY_ChannelSegment", "EARoot/EA2/EA17.htm", "5.png", "7806", "0", "", "Class0","{4726AE70-32A2-4f99-A953-7DCE7894BD52}");
-tocTab[tocTab.length] = new Array("0.2:6", "", "«FeatureType» HY_Coast", "EARoot/EA2/EA18.htm", "5.png", "7807", "0", "", "Class0","{5844612F-B6FE-4042-8A44-A9C2CFFD8A36}");
-tocTab[tocTab.length] = new Array("0.2:7", "", "«FeatureType» HY_Reach", "EARoot/EA2/EA19.htm", "5.png", "7812", "0", "", "Class0","{B88BF8FD-833E-4b0f-8AC3-E25169513BEF}");
-tocTab[tocTab.length] = new Array("0.2:8", "", "«FeatureType» HY_RiverBed", "EARoot/EA2/EA20.htm", "5.png", "7811", "0", "", "Class0","{A115759E-7D43-4a47-BE4C-E5087327CF94}");
