@@ -1,0 +1,7 @@
+tocTab[tocTab.length] = new Array("0.4:1", "", "River Positioning", "EARoot/EA4/EA54.htm", "175.png", "3655", "0", "", "Diagram diagram0","{D609921A-7C8D-4411-ADAC-0794D654525D}");
+tocTab[tocTab.length] = new Array("0.4:2", "", "«DataType» HY_DistanceToRefPoint", "EARoot/EA4/EA56.htm", "5.png", "7930", "0", "", "Class0","{0719ADA7-1E14-4055-8FED-BBE940051F20}");
+tocTab[tocTab.length] = new Array("0.4:3", "", "«FeatureType» HY_IndirectPosition", "EARoot/EA4/EA57.htm", "5.png", "7932", "0", "", "Class0","{62A4DBD2-8FB5-4489-AE38-E5EC4723D314}");
+tocTab[tocTab.length] = new Array("0.4:4", "", "«DataType» HY_RelativePosition", "EARoot/EA4/EA58.htm", "5.png", "7933", "0", "", "Class0","{71A38116-8D2E-47f0-833B-6A5EA82879F5}");
+tocTab[tocTab.length] = new Array("0.4:5", "", "«FeatureType» HY_RiverReferenceSystem", "EARoot/EA4/EA59.htm", "5.png", "7935", "0", "", "Class0","{EA0E3CF3-DF2C-407f-A0FD-ED4E2BB1A05C}");
+tocTab[tocTab.length] = new Array("0.4:6", "", "«FeatureType» HY_RiverReferenceSystemAxis", "EARoot/EA4/EA60.htm", "5.png", "7931", "0", "", "Class0","{40FEEF7E-5F23-48cf-BF4F-68CA7FE4FE40}");
+tocTab[tocTab.length] = new Array("0.4:7", "", "«CodeList» HY_RelativePositionDescription", "EARoot/EA4/EA61.htm", "5.png", "7934", "0", "", "Class0","{B5645583-E781-43c3-B270-D4EC7EA02D52}");
