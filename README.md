@@ -1,8 +1,8 @@
 # HY_Features Repository
 
-This repository is currently used to host a GitHub Pages view of the HY\_Features model.
+This repository is currently used to host a GitHub Pages view of the HY\_Features model as well as a rough draft of the specification document.
 
-## Packages:
+## Links to Packages in the GitHub Pages view of the application:
 ### Normative:
 [HY\_HydroFeature](http://opengeospatial.github.io/HY_Features/HTML_HYF/HY_HydroFeature/index.htm)  
 [HY\_Utilities](http://opengeospatial.github.io/HY_Features/HTML_HYF/HY_Utilities/index.htm)  
