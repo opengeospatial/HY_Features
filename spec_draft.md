@@ -270,11 +270,11 @@ Mass of water distinct from other masses of water. [3]
 
 NOTE: This refers to water bodies accumulating water on and below the land surface.
 
-Conventions
+## 5. Conventions
 
 This sections provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.
 
-Identifiers
+### 5.1 Identifiers
 
 The normative provisions in this specification are denoted by the URI
 
@@ -282,7 +282,7 @@ http://www.opengis.net/spec/{standard}/{m.n}
 
 All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
 
-Symbols (and abbreviated terms)
+### 5.2 Symbols (and abbreviated terms)
 
 CHy  WMO Commission for Hydrology
 
@@ -310,27 +310,29 @@ WMO  World Meteorological Organization
 
 XML  eXtensible Markup Language
 
-UML notation
+### 5.3 UML notation
 
 Most diagrams that appear in this specification are presented using the Unified Modeling Language (UML) static structure diagram, as described in Subclause 5.2 of the OGC Web Services Common Implementation Specification (OGC 04-016r2). UML classes are named in UpperCamelCase and property names in lowerCamelCase.
 
-WMO Terminology
+### 5.4 WMO Terminology
 
 The HY\_Featuresmodel uses as far as possible the terminology recommended for use in the WMO Member countries. The key reference is the "International Glossary of Hydrology" [3], a joint publication of the WMO and the UNESCO. Wherever appropriate, terms from this glossary are applied to the feature concepts to capture meaning and contextual relationships. Differences in terminology were explored through reconciling the definitions documented in the IGH with the aspects reflected in various data sets and products in use, augmenting the accepted definitions having explicit semantics with the relationships inferred from other terminology.
 
 Some requirements classes defined in this standard refer to the Scoped Name concept of ISO19103. Intended to form a basis for information and data sharing in the community of the WMO member countries, the _Scoped Name_ should reflect a name endorsed by the WMO.
 
-Naming convention
+### 5.4 Naming convention
 
 The _HY_-prefix used in the UML model follows the ISO naming conventions for UML elements. There is no explicit requirement to use this name in an implementation for the same semantic elements, but it is required to provide an explicit mapping between terminology used and HY\_Features to unambiguously indicate hydrologic feature concepts to support unambiguous interpretation in cross-domain applications. While there is not a recognized standard method for recording mappings between abstract element names and implementations; it is expected that system interoperability will be facilitated by making such mappings available as part of a dataset's documentation.
 
 The _EXT_-prefix refers to "external", common patterns that are required, but not hydrology-specific, and should be imported when available from an external source.
 
-Clauses not Containing Normative Material
-  The abstract hydrology phenomenon
+## 6. Clauses not Containing Normative Material
+  
+### 6.1 The abstract hydrology phenomenon
 
 Processes that continuously deplete and replenish water resources cause or result in a wide range of phenomena that are the subject of monitoring, modeling and reporting in hydrology and related sciences. These distinctly named or otherwise uniquely identified real-world hydrologic phenomena are conceptualized and referred to as hydrologic features in this standard. This standard applies to data and data products that represent these hydrologically defined features.
-
+  
+![Figure 3: Processes of the Hydrologic Cycle](http://water.usgs.gov/edu/graphics/watercyclesummary.jpg)  
 Figure 3: Processes of the Hydrologic Cycle
 
 Water is moving from the atmosphere to the Earth and back to the atmosphere due to the processes forming the Water Cycle (_3_). Water from precipitation reaching the land surface is accumulated in water bodies occupying empty space on the land surface or in water bearing formations of soil and rock. Excess water overflows these formations and is driven downhill by gravity. Water flowing over soil or rock causes erosion to occur. This erosion tends to concentrate flowing water into water bodies that flow downhill using a connecting system of channels intersecting other water bodies along their way to a common outlet, conceptualized as a potentially complex outfall feature.
