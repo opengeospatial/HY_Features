@@ -98,7 +98,7 @@ b)Any one of the Distributed Computing Platform profiles specified in Annexes TB
 
 All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.
 
-References
+## 3. References
 
 The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
 
@@ -116,22 +116,18 @@ ISO 19115:2012, Geographic Information — Metadata – Fundamentals (Draft)
 
 ISO 19156:2011, Geographic Information — Observations and Measurements
 
-Terms and Definitions
+## 4. Terms and Definitions
 
 This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r8], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word "shall" (not "must") is the verb form used to indicate a requirement to be strictly followed to conform to this standard.
 
 For the purposes of this document, the following additional terms and definitions apply.
 
-**4.1**
-
-application schema
+### 4.1 application schema
 
 Conceptual schema for data required by one or more applications
 [ISO 19101].
 
-**4.2**
-
-catchment
+### 4.2 catchment
 
 A physiographic unit where hydrologic processes take place.  This class denotes a physiographic unit, which is defined by a hydrologically determined outlet to which all waters flow. While a catchment exists, it may or may not be clearly identified for repeated study.
 
@@ -141,130 +137,94 @@ The synonym use of the terms catchment and catchment area as documented in the W
 
 The essential logic separation of concerns between a common concept and its representation (interpretable data) is dealt by defining separate features for the catchment and its representation and may be understood as a refinement of the complex, ambiguous definition given in the glossary. See also clause 5.4 of this standard on the use of WMO terminology.
 
-**4.3**
-
-data
+### 4.3 data
 
 documented value of some characteristics of a real-world phenomenon.
 
-**4.4**
-
-data set
+### 4.4 data set
 
 data compiled and arranged into a set.
 
-**4.5**
-
-data product
+### 4.5 data product
 
 dataset compiled for a specific purpose, e.g. for global dissemination using Web services.
 
-**4.6**
-
-domain feature
+### 4.6 domain feature
 
 Feature of a type defined within a particular application domain.
 [ISO19156].
 
-**4.7**
-
-feature
+### 4.7 feature
 
 Abstraction of real-world phenomena.
 [ISO19101]
 
-**4.8**
-
-hydrographic network
+### 4.8 hydrographic network
 
 Aggregate of rivers and other permanent or temporary watercourses, and also lakes and reservoirs. [3]
 
 NOTE: Not to be confused with the network of  hydrological stations and  observing posts.
 
-**4.9**
-
-hydrography
+### 4.9 hydrography
 
 Science dealing with the description and measurement of open bodies of water. [3]
 
 NOTE: In this context, hydrography refers to the description of water bodies. Its measurement in terms of surveying, e.g. for navigational purposes, is not in the concern of the HY\_Features model.
 
-**4.10**
-
-hydrologic feature
+### 4.10 hydrologic feature
 
 Feature (abstraction of a real-world phenomenon) of a type defined in the hydrology domain. A feature whose identity needs to be maintained and tracked through a processing chain from measurement to distribution of hydrologic information.
 
-**4.11**
-
-hydrology
+### 4.11 hydrology
 
 Science that deals with the waters above and below the land surfaces of the Earth, their occurrence, circulation and distribution, both in time and space, their biological, chemical and physical properties, their reaction with their environment, including their relation to living beings. [3]
 
-**4.12**
-
-hydrometric  feature
+### 4.12 hydrometric  feature
 
 Feature (abstraction of a real-world phenomenon) of a type defined in the process of measurement and analysis of hydrology (hydrometry).
 
 NOTE: The hydrometric feature refers to a physical structure intended to observe properties of a hydrologic feature. Used to sample a hydrologic feature, a hydrometric feature may be considered a sampling feature of observation. A sampling feature is described in general in ISO 19156, the special monitoring point of hydrologic observation is described in the _WaterML 2.0_ Specification [5].
 
-**4.13**
-
-hydrometry
+### 4.13 hydrometry
 
 Science of the measurement and analysis of water including methods, techniques and instrumentation used in hydrology. [3]
 
-**4.14**
-
-mapping
+### 4.14 mapping
 
 Establishing a semantic relationship between particular implementations of a common concept and the realized normative concept using a formalism that specifies how elements from a source model may be transformed to a target model.
 
-**4.15**
-
-multilingual keyword
+### 4.15 multilingual keyword
 
 Keyword used in a multilingual context.
 
 NOTE: A keyword is generally described in ISO 19115.
 
-**4.16**
-
-named feature
+### 4.16 named feature
 
 Feature identified by a name.
 
 NOTE: Hydrologic features and their real-world representations have names within common experience, but may have different names in their cultural, political and historical contexts.
 
-**4.17**
-
-representation
+### 4.17 representation
 
 any processible data, data set, or data product, which can be used in the place of an existing feature concept.
 
-**4.18** river positioning system
+### 4.18** river positioning system
 
 Linear system used to reference indirect positions along a watercourse.
 
-**4.19**
-
-sampling feature
+### 4.19 sampling feature
 
 An artifact of an observational strategy or system such as a sensor… intended to sample some feature of interest in an application domain.
 [ISO 19156]
 
-**4.20**
-
-storage
+### 4.20 storage
 
 Impounding of water in surface or underground reservoirs, for future use. [3]
 
 NOTE: Storage refers to a water body in terms of a usable water resource. The management of the reservoir as human action with the objective to efficient and sustainable use the resource, is not in the scope of  the conceptual model. Yet, often an indication is required whether a water body is used for storage.
 
-**4.21**
-
-water body
+### 4.21 water body
 
 Mass of water distinct from other masses of water. [3]
 
