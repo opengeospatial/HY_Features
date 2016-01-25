@@ -305,7 +305,8 @@ As described above, the most general abstraction of the hydrology phenomenon is 
 - Some applications require cartographic (visual) representations while others are focused on topological (network connectivity) relationships (_4_).
 - A catchment may be described geometrically by streamlines, drainage area or the bounding polygon, or topologically as a graph of nodes and links.
 - Analyses and reports of catchments and landscape characteristics are referenced to areas of study or boundaries, while observation with sensors or other methods are referenced to monitoring points forming an hydrometric network.
-
+  
+![Figure 4: Cartographic vs. topological representation](img/fig4.png)  
 Figure 4: Cartographic vs. topological representation
 
 In inter-disciplinary programs, inter-program collaboration and cross-domain research projects, the catchment is addressed as the monitoring and reporting unit whereby monitoring stations are usually placed on a flowline in relation to identified reference points.  Across administrative jurisdictions, the catchment is the agreed unit of water resources assessment and management.  For example at a national scale "Hydrologic Unit Code" (HUC) catchments are defined by the US Geological Survey for the National Water Information System (NWIS) . [7] Another example are the so-called "River Basin Districts" of the European Water Framework Directive [6] designated not to administrative or political boundaries, but rather to the natural hydrologic unit.
