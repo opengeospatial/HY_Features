@@ -76,6 +76,7 @@ The HY\_Features model allows the feature-of-interest concept of the O&M model (
 In addition, the model concepts may be used to describe the relationships of observation results (any data) to the hydrologic feature of interest they are meant to represent and in this way to link numerous spatial as well as non-spatial hydrologic data exposed via Web services. For example, a discovery service such as a catalog of catchments could use the concepts defined here to provide machine interpretable pointers to services that provide differing geospatial representations of the same catchments as well as data from water quality and water quantity observations that characterize some aspects of the catchments.
 
 ![Figure 1: HY_Features in the context of the OGC Abstract Specifications](figs/fig1.png)
+Figure 1: HY_Features in the context of the OGC Abstract Specifications
 
 ## 2. Conformance
 
@@ -294,8 +295,8 @@ The _EXT_-prefix refers to "external", common patterns that are required, but no
 
 Processes that continuously deplete and replenish water resources cause or result in a wide range of phenomena that are the subject of monitoring, modeling and reporting in hydrology and related sciences. These distinctly named or otherwise uniquely identified real-world hydrologic phenomena are conceptualized and referred to as hydrologic features in this standard. This standard applies to data and data products that represent these hydrologically defined features.
   
-![Figure 1: Processes of the Hydrologic Cycle](http://water.usgs.gov/edu/graphics/watercyclesummary.jpg)  
-Figure 1: Processes of the Hydrologic Cycle
+![Figure 2: Processes of the Hydrologic Cycle](http://water.usgs.gov/edu/graphics/watercyclesummary.jpg)  
+Figure 2: Processes of the Hydrologic Cycle
 
 Water is moving from the atmosphere to the Earth and back to the atmosphere due to the processes forming the Water Cycle (_1_). Water from precipitation reaching the land surface is accumulated in water bodies occupying empty space on the land surface or in water bearing formations of soil and rock. Excess water overflows these formations and is driven downhill by gravity. Water flowing over soil or rock causes erosion to occur. This erosion tends to concentrate flowing water into water bodies that flow downhill using a connecting system of channels intersecting other water bodies along their way to a common outlet, conceptualized as a potentially complex outfall feature.
 
@@ -308,7 +309,83 @@ As described above, the most general abstraction of the hydrology phenomenon is 
 - A catchment may be described geometrically by streamlines, drainage area or the bounding polygon, or topologically as a graph of nodes and links.
 - Analyses and reports of catchments and landscape characteristics are referenced to areas of study or boundaries, while observation with sensors or other methods are referenced to monitoring points forming an hydrometric network.
   
-![Figure 2: Cartographic vs. topological representation](figs/fig3.png)  
-Figure 2: Cartographic vs. topological representation
+![Figure 3: Cartographic vs. topological representation](figs/fig3.png)  
+Figure 3: Cartographic vs. topological representation
 
 In inter-disciplinary programs, inter-program collaboration and cross-domain research projects, the catchment is addressed as the monitoring and reporting unit whereby monitoring stations are usually placed on a flowline in relation to identified reference points. Across administrative jurisdictions, the catchment is the agreed unit of water resources assessment and management. For example at a national scale "Hydrologic Unit Code" (HUC) catchments are defined by the US Geological Survey for the National Water Information System (NWIS) . [7] Another example are the so-called "River Basin Districts" of the European Water Framework Directive [6] designated not to administrative or political boundaries, but rather to the natural hydrologic unit.
+
+### 6.2 Catchment and catchment representation
+The core concept of HY_Features model is that a study of the Hydrology phenomenon will reflect common concepts of the real world by specific modeled features (as per ISO 19109 General Feature Model). Depending on the scientific concern, the relevant hydrologic feature may represent different aspects of the Hydrology phenomenon. 
+Recognized as the unit of study across hydrologic disciplines, a catchment may be represented in various sub-domain models, including by a simple tree network of blue lines, or the network of catchments. Catchment boundary (watershed), catchment area, a linear flowpath, the hydrographic or channel network and also the  hydrometric network of stations are alternative views representing the same catchment, whereby each data product represents exactly one catchment. Figure 5 shows different types of geospatial data overlaying the represented Missouri region.
+
+Figure 5: Multiple representation of the Missouri catchment (Source: USGS and GRDC)  
+
+a) Catchment boundary (watershed),  
+b) Catchment area,  
+c) Hydrologic unit containing sub-units,  
+d) Abstract flowline and common outlet,  
+e) Network of flow lines at different level of detail,  
+f) Network of monitoring stations  
+
+### 6.3 Catchment hierarchy and network topology
+Following the holistic approach of today’s environmental reporting it may be concluded that a hydrologic determination exists for the catchment to which the reporting refers. However, in the reporting practice this hydrologic determination often is not clearly expressed. Rather an approach is applied that understands a catchment as the jurisdictional framework to bring together hydrologic information represented in geospatial data products related to regions nested or aggregated in the containing catchment. The HY_Features conceptual model follows this approach by defining the Catchment as the unit where hydrologic processes take place such as flow accumulation governed by physical laws, but whose hydrologic determination is not explicitly  identified (Figure 6).  The specific, hydrologically determined catchment where runoff  is accumulated and directed to a common outlet, is denoted as a Basin identified by its common outlet (Figure 7). This definition refers to the definitions of basin,  drainage basin and groundwater basin given in the WMO-UNESCO International Glossary of Hydrology, describing the drained physiographic units whose waters are flowing to a common outlet.  
+
+Figure 6: Catchment area representing the unit where hydrologic processes take place  
+
+Figure 7:  Flowpath representing the hydrologically determined basin  
+
+A Catchment may be nested or aggregated in a containing high-order catchment to support a simple downstream hierarchy of catchments (Figure 8, Figure 9). To reflect the commonly applied organization of basins in upstream hierarchies, the Basin is defined as an aggregate of sub-basins of which each may be associated with an immediate upstream basin. The basin aggregate refers to the co-existence of sub-basins identified by the common outlet having the inflow identified, or not. This allows for basin division into tributary basins and interbasins (with identified inflow). Defined as a special type of catchment, the basin inherits the nesting  defined for the catchment. (Figure 10).  
+
+Figure 8: Catchment hierarchy – catchment nesting  
+
+Figure 9: Catchment hierarchy – catchment aggregation  
+
+Figure 10: Basin hierarchy – basin, basin aggregate and nesting catchment  
+
+Understanding the Basin topologically as the link between inflow and outflow nodes, and presuming that basins are delineated using a simple tree structure, an upstream-downstream relation between outflow nodes can be built to describe a network of basins without knowing the complex hydrology between inflow and outflow nodes, whereby the outflow node of a basin coincides with the inflow node of a receiving downstream basin; the upstream basin may be described as the basin contributing to the inflow node of the relevant basin. (Figure 11)  
+
+Figure 11: Upstream-downstream relation between basin  
+
+Inflow and outflow nodes topologically located in the network of basins may get assigned a position using a reference point located in the basin network. Considering each identified  location on, or projected onto the land surface, as the common outlet of a corresponding basin, objects can be placed “on the river” using the relationship between outflow nodes (Figure 12).  
+
+Figure 12: Position of  objects “on river” using the relationship between outflow nodes  
+
+### 6.4 Aggregation and segmentation of watercourses
+Water bodies are aggregated into the hydrographic network of rivers and other permanent or temporary watercourses, and also lakes and reservoirs. Each water body may be segmented into reaches confined by vertical sections. Due to differences in thermal or salinity characteristics, by oxygen or nutrient content, a water body may be stratified into distinct horizontal layers.
+Water bodies may be aggregated into a hydrographic network using a connecting system of channels expressed in flow or drainage patterns.  This system of channels exists independently of whether water flows therein or not. It does not define whether a water body interacts with water bodies upstream and downstream. For example, normally stagnant waters may or may not be connected to streams during flood events, or streams may be interrupted to pools of stagnant water in periods of drought or not. Likewise, an aquifer system determines the potential connection between bodies of groundwater, but not causes the interaction.  
+
+Water may be stored and managed in surface or underground reservoirs in terms of a resource for future use, regulation or control. Conceptually, each water body accumulating water, or the layers therein, may be managed as a reservoir. Referring to a zone-based reservoir management storage reservoirs are also understood as stratified water bodies.  
+Water bodies are observed using monitoring stations and observing posts. Almost all stations are physical artifacts, or collections of these. Yet, some stations may be fictive ones. Monitoring stations may be connected logically in hydrometric networks which represent a distinct basin that is the subject of monitoring or reporting at local or regional scale. It is common practice to locate a monitoring station in relation to local landmarks and permanent reference points, or in relation to the extent of the monitored water body.
+
+### 6.5 The Atmospheric Hydro Feature application schema (informative)
+The Atmospheric Hydro Feature application schema provides a model to take into account water from atmospheric origin, particularly from precipitation, without the complexity the complexity and detail of a rainfall-runoff model  This enables contextually related information models to build relationships to hydrologic features, finally to a represented catchment. 
+This informative package provides concepts of water falling through the atmosphere (precipitation) to be accumulated in a water body on or below the land surface. This allows atmospheric water to be related to the hydrographic network of water bodies representing an overall catchment, as well as to a corresponding basin identified by an inflow or outflow node using a reference point associated with the accumulating water body. Special concepts of water suspended in the atmosphere may by defined with an application. Special concepts should not contradict the definitions endorsed by the WMO as published in the  "International Meteorological Vocabulary".published and maintained by the WMO [9]. 
+The Atmospheric Hydro Feature schema introduces the concepts of  HydroMeteor Precipitation, Rain and Snow.  
+ 
+Figure 12: Atmospheric Hydro Feature schema  
+
+The HY_Hydrometeor class conceptualize a meteor “consisting of an ensemble of liquid or solid water particles falling through or suspended in the atmosphere, blown by the wind from the Earth's surface or deposited on objects on the ground or in the free air” [9]. 
+The HY_Precipitation class specializes HY_HydroMeteor. It refers to falling water and does not mean the amount of  precipitation measured by means of rain-gauge, which is understood as a property of a rain feature. HY_Precipitation is not explicitly defined as a special subtype of the general HydroFeature type to allow other contextual generalizations. HY_Precipitation carries two associations: rain and snow.  
+
+The HY_Rain and HY_Snow classes define special types of liquid or solid water intended to separately reflect ice or water particles falling from a cloud.  
+
+### 6.6 The Subsurface Hydro Feature application schema (informative)
+The informative Subsurface Hydro Feature application package introduces concepts reflecting water accumulated below the land surface as well as the formation of rock or soil containing the body of water. This concept refers to the holistic approach of the basin as the unit wherein all water, surface and subsurface water, is directed to an identified common outlet. It allows subsurface water to be related to the hydrographic network of water bodies, as well as to a corresponding basin identified by an inflow or outflow node using a reference point associated with the confining unit. Special concepts of subsurface water, its confines and special relationships may be defined with an application. Special concepts should not contradict the definitions endorsed by the WMO as published in the  "International Glossary of Hydrology". A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development.  
+ 
+Figure 13: Subsurface Hydro Feature schema  
+
+#### 6.6.1 The Subsurface Water model 
+The Subsurface Water model  introduces a simple model of water accumulated in rock or soil below the land surface,  either specialized by pressure head or the property to move due to gravity and capillary action.  This allows to handle concepts of subsurface waters separately from those of  the confining aquifer. An application focused on a special type of subsurface water may use the concepts when describing the relationship of groundwater or water in soil to a basin in terms of the ultimate target of observation. Depending on the  particular application, special types may be defined and described by suitable properties.  
+
+The HY_Groundwater class specializes HY_Water_LiquidPhase with respect to the existence of water occupying the saturated zone. It inherits the accumulatingWaterBody association, which allows to relate subsurface water to the hydrographic network of water bodies.  
+
+The HY_VadoseWater class specializes HY_Water_LiquidPhase with respect to the existence of water occupying the unsaturated zone. It inherits the accumulatingWaterBody association, which allows to relate subsurface water to the hydrographic network of water bodies. HY_SoilWater, HY_SoilMoisture and HY_GravitationalWater specialize vadose water.  
+
+#### 6.6.2 The Subsurface Water Confines model
+The Subsurface Water confines model  introduces concepts of  the hydrogeologic units, particularly an aquifer, containing subsurface water, incl. the well used to extract, inject or infiltrate water from/into these. Depending on the  particular application, special types of containing units may be defined and described by suitable properties.  
+
+The HY_HydroGeologicUnit class provides a simple means for taking into account the hydrologically significant characteristics of formations of rock or soil, allowing further contextual specializations of hydro-geologic features. HY_HydroGeologicUnit  carries one association: containingUnit.  
+
+The HY_Aquifer class defines the existence of the containing unit wherein groundwater may be accumulated, understood as groundwater reservoir. The segmentation of aquifer is not in the scope of the HY_Features conceptual model. HY_Aquifer  carries one association: well.  
+
+The HY_Well class provides the concept of a well that may be used for discharge as well as recharge of water. The geometric representation of the well may vary with an application and needs to be defined with implementation. HY_Well  carries one association: wellLocation, which allows to locate the well in the network of basins.  
