@@ -75,7 +75,7 @@ The HY\_Features model allows the feature-of-interest concept of the O&M model (
 
 In addition, the model concepts may be used to describe the relationships of observation results (any data) to the hydrologic feature of interest they are meant to represent and in this way to link numerous spatial as well as non-spatial hydrologic data exposed via Web services. For example, a discovery service such as a catalog of catchments could use the concepts defined here to provide machine interpretable pointers to services that provide differing geospatial representations of the same catchments as well as data from water quality and water quantity observations that characterize some aspects of the catchments.
 
-![Figure 1: HY_Features in the context of the OGC Abstract Specifications](figs/fig1.png)
+![Figure 1: HY_Features in the context of the OGC Abstract Specifications](figs/fig1.png)  
 Figure 1: HY_Features in the context of the OGC Abstract Specifications
 
 ## 2. Conformance
@@ -318,7 +318,7 @@ In inter-disciplinary programs, inter-program collaboration and cross-domain res
 The core concept of HY_Features model is that a study of the Hydrology phenomenon will reflect common concepts of the real world by specific modeled features (as per ISO 19109 General Feature Model). Depending on the scientific concern, the relevant hydrologic feature may represent different aspects of the Hydrology phenomenon. 
 Recognized as the unit of study across hydrologic disciplines, a catchment may be represented in various sub-domain models, including by a simple tree network of blue lines, or the network of catchments. Catchment boundary (watershed), catchment area, a linear flowpath, the hydrographic or channel network and also the  hydrometric network of stations are alternative views representing the same catchment, whereby each data product represents exactly one catchment. Figure 5 shows different types of geospatial data overlaying the represented Missouri region.
 
-![Figure 4: Multiple representation of the Missouri catchment (Source: USGS and GRDC) ](figs/fig4.png)
+![Figure 4: Multiple representation of the Missouri catchment (Source: USGS and GRDC) ](figs/fig4.png)  
 Figure 4: Multiple representation of the Missouri catchment (Source: USGS and GRDC)  
 
 a) Catchment boundary (watershed),  
@@ -331,33 +331,33 @@ f) Network of monitoring stations
 ### 6.3 Catchment hierarchy and network topology
 Following the holistic approach of today’s environmental reporting it may be concluded that a hydrologic determination exists for the catchment to which the reporting refers. However, in the reporting practice this hydrologic determination often is not clearly expressed. Rather an approach is applied that understands a catchment as the jurisdictional framework to bring together hydrologic information represented in geospatial data products related to regions nested or aggregated in the containing catchment. The HY_Features conceptual model follows this approach by defining the Catchment as the unit where hydrologic processes take place such as flow accumulation governed by physical laws, but whose hydrologic determination is not explicitly identified (Figure 5). The specific, hydrologically determined catchment where runoff is accumulated and directed to a common outlet, is denoted as a dendritic catchment identified by its common outlet (Figure 6). ~This definition refers to the definitions of basin, drainage basin and groundwater basin given in the WMO-UNESCO International Glossary of Hydrology, describing the drained physiographic units whose waters are flowing to a common outlet.~
 
-![Figure 5: Catchment area (blue) representing the unit where hydrologic processes take place and flowpath representation (red).](figs/fig5.png)
+![Figure 5: Catchment area (blue) representing the unit where hydrologic processes take place and flowpath representation (red).](figs/fig5.png)  
 Figure 5: Catchment area (blue) representing the unit where hydrologic processes take place and flowpath representation (red).  
 
 A Catchment may be nested or aggregated in a containing high-order catchment to support a simple downstream hierarchy of catchments (Figure 6, Figure 7). To reflect the commonly applied organization of catchments in upstream hierarchies, the dendritic catchment is defined as an aggregate of sub-catchments of which each may be associated with an immediate upstream catchment. The catchment aggregate refers to the co-existence of sub-catchments identified by the common outlet having the inflow identified, or not. This allows for catchment division into tributary catchments and intercatchments (with identified inflow). Defined as a special type of catchment, the dendritic catchment inherits the nesting defined for the catchment. (Figure 6 and Figure 7).  
 
-![Figure 6: Catchment hierarchy – catchment nesting containingCatchment (dark blue)](figs/fig6.png)
+![Figure 6: Catchment hierarchy – catchment nesting containingCatchment (dark blue)](figs/fig6.png)  
 Figure 6: Catchment hierarchy – catchment nesting containingCatchment (dark blue)  
 
-![Figure 7: Catchment hierarchy – catchment aggregation encompassingCatchment (green)](figs/fig7.png)
+![Figure 7: Catchment hierarchy – catchment aggregation encompassingCatchment (green)](figs/fig7.png)  
 Figure 7: Catchment hierarchy – catchment aggregation encompassingCatchment (green)   
 
 Understanding the dendritic catchment topologically as the link between inflow and outflow nodes, and presuming that dendritic catchments are delineated using a simple tree structure, an upstream-downstream relation between outflow nodes can be built to describe a network of dendritic catchments without knowing the complex hydrology between inflow and outflow nodes, whereby the outflow node of a catchment coincides with the inflow node of a receiving downstream catchment; the upstream catchment may be described as the catchment contributing to the inflow node of the relevant catchment. (Figure 8 and Figure 9)  
 
-![Figure 8: Catchment contributing to an identified outflow node](figs/fig8.png)
+![Figure 8: Catchment contributing to an identified outflow node](figs/fig8.png)  
 Figure 8: Catchment contributing to an identified outflow node
 
-![Figure 9: Catchment receiving inflow via an identified inflow node](figs/fig9.png)
+![Figure 9: Catchment receiving inflow via an identified inflow node](figs/fig9.png)  
 Figure 9: Catchment receiving inflow via an identified inflow node
 
 Inflow and outflow nodes topologically located in the network of catchments may get assigned a position using a reference point located in the catchment network. Considering each identified  location on, or projected onto the land surface, as the common outlet of a corresponding catchment, objects can be placed “on the river” using the relationship between outflow nodes (Figure 10 and Figure 11).
 
-![Figure 10: Position (yellow dot) upstream of a reference point (red dot)](figs/fig10.png)
+![Figure 10: Position (yellow dot) upstream of a reference point (red dot)](figs/fig10.png)  
 Figure 10: Position (yellow dot) upstream of a reference point (red dot)  
 Yellow: point of interest (inflowNode of receivingCtmnt) - locatedStart (origin) of riverRS,  
 Red: reference point (referent) - known outflowNode of the (green) encompassingCtmnt  
 
-![Figure 11: Position (yellow dot) downstream of a reference point (red dot)](figs/fig11.png)
+![Figure 11: Position (yellow dot) downstream of a reference point (red dot)](figs/fig11.png)  
 Figure 11: Position (yellow dot) downstream of a reference point (red dot)  
 Yellow: point of interest (outflowNode of contributingCtmnt) - locatedStart (origin) of riverRS,  
 Red: reference point (referent) – known inflowNode of the (green) encompassingCtmnt  
@@ -374,7 +374,7 @@ The Atmospheric Hydro Feature application schema provides a model to take into a
 This informative package provides concepts of water falling through the atmosphere (precipitation) to be accumulated in a water body on or below the land surface. This allows atmospheric water to be related to the hydrographic network of water bodies representing an overall catchment, as well as to a corresponding catchment identified by an inflow or outflow node using a reference point associated with the accumulating water body. Special concepts of water suspended in the atmosphere may by defined with an application. Special concepts should not contradict the definitions endorsed by the WMO as published in the  "International Meteorological Vocabulary".published and maintained by the WMO [9]. 
 The Atmospheric Hydro Feature schema introduces the concepts of  HydroMeteor Precipitation, Rain and Snow.  
  
-![Figure 12: Atmospheric Hydro Feature schema](figs/fig12.png)
+![Figure 12: Atmospheric Hydro Feature schema](figs/fig12.png)  
 Figure 12: Atmospheric Hydro Feature schema  
 
 The HY_Hydrometeor class conceptualize a meteor “consisting of an ensemble of liquid or solid water particles falling through or suspended in the atmosphere, blown by the wind from the Earth's surface or deposited on objects on the ground or in the free air” [9]. 
@@ -385,7 +385,7 @@ The HY_Rain and HY_Snow classes define special types of liquid or solid water in
 ### 6.6 The Subsurface Hydro Feature application schema (informative)
 The informative Subsurface Hydro Feature application package introduces concepts reflecting water accumulated below the land surface as well as the formation of rock or soil containing the body of water. This concept refers to the holistic approach of the dendritic catchment as the unit wherein all water, surface and subsurface water, is directed to an identified common outlet. It allows subsurface water to be related to the hydrographic network of water bodies, as well as to a corresponding dendritic catchment identified by an inflow or outflow node using a reference point associated with the confining unit. Special concepts of subsurface water, its confines and special relationships may be defined with an application. Special concepts should not contradict the definitions endorsed by the WMO as published in the  "International Glossary of Hydrology". A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development.  
 
-![Figure 13: Subsurface Hydro Feature schema](figs/fig13.png)
+![Figure 13: Subsurface Hydro Feature schema](figs/fig13.png)  
 Figure 13: Subsurface Hydro Feature schema  
 
 #### 6.6.1 The Subsurface Water model 
