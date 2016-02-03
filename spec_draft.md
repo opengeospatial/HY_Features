@@ -329,13 +329,13 @@ Hydrologic and environmental monitoring and reporting is often in reference to a
 ![Figure 5: (Dendritic) catchment (blue) representing the unit where hydrologic processes take place and flowpath representation (red) connecting inflow to outflow.](figs/fig5.png)  
 Figure 5: (Dendritic) catchment (blue) representing the unit where hydrologic processes take place and flowpath representation (red) connecting inflow to outflow.  
 
-A Catchment may be nested or aggregated in a containing high-order catchment to support a simple downstream hierarchy of catchments (Figure 6, Figure 7). To reflect the commonly applied organization of catchments in upstream hierarchies, the dendritic catchment is defined as an aggregate of sub-catchments of which each may be associated with an immediate upstream or neighbouring catchment. The catchment aggregate refers to the co-existence of sub-catchments identified by the common outlet having the inflow identified, or not. This allows for catchment division into tributary catchments and intercatchments (with identified inflow). Defined as a special type of catchment, the dendritic catchment inherits the nesting defined for the catchment. (Figure 6 and Figure 7).  
+A given catchment may be nested or aggregated in a larger containing catchment to support a hierarchy of catchments. Two types of catchment hierarchy are supported in HY_Features, basic nesting and dendritic aggregation. Basic nesting is supported by allowing any catchment to have a referenced containing catchment (Figure 6). To reflect the organization of catchments in dendritic hierarchies, a specialized dendritic catchment is defined as a catchment that must have one and only one outlet (Figure 7). In this case, an aggregate of dendritic catchments refers to the co-existence of sub-catchments which all contribute to a common outlet and may or may not have inflows. Given that the dendritic catchment is defined as a special type of catchment, it inherits the general nesting defined for the catchment as shown in Figure 6.  
 
-![Figure 6: Catchment hierarchy – catchment nesting containingCatchment (dark blue)](figs/fig6.png)  
-Figure 6: Catchment hierarchy – catchment nesting containingCatchment (dark blue)  
+![Figure 6: Catchment hierarchy – Any catchment may be nested within a containingCatchment which is another catchment (dark blue)](figs/fig6.png)  
+Figure 6: Catchment hierarchy – Any catchment may be nested within a containingCatchment which is another catchment (dark blue)
 
-![Figure 7: Catchment hierarchy – catchment aggregation encompassingCatchment (green)](figs/fig7.png)  
-Figure 7: Catchment hierarchy – catchment aggregation encompassingCatchment (green)   
+![Figure 7: Catchment hierarchy – A dendritic catchment (blue) may be part of an encompassing catchment aggregate which is another specialized type of catchment (green)](figs/fig7.png)  
+Figure 7: Catchment hierarchy – A dendritic catchment (blue) may be part of an encompassing catchment aggregate which is another specialized type of catchment (green) 
 
 Understanding the dendritic catchment topologically as the link between inflow and outflow nodes, and presuming that dendritic catchments are delineated using a simple tree structure, an upstream-downstream relation between outflow nodes can be built to describe a network of dendritic catchments without knowing the complex hydrology between inflow and outflow nodes, whereby the outflow node of a catchment coincides with the inflow node of a receiving downstream catchment; the upstream catchment may be described as the catchment contributing to the inflow node of the relevant catchment. (Figure 8 and Figure 9)  
 
