@@ -337,13 +337,13 @@ Figure 6: Catchment hierarchy – Any catchment may be nested within a containin
 ![Figure 7: Catchment hierarchy – A dendritic catchment (blue) may be part of an encompassing catchment aggregate which is another specialized type of catchment (green)](figs/fig7.png)  
 Figure 7: Catchment hierarchy – A dendritic catchment (blue) may be part of an encompassing catchment aggregate which is another specialized type of catchment (green) 
 
-Understanding the dendritic catchment topologically as the link between inflow and outflow nodes, and presuming that dendritic catchments are delineated using a simple tree structure, an upstream-downstream relation between outflow nodes can be built to describe a network of dendritic catchments without knowing the complex hydrology between inflow and outflow nodes, whereby the outflow node of a catchment coincides with the inflow node of a receiving downstream catchment; the upstream catchment may be described as the catchment contributing to the inflow node of the relevant catchment. (Figure 8 and Figure 9)  
+A dendritic catchment can be thought of as a topological link between inflow and outflow nodes. Given this, dendritic catchments can be represented using a simple tree structure where an upstream-downstream relation to describe a network of dendritic catchments can be built without the need for complex hydrography between inflow and outflow nodes. In this dendritic network of catchments, catchments flowing into another flow to the same outflow node (Figure 8) which is the inflow node of a receiving downstream catchment (Figure 9); the upstream catchment may be described as the catchment contributing to the inflow node of the relevant catchment. (Figure 8 and Figure 9)  
 
-![Figure 8: Catchment contributing to an identified outflow node](figs/fig8.png)  
-Figure 8: Catchment contributing to an identified outflow node
+![Figure 8: Catchments contributing to an identified outflow node. Note that some catchments contribute to a common outflow node.](figs/fig8.png)  
+Figure 8: Catchments contributing to an identified outflow node. Note that some catchments contribute to a common outflow node.
 
 ![Figure 9: Catchment receiving inflow via an identified inflow node](figs/fig9.png)  
-Figure 9: Catchment receiving inflow via an identified inflow node
+Figure 9: Catchments receive inflow via an identified inflow node. Note that nodes stand alone as points of intersection in the network, inflow and outflow designation is in reference to a catchment.
 
 Inflow and outflow nodes topologically located in the network of catchments may get assigned a position using a reference point located in the catchment network. Considering each identified  location on, or projected onto the land surface, as the common outlet of a corresponding catchment, objects can be placed “on the river” using the relationship between outflow nodes (Figure 10 and Figure 11).
 
