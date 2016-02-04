@@ -343,19 +343,19 @@ A dendritic catchment can be thought of as a topological link between inflow and
 Figure 8: Catchments contributing to an identified outflow node. Note that some catchments contribute to a common outflow node.
 
 ![Figure 9: Catchment receiving inflow via an identified inflow node](figs/fig9.png)  
-Figure 9: Catchments receive inflow via an identified inflow node. Note that nodes stand alone as points of intersection in the network, inflow and outflow designation is in reference to a catchment.
+Figure 9: Catchments receive inflow via an identified inflow node. Note that nodes are not necessarily geographic features, but are rather nodes in a graph representation of the river network.
 
-Inflow and outflow nodes topologically located in the network of catchments may get assigned a position using a reference point located in the catchment network. Considering each identified  location on, or projected onto the land surface, as the common outlet of a corresponding catchment, objects can be placed “on the river” using the relationship between outflow nodes (Figure 10 and Figure 11).
+Nodes stand alone as points of intersection in the network, the inflow and outflow designation is in reference to a catchment. (i.e. That node is the outflow node of some contributing catchments and the inflow node of the catchment in question). Here, the actual node features are denoted as (potentially complex) outfalls however the catchment association with an inflow or outflow node is used for consistency. Consider that any location on a network can be thought of as the outflow node of an otherwise undefined catchment. For example, confluences are natural locations to define catchment outfalls but stream gage sites are also common places to study watershed processes and bridges are common upstream or downstream extents of named catchments. Given this idea, catchment inflow and outflow nodes located in a topological network can be located relative to another node. Figure 10 and 11 illustrate how a newly introduced location can be located up or downstream of a reference. 
 
 ![Figure 10: Position (yellow dot) upstream of a reference point (red dot)](figs/fig10.png)  
 Figure 10: Position (yellow dot) upstream of a reference point (red dot)  
-Yellow: point of interest (inflowNode of receivingCtmnt) - locatedStart (origin) of riverRS,  
-Red: reference point (referent) - known outflowNode of the (green) encompassingCtmnt  
+Yellow: point of interest (inflowNode of receivingCatchment) - locatedStart (origin) of riverReferenceSystem,  
+Red: reference point (referent) - known outflowNode of the (green) encompassingCatchment  
 
 ![Figure 11: Position (yellow dot) downstream of a reference point (red dot)](figs/fig11.png)  
 Figure 11: Position (yellow dot) downstream of a reference point (red dot)  
-Yellow: point of interest (outflowNode of contributingCtmnt) - locatedStart (origin) of riverRS,  
-Red: reference point (referent) – known inflowNode of the (green) encompassingCtmnt  
+Yellow: point of interest (outflowNode of contributingCatchment) - locatedStart (origin) of riverReferenceSystem,  
+Red: reference point (referent) – known inflowNode of the (green) encompassingCatchment  
 
 ### 6.4 Aggregation and segmentation of watercourses
 Water bodies are aggregated into the hydrographic network of rivers and other permanent or temporary watercourses, and also lakes and reservoirs. Each water body may be segmented into reaches confined by vertical sections. Due to differences in thermal or salinity characteristics, by oxygen or nutrient content, a water body may be stratified into distinct horizontal layers.
