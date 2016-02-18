@@ -357,6 +357,16 @@ Figure 11: Position (yellow dot) downstream of a reference point (red dot)
 Yellow: point of interest (outflowNode of contributingCatchment) - locatedStart (origin) of riverReferenceSystem,  
 Red: reference point (referent) – known inflowNode of the (green) encompassingCatchment  
 
+![Figure 12: Position (yellow dot) upstream of a reference point (red dot)](figs/fig12.png)
+Figure 12: Position (yellow dot) upstream of a reference point (red dot)  
+Yellow: point of interest (inflowNode of receivingCatchment) - locatedStart (origin) of riverReferenceSystem,  
+Red: reference point (referent) - known outflowNode of the (green) encompassingCatchment
+
+![Figure 13: Position (yellow dot) downstream of a reference point (red dot)](figs/fig13.png)
+Figure 13: Position (yellow dot) downstream of a reference point (red dot)  
+Yellow: point of interest (outflowNode of contributingCatchment) - locatedStart (origin) of riverReferenceSystem,  
+Red: reference point (referent) – known inflowNode of the (green) encompassingCatchment 
+
 ### 6.4 Aggregation and segmentation of watercourses
 Water bodies are aggregated into the hydrographic network of rivers and other permanent or temporary watercourses, and also lakes and reservoirs. Each water body may be segmented into reaches confined by vertical sections. Due to differences in thermal or salinity characteristics, by oxygen or nutrient content, a water body may be stratified into distinct horizontal layers.
 Water bodies may be aggregated into a hydrographic network using a connecting system of channels expressed in flow or drainage patterns.  This system of channels exists independently of whether water flows therein or not. It does not define whether a water body interacts with water bodies upstream and downstream. For example, normally stagnant waters may or may not be connected to streams during flood events, or streams may be interrupted to pools of stagnant water in periods of drought or not. Likewise, an aquifer system determines the potential connection between bodies of groundwater, but not causes the interaction.  
@@ -369,8 +379,8 @@ The Atmospheric Hydro Feature application schema provides a model to take into a
 This informative package provides concepts of water falling through the atmosphere (precipitation) to be accumulated in a water body on or below the land surface. This allows atmospheric water to be related to the hydrographic network of water bodies representing an overall catchment, as well as to a corresponding catchment identified by an inflow or outflow node using a reference point associated with the accumulating water body. Special concepts of water suspended in the atmosphere may by defined with an application. Special concepts should not contradict the definitions endorsed by the WMO as published in the  "International Meteorological Vocabulary".published and maintained by the WMO [9]. 
 The Atmospheric Hydro Feature schema introduces the concepts of  HydroMeteor Precipitation, Rain and Snow.  
  
-![Figure 12: Atmospheric Hydro Feature schema](figs/fig12.png)  
-Figure 12: Atmospheric Hydro Feature schema  
+![Figure 14: Atmospheric Hydro Feature schema](figs/fig14.png)  
+Figure 14: Atmospheric Hydro Feature schema  
 
 The HY_Hydrometeor class conceptualize a meteor “consisting of an ensemble of liquid or solid water particles falling through or suspended in the atmosphere, blown by the wind from the Earth's surface or deposited on objects on the ground or in the free air” [9]. 
 The HY_Precipitation class specializes HY_HydroMeteor. It refers to falling water and does not mean the amount of  precipitation measured by means of rain-gauge, which is understood as a property of a rain feature. HY_Precipitation is not explicitly defined as a special subtype of the general HydroFeature type to allow other contextual generalizations. HY_Precipitation carries two associations: rain and snow.  
@@ -380,8 +390,8 @@ The HY_Rain and HY_Snow classes define special types of liquid or solid water in
 ### 6.6 The Subsurface Hydro Feature application schema (informative)
 The informative Subsurface Hydro Feature application package introduces concepts reflecting water accumulated below the land surface as well as the formation of rock or soil containing the body of water. This concept refers to the holistic approach of the dendritic catchment as the unit wherein all water, surface and subsurface water, is directed to an identified common outlet. It allows subsurface water to be related to the hydrographic network of water bodies, as well as to a corresponding dendritic catchment identified by an inflow or outflow node using a reference point associated with the confining unit. Special concepts of subsurface water, its confines and special relationships may be defined with an application. Special concepts should not contradict the definitions endorsed by the WMO as published in the  "International Glossary of Hydrology". A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development.  
 
-![Figure 13: Subsurface Hydro Feature schema](figs/fig13.png)  
-Figure 13: Subsurface Hydro Feature schema  
+![Figure 15: Subsurface Hydro Feature schema](figs/fig15.png)  
+Figure 15: Subsurface Hydro Feature schema  
 
 #### 6.6.1 The Subsurface Water model 
 The Subsurface Water model  introduces a simple model of water accumulated in rock or soil below the land surface,  either specialized by pressure head or the property to move due to gravity and capillary action.  This allows to handle concepts of subsurface waters separately from those of  the confining aquifer. An application focused on a special type of subsurface water may use the concepts when describing the relationship of groundwater or water in soil to a catchment in terms of the ultimate target of observation. Depending on the  particular application, special types may be defined and described by suitable properties.  
