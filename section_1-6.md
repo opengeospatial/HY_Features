@@ -340,6 +340,8 @@ Figure 5: A catchment area (blue) and a flowpath connecting inflow to outflow (r
 
 The actual detail of the terrain may be specified in many ways.  Inflows may be "virtual" nodes at headwaters - and likewise outflow nodes may be virtual where waters flow out. Because no geometry is necessarily specified, this does not require special cases or logic to handle uncertainty as to the exact nature of such processes. As show in Figures C1, C3. C4,C5 catchments may connect through simple confluences (C1), water bodies and swamps [c2], intermittent flows or subsurface features [c3] or complex braided streams [c4] - all requiring different geometric representations but represented by the same simple topology.
 
+![Figure C1: A catchment area (blue) and a flowpath connecting inflow to outflow (red) representing a definable unit where hydrological processes take place. ](figs/cartoonset1.png)  
+
 There are two ways catchments may be defined where multiple inflows share a common outflow - as separate subcatchments for each flowpath from a single inflow to the outflow (figure C1) - or as a single upstream catchment from the outflow (C2). The latter case is generally easier to delineate catchment boundaries, but is hard to determine contributions to each flow path, and also to perform linear referencing. [Do we name non-dendritic flowline catchments ? do we name total aggregated inflow ?] 
 
 Any given catchment may be nested or aggregated in a larger containing catchment to support a hierarchy of catchments. This gives a mechanism to split a unit up into multiple sub-units. Two types of catchment hierarchy are supported in HY_Features: basic nesting and dendritic aggregation. 
@@ -348,6 +350,9 @@ Any given catchment may be nested or aggregated in a larger containing catchment
  
  Dendritic hierarchies are collections of catchments with simple topological relationships that allow determination of contribution of flow to downstream catchments. Figure C6 shows a non-dendritic topology, where it is not possible to determine to what extent flow from catchment F contributes to cacthments E, B or C. Figure C7 shows the same stream topology where the nodes N2 amd N3 are treated as a single virtual inflow node, and the resulting catchment X defined - so that all the flow from catchments D and F accumulate in X.
  
+ 
+![Figure C6: A catchment area (blue) and a flowpath connecting inflow to outflow (red) representing a definable unit where hydrological processes take place. ](figs/cartoonset2.png)  
+
 The outfall of a dendritic catchment (which may be hard to define as a single geometric point) must contribute to one receiving catchment, unless it is a terminal catchment. (Figure 7).  Given that the dendritic catchment is defined as a special type of catchment, it inherits the general nesting defined for the catchment as shown in Figure 6. 
 
 ![Figure 6: Catchment hierarchy – Any catchment may be nested within a containingCatchment which is another catchment (dark blue)](figs/fig6.png)  
