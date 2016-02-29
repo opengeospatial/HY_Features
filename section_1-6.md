@@ -331,7 +331,7 @@ Each representation will support a different sub-set of possible ways of definin
 [if this is not felt to be obvious add a figure showing catchments that can be aggregated vs disjoint or overlapping catchments]
 
 ### 6.3 Catchment hierarchy and network topology
-The operations can be performed on hydrologic cacthments units - such as aggregation of area, or tracing upstream and downstream. Such catchments may then be connected topologically to represent the hydrologic processes at the interface between each catchment. Topology may be defined for geometric representations through adjacencies at polygon edges, nesting of polygons, or through connection of linear features at nodes. But as each geomteric representation serves a different purpose it is not appropriate to define a single geometric representation as the basis for topology, and topology can be expressed instead as relationships between the conceptual feature classes. 
+Catchments may be connected topologically to represent the hydrologic processes at the interface between each catchment, and to support operations such as aggregation of area and up- or down-stream tracing.  Topology may be defined for geometric representations through adjacencies at polygon edges, nesting of polygons, or through connection of linear features at nodes. But as each geomteric representation serves a different purpose it is not appropriate to define a single geometric representation as the basis for topology, and topology can be expressed instead as relationships between the conceptual feature classes. 
 
 A catchment can thus be thought of as hydrologic unit whose terrain morphology results in a topological link between inflow and outflow nodes. 
 
