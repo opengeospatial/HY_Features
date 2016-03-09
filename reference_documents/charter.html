@@ -1,0 +1,437 @@
+<div style="border-top: solid windowtext 1.0pt; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: none; mso-border-top-alt: solid windowtext .75pt; mso-border-bottom-alt: solid windowtext .75pt; padding: 1.0pt 0in 1.0pt 0in;">
+	<h1 style="margin-left: 0in; text-align: justify; text-indent: 0in; mso-list: l0 level1 lfo1;">
+		1.&nbsp;&nbsp;&nbsp; Hydrologic Features Standards Working Group
+	</h1>
+</div>
+<p>
+	Water information is required to be shared across organizational and jurisdictional boundaries, which is facilitated by OGC's interoperability standards. The joint WMO-OGC Hydrology Domain Working Group (DWG) brings together interested parties to develop and promote the technology for improving the way in which water information is organized, managed and shared.
+</p>
+<p>
+	Hydrologic features are the unit of water information required to convey identity of real-world water-objects through the data processing chain from observation to water information. The work undertaken in the Hydrology DWG led to a series of water-related specifications to manage at different levels of detail the identification, observation and representation of hydrologic features. Examples are the WaterML2.0 standard, the HY_Features common hydrologic feature model and the GroundWaterML2 ongoing work. Even if concerned with different aspects of hydrology and water information, these standards imply a common understanding of the Hydrology phenomenon, which provides the basis of linking application-specific concepts by referencing common semantics. This allows domain-specific information systems, web services as well as ontologies to be linked using a common reference model.
+</p>
+<div>
+	<h1>
+		2.&nbsp;&nbsp;&nbsp; Purpose of this Standards Working Group
+	</h1>
+</div>
+<p>
+	The purpose of this Standards Working Group is to progress the HY_Features common hydrologic feature model to the state of an adopted OGC standard for a common and stable identification and referencing of hydrologic features.
+</p>
+<p>
+	This goal will be achieved by developing and publishing a draft standard, by processing comments received during a public comment period, and ensuring that the standard is consistent with the OGC Standards Baseline.
+</p>
+<p>
+	The Hydrologic Features standard will be split into 3 parts, so that conceptual issues can be addressed separate from the GML schemas and machine-readable OWL versions of the model for practical use.
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Part 1: HY_Features conceptual model (OGC14-111). The normative model is a machine-readable UML artefact published by OGC.
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Part 2: GML implementation schema suitable for data transfer of HY_Features object instances, based on ISO 19136 Annex E encoding rules for Application Schema.
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Part 3: OWL and RDF representation suitable for defining links between features that implement the HY_Features model, based on ISO 19150 encoding rules.
+</p>
+<p>
+	The final deliverable of the SWG will be separate versions of each intended part of the Hydrologic Feature candidate standard for consideration by the OGC membership for approval as an OGC standard and include contribution to the OGC Abstract Specification.
+</p>
+<div>
+	<h1>
+		3.&nbsp;&nbsp;&nbsp; Business Value Proposition
+	</h1>
+</div>
+<p>
+	The HY_Features common hydrologic feature model (OGC 11-039r3) is a formalism of definitions published in the WMO/UNESCO International Glossary of Hydrology (WMO Series no. 385) as a domain model using ISO 19100 series domain modelling standards.&nbsp;
+</p>
+<p>
+	The HY_Features model describes the most important hydrologic features by defining the fundamental relationships among the major components of the hydrosphere, including the hierarchy of basins and the segmentation of watercourses, to reflect hydrologic significance and topological connectivity of hydrologic features independent from geometric representation and scales.
+</p>
+<p>
+	The HY_Features model allows for a common and stable referencing wherever hydrologic features are required to be references,
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to assist hydrologic observations to identify the target feature-of-interest,
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to assist the aggregation of generated data represented in various data sets in current use into integrated suites of datasets on global, regional, or basin scales,
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to enable information systems to link distributed data across application domains,
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to enable cross-domain services to communicate by referencing common, shared concepts.
+</p>
+<div>
+	<h1>
+		4.&nbsp;&nbsp;&nbsp; Scope of Work
+	</h1>
+</div>
+<p>
+	This SWG is focused on the development of the Hydrologic Features candidate standard submission, coordinating a public comment period, and processing any comments received during this period. This procedure will apply to all of the three intended parts of the standard.
+</p>
+<p>
+	The SWG will assist the development of example use cases to promote the use of the HY_Features conceptual model in order to improve the semantic interoperability of web services related to hydrology. A potential use case for the Hydrologic Features standard may be the discovery, access, and use of relationships between hydrologic features represented in data sets exposed as web services. Such a scenario may include requests for data awaiting response from two or more web services.
+</p>
+<p>
+	By defining common feature types, the Hydrologic Features standard will provide a basis for the mapping of the realized common feature concept to the specific concept of a particular feature of interest. Such mappings will add context and concept information to a data request. The SWG will prepare some explanatory material to assist implementers to define and handle the conceptual mapping of application-specific features and hydrology-domain feature types as defined in the HY_Features conceptual model.
+</p>
+<h2>
+	4.1&nbsp;&nbsp;&nbsp; Statement of relationship of planned work to the current OGC standards baseline
+</h2>
+<p>
+	This work is intended to be aligned with the existing OGC standards baseline where appropriate.
+</p>
+<h2>
+	4.2&nbsp;&nbsp;&nbsp; What is Out of Scope?
+</h2>
+<p>
+	Even if the Hydrologic Features candidate standard will provide a reference model enabling information systems to link hydrologic data distributed across application domains and Web services to communicate using technologies of the semantic Web, this standard will not specify a specific communication technology or service interface.
+</p>
+<h2>
+	4.3&nbsp;&nbsp;&nbsp; Specific Contribution of Existing Work as a Starting Point
+</h2>
+<p>
+	The starting point for the work will be the Discussion Paper OGC 11-039r3: “HY_Features: a Common Hydrologic Feature Model.” The work undertaken in the OWS 10 Cross Community Interoperability Hydro Model Interoperability effort, as documented in the Engineering Report OGC 14-048, as well as the already existing implementations of HY_Features concepts in the AU Hydrological Geo Fabric (AHGF) at the Australian Bureau of Meteorology, in the Spatial Identifier Reference Framework (SIRF) developed at CSIRO, and in the Open Management Platform (OMP) of the European WatERP Project may be considered in terms of OGC’s IEs.
+</p>
+<h2>
+	4.4&nbsp;&nbsp;&nbsp; Determination of SWG Completion
+</h2>
+<p>
+	The work of the SWG will be complete when for each of the three parts of the standard:
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A draft standard has been developed and circulated for comments;
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All comments submitted during the 30-day public comment period have been dealt with to the satisfaction of the SWG;
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The SWG approves the candidate standard for submission to the TC for approval as an adopted standard; and
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The TC and the PC approve the candidate standard and all comments in the approval processes are addressed.
+</p>
+<h2>
+	4.5&nbsp;&nbsp;&nbsp; Is this a persistent SWG?
+</h2>
+<p>
+	X Yes&nbsp;
+</p>
+<h2>
+	4.6&nbsp;&nbsp;&nbsp; When can SWG be inactivated or rechartered?
+</h2>
+<p>
+	See criteria in section 4.4.
+</p>
+<div>
+	<h1>
+		5.&nbsp;&nbsp;&nbsp; Description of Deliverables
+	</h1>
+</div>
+<p>
+	The following deliverables will result from the work of this SWG:
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Draft versions of Part 1, 2 and 3 of the Hydrologic Features specification for comment.
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; An annotated list of all comments submitted during the 30-day public comment period, including the comment, submitter, rationale, comment type/priority, and the response of the SWG.
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Final versions of Part 1, 2 and 3 of the Hydrologic Features specification as well as ATS documents for submission to the TC.
+</p>
+<p>
+	The following activities are planned with respect to “Hydrologic Features, Part 1: Conceptual model”:
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SWG startup.&nbsp; 2015 September
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SWG vote to release Hydrologic Features, Part 1: Conceptual model for public comment (HYF-P1).&nbsp; 2015 November
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Release HYF-P1 for public comment. 2015 November/December
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Consolidation of comments and edits to HYF-P1 document based on comments. 2016 February/March
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recommendation of the candidate standard to the Membership. 2016 March
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60 day IPR review period and associated TC e-vote to approve “Hydrologic Features, Part 1: Conceptual model” candidate standard as an adopted OGC Standard.
+</p>
+<p>
+	This schedule of activities refers to Part 1 (Conceptual model).&nbsp; The intended Part 2 (GML implementation) and Part 3 (OWL and RDF representation) may require further testing and will be scheduled by the SWG after the adoption of Part 1. If required, the SWG will be re-chartered accordingly.
+</p>
+<div>
+	<h1>
+		6.&nbsp;&nbsp;&nbsp; IPR Policy for this SWG
+	</h1>
+</div>
+<p>
+	x RAND-Royalty Free.&nbsp; <s></s><s>&nbsp; RAND for fee</s>
+</p>
+<div>
+	<h1>
+		7.&nbsp;&nbsp;&nbsp; Anticipated Participants
+	</h1>
+</div>
+<p>
+	The target audience/participants of Hydrologic Features standard includes: application developers; GIS and software vendors; the meteorologic and hydrologic research and education community; and the consumer.
+</p>
+<p>
+	Development of Hydrologic Features standard will be undertaken by the following OGC members:
+</p>
+<p>
+	&nbsp;
+</p>
+<p>
+	a)&nbsp;&nbsp;&nbsp; Federal Institute of Hydrology (BfG), Germany
+</p>
+<p>
+	b)&nbsp;&nbsp;&nbsp; BRGM (French Geological Survey)
+</p>
+<p>
+	c)&nbsp;&nbsp;&nbsp; Bureau of Meteorology (BoM), Australia
+</p>
+<p>
+	d)&nbsp;&nbsp;&nbsp; US Geological Survey (USGS)
+</p>
+<p>
+	e)&nbsp;&nbsp;&nbsp; MetaLinkage, Australia
+</p>
+<p>
+	f)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Commonwealth Scientific and Industrial Research Organisation (CSIRO), Australia
+</p>
+<p>
+	g)&nbsp;&nbsp;&nbsp; &nbsp;INCLAM S.A., Spain
+</p>
+<p>
+	h) &nbsp; &nbsp; Fundacio Eurecat, Spain
+</p>
+<p>
+	i)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 52°North, Germany
+</p>
+<p>
+	&nbsp;
+</p>
+<p>
+	It is envisaged that these organizations, at least, will participate in the SWG.
+</p>
+<div>
+	<h1>
+		8.&nbsp;&nbsp;&nbsp; Other Informative Remarks about this SWG
+	</h1>
+</div>
+<p>
+	<br>
+	a. Similar or Applicable Standards Work (OGC and Elsewhere):<br>
+	<br>
+	The following standards and projects may be relevant to the SWG's planned work, although none currently provide the functionality or domain focus anticipated by this committee's deliverables:
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AU BoM, AU Hydrological Geo Fabric (AHGF). http://<a href="http://www.bom.gov.au/water/geofabric/index.shtml">www.bom.gov.au/water/geofabric/index.shtml</a>&nbsp;
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AU CSIRO, Spatial Identifier Reference Framework (SIRF). <a href="file:///D:/Users/Dornblut/OGC_HDWG/_HY2_Standard/https">https</a><a href="https://wiki.csiro.au/display/SIRF/The+SIRF+API">://</a><a href="https://wiki.csiro.au/display/SIRF/The+SIRF+API">wiki.csiro.au/display/SIRF/The+SIRF+API</a>
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EU, INSPIRE Data Specification on Hydrography, 3.1. http://inspire.ec.europa.eu/index.cfm/pageid/2
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EU, Open Management Platform (OMP) of the European WatERP Project.<a href="http://www.waterp-fp7.eu">http://www.waterp-fp7.eu</a>
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ISO 19109:2005 Geographic Information – Rules for application schema
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ISO 19110:2005 Geographic Information – Methodology for feature cataloguing
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ISO 19150-2:2012 Geographic information – Ontology – Part 2: Rules for developing ontologies in the Web Ontology Language (OWL).
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OGC, Geography Markup Language v3.3 (also ISO 19136:2007)
+</p>
+<p>
+	·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OGC, Observations and Measurements XML (OMXML) Encoding Standard (OGC 10-025)
+</p>
+<p>
+	<br>
+	The SWG intends to seek and if possible maintain liaison with each of the organizations maintaining the above works.
+</p>
+<p>
+	<br>
+	b. Details of the First Meeting<br>
+	<br>
+	The first meeting of the committee will be held by telephone conference immediately after approval of the SWG. Call-in information will be provided to the SWG's e-mail list and on the portal calendar in advance of the meeting. The main items of business will be to select the lead for the RFC submission, and the primary editors for each part of the standard, and to agree on a schedule of work, including regular meetings if required.&nbsp;<br>
+	<br>
+	c. Projected On-going Meeting Schedule
+</p>
+<p>
+	The work of the committee will be carried out primarily by email. Scheduling of conference calls if required will be determined by the chair. If required face-to-face meetings will be held at the regular meetings of the Hydrology DWG.
+</p>
+<p>
+	<br>
+	d. Supporters of the Proposal (Charter Members)<br>
+	<br>
+	The following people support this proposal and are committed to the Charter and projected meeting schedule. These members are known as SWG Founding or Charter members. The charter members agree to the SoW and IPR terms as defined in this charter. The charter members have voting rights beginning the day the SWG is officially formed. Charter Members are shown on the public SWG page.
+</p>
+<table border="1" width="351" cellspacing="0" cellpadding="0">
+	<tbody>
+		<tr>
+			<td valign="top" width="138">
+				<p>
+					Name
+				</p>
+			</td>
+			<td valign="top" width="213">
+				<p>
+					Organization
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="138">
+				<p>
+					Bruce Simons
+				</p>
+				<p>
+					Simon Cox
+				</p>
+				<p>
+					Peter Taylor
+				</p>
+			</td>
+			<td valign="top" width="213">
+				<p>
+					CSIRO, Australia
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="138">
+				<p>
+					Darren Smith
+				</p>
+				<p>
+					Bruce Bannerman
+				</p>
+				<p>
+					Tony Boston
+				</p>
+			</td>
+			<td valign="top" width="213">
+				<p>
+					Bureau of Meteorology, Australia
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="138">
+				<p>
+					Irina Dornblut
+				</p>
+			</td>
+			<td valign="top" width="213">
+				<p>
+					Federal Institute of Hydrology ( BfG), Germany
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="138">
+				<p>
+					Rob Atkinson
+				</p>
+			</td>
+			<td valign="top" width="213">
+				<p>
+					Metalinkage, Australia
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="138">
+				<p>
+					Gabriel Anzaldi Varas
+				</p>
+				<p>
+					Aitor Corchero Rodriguez
+				</p>
+			</td>
+			<td valign="top" width="213">
+				<p>
+					Fundacio Eurecat, Spain
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="138">
+				<p>
+					Antonio Moya
+				</p>
+			</td>
+			<td valign="top" width="213">
+				<p>
+					INCLAM S. A., Spain
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="138">
+				<p>
+					Simon Jirka
+				</p>
+			</td>
+			<td valign="top" width="213">
+				<p>
+					52°North, Germany
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="138">
+				<p>
+					Sylvain Grellet
+				</p>
+				<p>
+					François Robida
+				</p>
+				<p>
+					Anthony Mauclerc
+				</p>
+			</td>
+			<td valign="top" width="213">
+				<p>
+					BRGM, France
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="138">
+				<p>
+					David Blodgett
+				</p>
+			</td>
+			<td valign="top" width="213">
+				<p>
+					USGS, USA
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="138">
+				<p>
+					David Arctur
+				</p>
+			</td>
+			<td valign="top" width="213">
+				<p>
+					University of Texas at Austin, USA
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
