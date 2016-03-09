@@ -6,14 +6,14 @@
 	<body>
 		<div style="border-top: solid windowtext 1.0pt; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: none; mso-border-top-alt: solid windowtext .75pt; mso-border-bottom-alt: solid windowtext .75pt; padding: 1.0pt 0in 1.0pt 0in;">
 			<h1 style="margin-left: 0in; text-align: justify; text-indent: 0in; mso-list: l0 level1 lfo1;">
-				1.&nbsp;&nbsp;&nbsp; Hydrologic Features Standards Working Group
+				1.&nbsp;&nbsp;&nbsp; WaterML2 Part 5 Surface Water Features - HY_Features Standards Working Group
 			</h1>
 		</div>
 		<p>
 			Water information is required to be shared across organizational and jurisdictional boundaries, which is facilitated by OGC's interoperability standards. The joint WMO-OGC Hydrology Domain Working Group (DWG) brings together interested parties to develop and promote the technology for improving the way in which water information is organized, managed and shared.
 		</p>
 		<p>
-			Hydrologic features are the unit of water information required to convey identity of real-world water-objects through the data processing chain from observation to water information. The work undertaken in the Hydrology DWG led to a series of water-related specifications to manage at different levels of detail the identification, observation and representation of hydrologic features. Examples are the WaterML2.0 standard, the HY_Features common hydrologic feature model and the GroundWaterML2 ongoing work. Even if concerned with different aspects of hydrology and water information, these standards imply a common understanding of the Hydrology phenomenon, which provides the basis of linking application-specific concepts by referencing common semantics. This allows domain-specific information systems, web services as well as ontologies to be linked using a common reference model.
+			Hydrologic features are the unit of water information required to convey identity of real-world water-objects through the data processing chain from observation to water information. The work undertaken in the Hydrology DWG led to a series of water-related specifications to manage at different levels of detail the identification, observation and representation of hydrologic features. These standards include WaterML2 Part 1 Time Series; WaterML2 Part 2 Ratings, Gaugings, and Sections, WaterML2 Part 3 Water Quality Observations; WaterML2 Part 4 Groundwater Features; and this prospective standard, WaterML2 Part 5 Surface Water Features. While these standards addess different aspects of hydrology and water information, they are formed around a common understanding of Hydrology, which provides conceptual information architecture which can be used to link hydo-science application-specific concepts by referencing common semantics. This allows hydrologic and other domain-specific information systems, web services, and ontologies to be linked using a common reference model. This standard provides a reference model defining real-world water-objects and the way they relate to each other according to hydro-science domain defined semantics and network topology.
 		</p>
 		<div>
 			<h1>
@@ -21,22 +21,19 @@
 			</h1>
 		</div>
 		<p>
-			The purpose of this Standards Working Group is to progress the HY_Features common hydrologic feature model to the state of an adopted OGC standard for a common and stable identification and referencing of hydrologic features.
+			The purpose of this Standards Working Group is to progress a common surface water hydrologic feature model to the state of an adopted OGC standard for a common and stable identification and referencing of hydrologic features.
 		</p>
 		<p>
 			This goal will be achieved by developing and publishing a draft standard, by processing comments received during a public comment period, and ensuring that the standard is consistent with the OGC Standards Baseline.
 		</p>
 		<p>
-			The Hydrologic Features standard will be split into 3 parts, so that conceptual issues can be addressed separate from the GML schemas and machine-readable OWL versions of the model for practical use.
+			The Hydrologic Features standard will be split into 2 parts, so that the conceptual model, for use in later information model development, can be addressed separatly from a machine-readable OWL version of the model for use in feature identification and linking applications.
 		</p>
 		<p>
 			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Part 1: HY_Features conceptual model (OGC14-111). The normative model is a machine-readable UML artefact published by OGC.
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Part 2: GML implementation schema suitable for data transfer of HY_Features object instances, based on ISO 19136 Annex E encoding rules for Application Schema.
-		</p>
-		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Part 3: OWL and RDF representation suitable for defining links between features that implement the HY_Features model, based on ISO 19150 encoding rules.
+			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Part 2: OWL and RDF representation suitable for defining links between features that implement the HY_Features model, based on ISO 19150 encoding rules.
 		</p>
 		<p>
 			The final deliverable of the SWG will be separate versions of each intended part of the Hydrologic Feature candidate standard for consideration by the OGC membership for approval as an OGC standard and include contribution to the OGC Abstract Specification.
@@ -50,16 +47,16 @@
 			The HY_Features common hydrologic feature model (OGC 11-039r3) is a formalism of definitions published in the WMO/UNESCO International Glossary of Hydrology (WMO Series no. 385) as a domain model using ISO 19100 series domain modelling standards.&nbsp;
 		</p>
 		<p>
-			The HY_Features model describes the most important hydrologic features by defining the fundamental relationships among the major components of the hydrosphere, including the hierarchy of basins and the segmentation of watercourses, to reflect hydrologic significance and topological connectivity of hydrologic features independent from geometric representation and scales.
+			The HY_Features model describes hydrologic features by defining the fundamental relationships among major components of the hydrosphere--such as the hierarchy of drainage basins and segmentation of watercourses--to reflect hydrologic significance and topological network connectivity of hydrologic features. This is accomplished in a way that is independent from geometric representation or scale of the described features.
 		</p>
 		<p>
-			The HY_Features model allows for a common and stable referencing wherever hydrologic features are required to be references,
+			The HY_Features model will allow for common and stable reference definitions wherever hydrologic features and relationships are required,
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to assist hydrologic observations to identify the target feature-of-interest,
+			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to assist identification of the target feature-of-interest of hydrologic observations,
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to assist the aggregation of generated data represented in various data sets in current use into integrated suites of datasets on global, regional, or basin scales,
+			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to assist the assimilation of data represented in various data sets into integrated datasets or computer software on global, regional, or basin scales,
 		</p>
 		<p>
 			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to enable information systems to link distributed data across application domains,
@@ -73,13 +70,13 @@
 			</h1>
 		</div>
 		<p>
-			This SWG is focused on the development of the Hydrologic Features candidate standard submission, coordinating a public comment period, and processing any comments received during this period. This procedure will apply to all of the three intended parts of the standard.
+			This SWG is focused on the development of the HY_Features candidate standard submission, coordinating a public comment period, and processing any comments received during this period. This procedure will apply to both intended parts of the standard.
 		</p>
 		<p>
 			The SWG will assist the development of example use cases to promote the use of the HY_Features conceptual model in order to improve the semantic interoperability of web services related to hydrology. A potential use case for the Hydrologic Features standard may be the discovery, access, and use of relationships between hydrologic features represented in data sets exposed as web services. Such a scenario may include requests for data awaiting response from two or more web services.
 		</p>
 		<p>
-			By defining common feature types, the Hydrologic Features standard will provide a basis for the mapping of the realized common feature concept to the specific concept of a particular feature of interest. Such mappings will add context and concept information to a data request. The SWG will prepare some explanatory material to assist implementers to define and handle the conceptual mapping of application-specific features and hydrology-domain feature types as defined in the HY_Features conceptual model.
+			By defining common feature types, the HY_Features standard will provide a basis for the mapping of the realized common feature concept to the specific concept of a particular feature of interest. Such mappings will add context and concept information to a data request. The SWG will prepare some explanatory material to assist implementers to define and handle the conceptual mapping of application-specific features and hydrology-domain feature types as defined in the HY_Features conceptual model.
 		</p>
 		<h2>
 			4.1&nbsp;&nbsp;&nbsp; Statement of relationship of planned work to the current OGC standards baseline
@@ -91,7 +88,10 @@
 			4.2&nbsp;&nbsp;&nbsp; What is Out of Scope?
 		</h2>
 		<p>
-			Even if the Hydrologic Features candidate standard will provide a reference model enabling information systems to link hydrologic data distributed across application domains and Web services to communicate using technologies of the semantic Web, this standard will not specify a specific communication technology or service interface.
+			The HY_Features candidate standard will provide a reference model enabling information systems to link hydrologic features and related data distributed across application domains and Web services; however, this standard will not specify specific data encodings, communication technologies or service interfaces.
+		</p>
+		<p>
+			The purpose of the HY_Features candidate standard is to provide the high level conceptual basis for describing how conceptual hydrologic features in particular applications or implementations of hydrologic features relate to common hydrologic science concepts. The standard is not intended to allow direct encoding or transformation of one application or implementation to another. Future work, such as invisioned by RiverML, is expected to take on the task of developing a common information model or encoding for hydrologic feature data.
 		</p>
 		<h2>
 			4.3&nbsp;&nbsp;&nbsp; Specific Contribution of Existing Work as a Starting Point
