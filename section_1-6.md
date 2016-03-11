@@ -374,24 +374,14 @@ Nodes stand alone as points of intersection in the network; whether a node is re
 
 Figure: Need a figure here that will show the very basic concept of nodes.
 
-Consider that any location on a network can be thought of as the outflow node of an otherwise undefined catchment. For example, confluences are natural locations to define catchment outfalls but stream gage sites are also common places to study catchment processes and bridges are common upstream or downstream extents of named catchments. Given this idea, catchment inflow and outflow nodes located in a topological network can be located relative to another node. Figure 10 and 11 illustrate how a newly introduced location can be located up or downstream of a reference. 
+Consider that any location on a network has a watershed and can be thought of as the outflow node of a catchment. While confluences are natural locations to define catchment outfalls (and network nodes), stream gage sites, bridge crossings, and other on-network locations are common places to study catchment processes. Figure 10, 11, 12, and 13 illustrate how a newly introduced location can be located up or downstream of a reference node.  
 
-![Figure 10: Position (yellow dot) upstream of a reference point (red dot)](figs/fig10.png)  
-Figure 10: Position (yellow dot) upstream of a reference point (red dot)  
-Yellow: point of interest (inflowNode of receivingCatchment) - locatedStart (origin) of riverReferenceSystem,  
-Red: reference point (referent) - known outflowNode of the (green) encompassingCatchment  
-
-![Figure 11: Position (yellow dot) downstream of a reference point (red dot)](figs/fig11.png)  
-Figure 11: Position (yellow dot) downstream of a reference point (red dot)  
-Yellow: point of interest (outflowNode of contributingCatchment) - locatedStart (origin) of riverReferenceSystem,  
-Red: reference point (referent) – known inflowNode of the (green) encompassingCatchment  
-
-![Figure 12: Position (yellow dot) upstream of a reference point (red dot)](figs/fig12.png)
+![Figure 10: Position (yellow dot) upstream of a reference point (red dot)](figs/fig10.png)
 Figure 12: Position (yellow dot) upstream of a reference point (red dot)  
 Yellow: point of interest (inflowNode of receivingCatchment) - locatedStart (origin) of riverReferenceSystem,  
 Red: reference point (referent) - known outflowNode of the (green) encompassingCatchment
 
-![Figure 13: Position (yellow dot) downstream of a reference point (red dot)](figs/fig13.png)
+![Figure 11: Position (yellow dot) downstream of a reference point (red dot)](figs/fig11.png)
 Figure 13: Position (yellow dot) downstream of a reference point (red dot)  
 Yellow: point of interest (outflowNode of contributingCatchment) - locatedStart (origin) of riverReferenceSystem,  
 Red: reference point (referent) – known inflowNode of the (green) encompassingCatchment 
