@@ -347,17 +347,17 @@ There are two ways that catchments with multiple inflows can share a common outf
 
 Any catchment may be nested or aggregated in a larger containing catchment of split into multiple sub units forming a hierarchy of catchments. Two types of catchment hierarchy are supported in HY_Features: basic nesting and dendritic aggregation. 1) Basic nesting allows any catchment to have a reference to a containing catchment (Figure 6). This allows collections of subcatchments to be grouped into larger units, but does not define any particular interconnections between these subcatchments. 2) To reflect the organization of catchments in dendritic hierarchies, a specialized dendritic catchment is defined as a catchment that must contribute to one and only one receiving catchment (Figure 7). Dendritic hierarchies are collections of catchments with simple topological relationships that allow determination of contribution of flow to downstream catchments. 
 
-Figure C6 shows a non-dendritic topology, where it is not possible to determine to what extent flow from catchment F contributes to cacthments E, B or C. Figure C7 shows the same stream topology where the nodes N2 amd N3 are treated as a single virtual inflow node, and the resulting catchment X defined - so that all the flow from catchments D and F accumulate in X. 
- 
-![Figure C6: A catchment area (blue) and a flowpath connecting inflow to outflow (red) representing a definable unit where hydrological processes take place. ](figs/cartoonset2.png)  
-
-The outfall of a dendritic catchment (which may be hard to define as a single geometric point) must contribute to one receiving catchment, unless it is a terminal catchment. (Figure 7).  Given that the dendritic catchment is defined as a special type of catchment, it inherits the general nesting defined for the catchment as shown in Figure 6. 
+In a dendritic network, the outflow node that one of more dendritic catchments flow to (which is not necessarily a single geometric point) must contribute to one receiving catchment, unless it is a terminal catchment.  Given that the dendritic catchment is defined as a special type of catchment, it inherits the general nesting defined for the catchment as shown in Figure 6.
 
 ![Figure 6: Catchment hierarchy – Any catchment may be nested within a containingCatchment which is another catchment (dark blue)](figs/fig6.png)  
 Figure 6: Catchment hierarchy – Any catchment may be nested within a containingCatchment which is another catchment (dark blue)
 
 ![Figure 7: Catchment hierarchy – A dendritic catchment (blue) may be part of an encompassing catchment aggregate which is another specialized type of catchment (green)](figs/fig7.png)  
 Figure 7: Catchment hierarchy – A dendritic catchment (blue) may be part of an encompassing catchment aggregate which is another specialized type of catchment (green) 
+
+It is worth noting that non-dendritic channel networks are often represented as a dendritic catchment network by creating conjoint catchments that contain the non-dendritic channels. Figure C6 shows an example of such a non-dendritic topology. It is not possible to determine to what extent flow from catchment F contributes to catchments E, B or C. Figure C7 shows the same stream topology where catchments E, B, and C have been aggregated and the nodes N2 amd N3 are treated as a single virtual inflow node, and the resulting catchment X defined - so that all the flow from catchments D and F accumulate in X. 
+ 
+![Figure C6: A catchment area (blue) and a flowpath connecting inflow to outflow (red) representing a definable unit where hydrological processes take place. ](figs/cartoonset2.png)  
 
 Given this, catchments can be represented using a simple tree structure where an upstream-downstream relation to describe a network of catchments can be built without the need for complex hydrography between inflow and outflow nodes. In this network of catchments, two or more catchments that flow into another flow to the same outflow node (Figure 8) which is the inflow node of a receiving downstream catchment (Figure 9); the upstream catchment may be described as the catchment contributing to the inflow node of the relevant catchment. In the case of a network of dendritic catchments, all nodes on the network flow to one and only one catchment. (Figure 8 and Figure 9)  
 
