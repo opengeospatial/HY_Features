@@ -1,4 +1,4 @@
 tocTab[tocTab.length] = new Array("0:1", "", "HydrometricFeature", "EARoot/EA1.htm", "175.png", "3569", "0", "", "Class diagram0","{5B5D3675-145C-48f7-B748-BBDE89BC604C}");
-tocTab[tocTab.length] = new Array("0:2", "", "«FeatureType» HY_HydrometricFeatureSegment", "EARoot/EA3.htm", "5.png", "7782", "0", "", "Class0","{8EB7CD15-6856-4a68-9E58-2DDA44878726}");
+tocTab[tocTab.length] = new Array("0:2", "", "«FeatureType» HY_HydrometricFeaturePart", "EARoot/EA3.htm", "5.png", "7782", "0", "", "Class0","{8EB7CD15-6856-4a68-9E58-2DDA44878726}");
 tocTab[tocTab.length] = new Array("0:3", "", "«FeatureType» HY_HydrometricFeature", "EARoot/EA4.htm", "5.png", "7783", "0", "", "Class0","{BB084F13-AED3-4c9d-9E8F-2C46B9CBC703}");
 tocTab[tocTab.length] = new Array("0:4", "", "«FeatureType» HY_HydrometricNetwork", "EARoot/EA5.htm", "5.png", "7781", "0", "", "Class0","{5D9E5E19-3F78-4eb2-94E3-74D083F92886}");
