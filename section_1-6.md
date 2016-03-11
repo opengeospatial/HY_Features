@@ -333,6 +333,7 @@ Each representation will support a different sub-set of possible ways of definin
 ### 6.3 Catchment hierarchy and network topology
 Catchments may be connected in topological networks to represent the continuity of hydrologic processes at the interface between catchments and to support aggregation of catchments and up- or down-stream tracing. Topological connectivity is typically indicated by adjacent polygon edges, nesting of polygons, or through connection of linear features at nodes. However, since geomteric representation of hydrography serves many purposes and may not be needed at all, it is not appropriate to rely only on geometric representation as the basis for topology. Instead, topology can be expressed as relationships between the conceptual features of a particular type, or class.
 
+#### 6.3.1 Catchment Networks
 Given the idea that non-geospatial--conceptual--features can be connected in topological networks, a catchment can be thought of as a hydrologic unit whose terrain and morphology results in a topological link between inflow and outflow. The red line in Figure 5 illustrates how a single catchment, which has a boundary, an area, a network, and a main flowpath, can be represented by a non-geospatial flowpath connection between inflow and outflow. 
 
  ![Figure 5: A catchment area (blue) and a flowpath connecting inflow to outflow (red) representing a definable unit where hydrological processes take place. ](figs/fig5.png)  
@@ -345,6 +346,7 @@ Figure C1-5: C1, Typical catchments with one inflow and one outflow each; C2, Jo
 
 There are two ways that catchments with multiple inflows can share a common outflow. 1) As separate subcatchments such that each catchment has a flowpath from a single inflow to the common outflow (figure C1) or as a single upstream catchment from the outflow (figure C2). The latter case, referred to here as a conjoint catchemnt is often easier to delineate and is convenient in some cases, but it can be hard to determine contributions to each flow path, or perform linear referencing, or determine which is the main flowpath. [Do we name non-dendritic flowline catchments ? do we name total aggregated inflow ?]
 
+#### 6.3.2 Dendritic and Basic Catchment Aggregates
 Any catchment may be nested or aggregated in a larger containing catchment of split into multiple sub units forming a hierarchy of catchments. Two types of catchment hierarchy are supported in HY_Features: basic nesting and dendritic aggregation. 1) Basic nesting allows any catchment to have a reference to a containing catchment (Figure 6). This allows collections of subcatchments to be grouped into larger units, but does not define any particular interconnections between these subcatchments. 2) To reflect the organization of catchments in dendritic hierarchies, a specialized dendritic catchment is defined as a catchment that must contribute to one and only one receiving catchment (Figure 7). Dendritic hierarchies are collections of catchments with simple topological relationships that allow determination of contribution of flow to downstream catchments. 
 
 In a dendritic network, the outflow node that one of more dendritic catchments flow to (which is not necessarily a single geometric point) must contribute to one receiving catchment, unless it is a terminal catchment.  Given that the dendritic catchment is defined as a special type of catchment, it inherits the general nesting defined for the catchment as shown in Figure 6.
@@ -359,6 +361,7 @@ It is worth noting that non-dendritic channel networks are often represented as 
  
 ![Figure C6: A catchment area (blue) and a flowpath connecting inflow to outflow (red) representing a definable unit where hydrological processes take place. ](figs/cartoonset2.png)  
 
+#### 6.3.3 Inflow and Outflow Nodes
  In this network of catchments, two or more catchments that flow into another flow to the same outflow node (Figure 8) which is the inflow node of a receiving downstream catchment (Figure 9); the upstream catchment may be described as the catchment contributing to the inflow node of the relevant catchment. In the case of a network of dendritic catchments, all nodes on the network flow to one and only one catchment. (Figure 8 and Figure 9)  
 
 ![Figure 8: Catchments contributing to an identified outflow node. Note that some catchments contribute to a common outflow node.](figs/fig8.png)  
@@ -367,7 +370,11 @@ Figure 8: Catchments contributing to an identified outflow node. Note that some 
 ![Figure 9: Catchment receiving inflow via an identified inflow node](figs/fig9.png)  
 Figure 9: Catchments receive inflow via an identified inflow node. Note that nodes are not necessarily geographic features, but are rather nodes in a graph representation of the river network.
 
-Nodes stand alone as points of intersection in the network, the inflow and outflow designation is in reference to a catchment. This means that node serves as the outflow node of some contributing catchments and the inflow node of the catchment in question. Here, the actual node features are denoted as (potentially complex) outfalls however the catchment association with an inflow or outflow node is used for consistency. Consider that any location on a network can be thought of as the outflow node of an otherwise undefined catchment. For example, confluences are natural locations to define catchment outfalls but stream gage sites are also common places to study catchment processes and bridges are common upstream or downstream extents of named catchments. Given this idea, catchment inflow and outflow nodes located in a topological network can be located relative to another node. Figure 10 and 11 illustrate how a newly introduced location can be located up or downstream of a reference. 
+Nodes stand alone as points of intersection in the network; whether a node is referred to as inflow or outflow is in reference to a catchment. This means that a node serves as the outflow node of some contributing catchment(s) and the inflow node of the catchment in question. Here, the actual node features are denoted as (potentially complex) outfalls however the catchment association with an inflow or outflow node is used for consistency. 
+
+Figure: Need a figure here that will show the very basic concept of nodes.
+
+Consider that any location on a network can be thought of as the outflow node of an otherwise undefined catchment. For example, confluences are natural locations to define catchment outfalls but stream gage sites are also common places to study catchment processes and bridges are common upstream or downstream extents of named catchments. Given this idea, catchment inflow and outflow nodes located in a topological network can be located relative to another node. Figure 10 and 11 illustrate how a newly introduced location can be located up or downstream of a reference. 
 
 ![Figure 10: Position (yellow dot) upstream of a reference point (red dot)](figs/fig10.png)  
 Figure 10: Position (yellow dot) upstream of a reference point (red dot)  
