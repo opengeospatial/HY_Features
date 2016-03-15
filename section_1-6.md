@@ -314,7 +314,7 @@ Figure 3: Cartographic vs. topological representation
 
 In inter-disciplinary programs, inter-program collaboration and cross-domain research projects, the catchment is addressed as the monitoring and reporting unit whereby monitoring stations are usually placed on a flowline in relation to identified reference points. Across administrative jurisdictions, the catchment is the agreed unit of water resources assessment and management. For example at a national scale "Hydrologic Unit Code" (HUC) catchments are defined by the US Geological Survey for the National Water Information System (NWIS) . [7] Another example are the so-called "River Basin Districts" of the European Water Framework Directive [6] designated not to administrative or political boundaries, but rather to the natural hydrologic unit.
 
-### 6.2 Catchment and catchment representation
+### 6.2 Catchment and multiple representations of the catchment concept
 The core concept of the HY_Features model is that a study of the Hydrology phenomenon will reference common conceptual entities of the real world (a water body, stream gaging site, or catchment) through the use of specific modeled features (as per ISO 19109 General Feature Model). Depending on the scientific concern, the specific hydrologic feature may be modeled as one of many potential representations of the conceptual entity being represented.  
 
 Recognized as the basic unit of study across hydrologic disciplines, a catchment may be represented in various ways in different sub-hydrology-domain information models. Catchment boundary, catchment area, a linear flowpath, the hydrographic or channel network, or the hydrometric network of stations are alternative views representing the same catchment, whereby each data product represents exactly one catchment. To illustrate this idea, Figure 4 shows different types of geospatial data overlaying the represented Missouri region.
@@ -333,20 +333,7 @@ Each representation will support a different sub-set of possible ways of definin
 ### 6.3 Catchment hierarchy and network topology
 Catchments may be connected in topological networks to represent the continuity of hydrologic processes at the interface between catchments and to support aggregation of catchments and up- or down-stream tracing. Topological connectivity is typically indicated by adjacent polygon edges, nesting of polygons, or through connection of linear features at nodes. However, since geomteric representation of hydrography serves many purposes and may not be needed at all, it is not appropriate to rely only on geometric representation as the basis for topology. Instead, topology can be expressed as relationships between the conceptual features of a particular type, or class.
 
-#### 6.3.1 Catchment Networks
-Given the idea that non-geospatial--conceptual--features can be connected in topological networks, a catchment can be thought of as a hydrologic unit whose terrain and morphology results in a topological link between inflow and outflow. The red line in Figure 5 illustrates how a single catchment, which has a boundary, an area, a network, and a main flowpath, can be represented by a non-geospatial flowpath connection between inflow and outflow. 
-
- ![Figure 5: A catchment area (blue) and a flowpath connecting inflow to outflow (red) representing a definable unit where hydrological processes take place. ](figs/fig5.png)  
-Figure 5: A catchment area (blue) and a flowpath connecting inflow to outflow (red) representing a definable unit where hydrological processes take place. 
-
-In a network of catchments, morphological detail may be specified in many ways. Inflows may be "virtual" in headwaters - and likewise outflow nodes may be virtual where waters flow out of a network. As show in Figure C1, C3, C4, and C5 catchments may connect through simple confluences (C1), water bodies or wetlands [C3], intermittent or subsurface flows [C4] or complex braided streams [C5] - all requiring different geometric representations but represented by the same simple topology. Because all these inflows and outflows can be specified geometrically, these cases do not require special treatment to handle the variation of the nature of such processes. 
-
-![Figure C1-5: C1, Typical catchments with one inflow and one outflow each; C2, Joined (conjoint) catchments flowing into a single downstream catchment; C3, catchments joining in a waterbody or wetland with no clear network; C4, catchments joining through intermitent of subsurface flowsl C5, catchments that join through areas of complex or braided channels. ](figs/cartoonset1.png)  
-Figure C1-5: C1, Typical catchments with one inflow and one outflow each; C2, Joined (conjoint) catchments flowing into a single downstream catchment; C3, catchments joining in a waterbody or wetland with no clear network; C4, catchments joining through intermitent of subsurface flowsl C5, catchments that join through areas of complex or braided channels.  
-
-There are two ways that catchments with multiple inflows can share a common outflow. 1) As separate subcatchments such that each catchment has a flowpath from a single inflow to the common outflow (figure C1) or as a single upstream catchment from the outflow (figure C2). The latter case, referred to here as a conjoint catchemnt is often easier to delineate and is convenient in some cases, but it can be hard to determine contributions to each flow path, or perform linear referencing, or determine which is the main flowpath. [Do we name non-dendritic flowline catchments ? do we name total aggregated inflow ?]
-
-#### 6.3.2 Dendritic and Basic Catchment Aggregates
+#### 6.3.1 Hierarchy of catchments
 Any catchment may be nested or aggregated in a larger containing catchment of split into multiple sub units forming a hierarchy of catchments. Two types of catchment hierarchy are supported in HY_Features: basic nesting and dendritic aggregation. 1) Basic nesting allows any catchment to have a reference to a containing catchment (Figure 6). This allows collections of subcatchments to be grouped into larger units, but does not define any particular interconnections between these subcatchments. 2) To reflect the organization of catchments in dendritic hierarchies, a specialized dendritic catchment is defined as a catchment that must contribute to one and only one receiving catchment (Figure 7). Dendritic hierarchies are collections of catchments with simple topological relationships that allow determination of contribution of flow to downstream catchments. 
 
 In a dendritic network, the outflow node that one of more dendritic catchments flow to (which is not necessarily a single geometric point) must contribute to one receiving catchment, unless it is a terminal catchment.  Given that the dendritic catchment is defined as a special type of catchment, it inherits the general nesting defined for the catchment as shown in Figure 6.
@@ -361,7 +348,19 @@ It is worth noting that non-dendritic channel networks are often represented as 
  
 ![Figure C6: A catchment area (blue) and a flowpath connecting inflow to outflow (red) representing a definable unit where hydrological processes take place. ](figs/cartoonset2.png)  
 
-#### 6.3.3 Inflow and Outflow Nodes
+#### 6.3.2 Topological network of catchments
+Given the idea that non-geospatial--conceptual--features can be connected in topological networks, a catchment can be thought of as a hydrologic unit whose terrain and morphology results in a topological link between inflow and outflow. The red line in Figure 5 illustrates how a single catchment, which has a boundary, an area, a network, and a main flowpath, can be represented by a non-geospatial flowpath connection between inflow and outflow. 
+
+ ![Figure 5: A catchment area (blue) and a flowpath connecting inflow to outflow (red) representing a definable unit where hydrological processes take place. ](figs/fig5.png)  
+Figure 5: A catchment area (blue) and a flowpath connecting inflow to outflow (red) representing a definable unit where hydrological processes take place. 
+
+In a network of catchments, morphological detail may be specified in many ways. Inflows may be "virtual" in headwaters - and likewise outflow nodes may be virtual where waters flow out of a network. As show in Figure C1, C3, C4, and C5 catchments may connect through simple confluences (C1), water bodies or wetlands [C3], intermittent or subsurface flows [C4] or complex braided streams [C5] - all requiring different geometric representations but represented by the same simple topology. Because all these inflows and outflows can be specified geometrically, these cases do not require special treatment to handle the variation of the nature of such processes. 
+
+![Figure C1-5: C1, Typical catchments with one inflow and one outflow each; C2, Joined (conjoint) catchments flowing into a single downstream catchment; C3, catchments joining in a waterbody or wetland with no clear network; C4, catchments joining through intermitent of subsurface flowsl C5, catchments that join through areas of complex or braided channels. ](figs/cartoonset1.png)  
+Figure C1-5: C1, Typical catchments with one inflow and one outflow each; C2, Joined (conjoint) catchments flowing into a single downstream catchment; C3, catchments joining in a waterbody or wetland with no clear network; C4, catchments joining through intermitent of subsurface flowsl C5, catchments that join through areas of complex or braided channels.  
+
+There are two ways that catchments with multiple inflows can share a common outflow. 1) As separate subcatchments such that each catchment has a flowpath from a single inflow to the common outflow (figure C1) or as a single upstream catchment from the outflow (figure C2). The latter case, referred to here as a conjoint catchemnt is often easier to delineate and is convenient in some cases, but it can be hard to determine contributions to each flow path, or perform linear referencing, or determine which is the main flowpath. [Do we name non-dendritic flowline catchments ? do we name total aggregated inflow ?]
+
  In this network of catchments, two or more catchments that flow into another flow to the same outflow node (Figure 8) which is the inflow node of a receiving downstream catchment (Figure 9); the upstream catchment may be described as the catchment contributing to the inflow node of the relevant catchment. In the case of a network of dendritic catchments, all nodes on the network flow to one and only one catchment. (Figure 8 and Figure 9)  
 
 ![Figure 8: Catchments contributing to an identified outflow node. Note that some catchments contribute to a common outflow node.](figs/fig8.png)  
@@ -386,7 +385,11 @@ Figure 13: Position (yellow dot) downstream of a reference point (red dot)
 Yellow: point of interest (outflowNode of contributingCatchment) - locatedStart (origin) of riverReferenceSystem,  
 Red: reference point (referent) – known inflowNode of the (green) encompassingCatchment 
 
-### 6.4 Aggregation and segmentation of watercourses
+### 6.4 River reference system
+(logical continuation of 6.3) 
+..  
+
+### 6.5 Aggregation and segmentation of watercourses
 A watercourse, commonly understood as natural or man-made channel through or along water may flow or not, is conceptually separated into the body of flowing water and the containing channel. This separation references the different scientific concerns of hydrology, studying occurrence, accumulation and circulation of water, and hydraulic engineering focused on analysis and design of water flow regime.  The network of permanent and temporary watercourses may be described by both the hydrographic network of water bodies and the connecting system of channels.  The network of channels exists independently of whether water flows therein or not and does not define whether a water body interacts with water bodies upstream and downstream. For example, normally stagnant waters may or may not be connected to streams during flood events, or streams may be interrupted to pools of stagnant water in periods of drought or not. Likewise, an aquifer system determines the potential connection between bodies of groundwater, but not causes the interaction.  
 
 Each water body aggregated in the hydrographic network may be further divided into segments each confined by vertical stream sections. Due to differences in thermal or salinity characteristics, or by oxygen or nutrient content, a water body may be stratified into distinct horizontal layers. Each channel of the channel network may be divided to segments between two or more vertical profiles.
@@ -394,7 +397,11 @@ Each water body aggregated in the hydrographic network may be further divided in
 Water may be stored and managed in surface or underground reservoirs in terms of a resource for future use, regulation or control. Conceptually, each water body accumulating water, or the layers therein, may be managed as a reservoir. Referring to a zone-based reservoir management storage reservoirs are also understood as stratified water bodies.  
 Water bodies are observed using monitoring stations and observing posts. Almost all stations are physical artifacts, or collections of these. Yet, some stations may be fictive ones. Monitoring stations may be connected logically in hydrometric networks which represent a distinct catchment that is the subject of monitoring or reporting at local or regional scale. It is common practice to locate a monitoring station in relation to local landmarks and permanent reference points, or in relation to the extent of the monitored water body.
 
-### 6.5 The Atmospheric Hydro Feature application schema (informative)
+### 6.6 The Surface Hydro Feature application schema 
+(brief outline with reference to the normative section 7, in favour of completeness of the hydro cycle, against the background of the general holistic catchment approach) 
+..  
+
+### 6.7 The Atmospheric Hydro Feature application schema (informative)
 The Atmospheric Hydro Feature application schema provides a model to take into account water from atmospheric origin, particularly from precipitation, without the complexity and detail of a rainfall-runoff model.  This enables contextually related information models to build relationships to hydrologic features, finally to the catchment represented in a data product. This informative package provides concepts of water falling through the atmosphere (as precipitation) to be accumulated in a water body. This allows atmospheric water to be related to the hydrographic network of water bodies representing a catchment, as well as to a catchment corresponding to an identified reference point associated with the accumulating water body. Special concepts of water suspended in the atmosphere may by defined with an application. Special concepts should not contradict the definitions endorsed by the WMO as published in the "International Meteorological Vocabulary" published and maintained by the WMO [9]. The Atmospheric Hydro Feature schema introduces the concepts of HydroMeteor, Precipitation, Rain and Snow. 
  
 ![Figure 14: Atmospheric Hydro Feature schema](figs/fig14.png)  
@@ -405,20 +412,20 @@ The HY_Precipitation class specializes HY_HydroMeteor with respect to water fall
 
 The HY_Rain and HY_Snow classes define special types of liquid or solid water intended to separately reflect ice or water particles falling from a cloud.  
 
-### 6.6 The Subsurface Hydro Feature application schema (informative)
+### 6.8 The Subsurface Hydro Feature application schema (informative)
 The informative Subsurface Hydro Feature application package introduces concepts reflecting water accumulated below the land surface as well as the formation of rock or soil containing the body of water. This concept refers to the holistic approach of the dendritic catchment as the unit wherein all water, surface and subsurface water, is directed to an identified common outlet. It allows subsurface water to be related to the hydrographic network of water bodies, as well as to a corresponding dendritic catchment identified by an inflow or outflow node using a reference point associated with the confining unit. Special concepts of subsurface water, its confines and special relationships may be defined with an application. Special concepts should not contradict the definitions endorsed by the WMO as published in the  "International Glossary of Hydrology". A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development.  
 
 ![Figure 15: Subsurface Hydro Feature schema](figs/fig15.png)  
 Figure 15: Subsurface Hydro Feature schema  
 
-#### 6.6.1 The Subsurface Water model 
+#### 6.8.1 The Subsurface Water model 
 The Subsurface Water model  introduces a simple model of water accumulated in rock or soil below the land surface,  either specialized by pressure head or the property to move due to gravity and capillary action.  This allows to handle concepts of subsurface waters separately from those of  the confining aquifer. An application focused on a special type of subsurface water may use the concepts when describing the relationship of groundwater or water in soil to a catchment in terms of the ultimate target of observation. Depending on the  particular application, special types may be defined and described by suitable properties.  
 
 The HY_Groundwater class specializes HY_Water_LiquidPhase with respect to the existence of water occupying the saturated zone. It inherits the accumulatingWaterBody association, which allows to relate subsurface water to the hydrographic network of water bodies.  
 
 The HY_VadoseWater class specializes HY_Water_LiquidPhase with respect to the existence of water occupying the unsaturated zone. It inherits the accumulatingWaterBody association, which allows to relate subsurface water to the hydrographic network of water bodies. HY_SoilWater, HY_SoilMoisture and HY_GravitationalWater specialize vadose water.  
 
-#### 6.6.2 The Subsurface Water Confines model
+#### 6.8.2 The Subsurface Water Confines model
 The Subsurface Water confines model  introduces concepts of  the hydrogeologic units, particularly an aquifer, containing subsurface water, incl. the well used to extract, inject or infiltrate water from/into these. Depending on the  particular application, special types of containing units may be defined and described by suitable properties.  
 
 The HY_HydroGeologicUnit class provides a simple means for taking into account the hydrologically significant characteristics of formations of rock or soil, allowing further contextual specializations of hydro-geologic features. HY_HydroGeologicUnit  carries one association: containingUnit.  
