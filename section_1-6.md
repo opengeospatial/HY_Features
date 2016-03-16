@@ -291,7 +291,7 @@ The _EXT_-prefix refers to "external", common patterns that are required, but no
 
 ## 6. Clauses not Containing Normative Material
   
-### 6.1 The abstract hydrology phenomenon
+### 6.1 The abstract notion of the hydrology phenomenon
 
 Processes that continuously deplete and replenish water resources cause or result in a wide range of phenomena that are the subject of monitoring, modeling and reporting in hydrology and related sciences. These distinctly named or otherwise uniquely identified real-world hydrologic phenomena are conceptualized and referred to as hydrologic features in this standard. This standard applies to data and data products that represent these hydrologically defined features.
   
@@ -317,18 +317,14 @@ In inter-disciplinary programs, inter-program collaboration and cross-domain res
 ### 6.2 Catchment and multiple representations of the catchment concept
 The core concept of the HY_Features model is that a study of the Hydrology phenomenon will reference common conceptual entities of the real world (a water body, stream gaging site, or catchment) through the use of specific modeled features (as per ISO 19109 General Feature Model). Depending on the scientific concern, the specific hydrologic feature may be modeled as one of many potential representations of the conceptual entity being represented.  
 
-Recognized as the basic unit of study across hydrologic disciplines, a catchment may be represented in various ways in different sub-hydrology-domain information models. Catchment boundary, catchment area, a linear flowpath, the hydrographic or channel network, or the hydrometric network of stations are alternative views representing the same catchment, whereby each data product represents exactly one catchment. To illustrate this idea, Figure 4 shows different types of geospatial data overlaying the represented Missouri region.
+Recognized across hydrologic disciplines as the basic unit of study where hydrologic processes (such as flow accumulation) take place, a catchment may be represented in various ways in different sub-hydrology-domain information models. Catchment boundary, catchment area, and linear flowpath, are the most common geometric representations of a catchment, while a network structure in its entirety represents a catchment topologically as a set of related features. The hydrographic network of water bodies, the network of channels, or the hydrometric network of stations are examples of a representing network, whereby a water body, channel or station is considered to represent a catchment only as aggregated part of the representing network. The hydrologic characteristics are of little interest, except of carrying a reference location which is considered as outlet of a catchment that is part of the catchment represented by the network. To illustrate this idea, Figure 4 shows different types of geospatial data overlaying the represented Missouri region.
 
 ![Figure 4: Multiple representation of the Missouri catchment (Source: USGS and GRDC) ](figs/fig4.png)  
 Figure 4: Multiple representation of the Missouri catchment (Source: USGS and GRDC)  
 
 a) Catchment boundary, b) Catchment area, c) Hydrologic unit containing sub-units, d) Abstract flowline and common outlet, e) Network of flow lines at different level of detail, f) Network of monitoring stations  
 
- The HY_Features conceptual model defines the catchment as the basic unit where hydrologic processes (such as flow accumulation) take place, but does not require that a specific geometric representation is explicitly defined, allowing for multiple representations to support different needs (Figure 4). 
- 
-Each representation will support a different sub-set of possible ways of defining the state of the catchment and its interaction with other features. No single representation can support all the common ways, so HY_Features provides a basis to declare the relationships between such representations. Such declarations are necessary because different things may be represented in identical data models, so its not in general possible to inspect a feature representation and identify what type of feature is being represented, and hence what operations may be performed. 
-
-[if this is not felt to be obvious add a figure showing catchments that can be aggregated vs disjoint or overlapping catchments]
+Each geospatial representation will support a different way of performing the state of the catchment and its interaction with other features, but no single data product support all the common ways. It is generally not possible to inspect a particular catchment representation and identify therefrom  what type of catchment is being represented, because different feature types may be represented using identical data models. For example, a map showing a set of catchment polygons may display an aggregate of sub-catchments, or catchments overlapping each other occupying the same space. To sufficiently identify what logic type of catchment is represented, the relationship between them needs to be declared, e.g. between the high-order catchment and catchments generally nested therein, or between the catchment aggregate encompassing nested catchments without any overlap. 
 
 ### 6.3 Catchment hierarchy and network topology
 Catchments may be connected in topological networks to represent the continuity of hydrologic processes at the interface between catchments and to support aggregation of catchments and up- or down-stream tracing. Topological connectivity is typically indicated by adjacent polygon edges, nesting of polygons, or through connection of linear features at nodes. However, since geomteric representation of hydrography serves many purposes and may not be needed at all, it is not appropriate to rely only on geometric representation as the basis for topology. Instead, topology can be expressed as relationships between the conceptual features of a particular type, or class.
