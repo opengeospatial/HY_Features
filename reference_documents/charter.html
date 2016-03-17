@@ -14,15 +14,16 @@
 		</p>
 		<p>
 			Hydrologic features are the unit of water information required to convey identity of real-world water-objects through the data processing chain from observation to water information. 
-			The work undertaken in the Hydrology DWG led to a series of water-related specifications to manage at different levels of detail the identification, observation and representation of hydrologic features. 
+			The work undertaken in the HDWG or Hydrology Domain Workinging Group led to a series of water-related specifications to manage at different levels of detail the identification, observation and representation of hydrologic features. 
 			These standards include WaterML2.0: Part 1 - Time Series and WaterML2.0 Part 2 - Ratings, Gaugings, and Sections; WaterML-WQ an O&amp;M and WaterML 2.0 profile for water quality data (1.0); a proposed conceptual model and encoding for Groundwater Features, and this prospective conceptual model standard for hydrologic features. 
-			While these standards addess different aspects of hydrology and water information, they are formed around a common understanding of Hydrology. 
-			This common understanding provides conceptual information architecture to be used to link hydo-science application-specific concepts by referencing common semantics alowwing hydrologic and other domain-specific information systems, web services, and ontologies to be linked using a common reference model.
+			While these standards address different aspects of hydrology and water information, they are formed around a common understanding of hydrology. 
+			This common understanding provides conceptual information architecture to be used to link hydro-science application-specific concepts by referencing common semantics.Thus, this approach allows hydrologic and other domain-specific information systems, web services, and ontologies to be linked using a common reference model. 
+			Therefore, this common standard model will permit the community to move from syntactic interoperability to a more semantic interoperability of hydro-science applications.
 		</p>
 		<p>
-			This standard provides a reference model defining real-world water-objects and the way they relate to each other according to hydro-science domain defined semantics and network topology. 
-			It is defined under the umbrella of the joint WMO-OGC hydrology domain working group and is meant to form the groundwork for future hydrologic feature encoding standards among other applications. 
-			The SWG envisions future work to define encoding standards that would extend or add to the technical baseline that is the system of WaterML2.0 encoding standards. 
+			This standard provides a reference model defining real-world water-objects and the way they relate to each other according to hydro-science domain defined by semantics and network topology. 
+			It is defined under the umbrella of the joint WMO-OGC Hydrology Domain Working Group and is meant to form the groundwork for future hydrologic feature encoding standards among other applications. 
+			The Standards Working Group (SWG) envisions as a future work the definition of encoding standards that would extend or add the technical baseline corresponding to the system of WaterML2.0 encoding standards.
 		</p>
 		<div>
 			<h1>
@@ -36,16 +37,16 @@
 			This goal will be achieved by developing and publishing a draft standard, by processing comments received during a public comment period, and ensuring that the standard is consistent with the OGC Standards Baseline.
 		</p>
 		<p>
-			The Hydrologic Features standard will be split into 2 parts, so that the conceptual model--for use in later conceptual model and data encoding development--can be addressed separatly from a machine-readable OWL version of the model--for use in feature identification and linking applications.
+			The Hydrologic Features standard will be split into 2 parts, so that the conceptual model--for use in later conceptual model and data encoding development--can be addressed separately from a machine-readable OWL version of the model--for use in feature identification and linking applications.
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Part 1: Surface Water Features conceptual model (OGC14-111). The normative model is a machine-readable UML artefact published by OGC.
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Part 1: Surface Water Features conceptual model (OGC14-111). The normative model is a machine-readable UML artefact published by OGC.
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Part 2: Surface Water Features OWL and RDF representation suitable for defining links between features that implement the HY_Features model, based on ISO 19150 encoding rules.
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Part 2: Surface Water Features OWL and RDF representation suitable for defining links between features that implement the HY_Features model, based on ISO 19150 encoding rules.
 		</p>
 		<p>
-			The final deliverable of the SWG will be separate versions of each intended part of the Hydrologic Feature candidate standard for consideration by the OGC membership for approval as an OGC standard and include contribution to the OGC Abstract Specification.
+			The final deliverable of the SWG will be separated versions of each intended part of the Hydrologic Feature candidate standard for consideration by the OGC membership for approval as an OGC standard and including as a contribution to the OGC Abstract Specification baseline.
 		</p>
 		<div>
 			<h1>
@@ -53,25 +54,25 @@
 			</h1>
 		</div>
 		<p>
-			The HY_Features common hydrologic feature model (OGC 11-039r3) is a formalism based on definitions published in the WMO/UNESCO International Glossary of Hydrology (WMO Series no. 385) as a domain model using ISO 19100 series domain modelling standards.&nbsp;
+			The HY_Features common hydrologic feature model (OGC 11-039r3) is a formalism based on definitions published in the WMO/UNESCO International Glossary of Hydrology (WMO Series no. 385) as a domain model using ISO 19100 series domain modeling standards.&nbsp;
 		</p>
 		<p>
-			The HY_Features model describes surface hydrologic features by defining the fundamental relationships among major components of the hydrosphere--such as the hierarchy of drainage basins and segmentation of watercourses--to reflect hydrologic significance and topological network connectivity of hydrologic features. This is accomplished in a way that is independent from geometric representation or scale of the described features.
+			The HY_Features model describes surface hydrologic features by defining the fundamental relationships among major components of the hydrosphere--such as the hierarchy of catchments and segmentation of watercourses--to reflect hydrologic significance and topological network connectivity of hydrologic features. This is accomplished in a way that is independent from geometric representation or scale of the described features.
 		</p>
 		<p>
 			The HY_Features model will allow for common and stable reference definitions wherever hydrologic features and relationships are required,
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to assist identification of the target feature-of-interest of hydrologic observations,
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to assist identification of the target feature-of-interest of hydrologic observations,
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to assist the assimilation of data represented in various data sets into integrated datasets or computer software on global, regional, or basin scales,
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to assist the assimilation of data represented in various data sets into integrated datasets or computer software on global, regional, or basin scales,
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to enable information systems to link distributed data across application domains,
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to enable information systems and link distributed data across application domains,
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to enable cross-domain services to communicate by referencing common, shared concepts.
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to enable cross-domain services to communicate by referencing common, shared concepts and then promote the semantic interoperability between systems.
 		</p>
 		<div>
 			<h1>
@@ -100,31 +101,31 @@
 			The HY_Features candidate standard will provide a reference model enabling information systems to link hydrologic features and related data distributed across application domains and Web services; however, this standard will not specify specific data encodings, communication technologies or service interfaces.
 		</p>
 		<p>
-			The purpose of the HY_Features candidate standard is to provide the high level conceptual basis for describing how conceptual hydrologic features in particular applications or implementations of hydrologic features relate to common hydrologic science concepts. The standard is not intended to allow direct encoding or transformation of one application or implementation to another. Future work, such as invisioned by RiverML, is expected to take on the task of developing a common information model or encoding for hydrologic feature data.
+			The purpose of the HY_Features candidate standard is to provide the high level conceptual basis for describing how conceptual hydrologic features in particular applications or implementations of hydrologic features relate to common hydrologic science concepts. The standard is not intended to allow direct encoding or transformation of one application or implementation to another. Future work, such as envisioned by RiverML, is expected to take on the task of developing a common information model or encoding for hydrologic feature data.
 		</p>
 		<h2>
 			4.3&nbsp;&nbsp;&nbsp; Specific Contribution of Existing Work as a Starting Point
 		</h2>
 		<p>
-			The starting point for the work will be the Discussion Paper OGC 11-039r3: “HY_Features: a Common Hydrologic Feature Model.” The work undertaken in the OWS 10 Cross Community Interoperability Hydro Model Interoperability effort, as documented in the Engineering Report OGC 14-048, as well as the already existing implementations of HY_Features concepts in the AU Hydrological Geo Fabric (AHGF) at the Australian Bureau of Meteorology, in the Spatial Identifier Reference Framework (SIRF) developed at CSIRO, and in the Open Management Platform (OMP) of the European WatERP Project may be considered in terms of OGC’s IEs.
+			The starting point for the work will be the Discussion Paper OGC 11-039r3: "HY_Features: a Common Hydrologic Feature Model." The work undertaken in the OWS 10 Cross Community Interoperability Hydro Model Interoperability effort, as documented in the Engineering Report OGC 14-048, as well as the already existing implementations of HY_Features concepts in the AU Hydrological Geo Fabric (AHGF) at the Australian Bureau of Meteorology, in the Spatial Identifier Reference Framework (SIRF) developed at CSIRO, and in the Open Management Platform (OMP) of the European WatERP Project may be considered in terms of OGC's IEs.
 		</p>
 		<h2>
 			4.4&nbsp;&nbsp;&nbsp; Determination of SWG Completion
 		</h2>
 		<p>
-			The work of the SWG will be complete when for each of the three parts of the standard:
+			The work of the SWG will be complete when, for each of the two parts of the standard:
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A draft standard has been developed and circulated for comments;
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A draft standard has been developed and circulated for comments;
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All comments submitted during the 30-day public comment period have been dealt with to the satisfaction of the SWG;
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All comments submitted during the 30-day public comment period have been dealt with to the satisfaction of the SWG;
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The SWG approves the candidate standard for submission to the TC for approval as an adopted standard; and
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The SWG approves the candidate standard for submission to the TC for approval as an adopted standard; and
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The TC and the PC approve the candidate standard and all comments in the approval processes are addressed.
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The TC and the PC approve the candidate standard and all comments in the approval processes are addressed.
 		</p>
 		<h2>
 			4.5&nbsp;&nbsp;&nbsp; Is this a persistent SWG?
@@ -147,34 +148,34 @@
 			The following deliverables will result from the work of this SWG:
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Draft versions of Part 1, 2 and 3 of the Hydrologic Features specification for comment.
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Draft versions of Part 1, 2 and 3 of the Hydrologic Features specification for comment.
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; An annotated list of all comments submitted during the 30-day public comment period, including the comment, submitter, rationale, comment type/priority, and the response of the SWG.
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; An annotated list of all comments submitted during the 30-day public comment period, including the comment, submitter, rationale, comment type/priority, and the response of the SWG.
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Final versions of Part 1, 2 and 3 of the Hydrologic Features specification as well as ATS documents for submission to the TC.
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Final versions of Part 1, 2 and 3 of the Hydrologic Features specification as well as ATS documents for submission to the TC.
 		</p>
 		<p>
-			The following activities are planned with respect to “Hydrologic Features, Part 1: Conceptual model”:
+			The following activities are planned with respect to "Hydrologic Features, Part 1: Conceptual model":
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SWG startup.&nbsp; 2015 September
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SWG startup.&nbsp; 2015 September
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SWG vote to release Hydrologic Features, Part 1: Conceptual model for public comment (HYF-P1).&nbsp; 2015 November
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SWG vote to release Hydrologic Features, Part 1: Conceptual model for public comment (HYF-P1).&nbsp; 2015 November
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Release HYF-P1 for public comment. 2015 November/December
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Release HYF-P1 for public comment. 2015 November/December
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Consolidation of comments and edits to HYF-P1 document based on comments. 2016 February/March
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Consolidation of comments and edits to HYF-P1 document based on comments. 2016 February/March
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recommendation of the candidate standard to the Membership. 2016 March
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recommendation of the candidate standard to the Membership. 2016 March
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60 day IPR review period and associated TC e-vote to approve “Hydrologic Features, Part 1: Conceptual model” candidate standard as an adopted OGC Standard.
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60 day IPR review period and associated TC e-vote to approve "Hydrologic Features, Part 1: Conceptual model" candidate standard as an adopted OGC Standard.
 		</p>
 		<p>
 			This schedule of activities refers to Part 1 (Conceptual model).&nbsp; The intended Part 2 (GML implementation) and Part 3 (OWL and RDF representation) may require further testing and will be scheduled by the SWG after the adoption of Part 1. If required, the SWG will be re-chartered accordingly.
@@ -185,7 +186,7 @@
 			</h1>
 		</div>
 		<p>
-			x RAND-Royalty Free.&nbsp; <s></s><s>&nbsp; RAND for fee</s>
+			x RAND-Royalty Free.&nbsp; <s>&nbsp; RAND for fee</s>
 		</p>
 		<div>
 			<h1>
@@ -193,7 +194,7 @@
 			</h1>
 		</div>
 		<p>
-			The target audience/participants of Hydrologic Features standard includes: application developers; GIS and software vendors; the meteorologic and hydrologic research and education community; and the consumer.
+			The target audience/participants of Hydrologic Features standard includes: application developers; GIS and software vendors; the meteorologic and hydrologic research and education community; national and other data producers; and the consumer.
 		</p>
 		<p>
 			Development of Hydrologic Features standard will be undertaken by the following OGC members:
@@ -226,7 +227,7 @@
 			h) &nbsp; &nbsp; Fundacio Eurecat, Spain
 		</p>
 		<p>
-			i)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 52°North, Germany
+			i)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 52North, Germany
 		</p>
 		<p>
 			&nbsp;
@@ -246,31 +247,31 @@
 			The following standards and projects may be relevant to the SWG's planned work, although none currently provide the functionality or domain focus anticipated by this committee's deliverables:
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AU BoM, AU Hydrological Geo Fabric (AHGF). http://<a href="http://www.bom.gov.au/water/geofabric/index.shtml">www.bom.gov.au/water/geofabric/index.shtml</a>&nbsp;
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AU BoM, AU Hydrological Geo Fabric (AHGF). http://<a href="http://www.bom.gov.au/water/geofabric/index.shtml">www.bom.gov.au/water/geofabric/index.shtml</a>&nbsp;
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AU CSIRO, Spatial Identifier Reference Framework (SIRF). <a href="file:///D:/Users/Dornblut/OGC_HDWG/_HY2_Standard/https">https</a><a href="https://wiki.csiro.au/display/SIRF/The+SIRF+API">://</a><a href="https://wiki.csiro.au/display/SIRF/The+SIRF+API">wiki.csiro.au/display/SIRF/The+SIRF+API</a>
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AU CSIRO, Spatial Identifier Reference Framework (SIRF). <a href="file:///D:/Users/Dornblut/OGC_HDWG/_HY2_Standard/https">https</a><a href="https://wiki.csiro.au/display/SIRF/The+SIRF+API">://</a><a href="https://wiki.csiro.au/display/SIRF/The+SIRF+API">wiki.csiro.au/display/SIRF/The+SIRF+API</a>
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EU, INSPIRE Data Specification on Hydrography, 3.1. http://inspire.ec.europa.eu/index.cfm/pageid/2
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EU, INSPIRE Data Specification on Hydrography, 3.1. http://inspire.ec.europa.eu/index.cfm/pageid/2
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EU, Open Management Platform (OMP) of the European WatERP Project.<a href="http://www.waterp-fp7.eu">http://www.waterp-fp7.eu</a>
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EU, Open Management Platform (OMP) of the European WatERP Project.<a href="http://www.waterp-fp7.eu">http://www.waterp-fp7.eu</a>
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ISO 19109:2005 Geographic Information – Rules for application schema
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ISO 19109:2005 Geographic Information – Rules for application schema
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ISO 19110:2005 Geographic Information – Methodology for feature cataloguing
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ISO 19110:2005 Geographic Information – Methodology for feature cataloguing
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ISO 19150-2:2012 Geographic information – Ontology – Part 2: Rules for developing ontologies in the Web Ontology Language (OWL).
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ISO 19150-2:2012 Geographic information – Ontology – Part 2: Rules for developing ontologies in the Web Ontology Language (OWL).
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OGC, Geography Markup Language v3.3 (also ISO 19136:2007)
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OGC, Geography Markup Language v3.3 (also ISO 19136:2007)
 		</p>
 		<p>
-			·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OGC, Observations and Measurements XML (OMXML) Encoding Standard (OGC 10-025)
+			&#8226;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OGC, Observations and Measurements XML (OMXML) Encoding Standard (OGC 10-025)
 		</p>
 		<p>
 			<br>
