@@ -357,7 +357,7 @@ Figure C1-5: C1, Typical catchments with one inflow and one outflow each; C2, Jo
 
 There are two ways that catchments with multiple inflows can share a common outflow. 1) As separate subcatchments each having a flowpath from a single inflow node to the outflow node (figure C1), or as an undivided whole catchment upstream from the outflow node (figure C2). The latter case, referred to here as a joint catchment is often easier to delineate and convenient in some cases, but it can be hard to determine contributions to each flowpath, or perform linear referencing, or determine which is the main flowpath. [Do we name non-dendritic flowline catchments ? do we name total aggregated inflow ?]
 
-In this network of catchments, two or more catchments flowing into another flow to the same outflow node (Figure 8) which is the inflow node of a receiving downstream catchment (Figure 9); the upstream catchment may be described as the catchment contributing to the inflow node of receiving catchment. In the case of a network of dendritic catchments, all nodes on the network flow to one and only one receiving catchment. (Figure 8 and Figure 9)  
+In this network of catchments, two or more catchments that flow into another, flow to the same outflow node (Figure 8) which is the inflow node of a receiving downstream catchment (Figure 9); the catchment upstream of an outflow node may be understood as the catchment contributing flow to the inflow node of a receiving catchment. In a network of dendritic catchments, outflow nodes on the network serve only one receiving catchment. (Figure 8 and Figure 9)  
 
 ![Figure 8: Catchments contributing to an identified outflow node. Note that some catchments contribute to a common outflow node.](figs/fig8.png)  
 Figure 8: Catchments contributing to an identified outflow node. Note that some catchments contribute to a common outflow node.
@@ -365,17 +365,18 @@ Figure 8: Catchments contributing to an identified outflow node. Note that some 
 ![Figure 9: Catchment receiving inflow via an identified inflow node](figs/fig9.png)  
 Figure 9: Catchments receive inflow via an identified inflow node. Note that nodes are not necessarily geographic features, but are rather nodes in a graph representation of the river network.
 
-Inflow and outflow nodes stand alone as points of interaction in the network, denoted as (potentially complex) outfall. Whether an outfall is referred to as inflow or outflow node is in reference to a catchment. This means that the conceptual outfall serves as the outflow node of some contributing catchment(s) and the inflow node of the catchment in question. This specification uses the role names to unambigously describe the role of an outfall in respect to the catchment in question. 
+Inflow and outflow nodes stand alone as points of interaction in the network, denoted as (potentially complex) outfall. Whether an outfall is referred to as inflow or outflow node is in reference to a catchment. This means that the conceptual outfall serves as the outflow node of some contributing catchment(s) and the inflow node of the catchment in question. Hereinafter, the role names of the conceptual outfall are used whenwever its role in respect to the catchment in question nneds to be unambigously described. 
 
 Figure: Need a figure here that will show the very basic concept of nodes. 
 
-Being topological nodes, inflow and outflow have no explicit positions. A catchment's outfall is positioned on the network relative to a reference point identified by co-ordinates. While confluences are natural locations to assign catchment outfalls, stream gage sites, cross-sections, and other on-network locations are common places to study catchment processes and can be used as reference point. Considering any location on a network as the outflow node of a contributing catchment, or the inflow node of a receiving catchment, an arbitrary new location can be placed on network in reference to an existing outfall up or downstream.
+Being topological nodes, inflow and outflow nodes have no explicit positions. A catchment's outfall will be placed on the network relative to a reference location either expressed absolute as the distance to the identified reference point, or relative or interpolative to this. While confluences are natural locations to assign catchment outfalls, common places to study catchment processes such as stream gage sites, cross-sections, and other on-network locations can be used for reference. The reference location may be any other place identified by co-ordinates, such as a fixed a landmark, a stream section, or bed profile, or a monitoring point.  
 
 ### 6.4 River reference system
-(logical continuation of 6.3) 
+[logical continuation of 6.3] 
 
+Considering any location on a network as the outflow node of a contributing catchment, or the inflow node of a receiving catchment, an arbitrary new location can be placed on the network in reference to an existing outfall up- or downstream. Understanding such a placement [placing?] as a positioning "along a river", the linear representation of a catchment can be used to place a new node on the representing flowpath, and to describe its position using a linear, river reference system whose origin is set by that outfall as which the new location to be placed is understood; the shape is determined by the flowpath starting at this origin and ending at that outfall which is marked by the reference location (referent). Each catchment has its own reference system which can be combined as necessary using catchment topology; each river reference system must have one outfall (origin) and one representing flowpath (shape). 
 
- Figure 10, 11, 12, and 13 illustrate how a newly introduced location can be located up or downstream of a reference node.  
+[Figure 10, 11, 12, and 13 illustrate how a newly introduced location can be located up- or downstream of a reference location].  
 ..  
 
 ![Figure 10: Position (yellow dot) upstream of a reference point (red dot)](figs/fig10.png)
@@ -391,6 +392,12 @@ Red: reference point (referent) – known inflowNode of the (green) encompassing
 
 
 ### 6.5 Aggregation and segmentation of watercourses
+
+a) separation of concerns
+b) aggregation of parts 
+c) carrier of the reference location (referent in terms of 19148) used to place an arbitrary location along a linear representation of a catchment 
+
+
 A watercourse, commonly understood as natural or man-made channel through or along water may flow or not, is conceptually separated into the body of flowing water and the containing channel. This separation references the different scientific concerns of hydrology, studying occurrence, accumulation and circulation of water, and hydraulic engineering focused on analysis and design of water flow regime.  The network of permanent and temporary watercourses may be described by both the hydrographic network of water bodies and the connecting system of channels.  The network of channels exists independently of whether water flows therein or not and does not define whether a water body interacts with water bodies upstream and downstream. For example, normally stagnant waters may or may not be connected to streams during flood events, or streams may be interrupted to pools of stagnant water in periods of drought or not. Likewise, an aquifer system determines the potential connection between bodies of groundwater, but not causes the interaction.  
 
 Each water body aggregated in the hydrographic network may be further divided into segments each confined by vertical stream sections. Due to differences in thermal or salinity characteristics, or by oxygen or nutrient content, a water body may be stratified into distinct horizontal layers. Each channel of the channel network may be divided to segments between two or more vertical profiles.
