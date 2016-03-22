@@ -359,7 +359,7 @@ Figure C1-5: C1, Typical catchments with one inflow and one outflow each; C2, Jo
 
 There are two ways that catchments with multiple inflows can share a common outlet: 1) as separate subcatchments each represented by a flowpath between a single inflow node and the outflow node (figure C1), or 2) as a non-divided catchment contributing as a whole to the outflow node (figure C2). The latter case, referred to here as a joint catchment, may result in several flowpathes. Although it may be hard to determine what part of the contributing catchment each flowpath represents, or to determine the main flowpath, or to perform linear referencing (along a flowpath), a joint catchment is often easier to delineate and convenient in some cases . 
 
-In this network of catchments, two or more catchments that flow into another, flow to the same outflow node (Figure 8) which is the inflow node of a receiving downstream catchment (Figure 9); the upstream catchment may be understood as the catchment contributing flow to the inflow node of a receiving catchment. In a network of dendritic catchments, outflow nodes on the network serve only one receiving catchment (Figure 8 and Figure 9).  Applying the concept of connected catchments to catchments arranged in ordered sets, the network can be traced from the common outlet upstream, and visualised using an appropriate geometric representation. 
+In this network of catchments, two or more catchments that flow into another, flow to the same outflow node (Figure 8) which is the inflow node of a receiving downstream catchment (Figure 9); the upstream catchment may be understood as the catchment contributing flow to the inflow node of a receiving catchment. In a network of dendritic catchments, outflow nodes on the network serve only one receiving catchment (Figure 8 and Figure 9).  Applying the concept of connected catchments to catchments arranged in ordered sets, the catchment network can be traced upstream starting at the common outlet, and visualised using an appropriate geometric representation. 
 
 ![Figure 8: Catchments contributing to an identified outflow node. Note that some catchments contribute to a common outflow node.](figs/fig8.png)  
 Figure 8: Catchments contributing to an identified outflow node. Note that some catchments contribute to a common outflow node.
@@ -367,16 +367,18 @@ Figure 8: Catchments contributing to an identified outflow node. Note that some 
 ![Figure 9: Catchment receiving inflow via an identified inflow node](figs/fig9.png)  
 Figure 9: Catchments receive inflow via an identified inflow node. Note that nodes are not necessarily geographic features, but are rather nodes in a graph representation of the river network.
 
-Inflow and outflow nodes stand alone as points of interaction in the network, denoted as (potentially complex) outfall. Whether an outfall is referred to as inflow or outflow node is in reference to a catchment. This means that the conceptual outfall serves as the outflow node of some contributing catchment(s) and the inflow node of the catchment in question. Hereinafter, the role names of the conceptual outfall are used whenwever its role in respect to the catchment in question nneds to be unambigously described. 
+Inflow and outflow nodes stand alone as points of interaction in the network, denoted as (potentially complex) outfall. Whether an outfall is referred to as inflow or outflow node is in reference to a catchment. This means that the conceptual outfall serves as the outflow node of some contributing catchment(s) and the inflow node of the catchment in question. In this standard, the role names of the conceptual outfall are used whenwever its role in respect to the catchment in question nneds to be unambigously described. 
 
 [Figure: Need a figure here that will show the very basic concept of nodes.]
 
 Being topological nodes, inflow and outflow nodes have no explicit positions. A catchment's outfall will be placed on the network relative to a reference location either expressed absolute as the distance to the identified reference point, or relative or interpolative to this. While confluences are natural locations to assign catchment outfalls, common places to study catchment processes such as stream gage sites, cross-sections, and other on-network locations can be used for reference. The reference location may be any other place identified by co-ordinates, such as a fixed a landmark, a stream section, or bed profile, or a monitoring point.  
 
 ### 6.4 River reference system
-Considering any location on a network as the outflow node of a contributing catchment, or the inflow node of a receiving catchment, an arbitrary new location can be placed on the network in reference to an existing outfall up- or downstream. Understanding such a placement [placing?] as a positioning "along a river", the linear representation of a catchment can be used to place a new node on the representing flowpath, and to describe its position using a linear, river reference system whose origin is set by that outfall as which the new location to be placed is understood; the shape is determined by the flowpath starting at this origin and ending at that outfall which is marked by the reference location (referent). Each catchment has its own reference system which can be combined as necessary using catchment topology; each river reference system must have one outfall (origin) and one representing flowpath (shape). Figure 10, 11, 12, and 13 illustrate how a newly introduced location can be located up- or downstream of a reference location.  [\*\*\*check figures\*\*\*] 
+Considering any location on a network as the outflow node of a contributing catchment, or the inflow node of a receiving catchment, an arbitrary new location can be placed on the network in reference to an existing outfall up- or downstream. Understanding such a placement [placing?] as a positioning "along a river", the linear representation of a catchment can be used to place a new node on the representing flowpath, and to describe its position using a linear, river reference system whose origin is set by that outfall as which the new location to be placed is understood; the shape is determined by the flowpath starting at this origin and ending at that outfall which is marked by the reference location (referent). Each catchment has its own reference system which can be combined as necessary using catchment topology; each river reference system must have one outfall (origin) and one representing flowpath (shape). Applying the linear referencing along a flowpath (representation) to a given network of catchments, a stream network can be built from the sequence of representing flowpathes, and visualised using an appropriate geometric representation. 
 
-Applying to a given network of catchments the linear referencing along a flowpath (representation), a stream network can be built from the sequence of representing flowpathes, and visualised using an appropriate geometric representation. 
+Figure 10, 11, 12, and 13 illustrate how a newly introduced location can be located up- or downstream of a reference location.  [\*\*\*check figures\*\*\*] 
+
+
 
 ![Figure 10: Position (yellow dot) upstream of a reference point (red dot)](figs/fig10.png)
 Figure 12: Position (yellow dot) upstream of a reference point (red dot)  
@@ -403,11 +405,14 @@ Referencing in general this definitions, this standard is concerned with water b
 ### 6.6 The Surface Hydro Feature application schema 
 (brief outline with reference to the normative section 7, in favour of completeness of the hydro cycle, against the background of the general holistic catchment approach) 
 
-watercourse 
-..  
+watercourse concept
+surface water
+surface water confines
 ..
 
-### 6.7 The Atmospheric Hydro Feature application schema (informative)
+### 6.7 The Atmospheric Hydro Feature application schema 
+(This package is an informative one, and describe here in favour of completeness with repsect to the holistic catchment approach.)
+
 The Atmospheric Hydro Feature application schema provides a model to take into account water from atmospheric origin, particularly from precipitation, without the complexity and detail of a rainfall-runoff model.  This enables contextually related information models to build relationships to hydrologic features, finally to the catchment represented in a data product. This informative package provides concepts of water falling through the atmosphere (as precipitation) to be accumulated in a water body. This allows atmospheric water to be related to the hydrographic network of water bodies representing a catchment, as well as to a catchment corresponding to an identified reference point associated with the accumulating water body. Special concepts of water suspended in the atmosphere may by defined with an application. Special concepts should not contradict the definitions endorsed by the WMO as published in the "International Meteorological Vocabulary" published and maintained by the WMO [9]. The Atmospheric Hydro Feature schema introduces the concepts of HydroMeteor, Precipitation, Rain and Snow. 
  
 ![Figure 14: Atmospheric Hydro Feature schema](figs/fig14.png)  
@@ -418,7 +423,9 @@ The HY_Precipitation class specializes HY_HydroMeteor with respect to water fall
 
 The HY_Rain and HY_Snow classes define special types of liquid or solid water intended to separately reflect ice or water particles falling from a cloud.  
 
-### 6.8 The Subsurface Hydro Feature application schema (informative)
+### 6.8 The Subsurface Hydro Feature application schema 
+(This package is an informative one, and described here in favour of completeness with repsect to the holistic catchment approach.)
+
 The informative Subsurface Hydro Feature application package introduces concepts reflecting water accumulated below the land surface as well as the formation of rock or soil containing the body of water. This concept refers to the holistic approach of the dendritic catchment as the unit wherein all water, surface and subsurface water, is directed to an identified common outlet. It allows subsurface water to be related to the hydrographic network of water bodies, as well as to a corresponding dendritic catchment identified by an inflow or outflow node using a reference point associated with the confining unit. Special concepts of subsurface water, its confines and special relationships may be defined with an application. Special concepts should not contradict the definitions endorsed by the WMO as published in the  "International Glossary of Hydrology". A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development.  
 
 ![Figure 15: Subsurface Hydro Feature schema](figs/fig15.png)  
