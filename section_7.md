@@ -74,8 +74,14 @@ Regarding **completeness**, all mandatory properties defined by a Feature Type d
 
 ### 7.4 The Hydro Feature application schema
 
-The Hydro Feature application schema defines the fundamental properties and relationships between features governed by the physical laws of hydrology. The core concept is that of a catchment and its multiple representation in the real world. Geometric representations such as catchment area, catchment boundary, a linear flowpath as well as topologic representation by hydrographic network, channel network, or the hydrometric network of stations are alternative views representing a catchment. 
-The Hydro Feature schema provides a model to identify a hydrologic feature, and thus the opportunity to connect disparate representations of a catchment. By making relationships between identified features expressible in a standard form, this allows the hydrosphere to be divided into a hierarchy of hydrologically connected catchments and related phenomena contained therein, irrespective of the various representations available for these phenomena. The Hydro Feature schema contains five leaf packages: HY_NamedFeature, HY_Catchment, HY_HydrographicNetwork, HY_RiverPositioning, HY_Storage.
+The Hydro Feature application schema defines the fundamental properties and relationships between features governed by the physical laws of hydrology. The core concept is that of a catchment and its multiple representation in the real world (see section 6.2 of this standard). Catchment area, catchment boundary, and linear flowpath as well as a cartographic visualisation are defined to reflect the most concepts in use to represent of catchment. 
+
+The Hydro Feature schema conceptualize the abstraction of the complex Hydrology phenomenon through definition of feature types each describing separate aspects of the hydrology phenomenon. This includes related phenomena that participate in hydrologic systems but have specific characteristics. Figure 18 shows the special features types describing separate aspects of the hydrology phenomenon. Given the complexity of the domain, and the nature of real-world physical phenomena, for any given feature further specialisation as well as a wide range of possible characteristics, states and representations may be relevant. 
+
+![Figure 18: Feature types describing separate aspects of the hydrology phenomenon (UML)](figs/fig18.png)
+Figure 18: Feature types describing separate aspects of the hydrology phenomenon (UML)
+
+The Hydro Feature schema provides a model to identify a hydrologic feature, and thus the opportunity to connect disparate representations. By making relationships between identified features expressible in a standard form, this allows the hydrosphere to be divided into a hierarchy of hydrologically connected catchments and related phenomena contained therein, irrespective of the various representations available for these phenomena. The Hydro Feature schema contains five leaf packages: HY_NamedFeature, HY_Catchment, HY_HydrographicNetwork, HY_RiverPositioning, HY_Storage.
 
 | **Requirements Class** | [/req/hy_abstract/*] (/req/hy_abstract/*) |
 | --- | --- |
@@ -90,17 +96,10 @@ The Hydro Feature schema provides a model to identify a hydrologic feature, and 
 
 #### 7.4.1	The Named Feature model
 
-The Named Feature model defines the hydrologic feature to which names are given through common usage. It provides a flexible approach to record multiple names and identifiers that may be assigned to an identified feature without necessarily have a formal naming model by providing a means to localize names in a cultural, political or historical context.
+The Named Feature model defines the hydrologic feature basically as a feature to which names are given through common usage (Figure 17). It provides a flexible approach to record multiple names and identifiers that may be assigned to an identified feature without necessarily have a formal naming model by providing a means to localize names in a cultural, political or historical context. Each  special hydrologic feature type (Figure 18) inherits the general relationships defined for the HY_HydroFeature class. The HY_HydroFeature class carries the properties: *identifier*, *name*, and *context*.
 
 ![Figure 17: Named Feature model (UML)](figs/fig17.png)
 Figure 17: Named Feature model (UML) 
-
-##### 7.4.1.1	Hydro feature
-
-The HY_HydroFeature class denotes the abstraction of the complex Hydrology phenomenon through definition of feature types describing separate aspects of the hydrology phenomenon. This includes related phenomena that participate in hydrologic systems but have specific characteristics. Given the complexity of the domain, and the nature of real-world physical phenomena, for any given feature a wide range of possible characteristics, states and representations may be relevant. 
-
-![Figure 18: Feature types describing separate aspects of the hydrology phenomenon (UML)](figs/fig18.png)
-Figure 18: Feature types describing separate aspects of the hydrology phenomenon (UML)
 
 The **identifier** attribute provides a means to assign to the hydrologic feature an unique and unambiguous identifier in a given context. An instance of HY_HydroFeature shall contain an identifier that may be used as a persistent reference to this feature.
 
@@ -122,20 +121,19 @@ Generally applicable characteristics assigned to an instance of HY_HydroFeature 
 
 #### 7.4.2	The Catchment model
 
-The catchment model defines a logical network of catchments each intentionally represented by geometry or topology. The catchment model defines relationships between catchments, and between catchment and its common outlet. 
-The catchment model allows for the existence of catchments to be recognized, and identifiers assigned based on inflow or outflow nodes even if stream networks, areas and boundaries are not reliably determined. This is sufficient to define simplified hierarchies. It is intended that hydrological reporting applications may use this model without the full complexity and detail of scientific catchment models. 
+The catchment model (Figure 19) defines a logical network of catchments each intentionally represented by geometric shapes or by  networks built using these. The catchment model supports the multiple representation of a catchment and allows for the existence of catchments to be recognized, and identifiers assigned based on inflow or outflow nodes. This is sufficient to define a simple hierarchy (see section 6.3.1) and a topological network of catchments (see section 6.3.2), allowing to establish topological relationships between hydrometric stations located in the catchment network, without the details of stream network.
 
-The catchment model provides the topological concept to consider an arbitrary point on, or projected onto, the land surface as the outfall of a corresponding catchment. Positioned in the hydrographic network, this point provides the identifiable reference point to which alternative representations may refer. The logical network of catchments is the basis to  establish topological relationships between hydrometric stations without the detail of stream flow, flow conditions or cartographic interpretation. 
+The catchment model provides the topological concept to consider any location on, or projected onto, the land surface as the inflow or outflow node of a corresponding catchment. Located in the catchment network, alternative representations may refer to that identifiable reference location. Using a simple linear river reference system (defined in section 7.4.4) an arbitrary location can be placed along the flowpath representation relative to such a referent. This supports to create a flowline network from a sequence of catchment representations 'drawn' between inflow node and outflow node. Special types of one- and two-dimensial geometric representations in common use in hydrology are defined to support this. 
 
 ![Figure 19: Catchment model (UML)](figs/fig19.png)
 Figure 19: Catchment model (UML)
 
 ##### 7.4.2.1	Catchment representation
 
-The HY_CatchmentRepresentation class conceptualize the representation of the catchment by geometric data such as flowpath, catchment area, and catchment boundary, as well as toplogically by networks..With respect to geometry, the most common concepts in use in hydrology to display a catchment are defined as:
+The HY_CatchmentRepresentation class conceptualize the representation of the catchment by geometric data such as flowpath, catchment area, and catchment boundary, as well as by network cartography. With respect to geometry, the most common concepts in use in hydrology to display a catchment are defined as:
 
-•	HY_Flowpath class with respect to the linear representation,
-•	HY_CatchmentArea class with respect to the areal representation,
+•	HY_Flowpath class with respect to the one-dimensional representation (curve),
+•	HY_CatchmentArea class with respect to the two-dimensional representation ,
 •	HY_CatchmentBoundary class with respect to the boundary (polygon) representing a catchment.
 
 The HY_Network class is defined with respect to a high-order network to which hydrologic features participate allowing features that may or may not be connected at the representation level to be logically connected using this system. The hydrographic network of water bodies, the network of channels as well as the network of logically connected hydrometric stations are considered to be representation of a catchment  defined to reflect the different study areas they have. 
