@@ -121,9 +121,9 @@ Generally applicable characteristics assigned to an instance of HY_HydroFeature 
 
 #### 7.4.2	The Catchment model
 
-The catchment model (Figure 19) defines a logical network of catchments each intentionally represented by geometric shapes or by  networks built using these. The catchment model supports the multiple representation of a catchment and allows for the existence of catchments to be recognized, and identifiers assigned based on inflow or outflow nodes. This is sufficient to define a simple hierarchy (see section 6.3.1) and a topological network of catchments (see section 6.3.2), allowing to establish topological relationships between hydrometric stations located in the catchment network, without the details of stream network.
+The catchment model (Figure 19) defines a logical network of catchments each intentionally represented by a geometric shape or by networks displayed using these. The catchment model supports the multiple representation of a catchment and allows for the existence of catchments to be recognized, and identifiers assigned based on inflow or outflow nodes. This is sufficient to define a simple hierarchy (see section 6.3.1) and a topological network of catchments (see section 6.3.2), allowing to establish topological relationships between hydrometric stations located in the catchment network, without the details of stream network.
 
-The catchment model provides the topological concept to consider any location on, or projected onto, the land surface as the inflow or outflow node of a corresponding catchment. Located in the catchment network, alternative representations may refer to that identifiable reference location. Using a simple linear river reference system (defined in section 7.4.4) an arbitrary location can be placed along the flowpath representation relative to such a referent. This supports to create a flowline network from a sequence of catchment representations 'drawn' between inflow node and outflow node. Special types of one- and two-dimensial geometric representations in common use in hydrology are defined to support this. 
+The catchment model provides the topological concept to consider any location on, or projected onto, the land surface as the inflow or outflow node of a corresponding catchment. Located in the catchment network, alternative representations may refer to that identifiable reference location. Using a linear river reference system (as defined in section 7.4.4) an arbitrary location can be placed along the flowpath representation relative to such a referent. This allows to create a flowline network from a sequence of catchment representations 'drawn' between inflow and outflow nodes. Special types of one- and two-dimensional geometric representations in common use in hydrology are defined to support this. 
 
 ![Figure 19: Catchment model (UML class diagram)](figs/fig19.png)
 Figure 19: Catchment model (UML class diagram)
@@ -135,15 +135,15 @@ The HY_CatchmentRepresentation class conceptualize the representation of a catch
 •	HY_CatchmentArea class with respect to area-shaped representations,
 •	HY_CatchmentBoundary class with respect to polygon shapes representing a catchment.
 
-Another special type HY_NetworkCartography is defined with respect to a high-order network to which hydrologic features participate. This will  allow features that are logically connected in the hydrographic network of water bodies, a network of channels or a network of hydrometric stations to be portrayed in thematic maps or geoschematic views displaying a network that in its entirety, separately or as set of layers, represents exactly one catchment. Other networks are imaginable such as a network of related aquifers, but not in scope of this standard. 
+Another special type HY_NetworkCartography is defined with respect to the cartographic representation of a high-order network to which hydrologic features participate. This will allow features that are logically connected in the hydrographic network of water bodies, a network of channels or a network of hydrometric stations to be portrayed in thematic maps displaying the network that in its entirety, separately or as set of layers, represents the catchment. 
+[\*\*\*do we want mention here other possible networks such as a network of related aquifers, but not in scope of this standard with reference to the conceptual model capturing the specifics of related aquifers, provided with the GroundwaterML 2.0 under development', see annex ..., insert reference to GWML2\*\*\*]. 
 
-Data products that not conforms to the special types defined in this standard, for instance representations in more-dimensional perspectives, or a in time, may use the general HY_CatchmentRepresentation class, whereby each representation may be realized with an appropriate geometry type. If present, all sub-types of catchment representation shall support the inherent *representedCatchment* property whereby each representation may be realised with an appropriate geometry type. 
+Data products that not conforms to the special types defined in this standard, for instance representations in more-dimensional perspectives, or a in time, may use the general HY_CatchmentRepresentation class, whereby each representation may be realised with an appropriate geometry type. If present, all sub-types of catchment representation shall support the inherent *representedCatchment* property whereby each representation may be realised with an appropriate geometry type. HY_CatchmentRepresentation carries two properties: *dimensionality* and  *representedCatchment*:
 
-HY_CatchmentRepresentation carries two properties: *dimensionality* and  *representedCatchment*:
+The *dimensionality* attribute provides a number or term indicating the dimensionality of a geometric shape. If required, this attribute shall be used to describe the geometric dimension used to portray the represented catchment. 
+[\*\*\*agreement on this attribute in the swg provided\*\*\*] 
 
-The *dimensionality* attribute provides a number or term indicating the dimensionality of a geometric shape. If required, this attribute shall be used to describe the geometric dimension used to portray the catchment. 
-
-The *representedCatchment* associates one, and only one, catchment that is represented in a particular data set or data product. This association shall be used to relate various data to the catchment they multiple represent. Data representing the same catchment can be 'linked' using this relationship. 
+The *representedCatchment* associates describes the multiple representation of a catchment in various data sets and data products. If required, this association shall be used to relate a particular data set or data product to the one, and only one, catchment that is represented. 
 
 | **Requirements Class** | [/req/hy_catchment/catchmentrepresentation] (/req/hy_catchment/catchmentrepresentation) | 
 | --- | --- |
@@ -155,19 +155,19 @@ The *representedCatchment* associates one, and only one, catchment that is repre
 
 
 ##### 7.4.2.2	Catchment
-The HY_Catchment class defines the catchment as the unit wherein all hydrologic processes take place, without an identification of the hydrologic determination. HY_Catchment is a specialization of the general HY_HydroFeature class. It inherits identifier, name and context properties from the generalization. The HY_Catchment class carries the associations: *containing Catchment*, *jointCatchment*, *upstreamCatchment*,  *outflowNode*, *inflowNode*, *boundaryLine*.
+The HY_Catchment class defines the catchment and its basic relationships such as catchmant hierarchy and topology as described in section 6.3. HY_Catchment specializes the general HY_HydroFeature class; from this generalization it inherits *identifier*, *name* and *context* properties. HY_Catchment carries the associations: *containing Catchment*, *conjointCatchment*, *upstreamCatchment*,  *outflowNode*, *inflowNode*, *boundaryLine*.
 
-The **containingCatchment** (Fig 20a) association provides a means to describe the nesting of catchments in a simple “is-in” containment hierarchy as typically used for high order organization of management and reporting units. If required, this association shall be used to identify the catchment therein the relevant catchment is nested.
+The **containingCatchment** association describes the nesting of catchments in a simple “is-in” containment hierarchy as typically used for high-order organization of management and reporting units. If required, this association shall be used to identify the catchment wherein the catchment is nested.
 
-The **jointCatchment** (Fig 20c)  association provides a means to describe the interaction of the catchment with another catchment crossing an arbitrary boundary line. This line may be the divide separating adjacent  catchments, or the diffuse divide between non-delineated sub catchments within an encompassing catchment, or a fictive line between distant catchments. If required, this association shall be used to identify the catchments interacting across a boundary line. The  boundary line may be described by summits which may be located in the catchment network as inflow or outflow nodes.
+The **conjointCatchment** association describes the interaction of a catchment with another catchment crossing an arbitrary boundary line. This line may be the divide separating adjacent catchments, or the diffuse divide between non-delineated sub-catchments within an encompassing catchment, or a fictive line between distant catchments. If required, this association shall be used to identify the interacting catchments. 
 
-The **upstreamCatchment** (Fig 20b)  association provides a means to describe the basin immediately upstream of the relevant basin without knowing a particular inflow location. Note that this defines the topological hierarchy between basins; the nesting is inherited from the catchment class. This association shall be used to identify a basin immediately upstream of the relevant basin.
+The **upstreamCatchment** association describes the basin immediately upstream of the relevant basin. This allows to describe the interaction between catchments at inflow nodes which are identified outflow node of an upstream catchment. If required, this association shall be used to identify inflow into the catchment when a particular inflow location is not known, e.g. from headwater and tributary catchments.
 
-The **outflowNode** (Fig 21b)  association provides a pattern to identify the location of outflow of the contributing basin. This allows to identify the downstream basin whereby the inflow location coincides with the outflowNode. This association shall be used to identify the location where water flows out of the relevant basin. To sufficiently describe an upstream-downstream-relation, the outflowNode shall coincide with the inflowNode of a downstream basin
+The **outflowNode** association describes the location where water flows out of a contributing catchment. This allows to identify the catchment whose inflow location coincides with the outflow node, and to describe an upstream-downstream relation. If required, this association shall be used to identify the location to which the catchment contributes flow, and from where a downstream catchment receives flow from upstream. 
 
-The **inflowNode** (Fig 21c) association provides a pattern to identify the location of inflow to the receiving basin. This allows to identify the upstream basin whereby the outflow location coincides with the inflowNode. This association shall be used to identify the location where water flows into the relevant basin. To sufficiently describe a upstream-downstream-relation, the inflowNode shall coincide with the outflowNode of a upstream basin. 
+The **inflowNode** association describes the location where water flows into a receiving catchment. This allows to identify the catchment whose the outflow location coincides with the inflow node, and to describe an downstream-upstream relation. If required, this association shall be used to identify the location to where the catchment receives flow, and to which an upstream catchment contributes flow. 
 
-The **divide** (Fig 21a) association provides a means to identify the conceptual line (of edges) bounding the catchment. This association shall be used to describe the boundary line by infinite number of nodes which may be located in the catchment network as inflow nodes.
+The **boundaryLine** association describes the line bounding the catchment associating an infinite number of identified inflow nodes located in the catchment network. If required, this association shall be used to identify a location on the divide to place the outflow of a contributing catchment when a particular outflow location is not known. 
 
 | **Requirements Class** | [/req/hy_catchment/catchment] (/req/hy_catchment/catchment) | 
 | --- | --- |
@@ -183,14 +183,16 @@ The **divide** (Fig 21a) association provides a means to identify the conceptual
 | Requirement	| [/req/hy_catchment/catchment.upstreamcatchment](/req/hy_catchment/catchment.upstreamcatchment) |
 | Requirement	| [/req/hy_catchment/catchment.outflownode](/req/hy_catchment/catchment.outflownode) |
 | Requirement	| [/req/hy_catchment/catchment.inflownode](/req/hy_catchment/catchment.inflownode) |
-| Requirement	| [/req/hy_catchment/catchment.divide](/req/hy_catchment/catchment.divide) |
+| Requirement	| [/req/hy_catchment/catchment.boundaryline](/req/hy_catchment/catchment.divide) |
 
 ##### 7.4.2.3	CatchmentAggregate
-The HY_CatchmentAggregate class specializes the general HY_Catchment class with respect to a set of hydrologically discrete (dendritic) catchments, all at the same hierarchy level without any overlap, to be nested in an encompassing catchment at the next upper hierarchy level. This allows to describe multiple inflow into a catchment (aggregate) provided by several hydrologically discrete sub-catchments each contributing to the common outflow of the catchment (aggregate). 
+The HY_CatchmentAggregate class specializes the HY_Catchment class with respect to a set of dendritic catchments, arranged in an encompassing catchment at the next upper hierarchy level without any spatial overlap. This allows to describe multiple inflows into a catchment aggregate through several hydrologically discrete sub-catchments having a single inflow, and contributing to the common outflow of the catchment aggregate. 
 
-Any catchment aggregate may be contained in a containing catchment aggregate at the next higher level, which consists of many neighboring catchment aggregates. This does not necessarily implies a series of containing catchments, but rather a jumping to the “highest” upper-level system as typically used for reporting purposes.
+A catchment aggregate may be part of a containing catchment at the next higher hierarchy level, which consists of many of those neighbouring catchments. This does not necessarily implies a series of containing catchments, but alloww a jumping to the 'highest' upper-level system as typically used for reporting purposes. The HY_CatchmentAggregate class inherits from generalization the *containingCatchment*, *upstreamCatchment*, *jointCatchment*, *outflowNode*, *inflowNode* and *boundaryLine* properties, and carries two properties: *exorheicDrainage* and *endorheicDrainage*.
 
-The HY_CatchmentAggregate class inherits the *containingCatchment*, *upstreamCatchment*, *jointCatchment*, *outflowNode*, *inflowNode* and *boundaryLine* properties, and carries one association: *subCatchment*.
+The **exorheicDrainage** association describes a catchment, part of the aggregate, which is connected to other catchments through its inflow/outflow node.
+
+The **endorheicDrainage** association describes a catchment, part of the aggregate, which is not connected to other catchments through its inflow/outflow node.
 
 | **Requirements Class** | [/req/hy_catchment/catchmentaggregate] (/req/hy_catchment/catchmentaggregate) | 
 | --- | --- |
@@ -204,13 +206,11 @@ The HY_CatchmentAggregate class inherits the *containingCatchment*, *upstreamCat
 
 
 ##### 7.4.2.4	DendriticCatchment
-The HY_DendriticCatchment class specializes the general HY_Catchment class with respect to the hydrologically discrete catchment, which is determined by a single common outlet to which all waters flow and may have an identified inflow node, which coincides with the outflow node of an upstream dendritic catchment.  This class denotes the catchment as the link between an inflow node and an outflow node which allows to describe the dendritic network by upstream-downstream relationships, without knowing the complex hydrology between inflow and outflow nodes. This concept requires a stable identifier that is not merely a function of an arbitrary delineation of the surface, and that catchments are delineated within a simple tree hierarchy. More complex structures may be described as representations using HY_Network representation pattern.
-
-The HY_CatchmentAggregate class inherits the *containingCatchment*, *upstreamCatchment*, *jointCatchment*, *outflowNode*, *inflowNode* and *boundaryLine* properties, and carries one association: *encompassingCatchment*. 
+The HY_DendriticCatchment class specializes the general HY_Catchment class with respect to a hydrologically discrete catchment, which is determined by a single common outlet to which all waters flow. This class denotes the catchment as the topological link between an inflow node and an outflow node allowing catchments to be connected in a dendritic network by upstream-downstream relationships, without knowing the complex hydrology between inflow and outflow nodes. This concept requires a stable identifier that is not merely a function of an arbitrary delineation of the surface, and that catchments are delineated within a simple tree hierarchy. The HY_DendriticCatchment class inherits from generalization the *containingCatchment*, *upstreamCatchment*, *jointCatchment*, *outflowNode*, *inflowNode* and *boundaryLine* properties, and carries two properties: *code* and *encompassingCatchment*. 
 
 The **code** attribute may be used to assign to the dendritic a unique identifier in given context. If required, the code shall be implemented using a controlled classification or coding system. Example: WMO Basin Codes.  
 
-The **encompassingCatchment** association provides a means to describe the catchment aggregate to which the dendritic catchment contributes flow either from its identified inflow node to the common outlet, or in join with other sub-catchments crossing a divide intern of the encompassing aggregate. This association shall be used to identify the catchment aggregate  encompassing the dendritic catchment.
+The **encompassingCatchment** association describes the catchment aggregate wherein the dendritic catchment is sub-catchment which is  hydrologically connected to other sub-catchments. If required, this association shall be used to identify the catchment to which the dendritic catchment contributes flow to the common outlet, either from a single identified inflow, or in join with other sub-catchments crossing a divide intern of the encompassing aggregate.
 
 | **Requirements Class** | [/req/hy_catchment/dendriticcatchment] (/req/hy_catchment/dendriticcatchment) |
 | --- | --- |
@@ -218,14 +218,13 @@ The **encompassingCatchment** association provides a means to describe the catch
 | Name | HY_DendriticCatchment |
 | Dependency | [/req/hy_catchment/catchment] (/req/hy_catchment/catchment) | 
 | Dependency | [/req/hy_catchment/catchmentaggregate] (/req/hy_catchment/catchmentaggregate) | 
-| Requirement |	[/req/hy_catchment/dendriticcatchment.encompassingcatchment] (/req/hy_catchment/dendriticcatchment.encompassingcatchment) |
-
+| Requirement |	[/req/hy_catchment/dendriticcatchment.code] (/req/hy_catchment/dendriticcatchment.code)
+| Requirement |	[/req/hy_catchment/dendriticcatchment.encompassingcatchment] (/req/hy_catchment/dendriticcatchment.encompassingcatchment) 
 
 ##### 7.4.2.5	InteriorCatchment
-The HY_InteriorCatchment class ...
-...
-...
-...
+The HY_InteriorCatchment class specializes the general HY_Catchment class with respect to a hydrologically discrete catchment, which is generally not connected to other catchments. This class describes the interior catchment as catchment enveloped by other catchments to which it may temporary contribute. The HY_InteriorCatchment class inherits from generalization the *containingCatchment*, *upstreamCatchment*, *jointCatchment*, *outflowNode*, *inflowNode* and *boundaryLine* properties, and carries one association: *envelopingCatchment*. 
+
+The **envelopingCatchment** association describes the catchment aggregate surrounding the interior sub-catchment. If required, this association shall be used to identify the catchment to which the interior catchment temporary contributes flow to the common outlet. 
 
 | **Requirements Class** | [/req/hy_catchment/interiorcatchment] (/req/hy_catchment/interiorcatchment) | 
 | --- | --- |
@@ -239,7 +238,7 @@ The HY_InteriorCatchment class ...
 ##### 7.4.2.6	Outfall
 The HY_Outfall class ...
 ...
-...
+. Defining an inflow node which coincides with the outflow node of an upstream catchment, this supports...
 ...
 
 | **Requirements Class** | [/req/hy_catchment/outfall] (/req/hy_catchment/outfall) | 
