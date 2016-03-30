@@ -408,20 +408,7 @@ surface water
 surface water confines
 ..
 
-### 6.7 The Atmospheric Hydro Feature application schema 
-(This package is an informative one, and describe here in favour of completeness with repsect to the holistic catchment approach.)
-
-The Atmospheric Hydro Feature application schema provides a model to take into account water from atmospheric origin, particularly from precipitation, without the complexity and detail of a rainfall-runoff model.  This enables contextually related information models to build relationships to hydrologic features, finally to the catchment represented in a data product. This informative package provides concepts of water falling through the atmosphere (as precipitation) to be accumulated in a water body. This allows atmospheric water to be related to the hydrographic network of water bodies representing a catchment, as well as to a catchment corresponding to an identified reference point associated with the accumulating water body. Special concepts of water suspended in the atmosphere may by defined with an application. Special concepts should not contradict the definitions endorsed by the WMO as published in the "International Meteorological Vocabulary" published and maintained by the WMO [9]. The Atmospheric Hydro Feature schema introduces the concepts of HydroMeteor, Precipitation, Rain and Snow. 
- 
-![Figure 14: Atmospheric Hydro Feature schema](figs/fig14.png)  
-Figure 14: Atmospheric Hydro Feature schema  
-
-The HY_Hydrometeor class conceptualize a meteor “consisting of an ensemble of liquid or solid water particles falling through or suspended in the atmosphere, blown by the wind from the Earth's surface or deposited on objects on the ground or in the free air” [9]. 
-The HY_Precipitation class specializes HY_HydroMeteor with respect to water falling through the atmosphere. It does not mean the amount of precipitation measured by means of rain-gauge, which is understood as a property of a special rain feature. HY_Precipitation is not explicitly pre-defined as subtype of the general HY_HydroFeature type to allow other contextual generalizations. If required this generalization may be defined with a particular application. 
-
-The HY_Rain and HY_Snow classes define special types of liquid or solid water intended to separately reflect ice or water particles falling from a cloud.  
-
-### 6.8 The Subsurface Hydro Feature application schema 
+### 6.7 The Subsurface Hydro Feature application schema 
 (This package is an informative one, and described here in favour of completeness with repsect to the holistic catchment approach.)
 
 The informative Subsurface Hydro Feature application package introduces concepts reflecting water accumulated below the land surface as well as the formation of rock or soil containing the body of water. This concept refers to the holistic approach of the dendritic catchment as the unit wherein all water, surface and subsurface water, is directed to an identified common outlet. It allows subsurface water to be related to the hydrographic network of water bodies, as well as to a corresponding dendritic catchment identified by an inflow or outflow node using a reference point associated with the confining unit. Special concepts of subsurface water, its confines and special relationships may be defined with an application. Special concepts should not contradict the definitions endorsed by the WMO as published in the  "International Glossary of Hydrology". A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development.  
@@ -429,14 +416,14 @@ The informative Subsurface Hydro Feature application package introduces concepts
 ![Figure 15: Subsurface Hydro Feature schema](figs/fig15.png)  
 Figure 15: Subsurface Hydro Feature schema  
 
-#### 6.8.1 The Subsurface Water model 
+#### 6.7.1 The Subsurface Water model 
 The Subsurface Water model  introduces a simple model of water accumulated in rock or soil below the land surface,  either specialized by pressure head or the property to move due to gravity and capillary action.  This allows to handle concepts of subsurface waters separately from those of  the confining aquifer. An application focused on a special type of subsurface water may use the concepts when describing the relationship of groundwater or water in soil to a catchment in terms of the ultimate target of observation. Depending on the  particular application, special types may be defined and described by suitable properties.  
 
 The HY_Groundwater class specializes HY_Water_LiquidPhase with respect to the existence of water occupying the saturated zone. It inherits the accumulatingWaterBody association, which allows to relate subsurface water to the hydrographic network of water bodies.  
 
 The HY_VadoseWater class specializes HY_Water_LiquidPhase with respect to the existence of water occupying the unsaturated zone. It inherits the accumulatingWaterBody association, which allows to relate subsurface water to the hydrographic network of water bodies. HY_SoilWater, HY_SoilMoisture and HY_GravitationalWater specialize vadose water.  
 
-#### 6.8.2 The Subsurface Water Confines model
+#### 6.7.2 The Subsurface Water Confines model
 The Subsurface Water confines model  introduces concepts of  the hydrogeologic units, particularly an aquifer, containing subsurface water, incl. the well used to extract, inject or infiltrate water from/into these. Depending on the  particular application, special types of containing units may be defined and described by suitable properties.  
 
 The HY_HydroGeologicUnit class provides a simple means for taking into account the hydrologically significant characteristics of formations of rock or soil, allowing further contextual specializations of hydro-geologic features. HY_HydroGeologicUnit  carries one association: containingUnit.  
