@@ -291,7 +291,7 @@ The _EXT_-prefix refers to "external", common patterns that are required, but no
 
 ## 6. Clauses not Containing Normative Material
   
-### 6.1 The abstract notion of the hydrology phenomenon
+### 6.1 The abstract idea of the hydrology phenomenon
 
 Processes that continuously deplete and replenish water resources cause or result in a wide range of phenomena that are the subject of monitoring, modeling and reporting in hydrology and related sciences. These distinctly named or otherwise uniquely identified real-world hydrologic phenomena are conceptualized and referred to as hydrologic features in this standard. This standard applies to data and data products that represent these hydrologically defined features.
   
@@ -304,9 +304,7 @@ Looking back upstream from the outfall, the corresponding catchment feature can 
 
 As described above, the most general abstraction of the hydrology phenomenon is the catchment. A catchment is a recognized unit of study where hydrologic processes form physiographic features that are represented in various data products. Depending on application and scale, the same catchment may be represented in many different ways. The following describe different examples where this multiple representation concept is important:
 
-- Scaling a map-visualization up or down requires multiple more or less detailed representations of the same catchment.
-Scaling up or down leads to multiple representations of the same hydrologic feature. A common model must support simplifications at small scales and details at large scales allowing hydrologic feature complexes to be potentially encapsulated within simpler features at a less detailed scale. The co-existence of multiple hierarchical aggregations of features into alternative networks needs to be supported.
-
+- Scaling a map-visualization up or down leads to multiple more or less detailed representations of the same hydrologic feature.
 - Some applications require cartographic (visual) representations while others are focused on topological (network connectivity) relationships (_2_).
 - A catchment may be described geometrically by streamlines, drainage area or the bounding polygon, or topologically as a graph of nodes and links.
 - Analyses and reports of catchments and landscape characteristics are referenced to areas of study or boundaries, while observation with sensors or other methods are referenced to monitoring points forming an hydrometric network.
