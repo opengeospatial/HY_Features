@@ -365,7 +365,7 @@ Figure 8: Catchments contributing to an identified outflow node. Note that some 
 ![Figure 9: Catchment receiving inflow via an identified inflow node](figs/fig9.png)  
 Figure 9: Catchments receive inflow via an identified inflow node. Note that nodes are not necessarily geographic features, but are rather nodes in a graph representation of the river network.
 
-Inflow and outflow nodes stand alone as points of interaction in the network, denoted as (potentially complex) outfall. Whether an outfall is referred to as inflow or outflow node is in reference to a catchment. This means that the conceptual outfall serves as the outflow node of some contributing catchment(s) and the inflow node of the catchment in question. In this standard, the role names of the conceptual outfall are used whenwever its role in respect to the catchment in question nneds to be unambigously described. 
+Nodes stand alone as points of interaction in the network, in reality they are (potentially complex) watershed outlets, denoted as outfall features. Whether an outfall (node) is referred to as an inflow or outflow node is always in reference to a catchment. This means that a node serves as the outflow node of some contributing catchment(s) and the inflow node of some receiving catchment(s). In this standard, the inflow and outflow role names of the conceptual outfall (node) are used to unambiguously describe the node's role with respect to a catchment.
 
 [Figure: Need a figure here that will show the very basic concept of nodes.]
 
