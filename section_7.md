@@ -167,7 +167,7 @@ The **outflowNode** association describes the location where water flows out of 
 
 The **inflowNode** association describes the location where water flows into a receiving catchment. This allows to identify the catchment whose the outflow location coincides with the inflow node, and to describe an downstream-upstream relation. If required, this association shall be used to identify the location to where the catchment receives flow, and to which an upstream catchment contributes flow. 
 
-The **boundaryLine** association describes the line bounding the catchment associating an infinite number of identified inflow nodes located in the catchment network. If required, this association shall be used to identify a location on the divide to place the outflow of a contributing catchment when a particular outflow location is not known. 
+The **boundaryLine** association describes the line bounding the catchment associating an infinite number of nodes on line each to be located in the catchment network. If required, this association shall be used to identify a location on the divide to place the outflow of a contributing catchment when a particular outflow location is not known. 
 
 | **Requirements Class** | [/req/hy_catchment/catchment] (/req/hy_catchment/catchment) | 
 | --- | --- |
@@ -250,7 +250,7 @@ The HY_Outfall class ...
 | Dependency | [/req/hy_catchment/indirectposition](/req/hy_catchment/indirectposition) | 
 | Requirement	| [/req/hy_catchment/outfall.contributingcatchment](/req/hy_catchment/outfall.contributingcatchment) |
 | Requirement	| [/req/hy_catchment/outfall.receivingcatchment](/req/hy_catchment/outfall.receivingcatchment) |
-| Requirement	| [/req/hy_catchment/outfall.outfall](/req/hy_catchment/outfall.outfall) |
+| Requirement	| [/req/hy_catchment/outfall.summitline](/req/hy_catchment/outfall.summitline) |
 | Requirement	| [/req/hy_catchment/outfall.relativeposition](/req/hy_catchment/outfall.relativeposition) |
 
 
