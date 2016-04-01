@@ -21,6 +21,7 @@ The conceptual model is expressed in the Geographic Information Conceptual Schem
 
 ![Figure 16: HY_Features modules and packages](figs/fig16.png)  
 Figure 16: HY_Features modules and packages  
+[\*\*\*update figure\*\*\*]
 
 ### 7.2	The HY_Features conceptual conformance (mapping)
 
@@ -80,6 +81,7 @@ The Hydro Feature schema conceptualize the abstraction of the complex Hydrology 
 
 ![Figure 18: Feature types describing separate aspects of the hydrology phenomenon (UML class diagram)](figs/fig18.png)
 Figure 18: Feature types describing separate aspects of the hydrology phenomenon (UML class diagram)
+[\*\*\*update figure\*\*\*]
 
 The Hydro Feature schema provides a model to identify a hydrologic feature, and thus the opportunity to connect disparate representations. By making relationships between identified features expressible in a standard form, this allows the hydrosphere to be divided into a hierarchy of hydrologically connected catchments and related phenomena contained therein, irrespective of the various representations available for these phenomena. The Hydro Feature schema contains five leaf packages: HY_NamedFeature, HY_Catchment, HY_HydrographicNetwork, HY_RiverPositioning, HY_Storage.
 
@@ -100,6 +102,7 @@ The Named Feature model defines the hydrologic feature basically as a feature to
 
 ![Figure 17: Named Feature model (UML class diagram)](figs/fig17.png)
 Figure 17: Named Feature model (UML class diagram) 
+[\*\*\*update figure\*\*\*]
 
 The **identifier** attribute provides a means to assign to the hydrologic feature an unique and unambiguous identifier in a given context. An instance of HY_HydroFeature shall contain an identifier that may be used as a persistent reference to this feature.
 
@@ -127,6 +130,7 @@ The catchment model provides the topological concept to consider any location on
 
 ![Figure 19: Catchment model (UML class diagram)](figs/fig19.png)
 Figure 19: Catchment model (UML class diagram)
+[\*\*\*update figure\*\*\*]
 
 ##### 7.4.2.1	Catchment representation
 The HY_CatchmentRepresentation class conceptualize the representation of a catchment using geometric shapes of different dimension as well as the cartographic portrayal of typical networks created from these (see section 6.3.1). Special types of catchment representation are: 
@@ -285,3 +289,12 @@ The HY_ReferenceLocation class ...
 
 
 #### 7.4.3	The Hydrographic Network model
+[\*\*\*include figure\*\*\*]
+
+#### 7.4.4	The River Positioning System model
+[\*\*\*include figure\*\*\*]
+
+#### 7.4.3	The Storage model
+[\*\*\*include figure\*\*\*]
+
+
