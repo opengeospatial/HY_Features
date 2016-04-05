@@ -2,9 +2,9 @@
 
 ### 7.1 The HY_Features conceptual model
 
-This standard defines the HY_Features conceptual model as a standard for the identification and description of hydrologic features reflecting both hydrologic significance as well as topological connectivity of hydrologic features by defining the fundamental relationships between the major components of the hydrosphere. Core concepts are that of multiple catchment representation, of catchment hierarchy, of aggregation and segmentation of watercourses including a simple model for the positioning of features along a watercourse using a specific linear referencing system. A utilities package provide common concepts required by the hydrology model that are not hydrology-specific. 
+This standard defines the HY_Features conceptual model as a standard for the identification and description of hydrologic features reflecting both hydrologic significance as well as topological connectivity of hydrologic features by defining the fundamental relationships between the major components of the hydrosphere. Core concepts are that of multiple catchment representation, of catchment hierarchy and topology, of aggregation and segmentation of watercourses including a simple model for the positioning of features along a linear flowpath using a specific linear referencing system. A utilities package provide common concepts required by the hydrology model that are not hydrology-specific. 
 
-Module identification aims to simplify the scope of each part of the conceptual model in order to improve its accessibility and to provide scope for testing. It is intended that implementations need to consider only those parts of the common model implicated by its scope. Table 1 lists the applications schema, the leaf packages included and the concepts reflected therein. 
+Module identification aims to simplify the scope of each part of the conceptual model in order to improve its accessibility and to provide scope for testing. It is intended that implementations need to consider only those parts of the common model implicated by its scope. Table 1 lists the applications schema, the leaf packages included and the concepts reflected therein. This section describes for each application schema the defined requirements classes, except for the both informative packages on atmospheric hydrologic features and subsurface hydrologic features. **[\*\*\* These informative packages are outlined in Annex ... .\*\*\*]**. A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development. **[\*\*\* insert reference to GWML2\*\*\*]**
 
 Table 1: HY_Features modules, packages and concepts reflected
 
@@ -17,7 +17,7 @@ Table 1: HY_Features modules, packages and concepts reflected
 | HY_HydrometricNetwork | hydrometric network as an aggregate of logically connected hydrometric features located on or along a hydrologic feature | --- |
 | HY_Utilities | common concepts required by the domain model that are not hydrology-specific such as naming and contextual relations | --- |
 
-The conceptual model is expressed in the Geographic Information Conceptual Schema Language (ISO 19103:2005) based on the Unified Modeling Language (UML). The organization into packages and package dependencies are shown in Figure 7_16.
+The conceptual model is expressed in the Geographic Information Conceptual Schema Language (ISO 19103:2005) based on the Unified Modeling Language (UML). The organization into packages and package dependencies are shown in Figure 16. 
 
 ![Figure 16: HY_Features modules and packages](figs/fig16.png)  
 Figure 16: HY_Features modules and packages  
@@ -104,13 +104,11 @@ The Named Feature model defines the hydrologic feature basically as a feature to
 Figure 17: Named Feature model (UML class diagram) 
 [\*\*\*update figure\*\*\*]
 
-The **identifier** attribute provides a means to assign to the hydrologic feature an unique and unambiguous identifier in a given context. An instance of HY_HydroFeature shall contain an identifier that may be used as a persistent reference to this feature.
+The **identifier** attribute provides a means to assign to the hydrologic feature an (external) identifier in a given context. If required, an instance of HY_HydroFeature shall contain an identifier that may be used as a persistent reference to this feature. An implementation may use the EXT_IdentificationCode type as defined in the Utilities package (section 7.4. ... ) **[include reference]**.
 
-The **name** association provides an abstract pattern shared by all hydrologic features where names are given to a feature through common usage, handle issues of cultural, political and historical variability that may occur with trans-boundary features without necessarily have a formal model. This association shall be used where a name or label is assigned to an instance of HY_HydroFeature.
+The **name** association provides an abstract pattern to handle names given to the hydrologic feature in cultural, political or historical contexts. This allows to assign a localized name for all or part of a hydrologic feature without necessarily have a formal model. If required, this association shall be used where names are assigned to a feature instance through common usage, of cultural, political and historical variability that may occur with trans-boundary features. An implementation may use the EXT_LocalisedNameCode type as defined in the Utilities package (section 7.4. ... ) **[include reference]**. 
 
-The **context** association provides a general pattern to handle various forms of contextualization of hydrologic features that may be required. This allows to define in which context typical properties are attached, without having to specify every possible value or to standardise the name for it.  Using this mechanism it is not necessary to further specialize HY_Features to assign metadata, at the expense of providing complex data types that are self-describing in terms of the content they contain. 
-
-Generally applicable characteristics assigned to an instance of HY_HydroFeature in a spatial, temporal or classification context may be specified using one or more instances of the associated context property. This may be through an inline value of a specialized data type, or by reference.
+The **context** association provides a general pattern to handle various forms of contextualization of hydrologic features. This allows to define in which context typical properties are attached, without having to specify every possible value or to standardise the property name. If required, this associations shall be used to assign generally applicable characteristics to a feature instance in a spatial, temporal or classification context. It may be specified using one or more instances of the associated context property. An implementation may use the EXT_SpatialContext, EXT_TemporalContext or EXT_ClassificationContext types defined in the Utilities package (section 7.4. ... ) **[include reference]**.  
 
 | **Requirements Class** | [/req/hy_namedFeature/hydrofeature] (/req/hy_namedFeature/hydrofeature) |
 | --- | --- |
@@ -133,13 +131,13 @@ Figure 19: Catchment model (UML class diagram)
 [\*\*\*update figure\*\*\*]
 
 ##### 7.4.2.1	Catchment representation
-The HY_CatchmentRepresentation class conceptualize the multiple representation of a catchment in typical data products using single geometric shapes of different dimension, or by visualization of typical networks a catchment may appear (see section 6.3.1). With respect tp 1D-and 2D-geometry, special sub- types of catchment representation are defined: HY_Flowpath (line-shaped),  HY_CatchmentArea (area-shaped), and HY_CatchmentBoundary  (polygon). The HY_NetworkCartography class is defined with respect to a network to which hydrologic features may participate, and that in its entirety represents, separately or as set of layers, represents a catchment.  This will allow hydrologic features that are logically connected in the hydrographic network of water bodies, a network of channels (drainage pattern), or a network of hydrometric stations to be portrayed in thematic maps displaying such a network.
+The HY_CatchmentRepresentation class conceptualize the multiple representation of a catchment in typical data products using single geometric shapes, or by visualization of typical networks the catchment may appear (see section 6.3.1). Catchment representation refers to the common recognition of a catchment as the unit of study shared across sub-domains, even if a particular representation refer only to one or the other. With respect tp 1D-and 2D-geometry, special sub- types of catchment representation are defined: HY_Flowpath (line-shaped),  HY_CatchmentArea (area-shaped), and HY_CatchmentBoundary  (polygon). The HY_NetworkCartography class is defined with respect to a network to which hydrologic features may participate, and that in its entirety represents, separately or as set of layers, the catchment.  This will allow hydrologic features that are logically connected in the hydrographic network of water bodies, in a network of channels (expressed as drainage pattern), or in a network of hydrometric stations to be portrayed in thematic maps displaying such a network.
 
 [\*\*\*do we want mention here other possible networks such as a network of related aquifers, which are not in scope of this standard with reference to a conceptual model capturing the specifics of connected aquifers, provided with the GroundwaterML 2.0 under development', see annex .??., -- if so, insert reference to GWML2\*\*\*]. 
 
 In other contexts other types of catchment representation may exist.  Data products that not conforms to the special types defined in this standard, for instance representations in more-dimensional perspectives, or in time, may use the general HY_CatchmentRepresentation class. If present, all sub-types of catchment representation shall support the inherent representedCatchment property whereby each representation may be realised with an appropriate geometry type. HY_CatchmentRepresentation carries one association: representedCatchment.
 
-The *representedCatchment* association defines the relationship to exactly one represented catchment. If required, this association shall be used to relate a particular data set or data product to the catchment its represents.
+The *representedCatchment* association defines the relationship to exactly the catchment that is represented in the data set or product.  If required, this association shall be used to identify the unit wherein the hydrologic processes under study take place. 
 
 | **Requirements Class** | [/req/hy_catchment/catchmentrepresentation] (/req/hy_catchment/catchmentrepresentation) | 
 | --- | --- |
@@ -157,7 +155,7 @@ The **outflowNode** association describes where water flows out of a contributin
 
 The **inflowNode** association describes where water flows into a receiving catchment. This allows to identify an outflow location that coincides with the inflow node, and to describe an downstream-upstream relation. If required, this association shall be used to identify the location from where the catchment receives flow, and to which an upstream catchment contributes flow. 
 
-The **conjointCatchment** association describes the interaction of a catchment with another catchment crossing an arbitrary boundary line. This line may be the divide separating adjacent catchments, or the diffuse divide between non-delineated sub-catchments within an encompassing catchment, or a fictive line between distant catchments. If required, this association shall be used to identify the interacting catchments. 
+The **conjointCatchment** association describes the interaction of a catchment with another catchment crossing an internal boundary line. This line may be a divide separating adjacent catchments, or a diffuse divide between non-delineated sub-catchments within an encompassing catchment, or a fictive line between distant catchments. If required, this association shall be used to identify the interacting catchments. 
 
 The **upperCatchment** association connects the catchment to the adjacent catchment above sharing a common (virtual) boundary line. This allows to describe connected catchments independent from identified inflow or outflow nodes. If required, this association may be used to trace the catchment network in upstream direction from mouth to source. In a dendritic network of catchments, where a catchment is determined by its single outflow node, this association may be used to identify inflow into the catchment when a particular inflow location is not known, for eaxmaple in headwater and tributary catchments. 
 
@@ -230,9 +228,9 @@ The **envelopingCatchment** association relates to the interior catchment the ag
 
 
 ##### 7.4.2.6	Outfall
-The HY_Outfall class conceptualize the common outlet of a catchment as the topologic node where catchments interact (see section 6.3.2). It defines the place where the outflow node of a contributing catchment coincides with the inflow node of a receiving catchment. In terms of an outflow node, the outfall defines the location to which upstream catchments contribute flow due to gravitational forces or pumping; in terms of an inflow node that location from where catchments downstream receive flow collected upstream. 
+The HY_Outfall class conceptualize the common outlet of a catchment as the topologic node where catchments interact (see section 6.3.2). The outfall marks the place where the outflow node of a contributing catchment meets the inflow node of a receiving catchment. In terms of an outflow node, the outfall identifies the location to which upstream catchments contribute flow due to gravitational forces or pumping; in terms of an inflow node that location is identified from where catchments downstream receive flow collected upstream. 
 
-Topologically placed in the network of catchments, geometric shape and position of the outfall are not explicitly defined. The outfall may get assigned a position relative to a reference location of a particular geometric (point) shape using a (linear) reference system. The reference location may be geometric point identified by co-ordinates, or any other feature carrying such a reference point. Any fixed landmark, a monitoring station, or a spring where groundwater enters the surface, may be a reference point but also a point projected onto the surface or created from merging disjoint locations; vertically arranged points may be aggregated and projected onto surface, a delta of a river system merged to virtual mouth, diffuse groundwater discharge placed on rivers or lakes.  The HY_Outfall class carries four associations: *contributingCatchment*, *receivingCatchment*, *summitLine* and *relativePosition*. 
+Topologically placed in the network of catchments, geometric shape and position of the outfall are not explicitly defined. The outfall may get assigned a position relative to a reference location of a particular geometric shape using a linear reference system. The reference location may be a geometric point identified by co-ordinates, or any other feature carrying such a reference point. A fixed landmark, a monitoring station, a spring where groundwater enters the surface, may be a reference point but also a point projected onto the surface or created from merging disjoint locations; vertically arranged points may be aggregated and projected onto surface, a delta of a river system merged to virtual mouth, diffuse groundwater discharge placed on rivers or lakes.  The HY_Outfall class carries four associations: *contributingCatchment*, *receivingCatchment*, *summitLine* and *relativePosition*. 
 
 The **contributingCatchment** association relates a catchment to its outflow node. This allows to describe an arbitrary location on the land surface as the topological outfall to which a catchment contributes flow, received from an upstream inflow node. If required, this association shall be used to identify the catchment contributing to the outflow node as the connecting link between inflow node and outflow node, and thus connecting an upstream catchment (at its outflow node) and a downstream catchment (at its inflow node).  
 
@@ -240,7 +238,7 @@ The **receivingCatchment** association relates a catchment to its inflow node. T
 
 The **summitLine** association relates a summit line on which the outfall marks the lowest point, associating an infinite number of nodes on line each to be located in the catchment network. If required, this association may be used to identify a summit line on which an outfall may be placed when a particular inflow location is not known.
 
-The **relativePosition** association relates to the outfall a position relative to a reference location located in the network and identifed/fixed by coordinates. If required, this association shall be used to assign a position, either expressed as the distance to a reference location, or relative or interpolative to this.  
+The **relativePosition** association relates to the outfall a position relative to a reference location located in the network and identified or fixed by coordinates. If required, this association shall be used to assign a position, either expressed as the distance to a reference location, or relative or interpolative to this.  
 
 | **Requirements Class** | [/req/hy_catchment/outfall] (/req/hy_catchment/outfall) | 
 | --- | --- |
@@ -258,7 +256,7 @@ The **relativePosition** association relates to the outfall a position relative 
 ##### 7.4.2.7	Divide
 The HY_Divide class describes a boundary line separating adjacent catchments understood as the summit line on which several nodes may be located of which the outfall marks the lowest place. The HY_Divide class carries one association: *nodeOnDivide*. 
 
-The **nodeOnDivide** association relates to the divide a node located in the network of catchments in terms of an inflow or outflow node. If required, this association shall be used to identify on the divide a permanent, and stable reference location referenced by coordinates.
+The **nodeOnDivide** association relates to the divide a node located on this. This allows an arbitrary node on divide, considered as a permanent reference location, to be located in the network of catchments in terms of an outfall. If required, this association shall be used to identify on the divide a permanent (reference) location identified by co-ordinates.
 
 | **Requirements Class** | [/req/hy_catchment/divide] (/req/hy_catchment/divide) | 
 | --- | --- |
@@ -269,20 +267,23 @@ The **nodeOnDivide** association relates to the divide a node located in the net
 
 
 ##### 7.4.2.8	ReferenceLocation
-The HY_ReferenceLocation class ...
-...
-Being topological nodes, inflow and outflow nodes have no explicit positions. A catchment's outfall will be placed on the network relative to a reference location either expressed absolute as the distance to the identified reference point, or relative or interpolative to this. While confluences are natural locations to assign catchment outfalls, common places to study catchment processes such as stream gage sites, cross-sections, and other on-network locations can be used for reference. The reference location may be any other place identified by co-ordinates, such as a fixed a landmark, a stream section, or bed profile, or a monitoring point. ...
-...
+The HY_ReferenceLocation class describes permanent, stable reference location such as a landmark fixed and referenced by coordinates.
+Given that a single point may have several reported locations depending on its nature and the precision of measurement, the reference location describes the accepted location of a reference point, which may be the referent to which linear measures within a network may be determined. Using such a reference point an hydrologic feature can be topologically placed in the catchment network in terms of an inflow or outflow node, which may be considered to be referent of a (linear) river reference system. The HY_ReferenceLocation class carries three properties: *refPoint*, *refPointType*, *networkLocation*. 
+
+The **refPoint** and **refPointType** attributes describes the accepted reference location by co-ordinates or type. If required, the reference point shall be identified by co-ordinates using the GM_Point type, or by type using the HY_RefPointType codelist in **[Annex ..., table ...]**  
+
+The **networkLocation** association locates the referent in a network of catchments. This allows to place the reference location topologically as outfall of a corresponding catchment. If required, this association shall be used to determine a permanent reference location topologically as inflow to a receiving or outflow of a contributing catchment.
 
 | **Requirements Class** | [/req/hy_catchment/referencelocation] (/req/hy_catchment/referencelocation) | 
 | --- | --- |
 | Target type	| Implementation schema |
-| Name | HY_Divide | 
-| Dependency | [/iso/19103/](https://inspire-twg.jrc.it/svn/iso) |
-| Dependency | [/req/hy_catchment/catchment](/req/hy_catchment/catchment) |
+| Name | HY_ReferenceLocation | 
+| Dependency | [/iso/19107/](https://inspire-twg.jrc.it/svn/iso) |
+| Dependency | [/req/hy_catchment/refpointtype](/req/hy_catchment/refpointtype) |
+| Dependency | [/req/hy_catchment/outfall](/req/hy_catchment/outfall) |
 | Requirement	| [/req/hy_catchment/referencelocation.refpoint](/req/hy_catchment/outfall.refpoint) |
 | Requirement	| [/req/hy_catchment/referencelocation.refpointtype](/req/hy_catchment/outfall.refpointtype) |
-
+| Requirement	| [/req/hy_catchment/referencelocation.networklocation](/req/hy_catchment/outfall.networklocation) |
 
 #### 7.4.3	The Hydrographic Network model
 [\*\*\*include figure\*\*\*]
