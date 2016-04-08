@@ -285,18 +285,18 @@ The **networkLocation** association locates the referent in a given network of c
 | Requirement	| [/req/hy_catchment/referencelocation.networklocation](/req/hy_catchment/outfall.networklocation) |
 
 #### 7.4.3	The Hydrographic Network model
-The hydrographic network model (figure XX) defines an aggregate of water bodies. Conceptually, the network of water bodies is understood as the hydrographic appearance of the catchment of study in the particular perspective of the undertaken study, and its visualization as a cartographic representation of the catchment. Given that a topological upstream-downstream relationship is defined between catchments   (see section 6.4.2), a water body has no other role than being part of the network that mirrors the network of contributing or receiving catchments. This means that connectivity appearing in the hydrographic network is 'imaginary', and that water bodies can be aggregated in the hydrographic network irrespective of whether the accumulated water is flowing or not. This allows, permanent and temporary water bodies of flowing or stagnant water to be aggregated in the network, and to visualized. To supports this concept of imaginary connectivity, each part of the hydrographic network, may carry a special reference point that can be located topologically as outfall of a corresponding catchment.
+The hydrographic network model (figure XX) defines an aggregate of water bodies. Conceptually, the network of water bodies is understood as the hydrographic appearance of the catchment of study in the particular perspective of the undertaken study, and its visualization as a cartographic representation of the catchment. Given that a topological upstream-downstream relationship is defined between catchments   (see section 6.4.2), a water body has no other role than being part of the network that mirrors the network of contributing and receiving catchments. This means that connectivity appearing in the hydrographic network is 'virtual', and that water bodies can be aggregated in the hydrographic network irrespective of whether the accumulated water is flowing or not. This allows, permanent and temporary water bodies of flowing or stagnant water to be aggregated in a network view portraying the catchment, and to be visualized to represent the catchment. To supports this concept of virtual connectivity, the parts in the hydrographic network, associate typical reference points which can be located topologically as outfall of a corresponding catchment.
 
-The hydrographic network is defined independent of the network of containing channels (see section 6.5). This conceptual separation references to the specific concerns of hydrology studying the occurrence, accumulation and circulation of water, and refers to water body accumulating water, which is shaped by the containing channel which exists regardless of whether water flows in or not (see section  6.4). This approach allows to separately visualize the hydrographic network of 'blue' lines or polygons, whereby the logically connected water bodies may or may not be connected at the representation level. 
+Following the conceptual separation of a watercourse into water body and containing channel (see section 6.5), the hydrographic network is defined independent of the network of containing channels. This approach allows to separately visualize the hydrographic network of 'blue' lines or polygons, whereby the logically connected water bodies may or may not be connected at the representation level. 
 
-The hydrographic network model defines the major elements of a hydrographic network and the relationships between them. A network water body may be segmented at vertical cross- or longitudinal sections in succeeding parts, each part in horizontal strata. The water body part associates a typical reference location, allowing to place any other feature relative to this using the (linear) river reference system described in section ... **[insert reference]**. 
+The hydrographic network model defines the major elements describing the hydrographic network and the relationships between them. A network water body may be segmented at vertical cross- or longitudinal sections in succeeding parts, each part in horizontal strata. The water body part associates a typical reference location, allowing to place any other feature relative to this using the (linear) river reference system described in section ... **[insert reference]**. 
 
 ![Figure XX: Hydrographic Network model (UML class diagram)](figs/figXX.png)
 Figure XX: Hydrographic Network model (UML class diagram)
 **[\*\*\*include class diagram\*\*\*]**
 
 ##### 7.4.3.1	HydrographicNetwork
-The HY_HydrographicNetwork class describes the aggregate of permanent and temporary bodies of flowing or stagnant water; it may be visualized to cartographically represent the catchment that appears in a study as hydrographic network. The HY_HydrographicNetwork class carries one association: *visualization*. 
+The HY_HydrographicNetwork class describes the aggregate of permanent and temporary bodies of flowing or stagnant water; it may be visualized to cartographically represent the catchment that appears in a study as a hydrographic network. The HY_HydrographicNetwork class carries one association: *visualization*. 
 
 The **visualization** association relates to the hydrographic network its cartographic visualisation, either as a separate map, or one of many thematic layers. If required, this association shall be used to identify a map or geoschematic view displaying the hydrographic network that in its entirety, separately or as set of layers, represents the catchment without describing the displayed network parts in detail.
 
@@ -308,13 +308,13 @@ The **visualization** association relates to the hydrographic network its cartog
 | Requirement |	[/req/hy_hydrographicnetwork/hydrographicnetwork.visualization]  (/req/hy_hydrographicnetwork/hydrographicnetwork.visualization)
 
 ##### 7.4.3.2	WaterBody, WaterBodyPart adn WaterBodyStratum
-The HY_WaterBody and HY_WaterBodyPart class define a water body, or part of this, participating in the hydrographic network. The HY_WaterBodyStratum class desribes a horizontal layer in a stratified water body (part) determined by differences in thermal or salinity characteristics or by oxygen or nutrient content, or by virtual storage zones of a reservoir. 
+The HY_WaterBody and HY_WaterBodyPart class define a water body, or part of this, participating in the hydrographic network. The HY_WaterBodyStratum class desribes a horizontal layer in a stratified water body determined by differences in thermal or salinity characteristics or by oxygen or nutrient content, or by virtual storage zones of a reservoir. 
 
-The water body concept refers to an accumulated mass of liquid water, distinct from other masses of water, whose shape is determined by the occupied landform, the hosting hydrogeologic unit, a man made container, or another confining structure, and in case of on open waterbody bound to atmospheric pressure exerted on its surface. In the context of hydrometric observation a water body, or its parts, may be understood as (ultimate) feature of interest sampled by a hydrometric (sampling) feature. Water bodies have names given in common experience, with may differ whitin context or for some parts. Special types of water bodies occurring on the land surface are defined in the 'Surface Hydro Feature' application schema in section ... . **[\*\*\* insert reference\*\*\*]**. A separate conceptual model capturing the specifics of features associated with the groundwater domain will be provided within the GroundwaterML 2.0 specification (under development). **[\*\*\* insert reference\*\*\*]** 
+The water body concept refers to an accumulated mass of liquid water, distinct from other masses of water, whose shape is determined by the occupied landform, the hosting hydrogeologic unit, a man made container, or another confining structure, and in case of on open waterbody bound to atmospheric pressure exerted on its surface. Each water body, or parts of this, may be described in terms of a reservoir storing water for future use. In the context of hydrometric observation a water body, may be understood as the feature of interest sampled by a hydrometric (sampling) feature. Since water bodies have names given in common experience, with may differ whitin context or for some parts, they are defined as special types of the named hydrologic feature (see section 7.4.1). Special types of water bodies occurring on the land surface are described in the 'Surface Hydro Feature' application schema in section ... . **[\*\*\* insert reference\*\*\*]**. A separate conceptual model capturing the specifics of features associated with the groundwater domain will be provided within the GroundwaterML 2.0 specification (under development). **[\*\*\* insert reference\*\*\*]** 
 
 **[\*\*\*  your and swg's agreement presumed, HY_Glacier marked for removal. -- it's an issue similar to atmospheric and groundwater features, and there is no relationship to a (glacier fed) catchment defined. the accumulation of ice from atmospheric origin is subject of specific glacier models not in scope (see line 365) -- it's sufficient enough to have the WaterSolidPhase feature which still needed with respect to ice cover, is in soil, snowmelt discharge, ..., to reflect snow and ice as parts in the hydrographic network \*\*\*]**
 
-HY_WaterBody, HY_WaterBodyPart and HY_WaterBodyStratum each associate the aggregate in which they participate: **hydrographicNetwork** associates a water body the network, **waterBody** a water body part to the water body, and **stratifiedWaterBody** a stratum to the water body part. If required, these associations shall be used to identify the aggregate the water body, water body part or statum are parts of. 
+HY_WaterBody and HY_WaterBodyPart inherit from the generalization the *identifier*, *name* and *context* properties. HY_WaterBody, HY_WaterBodyPart and HY_WaterBodyStratum each associate the aggregate in which they participate. The *hydrographicNetwork* associations relates to a water body the network, *waterBody* a water body part to the water body, and *stratifiedWaterBody* a stratum to the water body part. If required, these associations shall be used to identify the aggregate the water body, water body part or statum are parts of. 
 HY_WaterBodyPart carries five properties: *fixedLandmark*, *upstreamSegment*,  *downstreamSegment*, *streamCrossSection*, and *streamLongitudinalSection*. HY_WaterBodyStratum has two properties: *stratumType* and *storage*.
 
 The **fixedLandmark** associates to the water body part a permanent landmark referenced by co-ordinates. If required, this shall be used to identify on a water body (part) a permanent reference location which can be located in the network of catchment in terms of an outfall. This supports to place any feature relative to this using the (linear) river reference system described in section ... **[insert reference]**. 
@@ -323,7 +323,7 @@ The **upstreamSegment** and **downstreamSegment** associations relate to a water
 
 The **streamCrossSection** and **longitudinalCrossSection** associations relate to a water body (part) vertical sections confining them.  If required, this association shall be used to identify sections either at right angles to the main (average) direction of flow, or along the stream (centre) line.
 
-The **storage** association describes a zone in a stratified water body, part of the network, which may be used in terms of a resource for future use. If required, this association shall be used to describe a natural or man-made water body used for storage, regulation and control of water resources. The **stratumType** attribute may be used to express the type of the stratum or zone using a term from a controlled vocabulary. 
+The **storage** association describes a zone in a stratified water body, part of the network, terms of storing water as a resource for future use. If required, this association shall be used to describe the reservoir used for storage, regulation and control of water resources. The **stratumType** attribute may be used to express the type of the stratum or zone using a term from a controlled vocabulary. 
 
 | **Requirements Class** | [/req/hy_hydrographicnetwork/waterbody] (/req/hy_hydrographicnetwork/waterbody) |
 | --- | --- |
@@ -363,9 +363,9 @@ The **storage** association describes a zone in a stratified water body, part of
 
 
 ##### 7.4.3.3	Water Liquid Phase and Water Solid Phase 
-The HY_Water_LiquidPhase and HY_Water_SolidPhase define a simple concept of the accumulation of water in water bodies. This definition refers to the material accumulated to  amass of water. In its liquid form water is accumulated in water bodies (stratum), which are parts of the hydrographic network; in its solid phase water may be accumulated in a body after melting, or as a layer of ice or snow on an open water body. Both types may be further specialized, e.g. rain or groundwater. The accumulation of snow and ice in glaciers is subject of glaciology science in not in the scope of this standard. The accumulation of water in the atmosphere or below the ldna surface is not in scope of this standard. Informative packages desribing a simple model to take into account water from atmospheric origin, particularly from precipitation, or water occurring below the land surface without the complexity and detail of rainfall-runoff or groundwater models, are provided in Annex ... . **[\*\*\* insert reference \*\*\*]**. A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development. **[\*\*\* insert reference to GWML2\*\*\*]**
+The HY_Water_LiquidPhase and HY_Water_SolidPhase define a simple concept of the accumulation of water in water bodies. This definition refers to the material accumulated to a mass of water. In its liquid form water is accumulated in water bodies (stratum), which are parts of the hydrographic network; in its solid phase water may be accumulated after melting, or as a layer of ice or snow on an open water body. The accumulation of water in the atmosphere or below the land surface, e.g. rain, sol moisture or groundwater, is not in scope of this standard, as well as the accumulation of snow and ice in glaciers which is subject of glaciology science. Informative packages desribing a simple model to take into account water from atmospheric origin, particularly from precipitation, or water occurring below the land surface without the complexity and detail of rainfall-runoff or groundwater models, are provided in Annex ... . **[\*\*\* insert reference \*\*\*]**. A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development. **[\*\*\* insert reference to GWML2\*\*\*]**
 
-HY_Water_LiquidPhase carries one association: *accumulatingWaterBody*; HY_Water_SolidPhase associates two properties: *snowmelt* and *coveredWaterBody*. If required, these associations shall be used to identify the water body, part of the network, where water as material is accumulated. 
+HY_Water_LiquidPhase carries the association *accumulatingWaterBody*; HY_Water_SolidPhase associates two properties: *snowmelt* and *coveredWaterBody*. If required, these associations shall be used to identify the water body, part of the network, where liquid water as a material is accumulated. 
 
 | **Requirements Class** | [/req/hy_hydrographicnetwork/waterliquidphase] (/req/hy_hydrographicnetwork/waterliquidphase) |
 | --- | --- |
@@ -385,9 +385,9 @@ HY_Water_LiquidPhase carries one association: *accumulatingWaterBody*; HY_Water_
 
 
 ##### 7.4.3.4	Cross-Section amd Longitudinal Section
-The HY_CrossSection and HY_LongitudinalSection conceptualize the segmentation of a water body or a containing channel through vertical sections. Taking into account the conceptual separation of a watercourse (see section 6.5) into a water body and the containing channel, the cross section concept refers to both the cross section of a water body orthogonal to direction of flow as well as to the transversal bed profile of a channel; and the longitudinal section concept refers to stream lines as well as to thalweg, shore or bank lines. 
+The HY_CrossSection and HY_LongitudinalSection conceptualize the segmentation of a water body or a containing channel through vertical sections. Taking into account the conceptual separation of a watercourse (see section 6.5) into a water body and the containing channel, the cross section concept refers to both the cross section of a water body orthogonal to the direction of flow, and to the transversal bed profile of a channel; and the longitudinal section concept refers to stream lines as well as to thalweg, shore or bank lines. 
  
-HY_CrossSection and HY_LongitudinalSection bot associate to a vertical section particular points referenced by co-ordinates: *crossSectionPoint* and *longitudalinalSectionPoint*. Located in the network of catchments, this supports to place any feature relative to this using the (linear) river reference system described in section ... **[insert reference]**. If required, these associations shall be used to identify at a vertical section the permanent reference location which can be located in the network of catchment in terms of an outfall. 
+HY_CrossSection and HY_LongitudinalSection both associate to a vertical section typical reference points: *crossSectionPoint* and *longitudalinalSectionPoint*. Located in the network of catchments, this support to place a feature of interest relative to these using the (linear) river reference system described in section ... **[insert reference]**. If required, these associations shall be used to identify at a vertical section the permanent reference location which can be located in the network of catchment in terms of an outfall. 
 
 | **Requirements Class** | [/req/hy_hydrographicnetwork/crosssection] (/req/hy_hydrographicnetwork/crosssection) |
 | --- | --- |
@@ -404,16 +404,21 @@ HY_CrossSection and HY_LongitudinalSection bot associate to a vertical section p
 | Requirement |	[/req/hy_hydrographicnetwork/longitudinalsection.longitudinalsectionpoint]  (/req/hy_hydrographicnetwork/longitudinalsection.longitudinalsectionpoint)
 
  
-
 #### 7.4.4	The River Positioning System model
 [\*\*\*include class diagram\*\*\*]
 
+
+
+
 #### 7.4.3	The Storage model
-The Storage model provides a concept to describe a water body, or a part/stratum of this, in terms of a resource stored for future use. 
+The Storage model provides a concept to describe a water body, or a part/stratum of this, in terms of a reservoir storing water for future use. The separate storage model allows to describe hydrographic network without the details of storage capacities that a water body may have, and vice versa storage reservoirs to be referenced independently of their role within a network. To virtually connect a reservoir (special water body) with other water bodies in the hydrographic network, a typical reference point on reservoir is defined allowing to place a feature of interest relative to this using the (linear) river reference system described in section ... **[insert reference]**. . Connectivity may be in detail designed may be designed with a particular application. 
 
-separate from network role
-connectivity like water body
-
-
+Special concepts of surface or underground reservoirs may be defined with an application. A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development. **[\*\*\* insert reference to GWML2\*\*\*]**
 [\*\*\*include class diagram\*\*\*]
-barrierpoint included
+
+The HY_Storage class 
+
+
+barrierpoint 
+
+tables
