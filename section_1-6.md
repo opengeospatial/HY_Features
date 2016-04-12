@@ -323,9 +323,9 @@ The core concept of the HY_Features model is that a study of the Hydrology pheno
 
 Recognized across hydrologic disciplines as the basic unit of study where hydrologic processes (such as flow accumulation) take place, the catchment may be represented in various ways in different sub-hydrology-domain information models. Catchment boundary, catchment area, and linear flowpath, are the most common geometric representations of a catchment, while geographic representations are usually the network structure in its entirety representing a catchment as a set of connected cartographic features. The distinction between cartographic (or geographic) and geoschematic (or geometric) views of a hierarchical network of catchments is very important in HY\_features. Another distinction to note is the difference between a hydrographic network of water bodies (typically blue lines for small rivers and blue polygons for larger rivers and lakes), the network of channels (typically blue lines forming a connected connected network indicating continuity of flow), or a network of hydrometric monitoring stations as cartographic views that represent a catchment in its entirety. To illustrate these ideas, Figure 4 shows different types of geospatial data overlaying the represented Missouri region.
 
-[\*\*\* Text proposal  for line 320, intended to describe the portrayal of catchment in maps as a typical representation  of a catchment using geometric shapes. – model details will be described in section 7.4.2.1 and with the particular networks ..
+**[\*\*\* Text proposal  for line 320, intended to describe the portrayal of catchment in maps as a typical representation  of a catchment using geometric shapes. – model details will be described in section 7.4.2.1 and with the particular networks ..
 The core concept of the HY_Features model is that a study of the Hydrology phenomenon will reference common conceptual entities of the real world such as catchment, water body, channel, stream gaging site, through the use of specific modeled features (as per ISO 19109 General Feature Model). Focused on a particular appearance of the complex hydrology phenomenon, each study portrays in a particular way a multiple represented conceptual entity. Depending on the scientific concern, the specific hydrologic feature is understood as one of many potential representations of the conceptual entity being represented.
-Across hydrologic disciplines the catchment is recognized as the conceptual unit of study where hydrologic processes (such as flow accumulation) take place. Catchment boundary, catchment area, and linear flowpath, are the most common geometric representations of a catchment, and widely used to create cartographic or topological views of a catchment.  Like cartographic (aka geographic) maps,  geoschematic views in its entirety represent a catchment  as a set of (connected) geometric features.  Map layers that separately visualize the hydrographic network of water bodies (typically as blue lines for small rivers and blue polygons for larger rivers and lakes), the network of channels (typically lines forming a drainage pattern indicating continuity of flow), or a network of hydrometric monitoring stations are usually combined to portray the represented catchment. To illustrate these ideas, Figure 4 shows different types of geospatial data overlaying the represented Missouri region.   \*\*\*]
+Across hydrologic disciplines the catchment is recognized as the conceptual unit of study where hydrologic processes (such as flow accumulation) take place. Catchment boundary, catchment area, and linear flowpath, are the most common geometric representations of a catchment, and widely used to create cartographic or topological views of a catchment.  Like cartographic (aka geographic) maps,  geoschematic views in its entirety represent a catchment  as a set of (connected) geometric features.  Map layers that separately visualize the hydrographic network of water bodies (typically as blue lines for small rivers and blue polygons for larger rivers and lakes), the network of channels (typically lines forming a drainage pattern indicating continuity of flow), or a network of hydrometric monitoring stations are usually combined to portray the represented catchment. To illustrate these ideas, Figure 4 shows different types of geospatial data overlaying the represented Missouri region.   \*\*\*]**
 
 ![Figure 4: Multiple representation of the Missouri catchment (Source: USGS and GRDC) ](figs/fig4.png)  
 Figure 4: Multiple representation of the Missouri catchment (Source: USGS and GRDC)  
@@ -385,7 +385,6 @@ Considering any location on a network as the outflow node of a contributing catc
 Figure 10, 11, 12, and 13 illustrate how a newly introduced location can be located up- or downstream of a reference location.  [\*\*\*check figures\*\*\*] 
 
 
-
 ![Figure 10: Position (yellow dot) upstream of a reference point (red dot)](figs/fig10.png)
 Figure 12: Position (yellow dot) upstream of a reference point (red dot)  
 Yellow: point of interest (inflowNode of receivingCatchment) - locatedStart (origin) of riverReferenceSystem,  
@@ -408,6 +407,10 @@ Considering that the channel network (aka drainage pattern) generally exists ind
 Referencing in general this definitions, this standard is concerned with water bodies that form the hydrographic network of water bodies on the land surface, including lakes and reservoirs, and with channels on the land surface continuously or periodically contain water. A conceptual model capturing the specifics of bodies of groundwater as well as aquifers containing groundwater will be provided with the GroundwaterML 2.0 under development [\*\*\*see annex ..., insert reference to GWML2\*\*\*]. 
 
 
+**[--- END OF SECTION 6 --- END OF SECTION 6 --- END OF SECTION 6 --- END OF SECTION 6 --- END OF SECTION 6 --- END OF SECTION 6 ---]**
+
+**[\*\*\* I intend to remove section this section, since the conceptual separation of watercourses is already described in 6.5, as well as the surface water confines --- furthermore, when atmospheric and subsurface are moved to annexes (see line 421), it doesn't make sense to retain the a surface hydro feature section  repeating 6.5 \*\*\*]**
+
 ### 6.6 The Surface Hydro Feature application schema 
 (brief outline with reference to the normative section 7, in favour of completeness of the hydro cycle, against the background of the general holistic catchment approach) 
 
@@ -415,6 +418,8 @@ watercourse concept
 surface water
 surface water confines
 ..
+
+**[\*\*\* I intend to describe the informative packages (atmosperic and subsurface hydro feat) in separate annexes, instead of the specific clauses in section 6.n. this would keep the core standard body free from the non-normative parts, but still offers a model to integrate these, if required. -- !!! if you agree, the corresponding clauses need to be moved from section 6 into an annex \*\*\*]**
 
 ### 6.7 The Subsurface Hydro Feature application schema 
 (This package is an informative one, and described here in favour of completeness with repsect to the holistic catchment approach.)
