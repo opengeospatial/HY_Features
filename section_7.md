@@ -21,7 +21,7 @@ The conceptual model is expressed in the Geographic Information Conceptual Schem
 Figure 16: HY_Features modules and packages  
 **[\*\*\*update figure\*\*\*]**
 
-The following sections describe requirements classes for each application schema, except for the two informative packages concerning atmospheric hydrologic features and subsurface hydrologic features. **[\*\*\* These informative packages are outlined in Annex ... .\*\*\*]**. A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development. **[\*\*\* insert reference to GWML2\*\*\*]**
+The following sections describe requirements classes for each application schema, except for the informative packages concerning atmospheric hydrologic features and subsurface hydrologic features, outlined in Annex AAA. **[\*\*\* insert reference \*\*\*]**. A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development. **[\*\*\* insert reference to GWML2\*\*\*]**
 
 ### 7.2	The HY_Features conceptual conformance (mapping)
 
@@ -414,7 +414,7 @@ Special concepts of surface or underground reservoirs may be defined with applic
 Figure XX: Storage model (UML class diagram)
 **[\*\*\*include class diagram\*\*\*]**
 
-The HY_Reservoir class specializes the water body, either natural or man-made, used for storage, regulation and control of water resources. The reservoir concept refers to a mass of water managed in zones between operating levels. Being a specialization of the HY_WaterBody class, the reservoir inherits from thew general HY_HydroFeature class the name and context properies which allows to describe the resevoirs in a related context, e.g. flood control or water supply. 
+The HY_Reservoir class specializes the water body, either natural or man-made, used for storage, regulation and control of water resources. The reservoir concept refers to a mass of water managed in zones between operating levels. Being a specialization of the HY_WaterBody class, the reservoir inherits from the general HY_HydroFeature class the name and context properies which allows to describe the resevoirs in a related context, e.g. flood control or water supply. 
 
 HY_Reservoir associates to a reservoir a typical reference point: *barrierePoint*. Located in the network of catchments, a barrier point allows to place a feature of interest relative to this using the (linear) river reference system described in section 7.4.5. If required, these associations shall be used to identify on reservoir a permanent reference location located in the network of catchments as outfall. 
 
@@ -477,13 +477,51 @@ The **locatedStart** association locates the origin of the river reference syste
 | Requirement |	[/req/hy_riverpositioningsystem/riverreferencesystem.axis]  (/req/hy_riverpositioningsystem/riverreferencesystem.axis)
 
 
+### 7.5 The Surface Hydro Feature application schema
+
+The Surface Hydro Feature application schema provides concepts of hydrologic features occuring on the land surface to enable contextually related information models to build relationships to the catchment model and the hydrographic network model described in this standard (sections 7.4.2 and 7.4.3).  An informative surface water  model defines the most common types of a water body accumulating water on the land surface, each special by origin, size, or the phase of the contained water, by the property to move, or their interaction with other bodies of water. Taking into account the conceptual separation of a watercourses (see section 6.5) into a water body and its containing channel, the concepts of surface water bodies are provided separately from those of the confining structures. The surface water confines model conceptualize common structures confining a water body on the land surface, including their aggregation into a network of channels, to formalise relationships to the hydrographic network model and the catchment model. The Surface Hydro Feature application schema contains the packages: HY_SurfaceWater and HY_SurfaceWaterConfines. 
 
 
-7.5 The Surface Hydro Feature application schema
+![Figure XX: The surface water and surface water confines models (UML class diagram)](figs/figXX.png)
+Figure XX: The surface water and surface water confines models (UML class diagram)
+**[\*\*\*insert class diagram\*\*\*]**
 
-7.6 The Hydrometric Network application schema
+#### 7.5.1 The Surface Water model 
 
-7.7 The Utilities application schema
+The Surface Water model defines typical specialisations of the water body defined in section 7.4.3 of this standard. Being a specialization of the HY_WaterBody class, each subtype inherits from the general HY_HydroFeature class the name and context properies which allows to handle names given in cross-jurisdiction and multi-lingual contexts to a river, canal, lake, lagoon, estuary, or impoundment, as well as to describe them in related contexts, e.g. water resources assessment. 
+
+The HY_River subtype defines the existence of body of surfcae water, participating in a hydrographic network, special due to its property to permanently or temporarily flow. 
+
+The HY_Canal subtype defines the existence of body of surfcae water, participating in a hydrographic network, special due to its artificial origin (man-made).
+
+The HY_Lake subtype defines the existence of body of surfcae water, participating in a hydrographic network, special due to its considerable size.  
+
+The HY_Impoundment subtype defines the existence of body of surfcae water, participating in a hydrographic network, special due to be formed by collecting water, as by a dam. 
+
+The HY_Lagoon subtype defines the existence of body of surfcae water, participating in a hydrographic network, special due to its shallow depth and interaction with the open sea.
+
+The HY_Estuary subtype defines the existence of body of surfcae water, participating in a hydrographic network, special due to branching and its interaction with the open sea.
+
+![Figure XX: Specialisations of water body with respect to surface water (UML class diagram)](figs/figXX.png)
+Figure XX: Specialisations of water body with respect to surface water (UML class diagram)
+**[\*\*\*insert class diagram\*\*\*]**
+
+Each water body specialisation is understood to be part of the hydrographic network, and may generally consists of several parts, being stratified or used as reservoir. In other contexts other specialisations, or a typical segmentation may exist. Information models that not conforms to the types defined in this standard may use the general water body or water body part types.
+
+#### 7.5.2 The Surface Water Confines model 
+
+The Surface Water Confines model ....
+, and the segmentation of the channel without imposing a particular drainage pattern.
+
+requirements classes 
+
+
+
+### 7.6 The Hydrometric Network application schema
+
+
+
+### 7.7 The Utilities application schema
 
 
 
