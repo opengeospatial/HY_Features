@@ -295,7 +295,7 @@ The **networkLocation** association locates the reference location in a given ne
 | Requirement	| [/req/hy_catchment/referencelocation.networklocation](/req/hy_catchment/outfall.networklocation) |
 
 #### 7.4.3	The Hydrographic Network model
-The hydrographic network model (figure XX) defines an logical aggregate of water bodies. Conceptually, the network of water bodies is understood as the hydrographic appearance of the catchment of study in the perspective of the undertaken study, and its visualization as a cartographic representation of the catchment under study. Given that a topological upstream-downstream relationship is defined between catchments (see section 6.4.2), a water body has no other role than being part of the network that mirrors the network of contributing and receiving catchments. This means that the connectivity between water bodies appearing in the hydrographic network is 'virtual', and that water bodies can be aggregated in the hydrographic network irrespective of whether the accumulated water is flowing or not. This allows to aggregate permanent and temporary water bodies of flowing or stagnant water in a network view portraying a catchment, and to visualize the represented the catchment. To supports this concept of a virtual connectivity, parts in the hydrographic network associate typical reference points which can be located topologically as outfall of a corresponding catchment.
+The hydrographic network model (figure 23) defines a logical network of water bodies. Conceptually, the aggregate of water bodies is understood as the hydrographic appearance of the catchment of study in the perspective of the undertaken study, and the visualization of the hydrographic network as a cartographic representation of the catchment. Given that a topological upstream-downstream relationship is defined between catchments (see section 6.4.2), a water body has no other role than being part of the network that mirrors the network of contributing and receiving catchments. This means that the connectivity between water bodies appearing in the hydrographic network is 'virtual', and that water bodies can be aggregated in the hydrographic network irrespective of whether the accumulated water is flowing or not. This allows to aggregate permanent and temporary water bodies of flowing or stagnant water in a network view portraying a catchment, and to visualize the represented the catchment. To supports this concept of a virtual connectivity, parts in the hydrographic network associate typical reference points which can be located topologically as outfall of a corresponding catchment.
 
 Following the conceptual separation of a watercourse into water body and containing channel (see section 6.5), the hydrographic network is defined independent of the network of containing channels. This approach allows to separately visualize the hydrographic network of 'blue' lines or polygons, whereby the logically connected water bodies may or may not be connected at the representation level. 
 
@@ -306,18 +306,18 @@ Figure 23: Hydrographic Network model (UML class diagram)
 **[\*\*\*!!! Dave, fig23 uploaded, visible after merging PR \*\*\*]**
 
 ##### 7.4.3.1	HydrographicNetwork
-The HY_HydrographicNetwork class describes the aggregate of permanent and temporary bodies of flowing or stagnant water, that the cachment under study appears, and that may be visualized in map layers to cartographically represent this catchment. The HY_HydrographicNetwork class carries one association: *visualization*. 
+The HY_HydrographicNetwork class describes the aggregate of permanent and temporary bodies of flowing or stagnant water, as what the cachment under study appears, and that may be visualized in map layers to cartographically represent this catchment. The HY_HydrographicNetwork class carries one association: *visualization*. 
 
-The **visualization** association relates to the hydrographic network its cartographic visualisation, either as a separate map, or one of many thematic layers. If required, this association shall be used to identify a map or geoschematic view displaying the hydrographic network that in its entirety, separately or as set of layers, represents the catchment without describing the displayed network parts in detail.
+The **visualisation** association relates to the hydrographic network its cartographic visualisation, either as a separate map, or one of many thematic layers. If required, this association shall be used to identify a map or geoschematic view displaying the hydrographic network that in its entirety, separately or as set of layers, represents the catchment without describing the displayed network parts in detail.
 
 | **Requirements Class** | [/req/hy_hydrographicnetwork/hydrographicnetwork] (/req/hy_hydrographicnetwork/hydrographicnetwork) |
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY_HydrographicNetwork |
 | Dependency | [/req/hy_catchment/networkcartography] (/req/hy_catchment/networkcartography) | 
-| Requirement |	[/req/hy_hydrographicnetwork/hydrographicnetwork.visualization]  (/req/hy_hydrographicnetwork/hydrographicnetwork.visualization)
+| Requirement |	[/req/hy_hydrographicnetwork/hydrographicnetwork.visualisation]  (/req/hy_hydrographicnetwork/hydrographicnetwork.visualization)
 
-##### 7.4.3.2	WaterBody, WaterBodyPart adn WaterBodyStratum
+##### 7.4.3.2	WaterBody, WaterBodyPart and WaterBodyStratum
 The HY_WaterBody and HY_WaterBodyPart class define a water body, or part of this, participating in the hydrographic network. The HY_WaterBodyStratum class desribes a horizontal layer in a stratified water body determined by differences in thermal or salinity characteristics or by oxygen or nutrient content, or by virtual storage zones of a reservoir. 
 
 The water body concept refers to an accumulated mass of liquid water, distinct from other masses of water. Its shape is determined by the occupied landform, the hosting hydrogeologic unit, a man made container, or another confining structure, and in case of on open waterbody bound to atmospheric pressure exerted on its surface. Each water body, or part of this, may be described in terms of a reservoir storing water for future use. In the context of hydrometric observation, a water bod may be understood as the feature of interest sampled by a hydrometric (sampling) feature. A water body is defined as special type of the named hydrologic feature (see section 7.4.1), because of names usually given to a water body in common experience varying whitin context or for some parts. Special types of water bodies occurring on the land surface are described in the 'Surface Hydro Feature' application schema in section ... . **[\*\*\* insert reference\*\*\*]**. A separate conceptual model capturing the specifics of features associated with the groundwater domain will be provided within the GroundwaterML 2.0 specification (under development). **[\*\*\* insert reference\*\*\*]** 
@@ -392,7 +392,7 @@ HY_Water_LiquidPhase carries the association *accumulatingWaterBody*; HY_Water_S
 | Requirement |	[/req/hy_hydrographicnetwork/watersolidphase.snowmelt]  (/req/hy_hydrographicnetwork/watersolidphase.snowmelt)
 | Requirement |	[/req/hy_hydrographicnetwork/watersolidphase.coveredwaterbody]  (/req/hy_hydrographicnetwork/watersolidphase.coveredwaterbody)
 
-##### 7.4.3.4	Cross-Section amd Longitudinal Section
+##### 7.4.3.4	Cross-Section and Longitudinal Section
 The HY_CrossSection and HY_LongitudinalSection conceptualize the segmentation of a water body or a containing channel through vertical sections. Taking into account the conceptual separation of a watercourse (see section 6.5) into a water body and the containing channel, the cross section concept refers to both the cross section of a water body orthogonal to the direction of flow, and to the transversal bed profile of a channel; in the same way the longitudinal section concept refers to stream lines and to thalweg, shore or bank lines. 
  
 HY_CrossSection and HY_LongitudinalSection each associate to a vertical section typical reference points: *crossSectionPoint* and *longitudalinalSectionPoint*. Located in the network of catchments, vertical sections allow to place a feature of interest relative to this using the (linear) river reference system described in section 7.4.5. If required, these associations shall be used to identify at a vertical section the permanent reference location located in the network of catchments as outfall. 
@@ -413,7 +413,7 @@ HY_CrossSection and HY_LongitudinalSection each associate to a vertical section 
 
 #### 7.4.4	The Storage model
 
-The Storage model provides a concept to describe any water body, or a part/stratum of this, in terms of a reservoir storing water for future use. The separate storage model allows to describe the hydrographic network without the details of storage capacities that a water body may have, and vice versa storage reservoirs to be referenced independent of their role within a network. To virtually connect a reservoir (definend as special water body) with other water bodies in the hydrographic network, a typical reference point on reservoir is defined allowing to place a feature of interest relative to this using the (linear) river reference system described in section 7.4.5. Details of connectivity may be designed with a particular application. 
+The Storage model (figure 24) provides a concept to describe any water body, or a part/stratum of this, in terms of a reservoir storing water for future use. The separate storage model allows to describe the hydrographic network without the details of storage capacities that a water body may have, and vice versa storage reservoirs to be referenced independent of their role within a network. To virtually connect a reservoir (definend as special water body) with other water bodies in the hydrographic network, a typical reference point on reservoir is defined allowing to place a feature of interest relative to this using the (linear) river reference system described in section 7.4.5. Details of connectivity may be designed with a particular application. 
 
 Special concepts of surface or underground reservoirs may be defined with application. The storage concept can be applied to surface and subsurface reservoirs, whereby underground reservoirs should not be confused with the groundwater reservoir which usually refers to the containing aquifer. A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development. **[\*\*\* insert reference to GWML2\*\*\*]** 
 
@@ -435,7 +435,7 @@ HY_Reservoir associates to a reservoir a typical reference point: *barrierePoint
 
 #### 7.4.5	The River Positioning system
 
-The River Positioning model provides a simple model to place a feature of interest 'along a river' via topology and geometry (see section 6.4). River Positioning introduces the concept of Indirect Position where a position is determined on the linear representation of the catchment between the feature of interest and an identified reference location either as absolute distance, relative or interpolative to the referent. This concept uses a (linear) river reference system whose origin is set at the outfall of the catchment that corresponds to the feature of interest, and whose linear shape is given by the flowpath representing the catchment linking the outfall (origin) with the outfall marked by the reference location. Each catchment has its own reference system which can be combined as necessary using catchment topology. Applying the linear referencing along flowpath to a given network of catchments, a hydrographic or channel network can be thought as a sequence of reference  and newly placed outfalls, and may be visualised using an appropriate geometric representation. 
+The River Positioning model (figure 25) provides a simple model to place a feature of interest 'along a river' via topology and geometry (see section 6.4). River Positioning introduces the concept of Indirect Position where a position is determined on the linear representation of the catchment between the feature of interest and an identified reference location either as absolute distance, relative or interpolative to the referent. This concept uses a (linear) river reference system whose origin is set at the outfall of the catchment that corresponds to the feature of interest, and whose linear shape is given by the flowpath representing the catchment linking the outfall (origin) with the outfall marked by the reference location. Each catchment has its own reference system which can be combined as necessary using catchment topology. Applying the linear referencing along flowpath to a given network of catchments, a hydrographic or channel network can be thought as a sequence of reference  and newly placed outfalls, and may be visualised using an appropriate geometric representation. 
 
 ![Figure 25: River Positioning System (UML class diagram)](figs/fig25.png)
 Figure 25: River Positioning System (UML class diagram)
@@ -487,13 +487,13 @@ The **locatedStart** association locates the origin of the river reference syste
 
 The Surface Hydro Feature application schema provides concepts of hydrologic features occuring on the land surface to enable contextually related information models to build relationships to the catchment model and the hydrographic network model described in this standard (sections 7.4.2 and 7.4.3).  An informative surface water  model defines the most common types of a water body accumulating water on the land surface, each special by origin, size, or the phase of the contained water, by the property to move, or their interaction with other bodies of water. Taking into account the conceptual separation of a watercourses (see section 6.5) into a water body and its containing channel, the concepts of surface water bodies are provided separately from those of the confining structures. The surface water confines model conceptualize common structures confining a water body on the land surface, including their aggregation into a network of channels, to formalise relationships to the hydrographic network model and the catchment model. The Surface Hydro Feature application schema contains the packages: HY_SurfaceWater and HY_SurfaceWaterConfines. 
 
-![Figure 26: The surface water and surface water confines models (UML class diagram)](figs/fig26.png)
-Figure 26: The surface water and surface water confines models (UML class diagram)
+![Figure 26: The surface water and surface water confines model (UML class diagram)](figs/fig26.png)
+Figure 26: The surface water and surface water confines model (UML class diagram)
 **[\*\*\*insert class diagram\*\*\*]**
 
 #### 7.5.1 The Surface Water model 
 
-The Surface Water model defines typical specialisations of the water body defined in section 7.4.3 of this standard. Being a specialization of the HY_WaterBody class, each subtype inherits from the general HY_HydroFeature class the name and context properies which allows to handle names given in cross-jurisdiction and multi-lingual contexts to a river, canal, lake, lagoon, estuary, or impoundment, as well as to describe them in related contexts, e.g. water resources assessment. 
+The Surface Water model defines typical specialisations of the water body defined in section 7.4.3 of this standard. Being a specialization of the HY_WaterBody class, each subtype inherits from the general HY_HydroFeature class the name and context properties which allows to handle names given in cross-jurisdiction and multi-lingual contexts to a river, canal, lake, lagoon, estuary, or impoundment, as well as to describe them in related contexts, e.g. water resources assessment. 
 
 The HY_River subtype defines the existence of body of surfcae water, participating in a hydrographic network, special due to its property to permanently or temporarily flow. 
 
@@ -511,16 +511,60 @@ The HY_Estuary subtype defines the existence of body of surfcae water, participa
 Figure 27: Specialisations of water body with respect to surface water (UML class diagram)
 **[\*\*\*insert class diagram\*\*\*]**
 
-Each water body specialisation is understood to be part of the hydrographic network, and may generally consists of several parts, being stratified or used as reservoir. In other contexts other specialisations, or a typical segmentation may exist. Information models that not conforms to the types defined in this standard may use the general water body or water body part types.
+Each water body specialisation is understood to be part of the hydrographic network, and may generally consist of several parts, may be stratified or used as reservoir. In other contexts other specialisations, or a typical segmentation may exist, that not conform to the types defined in this standard may use the general water body or water body part types.
 
 #### 7.5.2 The Surface Water Confines model 
 
-The Surface Water Confines model ....
-, and the segmentation of the channel without imposing a particular drainage pattern.
+The Surface Water Confines model (figure 26) defines a logical network of channels. Conceptually, the aggregate of channels is understood as the geomorphologic appearance of the catchment of study in the perspective of the undertaken study, and its visualisation as as a cartographic representation of the catchment. Such as for the hydrographic network, network parts are virtually connected based on catchment topology, allowing channels to be aggregated irrespective of containing a perennial, intermittend or ephemeral water body. 
 
-requirements classes 
+Following the conceptual separation of a watercourse into water body and containing channel (see section 6.5), the channel network is defined independent of the network of water bodies. This approach allows to separately visualize the drainage pattern, whereby the logically connected channels may or may not be connected at the representation level. 
 
+The channel network model defines the major elements of channel network, and the relationships between them. A network water body may be segmented at vertical cross- or longitudinal sections in succeeding parts. To support the concept of a virtual connectivity, channel parts associate typical reference points which can be located topologically as outfall of a corresponding catchment. This allows to place a feature of interest relative to this using the (linear) river reference system described in section 7.4.5. 
 
+![Figure 28: Channel network model (UML class diagram)](figs/fig28.png)
+Figure 28: Channel network model (UML class diagram)
+**[\*\*\*insert class diagram\*\*\*]**
+
+##### 7.5.2.1	ChannelNetwork
+The HY_ChannelNetwork class describes the aggregate of channels, as what the cachment under study appears, and that may be visualized in map layers to cartographically represent this catchment. The HY_ChannelNetwork class carries twoi properties: *drainagepattern*, *visualization*. 
+
+The **drainagepattern** attribute describes in general the drainage pattern. If required, an implementation may use a term from the HY_DrainegPattern codelist described in Annex ... , table ... . **[insert reference]**  
+
+The **visualisation** association relates to the channel network its cartographic visualisation, either as a separate map, or one of many thematic layers. If required, this association shall be used to identify a map or geoschematic view displaying the channel network that in its entirety, separately or as set of layers, represents the catchment without describing the displayed network parts in detail.
+
+| **Requirements Class** | [/req/hy_channelnetwork/channelnetwork] (/req/hy_channelnetwork/channelnetwork) |
+| --- | --- |
+| Target type	| Implementation Schema |
+| Name | HY_ChannelNetwork |
+| Dependency | [/req/hy_catchment/networkcartography] (/req/hy_catchment/networkcartography) | 
+| Dependency | [[/req/hy_channelnetwork/drainagepattern] (/req/hy_channelnetwork/drainagepattern) |
+| Requirement |	[/req/hy_channelnetwork/channelnetwork.visualisation]  (/req/hy_channelnetwork/channelnetwork.visualisation)| 
+| Requirement |	[/req/hy_channelnetwork/channelnetwork.drainagepattern]  (/req/hy_channelnetwork/channelnetwork.drainagepattern)
+
+##### 7.5.2.2	Channel and channel part
+The HY_Channel and HY_ChannelPart class define a channel, or part of this between vertical sections, participating in the channel network. The channel concept refers to natural or man-made channels through or along which water may flow, or not.  
+
+HY_HY_Channel and HY_ChannelPart each associate the aggregate in which they participate. The *channelNetwork* association relates to a network channel the channel network, and *channelPart* to a channel its parts. If required, these associations shall be used to identify the aggregates the channel and the channel part are parts of. HY_ChannelPart carries three properties: *containedWaterBody*, *bedProfileTransversal*,  *bedProfileLongitudinal*. 
+
+The **containedWaterBody** association relates to the channel part a water body part. If required, this association shall be used to identify the water body part (mass of water) contained in the channel part. 
+
+The **bedProfileTransversal* and  **bedProfileLongitudinal** associations relate to a transversal or longitudinal bed profile. If required, this association shall be used to identify the vertical section either at right angles to the main (average) direction of flow, or along its centre line. 
+
+| **Requirements Class** | [/req/hy_channelnetwork/channel] (/req/hy_channelnetwork/channel) |
+| --- | --- |
+| Target type	| Implementation Schema |
+| Name | HY_Channel |
+| Dependency | [[/req/hy_channelnetwork/channelnetwork] (/req/hy_channelnetwork/channelnetwork) |
+| Dependency | [/req/hy_hydrographicnetwork/waterbodypart] (/req/hy_hydrographicnetwork/waterbodypart) | 
+| Dependency | [/req/hy_hydrographicnetwork/crosssection] (/req/hy_hydrographicnetwork/crosssection) | 
+| Dependency | [/req/hy_hydrographicnetwork/longitudinalsection] (/req/hy_hydrographicnetwork/longitudinalsection) | 
+| Requirement |	[/req/hy_channelnetwork/channel.containedwaterbody]  (/req/hy_channelnetwork/channelnetwork.containedwaterbody)
+| Requirement |	[/req/hy_channelnetwork/channel.bedprofiletransversal]  (/req/hy_channelnetwork/channelnetwork.bedprofiletransversal)
+| Requirement |	[/req/hy_channelnetwork/channel.bedprofilelongitudinal]  (/req/hy_channelnetwork/channelnetwork.bedprofilelongitudinal)
+
+##### 7.5.2.2	River bed and river bank
+
+**[\*\*\* I intend to remove both classes from the model, to not pre-define issues that are subject of specific channel feature model, maybe  RiverML (orphans from the initial model version as no riverML version was 'looming'), since there are no relationships to the catchment and hydrographic network model, only intern through confining the channel part, this does not affect the core model\*\*\*]**
 
 ### 7.6 The Hydrometric Network application schema
 
