@@ -19,7 +19,7 @@ The conceptual model is expressed in the Geographic Information Conceptual Schem
 
 ![Figure 16: HY_Features modules and packages](figs/fig16.png)  
 Figure 16: HY_Features modules and packages  
-**[\*\*\*update figure\*\*\*]**
+**[\*\*\*!!! Dave, fig16 updated, visible after merging PR \*\*\*]**
 
 The following sections describe requirements classes for each application schema, except for the informative packages concerning atmospheric hydrologic features and subsurface hydrologic features, outlined in Annex AAA. **[\*\*\* insert reference \*\*\*]**. A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development. **[\*\*\* insert reference to GWML2\*\*\*]**
 
@@ -52,7 +52,7 @@ An implementation schema using Feature Types defined using the namespace of a fo
 | Name | HY_Features Conceptual Conformance |
 | Dependency | [/iso/19109/] (https://inspire-twg.jrc.it/svn/iso) |
 | Requirement | [/req/ hy_features_conceptual_model/encoding] (/req/ hy_features_conceptual_model/encoding) |
-**[(\*\*\* @Rob: please review, whether still applicable to describe conceptual conformance target \*\*\*]** - 
+**[(\*\*\* !!! Rob: please review, if still applicable to describe conceptual conformance target \*\*\*]** - 
 
 Feature **identifiers** present in data encoded using a HY\_Features conformant implementation schema shall be identical wherever the same Feature instance is being encoded or referenced. This specifically applies to data available in multiple related datasets or exposed by multiple service interfaces.
 
@@ -69,8 +69,8 @@ Regarding **completeness**, all mandatory properties defined by a Feature Type d
 | Requirement	| [/req/ hy_features_conceptual_model/identifiers] (/req/ hy_features_conceptual_model/identifiers) |
 | Requirement	| [/req/ hy_features_conceptual_model/completeness] (/req/ hy_features_conceptual_model/completeness) |
 
-**[\*\*\* @Rob: review, whether an encoding requirement is still in scope !!! \*\*\*]**
-**[\*\*\* @Rob: review this comment from an earlier version: How to handle default values – in-schema??? \*\*\* is this till valid ?]**
+**[\*\*\* !!! Rob, review, whether an encoding requirement is still in scope !!! \*\*\*]**
+**[\*\*\* !!! Rob, review this comment from an earlier version: How to handle default values – in-schema??? \*\*\* is this till valid ?]**
 
 ### 7.4 The Hydro Feature application schema
 
@@ -78,9 +78,9 @@ The Hydro Feature application schema defines the fundamental properties and rela
 
 The Hydro Feature schema conceptualize the abstraction of the complex Hydrology phenomenon through definition of feature types each describing separate aspects of the hydrology phenomenon. This includes related phenomena that participate in hydrologic systems but have specific characteristics. Figure 18 shows the special features types describing separate aspects of the hydrology phenomenon. Given the complexity of the domain, and the nature of real-world physical phenomena, for any given feature further specialisation as well as a wide range of possible characteristics, states and representations may be relevant. 
 
-![Figure 18: Feature types describing separate aspects of the hydrology phenomenon (UML class diagram)](figs/fig18.png)
-Figure 18: Feature types describing separate aspects of the hydrology phenomenon (UML class diagram)
-**[\*\*\*update class diagram\*\*\*]**
+![Figure 17: Feature types describing separate aspects of the hydrology phenomenon (UML class diagram)](figs/fig17.png)
+Figure 17: Feature types describing separate aspects of the hydrology phenomenon (UML class diagram)
+**[\*\*\*!!! Dave, fig17 updated, visible after merging PR \*\*\*]**
 
 The Hydro Feature schema provides a model to identify a hydrologic feature, and thus the opportunity to connect disparate representations. By making relationships between identified features expressible in a standard form, this allows the hydrosphere to be divided into a hierarchy of hydrologically connected catchments and related phenomena contained therein, irrespective of the various representations available for these phenomena. The Hydro Feature schema contains five leaf packages: HY_NamedFeature, HY_Catchment, HY_HydrographicNetwork, HY_RiverPositioning, HY_Storage.
 
@@ -99,9 +99,9 @@ The Hydro Feature schema provides a model to identify a hydrologic feature, and 
 
 The Named Feature model defines the hydrologic feature basically as a feature to which names are given through common usage (Figure 17). It provides a flexible approach to record multiple names and identifiers that may be assigned to an identified feature without necessarily have a formal naming model by providing a means to localize names in a cultural, political or historical context. Each  special hydrologic feature type (Figure 18) inherits the general relationships defined for the HY_HydroFeature class. The HY_HydroFeature class carries the properties: *identifier*, *name*, and *context*.
 
-![Figure 17: Named Feature model (UML class diagram)](figs/fig17.png)
-Figure 17: Named Feature model (UML class diagram) 
-**[\*\*\*update class diagram\*\*\*]**
+![Figure 18: Named Feature model (UML class diagram)](figs/fig18.png)
+Figure 18: Named Feature model (UML class diagram) 
+**[\*\*\*!!! Dave, fig18 updated, visible after merging PR \*\*\*]**
 
 The **identifier** attribute provides a means to assign to the hydrologic feature an (external) identifier in a given context. If required, an instance of HY_HydroFeature shall contain an identifier that may be used as a persistent reference to this feature. An implementation may use the EXT_IdentificationCode type as defined in the Utilities package (section 7.4. ... ) **[include reference]**.
 
@@ -127,14 +127,16 @@ The catchment model provides the topological concept to consider any location on
 
 ![Figure 19: Catchment model (UML class diagram)](figs/fig19.png)
 Figure 19: Catchment model (UML class diagram)
-**[\*\*\*update class diagram\*\*\*]**
+**[\*\*\*!!! Dave, fig19 updated, visible after merging PR \*\*\*]**
 
 ##### 7.4.2.1	Catchment representation
-The HY_CatchmentRepresentation class conceptualize the multiple representation of a catchment in typical data products using single geometric shapes, or by visualization of typical networks the catchment may appear depending on the concern of the undertaken study. Catchment representation refers to the common recognition of a catchment as the unit of study shared across sub-domains, even if a particular representation refer only to one or the other. With respect tp 1D-and 2D-geometry, special sub- types of catchment representation are defined: HY_Flowpath (line-shaped),  HY_CatchmentArea (area-shaped), and HY_CatchmentBoundary  (polygon). The HY_NetworkCartography class is defined with respect to networks to which hydrologic features may participate, and that in its entirety represent, separately or as set of layers, the catchment. This will allow hydrologic features that are logically connected in the hydrographic network, a network of channels, a network of hydrometric stations to be portrayed in thematic map layers, which is common use to cartographically represent a catchment through overlaying a series of layers displaying such networks.
-
-**[\*\*\*do we want include here other possible networks such as a network of related aquifers, which are not in scope of this standard with reference to a conceptual model capturing the specifics of connected aquifers, provided with the GroundwaterML 2.0 under development', see annex .??., -- if so, insert reference to GWML2\*\*\*]** 
+The HY_CatchmentRepresentation class conceptualize the multiple representation of a catchment in typical data products using single geometric shapes, or by visualization of typical networks the catchment may appear depending on the concern of the undertaken study. Catchment representation refers to the common recognition of a catchment as the unit of study shared across sub-domains, even if a particular representation refer only to one or the other. With respect tp 1D-and 2D-geometry, special types of catchment representation are defined: HY_Flowpath (line-shaped),  HY_CatchmentArea (area-shaped), and HY_CatchmentBoundary (polygon shape). The HY_NetworkCartography class is defined with respect to networks to which hydrologic features may participate, and that in its entirety represent, separately or as set of layers, the catchment. This will allow hydrologic features that are logically connected in the hydrographic network, a network of channels, a network of hydrometric stations to be portrayed in thematic map layers, which is common use to cartographically represent a catchment through overlaying a series of layers displaying such networks.
 
 In other contexts other types of catchment representation may exist.  Data products that not conforms to the special types defined in this standard, for instance representations in more-dimensional perspectives, or in time, may use the general HY_CatchmentRepresentation class. If present, all sub-types of catchment representation shall support the inherent representedCatchment property whereby each representation may be realised with an appropriate geometry type. HY_CatchmentRepresentation carries one association: representedCatchment. 
+
+![Figure 20: Catchment representation (UML class diagram)](figs/fig20.png)
+Figure 20: Catchment representation (UML class diagram)
+**[\*\*\*!!! Dave, fig20 updated, visible after merging PR \*\*\*]**
 
 The *representedCatchment* association defines the relationship to exactly the catchment that is represented in the data set or product.  If required, this association shall be used to identify the unit wherein the hydrologic processes under study take place. 
 
@@ -146,7 +148,19 @@ The *representedCatchment* association defines the relationship to exactly the c
 | Requirement	| [/req/hy_catchment/catchmentrepresentation.representedcatchment](/req/hy_catchment/catchmentrepresentation.representedcatchment) | 
 
 ##### 7.4.2.2	Catchment
-The HY_Catchment class defines the catchment and its basic relationships such as catchmant hierarchy and network topology as described in section 6.3. HY_Catchment specializes the general HY_HydroFeature class; from this generalization it inherits *identifier*, *name* and *context* properties. HY_Catchment carries the associations: *containing Catchment*, *conjointCatchment*, *upstreamCatchment*,  *outflowNode*, *inflowNode*, *boundaryLine*.
+The HY_Catchment class defines the catchment and its basic relationships such as catchmant hierarchy (figure 21) and network topology (figure 22) as described in section 6.3. 
+
+**[\*\*\* ???, figures showing hierarchy and topology relationships at top of the section vs. figures showing the properties of each class in front of the tables listing the props \*\*\*]**
+
+![Figure 21: Catchment hierarchy (UML class diagram)](figs/fig21.png)
+Figure 21: Catchment hierarchy (UML class diagram)
+**[\*\*\*!!! Dave, fig21 updated, visible after merging PR \*\*\*]**
+
+![Figure 22: Catchment topology (UML class diagram)](figs/fig22.png)
+Figure 22: Catchment topology (UML class diagram)
+**[\*\*\*!!! Dave, fig22 updated, visible after merging PR \*\*\*]**
+
+HY_Catchment specializes the general HY_HydroFeature class; from this generalization it inherits *identifier*, *name* and *context* properties. HY_Catchment carries the associations: *containing Catchment*, *conjointCatchment*, *upperCatchment*,  *lowerCatchment*, *outflowNode*, *inflowNode*, *boundaryLine*.
 
 The **containingCatchment** association describes the nesting of catchments in a simple “is-in” containment hierarchy as typically used for high-order organization of management and reporting units. If required, this association shall be used to identify a catchment wherein the catchment is nested.
 
@@ -195,7 +209,6 @@ The **exorheicDrainage** association references an exorheic drained catchment. T
 | Requirement	| [/req/hy_catchment/catchmentaggregate.exorheicdrainage](/req/hy_catchment/catchmentaggregate.exorheicdrainage) | 
 | Requirement	| [/req/hy_catchment/catchmentaggregate.endorheicdrainage](/req/hy_catchment/catchmentaggregate.endorheicdrainage) | 
 
-
 ##### 7.4.2.4	DendriticCatchment
 The HY_DendriticCatchment class specializes the general HY_Catchment class with respect to a hydrologically discrete catchment, which is determined by a single common outlet to which all waters flow. This class denotes the catchment as the topological link between an inflow node and an outflow node allowing catchments to be connected in a dendritic network by upstream-downstream relationships, without knowing the complex hydrology between inflow and outflow nodes. This concept requires a stable identifier that is not merely a function of an arbitrary delineation of the surface, and that catchments are delineated within a simple tree hierarchy. The HY_DendriticCatchment class inherits from generalization the *containingCatchment*, *upstreamCatchment*, *conjointCatchment*, *outflowNode*, *inflowNode* and *boundaryLine* properties, and carries two properties: *code* and *encompassingCatchment*. 
 
@@ -225,7 +238,6 @@ The **envelopingCatchment** association relates to the interior catchment the ag
 | Dependency | [/req/hy_catchment/catchmentaggregate](/req/hy_catchment/catchmentaggregate) | 
 | Requirement	| [/req/hy_catchment/interiorcatchment.envelopingcatchment](/req/hy_catchment/interiorcatchment.envelopingcatchment) |
 
-
 ##### 7.4.2.6	Outfall
 The HY_Outfall class conceptualize the common outlet of a catchment as the topological node where catchments interact (see section 6.3.2). The outfall marks the place where the outflow node of a contributing catchment meets the inflow node of a receiving catchment. In terms of an outflow node, the outfall identifies the location to which upstream catchments contribute flow due to gravitational forces or pumping; in terms of an inflow node that location is identified from where catchments downstream receive flow collected upstream. 
 
@@ -251,7 +263,6 @@ The **relativePosition** association assigns to the outfall a position relative 
 | Requirement	| [/req/hy_catchment/outfall.summitline](/req/hy_catchment/outfall.summitline) |
 | Requirement	| [/req/hy_catchment/outfall.relativeposition](/req/hy_catchment/outfall.relativeposition) |
 
-
 ##### 7.4.2.7	Divide
 The HY_Divide class describes the boundary line separating adjacent catchments understood as a summit line on which several nodes may be located of which the outfall marks the lowest place. The HY_Divide class carries one association: *nodeOnDivide*. 
 
@@ -263,7 +274,6 @@ The **nodeOnDivide** association relates to the divide a node located on this. T
 | Name | HY_Divide | 
 | Dependency | [/req/hy_catchment/referencelocation](/req/hy_catchment/referencelocation) | 
 | Requirement	| [/req/hy_catchment/divide.nodeondivide](/req/hy_catchment/outfall.nodeondivide) |
-
 
 ##### 7.4.2.8	ReferenceLocation
 The HY_ReferenceLocation class describes a permanent, stable reference location such as a landmark fixed and referenced by coordinates.
@@ -291,9 +301,9 @@ Following the conceptual separation of a watercourse into water body and contain
 
 The hydrographic network model defines the major elements describing the hydrographic network and the relationships between them. A network water body may be segmented at vertical cross- or longitudinal sections in succeeding parts, each part in horizontal strata. A water body part associates a typical reference location, allowing to place another feature relative to this using the (linear) river reference system described in section 7.4.5. 
 
-![Figure XX: Hydrographic Network model (UML class diagram)](figs/figXX.png)
-Figure XX: Hydrographic Network model (UML class diagram)
-**[\*\*\*include class diagram\*\*\*]**
+![Figure 23: Hydrographic Network model (UML class diagram)](figs/fig23.png)
+Figure 23: Hydrographic Network model (UML class diagram)
+**[\*\*\*!!! Dave, fig23 uploaded, visible after merging PR \*\*\*]**
 
 ##### 7.4.3.1	HydrographicNetwork
 The HY_HydrographicNetwork class describes the aggregate of permanent and temporary bodies of flowing or stagnant water, that the cachment under study appears, and that may be visualized in map layers to cartographically represent this catchment. The HY_HydrographicNetwork class carries one association: *visualization*. 
@@ -323,7 +333,6 @@ The **upstreamSegment** and **downstreamSegment** associations relate to a water
 The **streamCrossSection** and **longitudinalCrossSection** associations relate to a water body (part) vertical sections confining them.  If required, this association shall be used to identify sections either at right angles to the main (average) direction of flow, or along the stream (centre) line.
 
 The **storage** association describes a zone in a stratified water body, part of the network, terms of storing water as a resource for future use. If required, this association shall be used to describe the reservoir used for storage, regulation and control of water resources. The **stratumType** attribute may be used to specify the type of the stratum or zone using a term from a controlled vocabulary. 
-
 | **Requirements Class** | [/req/hy_hydrographicnetwork/waterbody] (/req/hy_hydrographicnetwork/waterbody) |
 | --- | --- |
 | Target type	| Implementation Schema |
@@ -360,7 +369,6 @@ The **storage** association describes a zone in a stratified water body, part of
 | Requirement |	[/req/hy_hydrographicnetwork/waterbodystratum.stratumtype]  (/req/hy_hydrographicnetwork/waterbodystratum.stratumtype)
 | Requirement |	[/req/hy_hydrographicnetwork/waterbodystratum.storage]  (/req/hy_hydrographicnetwork/waterbodystratum.storage)
 
-
 ##### 7.4.3.3	Water Liquid Phase and Water Solid Phase 
 The HY_Water_LiquidPhase and HY_Water_SolidPhase define a simple concept of the accumulation of water in water bodies. This definition refers to the matter accumulated to a mass of water. In its liquid form water is considered accumulated in water bodies; in its solid phase water may be accumulated after melting, or as a layer of ice or snow on an open water body. The accumulation of water in the atmosphere or below the land surface, e.g. rain, sol moisture or groundwater, is not in scope of this standard, as well as the accumulation of snow and ice in glaciers which is subject of glaciology science. Informative packages desribing a simple model to take into account water from atmospheric origin, particularly from precipitation, or water occurring below the land surface without the complexity and detail of rainfall-runoff or groundwater models, are provided in Annex ... . **[\*\*\* insert reference \*\*\*]**. A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development. **[\*\*\* insert reference to GWML2\*\*\*]**
 
@@ -383,7 +391,6 @@ HY_Water_LiquidPhase carries the association *accumulatingWaterBody*; HY_Water_S
 | Dependency | [/req/hy_hydrographicnetwork/waterbodypart] (/req/hy_hydrographicnetwork/waterbodypart) | 
 | Requirement |	[/req/hy_hydrographicnetwork/watersolidphase.snowmelt]  (/req/hy_hydrographicnetwork/watersolidphase.snowmelt)
 | Requirement |	[/req/hy_hydrographicnetwork/watersolidphase.coveredwaterbody]  (/req/hy_hydrographicnetwork/watersolidphase.coveredwaterbody)
-
 
 ##### 7.4.3.4	Cross-Section amd Longitudinal Section
 The HY_CrossSection and HY_LongitudinalSection conceptualize the segmentation of a water body or a containing channel through vertical sections. Taking into account the conceptual separation of a watercourse (see section 6.5) into a water body and the containing channel, the cross section concept refers to both the cross section of a water body orthogonal to the direction of flow, and to the transversal bed profile of a channel; in the same way the longitudinal section concept refers to stream lines and to thalweg, shore or bank lines. 
@@ -410,9 +417,9 @@ The Storage model provides a concept to describe any water body, or a part/strat
 
 Special concepts of surface or underground reservoirs may be defined with application. The storage concept can be applied to surface and subsurface reservoirs, whereby underground reservoirs should not be confused with the groundwater reservoir which usually refers to the containing aquifer. A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development. **[\*\*\* insert reference to GWML2\*\*\*]** 
 
-![Figure XX: Storage model (UML class diagram)](figs/figXX.png)
-Figure XX: Storage model (UML class diagram)
-**[\*\*\*include class diagram\*\*\*]**
+![Figure 24: Storage model (UML class diagram)](figs/fig24.png)
+Figure 24: Storage model (UML class diagram)
+**[\*\*\*!!! Dave, fig24 uploaded, visible after merging PR \*\*\*]**
 
 The HY_Reservoir class specializes the water body, either natural or man-made, used for storage, regulation and control of water resources. The reservoir concept refers to a mass of water managed in zones between operating levels. Being a specialization of the HY_WaterBody class, the reservoir inherits from the general HY_HydroFeature class the name and context properies which allows to describe the resevoirs in a related context, e.g. flood control or water supply. 
 
@@ -426,14 +433,13 @@ HY_Reservoir associates to a reservoir a typical reference point: *barrierePoint
 | Dependency | [/req/hy_catchment/referencelocation] (/req/hy_catchment/referencelocation) | 
 | Requirement |	[/req/hy_storage/reservoir.barrierpoint]  (/req/hy_storage/reservoir.barrierpoint)
 
-
 #### 7.4.5	The River Positioning system
 
 The River Positioning model provides a simple model to place a feature of interest 'along a river' via topology and geometry (see section 6.4). River Positioning introduces the concept of Indirect Position where a position is determined on the linear representation of the catchment between the feature of interest and an identified reference location either as absolute distance, relative or interpolative to the referent. This concept uses a (linear) river reference system whose origin is set at the outfall of the catchment that corresponds to the feature of interest, and whose linear shape is given by the flowpath representing the catchment linking the outfall (origin) with the outfall marked by the reference location. Each catchment has its own reference system which can be combined as necessary using catchment topology. Applying the linear referencing along flowpath to a given network of catchments, a hydrographic or channel network can be thought as a sequence of reference  and newly placed outfalls, and may be visualised using an appropriate geometric representation. 
 
-![Figure XX: River Positioning System (UML class diagram)](figs/figXX.png)
-Figure XX: River Positioning System (UML class diagram)
-**[\*\*\*include class diagram\*\*\*]**
+![Figure 25: River Positioning System (UML class diagram)](figs/fig25.png)
+Figure 25: River Positioning System (UML class diagram)
+**[\*\*\*!!! Dave, fig25 uploaded, visible after merging PR \*\*\*]**
 
 The HY_IndirectPosition class provides a pattern to assign a position to a particular location relative to an identified reference location using a river referencing system based on catchment topology and (linear) catchment representation.  Understanding the newly placed location topologically as inflow node to a receiving (lower) catchment, and a (downstream) reference location as the identified outflow node of this catchment, the length of the flowpath representing this catchment between inflow and outflow determines the position; or vice versa the length of the flowpath representing a (upper) catchment which receives flow from an identified inflow node and contributes to the new place. This allows at the representation level to place a feature of interest interpolative on a flowpath between identified reference locations each understood as inflow or outflow nodes of a catchment, even if this is not explicitely delineated. 
 
@@ -481,9 +487,8 @@ The **locatedStart** association locates the origin of the river reference syste
 
 The Surface Hydro Feature application schema provides concepts of hydrologic features occuring on the land surface to enable contextually related information models to build relationships to the catchment model and the hydrographic network model described in this standard (sections 7.4.2 and 7.4.3).  An informative surface water  model defines the most common types of a water body accumulating water on the land surface, each special by origin, size, or the phase of the contained water, by the property to move, or their interaction with other bodies of water. Taking into account the conceptual separation of a watercourses (see section 6.5) into a water body and its containing channel, the concepts of surface water bodies are provided separately from those of the confining structures. The surface water confines model conceptualize common structures confining a water body on the land surface, including their aggregation into a network of channels, to formalise relationships to the hydrographic network model and the catchment model. The Surface Hydro Feature application schema contains the packages: HY_SurfaceWater and HY_SurfaceWaterConfines. 
 
-
-![Figure XX: The surface water and surface water confines models (UML class diagram)](figs/figXX.png)
-Figure XX: The surface water and surface water confines models (UML class diagram)
+![Figure 26: The surface water and surface water confines models (UML class diagram)](figs/fig26.png)
+Figure 26: The surface water and surface water confines models (UML class diagram)
 **[\*\*\*insert class diagram\*\*\*]**
 
 #### 7.5.1 The Surface Water model 
@@ -502,8 +507,8 @@ The HY_Lagoon subtype defines the existence of body of surfcae water, participat
 
 The HY_Estuary subtype defines the existence of body of surfcae water, participating in a hydrographic network, special due to branching and its interaction with the open sea.
 
-![Figure XX: Specialisations of water body with respect to surface water (UML class diagram)](figs/figXX.png)
-Figure XX: Specialisations of water body with respect to surface water (UML class diagram)
+![Figure 27: Specialisations of water body with respect to surface water (UML class diagram)](figs/fig27.png)
+Figure 27: Specialisations of water body with respect to surface water (UML class diagram)
 **[\*\*\*insert class diagram\*\*\*]**
 
 Each water body specialisation is understood to be part of the hydrographic network, and may generally consists of several parts, being stratified or used as reservoir. In other contexts other specialisations, or a typical segmentation may exist. Information models that not conforms to the types defined in this standard may use the general water body or water body part types.
