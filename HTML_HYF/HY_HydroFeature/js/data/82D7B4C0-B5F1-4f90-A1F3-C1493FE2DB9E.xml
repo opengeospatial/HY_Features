@@ -1,4 +1,4 @@
-tocTab[tocTab.length] = new Array("0.3:1", "", "HydroFeature", "EARoot/EA3/EA55.htm", "175.png", "3986", "0", "", "Diagram diagram0","{427FB8A0-C50C-4b8e-A912-472264390590}");
-tocTab[tocTab.length] = new Array("0.3:2", "", "«FeatureType» HY_HydroFeature", "EARoot/EA3/EA57.htm", "5.png", "9125", "0", "", "Class0","{A8ACD296-95A0-45f6-961E-4C92E4A95944}");
-tocTab[tocTab.length] = new Array("0.3:3", "", "«DataType» HY_HydroFeatureContext", "EARoot/EA3/EA58.htm", "5.png", "9126", "0", "", "Class0","{B0C30046-2D87-4ace-9849-5AC91504A59A}");
-tocTab[tocTab.length] = new Array("0.3:4", "", "«DataType» HY_HydroFeatureName", "EARoot/EA3/EA59.htm", "5.png", "9124", "0", "", "Class0","{7FFECA9F-7360-4f3a-B897-2837C173F456}");
+tocTab[tocTab.length] = new Array("0.2:1", "", "Named Hydro Feature", "EARoot/EA2/EA37.htm", "175.png", "4084", "0", "", "Diagram diagram0","{427FB8A0-C50C-4b8e-A912-472264390590}");
+tocTab[tocTab.length] = new Array("0.2:2", "", "«FeatureType» HY_HydroFeature", "EARoot/EA2/EA39.htm", "5.png", "9445", "0", "", "Class0","{A8ACD296-95A0-45f6-961E-4C92E4A95944}");
+tocTab[tocTab.length] = new Array("0.2:3", "", "«DataType» HY_HydroFeatureContext", "EARoot/EA2/EA40.htm", "5.png", "9446", "0", "", "Class0","{B0C30046-2D87-4ace-9849-5AC91504A59A}");
+tocTab[tocTab.length] = new Array("0.2:4", "", "«DataType» HY_HydroFeatureName", "EARoot/EA2/EA41.htm", "5.png", "9444", "0", "", "Class0","{7FFECA9F-7360-4f3a-B897-2837C173F456}");
