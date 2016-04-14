@@ -576,15 +576,15 @@ The **profileTransversal** and  **profileLongitudinal** associations relate to t
 
 ### 7.6 The Hydrometric Network application schema
 
-The Hydrometric Network schema (figure 29) defines a logical model to take into account a network of hydrometric stations as the specific appearance of the catchment of study in the perspective of an hydrologic observation, without the detail of the observation strategy. The core concept is that of a network of logically connected hydrological stations and observing posts situated in the catchment represented with its cartographic visualisation. This enables contextually related information models to build relationships to hydrologic features, finally to a represented catchment, as usually required in the context of environmental reporting or when interpreting, comprising and processing results of preceding observations into a new set of data. 
+The Hydrometric Network schema (figure 29) defines a logical model to take into account a network of hydrometric stations as a specific appearance of the catchment of study in the perspective of an hydrologic observation, without the detail of the observation strategy. The core concept is that of a network of logically connected hydrometric stations situated in the catchment that is represented with the cartographic visualisation of the network. This enables contextually related information models to relate monitoring stations and observing posts to the hydrologic features, finally to the represented catchment, as usually required in the context of environmental reporting or when interpreting, comprising and processing results of preceding observations into a new set of data. 
 
-![Figure 29: Channel network model (UML class diagram)](figs/fig29.png)
-Figure 29: Channel network model (UML class diagram)
+![Figure 29: Hydrometric network model (UML class diagram)](figs/fig29.png)
+Figure 29: Hydrometric network model (UML class diagram)
 **[\*\*\*insert class diagram\*\*\*]**
 
-This schema introduces the concept of position on river which allows an arbitrary hydrologic station, even if free from any position, to be located in the network of catchments, to establish upstream-downstream relationships, to assign a position releative to a reference location, or to place another feature of interest relative to a network station using the (linear) river reference system described in section 7.4.5. 
+The hydrometric network model introduces the concept of 'position on river' which allows an arbitrary hydrologic station, even free from position, to be located in the network of catchments to establish upstream-downstream relationships, and to assign a position releative to a reference location, or to place another feature of interest relative to a network station using the (linear) river reference system described in section 7.4.5. 
 
-The HY_HydrometricNetwork class defines the network aggregate consisting of hydrometric features which may be separated into several hydrometric feature parts. To support the concept of a virtual connectivity, a hydrometric feature associate typical reference points which can be located topologically as outfall of a corresponding catchment. HY_HydrometricFeature and HY_HydrometricFeaturePart associate the aggregate in which they participate. HY_HydrometricFeature associates a *positionOnRiver* . 
+The HY_HydrometricNetwork class defines the network aggregate consisting of hydrometric features which may be separated into several hydrometric feature parts. To support the concept of a virtual connectivity, a hydrometric feature associate typical reference points which can be located topologically as outfall of a corresponding catchment. HY_HydrometricFeature and HY_HydrometricFeaturePart classes associate the aggregate in which they participate. HY_HydrometricFeature associates a *positionOnRiver*. 
 
 | **Requirements Class** | [/req/hy_hydrometricnetwork/hydrometricnetwork] (/req/hy_hydrometricnetwork/hydrometricnetwork) |
 | --- | --- |
