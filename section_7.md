@@ -2,7 +2,7 @@
 
 ### 7.1 The HY_Features conceptual model
 
-This standard defines the HY_Features conceptual model as a standard for the identification and description of hydrologic features reflecting both hydrologic significance as well as topological connectivity of hydrologic features by defining the fundamental relationships between the major components of the hydrosphere. Core concepts are that of multiple catchment representation, of catchment hierarchy and topology, of aggregation and segmentation of watercourses including a simple model for the positioning of features along a linear flowpath using a specific linear referencing system. A utilities package provide common concepts required by the hydrology model that are not hydrology-specific. Module identification aims to simplify the scope of each part of the conceptual model in order to improve its accessibility and to provide scope for testing. It is intended that implementations need to consider only those parts of the common model implicated by its scope. Table 1 lists the applications schema, the leaf packages included and the concepts reflected therein. 
+This standard defines the HY_Features conceptual model as a standard for the identification and description of hydrologic features reflecting both hydrologic significance as well as topological connectivity of hydrologic features by defining the fundamental relationships between the major components of the hydrosphere. Core concepts are that of multiple catchment representation, of catchment hierarchy and topology, of aggregation and segmentation of watercourses, as well as a simple model for the positioning of features along a linear flowpath using a specific river reference system. A utilities package provide common concepts required by the hydrology model that are not hydrology-specific. Module identification aims to simplify the scope of each part of the conceptual model in order to improve its accessibility and to provide scope for testing. It is intended that implementations need to consider only those parts of the common model implicated by its scope. Table 1 lists the applications schema, the leaf packages included and the concepts reflected therein. 
 
 Table 1: HY_Features modules, packages and concepts reflected
 
@@ -15,13 +15,12 @@ Table 1: HY_Features modules, packages and concepts reflected
 | HY_HydrometricNetwork | hydrometric network as an aggregate of logically connected hydrometric features located on or along a hydrologic feature | --- |
 | HY_Utilities | common concepts required by the domain model that are not hydrology-specific such as naming and contextual relations | --- |
 
-The conceptual model is expressed in the Geographic Information Conceptual Schema Language (ISO 19103:2005) based on the Unified Modeling Language (UML). The organization into packages and package dependencies are shown in Figure 16. 
+The conceptual model is expressed in the Geographic Information Conceptual Schema Language (ISO 19103:2005) based on the Unified Modeling Language (UML). The organization into packages and package dependencies are shown in Figure 16. The following sections describe requirements classes for each application schema, whereby each feature addressed in the requirements shall be understood as an instance of the GF_FeatureType (aka FeatureType) «metaclass». 
 
 ![Figure 16: HY_Features modules and packages](figs/fig16.png)  
 Figure 16: HY_Features modules and packages  
 **[\*\*\*!!! Dave, fig16 updated, visible after merging PR \*\*\*]**
 
-The following sections describe requirements classes for each application schema, except for the informative packages concerning atmospheric hydrologic features and subsurface hydrologic features, outlined in Annex AAA. **[\*\*\* insert reference \*\*\*]**. A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development. **[\*\*\* insert reference to GWML2\*\*\*]**
 
 ### 7.2	The HY_Features conceptual conformance (mapping)
 
@@ -31,7 +30,7 @@ The HY_Features conceptual model provides the basis for determining whether two 
 
 Disparate systems describing hydrologic features may be mapped to the equivalent HY_Features definitions to disambiguate the local usage of terminology and specific implementation choices made. Equivalence here aims to the compatibility of concepts, i.e. the logical similarity which is usually an assessment based on text analyses whereby the referenced concept is considered to be the "lowest common ancestor" of the implementation concept in such a way that the essential properties are met but may be specialized in the relevant context.
 
-An implementation schema conforming to HY_Features shall provide a formal mapping from one or more Feature Types present in the implementation schema to Feature Types defined in the HY_Features specification, including all mandatory properties defined by the realized HY_Features concept. Default values to be assumed must be specified in this mapping. Note that use of a formal encoding of HY_Features, in conjunction with conformance to */req/hy_features_conceptual_model/encoding* constitutes such a formal mapping. 
+An implementation schema conforming to HY_Features shall provide a formal mapping from one or more Feature Types present in the implementation schema to Feature Types defined in this standard specification, including all mandatory properties defined by the realized HY_Features concept. Default values to be assumed must be specified in this mapping. Note that use of a formal encoding of HY_Features, in conjunction with conformance to */req/hy_features_conceptual_model/encoding* constitutes such a formal mapping. **[ \*\*\* ?? remove last sentence, since GML encoding is not longer in scope \*\*\*]** 
 
 | **Requirements Class** | [/req/hy_features_conceptual_model](/req/hy_features_conceptual_model) |
 | --- | --- |
@@ -44,7 +43,7 @@ An implementation schema conforming to HY_Features shall provide a formal mappin
 
 Conformance to the HY_Features model with respect to the data refers to the encoding of the HY_Features concepts.  Designed conform to the General Feature Model - GFM (ISO19109:2006), the conceptual model defines hydrologic features representing the general “FeatureType” as of GFM. Consequently, each feature addressed in the requirements shall be understood as an instance of the GF_FeatureType (aka FeatureType) «metaclass». 
 
-An implementation schema using Feature Types defined using the namespace of a formal encoding of HY_Features shall conform to the requirements specified by that encoding, as defined by the relevant part of HY_Features specification (e.g. HY_Features Part 2: GML encoding) 
+An implementation schema using Feature Types defined using the namespace of a formal encoding of HY_Features shall conform to the requirements specified by that encoding, as defined by the relevant part of HY_Features specification (e.g. HY_Features Part 2: GML encoding) **[(\*\*\* !!! Rob: please review, if still useable to describe conceptual conformance target \*\*\*]** - 
 
 | **Requirements Class** | [/req/hy_features_conceptual_model](/req/hy_features_conceptual_model) |
 | --- | --- |
@@ -52,7 +51,6 @@ An implementation schema using Feature Types defined using the namespace of a fo
 | Name | HY_Features Conceptual Conformance |
 | Dependency | [/iso/19109/] (https://inspire-twg.jrc.it/svn/iso) |
 | Requirement | [/req/ hy_features_conceptual_model/encoding] (/req/ hy_features_conceptual_model/encoding) |
-**[(\*\*\* !!! Rob: please review, if still applicable to describe conceptual conformance target \*\*\*]** - 
 
 Feature **identifiers** present in data encoded using a HY\_Features conformant implementation schema shall be identical wherever the same Feature instance is being encoded or referenced. This specifically applies to data available in multiple related datasets or exposed by multiple service interfaces.
 
@@ -74,15 +72,19 @@ Regarding **completeness**, all mandatory properties defined by a Feature Type d
 
 ### 7.4 The Hydro Feature application schema
 
-The Hydro Feature application schema defines the fundamental properties and relationships between features governed by the physical laws of hydrology. The core concept is that of a catchment and its multiple representation in the real world (see section 6.2 of this standard). Catchment area, catchment boundary, and linear flowpath as well as a cartographic visualisation are defined to reflect the most concepts in use to represent of catchment. 
-
-The Hydro Feature schema conceptualize the abstraction of the complex Hydrology phenomenon through definition of feature types each describing separate aspects of the hydrology phenomenon. This includes related phenomena that participate in hydrologic systems but have specific characteristics. Figure 18 shows the special features types describing separate aspects of the hydrology phenomenon. Given the complexity of the domain, and the nature of real-world physical phenomena, for any given feature further specialisation as well as a wide range of possible characteristics, states and representations may be relevant. 
+The Hydro Feature schema conceptualize the abstraction of the complex Hydrology phenomenon through definition of domain-specific feature instances of the general Feature type, each describing separate aspects of the hydrology phenomenon. This includes related phenomena that participate in hydrologic systems but have specific characteristics. Figure 18 shows the special features types describing separate aspects of the hydrology phenomenon. Given the complexity of the domain, and the nature of real-world physical phenomena, for any given feature further specialisations may be relevant. 
 
 ![Figure 17: Feature types describing separate aspects of the hydrology phenomenon (UML class diagram)](figs/fig17.png)
 Figure 17: Feature types describing separate aspects of the hydrology phenomenon (UML class diagram)
 **[\*\*\*!!! Dave, fig17 updated, visible after merging PR \*\*\*]**
 
-The Hydro Feature schema provides a model to identify a hydrologic feature, and thus the opportunity to connect disparate representations. By making relationships between identified features expressible in a standard form, this allows the hydrosphere to be divided into a hierarchy of hydrologically connected catchments and related phenomena contained therein, irrespective of the various representations available for these phenomena. The Hydro Feature schema contains five leaf packages: HY_NamedFeature, HY_Catchment, HY_HydrographicNetwork, HY_RiverPositioning, HY_Storage.
+The Hydro Feature schema provides a model to identify hydrologic features by topology and hydrologic significance, expressed in typical relationships, and propose a pattern to assign to hydrologically determines features names given in international and multilingual contexts. Making the relationships between identified features expressible in a standard form allows the hydrosphere to be divided into a hierarchy of hydrologically connected catchments, and the appearing network phenomena to be visualised, irrespective of the various spatial or temporal representations available for these phenomena. 
+
+The Hydro Feature schema models the multiple representation of a catchment unit of study shared across sub-domains (see section 6.2 of this standard), even if a particular representation refer only to one or the other. Catchment area, catchment boundary, and linear flowpath as well as the cartographic visualisation of different network views are defined to reflect the most common concepts in use to represent of catchment. 
+
+The Hydro Feature schema provides a model for the positioning of features 'on river' referencing an identified location, and propose a (linear) river reference system based on catchment topology and linear geometric representation of a catchment. The referencing along the linear flowpath in a given network of catchments, supports to build hydrographic or channel networks portraying this catchment, and to   visualise these network views using an appropriate geometric representation. 
+
+The Hydro Feature schema contains five leaf packages: HY_NamedFeature, HY_Catchment, HY_HydrographicNetwork, HY_RiverPositioning, HY_Storage. Informative packages outlining atmospheric hydrologic features and subsurface hydrologic features are provided in Annex AAA  as a simple means to take such features in account in respect of the hydrosphere complex. A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development. **[\*\*\* insert reference to GWML2\*\*\*]**
 
 | **Requirements Class** | [/req/hy_abstract/*] (/req/hy_abstract/*) |
 | --- | --- |
@@ -393,7 +395,7 @@ HY_Water_LiquidPhase carries the association *accumulatingWaterBody*; HY_Water_S
 | Requirement |	[/req/hy_hydrographicnetwork/watersolidphase.coveredwaterbody]  (/req/hy_hydrographicnetwork/watersolidphase.coveredwaterbody)
 
 ##### 7.4.3.4	Cross-Section and Longitudinal Section
-The HY_CrossSection and HY_LongitudinalSection conceptualize the segmentation of a water body or a containing channel through vertical sections. Taking into account the conceptual separation of a watercourse (see section 6.5) into a water body and the containing channel, the cross section concept refers to both the cross section of a water body orthogonal to the direction of flow, and to the transversal bed profile of a channel; in the same way the longitudinal section concept refers to stream lines and to thalweg, shore or bank lines. 
+The HY_CrossSection and HY_LongitudinalSection conceptualize the segmentation of a water body or a containing channel through vertical sections. Taking into account the conceptual separation of a watercourse (see section 6.5) into a water body and the containing channel, the cross section concept refers to both the cross section of a water body orthogonal to the direction of flow, and to the transversal profile of a channel; the longitudinal section concept refers to centre, stream or contour lines such a thalweg, shore or bank lines. 
  
 HY_CrossSection and HY_LongitudinalSection each associate to a vertical section typical reference points: *crossSectionPoint* and *longitudalinalSectionPoint*. Located in the network of catchments, vertical sections allow to place a feature of interest relative to this using the (linear) river reference system described in section 7.4.5. If required, these associations shall be used to identify at a vertical section the permanent reference location located in the network of catchments as outfall. 
 
@@ -435,7 +437,7 @@ HY_Reservoir associates to a reservoir a typical reference point: *barrierePoint
 
 #### 7.4.5	The River Positioning system
 
-The River Positioning model (figure 25) provides a simple model to place a feature of interest 'along a river' via topology and geometry (see section 6.4). River Positioning introduces the concept of Indirect Position where a position is determined on the linear representation of the catchment between the feature of interest and an identified reference location either as absolute distance, relative or interpolative to the referent. This concept uses a (linear) river reference system whose origin is set at the outfall of the catchment that corresponds to the feature of interest, and whose linear shape is given by the flowpath representing the catchment linking the outfall (origin) with the outfall marked by the reference location. Each catchment has its own reference system which can be combined as necessary using catchment topology. Applying the linear referencing along flowpath to a given network of catchments, a hydrographic or channel network can be thought as a sequence of reference  and newly placed outfalls, and may be visualised using an appropriate geometric representation. 
+The River Positioning model (figure 25) provides a simple model to place a feature of interest 'along a river' via topology and geometry (see section 6.4). River Positioning introduces the concept of Indirect Position where a position is determined on the linear representation of the catchment linking the feature of interest and an identified reference location either as absolute distance, relative or interpolative to the referent. This concept uses a (linear) river reference system whose origin is set at the outfall of the catchment that corresponds to the feature of interest, and whose linear shape is given by the flowpath representing the catchment linking the outfall (origin) with the outfall marked by the reference location. Each catchment has its own reference system which can be combined as necessary using catchment topology. Applying the linear referencing along flowpath to a given network of catchments, a hydrographic or channel network can be thought as a sequence of catchments visualised using an appropriate geometric representation. 
 
 ![Figure 25: River Positioning System (UML class diagram)](figs/fig25.png)
 Figure 25: River Positioning System (UML class diagram)
@@ -542,31 +544,71 @@ The **visualisation** association relates to the channel network its cartographi
 | Requirement |	[/req/hy_channelnetwork/channelnetwork.drainagepattern]  (/req/hy_channelnetwork/channelnetwork.drainagepattern)
 
 ##### 7.5.2.2	Channel and channel part
-The HY_Channel and HY_ChannelPart class define a channel, or part of this between vertical sections, participating in the channel network. The channel concept refers to natural or man-made channels through or along which water may flow, or not.  
+The HY_Channel and HY_ChannelPart class define a channel, or part of this between vertical sections, participating in the channel network. The concept refers to natural or man-made, open or closed channels through or along which water may flow, or not.  
 
-HY_HY_Channel and HY_ChannelPart each associate the aggregate in which they participate. The *channelNetwork* association relates to a network channel the channel network, and *channelPart* to a channel its parts. If required, these associations shall be used to identify the aggregates the channel and the channel part are parts of. HY_ChannelPart carries three properties: *containedWaterBody*, *bedProfileTransversal*,  *bedProfileLongitudinal*. 
+HY_Channel and HY_ChannelPart each associate the aggregate in which they participate. The *channelNetwork* association relates to a network channel the channel network, and *channelPart* to a channel its parts. If required, these associations shall be used to identify the aggregates the channel and the channel part are parts of. HY_ChannelPart carries three properties: *containedWaterBody*, *bedProfileTransversal*,  *bedProfileLongitudinal*. 
 
 The **containedWaterBody** association relates to the channel part a water body part. If required, this association shall be used to identify the water body part (mass of water) contained in the channel part. 
 
-The **bedProfileTransversal* and  **bedProfileLongitudinal** associations relate to a transversal or longitudinal bed profile. If required, this association shall be used to identify the vertical section either at right angles to the main (average) direction of flow, or along its centre line. 
+The **profileTransversal** and  **profileLongitudinal** associations relate to the channel the separating transversal or longitudinal profile. If required, this association shall be used to identify the vertical section either at right angles to the main (average) direction of flow, or along a line. 
 
 | **Requirements Class** | [/req/hy_channelnetwork/channel] (/req/hy_channelnetwork/channel) |
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY_Channel |
 | Dependency | [[/req/hy_channelnetwork/channelnetwork] (/req/hy_channelnetwork/channelnetwork) |
+| Requirement |	[/req/hy_channelnetwork/channel.channelnetwork]  (/req/hy_channelnetwork/channel.channelnetwork)
+
+| **Requirements Class** | [/req/hy_channelnetwork/channelpart] (/req/hy_channelnetwork/channelpart) |
+| --- | --- |
+| Target type	| Implementation Schema |
+| Name | HY_ChannelPart |
+| Dependency | [/req/hy_channelnetwork/channel] (/req/hy_channelnetwork/channel) |
 | Dependency | [/req/hy_hydrographicnetwork/waterbodypart] (/req/hy_hydrographicnetwork/waterbodypart) | 
 | Dependency | [/req/hy_hydrographicnetwork/crosssection] (/req/hy_hydrographicnetwork/crosssection) | 
 | Dependency | [/req/hy_hydrographicnetwork/longitudinalsection] (/req/hy_hydrographicnetwork/longitudinalsection) | 
-| Requirement |	[/req/hy_channelnetwork/channel.containedwaterbody]  (/req/hy_channelnetwork/channelnetwork.containedwaterbody)
-| Requirement |	[/req/hy_channelnetwork/channel.bedprofiletransversal]  (/req/hy_channelnetwork/channelnetwork.bedprofiletransversal)
-| Requirement |	[/req/hy_channelnetwork/channel.bedprofilelongitudinal]  (/req/hy_channelnetwork/channelnetwork.bedprofilelongitudinal)
+| Requirement |	[/req/hy_channelnetwork/channelpart.channel]  (/req/hy_channelnetwork/channelpart.channel)
+| Requirement |	[/req/hy_channelnetwork/channelpart.containedwaterbody]  (/req/hy_channelnetwork/channelpart.containedwaterbody)
+| Requirement |	[/req/hy_channelnetwork/channelpart.profiletransversal]  (/req/hy_channelnetwork/channelpart.profiletransversal)
+| Requirement |	[/req/hy_channelnetwork/channelpart.profilelongitudinal]  (/req/hy_channelnetwork/channelpart.profilelongitudinal)
 
-##### 7.5.2.2	River bed and river bank
-
-**[\*\*\* I intend to remove both classes from the model, to not pre-define issues that are subject of specific channel feature model, maybe  RiverML (orphans from the initial model version as no riverML version was 'looming'), since there are no relationships to the catchment and hydrographic network model, only intern through confining the channel part, this does not affect the core model\*\*\*]**
+**[\*\*\* I intend to remove RiverBed and RiverBank classes from the model, to not pre-define issues that are subject of specific channel feature model, maybe  RiverML (orphans from the initial model version as no riverML version was 'looming'), since there are no relationships to the catchment and hydrographic network model, only intern through confining the channel part, this does not affect the core model\*\*\*]**
 
 ### 7.6 The Hydrometric Network application schema
+
+The Hydrometric Network schema (figure 29) defines a logical model to take into account a network of hydrometric stations as the specific appearance of the catchment of study in the perspective of an hydrologic observation, without the detail of the observation strategy. The core concept is that of a network of logically connected hydrological stations and observing posts situated in the catchment represented with its cartographic visualisation. This enables contextually related information models to build relationships to hydrologic features, finally to a represented catchment, as usually required in the context of environmental reporting or when interpreting, comprising and processing results of preceding observations into a new set of data. 
+
+![Figure 29: Channel network model (UML class diagram)](figs/fig29.png)
+Figure 29: Channel network model (UML class diagram)
+**[\*\*\*insert class diagram\*\*\*]**
+
+This schema introduces the concept of position on river which allows an arbitrary hydrologic station, even if free from any position, to be located in the network of catchments, to establish upstream-downstream relationships, to assign a position releative to a reference location, or to place another feature of interest relative to a network station using the (linear) river reference system described in section 7.4.5. 
+
+The HY_HydrometricNetwork class defines the network aggregate consisting of hydrometric features which may be separated into several hydrometric feature parts. To support the concept of a virtual connectivity, a hydrometric feature associate typical reference points which can be located topologically as outfall of a corresponding catchment. HY_HydrometricFeature and HY_HydrometricFeaturePart associate the aggregate in which they participate. HY_HydrometricFeature associates a *positionOnRiver* . 
+
+| **Requirements Class** | [/req/hy_hydrometricnetwork/hydrometricnetwork] (/req/hy_hydrometricnetwork/hydrometricnetwork) |
+| --- | --- |
+| Target type	| Implementation Schema |
+| Name | HY_HydrometricNetwork |
+| Dependency | [/req/hy_catchment/networkcartography] (/req/hy_catchment/networkcartography) | 
+| Requirement |	[/req/hy_hydrometricnetwork/hydrometricnetwork.visualisation]  (/req/hy_hydrometricnetwork/hydrometricnetwork.visualisation)| 
+
+| **Requirements Class** | [/req/hy_hydrometricnetwork/hydrometricfeature] (/req/hy_hydrometricnetwork/hydrometricfeature) |
+| --- | --- |
+| Target type	| Implementation Schema |
+| Name | HY_HydrometricFeature |
+| Dependency | [/req/hy_hydrometricnetwork/hydrometricnetwork] (/req/hy_hydrometricnetwork/hydrometricnetwork) |
+| Dependency | [/req/hy_catchment/referencelocation] (/req/hy_catchment/referencelocation) | 
+| Requirement |	[/req/hy_hydrometricnetwork/hydrometricfeature.hydrometricnetwork]  (/req/hy_hydrometricnetwork/hydrometricfeature.hydrometricnetwork)| 
+| Requirement |	[/req/hy_hydrometricnetwork/hydrometricfeature.positiononriver]  (/req/hy_hydrometricnetwork/hydrometricfeature.positiononriver)| 
+
+| **Requirements Class** | [/req/hy_hydrometricnetwork/hydrometricfeaturepart] (/req/hy_hydrometricnetwork/hydrometricfeaturepart) |
+| --- | --- |
+| Target type	| Implementation Schema |
+| Name | HY_HydrometricFeaturePart |
+| Dependency | [/req/hy_hydrometricnetwork/hydrometricfeature] (/req/hy_hydrometricnetwork/hydrometricfeature) |
+| Requirement |	[/req/hy_hydrometricnetwork/hydrometricfeaturepart.hydrometricfeature]  (/req/hy_hydrometricnetwork/hydrometricfeaturepart.hydrometricfeature)| 
+
 
 
 
