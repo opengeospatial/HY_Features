@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_Catchment::HY_DendriticCatchment</title>
+<title>HY_Catchment::HY_InteriorCatchment</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,11 +34,11 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_DendriticCatchment", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_InteriorCatchment", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">25/06/2010 08:54:19</td>
+			<td width="85%" class="ObjectDetailsValue">07/03/2016 09:33:18</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
@@ -87,76 +87,21 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{6B1D4D62-941B-4919-9DEF-69C6198591A7}</td>
+			<td class="ObjectDetailsValue">{E19DBC78-21C6-46af-A474-647E243FD1DA}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, Flowpath represents DendriticCatchment, Catchment hierarchy, Network represents DendriticCatchment, <a href="../EA7.htm">Hydro Feature Special</a>, <a href="../EA5.htm">overallOverview</a>, <a href="EA22.htm">Catchment Hierarchy</a>, <a href="EA16.htm">Catchment Model</a></td>
+			<td class="ObjectDetailsValue"><a href="../EA5.htm">Hydro Feature Special</a>, <a href="../EA3.htm">overallOverview</a>, <a href="EA20.htm">Catchment Hierarchy</a>, <a href="EA14.htm">Catchment Model</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">special catchment wherein all waters flow to a single common outlet. A dendritic catchment is permanently connected to others in a dendritic network.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This class denotes the catchment as the link between an inflow node and an outflow node which allows to describe the dendritic network by upstream-downstream relationships. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This concept requires a stable identifier that is not merely a function of an arbitrary delineation of the surface, and that catchments are delineated within a tree hierarchy. More complex structures may be described as representations using HY_Network representation pattern.&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">special catchment wherein all waters are collected endorheic, and not connected to other catchments. It may be surrounded by enveloping catchments to which it may contribute depending on the flow conditions. </div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
-			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
 			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
 			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
 			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
-<div class="ItemBody" id="AttributesTable">
-	<table border="0" cellspacing="0" cellpadding="0" class="Table">
-		<tr>
-			<td width="100%" class="TableHeading">Attribute</td>
-		</tr>
-						<tr>
-				<td width="100%" class="TableRow">
-					<i>Public ScopedName</i><br /><strong>&nbsp;&nbsp;code</strong>
-				</td>
-			</tr>
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes25')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes25" border="0" />Details:
-					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
-					
-						<tr id="DetailsImageAttributes25_00" style="display: none;">
-							<td width="75"><i>Alias:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes25_01" style="display: none;">
-							<td width="75"><i>Initial:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes25_02" style="display: none;">
-							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes25_03" style="display: none;">
-							<td width="75"><i>Ordered: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes25_03" style="display: none;">
-							<td width="75"><i>Range: </i></td>
-							<td>Range:0 to 1</td>
-						</tr>
-					</table>
-					
-					sequenceNumber=1<br>
-						<div class="ObjectDetailsNotes"><table>
-	<tr>
-		<td valign="top">
-			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
-		</td>
-		<td>
-			unique identifier of the catchment in a classification or coding system.
-		</td>
-	</tr>
-</table></div>
-
-						
-				</td>
-			</tr>
-	</table>
-</div>
 		<div class="ItemBody" id="AssociationsToTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
@@ -166,24 +111,23 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA24.htm">«FeatureType» HY_CatchmentAggregate</a><br />
+						<a href="EA22.htm">«FeatureType» HY_CatchmentAggregate</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> exorheicDrainage<br />
-						sub catchment which is drained exorheic.
+						<strong>Name:</strong> endorheicDrainage<br />
+						sub catchment which is drained endorheic.
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> encompassingCatchment<br />
-						catchment encompassing one or more exorheic drained sub-catchments.	
+						<strong>Name:</strong> envelopingCatchment<br />
+						catchment enveloping one or more endorheic drained sub-catchments.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink26" onclick="parent.toggleDiv('detailsDIVLink26','DetailsImageLink26')" />Details:
-							<div id="detailsDIVLink26" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">upstream containment hierarchy of catchments and sub-catchments</div>
-
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink34" onclick="parent.toggleDiv('detailsDIVLink34','DetailsImageLink34')" />Details:
+							<div id="detailsDIVLink34" class="DetailsDiv" >
+							&nbsp;
 							</div>
 						</div>
 					</td>
@@ -199,28 +143,14 @@ function nameClassifier(name, separator)
 					<td width="10%" class="TableHeading">Status</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">outflowNode:1</td>
+					<td width="80%" class="TableRow">outflowNode:0</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints27" onclick="parent.toggleDiv('detailsDIVConstraints27','DetailsImageConstraints27')" />Details:
-							<div id="detailsDIVConstraints27" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="80%" class="TableRow">outflowNode.receivingCatchment:0..1</td>
-					<td width="10%" class="TableRow">Invariant</td>
-					<td width="10%" class="TableRow">Approved</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints28" onclick="parent.toggleDiv('detailsDIVConstraints28','DetailsImageConstraints28')" />Details:
-							<div id="detailsDIVConstraints28" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints35" onclick="parent.toggleDiv('detailsDIVConstraints35','DetailsImageConstraints35')" />Details:
+							<div id="detailsDIVConstraints35" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
@@ -238,15 +168,15 @@ function nameClassifier(name, separator)
 					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA24.htm">«FeatureType» HY_CatchmentAggregate</a></td>
-					<td width="15%" class="TableRow" valign="top">Class</td>
-					<td width="15%" class="TableRow" valign="top">Weak</td>
-					<td width="40%" class="TableRow" valign="top">upstream containment hierarchy of catchments and sub-catchments</td>
-				</tr>
-				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA25.htm">«FeatureType» HY_Catchment</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA23.htm">«FeatureType» HY_Catchment</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA22.htm">«FeatureType» HY_CatchmentAggregate</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Weak</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
 				</tr>
 

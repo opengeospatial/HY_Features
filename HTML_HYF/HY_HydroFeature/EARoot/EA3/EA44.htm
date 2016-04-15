@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_HydrographicNetwork::HY_CrossSection</title>
+<title>HY_HydrographicNetwork::HY_LongitudinalSection</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,11 +34,11 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_CrossSection", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_LongitudinalSection", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">06/09/2010 10:50:20</td>
+			<td width="85%" class="ObjectDetailsValue">17/06/2013 21:23:17</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
@@ -51,7 +51,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
-			<td class="ObjectDetailsValue">dornblut</td>
+			<td class="ObjectDetailsValue">iche</td>
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
@@ -87,19 +87,20 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{3E6996FB-87DB-4e41-BA59-CD0A304CFE24}</td>
+			<td class="ObjectDetailsValue">{4DBF5849-2C0B-4c93-8BCE-B182364F6078}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="../EA5.htm">overallOverview</a>, <a href="EA42.htm">Hydrographic Network</a></td>
+			<td class="ObjectDetailsValue">ChannelNetwork, <a href="../EA3.htm">overallOverview</a>, <a href="EA40.htm">Hydrographic Network</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">vertical section of an object at right angles to the main (average) direction of flow. - the geometric representation (plane or space curves, polygon) may vary with application and needs to be defined there.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Taking into account the separation of a watercourse into water body and confining structure, this concept applies to both the (blue) stream cross section at right angles to the main (average) direction of flow, as well as to the transversal bed profile (shape) of a stream bed in a vertical plane.&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">vertical section of an object along its centre line. the geometric representation (plane or space curves, polygon) may vary with application and needs to be defined there.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Taking into account the separation of a watercourse into water body and confining structure, this concept applies to the (blue) stream line (envelope of the tangents to the instantaneous flow direction at a given time) or stream centre line (connecting the successive centres of cross sections of a stream) as well as to the line following the deepest part of channel (thalweg) and the line of intersection of a water body with the rising land (shore/bank line).&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
 			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
 		</ul>
 		<div class="ItemBody" id="AssociationsToTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
@@ -110,7 +111,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA1/EA35.htm">«DataType» HY_ReferenceLocation</a><br />
+						<a href="../EA1/EA33.htm">«FeatureType» HY_ReferenceLocation</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -118,15 +119,15 @@ function nameClassifier(name, separator)
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> crossSectionPoint<br />
-						point on the cross section referenced by coordinates.	
+						<strong>Name:</strong> longitudinalSectionPoint<br />
+						point on the longitudinal section referenced by coordinates,	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink86" onclick="parent.toggleDiv('detailsDIVLink86','DetailsImageLink86')" />Details:
-							<div id="detailsDIVLink86" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">point located on the cross-section. </div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink90" onclick="parent.toggleDiv('detailsDIVLink90','DetailsImageLink90')" />Details:
+							<div id="detailsDIVLink90" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">point on a longitudinal section used as reference point.</div>
 
 							</div>
 						</div>
@@ -144,7 +145,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA50.htm">«FeatureType» HY_WaterBodyPart</a><br />
+						<a href="EA48.htm">«FeatureType» HY_WaterBodyPart</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -152,16 +153,16 @@ function nameClassifier(name, separator)
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> streamCrossSection<br />
-						vertical section of a stream at right angles to the main (average) direction of flow.
-(Source: cross section. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0276EN.HTM)	
+						<strong>Name:</strong> streamLongitudinalSection<br />
+						vertical section of (a stream) along a channel at its centre line, e.g. stream centre line.
+(Source: longitudinal section. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0753EN.HTM)	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink87" onclick="parent.toggleDiv('detailsDIVLink87','DetailsImageLink87')" />Details:
-							<div id="detailsDIVLink87" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">vertical section of the water body segment in transversal direction.</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink91" onclick="parent.toggleDiv('detailsDIVLink91','DetailsImageLink91')" />Details:
+							<div id="detailsDIVLink91" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">vertical section of the water body segment in longitudinal direction.</div>
 
 							</div>
 						</div>
@@ -170,7 +171,67 @@ function nameClassifier(name, separator)
 
 			</table>
 		</div>
-	</div>
+<div class="ItemBody" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="50%" class="TableHeading">Tag</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">byValuePropertyType</td>
+				<td width="50%" class="TableRow" valign="top">false</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario92" onclick="parent.toggleDiv('detailsDIVScenario92','DetailsImageScenario92')" />Details:
+						<div id="detailsDIVScenario92" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Create a property type that requires that the instance is encoded inline (applies to ISO 19136:2007 encoding rule). Always set to false in INSPIRE.<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">isCollection</td>
+				<td width="50%" class="TableRow" valign="top">false</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario93" onclick="parent.toggleDiv('detailsDIVScenario93','DetailsImageScenario93')" />Details:
+						<div id="detailsDIVScenario93" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Identifies the feature type as a feature collection.<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">noPropertyType</td>
+				<td width="50%" class="TableRow" valign="top">false</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario94" onclick="parent.toggleDiv('detailsDIVScenario94','DetailsImageScenario94')" />Details:
+						<div id="detailsDIVScenario94" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Surpress creation of a standard property type that supports inline or by-reference encoding (applies to ISO 19136:2007 encoding rule). Always set to false in INSPIRE.<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">xsdEncodingRule</td>
+				<td width="50%" class="TableRow" valign="top">iso19136_2007</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario95" onclick="parent.toggleDiv('detailsDIVScenario95','DetailsImageScenario95')" />Details:
+						<div id="detailsDIVScenario95" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: iso19136_2007,iso19139_2007,iso19136_2007_INSPIRE_Extensions<br />Default: iso19136_2007<br />Description: XML Schema encoding rule to apply<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>	</div>
 <div class="pageFooter"></div>
  
 </body>
