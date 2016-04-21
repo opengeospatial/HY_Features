@@ -422,33 +422,3 @@ It is important to note that the catchment network model follows only the hydrol
 **[--- END OF SECTION 6 --- END OF SECTION 6 --- END OF SECTION 6 --- END OF SECTION 6 --- END OF SECTION 6 --- END OF SECTION 6 ---]**
 
 
-### 6.6 The Surface Hydro Feature application schema 
-**[\*\*\* I intend to remove section 6.6. on Surface Hydro Feature, since the conceptual separation of watercourses is already described in 6.5, as well as the model of surface water and confines in section  7 --- furthermore, when atmospheric and subsurface are moved to annexes (see line 421), it doesn't make sense to retain the a surface hydro feature section  repeating 6.5 \*\*\*]**
-
-
-### 6.7 The Subsurface Hydro Feature application schema 
-**[\*\*\* I intend to describe the informative packages (atmospheric and subsurface hydro feature) in separate annexes, instead of the specific clauses in section 6.n. this would keep the core standard body free from the non-normative parts, but still offers a model to integrate these, if required. -- !!! if you agree, the corresponding clauses need to be moved from section 6 into an annex \*\*\*]**(This package is an informative one, and described here in favour of completeness with repsect to the holistic catchment approach.)
-
-The informative Subsurface Hydro Feature application package introduces concepts reflecting water accumulated below the land surface as well as the formation of rock or soil containing the body of water. This concept refers to the holistic approach of the dendritic catchment as the unit wherein all water, surface and subsurface water, is directed to an identified common outlet. It allows subsurface water to be related to the hydrographic network of water bodies, as well as to a corresponding dendritic catchment identified by an inflow or outflow node using a reference point associated with the confining unit. Special concepts of subsurface water, its confines and special relationships may be defined with an application. Special concepts should not contradict the definitions endorsed by the WMO as published in the  "International Glossary of Hydrology". A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development.  
-
-![Figure 15: Subsurface Hydro Feature schema](figs/fig15.png)  
-Figure 15: Subsurface Hydro Feature schema  
-
-#### 6.7.1 The Subsurface Water model 
-The Subsurface Water model  introduces a simple model of water accumulated in rock or soil below the land surface,  either specialized by pressure head or the property to move due to gravity and capillary action.  This allows to handle concepts of subsurface waters separately from those of  the confining aquifer. An application focused on a special type of subsurface water may use the concepts when describing the relationship of groundwater or water in soil to a catchment in terms of the ultimate target of observation. Depending on the  particular application, special types may be defined and described by suitable properties.  
-
-The HY_Groundwater class specializes HY_Water_LiquidPhase with respect to the existence of water occupying the saturated zone. It inherits the accumulatingWaterBody association, which allows to relate subsurface water to the hydrographic network of water bodies.  
-
-The HY_VadoseWater class specializes HY_Water_LiquidPhase with respect to the existence of water occupying the unsaturated zone. It inherits the accumulatingWaterBody association, which allows to relate subsurface water to the hydrographic network of water bodies. HY_SoilWater, HY_SoilMoisture and HY_GravitationalWater specialize vadose water.  
-
-#### 6.7.2 The Subsurface Water Confines model
-The Subsurface Water confines model  introduces concepts of  the hydrogeologic units, particularly an aquifer, containing subsurface water, incl. the well used to extract, inject or infiltrate water from/into these. Depending on the  particular application, special types of containing units may be defined and described by suitable properties.  
-
-The HY_HydroGeologicUnit class provides a simple means for taking into account the hydrologically significant characteristics of formations of rock or soil, allowing further contextual specializations of hydro-geologic features. HY_HydroGeologicUnit  carries one association: containingUnit.  
-
-The HY_Aquifer class defines the existence of the containing unit wherein groundwater may be accumulated, understood as groundwater reservoir. The segmentation of aquifer is not in the scope of the HY_Features conceptual model. HY_Aquifer  carries one association: well.  
-
-The HY_Well class provides the concept of a well that may be used for discharge as well as recharge of water. The geometric representation of the well may vary with an application and needs to be defined with implementation. HY_Well  carries one association: wellLocation, which allows to locate the well in the network of catchments.  
-
-
-
