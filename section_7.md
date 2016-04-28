@@ -328,11 +328,11 @@ The HY_WaterBody and HY_WaterBodyPart class define a water body, or part of this
 
 The water body concept refers to an accumulated mass of liquid water, distinct from other masses of water. Its shape is determined by the occupied landform, the hosting hydrogeologic unit, a man made container, or another confining structure, and in case of on open waterbody bound to atmospheric pressure exerted on its surface. Each water body, or part of this, may be described in terms of a reservoir storing water for future use. In the context of hydrometric observation, a water bod may be understood as the feature of interest sampled by a hydrometric (sampling) feature. A water body is defined as special type of the named hydrologic feature (see section 7.4.1), because of names usually given to a water body in common experience varying whithin context or for some parts. Special types of water bodies occurring on the land surface are described in the 'Surface Hydro Feature' application schema in section ... . **[\*\*\* insert reference\*\*\*]**. A separate conceptual model capturing the specifics of features associated with the groundwater domain will be provided within the GroundwaterML 2.0 specification (under development). **[\*\*\* insert reference\*\*\*]** 
 
-**[\*\*\*  your and swg's agreement presumed, HY_Glacier is removed from the model. -- it's an issue similar to atmospheric and groundwater features, and since no relationship to a (glacier fed) catchment defined. the accumulation of ice from atmospheric origin is subject of specific glacier models not in scope (see line 365) -- it's sufficient here (I think) to have the WaterSolidPhase feature which is still needed with respect to ice cover, is in soil, snowmelt discharging in water body, ..., to reflect snow and ice as parts in the hydrographic network \*\*\*]**
+**[\*\*\*  HY_Glacier is removed from the model. -- it's an issue similar to atmospheric and groundwater features, and since no relationship to a (glacier fed) catchment is defined. the accumulation of ice from atmospheric origin is subject of specific glacier models not in scope (see line 365) -- it's sufficient here (I think) to have the WaterSolidPhase feature which is still needed with respect to ice cover, is in soil, snowmelt discharging in water body, ..., to reflect snow and ice as parts in the hydrographic network \*\*\*]**
 
 HY_WaterBody and HY_WaterBodyPart inherit from the generalization the *identifier*, *name* and *context* properties. HY_WaterBody, HY_WaterBodyPart and HY_WaterBodyStratum each associate the aggregate in which they participate. The *hydrographicNetwork* association relates to a water body the network, *waterBody* to a water body its parts, and *stratifiedWaterBody* to the stratified water body part its strata. If required, these associations shall be used to identify the aggregates the water body, water body part or statum are parts of. HY_WaterBodyPart carries five properties: *fixedLandmark*, *upstreamSegment*,  *downstreamSegment*, *streamCrossSection*, and *streamLongitudinalSection*. HY_WaterBodyStratum has two properties: *storage* and *stratumType*.
 
-The **fixedLandmark** associates to the water body part a permanent landmark referenced by co-ordinates. If required, this shall be used to identify on a water body (part) a permanent reference location which can be located in the network of catchment as outfall. This supports to place any feature relative to this using the (linear) river reference system described in section 7.4.5. 
+The **fixedLandmark** associates to the water body part a permanent landmark referenced by co-ordinates. If required, this shall be used to identify on a water body (part) a permanent reference location which can be located in the network of catchment as outfall. This supports to place a water body part relative to this using the (linear) river reference system described in section 7.4.5. 
 
 The **upstreamSegment** and **downstreamSegment** associations relate to a water body (part) parts up or downstream. If required, these associations shall be used to identify upstream or downstream segments connected with the water body (part).
 
@@ -378,8 +378,6 @@ The **storage** association describes a zone in a stratified water body, part of
 
 ##### 7.4.3.3	Water Liquid Phase and Water Solid Phase 
 The HY_Water_LiquidPhase and HY_Water_SolidPhase define a simple concept of the accumulation of water in water bodies. This definition refers to the matter accumulated to a mass of water. In its liquid form water is considered accumulated in water bodies; in its solid phase water may be accumulated after melting, or as a layer of ice or snow on an open water body. The accumulation of water in the atmosphere or below the land surface, e.g. rain, soil moisture or groundwater, is not in scope of this standard, as well as the accumulation of snow and ice in glaciers which is subject of glaciology science. Informative packages describing a simple model to take into account water from atmospheric origin, particularly from precipitation, or water occurring below the land surface without the complexity and detail of rainfall-runoff or groundwater models, are provided in Annex ... . **[\*\*\* insert reference \*\*\*]**. A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development. **[\*\*\* insert reference to GWML2\*\*\*]**
-
-**[\*\*\* I intend to describe the informative packages (atmospheric and subsurface hydro feat) in separate annexes, instead of the specific clauses in section 6.n. this would keep the core standard body free from the non-normative parts, but still offers a model to integrate these, if required. -- !!! if you agree, the corresponding clauses need to be moved from section 6 into an annex \*\*\*]**
 
 HY_Water_LiquidPhase carries the association *accumulatingWaterBody*; HY_Water_SolidPhase associates two properties: *snowmelt* and *coveredWaterBody*. If required, these associations shall be used to identify the water body, part of the network, where liquid water as a material is accumulated. 
 
@@ -648,7 +646,7 @@ These test suites ascertain the compliance of the conformance targets for the HY
 | Test method | Inspect the mapping between the data exchange schema and the HY_Features model to determine that all relevant schema elements are mapped to HY_Features equivalents. |
 | Test type | Capability | 
 
-### A.4 Conformance class: HY_SurfaceHydroFeature application schema equivalence
+### A.4 Conformance class: HY_HydrometricFeature application schema equivalence
 
 | **Conformance Class** | [/ spec/hydrology/hydrometricfeature/1.0/conf/hy_ hydrometricfeature] (/ spec/hydrology/hydrometricfeature/1.0/conf/hy_ hydrometricfeature) | 
 | --- | --- |
@@ -669,6 +667,33 @@ These test suites ascertain the compliance of the conformance targets for the HY
 **[ANNEX C -- to be moved in separate file --- ANNEX C -- to be moved in separate file --- ANNEX C -- to be moved in separate file]** 
 
 ## ANNEX C - The Subsurface Hydro Feature application schema (informative)
+
+### C.1 – The Subsurface Hydro Feature model 
+
+The informative Subsurface Hydro Feature schema introduces a simple model to take into account water occurring below the land surface in formations of rock or soil as a catchment contribution to a common outlet, without the complexity and detail of a groundwater model.  This concept refers to the holistic approach of the catchment as the unit wherein surface and subsurface water continuously interact in the hydrologic cycle, and all water ultimately is flowing to an identified outlet. It is intended that contextually related information models may use the concepts defined here, to build relationships to hydrologic features, finally to a catchment represented in data describing the properties of subsurface water and typcial data products derived from these to display the occurence and distribution of groundwater and water in soil.
+
+The Subsurface Hydro Feature model introduces a concept of subsurface water accumulated in water bodies which participate in the hydrographic network. This allows groundwater and water in soil to be related to a permanent reference location which can be located in the catchment network, and finally to add places where water enters the surface or disappears underground to the hierachical network of catchments in terms of an inflow or outflow node of a corresponding catchment. This supports special hydrogeological appearances of the catchment network, which may be displayed using particular geometric shapes and symbology. 
+
+The Subsurface Hydro Feature model is introduced with respect to that branch of hydrology which deals with groundwater, applied to all types of subsurface water. Information models focused on a special type of subsurface water may use the defined feature types to relate groundwater or water in soil as inflow or outflow to a catchment, without modeling in detail the interaction of groundwater and surface water.  A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development. 
+
+Following the conceptual separation of watercourses, the subsurface hydro feature schema contains the packages: HY_SubsurfaceWater and HY_SubsurfaceWaterConfines. 
+
+![Figure 15: Subsurface Hydro Feature model (UML class diagram)](figs/fig15.png) 
+Figure 15: Subsurface Hydro Feature model (UML class diagram) 
+**[\*\*\*update figure\*\*\*]**
+
+### C.2 The Subsurface Water model 
+
+The Subsurface Water model defines the most popular types of water occuring in the satured and non-satured zone of the lithosphere with respect to pressure head or the property to move due to gravity and capillary action. Specialising the liquid water type defined in the hydrogaphic network schema, groundwater and vadose water accumulated in a water body is considered to be part of a hydrographic network.  
+
+The HY_Groundwater class specializes HY_Water_LiquidPhase with respect to the existence of water occupying the saturated zone. It inherits the *accumulatingWaterBody* association from generalisation, which allows to relate groundwater to the hydrographic network aggregate of water bodies. 
+
+The HY_VadoseWater class specializes HY_Water_LiquidPhase with respect to the existence of water occupying the unsaturated zone. It inherits the *accumulatingWaterBody* association from generalisation, which allows to relate subsurface water to the hydrographic network aggregate of water bodies. This type is further specialised to HY_SoilWater, HY_SoilMoisture and HY_GravitationalWater.
+
+#### C.3 The Subsurface Water Confines model
+The Subsurface Water confines model defines basic types of hydrogeologic units containing groundwater or vadose water. Conceptually, the hydrogeologic unit is understood as the hydrogeologic appearance of the catchment of study in the perspective of particular study, and its visualisation as a cartographic representation of the catchment. Similar to hydrographic or channel network, network parts may be connected based on catchment topology. However, the aggregation and segmentation of hydrogeologic units is not in scope the hydrologic feature feature model. A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development. 
+
+The general HY_HydrogeologcUnit class is intended to represent a catchment network by displaying hydrologically significant characteristics of water-containing formations of rock or soil, allowing further contextual specializations. The HY_Aquifer class defines the general existence of the containing unit wherein groundwater may be accumulated, understood as groundwater reservoir. HY_Aquifer carries an association to a well used to extract, inject or infiltrate water from or to the aquifer. The HY_Well class is defined with respect to the potential carrier of a reference location. This would allow to associate an aquifer to a permanent reference location which can be located in the catchment network, and finally to place the location of the well in the hierachical network of catchments in terms of an inflow or outflow node of a corresponding catchment. This supports special hydrogeological appearances of the catchment network, which may be displayed using particular geometric shapes and symbology. HY_Well carries the association to the reference location: wellLocation.
 
 
 
