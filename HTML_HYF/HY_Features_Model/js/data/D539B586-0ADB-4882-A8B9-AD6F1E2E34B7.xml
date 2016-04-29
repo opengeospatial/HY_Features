@@ -1,3 +1,1 @@
 tocTab[tocTab.length] = new Array("0:1", "", "Package dependencies", "EARoot/EA1.htm", "176.png", "3566", "0", "", "Package diagram0","{D3E59732-F8FF-4ce6-A182-9AE552B54588}");
-tocTab[tocTab.length] = new Array("0.1", "", "«stub» HY_AtmosphericHydroFeature", "EARoot/EA3.htm", "4.png", "", "", "{4C70824F-751B-4255-961D-04ECE007D027}", "Package");
-tocTab[tocTab.length] = new Array("0.2", "", "«stub» HY_SubsurfaceHydroFeature", "EARoot/EA4.htm", "4.png", "", "", "{DD55A1E2-BE69-4819-8820-85916714A0C0}", "Package");
