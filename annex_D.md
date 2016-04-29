@@ -4,7 +4,7 @@ The informative Atmospheric Hydro Feature schema introduces a model to take into
 
 The Atmospheric Hydro Feature model introduces the concept of precipitation accumulated in water bodies which participate in the hydrographic network. This allows rain and snow to be related to a permanent reference location which can be located in the catchment network, and finally to add places where runoff is accumulated to the hierachical network of catchments in terms of an inflow or outflow node of a corresponding catchment. This supports special hydrometeorological appearances of the catchment network, which may be displayed using typical visualisation methods and symbology. 
 
-The Subsurface Hydro Feature model is introduced with respect to that branch of hydrology which study the atmospheric phases of the hydrological cycle. Information models focused on accumulation of water in water bodies may use the defined feature types to relate precipitation, particularly water from rain and snow, as inflow or outflow to a catchment, without modeling in detail the runoff accumulation.  
+The Atmospheric Hydro Feature model is introduced with respect to that branch of hydrology which study the atmospheric phases of the hydrological cycle. Information models focused on accumulation of water may use the defined feature types to relate precipitation, particularly water from rain and snow accumulated in water bodies, as inflow or outflow to a catchment, without modeling in detail the runoff accumulation.  
 
 ![Figure 29: Atmospheric Hydro Feature model (UML class diagram)](figs/fig29.png) 
 Figure 29: Atmospheric Hydro Feature model (UML class diagram) 
