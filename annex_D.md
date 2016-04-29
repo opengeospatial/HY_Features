@@ -8,4 +8,3 @@ The Subsurface Hydro Feature model is introduced with respect to that branch of 
 
 ![Figure 29: Atmospheric Hydro Feature model (UML class diagram)](figs/fig29.png) 
 Figure 29: Atmospheric Hydro Feature model (UML class diagram) 
-**[\*\*\*insert figure\*\*\*]**
