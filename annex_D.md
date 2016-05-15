@@ -1,0 +1,10 @@
+## ANNEX D - The Atmospheric Feature application schema (informative)
+
+The informative Atmospheric Hydro Feature schema introduces a model to take into account water from atmospheric origin, particularly from precipitation, without the complexity and detail of a rainfall-runoff model. This concept refers to the holistic approach of the catchment as the unit wherein water from atmospheric origin is continuously accumulated on the land surface or in water bearing formations of soil and rock, and ultimately is flowing to a common outlet. It is intended that contextually related information models may use the concepts defined here, to build relationships to hydrologic features, finally to a catchment represented in data describing the properties of rain and snow falling through atmosphere and reaching the land surface, and in typcial data products derived from these to display the occurence and distribution of rain and snow. 
+
+The Atmospheric Hydro Feature model introduces the concept of precipitation accumulated in water bodies which participate in the hydrographic network. This allows rain and snow to be related to a permanent reference location which can be located in the catchment network, and finally to add places where runoff is accumulated to the hierachical network of catchments in terms of an inflow or outflow node of a corresponding catchment. This supports special hydrometeorological appearances of the catchment network, which may be displayed using typical visualisation methods and symbology. 
+
+The Atmospheric Hydro Feature model is introduced with respect to that branch of hydrology which study the atmospheric phases of the hydrological cycle. Information models focused on accumulation of water may use the defined feature types to relate precipitation, particularly water from rain and snow accumulated in water bodies, as inflow or outflow to a catchment, without modeling in detail the runoff accumulation.  
+
+![Figure 29: Atmospheric Hydro Feature model (UML class diagram)](figs/fig29.png) 
+Figure 29: Atmospheric Hydro Feature model (UML class diagram) 
