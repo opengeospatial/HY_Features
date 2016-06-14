@@ -295,7 +295,7 @@ The _EXT_-prefix refers to "external", common patterns that are required, but no
 
 Processes that continuously deplete and replenish water resources cause or result in a wide range of phenomena that are the subject of monitoring, modeling and reporting in hydrology and related sciences. These distinctly named or otherwise uniquely identified real-world hydrologic phenomena are conceptualized and referred to as hydrologic features in this standard. This standard applies to data and data products that represent these hydrologically defined features.
   
-![Figure 2: Processes of the Hydrologic Cycle](http://water.usgs.gov/edu/graphics/watercyclesummary.jpg)  
+![Figure 2: Processes of the Hydrologic Cycle](http://water.usgs.gov/edu/graphics/watercyclesummary.jpg)
 Figure 2: Processes of the Hydrologic Cycle
 
 Water is moving from the atmosphere to the Earth and back to the atmosphere due to the processes forming the Water Cycle (_1_). Water from precipitation reaching the land surface is accumulated in water bodies occupying empty space on the land surface or in water bearing formations of soil and rock. Excess water overflows these formations and is driven downhill by gravity. Water flowing over soil or rock causes erosion to occur. This erosion tends to concentrate flowing water into water bodies that flow downhill using a connecting system of channels intersecting other water bodies along their way to a common outlet, conceptualized as a potentially complex outfall feature.
@@ -377,12 +377,12 @@ Considering any location on a network as the outflow node of a contributing catc
 Figure 10, 11, 12, and 13 illustrate how a newly introduced location can be located up- or downstream of a reference location.  [\*\*\*check figures\*\*\*] 
 
 
-![Figure 10: Position (yellow dot) upstream of a reference point (red dot)](figs/fig10.png)
+<img src="http://opengeospatial.github.io/HY_Features/figs/fig10.svg" width="250">  
 Figure 12: Position (yellow dot) upstream of a reference point (red dot)  
 Yellow: point of interest (inflowNode of receivingCatchment) - locatedStart (origin) of riverReferenceSystem,  
 Red: reference point (referent) - known outflowNode of the (green) encompassingCatchment
 
-![Figure 11: Position (yellow dot) downstream of a reference point (red dot)](figs/fig11.png)
+<img src="http://opengeospatial.github.io/HY_Features/figs/fig11.svg" width="250">  
 Figure 13: Position (yellow dot) downstream of a reference point (red dot)  
 Yellow: point of interest (outflowNode of contributingCatchment) - locatedStart (origin) of riverReferenceSystem,  
 Red: reference point (referent) – known inflowNode of the (green) encompassingCatchment 
