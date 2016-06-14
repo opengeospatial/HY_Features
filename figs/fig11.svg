@@ -43,6 +43,6 @@
 <path fill="none" stroke="#000000" stroke-miterlimit="10" d="M38.4,117c0,0,0.7-9.6-9.6-22.9l32.8-10.4l23.9-6.5  c0,0,2.3,7.2,2.6,8.3c0,0,3.1,8.6-5.7,26.8l-1.7,4.8H38.4z"/>
 <path fill="none" stroke="#000000" stroke-miterlimit="10" d="M38.4,117c0,0,0.2,3.8,0.1,4.6c0,0-0.3,5.6,2,8.5c0,0,2.8,6,11.8,7.8  c0,0,2.5,0.8,5.2-0.9c0,0,10.1-6,11.9-7.2c0,0,9.8-5.5,11.2-12.9H38.4z"/>
 <circle stroke="#FFFF66" fill="#FFFF66" cx="63.4" cy="117" r="2.1"/>
-<!-- upstream point fomr overlay 15 -->
+<!-- upstream point from overlay 15 -->
 <circle stroke="#C1272D" fill="#C1272D" cx="61.1" cy="83.8" r="2.1"/>
 </svg>
