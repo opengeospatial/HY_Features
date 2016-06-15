@@ -347,7 +347,7 @@ It is worth noting that non-dendritic networks are often represented as a dendri
 #### 6.3.2 Topological network of catchments
 Given the idea that a non-geospatial schematic representation of a feature can show its connection in a topological network, a catchment can be thought of as a hydrologic unit whose terrain and morphology results in a topological link between inflow and outflow. The red line in Figure 5 illustrates how a single catchment, represented by a boundary, an area, a stream network, and a main flowline, can also be represented using a straight line that is not geospatially representative but is a valid schematic representation of the connection between inflow and outflow.
 
- ![Figure 5: A catchment area (blue) and a flowpath connecting inflow to outflow (red) representing a definable unit where hydrological processes take place. ](figs/fig5.png)  
+<img src="http://opengeospatial.github.io/HY_Features/figs/fig5.svg" width="250">  
 Figure 5: A catchment area (blue) and a flowpath connecting inflow to outflow (red) representing a definable unit where hydrological processes take place. 
 
 In a network of catchments, morphological detail may be specified in many ways. Inflows may be virtual in headwaters, and likewise outflow nodes where waters flow out of a network. As show in Figure C1, C3, C4, and C5 catchments may connect through simple confluences (C1), water bodies or wetlands [C3], intermittent or subsurface flows [C4] or complex braided streams [C5]. Although these cases require different geographic representations, they can be represented using the same node topology. Since all these cases can be specified using geometric node topology, no special treatment is required to handle the variation of flow processes. 
