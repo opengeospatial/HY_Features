@@ -359,10 +359,10 @@ There are two ways that catchments with multiple inflows can share a common outl
 
 In this network of catchments, two or more catchments that flow into another, flow to the same outflow node (Figure 8) which is the inflow node of a receiving downstream catchment (Figure 9); the upstream catchment may be understood as the catchment contributing flow to the inflow node of a receiving catchment. In a network of dendritic catchments, outflow nodes on the network serve only one receiving catchment (Figure 8 and Figure 9).  
 
-![Figure 8: Catchments contributing to an identified outflow node. Note that some catchments contribute to a common outflow node.](figs/fig8.png)  
+<img src="http://opengeospatial.github.io/HY_Features/figs/fig8.svg" width="250">
 Figure 8: Catchments contributing to an identified outflow node. Note that some catchments contribute to a common outflow node.
 
-![Figure 9: Catchment receiving inflow via an identified inflow node](figs/fig9.png)  
+<img src="http://opengeospatial.github.io/HY_Features/figs/fig9.svg" width="250">  
 Figure 9: Catchments receive inflow via an identified inflow node. Note that nodes are not necessarily geographic features, but are rather nodes in a graph representation of the river network.
 
 Nodes stand alone as points of interaction in the network, in reality they are (potentially complex) watershed outlets, denoted as outfall features. Whether an outfall (node) is referred to as an inflow or outflow node is always in reference to a catchment. This means that a node serves as the outflow node of some contributing catchment(s) and the inflow node of some receiving catchment(s). In this standard, the inflow and outflow role names of the conceptual outfall (node) are used to unambiguously describe the node's role with respect to a catchment.
