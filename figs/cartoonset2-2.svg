@@ -25,20 +25,22 @@
 <!-- overlay 17 -->
 <line stroke="#BCBEC0" x1="27.6" y1="58.7" x2="37.7" y2="36.8"/>
 <!-- overlay 16 -->
-<path class="st0" d="M39.2,1l5.3,48.1l31.2-3.3c0,0,0.5-2.1,1-3.7c0,0,1.6-4.1,0.8-7.9C77.5,34.3,75.4,6.3,39.2,1z"/>
-<path class="st0" d="M40.8,49.9l3.7-0.8L39.2,1c-26.5-2.7-33,12.3-33,12.3L32.4,41"/>
-<path class="st0" d="M32.4,41L6.2,13.3c0,0-6.1,7.8-5.1,21.2c0,0,0.6,2.6-0.4,6.6c0,0-3.9,19.6,28.1,53.1l31.7-10.1l-5.3-3.7
-	c-3-2.1-5.6-4.8-7.5-8l0,0c-1.2-2-2.1-4.2-2.7-6.4l-4.2-16.1"/>
-<path class="st0" d="M54.6,48.1l7,35.7l23.9-6.5c0,0-1.3-5.9-5.4-12.2c0,0-5.9-5.9-4.4-19.2L54.6,48.1z"/>
-<path class="st0" d="M33.7,101.6c0,0,4.9,5.7,4.7,20.1c0,0-0.9,13.7,13.8,16.3c0,0,2.5,0.8,5.2-0.9c0,0,21.8-10.4,22.9-19.3
-	c0,0,0.4-2.2,1.9-5.5c0,0,8.7-17,5.7-26.8l-2.6-8.3l-23.9,6.5L28.7,94.1C28.7,94.1,33.3,99.9,33.7,101.6z"/>
-<g>
-	<path fill="#33FF99" d="M7.8,66.6l-0.3-0.9l19.6-7l-0.9-12.9L37.9,36l3.6,14.2l-13.7,9.3L7.8,66.6z M27.2,46.1L28,58l12.3-8.4l-3-11.9L27.2,46.1z"/>
+<path id="svg_12" d="m39.2,1l5.3,48.1l31.2,-3.3c0,0 0.5,-2.1 1,-3.7c0,0 1.6,-4.1 0.8,-7.9c0,0.1 -2.1,-27.9 -38.3,-33.2z" class="st0"/>
+<path id="svg_13" d="m44.5,49.1l-5.3,-48.1c-26.5,-2.7 -33,12.3 -33,12.3l26.2,27.7" class="st0"/>
+<path id="svg_14" d="m32.4,41l-26.2,-27.7c0,0 -6.1,7.8 -5.1,21.2c0,0 0.6,2.6 -0.4,6.6c0,0 -3.9,19.6 28.1,53.1l31.7,-10.1" class="st0"/>
+<path id="svg_15" d="m54.6,48.1l7,35.7l23.9,-6.5c0,0 -1.3,-5.9 -5.4,-12.2c0,0 -5.9,-5.9 -4.4,-19.2l-21.1,2.2z" class="st0"/>
+<path d="m33.7,101.6c0,0 4.9,5.7 4.7,20.1c0,0 -0.9,13.7 13.8,16.3c0,0 2.5,0.8 5.2,-0.9c0,0 21.8,-10.4 22.9,-19.3c0,0 0.4,-2.2 1.9,-5.5c0,0 8.7,-17 5.7,-26.8l-2.6,-8.3l-23.9,6.5l-32.7,10.4c0,0 4.6,5.8 5,7.5z" class="st0" fill="black"/>
+<g id="svg_17">
+ <path d="m7.8,66.6l-0.3,-0.9l19.6,-7l-0.9,-12.9l11.7,-9.8l-10.1,23.5l-20,7.1zm19.4,-20.5l0.89653,12.18958l9.33681,-20.65625l-10.23334,8.46667z" fill="#33FF99"/>
 </g>
+<line y2="35.98136" x2="43.24156" y1="36.78564" x1="37.9199" stroke="#33FF99"/>
 <!-- overlay 15 with some removed -->
 <circle cx="61.1" cy="83.8" r="1.4"/>
-<circle cx="44.5" cy="49.1" r="1.4"/>
 <!-- overlay 18 -->
 <circle cx="37.7" cy="36.8" r="1.4"/>
 <circle cx="27.6" cy="58.7" r="1.4"/>
+<text fill="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="210.807236" y="398.78742" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve" transform="matrix(0.3251089179337896,0,0,0.3251089179337896,-16.13770448190038,-16.851225690735358) " id="svg_26">A</text>
+<text id="svg_27" fill="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="180.254898" y="273.158676" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve" transform="matrix(0.3251089179337896,0,0,0.3251089179337896,-16.13770448190038,-16.851225690735358) ">X</text>
+<text id="svg_28" fill="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="89.228561" y="197.506672" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve" transform="matrix(0.3251089179337896,0,0,0.3251089179337896,-16.13770448190038,-16.851225690735358) ">D</text>
+<text style="cursor: move;" id="svg_30" fill="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="137.003265" y="126.262795" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve" transform="matrix(0.3251089179337896,0,0,0.3251089179337896,-16.13770448190038,-16.851225690735358) ">F</text>
 </svg>
