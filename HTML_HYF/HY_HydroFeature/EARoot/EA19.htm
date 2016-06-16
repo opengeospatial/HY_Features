@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_AtmosphericHydroFeature</title>
+<title>HY_HydrographicNetwork</title>
 <link href="../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_AtmosphericHydroFeature", " : "))</script>  : Public  &lt;&lt;stub&gt;&gt; Package</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_HydrographicNetwork", " : "))</script>  : Public  &lt;&lt;leaf&gt;&gt; Package</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">29/09/2015 16:37:53</td>
+			<td width="85%" class="ObjectDetailsValue">04/02/2011 15:39:54</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">13/04/2016 13:18:49</td>
+			<td class="ObjectDetailsValue">06/04/2016 12:40:11</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -51,11 +51,11 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
-			<td class="ObjectDetailsValue">Dornblut</td>
+			<td class="ObjectDetailsValue">atk093</td>
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
-			<td class="ObjectDetailsValue">1.0</td>
+			<td class="ObjectDetailsValue">0.0.2</td>
 		</tr>
 		<tr id="proj02" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
@@ -87,15 +87,54 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{4C70824F-751B-4255-961D-04ECE007D027}</td>
+			<td class="ObjectDetailsValue">{82C9C32F-AE40-4d4b-BAAB-9A1040E5C098}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Package dependencies</td>
+			<td class="ObjectDetailsValue"></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">&quot;Placeholder&quot; for an AtmosphericHydroFeature package:&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The AtmosphericHydroFeature informative package contains concepts&#160; to relate water from atmospheric origin (rain and snow) reaching the land surface to the hydrographic network and finally to the represented catchment. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Provided&#160; that a relationship to the HY_WaterLiquidPhase / HY_WaterSolidPhase classes can be defined, different types of atmospheric water&#160; may be related to the accumulating water body (water body segment) which is part of the hydrographic network representing a catchment. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;If required, atmospheric hydrologic features may be located along a watercourse using the relationship of the accumulating water body to a reference point located in the network of catchments.&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The hydrographic network model (figure XX) defines an aggregate of water bodies. Conceptually, the network of water bodies is understood as the hydrographic appearance of the catchment of study in the particular perspective of the study, and its visualization as a cartographic representation of the catchment. Given that the upstream-downstream relationship is topologically defined in the catchment model (see section 6.4.2), water bodies are aggregated in the hydrographic network irrespective of whether the accumulated water is flowing or not; a water body has no other role than being part of that network the contributing or receiving catchment appears. This allows, permanent and temporary water bodies of flowing or stagnant water to be aggregated in the network, and to visualized.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The hydrographic network is defined independent of the network of containing channels (see section 6.5). This conceptual separation references to the specific concerns of hydrology studying the occurrence, accumulation and circulation of water, and refers to body of accumulated water which is shaped by the containing channel which exists regardless of whether water flows in or not (see section&#160; 6.4). This approach allows to separately visualize the hydrographic network of &#39;blue&#39; lines or polygons, whereby the logically connected water bodies may or may not be connected at the representation level. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The water body, part of the network, may be segmented at vertical sections in succeeding parts, each part in horizontal strata. The water body part associates a typical reference location, allowing to place any other feature relative to this using the (linear) river reference system.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;A network water body may be divided by vertical sections in succeeding segments, each part in horizontal strata. The water body part associates a typical reference location, allowing to place any other feature relative to this referent using the (linear) river reference&lt;br /&gt;&lt;/p&gt;</div>
 
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+		</ul>
+<div class="ItemBody" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="50%" class="TableHeading">Tag</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">xsdDocument</td>
+				<td width="50%" class="TableRow" valign="top">hy_network.xsd</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario4" onclick="parent.toggleDiv('detailsDIVScenario4','DetailsImageScenario4')" />Details:
+						<div id="detailsDIVScenario4" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Default: FIXME<br />Description: Name of an XML Schema document to create representing the content of this package<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">xsdEncodingRule</td>
+				<td width="50%" class="TableRow" valign="top">iso19136_2007</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario5" onclick="parent.toggleDiv('detailsDIVScenario5','DetailsImageScenario5')" />Details:
+						<div id="detailsDIVScenario5" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: iso19136_2007 | iso19139_2007 | iso19136_2007_INSPIRE_Extensions<br />Default: iso19136_2007<br />Description: XML Schema encoding rule to apply<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>	</div>
 <div class="pageFooter"></div>
  
 </body>
