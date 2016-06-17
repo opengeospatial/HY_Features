@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">16/06/2016 09:07:06</td>
+			<td class="ObjectDetailsValue">17/06/2016 15:59:39</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,7 +91,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, informative, <a href="../EA3.htm">overallOverview</a>, <a href="../EA1/EA26.htm">Catchment Topology</a>, <a href="EA108.htm">River Positioning</a>, <a href="EA112.htm">Context Diagram : HY_IndirectPosition</a>, <a href="EA118.htm">Context Diagram : HY_RiverReferenceSystem</a>, ChannelNetwork_extended</td>
+			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, informative, ChannelNetwork_extended, <a href="../EA3.htm">overallOverview</a>, <a href="../EA1/EA26.htm">Catchment Topology</a>, <a href="EA108.htm">River Positioning</a>, <a href="EA112.htm">Context Diagram : HY_IndirectPosition</a>, <a href="EA118.htm">Context Diagram : HY_RiverReferenceSystem</a></td>
 		</tr>
 	</table>
 	<div class="ObjectDetailsNotes">indirect position, either expressed as the distance to a reference point or as position relative to a reference point or to the distance (interpolative).&#160; &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: This type may use ISO 19148: LinearReferencing understanding the indirect position as the location associated with an Outfall (understood as an event in terms of ISO 19148), providing a distance absolute, relative or interpolative to a reference location identified by coordinates (in terms of the referent).&lt;br /&gt;&lt;/p&gt;</div>
@@ -221,6 +221,30 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA1/EA67.htm">«FeatureType» HY_ReferenceLocation</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> referent<br />
+						permanent referent located in the network of catchments as outfall (referent in terms of ISO 19148). This allows to place an arbitrary feature of interest using catchment topology. If required, this association shall be used to identify the location relative to which a position is assigned to the outfall.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink129" onclick="parent.toggleDiv('detailsDIVLink129','DetailsImageLink129')" />Details:
+							<div id="detailsDIVLink129" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">location to which the position refers to.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
 						<a href="EA125.htm">«FeatureType» HY_RiverReferenceSystem</a><br />
 						Class &nbsp;
 					</td>
@@ -235,33 +259,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink129" onclick="parent.toggleDiv('detailsDIVLink129','DetailsImageLink129')" />Details:
-							<div id="detailsDIVLink129" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">linear reference system used for positioning.</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA1/EA67.htm">«FeatureType» HY_ReferenceLocation</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> referenceLocation<br />
-						permanent referent located in the network of catchments as outfall (referent in terms of ISO 19148). This allows to place an arbitrary feature of interest using catchment topology. If required, this association shall be used to identify the location relative to which a position is assigned to the outfall.	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink130" onclick="parent.toggleDiv('detailsDIVLink130','DetailsImageLink130')" />Details:
 							<div id="detailsDIVLink130" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">location to which the position refers to.</div>
+							<div class="ObjectDetailsNotes">linear reference system used for positioning.</div>
 
 							</div>
 						</div>
