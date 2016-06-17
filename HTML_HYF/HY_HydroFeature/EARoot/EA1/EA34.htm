@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_Catchment::HY_CatchmentRepresentation</title>
+<title>HY_Catchment::HY_CatchmentRealisation</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,7 +34,7 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_CatchmentRepresentation", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_CatchmentRealisation", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">16/06/2016 09:07:06</td>
+			<td class="ObjectDetailsValue">17/06/2016 08:01:39</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Flowpath represents DendriticCatchment, Network represents DendriticCatchment, hyf107, informative, WaterBody- Flowpath, Waterbody - Channel, ChannelNetwork_extended, Context Diagram : HY_TopographicNetwork, <a href="../EA7.htm">overallOverview</a>, <a href="../EA1.htm">HydrographicRepresentation</a>, <a href="EA26.htm">Catchment Representation</a>, <a href="EA24.htm">Catchment Topology</a>, <a href="EA28.htm">Catchment Hierarchy</a>, <a href="../EA5.htm">TopographicRepresentation</a>, <a href="../EA3.htm">HydrometricRepresentation</a>, <a href="../EA3/EA71.htm">Hydrographic Network_extended</a>, <a href="../EA3/EA55.htm">Context Diagram : HY_HydrographicNetwork</a></td>
+			<td class="ObjectDetailsValue">Flowpath represents DendriticCatchment, Network represents DendriticCatchment, hyf107, informative, WaterBody- Flowpath, Waterbody - Channel, ChannelNetwork_extended, Context Diagram : HY_TopographicNetwork, catchmentnetwork, <a href="../EA1.htm">overallOverview</a>, <a href="../EA3.htm">HydrographicRealisation</a>, <a href="../EA7.htm">TopographicRealisation</a>, <a href="../EA5.htm">HydrometricRealisation</a>, <a href="EA26.htm">Catchment Representation</a>, <a href="EA24.htm">Catchment Topology</a>, <a href="EA28.htm">Catchment Hierarchy</a>, <a href="../EA3/EA71.htm">Hydrographic Network_extended</a>, <a href="../EA3/EA55.htm">Context Diagram : HY_HydrographicNetwork</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">data, set or product of these, representing a catchment, whereby each data product represents exactly one catchment.&#160; &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;geographic data are usually portrayed in map (layers) using geometric shapes of different dimension. In related contexts other types of catchment representation may exist. Data products that not conforms to the types of catchment representation defined in this standard, e.g.&#160; representations in more-dimensional perspectives, or a time series representing the catchment, may use the general catchment representation class whereby each representation may be realized with an appropriate geometry type.&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">feature realisation of a the &#39;un-realised&#39; conceptual catchment.&#160; &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: in this context realisation refers to the interpretation of the conceptual catchment in the perspective of study/reporting, e.g. hydrography, or river morphology, hydrologic observation.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -114,11 +114,11 @@ function nameClassifier(name, separator)
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> representation<br />
+						<strong>Name:</strong> realisation<br />
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> representedCatchment<br />
+						<strong>Name:</strong> realisedCatchment<br />
 						catchment represented in the data procduct.	
 					</td>
 				</tr>
@@ -150,12 +150,6 @@ function nameClassifier(name, separator)
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA37.htm">«FeatureType» HY_CartographicVisualisation</a></td>
-					<td width="15%" class="TableRow" valign="top">Class</td>
-					<td width="15%" class="TableRow" valign="top">Generalization</td>
-					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
-				</tr>
-				<tr>
 					<td width="30%" class="TableRow" valign="top"><a href="EA33.htm">«FeatureType» HY_CatchmentBoundary</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
@@ -163,6 +157,12 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="30%" class="TableRow" valign="top"><a href="../EA3/EA74.htm">«FeatureType» HY_HydrographicNetwork</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA37.htm">«FeatureType» HY_CartographicVisualisation</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>

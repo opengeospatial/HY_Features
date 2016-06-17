@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_Catchment::HY_CatchmentBoundary</title>
+<title>HY_Catchment::HY_CatchmentRepresentation</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_CatchmentBoundary", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_CatchmentRepresentation", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">08/11/2010 09:22:26</td>
+			<td width="85%" class="ObjectDetailsValue">05/11/2010 14:27:32</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">14/04/2016 15:45:50</td>
+			<td class="ObjectDetailsValue">15/06/2016 13:56:08</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,19 +87,54 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{5BA816C0-9421-430b-9C8D-A3F69890E675}</td>
+			<td class="ObjectDetailsValue">{F95F2B6D-6CCD-45af-848D-70F197200916}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="../EA3.htm">overallOverview</a>, <a href="EA18.htm">Catchment Representation</a>, hyf107</td>
+			<td class="ObjectDetailsValue">Flowpath represents DendriticCatchment, Network represents DendriticCatchment, hyf107, informative, WaterBody- Flowpath, Waterbody - Channel, ChannelNetwork_extended, Context Diagram : HY_TopographicNetwork, <a href="../EA3.htm">overallOverview</a>, <a href="EA17.htm">Catchment Representation</a>, <a href="EA15.htm">Catchment Topology</a>, <a href="EA19.htm">Catchment Hierarchy</a>, <a href="../EA3/EA62.htm">Hydrographic Network_extended</a>, <a href="../EA3/EA46.htm">Context Diagram : HY_HydrographicNetwork</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">polygon representing a catchment allowing a simple polygon representation. the catchment boundary may be realized by an appropriate polygon type.</div>
+	<div class="ObjectDetailsNotes">data, set or product of these, representing a catchment, whereby each data product represents exactly one catchment.&#160; &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;geographic data are usually portrayed in map (layers) using geometric shapes of different dimension. In related contexts other types of catchment representation may exist. Data products that not conforms to the types of catchment representation defined in this standard, e.g.&#160; representations in more-dimensional perspectives, or a time series representing the catchment, may use the general catchment representation class whereby each representation may be realized with an appropriate geometry type.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
 			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
+		<div class="ItemBody" id="AssociationsToTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA22.htm">«FeatureType» HY_Catchment</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> representedCatchment<br />
+						catchment represented in the data procduct.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink24" onclick="parent.toggleDiv('detailsDIVLink24','DetailsImageLink24')" />Details:
+							<div id="detailsDIVLink24" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">catchment represented by area, flow path, boundary line, or network.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
 		<div class="ItemBody" id="LinksTable">
 			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
@@ -109,7 +144,25 @@ function nameClassifier(name, separator)
 					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA26.htm">«FeatureType» HY_CatchmentRepresentation</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA3/EA65.htm">«FeatureType» HY_HydrographicNetwork</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA23.htm">«FeatureType» HY_CatchmentArea</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA28.htm">«FeatureType» HY_CartographicVisualisation</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA24.htm">«FeatureType» HY_CatchmentBoundary</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
