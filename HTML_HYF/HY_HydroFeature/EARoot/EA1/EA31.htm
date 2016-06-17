@@ -91,7 +91,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, Flowpath represents DendriticCatchment, Catchment hierarchy, Network represents DendriticCatchment, hyf107, informative, WaterBody- Flowpath, ChannelNetwork_extended, <a href="../EA9.htm">Hydro Feature Special</a>, <a href="../EA7.htm">overallOverview</a>, <a href="../EA1.htm">HydrographicRepresentation</a>, <a href="EA26.htm">Catchment Representation</a>, <a href="EA24.htm">Catchment Topology</a>, <a href="EA28.htm">Catchment Hierarchy</a>, <a href="EA22.htm">Catchment Model</a>, <a href="../EA5.htm">TopographicRepresentation</a>, <a href="../EA3.htm">HydrometricRepresentation</a>, <a href="../EA3/EA71.htm">Hydrographic Network_extended</a>, <a href="../EA4/EA81.htm">River Positioning</a></td>
+			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, Flowpath represents DendriticCatchment, Catchment hierarchy, Network represents DendriticCatchment, hyf107, informative, WaterBody- Flowpath, ChannelNetwork_extended, catchmentnetwork, <a href="../EA9.htm">Hydro Feature Special</a>, <a href="../EA1.htm">overallOverview</a>, <a href="../EA3.htm">HydrographicRealisation</a>, <a href="../EA7.htm">TopographicRealisation</a>, <a href="../EA5.htm">HydrometricRealisation</a>, <a href="EA26.htm">Catchment Representation</a>, <a href="EA24.htm">Catchment Topology</a>, <a href="EA28.htm">Catchment Hierarchy</a>, <a href="EA22.htm">Catchment Model</a>, <a href="../EA3/EA71.htm">Hydrographic Network_extended</a>, <a href="../EA4/EA81.htm">River Positioning</a></td>
 		</tr>
 	</table>
 	<div class="ObjectDetailsNotes">unit wherein hydrologic processes take place.&#160; This class denotes the physiographic unit, for which is concluded that a hydrological determination by a common outlet to which all waters flow exists, which is clearly identified, or not. Catchment is an abstract type and needs to be specialized with application.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This approach refers to the common recognition of a catchment as the basic unit of study in hydrology, of water resources management and environmental reporting. The holistic approach refers to the continuous interaction of surface and subsurface waters within the catchment, even if a particular representation refer only to one or the other.&#160; Special subtypes such as drainage basin and groundwaterbasin may be defined with an application. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Each catchment may be nested in a containing catchment, as typically used for high order organisation of management and reporting units. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Each catchment may be multiple and differently represented by a wide range of data products. Common examples are flowpath, catchment area and catchment boundary (watershed).&lt;br /&gt;&lt;/p&gt;</div>
@@ -271,15 +271,15 @@ This association may be used to link catchments interacting across natural or ar
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA34.htm">«FeatureType» HY_CatchmentRepresentation</a><br />
+						<a href="EA34.htm">«FeatureType» HY_CatchmentRealisation</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> representation<br />
+						<strong>Name:</strong> realisation<br />
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> representedCatchment<br />
+						<strong>Name:</strong> realisedCatchment<br />
 						catchment represented in the data procduct.	
 					</td>
 				</tr>
@@ -380,7 +380,7 @@ This association may be used to link catchments interacting across natural or ar
 					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA30.htm">«FeatureType» HY_CatchmentAggregate</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA30.htm">«FeatureType» HY_SimpleCatchmentNetwork</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_Catchment::HY_Divide</title>
+<title>HY_Catchment::HY_CatchmentRealisation</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_Divide", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_CatchmentRealisation", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">19/05/2010 09:49:53</td>
+			<td width="85%" class="ObjectDetailsValue">05/11/2010 14:27:32</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">13/04/2016 10:49:38</td>
+			<td class="ObjectDetailsValue">17/06/2016 08:01:39</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,19 +87,19 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{7240A4E4-13B3-47cb-A826-81E20FDB9956}</td>
+			<td class="ObjectDetailsValue">{F95F2B6D-6CCD-45af-848D-70F197200916}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">hyf107, <a href="../EA3.htm">overallOverview</a>, <a href="EA16.htm">Catchment Topology</a>, <a href="EA14.htm">Catchment Model</a></td>
+			<td class="ObjectDetailsValue">Flowpath represents DendriticCatchment, Network represents DendriticCatchment, hyf107, informative, WaterBody- Flowpath, Waterbody - Channel, ChannelNetwork_extended, Context Diagram : HY_TopographicNetwork, catchmentnetwork, <a href="../EA1.htm">overallOverview</a>, <a href="../EA3.htm">HydrographicRealisation</a>, <a href="../EA7.htm">TopographicRealisation</a>, <a href="../EA5.htm">HydrometricRealisation</a>, <a href="EA26.htm">Catchment Representation</a>, <a href="EA24.htm">Catchment Topology</a>, <a href="EA28.htm">Catchment Hierarchy</a>, <a href="../EA3/EA71.htm">Hydrographic Network_extended</a>, <a href="../EA3/EA55.htm">Context Diagram : HY_HydrographicNetwork</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">summit or boundary line separating adjacent catchments. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;(Source: divide. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0350EN.HTM)&lt;/i&gt;&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">feature realisation of a the &#39;un-realised&#39; conceptual catchment.&#160; &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: in this context realisation refers to the interpretation of the conceptual catchment in the perspective of study/reporting, e.g. hydrography, or river morphology, hydrologic observation.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
-			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
 		<div class="ItemBody" id="AssociationsToTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
@@ -110,23 +110,24 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA33.htm">«FeatureType» HY_ReferenceLocation</a><br />
+						<a href="EA31.htm">«FeatureType» HY_Catchment</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
+						<strong>Name:</strong> realisation<br />
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> nodeOnDivide<br />
-						node located on the summit line 	
+						<strong>Name:</strong> realisedCatchment<br />
+						catchment represented in the data procduct.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink75" onclick="parent.toggleDiv('detailsDIVLink75','DetailsImageLink75')" />Details:
-							<div id="detailsDIVLink75" class="DetailsDiv" >
-							&nbsp;
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink24" onclick="parent.toggleDiv('detailsDIVLink24','DetailsImageLink24')" />Details:
+							<div id="detailsDIVLink24" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">catchment represented by area, flow path, boundary line, or network.</div>
+
 							</div>
 						</div>
 					</td>
@@ -134,60 +135,37 @@ function nameClassifier(name, separator)
 
 			</table>
 		</div>
-		<div class="ItemBody" id="AssociationsFromTable">
-			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
-					<td width="40%" class="TableHeading">Element</td>
-					<td width="30%" class="TableHeading">Source Role</td>
-					<td width="30%" class="TableHeading">Target Role</td>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA23.htm">«FeatureType» HY_Catchment</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> boundaryLine<br />
-						conceptual line bounding the catchment.	
-					</td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA32.htm">«FeatureType» HY_CatchmentArea</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink76" onclick="parent.toggleDiv('detailsDIVLink76','DetailsImageLink76')" />Details:
-							<div id="detailsDIVLink76" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA33.htm">«FeatureType» HY_CatchmentBoundary</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
 				</tr>
 				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA31.htm">«FeatureType» HY_Outfall</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> outfall<br />
-						lowest point on the summit or boundary line.
-(Source: divide. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0866EN.HTM)
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> summitLine<br />
-						summit line on which the outfall marks the lowest point	
-					</td>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA3/EA74.htm">«FeatureType» HY_HydrographicNetwork</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink77" onclick="parent.toggleDiv('detailsDIVLink77','DetailsImageLink77')" />Details:
-							<div id="detailsDIVLink77" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">lowest point on the summit or boundary line considered to be outfall of a corresponding catchment.</div>
-
-							</div>
-						</div>
-					</td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA37.htm">«FeatureType» HY_CartographicVisualisation</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
 				</tr>
 
 			</table>
