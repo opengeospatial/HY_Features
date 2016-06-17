@@ -1,4 +1,7 @@
-tocTab[tocTab.length] = new Array("0:1", "", "HydrometricFeature", "EARoot/EA1.htm", "175.png", "4277", "0", "", "Class diagram0","{5B5D3675-145C-48f7-B748-BBDE89BC604C}");
-tocTab[tocTab.length] = new Array("0:2", "", "«FeatureType» HY_HydrometricFeaturePart", "EARoot/EA3.htm", "5.png", "9974", "0", "", "Class0","{8EB7CD15-6856-4a68-9E58-2DDA44878726}");
-tocTab[tocTab.length] = new Array("0:3", "", "«FeatureType» HY_HydrometricFeature", "EARoot/EA4.htm", "5.png", "9975", "0", "", "Class0","{BB084F13-AED3-4c9d-9E8F-2C46B9CBC703}");
-tocTab[tocTab.length] = new Array("0:4", "", "«FeatureType» HY_HydrometricNetwork", "EARoot/EA5.htm", "5.png", "9973", "0", "", "Class0","{5D9E5E19-3F78-4eb2-94E3-74D083F92886}");
+tocTab[tocTab.length] = new Array("0:1", "", "HydrometricFeature_extended", "EARoot/EA1.htm", "175.png", "4674", "0", "", "Class diagram0","{5B5D3675-145C-48f7-B748-BBDE89BC604C}");
+tocTab[tocTab.length] = new Array("0:2", "", "Context Diagram : HY_HydrometricFeature", "EARoot/EA3.htm", "175.png", "7618", "0", "", "Class diagram0","{E3C89A66-FAAD-4330-852C-4D397343871E}");
+tocTab[tocTab.length] = new Array("0:3", "", "Context Diagram : HY_HydrometricFeaturePart", "EARoot/EA5.htm", "175.png", "7617", "0", "", "Class diagram0","{8D32E2E4-56EC-46b9-9A85-FFD338641E91}");
+tocTab[tocTab.length] = new Array("0:4", "", "Context Diagram : HY_HydrometricNetwork", "EARoot/EA7.htm", "175.png", "7619", "0", "", "Class diagram0","{183E7CA9-62B3-43a7-B64B-BE6F5A426E4D}");
+tocTab[tocTab.length] = new Array("0:5", "", "«FeatureType» HY_HydrometricFeaturePart", "EARoot/EA9.htm", "5.png", "10459", "0", "", "Class0","{8EB7CD15-6856-4a68-9E58-2DDA44878726}");
+tocTab[tocTab.length] = new Array("0:6", "", "«FeatureType» HY_HydrometricFeature", "EARoot/EA10.htm", "5.png", "10460", "0", "", "Class0","{BB084F13-AED3-4c9d-9E8F-2C46B9CBC703}");
+tocTab[tocTab.length] = new Array("0:7", "", "«FeatureType» HY_HydrometricNetwork", "EARoot/EA11.htm", "5.png", "10458", "0", "", "Class0","{5D9E5E19-3F78-4eb2-94E3-74D083F92886}");

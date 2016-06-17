@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_Catchment</title>
+<title></title>
 <link href="../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_Catchment", " : "))</script>  : Public  &lt;&lt;leaf&gt;&gt; Package</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("", " : "))</script>  : Public   Note</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">22/02/2011 17:07:12</td>
+			<td width="85%" class="ObjectDetailsValue">16/06/2016 08:10:01</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">12/02/2016 11:01:25</td>
+			<td class="ObjectDetailsValue">16/06/2016 13:23:10</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,54 +87,15 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{BA04FEE3-AC79-482c-91A2-760F5C7BFA6D}</td>
+			<td class="ObjectDetailsValue">{E11AC303-3916-46fe-8FAA-383F0B46E58A}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"></td>
+			<td class="ObjectDetailsValue"><a href="EA5.htm">HydrographicRealisation</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The HY_Catchment&#160; package model defines a logical network of catchments each multiple represented by geometry or topology in any hydrologically meaningful sub-domain model, including by a hydrographic network. The catchment model defines the relationships between catchments, and between catchment and its common outlet. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The catchment model allows for the existence of catchments to be recognized, and identifiers assigned based on outflow nodes even if stream networks, areas and watersheds are not reliably determined. This is sufficient to define simplified hierarchies. It is intended that hydrological reporting applications may use this model without the full complexity and detail of scientific catchment models. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The catchment model provides the topological concept to consider an arbitrary point on, or projected onto, the land surface as the outfall of a corresponding catchment. Positioned in the hydrographic network, this point provides the identifiable reference point to which alternative representations may refer. The logical network of catchments allows to establish topological relationships between hydrometric stations without the detail of stream flow, flow conditions or cartographic interpretation. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: The synonym approach of catchment as documented in the WMO-UNESCO&#160; International Glossary of Hydrology, which is the key reference for the definitions in the Hydrologic Feature model, does not clearly distinguish between catchment and its representations, nor between catchment and its possible specializations like drainage basin and groundwater basin. The separation of concerns by defining separate features for the catchment and&#160; its representations and specializations may be understood as a refinement of the complex definition given in the glossary.&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">feature realisation of a the conceptual &#39;un-realised&#39; catchment specifically as a stream centre line connecting the inflow and outflow of the conceptual catchment its realises. flowpath allows for a straight line realisation.&#160; the geometric representation of th feature shall be represented&#160; as a curve. this concept requires a non-branching mainstem connecting inflow and outflow, and a single linear representation.</div>
 
-	<div class="TableGroup" id="TableGroup">
-		<ul class="ItemTitle">
-			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
-		</ul>
-<div class="ItemBody" id="TaggedValTable">
-	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
-		<tr>
-			<td width="50%" class="TableHeading">Tag</td>
-			<td width="50%" class="TableHeading">Value</td>
-		</tr>
-					<tr>
-				<td width="50%" class="TableRow" valign="top">xsdDocument</td>
-				<td width="50%" class="TableRow" valign="top">hy_catchment.xsd</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario0" onclick="parent.toggleDiv('detailsDIVScenario0','DetailsImageScenario0')" />Details:
-						<div id="detailsDIVScenario0" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Default: FIXME<br />Description: Name of an XML Schema document to create representing the content of this package<br /></div>
-
-						</div>
-					</div>
-				</td>
-			</tr>			<tr>
-				<td width="50%" class="TableRow" valign="top">xsdEncodingRule</td>
-				<td width="50%" class="TableRow" valign="top">iso19136_2007</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario1" onclick="parent.toggleDiv('detailsDIVScenario1','DetailsImageScenario1')" />Details:
-						<div id="detailsDIVScenario1" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: iso19136_2007 | iso19139_2007 | iso19136_2007_INSPIRE_Extensions<br />Default: iso19136_2007<br />Description: XML Schema encoding rule to apply<br /></div>
-
-						</div>
-					</div>
-				</td>
-			</tr>
-	</table>
-</div>	</div>
 <div class="pageFooter"></div>
  
 </body>
