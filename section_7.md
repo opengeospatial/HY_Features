@@ -20,7 +20,7 @@ Table 1: HY_Features modules, packages and concepts
 | HY_SubsurfaceHydroFeature (informative) | hydrologic features below the Earth’s land surface without complexity and detail of a groundwater or soil moisture model | --- |
 | HY_SurfaceHydroFeature | hydrlogic fetaures on the Earth’s land surface without complexity and detail of hydrologic and hydraulic models | HY_SurfaceWater, HY_SurfaceWaterConfines |
 | HY_HydrometricNetwork | hydrometric network as an aggregate of logically connected hydrometric features located on or along a hydrologic feature | --- |
-| HY_Utilities | common concepts required by the domain model that are not hydrology-specific such as naming and contextual relations | --- |
+| HY_Utilities | (informative) common concepts required by the domain model that are not hydrology-specific such as naming and contextual relations. These may be specified in specific implementation models or in the encoding rules for a target technology.  | --- |
 
 The conceptual model is expressed in the Geographic Information Conceptual Schema Language (ISO 19103:2005) based on the Unified Modeling Language (UML). The organization into packages and package dependencies are shown in Figure 16. The following sections describe requirements classes for each application schema, whereby each feature addressed in the requirements shall be understood as an instance of the GF_FeatureType (aka FeatureType) «metaclass». 
 
@@ -71,19 +71,21 @@ Implementations of HY_Features SHALL either use common identifiers for instances
 
 ### 7.4 The Hydro Feature application schema
 
-The Hydro Feature schema conceptualize the abstraction of the complex Hydrology phenomenon through definition of domain-specific feature instances of the general Feature type, each describing separate aspects of the hydrology phenomenon. This includes related phenomena that participate in hydrologic systems but have specific characteristics. Figure 18 shows the special features types describing separate aspects of the hydrology phenomenon. Given the complexity of the domain, and the nature of real-world physical phenomena, for any given feature further specialisations may be relevant. 
+
+The Hydro Feature schema contains five leaf packages: HY_NamedFeature, HY_Catchment, HY_HydrographicNetwork, HY_RiverPositioning, HY_Storage. Informative packages outlining atmospheric hydrologic features and subsurface hydrologic features are provided in Annex AAA  as a simple means to take such features in account in respect of the hydrosphere complex. A conceptual model capturing the specifics of features associated with the groundwater domain will be developed with reference to the GroundWaterML standard **[ correct ref ]**.
+
+The Hydro Feature schema conceptualizes the hydrology phenomenon through definition of domain-specific Feature Type classes, each describing separate aspects of the hydrology phenomenon. Figure 18 shows the main Features Types defined. 
 
 ![Figure 17: Feature types describing separate aspects of the hydrology phenomenon (UML class diagram)](figs/fig17.png)
 Figure 17: Feature types describing separate aspects of the hydrology phenomenon (UML class diagram)
 **[\*\*\*!!! Dave, fig17 updated\*\*\*]**
 
-The Hydro Feature schema provides a model to identify hydrologic features by topology and hydrologic significance, expressed in typical relationships, and propose a pattern to assign to hydrologically determines features names given in international and multilingual contexts. Making the relationships between identified features expressible in a standard form allows the hydrosphere to be divided into a hierarchy of hydrologically connected catchments, and the appearing network phenomena to be visualised, irrespective of the various spatial or temporal representations available for these phenomena. 
+The Hydro Feature schema provides a model to identify hydrologic features by topology and hydrologic significance, and provides a standard terminology for typical relationships. Making the relationships between identified features expressible in a standard form allows the hydrosphere to be expressed in a consistent way across multiple data products, irrespective of the various spatial or temporal representations available for these phenomena. 
 
-The Hydro Feature schema models the multiple representation of a catchment unit of study shared across sub-domains (see section 6.2 of this standard), even if a particular representation refer only to one or the other. Catchment area, catchment boundary, and linear flowpath as well as the cartographic visualisation of different network views are defined to reflect the most common concepts in use to represent of catchment. 
+The Hydro Feature schema models the multiple representations of a catchment unit of study shared across sub-domains (see section 6.2 of this standard). This representation is typically implemented with geometry attributes, however it is first necessary to define the abstract realization of a catchment. Catchment area, catchment boundary, and linear flowpath as well as the cartographic visualisation of different network views are defined to reflect the most common concepts in use to realize a catchment, and these typical representations of these are defined as geometry attributes of the Feature Types embodying this realization. 
 
 The Hydro Feature schema provides a model for the positioning of features 'on river' referencing an identified location, and propose a (linear) river reference system based on catchment topology and linear geometric representation of a catchment. The referencing along the linear flowpath in a given network of catchments, supports to build hydrographic or channel networks portraying this catchment, and to   visualise these network views using an appropriate geometric representation. 
-
-The Hydro Feature schema contains five leaf packages: HY_NamedFeature, HY_Catchment, HY_HydrographicNetwork, HY_RiverPositioning, HY_Storage. Informative packages outlining atmospheric hydrologic features and subsurface hydrologic features are provided in Annex AAA  as a simple means to take such features in account in respect of the hydrosphere complex. A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development. **[\*\*\* insert reference to GWML2\*\*\*]**
+ **[\*\*\* insert reference to GWML2\*\*\*]**
 
 | **Requirements Class** | [/req/hy_abstract/*] (/req/hy_abstract/*) |
 | --- | --- |
