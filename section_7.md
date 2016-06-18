@@ -4,11 +4,14 @@
 
 This standard defines the HY_Features conceptual model as a standard for the identification and description of hydrologic features reflecting both hydrologic significance as well as topological connectivity of hydrologic features. The fundamental relationships between the major components of the hydrosphere are conceptualised to formally describe the hydrosphere as an hierarchical network of hydrologically connected catchments, and the appearing network phenomena to be visualised, irrespective of the various spatial or temporal representations available for these phenomena. 
 
-Core concepts are that of a multiple represented catchment, of catchment topology and hierarchy, of aggregation and segmentation of watercourses, and the simple river positioning. A topological concept is provided to consider any location on, or projected onto, the land surface as the inflow or outflow node of a corresponding catchment. Located in the catchment network, alternative representations may reference that identifiable location. A simple river reference system is provided to support the positioning of features based on catchment topology. It can be used to place an arbitrary location considered to be inflow or outflow node of a catchment along the linear catchment representation.
+Core concepts are that of a an abstract catchment with many possible 'realizations', of catchment topology and hierarchy, of aggregation and segmentation of watercourses, and positioning on a river using a nominal main flow path. 
 
-Module identification aims to simplify the scope of each part of the conceptual model in order to improve its accessibility and to provide scope for testing. It is intended that implementations need to consider only those parts of the common model implicated by its scope. Table 1 lists the applications schema, the leaf packages included and the concepts reflected therein. An (informative) utilities package contains common concepts required by the hydrologic feature model but which are not hydrology-specific. It is expected that future evolution of the ISO standards will provide a replacement for these components. At that point this module can be replaced with references to the more general concept.
+Geographic locations are extended with topological attibutes to describe any location on, or projected onto, the land surface as the inflow or outflow node of a corresponding catchment. 
 
-Table 1: HY_Features modules, packages and concepts reflected
+The conceptual model is implemented in several discrete modules. It is intended that implementations need to consider only those parts of the common model required by a particular implementation scope. Table 1 lists the applications schema, the leaf packages included and the concepts reflected therein. 
+_[Revisit - leave in model or reword this An (informative) utilities package contains common concepts required by the hydrologic feature model but which are not hydrology-specific. It is expected that future evolution of the ISO standards will provide a replacement for these components. At that point this module can be replaced with references to the more general concept.]_
+
+Table 1: HY_Features modules, packages and concepts
 
 |Application schema | Concepts reflected | Leaf packages included |
 | --- | --- | --- |
@@ -28,13 +31,16 @@ Figure 16: HY_Features modules and packages
 
 ### 7.2	The HY_Features conceptual conformance (mapping)
 
-Conceptual conformance to the HY_Features model is a matter of being able to unambiguously identify what elements of an implementation schema map to the HY_Features model, and the ability to populate all mandatory elements of the Feature Types present in such mappings. 
+The HY_Features model is a 'conceptual model', not intended as a directly implementable model for data exchange or persistence. The conformance target of the HY_Feature model is therefore a logical model of an implementation that encodes aspects of the HY_Features model. 
 
-The HY_Features conceptual model provides the basis for determining whether two references to hydrologic features are references to the same feature, i.e. to determine with what object types the identifiers and names may be assigned, and how to distinguish between the reference concept (e.g. a catchment) and its representation (e.g. flowpath, catchment area or boundary). 
+Conformance to the HY_Features model is a matter of being able to unambiguously identify what elements of an implementation schema map to the HY_Features model, and inclusion of all mandatory properties of the HY_Feature defined Feature Types in such mappings. 
 
-Disparate systems describing hydrologic features may be mapped to the equivalent HY_Features definitions to disambiguate the local usage of terminology and specific implementation choices made. Equivalence here aims to the compatibility of concepts, i.e. the logical similarity which is usually an assessment based on text analyses whereby the referenced concept is considered to be the "lowest common ancestor" of the implementation concept in such a way that the essential properties are met but may be specialized in the relevant context.
+The HY_Features conceptual model provides the basis for determining whether two references to hydrologic features are references to the same feature, i.e. to specify the real world type of features independent of the implementation schema used. Specifically, it provides the means to distinguish between the reference concept (e.g. a catchment) and its realizations as geographic features (e.g. flowpath, catchment area or boundary), and hence to declare that different realizations share common concept of hydrological connectivity. 
 
-An implementation schema conforming to HY_Features shall provide a formal mapping from one or more Feature Types present in the implementation schema to Feature Types defined in this standard specification, including all mandatory properties defined by the realized HY_Features concept. Default values to be assumed must be specified in this mapping. Note that use of a formal encoding of HY_Features, in conjunction with conformance to */req/hy_features_conceptual_model/encoding* constitutes such a formal mapping. **[ \*\*\* ?? remove last sentence, since GML encoding is not longer in scope \*\*\*]** 
+Disparate systems describing hydrologic features may be mapped to the equivalent HY_Features definitions to disambiguate the local usage of terminology and specific implementation choices made. 
+
+Note that a direct encoding of HY_Features to an implementation platform such as RDF MAY implement such a mapping through annotation or direct correspondance of names to the HY_Feature elements.
+
 
 | **Requirements Class** | [/req/hy_features_conceptual_model](/req/hy_features_conceptual_model) |
 | --- | --- |
@@ -43,22 +49,13 @@ An implementation schema conforming to HY_Features shall provide a formal mappin
 | Dependency | [/iso/19109/] (https://inspire-twg.jrc.it/svn/iso) |
 | Requirement | [/req/ hy_features_conceptual_model/mapping] (/req/ hy_features_conceptual_model/mapping) |
 
+**[ this text needs to go in the requirement... 
+An implementation schema conforming to HY_Features SHALL provide a formal mapping from one or more Feature Types present in the implementation schema to Feature Types defined in this standard specification, including all mandatory properties defined by the realized HY_Features concept. Default values to be assumed must be specified in this mapping. ]***
+
+
 ### 7.3	The HY_Features data conformance (encoding) 
 
-Conformance to the HY_Features model with respect to the data refers to the encoding of the HY_Features concepts.  Designed conform to the General Feature Model - GFM (ISO19109:2006), the conceptual model defines hydrologic features representing the general “FeatureType” as of GFM. Consequently, each feature addressed in the requirements shall be understood as an instance of the GF_FeatureType (aka FeatureType) «metaclass». 
-
-An implementation schema using Feature Types defined using the namespace of a formal encoding of HY_Features shall conform to the requirements specified by that encoding, as defined by the relevant part of HY_Features specification (e.g. HY_Features Part 2: GML encoding) **[(\*\*\* !!! Rob: please review, if still useable to describe conceptual conformance target \*\*\*]** - 
-
-| **Requirements Class** | [/req/hy_features_conceptual_model](/req/hy_features_conceptual_model) |
-| --- | --- |
-| Target type | Implementation Schema |
-| Name | HY_Features Conceptual Conformance |
-| Dependency | [/iso/19109/] (https://inspire-twg.jrc.it/svn/iso) |
-| Requirement | [/req/ hy_features_conceptual_model/encoding] (/req/ hy_features_conceptual_model/encoding) |
-
-Feature **identifiers** present in data encoded using a HY\_Features conformant implementation schema shall be identical wherever the same Feature instance is being encoded or referenced. This specifically applies to data available in multiple related datasets or exposed by multiple service interfaces.
-
-Regarding **completeness**, all mandatory properties defined by a Feature Type defined in HY\_Features shall be present for each Feature instance encoded by a conformant implementation schema.
+As a conceptual model HY_Features does not specify conformance requirements regarding the structure of possible encodings. It does however specify that equivalence of feature instances can be expressed. The requirement that arises is therefore that the content of feature identification elements can be matched between implementations. This does not demand the use of identical identifiers across different implementations, but it does require that implementations provide a mechanism to match identifiers from different schemes.
 
 | **Requirements Class** | [/req/hy_features_content] (/req/hy_features_content) |
 | --- | --- |
@@ -69,10 +66,8 @@ Regarding **completeness**, all mandatory properties defined by a Feature Type d
 | Dependency | [/iso/19150/](https://inspire-twg.jrc.it/svn/iso) |
 | Dependency | [/iso/19136/](https://inspire-twg.jrc.it/svn/iso) |
 | Requirement	| [/req/ hy_features_conceptual_model/identifiers] (/req/ hy_features_conceptual_model/identifiers) |
-| Requirement	| [/req/ hy_features_conceptual_model/completeness] (/req/ hy_features_conceptual_model/completeness) |
 
-**[\*\*\* !!! Rob, review, whether an encoding requirement is still in scope !!! \*\*\*]**
-**[\*\*\* !!! Rob, review this comment from an earlier version: How to handle default values – in-schema??? \*\*\* is this till valid ?]**
+Implementations of HY_Features SHALL either use common identifiers for instances of Feature Types mapped to the same underlying HY_Features Feature Type, OR provide a mechanism to match identifiers from different identification schemes.
 
 ### 7.4 The Hydro Feature application schema
 
