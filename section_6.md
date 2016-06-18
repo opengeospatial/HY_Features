@@ -34,7 +34,7 @@ Across hydrologic disciplines the concept of catchment defined in this standard 
 <img src="http://opengeospatial.github.io/HY_Features/figs/fig4a.svg" width="150"> <img src="http://opengeospatial.github.io/HY_Features/figs/fig4b.svg" width="150"> <img src="http://opengeospatial.github.io/HY_Features/figs/fig4c.svg" width="150">  
 
 <img src="http://opengeospatial.github.io/HY_Features/figs/fig4d.svg" width="150"> <img src="http://opengeospatial.github.io/HY_Features/figs/fig4e.svg" width="150"> <img src="http://opengeospatial.github.io/HY_Features/figs/fig4f.svg" width="150">  
-Figure 4: Multiple graphical realizations representing a catchment: a) Catchment boundary, b) Catchment area, c) Hydrologic unit containing sub-units, d) Abstract flow line and common outlet, e) Network of flow lines at different level of detail, f) Network of logically connected monitoring stations  
+Figure 4: Multiple graphical realizations representing a catchment: a) Catchment boundary, b) Catchment area, c) network of sub catchments, d) catographic view, e) abstract flow paths, f) Network of logically connected monitoring stations  
 
 Each of these graphical realizations are a different way of looking at the catchment and its interaction with other features. It is generally not possible to inspect a particular realization and understand all characteristics of the catchment because different types of features are often realized using identical data models. For example, a map showing a set of catchment polygons may display an aggregate of sub-catchments, or a collection of catchment polygons that overlap each other occupying the same space. In order to understand what catchment concept is being realized, the more detailed information about their type and role in a data model needs to be declared. These relationships and potentially constraints may be declared between a high-order catchment and the catchments generally nested therein, or between a aggregate network of catchments that encompasses nested catchments without any overlap, or the upstream-downstream direction of flow for a set of catchment polygons.
 
@@ -52,16 +52,16 @@ Figure C1-5: C1, Typical catchments with one inflow and one outflow each; C2, Jo
 Any catchment may be nested or aggregated in a larger containing catchment or split into multiple sub units forming a hierarchy of catchments. Two types of catchment hierarchy are supported in HY\_Features: basic nesting and dendritic aggregation. 1) Basic nesting allows any catchment to have a reference to a containing catchment (Figure 6). This allows collections of subcatchments to be grouped into larger units, but does not define any particular interconnections between these subcatchments. 2) Dendritic hierarchies are collections of catchments with simple topological relationships that allow determination of contribution of flow to downstream catchments. To reflect the organization of catchments in dendritic networks, a special dendritic catchment is defined that permanently contributes exorheic flow to a receiving catchment(Figure 7), and an interior catchment of endorheic flow that contributes temporarily to a receiving catchment. 
 
 <img src="http://opengeospatial.github.io/HY_Features/figs/fig6.svg" width="250">  
-Figure 6: Catchment hierarchy – A catchment (dark grey) may be nested within a containingCatchment which is another catchment (light grey)
+Figure 6: Catchment hierarchy – A catchment (dark grey) may be nested within a containing catchment which is another catchment (light grey)
 
 <img src="http://opengeospatial.github.io/HY_Features/figs/fig7.svg" width="250">  
-Figure 7: Catchment hierarchy – A dendritic catchment (dark grey) may be part of an encompassing catchment aggregate which is another specialized type of catchment (light grey) 
+Figure 7: Catchment hierarchy – A catchment (dark grey) may be part of a simple dendritic network of catchments which is also a catchment. 
 
 #### 6.3.2 Topological network of catchments
 Given the idea that a non-geospatial schematic representation of a feature can show its connection in a topological network, a catchment can be thought of as a hydrologic unit whose terrain and morphology results in a topological link between inflow and outflow. The red line in Figure 5 illustrates how a single catchment, represented by a boundary, an area, a stream network, and a main flowline, can also be represented using a straight line that is not geospatially representative but is a valid schematic representation of the connection between inflow and outflow.
 
 <img src="http://opengeospatial.github.io/HY_Features/figs/fig5.svg" width="250">  
-Figure 5: A catchment area (blue) and a flowpath connecting inflow to outflow (red) representing a definable unit where hydrological processes take place. 
+Figure 5: A catchment area (grey) and a flowpath connecting inflow to outflow (red) depicting a definable unit where hydrological processes take place. 
 
 In this network of catchments, two or more catchments that flow into another, flow to the same outflow node (Figure 8) which is the inflow node of a receiving downstream catchment (Figure 9); the upstream catchment may be understood as the catchment contributing flow to the inflow node of a receiving catchment. In a network of dendritic catchments, outflow nodes on the network serve only one receiving catchment (Figure 8 and Figure 9).  
 
