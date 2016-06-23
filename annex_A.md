@@ -9,9 +9,7 @@ These test suites ascertain the compliance of the conformance targets for the HY
 | --- | --- | 
 | Test | [/conf/uml_hydrofeature/namedfeature/*] (/conf/uml_hydrofeature/namedfeature/*) | |
 | Test | [/conf/uml_hydrofeature/catchment/*] (/conf/uml_hydrofeature/catchment/*) | |
-| Test | [/conf/uml_hydrofeature/network/*] (/conf/uml_hydrofeature/network/*) | |
 | Test | [/conf/uml_hydrofeature/positioning/*] (//conf/uml_hydrofeature/positioning/*) | |
-| Test | [/conf/uml_hydrofeature/storage/*] (/conf/uml_hydrofeature/storage/*) | |
 | Requirement | All relevant elements of a data exchange schema including hydrologic features are mapped to equivalent HY_Features elements. |
 | Test purpose | All relevant elements of a data exchange schema including hydrologic features are mapped to equivalent HY_Features elements. |
 | Test method | Inspect the mapping between the data exchange schema and the HY_Features model to determine that all relevant schema elements are mapped to HY_Features equivalents. |
@@ -22,7 +20,8 @@ These test suites ascertain the compliance of the conformance targets for the HY
 | **Conformance Class** | [/ spec/hydrology/surfacehydrofeature/1.0/conf/hy_ surfacehydrofeature] (/ spec/hydrology/surfacehydrofeature/1.0/conf/hy_ surfacehydrofeature) | 
 | --- | --- |
 | Test | [/conf/uml_surfacehydrofeature/surfacewater/*] (/conf/uml_surfacehydrofeature/surfacewater/*) |
-| Test | [/conf/uml_surfacehydrofeature/surfacewaterconfines/*] (/conf/uml_surfacehydrofeature/surfacewaterconfines/*) |
+| Test | [/conf/uml_surfacehydrofeature/network/*] (/conf/uml_surfacehydrofeature/network/*) | |
+| Test | [/conf/uml_surfacehydrofeature/storage/*] (/conf/uml_surfacehydrofeature/storage/*) | |
 | Requirement | All relevant elements of a data exchange schema including hydrologic features are mapped to equivalent HY_Features elements. |
 | Test purpose | All relevant elements of a data exchange schema including hydrologic features are mapped to equivalent HY_Features elements. |
 | Test method | Inspect the mapping between the data exchange schema and the HY_Features model to determine that all relevant schema elements are mapped to HY_Features equivalents. |
