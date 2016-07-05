@@ -1,4 +1,4 @@
-## ANNEX E - Code lists required for the HY_Features model (informative) 
+## ANNEX E - Code lists for the HY_Features model
 ### E.1 Terms identifying a fixed landmark determined as reference point
 
 | Codelist | **Reference Point Typ** |
