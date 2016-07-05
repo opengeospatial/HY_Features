@@ -1,20 +1,8 @@
 # HY_Features Repository
 
-This repository is currently used to host a GitHub Pages view of the HY\_Features model as well as a rough draft of the specification document.
+This repository is currently used to host a GitHub Pages view of the HY\_Features model as well as a draft of the specification document.
 
-**Please read the how to contribute section below before proceeding!**
-
-## Links to Packages in the GitHub Pages view of the application:
-### Normative:
-[HY\_HydroFeature](http://opengeospatial.github.io/HY_Features/HTML_HYF/HY_HydroFeature/index.htm)  
-[HY\_Utilities](http://opengeospatial.github.io/HY_Features/HTML_HYF/HY_Utilities/index.htm)  
-[HY\_SurfaceHydroFeature](http://opengeospatial.github.io/HY_Features/HTML_HYF/HY_SurfaceHydroFeature/index.htm)  
-[HY\_HydrometricNetwork](http://opengeospatial.github.io/HY_Features/HTML_HYF/HY_HydrometricNetwork/index.htm)  
-
-### Informative:
-[HY\_AtmoshericHydroFeature](http://opengeospatial.github.io/HY_Features/HTML_HYF/HY_AtmoshericHydroFeature/index.htm)  
-[HY\_Features\_Model](http://opengeospatial.github.io/HY_Features/HTML_HYF/HY_Features_Model/index.htm)  
-[HY\_SubsurfaceHydroFeature](http://opengeospatial.github.io/HY_Features/HTML_HYF/HY_SubsurfaceHydroFeature/index.htm)  
+## [See The Repository WIKI for links to the model HTML.](https://github.com/opengeospatial/HY_Features/wiki)
 
 ## How to Contribute:
 
