@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>RiverPositioningSystem</title>
+<title></title>
 <link href="../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("RiverPositioningSystem", " : "))</script>  : Public  &lt;&lt;leaf&gt;&gt; Package</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("", " : "))</script>  : Public   Note</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">25/11/2011 09:37:39</td>
+			<td width="85%" class="ObjectDetailsValue">08/07/2016 08:46:54</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">23/06/2016 14:52:04</td>
+			<td class="ObjectDetailsValue">08/07/2016 08:51:51</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -55,7 +55,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
-			<td class="ObjectDetailsValue">0.0.4</td>
+			<td class="ObjectDetailsValue">1.0</td>
 		</tr>
 		<tr id="proj02" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
@@ -87,54 +87,15 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{CD488F0F-9270-472d-8EBE-67B6FCB12AB3}</td>
+			<td class="ObjectDetailsValue">{35380F99-CA6A-4714-93D7-B5F605FEA510}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"></td>
+			<td class="ObjectDetailsValue"><a href="EA7.htm">CatchmentRealisation_all</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The River Positioning model provides a simple model to place a feature of interest &#39;along a river&#39; via topology and geometry (see section 6.4). River Positioning introduces the concept of Indirect Position where a position is determined on the linear represention of the catchment between the feature of interest and an identified reference location as absolute distance, relative or interpolative to the latter. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This concept uses a (linear) river reference system whose origin is set at the topological outfall of the catchment that corresponds to the feature of interest, and whose linear shape is given by the flowpath in direction of the reference location (referent), starting at this origin (located start of the flowpath) and ending at that outfall which is marked by the reference location (known end of the flowpath). Each catchment connecting inflow node and outflow node has its own reference system which can be combined as necessary using catchment topology; each river reference system must have one outfall (origin) and one representing flowpath (shape).&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">DRAFT: &lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_HydroComplex package defines the union between catchment and its common outlet, the relationships between catchments&#160; as well as the multiple realisation of catchments. The catchment model conceptualize the &#8216;idea&#8217; of a catchment wherein water occurs between inflow and outflow locations understood as boundaries of the catchment inside.&#160; It refers to the common, holistic approach of a catchment drained using a connecting system of drainage channels. The catchment realization model defines the realizations of the conceptual catchment most common in the hydrology domain and the relationships between them. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The catchmentmodel defines an hierarchical network of catchments that may be understood as an aggregate of catchments within an ultimate containing catchment, whose inflow and outflow forms the boundary for all encapsulated parts. Each catchment is defined as an indivisible union (topological closure) of the catchment and its outfall in the role as inflow or outflow of the corresponding catchment, or both. This means that there exists no outfall without a catchment, and no catchment without outfall, even if it may have a zero value. The outfall of the catchment is always of lower topological dimension than the catchment inside, e.g. a catchment understood as a topological edge is &#39;bounded&#39; by inflow and/or outflow nodes, a catchment understood a face by summit line and/or flowline edges.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Each catchment may be multiple realized in any hydrologically meaningful sub-domain model. The catchment model defines most common types such as flowpath, catchment area and catchment boundary as the&#160; basic realizations of the catchment topology as well as&#160; a network realizing the catchment network.&lt;br /&gt;&lt;/p&gt;</div>
 
-	<div class="TableGroup" id="TableGroup">
-		<ul class="ItemTitle">
-			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
-		</ul>
-<div class="ItemBody" id="TaggedValTable">
-	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
-		<tr>
-			<td width="50%" class="TableHeading">Tag</td>
-			<td width="50%" class="TableHeading">Value</td>
-		</tr>
-					<tr>
-				<td width="50%" class="TableRow" valign="top">xsdDocument</td>
-				<td width="50%" class="TableRow" valign="top">hy_positioning.xsd</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario4" onclick="parent.toggleDiv('detailsDIVScenario4','DetailsImageScenario4')" />Details:
-						<div id="detailsDIVScenario4" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Default: FIXME<br />Description: Name of an XML Schema document to create representing the content of this package<br /></div>
-
-						</div>
-					</div>
-				</td>
-			</tr>			<tr>
-				<td width="50%" class="TableRow" valign="top">xsdEncodingRule</td>
-				<td width="50%" class="TableRow" valign="top">iso19136_2007</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario5" onclick="parent.toggleDiv('detailsDIVScenario5','DetailsImageScenario5')" />Details:
-						<div id="detailsDIVScenario5" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: iso19136_2007 | iso19139_2007 | iso19136_2007_INSPIRE_Extensions<br />Default: iso19136_2007<br />Description: XML Schema encoding rule to apply<br /></div>
-
-						</div>
-					</div>
-				</td>
-			</tr>
-	</table>
-</div>	</div>
 <div class="pageFooter"></div>
  
 </body>
