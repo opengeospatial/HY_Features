@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Catchment::HY_InteriorCatchment</title>
+<title>HydroComplex::HY_SimpleCatchmentNetwork</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_InteriorCatchment", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_SimpleCatchmentNetwork", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">07/03/2016 09:33:18</td>
+			<td width="85%" class="ObjectDetailsValue">14/09/2010 07:44:45</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">16/06/2016 15:32:29</td>
+			<td class="ObjectDetailsValue">30/06/2016 15:36:25</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,22 +87,21 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{E19DBC78-21C6-46af-A474-647E243FD1DA}</td>
+			<td class="ObjectDetailsValue">{F3B49990-34AF-437f-9016-59500DAA097B}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">hyf107, <a href="../EA11.htm">Hydro Feature Special</a>, <a href="../EA3.htm">overallOverview</a>, <a href="EA30.htm">Catchment Hierarchy</a>, <a href="EA24.htm">Catchment Model</a>, <a href="EA54.htm">Context Diagram : HY_SimpleCatchmentNetwork</a>, <a href="EA34.htm">Context Diagram : HY_Catchment</a>, <a href="EA46.htm">Context Diagram : HY_InteriorCatchment</a></td>
+			<td class="ObjectDetailsValue">Catchment hierarchy, hyf107, catchmentnetwork, <a href="../EA17.htm">Hydro Feature Special</a>, <a href="../EA5.htm">overallOverview</a>, <a href="EA46.htm">Catchment Hierarchy</a>, <a href="EA42.htm">CatchmentModel</a>, <a href="EA40.htm">allClass Diagram</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">special catchment wherein all waters are collected endorheic, and not connected to other catchments. It may be surrounded by enveloping catchments to which it may contribute depending on the flow conditions. </div>
+	<div class="ObjectDetailsNotes">high level hierarchy containing a network of catchments, an aggregate of discrete upper-level systems that are hydrologically discrete. Typically, this will be a river system flowing into a sea or an internal sink. </div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
-			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
-			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
 			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
-		<div class="ItemBody" id="AssociationsToTable">
+		<div class="ItemBody" id="AssociationsFromTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
 					<td width="40%" class="TableHeading">Element</td>
@@ -111,12 +110,36 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA56.htm">«FeatureType» HY_SimpleCatchmentNetwork</a><br />
+						<a href="EA55.htm">«FeatureType» HY_DendriticCatchment</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> exorheicDrainage<br />
+						water ultimately drained to the ocean.
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> encompassingCatchment<br />
+						catchment encompassing one or more exorheic drained sub-catchments.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink76" onclick="parent.toggleDiv('detailsDIVLink76','DetailsImageLink76')" />Details:
+							<div id="detailsDIVLink76" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">upstream containment hierarchy of catchments and sub-catchments</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA59.htm">«FeatureType» HY_InteriorCatchment</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> endorheicDrainage<br />
-						sub catchment which is drained endorheic.
+						water ultimately drained to an internal sink (blind drainage).
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> envelopingCatchment<br />
@@ -125,32 +148,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink38" onclick="parent.toggleDiv('detailsDIVLink38','DetailsImageLink38')" />Details:
-							<div id="detailsDIVLink38" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-
-			</table>
-		</div>
-		<div class="ItemBody" id="ConstraintsTable">
-			<table border="0" cellspacing="0" cellpadding="0" class="Table">
-			  	<tr>
-					<td width="80%" class="TableHeading">Constraint</td>
-					<td width="10%" class="TableHeading">Type</td>
-					<td width="10%" class="TableHeading">Status</td>
-				</tr>
-				<tr>
-					<td width="80%" class="TableRow">outflowNode:0</td>
-					<td width="10%" class="TableRow">Invariant</td>
-					<td width="10%" class="TableRow">Approved</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints39" onclick="parent.toggleDiv('detailsDIVConstraints39','DetailsImageConstraints39')" />Details:
-							<div id="detailsDIVConstraints39" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink77" onclick="parent.toggleDiv('detailsDIVLink77','DetailsImageLink77')" />Details:
+							<div id="detailsDIVLink77" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
@@ -168,15 +167,21 @@ function nameClassifier(name, separator)
 					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA57.htm">«FeatureType» HY_Catchment</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA55.htm">«FeatureType» HY_DendriticCatchment</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
-					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="15%" class="TableRow" valign="top">Weak</td>
+					<td width="40%" class="TableRow" valign="top">upstream containment hierarchy of catchments and sub-catchments</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA59.htm">«FeatureType» HY_InteriorCatchment</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Weak</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA56.htm">«FeatureType» HY_SimpleCatchmentNetwork</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA51.htm">«FeatureType» HY_Catchment</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
-					<td width="15%" class="TableRow" valign="top">Weak</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
 				</tr>
 

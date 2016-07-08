@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_HydrographicNetwork::HY_CrossSection</title>
+<title>RiverPositioningSystem::HY_IndirectPosition</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_CrossSection", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_IndirectPosition", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">06/09/2010 10:50:20</td>
+			<td width="85%" class="ObjectDetailsValue">22/06/2010 09:55:01</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">16/06/2016 09:07:06</td>
+			<td class="ObjectDetailsValue">30/06/2016 10:57:17</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,20 +87,131 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{3E6996FB-87DB-4e41-BA59-CD0A304CFE24}</td>
+			<td class="ObjectDetailsValue">{62A4DBD2-8FB5-4489-AE38-E5EC4723D314}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Waterbody - Channel, ChannelNetwork_extended, <a href="../EA1.htm">overallOverview</a>, <a href="../EA7.htm">TopographicRealisation</a>, <a href="EA71.htm">Hydrographic Network_extended</a>, <a href="EA69.htm">WaterBodyPart_extended</a>, <a href="EA53.htm">Context Diagram : HY_CrossSection</a>, <a href="EA65.htm">Context Diagram : HY_WaterBodyPart</a></td>
+			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, informative, ChannelNetwork_extended, <a href="../EA5.htm">overallOverview</a>, <a href="../EA1/EA44.htm">Catchment Topology</a>, <a href="EA69.htm">River Positioning</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">vertical section of an object at right angles to the main (average) direction of flow. - the geometric representation (plane or space curves, polygon) may vary with application and needs to be defined there.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Taking into account the separation of a watercourse into water body and confining structure, this concept applies to both the (blue) stream cross section at right angles to the main (average) direction of flow, as well as to the transversal bed profile (shape) of a stream bed in a vertical plane.&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">indirect position, either expressed as the distance to a reference point or as position relative to a reference point or to the distance (interpolative).&#160; &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: This type may use ISO 19148: LinearReferencing understanding the indirect position as the location associated with an Outfall (understood as an event in terms of ISO 19148), providing a distance absolute, relative or interpolative to a reference location identified by coordinates (in terms of the referent).&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
 			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
 			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
 		</ul>
+<div class="ItemBody" id="AttributesTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="100%" class="TableHeading">Attribute</td>
+		</tr>
+						<tr>
+				<td width="100%" class="TableRow">
+					<i>Public <a href="EA72.htm">HY_DistanceToRefPoint</a></i><br /><strong>&nbsp;&nbsp;absolute</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes92')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes92" border="0" />Details:
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes92_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes92_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes92_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes92_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes92_03" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to 1</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=1<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			distance (length) to the identified reference point. In case of a direct position (when coordinates are known) the distance to the reference point equals to 0.00. 
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public <a href="EA74.htm">HY_RelativePosition</a></i><br /><strong>&nbsp;&nbsp;relative</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes93')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes93" border="0" />Details:
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes93_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes93_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes93_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes93_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes93_03" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to 1</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=2<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			position relative to the identified reference point.
+		</td>
+	</tr>
+</table></div>
+
+						<i>Constraints:</i><br><span style= "margin-left: .5cm;">&nbsp; distanceToRefPoint not documented </span>
+<table>
+	<tr>
+		<td>
+			<span style= "margin-left: 1.5cm;"> <span>
+		</td>
+		<td>
+			&nbsp;
+		</td>
+	</td>
+</table> 
+				</td>
+			</tr>
+	</table>
+</div>
 		<div class="ItemBody" id="AssociationsToTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
@@ -110,7 +221,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA1/EA40.htm">«FeatureType» HY_ReferenceLocation</a><br />
+						<a href="EA75.htm">«FeatureType» HY_RiverReferenceSystem</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -118,15 +229,39 @@ function nameClassifier(name, separator)
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> crossSectionPoint<br />
-						point on the cross section referenced by coordinates.	
+						<strong>Name:</strong> riverReferenceSystem<br />
+						linear river reference system applied. This supports to place a feature of interest using the linear flowpath representing the catchment whose outfall marks the located start of the 'drawn' flowpath.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink81" onclick="parent.toggleDiv('detailsDIVLink81','DetailsImageLink81')" />Details:
-							<div id="detailsDIVLink81" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">point located on the cross-section. </div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink94" onclick="parent.toggleDiv('detailsDIVLink94','DetailsImageLink94')" />Details:
+							<div id="detailsDIVLink94" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">linear reference system used for positioning.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA1/EA62.htm">«FeatureType» HY_OutfallRealisation</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> referent<br />
+						permanent referent located in the network of catchments as outfall (referent in terms of ISO 19148). This allows to place an arbitrary feature of interest using catchment topology. If required, this association shall be used to identify the location relative to which a position is assigned to the outfall.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink95" onclick="parent.toggleDiv('detailsDIVLink95','DetailsImageLink95')" />Details:
+							<div id="detailsDIVLink95" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">location to which the position refers to.</div>
 
 							</div>
 						</div>
@@ -144,7 +279,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA79.htm">«FeatureType» HY_WaterBodyPart</a><br />
+						<a href="../EA1/EA60.htm">«FeatureType» HY_Outfall</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -152,16 +287,15 @@ function nameClassifier(name, separator)
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> streamCrossSection<br />
-						vertical section of a stream at right angles to the main (average) direction of flow.
-(Source: cross section. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0276EN.HTM)	
+						<strong>Name:</strong> relativePosition<br />
+						position of outfall in the hydrographic network relative to a reference location fixed by coordinates.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink82" onclick="parent.toggleDiv('detailsDIVLink82','DetailsImageLink82')" />Details:
-							<div id="detailsDIVLink82" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">vertical section of the water body segment in transversal direction.</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink96" onclick="parent.toggleDiv('detailsDIVLink96','DetailsImageLink96')" />Details:
+							<div id="detailsDIVLink96" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">relative position of the outfall in the hydrologic network. </div>
 
 							</div>
 						</div>
