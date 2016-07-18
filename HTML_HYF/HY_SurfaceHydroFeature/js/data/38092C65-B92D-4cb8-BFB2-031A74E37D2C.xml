@@ -1,2 +1,2 @@
-tocTab[tocTab.length] = new Array("0.4:1", "", "Storage_ext", "EARoot/EA4/EA35.htm", "175.png", "5164", "0", "", "Diagram diagram0","{4DB50E5B-29E7-4f5e-9881-C4685CC40770}");
-tocTab[tocTab.length] = new Array("0.4:2", "", "«FeatureType» HY_Reservoir", "EARoot/EA4/EA37.htm", "5.png", "11344", "0", "", "Class0","{E07A08BD-9953-4354-ACD1-9E3D8CBAA512}");
+tocTab[tocTab.length] = new Array("0.4:1", "", "Storage_ext", "EARoot/EA4/EA31.htm", "175.png", "5312", "0", "", "Diagram diagram0","{4DB50E5B-29E7-4f5e-9881-C4685CC40770}");
+tocTab[tocTab.length] = new Array("0.4:2", "", "«FeatureType» HY_Reservoir", "EARoot/EA4/EA33.htm", "5.png", "11785", "0", "", "Class0","{E07A08BD-9953-4354-ACD1-9E3D8CBAA512}");
