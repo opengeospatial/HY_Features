@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_HydrometricNetwork::HY_HydrometricFeature</title>
+<title>HY_HydrometricNetwork::HY_HydrometricNetwork</title>
 <link href="../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_HydrometricFeature", " : "))</script> WaterObservationFeature : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_HydrometricNetwork", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">14/09/2010 11:43:55</td>
+			<td width="85%" class="ObjectDetailsValue">13/02/2009 15:03:47</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">30/06/2016 13:18:08</td>
+			<td class="ObjectDetailsValue">18/07/2016 08:51:14</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,21 +87,22 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{BB084F13-AED3-4c9d-9E8F-2C46B9CBC703}</td>
+			<td class="ObjectDetailsValue">{5D9E5E19-3F78-4eb2-94E3-74D083F92886}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, Network represents DendriticCatchment, <a href="EA3.htm">HydrometricFeature_extended</a>, overallOverview, CatchmentRealisation_all, HydrometricNetworkRealisation</td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, overallOverview, CatchmentRealisation_all, <a href="EA3.htm">HydrometricFeature_ext</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">hydrometric station which is identified part of a network (of at least one station), and may be disjoined into segments. Even if the hydrometric feature may be understood in sense of a sampling feature used for observation, there is no other significance outside the hydrometric network. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This definition refers to a station at which data on water in rivers, lakes or reservoirs are obtained on one or more of the following elements: stage, streamflow, sediment transport and deposition, water temperature and other physical properties of water, characteristics of ice cover and chemical properties of water.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;(Source: station. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0627EN.HTM)&lt;/i&gt;&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">catchment realisation, specifically as an aggregate of logically connected monitoring stations, incl. an aggregate of geometric points. If the realised catchment is connected with other catchments via outfall, the network stations are considered connected.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: This definition is rooted in the definition given in the WMO Glossary of hydrology which defines the channel network as an aggregate of natural or man-made channels regardless of their location in respect to the Earth&#39;s surface. For the purpose of testing the applicability of the conceptual model in the context of surface water hydrology, &#39;hydrometric network&#39; in this standard refers to a network of stations obtaining data on surface water.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
-			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
 			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
-		<div class="ItemBody" id="AssociationsToTable">
+		<div class="ItemBody" id="AssociationsFromTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
 					<td width="40%" class="TableHeading">Element</td>
@@ -110,12 +111,12 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA7.htm">«FeatureType» HY_HydrometricNetwork</a><br />
+						<a href="EA5.htm">«FeatureType» HY_HydrometricFeature</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> networkStation<br />
-						aggregated hydrometric feature.
+						monitoring station aggregated in the hydrometric network.
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> hydrometricNetwork<br />
@@ -124,9 +125,34 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageLink0" onclick="parent.toggleDiv('detailsDIVLink0','DetailsImageLink0')" />Details:
-							<div id="detailsDIVLink0" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageLink1" onclick="parent.toggleDiv('detailsDIVLink1','DetailsImageLink1')" />Details:
+							<div id="detailsDIVLink1" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">hydrometric network of one or more hydrometric stations.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ConstraintsTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+			  	<tr>
+					<td width="80%" class="TableHeading">Constraint</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Status</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">outflow node</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints2" onclick="parent.toggleDiv('detailsDIVConstraints2','DetailsImageConstraints2')" />Details:
+							<div id="detailsDIVConstraints2" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">exists positionOnRiver.realisedOutfall,&#160; realisedCatchment.outflow&#160; is of type HY_OutfallRealisation</div>
 
 							</div>
 						</div>
@@ -144,7 +170,7 @@ function nameClassifier(name, separator)
 					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA7.htm">«FeatureType» HY_HydrometricNetwork</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA5.htm">«FeatureType» HY_HydrometricFeature</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Weak</td>
 					<td width="40%" class="TableRow" valign="top">hydrometric network of one or more hydrometric stations.</td>

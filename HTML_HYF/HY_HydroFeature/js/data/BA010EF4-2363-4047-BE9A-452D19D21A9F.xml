@@ -1,5 +1,5 @@
-tocTab[tocTab.length] = new Array("0.1:1", "", "«FeatureType» HY_GravitationalWater", "EARoot/EA1/EA8.htm", "5.png", "17072", "0", "", "Class0","{F286C166-2CC4-4369-826A-2180698DC246}");
-tocTab[tocTab.length] = new Array("0.1:2", "", "«FeatureType» HY_Groundwater", "EARoot/EA1/EA9.htm", "5.png", "17070", "0", "", "Class0","{9A359701-765D-4863-BE3B-4F63F1053CB5}");
-tocTab[tocTab.length] = new Array("0.1:3", "", "«FeatureType» HY_SoilMoisture", "EARoot/EA1/EA10.htm", "5.png", "17069", "0", "", "Class0","{5C5E68B6-AEC7-49e8-8790-F9C78A2DFC52}");
-tocTab[tocTab.length] = new Array("0.1:4", "", "«FeatureType» HY_Soilwater", "EARoot/EA1/EA11.htm", "5.png", "17068", "0", "", "Class0","{26A72F82-CBAB-4b03-9991-0B7B8D6240B5}");
-tocTab[tocTab.length] = new Array("0.1:5", "", "«FeatureType» HY_VadoseWater", "EARoot/EA1/EA12.htm", "5.png", "17071", "0", "", "Class0","{9DF8AD42-FDF6-4361-9D58-0FA45D5A4C52}");
+tocTab[tocTab.length] = new Array("0.1:1", "", "«FeatureType» HY_GravitationalWater", "EARoot/EA1/EA8.htm", "5.png", "10462", "0", "", "Class0","{F286C166-2CC4-4369-826A-2180698DC246}");
+tocTab[tocTab.length] = new Array("0.1:2", "", "«FeatureType» HY_Groundwater", "EARoot/EA1/EA9.htm", "5.png", "10460", "0", "", "Class0","{9A359701-765D-4863-BE3B-4F63F1053CB5}");
+tocTab[tocTab.length] = new Array("0.1:3", "", "«FeatureType» HY_SoilMoisture", "EARoot/EA1/EA10.htm", "5.png", "10459", "0", "", "Class0","{5C5E68B6-AEC7-49e8-8790-F9C78A2DFC52}");
+tocTab[tocTab.length] = new Array("0.1:4", "", "«FeatureType» HY_Soilwater", "EARoot/EA1/EA11.htm", "5.png", "10458", "0", "", "Class0","{26A72F82-CBAB-4b03-9991-0B7B8D6240B5}");
+tocTab[tocTab.length] = new Array("0.1:5", "", "«FeatureType» HY_VadoseWater", "EARoot/EA1/EA12.htm", "5.png", "10461", "0", "", "Class0","{9DF8AD42-FDF6-4361-9D58-0FA45D5A4C52}");

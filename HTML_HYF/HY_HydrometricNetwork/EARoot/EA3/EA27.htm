@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HydrographicNetwork::HY_CrossSection</title>
+<title>HydrographicNetwork::HY_HydrographicNetwork</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_CrossSection", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_HydrographicNetwork", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">06/09/2010 10:50:20</td>
+			<td width="85%" class="ObjectDetailsValue">23/08/2010 11:34:56</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">01/07/2016 12:05:53</td>
+			<td class="ObjectDetailsValue">18/07/2016 12:28:25</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,18 +87,20 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{3E6996FB-87DB-4e41-BA59-CD0A304CFE24}</td>
+			<td class="ObjectDetailsValue">{575E613E-8105-4a81-9E8F-D961EBA90856}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">TopographicRealisation_??, ChannelNetwork_extended, overallOverview, CatchmentRealisation_all, HydrographicNetworkRealisation, ChannelNetworkRealisationl, <a href="../EA3.htm">SurfaceHydroFeature</a>, <a href="../EA2/EA17.htm">ChannelNetwork_ext</a>, <a href="EA24.htm">HydrographicNetwork_ext</a></td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, informative, catchmentnetwork, ChannelNetwork_extended, overallOverview, CatchmentRealisation_all, <a href="../EA3.htm">SurfaceHydroFeature</a>, <a href="EA22.htm">HydrohgraphicNetwork_ext</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">vertical section of a stream or stream bed.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: This definition is rooted in definitions given in the WMO Glossary of hydrology which separately define the cross-section of a stream and the transversal profile of the stream bed. Taking into account that both definitions reference a crossing plane shape, a more general cross-section is defined associated with the water body and the channel. &lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">catchment realisation, specifically as network of permanent or temporary water bodies, incl. their linear representation. If the realised catchment is connected with other catchments via outfall, the network water bodies are also connected.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: This definition is rooted in the definition given in the WMO Glossary of hydrology which defines the channel network as an aggregate of natural or man-made channels regardless of their location in respect to the Earth&#39;s surface. For the purpose of testing the applicability of the conceptual model in the context of surface water hydrology, &#39;hydrographic network&#39; in this standard refers to a network of surface water bodies.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
 		<div class="ItemBody" id="AssociationsFromTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
@@ -109,52 +111,85 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA32.htm">«FeatureType» HY_WaterBody</a><br />
+						<a href="EA29.htm">«FeatureType» HY_WaterBody</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
+						<strong>Name:</strong> networkWaterBody<br />
+						water body aggregated in the hydrographic network. 
+
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> streamCrossSection<br />
-						vertical section of a stream at right angles to the main (average) direction of flow.	
+						<strong>Name:</strong> hydrographicNetwork<br />
+						hydrographic network the water body is part of.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink33" onclick="parent.toggleDiv('detailsDIVLink33','DetailsImageLink33')" />Details:
-							<div id="detailsDIVLink33" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">vertical section of the water body segment in transversal direction.</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink39" onclick="parent.toggleDiv('detailsDIVLink39','DetailsImageLink39')" />Details:
+							<div id="detailsDIVLink39" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">hydrographic network of one or more water bodies.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ConstraintsTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+			  	<tr>
+					<td width="80%" class="TableHeading">Constraint</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Status</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">flowpath</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints40" onclick="parent.toggleDiv('detailsDIVConstraints40','DetailsImageConstraints40')" />Details:
+							<div id="detailsDIVConstraints40" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">EXISTS flowpath, networkWaterBody is of type HY_Flowpath</div>
 
 							</div>
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA2/EA20.htm">«FeatureType» HY_Channel</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> profileTransversal<br />
-						transversal shape of a channel in a vertical plane.
-	
-					</td>
+					<td width="80%" class="TableRow">outflow node</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink34" onclick="parent.toggleDiv('detailsDIVLink34','DetailsImageLink34')" />Details:
-							<div id="detailsDIVLink34" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">vertical section of the channel segment in transversal direction.</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints41" onclick="parent.toggleDiv('detailsDIVConstraints41','DetailsImageConstraints41')" />Details:
+							<div id="detailsDIVConstraints41" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">EXISTS networkWaterBody.fixedLandmark.realisedOutfall, OR&lt;br /&gt;&lt;/p&gt;&lt;p&gt;networkWaterBody.streamCrossSection.crossSectionPoint.realisedOutfall, OR&lt;br /&gt;&lt;/p&gt;&lt;p&gt;networkWaterBody.streamLongitudinalSection.longitudinalSectionPoint.realisedOutfall,&#160; realisedCatchment.outflow&#160; is of type HY_OutfallRealisation&lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
 						</div>
 					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA29.htm">«FeatureType» HY_WaterBody</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Weak</td>
+					<td width="40%" class="TableRow" valign="top">hydrographic network of one or more water bodies.</td>
 				</tr>
 
 			</table>
