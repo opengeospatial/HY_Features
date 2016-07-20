@@ -115,7 +115,11 @@ ISO 19108:2006, Geographic Information — Temporal schema
 
 ISO 19109:2006, Geographic Information — Rules for application schemas
 
+ISO 19111:2007, Geographic Information — Referencing by coordinates
+
 ISO 19115:2012, Geographic Information — Metadata – Fundamentals (Draft)
+
+ISO 19148:2012, Geographic Information — Linear referencing
 
 ISO 19156:2011, Geographic Information — Observations and Measurements
 
@@ -279,7 +283,11 @@ Most diagrams that appear in this specification are presented using the Unified 
 
 ### 5.4 WMO Terminology
 
-The HY\_Features model uses as far as possible a terminology recommended by the WMO Commission for Hydrology for use in the WMO Member countries. The key reference is the "International Glossary of Hydrology" [3], a joint publication of the WMO and the UNESCO. Wherever appropriate, terms from this glossary are applied to the feature concepts in this standard to capture meaning and contextual relationships. The synonym approach widely used in this glossary is interpreted in that way that glossary terms, when explicitly defined as synonyms, were defined as such even if they are not synonymous in every respect. Differences in terminology were explored through reconciling the explicit definitions documented in the glossary with aspects reflected in various data sets and products in use, augmenting the accepted term with the relationships inferred from other terminology, in order to discern complex terms that not clearly distinguish between the logic concept and its geometric representation, or between a term and its conceptual narrowing. The definitions used in the conceptual model described in this standard may be understood as a conceptual refining of the complex definitions given in the WMO-UNESCO"International Glossary of Hydrology".
+The HY\_Features model uses as far as possible a terminology recommended by the WMO Commission for Hydrology for use in the WMO Member countries. The key reference is the "International Glossary of Hydrology" [3], a joint publication of the WMO and the UNESCO. Wherever appropriate, terms from this glossary are applied to the feature concepts in this standard to capture meaning and contextual relationships. The synonym approach widely used in this glossary is interpreted in that way that glossary terms, when explicitly defined as synonyms, were defined as such even if they are not synonymous in every respect. Differences in terminology were explored through reconciling the explicit definitions documented in the glossary with aspects reflected in various data sets and products in use, augmenting the accepted term with the relationships inferred from other terminology, in order to discern complex terms that not clearly distinguish between the logic concept and its geometric representation, or between a term and its conceptual narrowing. The definitions used in the conceptual model described in this standard may be understood as a conceptual refining of the definitions given in the WMO-UNESCO"International Glossary of Hydrology". 
+
+**addtextstart**
+Though basically rooted in the complex definitions given in the WMO Glossary of Hydrology, for the purpose of testing the applicability of the conceptual model in the context of surface water hydrology the definition of hydrologic features in this standard refer to surface water. 
+**addtextend**
 
 Some requirements classes defined in this standard refer to the Scoped Name concept of ISO19103. Intended to form a basis for information and data sharing in the community of the WMO member countries, the _Scoped Name_ should reflect a name endorsed by the WMO.
 
