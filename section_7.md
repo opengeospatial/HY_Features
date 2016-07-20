@@ -6,11 +6,11 @@ This standard defines the HY_Features conceptual model as a standard for the ide
 
 Core concepts are that of an abstract catchment with many possible 'realizations', of catchment topology and hierarchy, of aggregation of watercourses, and of positioning on a river using a nominal main flow path. Geographic locations are extended with topological attibutes to describe any location on, or projected onto, the land surface as the inflow or outflow of a corresponding catchment. 
 
-The conceptual model is implemented in several discrete modules. It is intended that implementations need to consider only those parts of the common model required by a particular implementation scope. Table 1 lists the applications schema, the leaf packages included and the concepts reflected therein. 
+The conceptual model is implemented in several discrete modules. It is intended that implementations need to consider only those parts of the common model required by a particular implementation scope. Table 1 lists the application schemas, the leaf packages included and the concepts reflected therein. 
 
-Table 1: HY_Features modules, packages and concepts
-**[removed informative packages from table]**
-|Application schema | Concepts reflected | Leaf packages included |
+Table 1: HY_Features modules, packages and concepts  **[removed informative packages from table]**
+
+| Application schema | Concepts reflected | Leaf packages included |
 | --- | --- | --- |
 | HY_HydroFeature  | fundamental properties and relationships between features governed by the physical laws of Hydrology, naming of hydrologic features, location of hydrologic feature along a line | NamedFeature, HydroComplex, RiverPositioningSystem |
 | HY_SurfaceHydroFeature | hydrologic fetaures on the Earth’s land surface without complexity and detail of hydrologic and hydraulic models | ChannelNetwork, HydrographicNetwork, WaterBodyTypes, Storage |
@@ -20,8 +20,6 @@ The conceptual model is expressed in the Geographic Information Conceptual Schem
 
 ![Figure 16: HY_Features modules and packages](figs/fig16.png)  
 Figure 16: HY_Features modules and packages  
-**[\*\*\*!!! update fig \*\*\*]**
-
 
 ### 7.2	The HY_Features conceptual conformance (mapping)
 
@@ -65,32 +63,40 @@ Implementations of HY_Features SHALL either use common identifiers for instances
 
 ### 7.4 The Hydro Feature application schema
 
+The Hydro Feature schema provides a model to identify hydrologic features by hydrologic significance and topology, and provides a standard terminology for the typical relationships between hydrologic features. Making the relationships between identified features expressible in a standard form allows the hydrosphere to be expressed in a consistent way across multiple data products, irrespective of the various spatial or temporal representations available for these phenomena. 
 
-The Hydro Feature schema contains five leaf packages: HY_NamedFeature, HY_Catchment, HY_HydrographicNetwork, HY_RiverPositioning, HY_Storage. Informative packages outlining atmospheric hydrologic features and subsurface hydrologic features are provided in Annex AAA  as a simple means to take such features in account in respect of the hydrosphere complex. A conceptual model capturing the specifics of features associated with the groundwater domain will be developed with reference to the GroundWaterML standard **[ correct ref ]**.
+The Hydro Feature schema conceptualizes the hydrology phenomenon through definition of domain-specific Feature Types, each describing separate aspects of the hydrology phenomenon. Figure 18 shows the defined special hydrologic Feature Types. 
 
-The Hydro Feature schema conceptualizes the hydrology phenomenon through definition of domain-specific Feature Type classes, each describing separate aspects of the hydrology phenomenon. Figure 18 shows the main Features Types defined. 
+![Figure 17: Hydrologic features describing separate aspects of the hydrology phenomenon (UML class diagram)](figs/fig17.png)
+Figure 17: Hydrologic features describing separate aspects of the hydrology phenomenon (UML class diagram)
 
-![Figure 17: Feature types describing separate aspects of the hydrology phenomenon (UML class diagram)](figs/fig17.png)
-Figure 17: Feature types describing separate aspects of the hydrology phenomenon (UML class diagram)
-**[\*\*\*!!! Dave, fig17 updated\*\*\*]**
+The Hydro Feature schema provides the core model of catchment and its multiple realization. It denotes the hydrologic determination of a catchment by its common outlet and the interaction of catchments through such a defined outfall. This allows to divide the hydrosphere into a logical network of connected catchments, and to link . Depending on the perspective of a particular study, the logical catchment is multiple realised by typical features, which in turn may be geometrically represented in various types of data and data products. The catchment realization is typically implemented with geometry attributes, however it is first necessary to define the abstract realization of a catchment. Flowpath, catchment area, and catchment boundary, networks of connected flowpathes, areas or boundaries, but also different cartographic network views are defined to reflect the most common concepts in use to realize the catchment idea. Typical representations of these are defined as geometry attributes of the Feature Types embodying this realization. 
 
-The Hydro Feature schema provides a model to identify hydrologic features by topology and hydrologic significance, and provides a standard terminology for typical relationships. Making the relationships between identified features expressible in a standard form allows the hydrosphere to be expressed in a consistent way across multiple data products, irrespective of the various spatial or temporal representations available for these phenomena. 
+The Hydro Feature schema implies a collection of hydrologic features closed under the condition of the hydrologic determination of a catchment where the union of catchment and outfall is realised by typical hydrologic features within the a hydro(sphere) complex. 
 
-The Hydro Feature schema models the multiple representations of a catchment unit of study shared across sub-domains (see section 6.2 of this standard). This representation is typically implemented with geometry attributes, however it is first necessary to define the abstract realization of a catchment. Catchment area, catchment boundary, and linear flowpath as well as the cartographic visualisation of different network views are defined to reflect the most common concepts in use to realize a catchment, and these typical representations of these are defined as geometry attributes of the Feature Types embodying this realization. 
+The HY_HydroFeature application provides an flexible approach to identify a named hydrologic feature in cross-jurisdiction and multi-lingual contexts by considering the cultural, political and historical aspects of names in common usage. The named hydrologic feature may be further elucidated in different special feature types which specify the properties to define one or more aspects of the hydrology phenomenon. 
 
-The Hydro Feature schema provides a model for the positioning of features 'on river' referencing an identified location, and propose a (linear) river reference system based on catchment topology and linear geometric representation of a catchment. The referencing along the linear flowpath in a given network of catchments, supports to build hydrographic or channel networks portraying this catchment, and to   visualise these network views using an appropriate geometric representation. 
- **[\*\*\* insert reference to GWML2\*\*\*]**
+The Hydro Feature schema provides a model for the positioning of features 'on river' referencing an identified location, and propose a linear river reference system based on catchment topology and linear realisation of a catchment. The referencing along the linear flowpath in a given network of catchments, supports to build hydrographic or channel networks portraying this catchment, and to   visualise these network views using an appropriate geometric representation. 
+
+The definitions applied in the Hydro Feature schema are rooted in the definitions given in the WMO Glossary of Hydrology regardless of their application context in respect to the Earth's surface. For the purpose of testing the applicability of the conceptual model in the context of surface water hydrology, the definitions in this standard refer to surface water hydrology. A conceptual model capturing the specifics of features associated with the groundwater domain is developed with reference to the GroundWaterML standard **[ correct ref ]**.
+
+The Hydro Feature schema contains five leaf packages: NamedFeature, HydroComplex, and RiverPositioning. Figure 18 shows the external and internal dependencies.
+
+![Figure 18: External and internal dependencies (UML class diagram)](figs/fig18.png)
+Figure 18: External and internal dependencies (UML class diagram) **[new]**
 
 | **Requirements Class** | [/req/hy_abstract/*] (/req/hy_abstract/*) |
 | --- | --- |
 | Target type	| Implementation schema |
 | Name | HY_HydroFeature (abstract) |
-| Dependency | [/req/hy_utilities/](/req/hy_utilities/) |
-| Requirement	| [/req/hy_abstract/hy_namedfeature/*](/req/hy_abstract/hy_namedfeature/*) |
-| Requirement	| [/req/hy_abstract/hy_catchment/*](/req/hy_abstract/hy_catchment/*) |
-| Requirement	| [/req/hy_abstract/hy_network/*](/req/hy_abstract/hy_network/*) |
-| Requirement	| [/req/hy_abstract/hy_positioning/*](/req/hy_abstract/hy_positioning/*) |
-| Requirement	| [/req/hy_abstract/hy_storage/*](/req/hy_abstract/hy_storage/*) |
+| Dependency | [/iso/19103/](https://inspire-twg.jrc.it/svn/iso) |
+| Dependency | [/iso/19107/](https://inspire-twg.jrc.it/svn/iso) |
+| Dependency | [/iso/19111/](https://inspire-twg.jrc.it/svn/iso) |
+| Requirement	| [/req/hy_abstract/namedfeature/*](/req/hy_abstract/namedfeature/*) |
+| Requirement	| [/req/hy_abstract/hydrocomplex/*](/req/hy_abstract/catchment/*) |
+| Requirement	| [/req/hy_abstract/positioning/*](/req/hy_abstract/positioning/*) |
+
+**[continue]**
 
 #### 7.4.1	The Named Feature model
 
