@@ -174,33 +174,33 @@ Science dealing with the description and measurement of open bodies of water. [3
 
 NOTE: In this context, hydrography refers to the description of water bodies. Its measurement in terms of surveying, e.g. for navigational purposes, is not in the concern of the HY\_Features model.
 
-### 4.10 hydrologic feature
+### 4.10 hydrologic complex
+
+Collection of separate hydrologic features closed under the condition of the hydrologic determination of a catchment where the union of catchment and its common outlet (conceptualised as outfall)  is realised by typical hydrologic features within the same complex. This concept references the topological closure of catchment and outfall in such that a realisation of the logical catchment is always of higher topological dimension than the realisation of the corresponding outfall in terms of a topological boundary. For example, a linear flowpath realising a catchment may be understood as an edge between inflow and outflow nodes; the areal realisation as catchment as a face bounded by linear inflow and outflow.
+
+NOTE: Hydrologic determination means that any catchment has a common outlet for its runoff, and that any place to which water may flow due to physical laws associates a corresponding catchment, even if catchment and outfall may be ‘nillable’ in a particular application. 
+
+### 4.11 hydrologic feature
 
 Feature (abstraction of a real-world phenomenon) of a type defined in the hydrology domain. A feature whose identity needs to be maintained and tracked through a processing chain from measurement to distribution of hydrologic information.
 
-### 4.11 hydrology
+### 4.12 hydrology
 
 Science that deals with the waters above and below the land surfaces of the Earth, their occurrence, circulation and distribution, both in time and space, their biological, chemical and physical properties, their reaction with their environment, including their relation to living beings. [3]
 
-### 4.12 hydrometric  feature
+### 4.13 hydrometric  feature
 
 Feature (abstraction of a real-world phenomenon) of a type defined in the process of measurement and analysis of hydrology (hydrometry).
 
 NOTE: The hydrometric feature refers to a physical structure intended to observe properties of a hydrologic feature. Used to sample a hydrologic feature, a hydrometric feature may be considered a sampling feature of observation. A sampling feature is described in general in ISO 19156, the special monitoring point of hydrologic observation is described in the _WaterML 2.0_ Specification [5].
 
-### 4.13 hydrometry
+### 4.14 hydrometry
 
 Science of the measurement and analysis of water including methods, techniques and instrumentation used in hydrology. [3]
 
-### 4.14 mapping
+### 4.15 mapping
 
 Establishing a semantic relationship between particular implementations of a common concept and the realized normative concept using a formalism that specifies how elements from a source model may be transformed to a target model.
-
-### 4.15 multilingual keyword
-
-Keyword used in a multilingual context.
-
-NOTE: A keyword is generally described in ISO 19115.
 
 ### 4.16 named feature
 
