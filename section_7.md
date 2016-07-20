@@ -4,29 +4,23 @@
 
 This standard defines the HY_Features conceptual model as a standard for the identification and description of hydrologic features reflecting both hydrologic significance as well as topological connectivity of hydrologic features. The fundamental relationships between the major components of the hydrosphere are conceptualised to formally describe the hydrosphere as an hierarchical network of hydrologically connected catchments, and the appearing network phenomena to be visualised, irrespective of the various spatial or temporal representations available for these phenomena. 
 
-Core concepts are that of a an abstract catchment with many possible 'realizations', of catchment topology and hierarchy, of aggregation and segmentation of watercourses, and positioning on a river using a nominal main flow path. 
-
-Geographic locations are extended with topological attibutes to describe any location on, or projected onto, the land surface as the inflow or outflow node of a corresponding catchment. 
+Core concepts are that of an abstract catchment with many possible 'realizations', of catchment topology and hierarchy, of aggregation of watercourses, and of positioning on a river using a nominal main flow path. Geographic locations are extended with topological attibutes to describe any location on, or projected onto, the land surface as the inflow or outflow of a corresponding catchment. 
 
 The conceptual model is implemented in several discrete modules. It is intended that implementations need to consider only those parts of the common model required by a particular implementation scope. Table 1 lists the applications schema, the leaf packages included and the concepts reflected therein. 
-_[Revisit - leave in model or reword this An (informative) utilities package contains common concepts required by the hydrologic feature model but which are not hydrology-specific. It is expected that future evolution of the ISO standards will provide a replacement for these components. At that point this module can be replaced with references to the more general concept.]_
 
 Table 1: HY_Features modules, packages and concepts
-
+**[removed informative packages from table]**
 |Application schema | Concepts reflected | Leaf packages included |
 | --- | --- | --- |
-| HY_HydroFeature  | fundamental properties and relationships between features governed by the physical laws of Hydrology, naming and context of hydrologic features, location of hydrologic feature along a line | HY_Catchment, HY_HydrographicNetwork, HY_NamedFeature, HY_RiverPositioningSystem, HY_Storage |
-| HY_AtmosphericFeature (informative) | hydrologic features  above the Earth’s land surface without complexity and detail of a rainfall-runoff model | --- |
-| HY_SubsurfaceHydroFeature (informative) | hydrologic features below the Earth’s land surface without complexity and detail of a groundwater or soil moisture model | --- |
-| HY_SurfaceHydroFeature | hydrlogic fetaures on the Earth’s land surface without complexity and detail of hydrologic and hydraulic models | HY_SurfaceWater, HY_SurfaceWaterConfines |
-| HY_HydrometricNetwork | hydrometric network as an aggregate of logically connected hydrometric features located on or along a hydrologic feature | --- |
-| HY_Utilities | (informative) common concepts required by the domain model that are not hydrology-specific such as naming and contextual relations. These may be specified in specific implementation models or in the encoding rules for a target technology.  | --- |
+| HY_HydroFeature  | fundamental properties and relationships between features governed by the physical laws of Hydrology, naming of hydrologic features, location of hydrologic feature along a line | NamedFeature, HydroComplex, RiverPositioningSystem |
+| HY_SurfaceHydroFeature | hydrologic fetaures on the Earth’s land surface without complexity and detail of hydrologic and hydraulic models | ChannelNetwork, HydrographicNetwork, WaterBodyTypes, Storage |
+| HY_HydrometricNetwork | hydrometric network of logically connected hydrometric features located on or along a hydrologic feature | --- |
 
 The conceptual model is expressed in the Geographic Information Conceptual Schema Language (ISO 19103:2005) based on the Unified Modeling Language (UML). The organization into packages and package dependencies are shown in Figure 16. The following sections describe requirements classes for each application schema, whereby each feature addressed in the requirements shall be understood as an instance of the GF_FeatureType (aka FeatureType) «metaclass». 
 
 ![Figure 16: HY_Features modules and packages](figs/fig16.png)  
 Figure 16: HY_Features modules and packages  
-**[\*\*\*!!! Dave, fig16 updated\*\*\*]**
+**[\*\*\*!!! update fig \*\*\*]**
 
 
 ### 7.2	The HY_Features conceptual conformance (mapping)
