@@ -79,7 +79,7 @@ Being topological nodes, inflow and outflow nodes have no explicit positions but
 
 It is worth noting that non-dendritic networks are often represented as a dendritic catchment network by introducing joint catchments that contain the non-dendritic parts. Figure C6 shows an example of such a non-dendritic topology, where it is not possible to determine to what extent flow from catchment F contributes to catchments E, B or C. Figure C7 shows the same topology where catchments E, B, and C have been aggregated and the nodes N2 amd N3 are treated as a single virtual inflow node, so that all the flow from catchments D and F accumulate in the resulting catchment X. Using this encapsulation approach, catchments can be represented using a simple tree structure where an upstream-downstream relation can be built without the need for complex hydrography between inflow and outflow nodes.
 
-<img src="http://opengeospatial.github.io/HY_Features/figs/nonDendriticEnc1.png" width="250"> <img src="http://opengeospatial.github.io/HY_Features/figs/nonDendriticEnc2.png" width="250"> <img src="http://opengeospatial.github.io/HY_Features/figs/nonDendriticEnc3.png" width="250">  
+<img src="figs/nonDendriticEnc1.png" width="250">       <img src="figs/nonDendriticEnc2.png" width="250">       <img src="figs/nonDendriticEnc3.png" width="250">  
 Figure C6: Non-dendritic topology example.
 
 There are two ways that catchments with multiple inflows can share a common outlet: 1) as separate subcatchments, each represented by a flowpath between a single inflow and the outflow (figure C1) as a non-divided catchment contributing as a whole to the outflow node (figure C2). The latter case, referred to here as a conjoint catchment, may result in several paths which water actually follows. Although it may be hard to determine what part of the contributing catchment each path represents, to determine the main flowpath, or to perform linear referencing (along the main flowpath), a conjoint catchment is often easier to delineate and more convenient. Alternatively, complex hydrography can also be combined into larger watersheds (figure C2) to avoid the complexity of having multiple inflows all together.
@@ -87,12 +87,12 @@ There are two ways that catchments with multiple inflows can share a common outl
 ### 6.4 River reference system
 Considering any identified location on a network as the outflow node of a contributing catchment, or the inflow node of a receiving catchment, an arbitrary new location can be placed on the network in reference to the existing outfall up- or downstream. Understanding such a reference as a positioning "along a river", the linear flowpath representation of a catchment can be used for linear referencing. HY_Features defines the concept of a river reference system which has three components: 1) an origin at an inflow or outflow outfall; 2) a shape defined by the flowpath of a catchment that connects to the origin; and 3) a linear distance or relative (percentage) measurement system. Each catchment has its own reference system which can be combined as necessary using catchment topology; each river reference system must have one outfall (origin) and one representing flowpath (shape). Figure 12, and 13 illustrate how a newly introduced network location can be located upstream of a catchment outflow node or downstream of a catchment inflow node.
 
-<img src="http://opengeospatial.github.io/HY_Features/figs/inflowNode.png" width="250">  
+<img src="figs/inflowNode.png" width="250">  
 Figure 12: Position (yellow dot) downstream of a reference point (red dot)  
 Red: inflowNode of receivingCatchment - locatedStart (origin) of riverReferenceSystem,  
 Yellow: reference point (referent) - outflowNode of the (dark highlighted) catchment
 
-<img src="http://opengeospatial.github.io/HY_Features/figs/outflowNode.png" width="250">  
+<img src="figs/outflowNode.png" width="250">  
 Figure 13: Position (yellow dot) downstream of a reference point (red dot)  
 Red: outflowNode of contributingCatchment - locatedStart (origin) of riverReferenceSystem,  
 Yellow: reference point (referent) – inflowNode of the (light highlighted) catchment 
