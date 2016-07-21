@@ -1,6 +1,4 @@
-tocTab[tocTab.length] = new Array("0:1", "", "Package dependencies", "EARoot/EA1.htm", "176.png", "5126", "0", "", "Package diagram0","{E2A6D283-AC12-48f4-BAB7-8AADDBEFF301}");
-tocTab[tocTab.length] = new Array("0:2", "", "HydrometricFeature_extended", "EARoot/EA3.htm", "175.png", "5125", "0", "", "Class diagram0","{5B5D3675-145C-48f7-B748-BBDE89BC604C}");
-tocTab[tocTab.length] = new Array("0:3", "", "HydrometricNetworkRealisation", "EARoot/EA5.htm", "175.png", "5195", "0", "", "Diagram diagram0","{577FCE17-2DCD-47d0-853C-46F6129351E5}");
-tocTab[tocTab.length] = new Array("0:4", "", "«FeatureType» HY_HydrometricFeaturePart", "EARoot/EA10.htm", "5.png", "11226", "0", "", "Class0","{8EB7CD15-6856-4a68-9E58-2DDA44878726}");
-tocTab[tocTab.length] = new Array("0:5", "", "«FeatureType» HY_HydrometricFeature", "EARoot/EA11.htm", "5.png", "11227", "0", "", "Class0","{BB084F13-AED3-4c9d-9E8F-2C46B9CBC703}");
-tocTab[tocTab.length] = new Array("0:6", "", "«FeatureType» HY_HydrometricNetwork", "EARoot/EA12.htm", "5.png", "11225", "0", "", "Class0","{5D9E5E19-3F78-4eb2-94E3-74D083F92886}");
+tocTab[tocTab.length] = new Array("0:1", "", "Package dependencies", "EARoot/EA1.htm", "176.png", "5319", "0", "", "Package diagram0","{E2A6D283-AC12-48f4-BAB7-8AADDBEFF301}");
+tocTab[tocTab.length] = new Array("0:2", "", "HydrometricFeature_ext", "EARoot/EA3.htm", "175.png", "5318", "0", "", "Class diagram0","{5B5D3675-145C-48f7-B748-BBDE89BC604C}");
+tocTab[tocTab.length] = new Array("0:3", "", "«FeatureType» HY_HydrometricFeature", "EARoot/EA5.htm", "5.png", "11792", "0", "", "Class0","{BB084F13-AED3-4c9d-9E8F-2C46B9CBC703}");
+tocTab[tocTab.length] = new Array("0:4", "", "«FeatureType» HY_HydrometricNetwork", "EARoot/EA6.htm", "5.png", "11790", "0", "", "Class0","{5D9E5E19-3F78-4eb2-94E3-74D083F92886}");

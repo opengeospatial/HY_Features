@@ -1,7 +1,7 @@
-tocTab[tocTab.length] = new Array("0:1", "", "Package dependencies", "EARoot/EA1.htm", "176.png", "5297", "0", "", "Package diagram0","{85A37998-7E8E-4516-8831-26289C5BAA65}");
-tocTab[tocTab.length] = new Array("0:2", "", "Internal dependencies", "EARoot/EA3.htm", "176.png", "5294", "0", "", "Package diagram0","{49A6F5A9-BB59-4b0c-9696-D9BC6AA55255}");
-tocTab[tocTab.length] = new Array("0:3", "", "overallOverview", "EARoot/EA5.htm", "175.png", "5295", "0", "", "Logical diagram0","{D8FDBF75-7FD2-4679-890C-16F3A6F9C752}");
-tocTab[tocTab.length] = new Array("0:4", "", "CatchmentRealisation_all", "EARoot/EA7.htm", "175.png", "5296", "0", "", "Diagram diagram0","{E5781FE1-9542-46bc-9B04-CEC52D6738FF}");
+tocTab[tocTab.length] = new Array("0:1", "", "Fig18: Dependencies", "EARoot/EA1.htm", "176.png", "5393", "0", "", "Package diagram0","{979B1142-4AEF-4670-B3F5-26408529FBB1}");
+tocTab[tocTab.length] = new Array("0:2", "", "temp_overallOverview", "EARoot/EA3.htm", "175.png", "5390", "0", "", "Logical diagram0","{D8FDBF75-7FD2-4679-890C-16F3A6F9C752}");
+tocTab[tocTab.length] = new Array("0:3", "", "temp_catchmentRealisation_all", "EARoot/EA5.htm", "175.png", "5391", "0", "", "Diagram diagram0","{E5781FE1-9542-46bc-9B04-CEC52D6738FF}");
+tocTab[tocTab.length] = new Array("0:4", "", "Fig17: Hydro Feature Special", "EARoot/EA7.htm", "175.png", "5392", "0", "", "Class diagram0","{FF497341-D4FB-4ad0-8507-852367B8C95E}");
 tocTab[tocTab.length] = new Array("0.1", "1", "«leaf» HydroComplex", "EARoot/EA10.htm", "4.png", "", "", "{BA04FEE3-AC79-482c-91A2-760F5C7BFA6D}", "Package");
 tocTab[tocTab.length] = new Array("0.2", "1", "«leaf» NamedFeature", "EARoot/EA11.htm", "4.png", "", "", "{82D7B4C0-B5F1-4f90-A1F3-C1493FE2DB9E}", "Package");
 tocTab[tocTab.length] = new Array("0.3", "1", "«leaf» RiverPositioningSystem", "EARoot/EA12.htm", "4.png", "", "", "{CD488F0F-9270-472d-8EBE-67B6FCB12AB3}", "Package");
