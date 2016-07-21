@@ -96,31 +96,44 @@ Figure 18: External and internal dependencies (UML class diagram) **[new]**
 | Requirement	| [/req/hy_abstract/hydrocomplex/*](/req/hy_abstract/catchment/*) |
 | Requirement	| [/req/hy_abstract/positioning/*](/req/hy_abstract/positioning/*) |
 
-**[continue]**
 
 #### 7.4.1	The Named Feature model
 
-The Named Feature model defines the hydrologic feature basically as a feature to which names are given through common usage (Figure 17). It provides a flexible approach to record multiple names and identifiers that may be assigned to an identified feature without necessarily have a formal naming model by providing a means to localize names in a cultural, political or historical context. Each  special hydrologic feature type (Figure 18) inherits the general relationships defined for the HY_HydroFeature class. The HY_HydroFeature class carries the properties: *identifier*, *name*, and *context*.
+The Named Feature model denotes the abstraction of the hydrology phenomenon as hydrologic feature, a feature to which names are given through common usage. The named hydrologic feature can be further elucidated in concrete feature types which specify the properties each specialization uses to define one or more aspects of the hydrology phenomenon. This includes related phenomena that participate in hydrologic systems but have specific characteristics. Given the complexity of the domain, and the nature of real-world physical phenomena, for any given hydrologic feature a wide range of possible characteristics, realizations and representations may be relevant. 
 
-![Figure 18: Named Feature model (UML class diagram)](figs/fig18.png)
-Figure 18: Named Feature model (UML class diagram) 
-**[\*\*\*!!! Dave, fig18 updated\*\*\*]**
+Hydrologic features are usually named in cross-jurisdictional and multi-lingual contexts. The Named Feature model provides an approach to consider such cultural, political and historical aspects of names usage to flexible record multiple names and identifiers without necessarily have a formal naming model. Each specialisation of the hydrologic feature type (Figure 17) inherits the properties defined for the general HY_HydroFeature type. 
 
-The **identifier** attribute provides a means to assign to the hydrologic feature an (external) identifier in a given context. If required, an instance of HY_HydroFeature shall contain an identifier that may be used as a persistent reference to this feature. An implementation may use the EXT_IdentificationCode type as defined in the Utilities package (section 7.4. ... ) **[include reference]**.
+![Figure 19: Named Feature (UML class diagram)](figs/fig19.png)
+Figure 19: Named Feature (UML class diagram) 
 
-The **name** association provides an abstract pattern to handle names given to the hydrologic feature in cultural, political or historical contexts. This allows to assign a localized name for all or part of a hydrologic feature without necessarily have a formal model. If required, this association shall be used where names are assigned to a feature instance through common usage, of cultural, political and historical variability that may occur with trans-boundary features. An implementation may use the EXT_LocalisedNameCode type as defined in the Utilities package (section 7.4. ... ) **[include reference]**. 
+The HY_HydroFeature type carries the properties: *identifier* and *name*:
 
-The **context** association provides a general pattern to handle various forms of contextualization of hydrologic features. This allows to define in which context typical properties are attached, without having to specify every possible value or to standardise the property name. If required, this associations shall be used to assign generally applicable characteristics to a feature instance in a spatial, temporal or classification context. It may be specified using one or more instances of the associated context property. An implementation may use the EXT_SpatialContext, EXT_TemporalContext or EXT_ClassificationContext types defined in the Utilities package (section 7.4. ... ) **[include reference]**.  
+The **identifier** attribute provides a means to assign to the hydrologic feature an external identifier in a given context. If required, an instance of HY_HydroFeature shall contain an identifier that may be used as a persistent reference to this feature. An implementation may use the MD_Identifier as defined in ISO 19115-1:Metadata-Fundamentals standard. 
+
+The **name** association associates a name given to the hydrologic feature in cultural, political or historical context. If required, this association shall be used where names are assigned to a feature instance through in cross-jurisdictional and multi-lingual contexts, that may occur with trans-boundary features. 
 
 | **Requirements Class** | [/req/hy_namedFeature/hydrofeature] (/req/hy_namedFeature/hydrofeature) |
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY_HydroFeature |
 | Dependency | [/req/hy_namedFeature/hydrofeaturename] (/req/hy_namedFeature/hydrofeaturename) | 
-| Dependency | [/req/hy_namedFeature/hydrofeaturecontext] (/req/hy_namedFeature/hydrofeaturecontext) | 
 | Requirement |	[/req/hy_namedFeature/hydrofeature.identifier] (/req/hy_namedFeature/hydrofeature.identifier) | 
 | Requirement	| [/req/hy_namedFeature/hydrofeature.name] (/req/hy_namedFeature/hydrofeature.name) | 
-| Requirement	| [/req/hy_namedFeature/hydrofeature.context] (/req/hy_namedFeature/hydrofeature.context) | 
+
+The HY_HydroFeatureName type provides an abstract pattern to handle cultural, political and historical variability of names. This allows to assign a name for all or part of a hydrologic feature without necessarily have a formal model for naming. HY_HydroFeatureName has five attributes: name, namesPart, preferredBy, usage and variantSpelling. If required, an implementation shall use this type to describe the usage of multiple names. The usage type may be identified using the HY_NameUsage codelist described in Annex ...,  table ... 
+
+| **Requirements Class** | [/req/hy_namedFeature/hydrofeaturename] (/req/hy_namedFeature/hydrofeaturename) |
+| --- | --- |
+| Target type	| Implementation Schema |
+| Name | HY_HydroFeatureName |
+| Dependency | [/iso/19103/](https://inspire-twg.jrc.it/svn/iso) |
+| Dependency | [/iso/19115/](https://inspire-twg.jrc.it/svn/iso) |
+| Dependency | [/req/hy_namedFeature/nameusage] (/req/hy_namedFeature/nameusage) | 
+| Requirement |	[/req/hy_namedFeature/hydrofeature.name] (/req/hy_namedFeature/hydrofeature.name) | 
+| Requirement	| [/req/hy_namedFeature/hydrofeature.namespart] (/req/hy_namedFeature/hydrofeature.namespart) | 
+| Requirement	| [/req/hy_namedFeature/hydrofeature.preferredBy] (/req/hy_namedFeature/hydrofeature.preferredby) | 
+| Requirement	| [/req/hy_namedFeature/hydrofeature.usage] (/req/hy_namedFeature/hydrofeature.usage) | 
+| Requirement	| [/req/hy_namedFeature/hydrofeature.variantspelling] (/req/hy_namedFeature/hydrofeature.variantspelling) | 
 
 #### 7.4.2	The Catchment model
 
