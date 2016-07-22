@@ -6,7 +6,7 @@ This standard defines the HY_Features conceptual model as a standard for the ide
 
 Core concepts are that of an abstract catchment with many possible 'realizations', of catchment topology and hierarchy, of aggregation of watercourses, and of positioning on a river using a nominal main flow path. Geographic locations are extended with topological attibutes to describe any location on, or projected onto, the land surface as the inflow or outflow of a corresponding catchment. 
 
-The conceptual model is implemented in several discrete modules. It is intended that implementations need to consider only those parts of the common model required by a particular implementation scope. Table 1 lists the application schemas, the leaf packages included and the concepts reflected therein. 
+The conceptual model is implemented in several discrete modules. It is intended that implementations need to consider only those parts of the common model required by a particular implementation scope. An implmentation may include or exlude feature properties, or override the cardinality of a relationship. For example, if it is expected that a logically determined relationship may be 'nillable' within a particular realisation, the cardinality defined in the conceptual model may be overridden. Table 1 lists the application schemas, the leaf packages included and the concepts reflected therein. 
 
 Table 1: HY_Features modules, packages and concepts  **[removed informative packages from table]**
 
