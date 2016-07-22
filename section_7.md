@@ -135,7 +135,7 @@ The Hydro Complex model implies a collection of hydrologic features closed under
 The HY_Catchment and the HY_Outfall types conceptualize the hydrologic determination of the catchment by defining an outfall in the role of an outflow of a contributing catchment, or inflow to a receiving catchment (Figure 20) . Understanding the catchment as the logical link between inflow and outflow, an hierarchical network of catchments (Figure 21) is implied that ultimately links inflow and outflow of the catchment containing this network catchments. 
 
 ![Figure 20: Relation between catchment and outfall (UML class diagram)](figs/fig20.png)
-Figure 21: Relation between catchment and outfall (UML class diagram) 
+Figure 20: Relation between catchment and outfall (UML class diagram) 
 
 ![Figure 21: Catchment hierarchy relationships (UML class diagram)](figs/fig21.png)
 Figure 21: Catchment hierarchy relationships (UML class diagram) 
