@@ -136,27 +136,32 @@ The Hydro Complex model allows to consider an arbitrary location on, or projecte
 The Hydro Complex model allows for the existence of catchments to be recognized, and identifiers assigned by referencing the outfall even if stream networks, catchment areas and watersheds are not reliably determined. It is intended that hydrological reporting applications may use this model without the full complexity and detail of scientific catchment models.
 
 ##### 7.4.2.1	Catchment
-HY_Catchment specializes the general HY_HydroFeature class; from this generalization it inherits  the *name* property. HY_Catchment carries the associations: *outflow*, *inflow*, *containing Catchment*, *containedCatchment*, *conjointCatchment*, *upperCatchment*, *lowerCatchment*, and *realisation*.
+The HY_Catchment type (Figure 20) specializes the general HY_HydroFeature class; it denotes the hydrologic determination by an outfall association, and the logical network of catchments through internal relationships. HY_Catchment may be further specialised with respect to catchment interaction. 
+
+![Figure 20: Catchment (UML class diagram)](figs/fig20.png)
+Figure 20: Catchment (UML class diagram) 
+
+HY_Catchment inherits from generalization the *name* property, and carries the associations: *outflow*, *inflow*, *containing Catchment*, *containedCatchment*, *conjointCatchment*, *upperCatchment*, *lowerCatchment*, and *realisation*.
 
 The **outflow** and *inflow* associations describe the outfall in terms of outflow or inflow of the corresponding catchment. Assuming a dendritic network of catchments, the outflow of a contributing catchment coincides with the inflow to a receiving catchment. This allows to describe upstream-downstream relations. If required, this association shall be used to identify the place to which flow is contributed, or from where flow is received.
 
-![Figure 20: Union of catchment and outfall (UML class diagram)](figs/fig20.png)
-Figure 20: Union of catchment and outfall (UML class diagram) 
+![Figure 21: Catchment and outfall (UML class diagram)](figs/fig21.png)
+Figure 21: Catchment and outfall (UML class diagram) 
 
 The **containingCatchment** and **containedCatchment** associations connect the nesting of catchments in a simple “is-in” containment hierarchy as typically used for high-order organization of management and reporting units. If required, this association shall be used to identify a nesting catchment or the catchments nested therein.
 
-![Figure 21: Containing / contained catchment (UML class diagram)](figs/fig21.png)
-Figure 21: Containing / contained catchment (UML class diagram) 
+![Figure 22: Containing / contained catchment (UML class diagram)](figs/fig22.png)
+Figure 22: Containing / contained catchment (UML class diagram) 
 
 The **conjointCatchment** association describes the interaction of a catchment with another catchment crossing an internal boundary line. This line may be a divide separating adjacent catchments, or a diffuse divide between non-delineated sub-catchments within an encompassing catchment, or a fictive line between distant catchments. If required, this association shall be used to identify a catchment contributing with others to a 'joined' outfall. Assuming a dendritic network of catchments, where each catchment is determined by its single outflow, this association may be used to summarize diffuse inflow into an encompassing catchment, as required to describe inflow to headwater catchments. 
 
-![Figure 22: Conjoint / contained catchment (UML class diagram)](figs/fig22.png)
-Figure 22: Conjoint / contained catchment (UML class diagram) 
+![Figure 23: Conjoint / contained catchment (UML class diagram)](figs/fig23.png)
+Figure 23: Conjoint / contained catchment (UML class diagram) 
 
 The **upperCatchment** and **lowerCatchment** associations connect the catchment to the adjacent catchment above or below. This allows to describe connected catchments without knowing their inflow or outflow. If required, this association shall be used to trace the catchment network in upstream direction from mouth to source, or downstream from source to mouth. 
 
-![Figure 23: Upper / lower catchment (UML class diagram)](figs/fig23.png)
-Figure 23: Upper / lower catchment (UML class diagram)
+![Figure 24: Upper / lower catchment (UML class diagram)](figs/fig24.png)
+Figure 24: Upper / lower catchment (UML class diagram)
 
 The **realisation** association relates the catchment to a feature which realises the logical catchment. This supports to link mutliple realisations of the same catchment. If required, this association shall be used identify one particular realisation. 
 
@@ -177,8 +182,8 @@ The **realisation** association relates the catchment to a feature which realise
 | Requirement	| [/req/hy_abstract/hydrocomplex/catchment.lowercatchment](/req/hy_abstract/hydrocomplex/catchment.lowercatchment | 
 | Requirement	| [/req/hy_abstract/hydrocomplex/catchment.realisation](/req/hy_abstract/hydrocomplex/catchment.realisation | 
 
-##### 7.4.2.3	CatchmentAggregate
-The HY_CatchmentAggregate class specializes the HY_Catchment class with respect to a set of dendritic catchments, arranged in an encompassing catchment at the next upper hierarchy level without any spatial overlap. This allows to describe multiple inflows into a catchment aggregate through several hydrologically discrete sub-catchments having a single inflow, and contributing to the common outflow of the catchment aggregate. 
+##### 7.4.2.2	CatchmentAggregate
+The HY_CatchmentAggregate class specializes the HY_Catchment class with respect to a set of dendritic catchments, arranged in an encompassing catchment at the next upper hierarchy level without any spatial overlap. This allows to describe multiple inflows into a catchment aggregate through several hydrologically discrete sub-catchments having a single inflow, and contributing to a joined outflow of the catchment aggregate. 
 
 A catchment aggregate may be part of a containing catchment at the next higher hierarchy level, which consists of many of those neighbouring catchments. This does not necessarily implies a series of containing catchments, but allows jumping to the 'highest' upper-level system as typically used for reporting purposes. The HY_CatchmentAggregate class inherits from generalization the *containingCatchment*, *upstreamCatchment*, *jointCatchment*, *outflowNode*, *inflowNode* and *boundaryLine* properties, and carries two properties: *exorheicDrainage* and *endorheicDrainage*.
 
@@ -194,7 +199,7 @@ The **exorheicDrainage** association references an exorheic drained catchment. T
 | Requirement	| [/req/hy_catchment/catchmentaggregate.exorheicdrainage](/req/hy_catchment/catchmentaggregate.exorheicdrainage) | 
 | Requirement	| [/req/hy_catchment/catchmentaggregate.endorheicdrainage](/req/hy_catchment/catchmentaggregate.endorheicdrainage) | 
 
-##### 7.4.2.4	DendriticCatchment
+##### 7.4.2.3	DendriticCatchment
 The HY_DendriticCatchment class specializes the general HY_Catchment class with respect to a hydrologically discrete catchment, which is determined by a single common outlet to which all waters flow. This class denotes the catchment as the topological link between an inflow node and an outflow node allowing catchments to be connected in a dendritic network by upstream-downstream relationships, without knowing the complex hydrology between inflow and outflow nodes. This concept requires a stable identifier that is not merely a function of an arbitrary delineation of the surface, and that catchments are delineated within a simple tree hierarchy. The HY_DendriticCatchment class inherits from generalization the *containingCatchment*, *upstreamCatchment*, *conjointCatchment*, *outflowNode*, *inflowNode* and *boundaryLine* properties, and carries two properties: *code* and *encompassingCatchment*. 
 
 The **code** attribute may be used to assign to the dendritic a unique identifier in given context. If required, the code shall be implemented using a controlled classification or coding system. Example: WMO Basin Codes.  
@@ -210,7 +215,7 @@ The **encompassingCatchment** association relates to the dendritic catchment the
 | Requirement |	[/req/hy_catchment/dendriticcatchment.code] (/req/hy_catchment/dendriticcatchment.code)
 | Requirement |	[/req/hy_catchment/dendriticcatchment.encompassingcatchment] (/req/hy_catchment/dendriticcatchment.encompassingcatchment) 
 
-##### 7.4.2.5	InteriorCatchment
+##### 7.4.2.4	InteriorCatchment
 The HY_InteriorCatchment class specializes the general HY_Catchment class with respect to a hydrologically discrete catchment, which is generally not connected to other catchments. This class describes the interior catchment as catchment enveloped by other catchments to which it may temporary contribute. The HY_InteriorCatchment class inherits from generalization the *containingCatchment*, *upstreamCatchment*, *conjointCatchment*, *outflowNode*, *inflowNode* and *boundaryLine* properties, and carries one association: *envelopingCatchment*. 
 
 The **envelopingCatchment** association relates to the interior catchment the aggregate surrounding the catchment. If required, this association shall be used to identify the catchment enveloping one or more endorheic drained catchments contributing temporarily flow to the common outlet. 
@@ -223,7 +228,7 @@ The **envelopingCatchment** association relates to the interior catchment the ag
 | Dependency | [/req/hy_catchment/catchmentaggregate](/req/hy_catchment/catchmentaggregate) | 
 | Requirement	| [/req/hy_catchment/interiorcatchment.envelopingcatchment](/req/hy_catchment/interiorcatchment.envelopingcatchment) |
 
-##### 7.4.2.6	Outfall
+##### 7.4.2.5	Outfall
 The HY_Outfall class conceptualize the common outlet of a catchment as the topological node where catchments interact (see section 6.3.2). The outfall marks the place where the outflow node of a contributing catchment meets the inflow node of a receiving catchment. In terms of an outflow node, the outfall identifies the location to which upstream catchments contribute flow due to gravitational forces or pumping; in terms of an inflow node that location is identified from where catchments downstream receive flow collected upstream. 
 
 Topologically placed in the network of catchments, geometric shape and position of the outfall are not explicitly defined. The outfall may get assigned a position relative to a reference location of a particular geometric shape using a linear reference system. The reference location may be a geometric point identified by co-ordinates, or any other feature carrying such a reference point. A fixed landmark, a monitoring station, a spring where groundwater enters the surface, may be a reference point but also a point projected onto the surface or created from merging disjoint locations; vertically arranged points may be aggregated and projected onto surface, a delta of a river system merged to virtual mouth, diffuse groundwater discharge placed on rivers or lakes.  The HY_Outfall class carries four associations: *contributingCatchment*, *receivingCatchment*, *summitLine* and *relativePosition*. 
@@ -249,7 +254,7 @@ The **relativePosition** association assigns to the outfall a position relative 
 | Requirement	| [/req/hy_catchment/outfall.relativeposition](/req/hy_catchment/outfall.relativeposition) |
 
 
-##### 7.4.2.1	Catchment Realisation
+##### 7.4.2.6	Catchment Realisation
 The HY_CatchmentRealisation type conceptualize in general the multiple realisation of a 'un-realised', logical catchment by typical features in common use to communicate the common recognition of a catchment as the unit of study shared across sub-domains. However, particular realisations may refer only to one or the other. The catchment realisation concept implies a hydro(sphere) complex in such that if a catchment realisation exists, these features are in the same hydrologic complex as the catchment they realise. In this way each feature realisation of the logical catchment references the hydrologic determination of the realised catchment. If the realised catchment is connected with other catchments via its outfall, possible feature realisations are also connected. HY_CatchmentRealisation has one association: *realisedCatchment*. 
 
 The *realisedCatchment* association defines the relationship to exactly the catchment that is realisedby the special feature type.  If required, this association shall be used to reference the catchment wherein hydrologic processes are studied and reported by the data set or data product. 
@@ -261,7 +266,7 @@ The *realisedCatchment* association defines the relationship to exactly the catc
 | Dependency | [/req/hy_abstract/hydrocomplex/catchment](/req/hy_abstract/hydrocomplex/catchment) | 
 | Requirement	| [/req/hy_abstract/hydrocomplex/catchmentrealisation.realisedcatchment](/req/hy_abstract/hydrocomplex/catchmentrealisation.realisedcatchment)
 
-HY_CatchmentRealisation may be further specialised (Figure 22) to realise the hydrological determination of the catchment in a topological realisation, as well as to reflect the connectivity of the features at the level of realisation. In other contexts other types of catchment representation may exist. Realisations that not conforms to the special types defined in this standard, for instance realiations in more-dimensional perspectives, or in time, may use the general HY_CatchmentRealisation type. 
+HY_CatchmentRealisation may be further specialised (Figure ) to realise the hydrological determination of the catchment in a topological realisation, as well as to reflect the connectivity of the features at the level of realisation. In other contexts other types of catchment representation may exist. Realisations that not conforms to the special types defined in this standard, for instance realiations in more-dimensional perspectives, or in time, may use the general HY_CatchmentRealisation type. 
 
 ![Figure : Catchment realisation (UML class diagram)](figs/fig.png)
 Figure : Catchment realisation (UML class diagram) 
@@ -296,8 +301,8 @@ HY_CatchmentArea, HY_Flowpath and HY_CatchmentBoundary types are defined with re
 | Dependency | [/iso/19107/...](https://inspire-twg.jrc.it/svn/iso) |
 | Requirement	| [/req/hy_abstract/hydrocomplex/catchmentboundary.shape](/req/hy_abstract/hydrocomplex/catchmentboundary.shape) 
 
-##### 7.4.2.1	Outfall Realisation
-The HY_OutfallRealisation type (Figure 23) conceptualizes the idea of an arbitrary feature of interest that may be considered as outfall. Any location within a hydro(sphere) complex may realise the logical outfall, specifically as a permanent, stable reference location fixed or referenced by coordinates; outfall realisation may be represented by any geometric object, incl. a single point. 
+##### 7.4.2.7	Outfall Realisation (former reference location)
+The HY_OutfallRealisation type (Figure ) conceptualizes the idea of an arbitrary feature of interest that may be considered as outfall. Any location within a hydro(sphere) complex may realise the logical outfall, specifically as a permanent, stable reference location fixed or referenced by coordinates; outfall realisation may be represented by any geometric object, incl. a single point. 
 
 ![Figure : Outfall realisation (UML class diagram)](figs/fig.png)
 Figure : Outfall realisation (UML class diagram) 
@@ -315,8 +320,7 @@ HY_OutfallRealisation carries three properties: *shape*, *outfallType* and *real
 | Requirement	| [/req/hy_abstract/hydrocomplex/outfallrealisation.typeofoutfall](/req/hy_abstract/hydrocomplex/outfallrealisation.typeofoutfall) 
 | Requirement	| [/req/hy_abstract/hydrocomplex/outfallrealisation.realisedoutfall](/req/hy_abstract/hydrocomplex/outfallrealisation.realisedoutfall) 
 
-
-##### 7.4.2.7	ReferenceLocation 
+**[needs review]**
 The HY_ReferenceLocation class describes a permanent, stable reference location such as a landmark fixed and referenced by coordinates.
 Placed in the catchment network in terms of an outfall, the reference location will be the referent of the (linear) river reference system; a hydrologic feature associated with a reference location can be considered to be carrier of the referent relative to which a distance may be determined. The HY_ReferenceLocation class carries three properties: *refPoint*, *refPointType*, *networkLocation*. 
 
