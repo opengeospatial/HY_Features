@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_Outfall</title>
+<title>HydroComplex::HY_Contour</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_Outfall", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_Contour", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">06/09/2010 11:37:55</td>
+			<td width="85%" class="ObjectDetailsValue">27/07/2016 14:27:27</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">19/07/2016 16:42:45</td>
+			<td class="ObjectDetailsValue">28/07/2016 10:01:41</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,79 +87,65 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{5BFBF32B-6310-4a1a-92F7-63CDA1849E42}</td>
+			<td class="ObjectDetailsValue">{5A17B5A9-79B3-49c3-BD09-7CCCB7F459D7}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, hyf107, informative, informative, catchmentnetwork, TopographicRealisation_??, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, <a href="../EA3.htm">temp_overallOverview</a>, <a href="../EA5.htm">temp_catchmentRealisation_all</a>, <a href="EA13.htm">Catchment Topology</a>, <a href="../EA3/EA49.htm">River Reference System</a>, Channel Network Realisation, Hydrographic Network Realisation, Hydrometric Network Realisation</td>
+			<td class="ObjectDetailsValue"><a href="../EA3.htm">temp_overallOverview</a>, <a href="../EA5.htm">temp_catchmentRealisation_all</a>, <a href="EA31.htm">Catchment Realisation</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">common outlet to which a catchment contributes runoff. This&#160; definition denotes the logical catchment as the link between the defined outfall and another outfall, and ultimately to the common outlet of a containing high-order catchment. This means that no outfall exists without a corresponding catchment even if this may have a zero value.</div>
+	<div class="ObjectDetailsNotes">feature realisation of an &#39;un-realised&#39; catchment specifically as a contour (line) connecting the inflow and outflow of the logical catchment it realises, incl. a simple polygon.&#160; a contour realises the catchment topologically in terms of an edge connecting outfalls realised as nodes, and may be represented geometrically as a composite curve. if inflow and outflow collaps, the closed contour forms a ring, which may be represented as polygon. </div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
-			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
+			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
 			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
-			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
-		<div class="ItemBody" id="AssociationsToTable">
-			<table border="0" cellspacing="0" cellpadding="0" class="Table">
-				<tr>
-					<td width="40%" class="TableHeading">Element</td>
-					<td width="30%" class="TableHeading">Source Role</td>
-					<td width="30%" class="TableHeading">Target Role</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA33.htm">«FeatureType» HY_Catchment</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> inflow<br />
-						location served as the node where the receiving catchment gets inflow.
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> receivingCatchment<br />
-						catchment which receives water over the identified inflow node. 	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink59" onclick="parent.toggleDiv('detailsDIVLink59','DetailsImageLink59')" />Details:
-							<div id="detailsDIVLink59" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">flow into a receiving catchment.</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA3/EA52.htm">«FeatureType» HY_IndirectPosition</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
+<div class="ItemBody" id="AttributesTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="100%" class="TableHeading">Attribute</td>
+		</tr>
+						<tr>
+				<td width="100%" class="TableRow">
+					<i>Public GM_CompositeCurve</i><br /><strong>&nbsp;&nbsp;shape</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes36')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes36" border="0" />Details:
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes36_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes36_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes36_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes36_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes36_03" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to *</td>
+						</tr>
+					</table>
+					
+					
 						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> relativePosition<br />
-						position of outfall in the hydrographic network relative to a reference location fixed by coordinates.	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink60" onclick="parent.toggleDiv('detailsDIVLink60','DetailsImageLink60')" />Details:
-							<div id="detailsDIVLink60" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">relative position of the outfall in the hydrologic network. </div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-
-			</table>
-		</div>
+						
+				</td>
+			</tr>
+	</table>
+</div>
 		<div class="ItemBody" id="AssociationsFromTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
@@ -169,55 +155,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA42.htm">«FeatureType» HY_OutfallRealisation</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> outfallRealisation<br />
-						hydrologic features realising the logical outfall.
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> realisedOutfall<br />
-						outfall realised by a hydrologic feature. 	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink61" onclick="parent.toggleDiv('detailsDIVLink61','DetailsImageLink61')" />Details:
-							<div id="detailsDIVLink61" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">reference point considered as outfall of a corresponding catchment. </div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA33.htm">«FeatureType» HY_Catchment</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> contributingCatchment<br />
-						catchment which contributes water to the outflow node. 
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> outflow<br />
-						location served as the node where water flows out of the contributing catchment.	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62" onclick="parent.toggleDiv('detailsDIVLink62','DetailsImageLink62')" />Details:
-							<div id="detailsDIVLink62" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">flow from a contributing catchment.</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA3/EA54.htm">«FeatureType» HY_RiverReferenceSystem</a><br />
+						<a href="EA43.htm">«FeatureType» HY_FlowPath</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -225,17 +163,15 @@ function nameClassifier(name, separator)
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> locatedStart<br />
-						origin of the river reference system at the start of the linear flowpath, i.e. at the inflow or outflow node of the represented catchment. (located start in term sof ISO 19148)
-	
+						<strong>Name:</strong> contourLine<br />
+						contour line accompanying a flowpath.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink63" onclick="parent.toggleDiv('detailsDIVLink63','DetailsImageLink63')" />Details:
-							<div id="detailsDIVLink63" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">origin of the river reference system.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: considering each place on, or projected ont, the land surface as outfall of a corresponding catchment, the start of the representing flowpath (linear element in terms of ISO 19148) marks the origin of the river reference system.&lt;br /&gt;&lt;/p&gt;</div>
-
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink37" onclick="parent.toggleDiv('detailsDIVLink37','DetailsImageLink37')" />Details:
+							<div id="detailsDIVLink37" class="DetailsDiv" >
+							&nbsp;
 							</div>
 						</div>
 					</td>
@@ -243,28 +179,24 @@ function nameClassifier(name, separator)
 
 			</table>
 		</div>
-<div class="ItemBody" id="TaggedValTable">
-	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
-		<tr>
-			<td width="50%" class="TableHeading">Tag</td>
-			<td width="50%" class="TableHeading">Value</td>
-		</tr>
-					<tr>
-				<td width="50%" class="TableRow" valign="top">hydroComplex</td>
-				<td width="50%" class="TableRow" valign="top">HY_Catchment</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario64" onclick="parent.toggleDiv('detailsDIVScenario64','DetailsImageScenario64')" />Details:
-						<div id="detailsDIVScenario64" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">hydrologic complex as a collection of features closed under the condition of the hydrologic determination of the catchment. This means that no outfall exists without a corresponding catchment even if this may have a zero value.<br /></div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA43.htm">«FeatureType» HY_FlowPath</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
 
-						</div>
-					</div>
-				</td>
-			</tr>
-	</table>
-</div>	</div>
+			</table>
+		</div>
+	</div>
 <div class="pageFooter"></div>
  
 </body>

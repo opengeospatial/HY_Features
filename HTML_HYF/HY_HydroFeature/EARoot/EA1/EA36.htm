@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_DendriticCatchment</title>
+<title>HydroComplex::HY_CartographicRealisation</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_DendriticCatchment", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_CartographicRealisation", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">25/06/2010 08:54:19</td>
+			<td width="85%" class="ObjectDetailsValue">08/11/2010 09:25:52</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">19/07/2016 16:42:26</td>
+			<td class="ObjectDetailsValue">22/07/2016 12:07:50</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,163 +87,42 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{6B1D4D62-941B-4919-9DEF-69C6198591A7}</td>
+			<td class="ObjectDetailsValue">{AE854BA0-E282-44c2-BD6B-1A54A18566A7}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, Flowpath represents DendriticCatchment, Catchment hierarchy, Network represents DendriticCatchment, hyf107, catchmentnetwork, allClass Diagram, <a href="../EA3.htm">temp_overallOverview</a>, <a href="../EA7.htm">Fig17: Hydro Feature Special</a>, <a href="EA17.htm">Catchment Hierarchy</a>, <a href="EA15.htm">Catchment Aggregate</a>, <a href="EA25.htm">Dendritic Catchment</a>, <a href="EA23.htm">Containing- Contained Catchment</a>, <a href="EA29.htm">Upper- Lower Catchment</a>, <a href="EA21.htm">Conjoint Catchment</a></td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, hyf107, informative, allClass Diagram, <a href="../EA3.htm">temp_overallOverview</a>, <a href="../EA5.htm">temp_catchmentRealisation_all</a>, <a href="EA31.htm">Catchment Realisation</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">special catchment wherein all waters flow to a single common outlet. A dendritic catchment is permanently connected to others in a dendritic network. This class denotes the catchment as the link between inflow and outflow which allows to describe a dendritic network by upstream-downstream relationships. This concept requires a stable identifier that is not merely a function of an arbitrary delineation of the surface, and that catchments are delineated within a tree hierarchy. </div>
+	<div class="ObjectDetailsNotes">feature realisation of an &#39;un-realised&#39; catchment specifically as a set of separate cartographic layers or maps, displaying a network of hydrologic features which may be connected at the representation level, or not. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: the cartographic realisation concept implies a hydrologic catchment complex as a collection of related hydrologic features closed under the hydrologic determination condition in such that if a cartographic realisation exists, this is in the same hydrologic complex as the catchment it realises. cartographic realisation the catchment as cartographic set of features that may be connected, or not.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
-			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
-			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
-			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
 			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
-<div class="ItemBody" id="AttributesTable">
-	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+<div class="ItemBody" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
 		<tr>
-			<td width="100%" class="TableHeading">Attribute</td>
+			<td width="50%" class="TableHeading">Tag</td>
+			<td width="50%" class="TableHeading">Value</td>
 		</tr>
-						<tr>
-				<td width="100%" class="TableRow">
-					<i>Public ScopedName</i><br /><strong>&nbsp;&nbsp;code</strong>
-				</td>
-			</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">connection</td>
+				<td width="50%" class="TableRow" valign="top">false</td>
+			</tr>	
 			<tr>
-				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes35')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes35" border="0" />Details:
-					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
-					
-						<tr id="DetailsImageAttributes35_00" style="display: none;">
-							<td width="75"><i>Alias:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes35_01" style="display: none;">
-							<td width="75"><i>Initial:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes35_02" style="display: none;">
-							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes35_03" style="display: none;">
-							<td width="75"><i>Ordered: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes35_03" style="display: none;">
-							<td width="75"><i>Range: </i></td>
-							<td>Range:0 to 1</td>
-						</tr>
-					</table>
-					
-					sequenceNumber=1<br>
-						<div class="ObjectDetailsNotes"><table>
-	<tr>
-		<td valign="top">
-			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
-		</td>
-		<td>
-			unique identifier of the catchment in a classification or coding system.
-		</td>
-	</tr>
-</table></div>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario14" onclick="parent.toggleDiv('detailsDIVScenario14','DetailsImageScenario14')" />Details:
+						<div id="detailsDIVScenario14" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">network features may be connected within the realisation, or not. - &#39;false&#39; by default</div>
 
-						
+						</div>
+					</div>
 				</td>
 			</tr>
 	</table>
-</div>
-		<div class="ItemBody" id="AssociationsToTable">
-			<table border="0" cellspacing="0" cellpadding="0" class="Table">
-				<tr>
-					<td width="40%" class="TableHeading">Element</td>
-					<td width="30%" class="TableHeading">Source Role</td>
-					<td width="30%" class="TableHeading">Target Role</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA43.htm">«FeatureType» HY_CatchmentAggregate</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> exorheicDrainage<br />
-						water ultimately drained to the ocean.
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> encompassingCatchment<br />
-						catchment encompassing one or more exorheic drained sub-catchments.	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink36" onclick="parent.toggleDiv('detailsDIVLink36','DetailsImageLink36')" />Details:
-							<div id="detailsDIVLink36" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">upstream containment hierarchy of catchments and sub-catchments</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-
-			</table>
-		</div>
-		<div class="ItemBody" id="ConstraintsTable">
-			<table border="0" cellspacing="0" cellpadding="0" class="Table">
-			  	<tr>
-					<td width="80%" class="TableHeading">Constraint</td>
-					<td width="10%" class="TableHeading">Type</td>
-					<td width="10%" class="TableHeading">Status</td>
-				</tr>
-				<tr>
-					<td width="80%" class="TableRow">outflowNode:1..1</td>
-					<td width="10%" class="TableRow">Invariant</td>
-					<td width="10%" class="TableRow">Approved</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints37" onclick="parent.toggleDiv('detailsDIVConstraints37','DetailsImageConstraints37')" />Details:
-							<div id="detailsDIVConstraints37" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="80%" class="TableRow">lowerCatchment:1..1</td>
-					<td width="10%" class="TableRow">Invariant</td>
-					<td width="10%" class="TableRow">Approved</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints38" onclick="parent.toggleDiv('detailsDIVConstraints38','DetailsImageConstraints38')" />Details:
-							<div id="detailsDIVConstraints38" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="80%" class="TableRow">outflowNode.receivingCatchment:0..1</td>
-					<td width="10%" class="TableRow">Invariant</td>
-					<td width="10%" class="TableRow">Approved</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints39" onclick="parent.toggleDiv('detailsDIVConstraints39','DetailsImageConstraints39')" />Details:
-							<div id="detailsDIVConstraints39" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-
-			</table>
-		</div>
-		<div class="ItemBody" id="LinksTable">
+</div>		<div class="ItemBody" id="LinksTable">
 			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
 					<td width="30%" class="TableHeading">Object</td>
@@ -252,13 +131,7 @@ function nameClassifier(name, separator)
 					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA43.htm">«FeatureType» HY_CatchmentAggregate</a></td>
-					<td width="15%" class="TableRow" valign="top">Class</td>
-					<td width="15%" class="TableRow" valign="top">Weak</td>
-					<td width="40%" class="TableRow" valign="top">upstream containment hierarchy of catchments and sub-catchments</td>
-				</tr>
-				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA33.htm">«FeatureType» HY_Catchment</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA39.htm">«FeatureType» HY_CatchmentRealisation</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
