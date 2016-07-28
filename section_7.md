@@ -119,12 +119,12 @@ The HY_HydroFeatureName feature type provides an abstract pattern to handle cult
 | Name | HY_HydroFeatureName |
 | Dependency | [/iso/19103/](https://inspire-twg.jrc.it/svn/iso) |
 | Dependency | [/iso/19115/](https://inspire-twg.jrc.it/svn/iso) |
-| Dependency | [/req/hy_abstract/namedFeature/nameusage] (/req/hy_abstract/namedFeature/nameusage) | 
-| Requirement |	[/req/hy_abstract/namedFeature/hydrofeature.name] (/req/hy_abstract/namedFeature/hydrofeature.name) | 
-| Requirement	| [/req/hy_abstract/namedFeature/hydrofeature.namespart] (/req/hy_abstract/namedFeature/hydrofeature.namespart) | 
-| Requirement	| [/req/hy_abstract/namedFeature/hydrofeature.preferredBy] (/req/hy_abstract/namedFeature/hydrofeature.preferredby) | 
-| Requirement	| [/req/hy_abstract/namedFeature/hydrofeature.usage] (/req/hy_abstract/namedFeature/hydrofeature.usage) | 
-| Requirement	| [/req/hy_abstract/namedFeature/hydrofeature.variantspelling] (/req/hy_abstract/namedFeature/hydrofeature.variantspelling) | 
+| Dependency | [/req/hy_abstract/namedFeature/nameusage](/req/hy_abstract/namedFeature/nameusage) | 
+| Requirement |	[/req/hy_abstract/namedFeature/hydrofeature.name](/req/hy_abstract/namedFeature/hydrofeature.name) | 
+| Requirement	| [/req/hy_abstract/namedFeature/hydrofeature.namespart](/req/hy_abstract/namedFeature/hydrofeature.namespart) | 
+| Requirement	| [/req/hy_abstract/namedFeature/hydrofeature.preferredBy](/req/hy_abstract/namedFeature/hydrofeature.preferredby) | 
+| Requirement	| [/req/hy_abstract/namedFeature/hydrofeature.usage](/req/hy_abstract/namedFeature/hydrofeature.usage) | 
+| Requirement	| [/req/hy_abstract/namedFeature/hydrofeature.variantspelling](/req/hy_abstract/namedFeature/hydrofeature.variantspelling) | 
 
 #### 7.4.2	The Hydro Complex model
 The Hydro Complex model conceptualizes the hydrologic determination of a catchment by defining an outfall in the role of an outflow of a contributing catchment, or inflow to a receiving catchment (Figure 20). Conceptually, each catchment has an outfall, and any outfall associates a corresponding catchment, even if catchment and outfall may be ‘nillable’ in a particular application. A catchment interacts with upper and lower catchments via its outfall, and ultimately contributes flow to the outfall of a containing catchment. Understanding the catchment as the logical link between outfalls, an hierarchical network of catchments (Figure 21) is implied that ultimately links inflow and outflow of the catchment containing this network catchments. 
@@ -173,18 +173,18 @@ The **realisation** association relates the catchment to a feature which realise
 | Target type	| Implementation schema |
 | Name | HY_Catchment | 
 | Dependency | [/iso/19103/](https://inspire-twg.jrc.it/svn/iso) |
-| Dependency | [/req/hy_namedFeature/hydrofeature] (/req/hy_namedFeature/hydrofeature) |
+| Dependency | [/req/hy_namedFeature/hydrofeature](/req/hy_namedFeature/hydrofeature) |
 | Dependency | [/req/hy_abstract/hydrocomplex/outfall](/req/hy_abstract/hydrocomplex/outfall) | 
 | Dependency | [/req/hy_abstract/hydrocomplex/catchment](/req/hy_abstract/hydrocomplex/catchment) | 
 | Dependency | [/req/hy_abstract/hydrocomplex/catchmentrealisation](/req/hy_abstract/hydrocomplex/catchmentrealisation) |
-| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.outflow](/req/hy_abstract/hydrocomplex/catchment.outflow | 
-| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.inflow](/req/hy_abstract/hydrocomplex/catchment.inflow | 
-| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.containingcatchment](/req/hy_abstract/hydrocomplex/catchment.containingcatchment |
-| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.containedcatchment](/req/hy_abstract/hydrocomplex/catchment.containedcatchment |  
-| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.conjointcatchment](/req/hy_abstract/hydrocomplex/catchment.conjointcatchment | 
-| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.uppercatchment](/req/hy_abstract/hydrocomplex/catchment.uppercatchment |
-| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.lowercatchment](/req/hy_abstract/hydrocomplex/catchment.lowercatchment | 
-| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.realisation](/req/hy_abstract/hydrocomplex/catchment.realisation | 
+| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.outflow](/req/hy_abstract/hydrocomplex/catchment.outflow) | 
+| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.inflow](/req/hy_abstract/hydrocomplex/catchment.inflow) | 
+| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.containingcatchment](/req/hy_abstract/hydrocomplex/catchment.containingcatchment) |
+| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.containedcatchment](/req/hy_abstract/hydrocomplex/catchment.containedcatchment) |  
+| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.conjointcatchment](/req/hy_abstract/hydrocomplex/catchment.conjointcatchment) | 
+| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.uppercatchment](/req/hy_abstract/hydrocomplex/catchment.uppercatchment) |
+| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.lowercatchment](/req/hy_abstract/hydrocomplex/catchment.lowercatchment) | 
+| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.realisation](/req/hy_abstract/hydrocomplex/catchment.realisation) | 
 
 ##### 7.4.2.2	CatchmentAggregate 
 The HY_CatchmentAggregate feature type (Figure 25) specializes the HY_Catchment specifically as a set of dendritic and interior catchments, arranged in an encompassing catchment at the next upper hierarchy level without any spatial overlap. This allows to describe multiple inflows into a catchment aggregate through several hydrologically discrete sub-catchments each with a single inflow, and contributing to a joined outflow of the catchment aggregate, incl. the 'nillable' outflow of interior catchments. The catchment aggregate may be part of a containing catchment at the next higher hierarchy level, which consists of many of those neighbouring catchments. This does not necessarily implies a series of containing catchments, but allows jumping to the 'highest' upper-level system as typically used for reporting purposes.
@@ -196,7 +196,7 @@ HY_CatchmentAggregate inherits from generalization the *outflow*, *inflow*, *con
 
 The **exorheicDrainage** association references an exorheic drained catchment connected to others in a dendritic network. The **endorheicDrainage** association references an endorheic drained catchment, temporarily connected to the enveloping aggregate. If required, these asscoations shall be used to identify aggegrated catchment parts which permanently or temporarily interact with other catchment parts at the same hierarchy level. 
 
-| **Requirements Class** | [/req/hy_abstract/hydrocomplex/catchmentaggregate] (/req/hy_abstract/hydrocomplex/catchmentaggregate) | 
+| **Requirements Class** | [/req/hy_abstract/hydrocomplex/catchmentaggregate](/req/hy_abstract/hydrocomplex/catchmentaggregate) | 
 | --- | --- |
 | Target type	| Implementation schema |
 | Name | HY_CatchmentAggregate | 
@@ -234,7 +234,7 @@ HY_InteriorCatchment inherits from generalization the *code*, *outflow*, *inflow
 
 The **envelopingCatchment** association relates to the interior catchment the aggregate surrounding the catchment. If required, this association shall be used to identify the catchment enveloping one or more endorheic drained catchments contributing 'nillable' flow to the common outlet. 
 
-| **Requirements Class** | [/req/hy_abstract/hydrocomplex/interiorcatchment] (/req/hy_abstract/hydrocomplex/interiorcatchment) | 
+| **Requirements Class** | [/req/hy_abstract/hydrocomplex/interiorcatchment](/req/hy_abstract/hydrocomplex/interiorcatchment) | 
 | --- | --- |
 | Target type	| Implementation schema |
 | Name | HY_InteriorCatchment | 
@@ -260,7 +260,7 @@ The **relativePosition** association assigns to the outfall a position relative 
 | --- | --- |
 | Target type	| Implementation schema |
 | Name | HY_Outfall | 
-| Dependency | [/req/hy_abstract/hydrocomplex/catchment] (/req/hy_abstract/hydrocomplex/catchment) |
+| Dependency | [/req/hy_abstract/hydrocomplex/catchment](/req/hy_abstract/hydrocomplex/catchment) |
 | Dependency | [/req/hy_abstract/hydrocomplex/indirectposition](/req/hy_abstract/hydrocomplex/indirectposition) | 
 | Dependency | [/req/hy_abstract/hydrocomplex/outfallrealisation](/req/hy_abstract/hydrocomplex/outfallrealisation) | 
 | Requirement	| [/req/hy_abstract/hydrocomplex/outfall.contributingcatchment](/req/hy_abstract/hydrocomplex/outfall.contributingcatchment) |
