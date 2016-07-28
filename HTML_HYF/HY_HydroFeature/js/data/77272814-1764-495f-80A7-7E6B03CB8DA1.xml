@@ -1,4 +1,6 @@
-tocTab[tocTab.length] = new Array("0.2:1", "", "ChannelNetwork_ext", "EARoot/EA2/EA17.htm", "175.png", "5313", "0", "", "Diagram diagram0","{C8AAC0CC-9D76-4cc0-94E0-87356CCF4C2B}");
-tocTab[tocTab.length] = new Array("0.2:2", "", "«FeatureType» HY_Channel", "EARoot/EA2/EA19.htm", "5.png", "11770", "0", "", "Class0","{68C40568-F042-4b27-8E75-FCC7A7D4B74F}");
-tocTab[tocTab.length] = new Array("0.2:3", "", "«FeatureType» HY_ChannelNetwork", "EARoot/EA2/EA20.htm", "5.png", "11771", "0", "", "Class0","{6E3108BD-7B97-4be1-A022-836984D0D1B8}");
-tocTab[tocTab.length] = new Array("0.2:4", "", "«CodeList» HY_DrainagePattern", "EARoot/EA2/EA21.htm", "5.png", "11772", "0", "", "Class0","{6EBBE152-21F5-4f1b-9E5C-A7E2935052DB}");
+tocTab[tocTab.length] = new Array("0.1:1", "", "Channel - WaterBody", "EARoot/EA1/EA7.htm", "175.png", "5510", "0", "", "Diagram diagram0","{EA56E166-F7B3-4f62-ADBF-D202CED464A8}");
+tocTab[tocTab.length] = new Array("0.1:2", "", "Channel Network Realisation", "EARoot/EA1/EA9.htm", "175.png", "5509", "0", "", "Diagram diagram0","{C8AAC0CC-9D76-4cc0-94E0-87356CCF4C2B}");
+tocTab[tocTab.length] = new Array("0.1:3", "", "«FeatureType» HY_Depression", "EARoot/EA1/EA11.htm", "5.png", "12143", "0", "", "Class0","{AD90BCA8-79AD-4619-BD04-B0EBB5D73F73}");
+tocTab[tocTab.length] = new Array("0.1:4", "", "«FeatureType» HY_Channel", "EARoot/EA1/EA12.htm", "5.png", "12140", "0", "", "Class0","{68C40568-F042-4b27-8E75-FCC7A7D4B74F}");
+tocTab[tocTab.length] = new Array("0.1:5", "", "«FeatureType» HY_ChannelNetwork", "EARoot/EA1/EA13.htm", "5.png", "12141", "0", "", "Class0","{6E3108BD-7B97-4be1-A022-836984D0D1B8}");
+tocTab[tocTab.length] = new Array("0.1:6", "", "«CodeList» HY_DrainagePattern", "EARoot/EA1/EA14.htm", "5.png", "12142", "0", "", "Class0","{6EBBE152-21F5-4f1b-9E5C-A7E2935052DB}");

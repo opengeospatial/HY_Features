@@ -1,8 +1,9 @@
-tocTab[tocTab.length] = new Array("0.2:1", "", "Hydrographic Network Realisation", "EARoot/EA2/EA12.htm", "175.png", "5407", "0", "", "Diagram diagram0","{F36FB436-6F58-4424-8B39-972C0A2C8CB4}");
-tocTab[tocTab.length] = new Array("0.2:2", "", "«FeatureType» HY_CrossSection", "EARoot/EA2/EA14.htm", "5.png", "11943", "0", "", "Class0","{3E6996FB-87DB-4e41-BA59-CD0A304CFE24}");
-tocTab[tocTab.length] = new Array("0.2:3", "", "«FeatureType» HY_LongitudinalSection", "EARoot/EA2/EA15.htm", "5.png", "11944", "0", "", "Class0","{4DBF5849-2C0B-4c93-8BCE-B182364F6078}");
-tocTab[tocTab.length] = new Array("0.2:4", "", "«FeatureType» HY_Water_LiquidPhase", "EARoot/EA2/EA16.htm", "5.png", "11947", "0", "", "Class0","{861D6478-338A-4503-9B4E-CC5440C175B4}");
-tocTab[tocTab.length] = new Array("0.2:5", "", "«FeatureType» HY_HydrographicNetwork", "EARoot/EA2/EA17.htm", "5.png", "11945", "0", "", "Class0","{575E613E-8105-4a81-9E8F-D961EBA90856}");
-tocTab[tocTab.length] = new Array("0.2:6", "", "«FeatureType» HY_Water_SolidPhase", "EARoot/EA2/EA18.htm", "5.png", "11949", "0", "", "Class0","{AFD31810-39EC-450c-8E27-3622720CA313}");
-tocTab[tocTab.length] = new Array("0.2:7", "", "«FeatureType» HY_WaterBody", "EARoot/EA2/EA19.htm", "5.png", "11946", "0", "", "Class0","{5D65EB64-3DD3-4c91-A62D-4EC120235863}");
-tocTab[tocTab.length] = new Array("0.2:8", "", "«FeatureType» HY_WaterBodyStratum", "EARoot/EA2/EA20.htm", "5.png", "11948", "0", "", "Class0","{A951A308-ECD3-442e-8235-C9AFEF79CCA0}");
+tocTab[tocTab.length] = new Array("0.2:1", "", "Hydrographic Network Realisation", "EARoot/EA2/EA15.htm", "175.png", "5535", "0", "", "Diagram diagram0","{F36FB436-6F58-4424-8B39-972C0A2C8CB4}");
+tocTab[tocTab.length] = new Array("0.2:2", "", "WaterBody  - Channel", "EARoot/EA2/EA17.htm", "175.png", "5536", "0", "", "Diagram diagram0","{9AE925AD-AB5B-4640-AB10-E68B2979BCFA}");
+tocTab[tocTab.length] = new Array("0.2:3", "", "«FeatureType» HY_CrossSection", "EARoot/EA2/EA19.htm", "5.png", "12196", "0", "", "Class0","{3E6996FB-87DB-4e41-BA59-CD0A304CFE24}");
+tocTab[tocTab.length] = new Array("0.2:4", "", "«FeatureType» HY_LongitudinalSection", "EARoot/EA2/EA20.htm", "5.png", "12197", "0", "", "Class0","{4DBF5849-2C0B-4c93-8BCE-B182364F6078}");
+tocTab[tocTab.length] = new Array("0.2:5", "", "«FeatureType» HY_Water_LiquidPhase", "EARoot/EA2/EA21.htm", "5.png", "12200", "0", "", "Class0","{861D6478-338A-4503-9B4E-CC5440C175B4}");
+tocTab[tocTab.length] = new Array("0.2:6", "", "«FeatureType» HY_HydrographicNetwork", "EARoot/EA2/EA22.htm", "5.png", "12198", "0", "", "Class0","{575E613E-8105-4a81-9E8F-D961EBA90856}");
+tocTab[tocTab.length] = new Array("0.2:7", "", "«FeatureType» HY_Water_SolidPhase", "EARoot/EA2/EA23.htm", "5.png", "12202", "0", "", "Class0","{AFD31810-39EC-450c-8E27-3622720CA313}");
+tocTab[tocTab.length] = new Array("0.2:8", "", "«FeatureType» HY_WaterBody", "EARoot/EA2/EA24.htm", "5.png", "12199", "0", "", "Class0","{5D65EB64-3DD3-4c91-A62D-4EC120235863}");
+tocTab[tocTab.length] = new Array("0.2:9", "", "«FeatureType» HY_WaterBodyStratum", "EARoot/EA2/EA25.htm", "5.png", "12201", "0", "", "Class0","{A951A308-ECD3-442e-8235-C9AFEF79CCA0}");
