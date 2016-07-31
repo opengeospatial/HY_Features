@@ -6,7 +6,7 @@ This standard defines the HY_Features conceptual model as a standard for the ide
 
 Core concepts are that of an abstract catchment with many possible 'realizations', of catchment topology and hierarchy, of aggregation of watercourses, and of positioning on a river using a nominal main flow path. Geographic locations are extended with topological attibutes to describe any location on, or projected onto, the land surface as the inflow or outflow of a corresponding catchment. 
 
-The conceptual model is implemented in several discrete modules. It is intended that implementations need to consider only those parts of the common model required by a particular implementation scope. An implmentation may include or exlude feature properties, or override the cardinality of a relationship. For example, if it is expected that a logically determined relationship may be 'nillable' within a particular realisation, the cardinality defined in the conceptual model may be overridden. Table 1 lists the application schemas, the leaf packages included and the concepts reflected therein. 
+The conceptual model is implemented in several discrete modules. It is intended that implementations need to consider only those parts of the common model required by a particular implementation scope. An implementation may include or exlude feature properties, or override the cardinality of a relationship. For example, if it is expected that a logically determined relationship may be 'nillable' within a particular realisation, the cardinality defined in the conceptual model may be overridden. Table 1 lists the application schemas, the leaf packages included and the concepts reflected therein. 
 
 Table 1: HY_Features modules, packages and concepts  **[removed informative packages from table]**
 
@@ -100,7 +100,7 @@ The Named Feature model (Figure 19) denotes the abstraction of the hydrology phe
 ![Figure 19: Named Feature (UML class diagram)](figs/fig19.png)
 Figure 19: Named Feature (UML class diagram) 
 
-The named hydrologic feature is further specialised by separate feature types. Each specialisation inherits the properties from generalization. The HY_HydroFeature type has one association: *name*.
+The HY_HydroFeature feature type is further specialised by separate feature types. Each specialisation inherits the properties from generalization; HY_HydroFeature type has one association: *name*.
 
 The **name** association associates a name given to the hydrologic feature in cultural, political or historical context. If required, this association shall be used where names are assigned to a feature instance in cross-jurisdictional and multi-lingual contexts, that may occur with trans-boundary features. 
 
@@ -111,7 +111,7 @@ The **name** association associates a name given to the hydrologic feature in cu
 | Dependency | [/req/namedFeature/hydrofeaturename] (/req/namedFeature/hydrofeaturename) | 
 | Requirement	| [/req/namedFeature/hydrofeature.name] (/req/namedFeature/hydrofeature.name) | 
 
-The HY_HydroFeatureName type provides an abstract pattern to handle cultural, political and historical variability of names. This allows to assign a name for all or part of a hydrologic feature without necessarily have a formal model for naming. HY_HydroFeatureName has five attributes: name, namesPart, preferredBy, usage and variantSpelling. If required, an implementation shall use this type to describe the usage of multiple names. The usage type may be identified using the HY_NameUsage codelist described in Annex ...,  table ... 
+The HY_HydroFeatureName feature type provides an abstract pattern to handle cultural, political and historical variability of names. This allows to assign a referencable name for all or part of a hydrologic feature without necessarily have a formal model for naming. HY_HydroFeatureName has five attributes: name, namesPart, preferredBy, usage and variantSpelling. If required, an implementation shall use this type to describe the usage of multiple names. The usage type may be identified using the HY_NameUsage codelist described in Annex ...,  table ... 
 
 | **Requirements Class** | [/req/hy_namedFeature/hydrofeaturename] (/req/hy_namedFeature/hydrofeaturename) |
 | --- | --- |
@@ -119,12 +119,12 @@ The HY_HydroFeatureName type provides an abstract pattern to handle cultural, po
 | Name | HY_HydroFeatureName |
 | Dependency | [/iso/19103/](https://inspire-twg.jrc.it/svn/iso) |
 | Dependency | [/iso/19115/](https://inspire-twg.jrc.it/svn/iso) |
-| Dependency | [/req/hy_abstract/namedFeature/nameusage] (/req/hy_abstract/namedFeature/nameusage) | 
-| Requirement |	[/req/hy_abstract/namedFeature/hydrofeature.name] (/req/hy_abstract/namedFeature/hydrofeature.name) | 
-| Requirement	| [/req/hy_abstract/namedFeature/hydrofeature.namespart] (/req/hy_abstract/namedFeature/hydrofeature.namespart) | 
-| Requirement	| [/req/hy_abstract/namedFeature/hydrofeature.preferredBy] (/req/hy_abstract/namedFeature/hydrofeature.preferredby) | 
-| Requirement	| [/req/hy_abstract/namedFeature/hydrofeature.usage] (/req/hy_abstract/namedFeature/hydrofeature.usage) | 
-| Requirement	| [/req/hy_abstract/namedFeature/hydrofeature.variantspelling] (/req/hy_abstract/namedFeature/hydrofeature.variantspelling) | 
+| Dependency | [/req/hy_abstract/namedFeature/nameusage](/req/hy_abstract/namedFeature/nameusage) | 
+| Requirement |	[/req/hy_abstract/namedFeature/hydrofeature.name](/req/hy_abstract/namedFeature/hydrofeature.name) | 
+| Requirement	| [/req/hy_abstract/namedFeature/hydrofeature.namespart](/req/hy_abstract/namedFeature/hydrofeature.namespart) | 
+| Requirement	| [/req/hy_abstract/namedFeature/hydrofeature.preferredBy](/req/hy_abstract/namedFeature/hydrofeature.preferredby) | 
+| Requirement	| [/req/hy_abstract/namedFeature/hydrofeature.usage](/req/hy_abstract/namedFeature/hydrofeature.usage) | 
+| Requirement	| [/req/hy_abstract/namedFeature/hydrofeature.variantspelling](/req/hy_abstract/namedFeature/hydrofeature.variantspelling) | 
 
 #### 7.4.2	The Hydro Complex model
 The Hydro Complex model conceptualizes the hydrologic determination of a catchment by defining an outfall in the role of an outflow of a contributing catchment, or inflow to a receiving catchment (Figure 20). Conceptually, each catchment has an outfall, and any outfall associates a corresponding catchment, even if catchment and outfall may be ‘nillable’ in a particular application. A catchment interacts with upper and lower catchments via its outfall, and ultimately contributes flow to the outfall of a containing catchment. Understanding the catchment as the logical link between outfalls, an hierarchical network of catchments (Figure 21) is implied that ultimately links inflow and outflow of the catchment containing this network catchments. 
@@ -136,12 +136,12 @@ The Hydro Complex model allows to consider an arbitrary location on, or projecte
 The Hydro Complex model allows for the existence of catchments to be recognized, and identifiers assigned by referencing the outfall even if stream networks, catchment areas and watersheds are not reliably determined. It is intended that hydrological reporting applications may use this model without the full complexity and detail of scientific catchment models.
 
 ##### 7.4.2.1	Catchment
-The HY_Catchment type (Figure 20) specializes the general HY_HydroFeature class; it denotes the hydrologic determination by an outfall association, and the logical network of catchments through internal relationships. HY_Catchment is an abstract class and may be further specialised with respect to catchment interaction. 
+The HY_Catchment feature type denotes the hydrologic determination by associating an outfall, and the logical network of catchments through internal relationships. Each catchment may associate many different realisations within an implied hydro(sphere) complex under the condition of the hydrologic determination, incl. a topological realisation as an edge 'bounded' by inflow and outflow nodes. HY_Catchment is an abstract class and may be further specialised with respect to catchment interaction. 
 
 ![Figure 20: Catchment (UML class diagram)](figs/fig20.png)
 Figure 20: Catchment (UML class diagram) 
 
-HY_Catchment inherits from generalization the *name* property, and carries the *code* attribute and the associations: *outflow*, *inflow*, *containing Catchment*, *containedCatchment*, *conjointCatchment*, *upperCatchment*, *lowerCatchment*, *realisation*.
+The HY_Catchment type (Figure 20) specializes the general HY_HydroFeature class. From generalization HY_Catchment inherits the *name* property, and carries the *code* attribute and the associations: *outflow*, *inflow*, *containing Catchment*, *containedCatchment*, *conjointCatchment*, *upperCatchment*, *lowerCatchment*, *realisation*.
 
 The **code** attribute may be used to assign to the catchment a unique identifier in given context. If required, the code attribute shall be implemented using a controlled classification or coding system. Example: WMO Basin Codes.  
 
@@ -165,28 +165,29 @@ The **upperCatchment** and **lowerCatchment** associations connect the catchment
 ![Figure 24: Upper / lower catchment (UML class diagram)](figs/fig24.png)
 Figure 24: Upper / lower catchment (UML class diagram)
 
-The **realisation** association relates the catchment to a feature which realises the logical catchment. This supports to link mutliple realisations of the same catchment. If required, this association shall be used identify one particular realisation. 
+The **realisation** association relates the catchment to a feature which realises the logical catchment. This supports to link multiple realisations of the same catchment. If required, this association shall be used identify a particular realisation. In case of a topological realisation, the realisation of the catchment shall be of higher dimension than the realisation of the outfall.
+
 
 | **Requirements Class** | [/req/hy_abstract/hydrocomplex/catchment] (/req/hy_abstract/hydrocomplex/catchment) | 
 | --- | --- |
 | Target type	| Implementation schema |
 | Name | HY_Catchment | 
 | Dependency | [/iso/19103/](https://inspire-twg.jrc.it/svn/iso) |
-| Dependency | [/req/hy_namedFeature/hydrofeature] (/req/hy_namedFeature/hydrofeature) |
+| Dependency | [/req/hy_namedFeature/hydrofeature](/req/hy_namedFeature/hydrofeature) |
 | Dependency | [/req/hy_abstract/hydrocomplex/outfall](/req/hy_abstract/hydrocomplex/outfall) | 
 | Dependency | [/req/hy_abstract/hydrocomplex/catchment](/req/hy_abstract/hydrocomplex/catchment) | 
 | Dependency | [/req/hy_abstract/hydrocomplex/catchmentrealisation](/req/hy_abstract/hydrocomplex/catchmentrealisation) |
-| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.outflow](/req/hy_abstract/hydrocomplex/catchment.outflow | 
-| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.inflow](/req/hy_abstract/hydrocomplex/catchment.inflow | 
-| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.containingcatchment](/req/hy_abstract/hydrocomplex/catchment.containingcatchment |
-| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.containedcatchment](/req/hy_abstract/hydrocomplex/catchment.containedcatchment |  
-| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.conjointcatchment](/req/hy_abstract/hydrocomplex/catchment.conjointcatchment | 
-| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.uppercatchment](/req/hy_abstract/hydrocomplex/catchment.uppercatchment |
-| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.lowercatchment](/req/hy_abstract/hydrocomplex/catchment.lowercatchment | 
-| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.realisation](/req/hy_abstract/hydrocomplex/catchment.realisation | 
+| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.outflow](/req/hy_abstract/hydrocomplex/catchment.outflow) | 
+| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.inflow](/req/hy_abstract/hydrocomplex/catchment.inflow) | 
+| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.containingcatchment](/req/hy_abstract/hydrocomplex/catchment.containingcatchment) |
+| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.containedcatchment](/req/hy_abstract/hydrocomplex/catchment.containedcatchment) |  
+| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.conjointcatchment](/req/hy_abstract/hydrocomplex/catchment.conjointcatchment) | 
+| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.uppercatchment](/req/hy_abstract/hydrocomplex/catchment.uppercatchment) |
+| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.lowercatchment](/req/hy_abstract/hydrocomplex/catchment.lowercatchment) | 
+| Requirement	| [/req/hy_abstract/hydrocomplex/catchment.realisation](/req/hy_abstract/hydrocomplex/catchment.realisation) | 
 
 ##### 7.4.2.2	CatchmentAggregate 
-The HY_CatchmentAggregate type (Figure 25) specializes the HY_Catchment specifically as a set of dendritic and interior catchments, arranged in an encompassing catchment at the next upper hierarchy level without any spatial overlap. This allows to describe multiple inflows into a catchment aggregate through several hydrologically discrete sub-catchments each with a single inflow, and contributing to a joined outflow of the catchment aggregate, incl. the 'nillable' outflow of interior catchments. The catchment aggregate may be part of a containing catchment at the next higher hierarchy level, which consists of many of those neighbouring catchments. This does not necessarily implies a series of containing catchments, but allows jumping to the 'highest' upper-level system as typically used for reporting purposes.
+The HY_CatchmentAggregate feature type (Figure 25) specializes the HY_Catchment specifically as a set of dendritic and interior catchments, arranged in an encompassing catchment at the next upper hierarchy level without any spatial overlap. This allows to describe multiple inflows into a catchment aggregate through several hydrologically discrete sub-catchments each with a single inflow, and contributing to a joined outflow of the catchment aggregate, incl. the 'nillable' outflow of interior catchments. The catchment aggregate may be part of a containing catchment at the next higher hierarchy level, which consists of many of those neighbouring catchments. This does not necessarily implies a series of containing catchments, but allows jumping to the 'highest' upper-level system as typically used for reporting purposes.
 
 ![Figure 25: Catchment aggregate (UML class diagram)](figs/fig25.png)
 Figure 25: Catchment aggregate (UML class diagram)
@@ -195,7 +196,7 @@ HY_CatchmentAggregate inherits from generalization the *outflow*, *inflow*, *con
 
 The **exorheicDrainage** association references an exorheic drained catchment connected to others in a dendritic network. The **endorheicDrainage** association references an endorheic drained catchment, temporarily connected to the enveloping aggregate. If required, these asscoations shall be used to identify aggegrated catchment parts which permanently or temporarily interact with other catchment parts at the same hierarchy level. 
 
-| **Requirements Class** | [/req/hy_abstract/hydrocomplex/catchmentaggregate] (/req/hy_abstract/hydrocomplex/catchmentaggregate) | 
+| **Requirements Class** | [/req/hy_abstract/hydrocomplex/catchmentaggregate](/req/hy_abstract/hydrocomplex/catchmentaggregate) | 
 | --- | --- |
 | Target type	| Implementation schema |
 | Name | HY_CatchmentAggregate | 
@@ -206,7 +207,7 @@ The **exorheicDrainage** association references an exorheic drained catchment co
 | Requirement	| [/req/hy_abstract/hydrocomplex/catchmentaggregate.endorheicdrainage](/req/hy_catchment/catchmentaggregate.endorheicdrainage) | 
 
 ##### 7.4.2.3	DendriticCatchment
-The HY_DendriticCatchment type (Figure 26) specializes the general HY_Catchment class specifically as a hydrologically discrete catchment, which is determined by a single common outlet to which all waters flow. This class denotes the catchment as the topological link between an inflow and an outflow allowing catchments to be connected in a dendritic network by upstream-downstream relationships, without knowing the complex hydrology between inflow and outflow. This concept requires a stable identifier that is not merely a function of an arbitrary delineation of the surface, and that catchments are delineated within a simple tree hierarchy. 
+The HY_DendriticCatchment feature type (Figure 26) specializes the general HY_Catchment class specifically as a hydrologically discrete catchment, which is determined by a single common outlet to which all waters flow. This class denotes the catchment as the topological link between an inflow and an outflow allowing catchments to be connected in a dendritic network by upstream-downstream relationships, without knowing the complex hydrology between inflow and outflow. This concept requires a stable identifier that is not merely a function of an arbitrary delineation of the surface, and that catchments are delineated within a simple tree hierarchy. 
 
 ![Figure 26: Dendritic catchment (UML class diagram)](figs/fig26.png)
 Figure 26: Dendritic catchment (UML class diagram)
@@ -224,7 +225,7 @@ The **encompassingCatchment** association relates to the dendritic catchment the
 | Requirement	| [/req/hy_abstract/hydrocomplex/dendriticcatchment.encompassingcatchment](/req/hy_abstract/hydrocomplex/dendriticcatchment.encompassingcatchment) | 
 
 ##### 7.4.2.4	InteriorCatchment
-The HY_InteriorCatchment type (Figure 27) specializes the general HY_Catchment class specifically as a hydrologically discrete catchment, which is generally not connected to other catchments. This class describes the interior catchment as a catchment enveloped by other catchments to which it may temporary contribute. 
+The HY_InteriorCatchment feature type (Figure 27) specializes the general HY_Catchment class specifically as a hydrologically discrete catchment, which is generally not connected to other catchments. This class describes the interior catchment as a catchment enveloped by other catchments to which it may temporary contribute. 
 
 ![Figure 27: Interior catchment (UML class diagram)](figs/fig27.png)
 Figure 27: Interior catchment (UML class diagram)
@@ -233,7 +234,7 @@ HY_InteriorCatchment inherits from generalization the *code*, *outflow*, *inflow
 
 The **envelopingCatchment** association relates to the interior catchment the aggregate surrounding the catchment. If required, this association shall be used to identify the catchment enveloping one or more endorheic drained catchments contributing 'nillable' flow to the common outlet. 
 
-| **Requirements Class** | [/req/hy_abstract/hydrocomplex/interiorcatchment] (/req/hy_abstract/hydrocomplex/interiorcatchment) | 
+| **Requirements Class** | [/req/hy_abstract/hydrocomplex/interiorcatchment](/req/hy_abstract/hydrocomplex/interiorcatchment) | 
 | --- | --- |
 | Target type	| Implementation schema |
 | Name | HY_InteriorCatchment | 
@@ -242,30 +243,32 @@ The **envelopingCatchment** association relates to the interior catchment the ag
 | Requirement	| [/req/hy_abstract/hydrocomplex/interiorcatchment.envelopingcatchment](/req/hy_abstract/hydrocomplex/interiorcatchment.envelopingcatchment) | 
 
 ##### 7.4.2.5	Outfall
-The HY_Outfall class conceptualize the common outlet of a catchment as the topological node where catchments interact (see section 6.3.2). The outfall marks the place where the outflow node of a contributing catchment meets the inflow node of a receiving catchment. In terms of an outflow node, the outfall identifies the location to which upstream catchments contribute flow due to gravitational forces or pumping; in terms of an inflow node that location is identified from where catchments downstream receive flow collected upstream. 
+The HY_Outfall feature type denotes the hydrologic determination of the outfall by associating a corresponding catchment (Figure 20). The logical outfall marks the place where a catchment interacts with another catchment, i.e. where the outflow of a contributing catchment becomes inflow into a receiving catchment, whereby a catchment may receive flow from several catchments. Logically placed in reference to a catchment which links inflow and outflow, an outfall has a position relative to another outfall 'fixed' by the  catchment. Each outfall may associate different realisations within an implied hydro(sphere) complex under the condition of the hydrologic determination, incl. the topological realisation as a node in terms of the 'boundary' of a catchment edge. 
 
-Topologically placed in the network of catchments, geometric shape and position of the outfall are not explicitly defined. The outfall may get assigned a position relative to a reference location of a particular geometric shape using a linear reference system. The reference location may be a geometric point identified by co-ordinates, or any other feature carrying such a reference point. A fixed landmark, a monitoring station, a spring where groundwater enters the surface, may be a reference point but also a point projected onto the surface or created from merging disjoint locations; vertically arranged points may be aggregated and projected onto surface, a delta of a river system merged to virtual mouth, diffuse groundwater discharge placed on rivers or lakes.  The HY_Outfall class carries four associations: *contributingCatchment*, *receivingCatchment*, *summitLine* and *relativePosition*. 
+![Figure 28: Outfall (UML class diagram)](figs/fig28.png)
+Figure 28: Outfall (UML class diagram)
 
-The **contributingCatchment** association relates a catchment to its outflow node. This allows to describe an arbitrary location on the land surface as the topological outfall to which a catchment contributes flow, received from an upstream inflow node. If required, this association shall be used to identify the catchment contributing to the outflow node as the connecting link between inflow node and outflow node, and thus connecting an upstream catchment (at its outflow node) and a downstream catchment (at its inflow node).  
+HY_Outfall carries the associations: *contributingCatchment*, *receivingCatchment*, and *relativePosition*. 
 
-The **receivingCatchment** association relates a catchment to its inflow node. This allows to describe an arbitrary location on the land surface as the topological outfall where a catchment receives flow from upstream and contributes this to an outflow node. If required, this association shall be used to identify the catchment receiving flow as the connecting link between inflow node and outflow node, and thus connecting an upstream catchment (at its outflow node) and a downstream catchment (at its inflow node).
+The **contributingCatchment** association relates to the outfall a catchment that contributes flow. This allows to relate to an outflow an identified inflow and to determine its position through referencing this. If required, this association shall be used to identify the catchment connecting the outfall and the inflow used for reference.  
 
-The **summitLine** association relates a summit line on which the outfall marks the lowest point, associating an infinite number of nodes on line each to be located in the catchment network. If required, this association may be used to identify a summit line on which an outfall may be placed when a particular inflow location is not known.
+The **receivingCatchment** association relates to the outfall a catchment that receives flow from here. This allows to relate to an inflow an identified outflow and to determine its position through referencing this. If required, this association shall be used to identify the catchment connecting the outfall and the outflow used for reference. 
 
-The **relativePosition** association assigns to the outfall a position relative to a reference location located in the network and identified or fixed by coordinates. If required, this association shall be used to assign a position, either expressed as the distance to a reference location, or relative or interpolative to this.   
+The **relativePosition** association assigns to the outfall a position relative to a reference location fixed in the logical network of catchments. This means that the position of an outfall is determined relative to another realised outfall. If required, this association shall be used to assign a position to an inflow or outflow of a catchment using existing reference location.  
 
-| **Requirements Class** | [/req/hy_catchment/outfall] (/req/hy_catchment/outfall) | 
+| **Requirements Class** | [req/hy_abstract/hydrocomplex/outfall] (req/hy_abstract/hydrocomplex/outfall) | 
 | --- | --- |
 | Target type	| Implementation schema |
 | Name | HY_Outfall | 
-| Dependency | [/req/hy_catchment/catchment] (/req/hy_catchment/catchment) |
-| Dependency | [/req/hy_catchment/divide](/req/hy_catchment/divide) | 
-| Dependency | [/req/hy_catchment/indirectposition](/req/hy_catchment/indirectposition) | 
-| Requirement	| [/req/hy_catchment/outfall.contributingcatchment](/req/hy_catchment/outfall.contributingcatchment) |
-| Requirement	| [/req/hy_catchment/outfall.receivingcatchment](/req/hy_catchment/outfall.receivingcatchment) |
-| Requirement	| [/req/hy_catchment/outfall.summitline](/req/hy_catchment/outfall.summitline) |
-| Requirement	| [/req/hy_catchment/outfall.relativeposition](/req/hy_catchment/outfall.relativeposition) |
+| Dependency | [/req/hy_abstract/hydrocomplex/catchment](/req/hy_abstract/hydrocomplex/catchment) |
+| Dependency | [/req/hy_abstract/hydrocomplex/indirectposition](/req/hy_abstract/hydrocomplex/indirectposition) | 
+| Dependency | [/req/hy_abstract/hydrocomplex/outfallrealisation](/req/hy_abstract/hydrocomplex/outfallrealisation) | 
+| Requirement	| [/req/hy_abstract/hydrocomplex/outfall.contributingcatchment](/req/hy_abstract/hydrocomplex/outfall.contributingcatchment) |
+| Requirement	| [/req/hy_abstract/hydrocomplex/outfall.receivingcatchment](/req/hy_abstract/hydrocomplex/outfall.receivingcatchment) |
+| Requirement	| [/req/hy_abstract/hydrocomplex/outfall.relativeposition](/req/hy_abstract/hydrocomplex/outfall.relativeposition) |
+| Requirement	| [/req/hy_abstract/hydrocomplex/outfall.outfallrealisation](/req/hy_abstract/hydrocomplex/outfall.outfallrealisation) |
 
+**[continue]**
 
 ##### 7.4.2.6	Catchment Realisation
 The HY_CatchmentRealisation type conceptualize in general the multiple realisation of a 'un-realised', logical catchment by typical features in common use to communicate the common recognition of a catchment as the unit of study shared across sub-domains. However, particular realisations may refer only to one or the other. The catchment realisation concept implies a hydro(sphere) complex in such that if a catchment realisation exists, these features are in the same hydrologic complex as the catchment they realise. In this way each feature realisation of the logical catchment references the hydrologic determination of the realised catchment. If the realised catchment is connected with other catchments via its outfall, possible feature realisations are also connected. HY_CatchmentRealisation has one association: *realisedCatchment*. 
@@ -334,6 +337,9 @@ HY_OutfallRealisation carries three properties: *shape*, *outfallType* and *real
 | Requirement	| [/req/hy_abstract/hydrocomplex/outfallrealisation.realisedoutfall](/req/hy_abstract/hydrocomplex/outfallrealisation.realisedoutfall) 
 
 **[needs review]**
+he reference location may be a geometric point identified by co-ordinates, or any other feature carrying such a reference point. A fixed landmark, a monitoring station, a spring where groundwater enters the surface, may be a reference point but also a point projected onto the surface or created from merging disjoint locations; vertically arranged points may be aggregated and projected onto surface, a delta of a river system merged to virtual mouth, diffuse groundwater discharge placed on rivers or lakes. 
+
+
 The HY_ReferenceLocation class describes a permanent, stable reference location such as a landmark fixed and referenced by coordinates.
 Placed in the catchment network in terms of an outfall, the reference location will be the referent of the (linear) river reference system; a hydrologic feature associated with a reference location can be considered to be carrier of the referent relative to which a distance may be determined. The HY_ReferenceLocation class carries three properties: *refPoint*, *refPointType*, *networkLocation*. 
 
