@@ -44,27 +44,27 @@ Note that a direct encoding of HY\_Features to an implementation format such as 
 An implementation schema conforming to HY\_Features SHALL provide a formal mapping from one or more Feature Types present in the implementation schema to Feature Types defined in this standard specification, including all mandatory properties defined by the realized HY\_Features concept. Default values to be assumed must be specified in this mapping.
 
 
-### 7.3	The HY_Features data conformance (encoding) 
+### 7.3	The HY\_Features data conformance (encoding) 
 
-As a conceptual model HY_Features does not specify conformance requirements regarding the structure of possible encodings. It does however specify that equivalence of feature instances can be expressed. The requirement that arises is therefore that the content of feature identification elements can be matched between implementations. This does not demand the use of identical identifiers across different implementations, but it does require that implementations provide a mechanism to match identifiers from different schemes.
+As a conceptual model HY\_Features does not specify conformance requirements regarding the structure of possible encodings. It does however specify that equivalence of feature instances can be expressed. The requirement that arises is therefore that the content of feature identification elements can be matched between implementations. This does not demand the use of identical identifiers across different implementations, but it does require that implementations provide a mechanism to match identifiers from different schemes.
 
 | **Requirements Class** | [/req/hy_features_content] (/req/hy_features_content) |
 | --- | --- |
 | Target type	| Dataset |
-| Name | HY_Features Data Conformance |
+| Name | HY\_Features Data Conformance |
 | Dependency | [/req/hy_features_conceptual_model](/req/hy_features_conceptual_model) |
 | Dependency | [/iso/19109/](https://inspire-twg.jrc.it/svn/iso) |
 | Dependency | [/iso/19150/](https://inspire-twg.jrc.it/svn/iso) |
 | Dependency | [/iso/19136/](https://inspire-twg.jrc.it/svn/iso) |
 | Requirement	| [/req/ hy_features_conceptual_model/identifiers] (/req/ hy_features_conceptual_model/identifiers) |
 
-Implementations of HY_Features SHALL either use common identifiers for instances of Feature Types mapped to the same underlying HY_Features Feature Type, OR provide a mechanism to match identifiers from different identification schemes.
+Implementations of HY\_Features SHALL either use common identifiers for instances of Feature Types mapped to the same underlying HY\_Features Feature Type, OR provide a mechanism to match identifiers from different identification schemes.
 
 ### 7.4 The Hydro Feature application schema
 
-The Hydro Feature schema provides the core concepts of a named hydrologic feature, of a catchment and its multiple realisation within a hydro(spehre) complex and of a river positioning using a linear reference system. Hydrologic features are identified by hydrologic significance and feature topology. Providing a standard terminology for the typical relationships between hydrologic features allows the hydrosphere to be expressed in a consistent way across multiple data products, irrespective of the various spatial or temporal representations available for these phenomena. 
+The Hydro Feature schema provides the core concepts of a named hydrologic feature, of a catchment and its multiple realisations, and of a river positioning using a linear referencing. Hydrologic features are identified by hydrologically significant characteristics and feature topology accordint to hydrologic rules. Providing a standard terminology for the typical relationships between hydrologic features allows the hydrosphere to be expressed in a consistent way across multiple data products, regardless of various spatial or temporal representations.  
 
-Hydrologic features are usually named in cross-jurisdictional and multi-lingual contexts. The Hydro Feature schema provides a concept for a named hydrologic feature which allows to record multiple names and identifiers without necessarily have a formal naming model. The named hydrologic feature is further elucidated in domain-specific feature types, which specify the properties each specialization uses to define one or more aspects of the hydrology phenomenon (Figure 17). This includes related phenomena that participate in hydrologic systems but have specific characteristics. Given the complexity of the domain, and the nature of real-world physical phenomena, for any given hydrologic feature a wide range of possible characteristics, realizations and representations may be relevant. 
+Hydrologic features are usually named in cross-jurisdictional and multi-lingual contexts. The Hydro Feature schema provides a concept for a named hydrologic feature which allows the use of multiple names and identifiers without the need for a formal naming model. The named hydrologic feature is further described using various domain-specific feature types, which specify properties of the specializations to define one or more aspects of the hydrology phenomenon (Figure 17).  
 
 ![Figure 17: Hydrologic features describing separate aspects of the hydrology phenomenon (UML class diagram)](figs/fig17.png)
 Figure 17: Hydrologic features describing separate aspects of the hydrology phenomenon (UML class diagram)
