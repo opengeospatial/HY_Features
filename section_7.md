@@ -351,19 +351,24 @@ The HY\_HydroNetwork feature type specialises HY\_CatchmentRealisation with resp
 
 The HY\_CartographicRealisation feature type specialises HY\_CatchmentRealisation separate cartographic layers or maps, displaying a network of hydrologic features which may be connected at the representation level, or not. HY\_HydroNetwork inherits from generalization the *realisedCatchment* association incl. *hydroComplex*.
 
-**[continue here]**
 
- 
+##### 7.4.2.7	Outfall Realisation 
+The HY\_OutfallRealisation feature type (Figure 30) conceptualizes the idea of an arbitrary feature of interest that may be considered as outfall. Referencing the hydrologic determination of a catchment by the outfall, various hydrologic features may by associated to a corresponding catchment through reference to the outfall realisation feature. Any feature referencing the outfall realisation within an implied hydro(sphere) complex may realise the logical outfall, specifically as a permanent, stable location fixed or referenced by coordinates. 
 
-##### 7.4.2.7	Outfall Realisation (former reference location)
-The HY\_OutfallRealisation type (Figure ) conceptualizes the idea of an arbitrary feature of interest that may be considered as outfall. Any location within a hydro(sphere) complex may realise the logical outfall, specifically as a permanent, stable reference location fixed or referenced by coordinates; outfall realisation may be represented by any geometric object, incl. a single point. 
+Permanent, fixed landmarks such as confluences, points at cross or longitudinal sections, position of a monitoring station on a river are typical outfall realisations. In other than surface water contexts other types may realise a catchment's logical outfall. Outfall realisations that not support the associations defined for surface water in this standard, e.g. a spring where groundwater enters the surface, or a point projected onto the surface or created from merging disjoint locations, may use or specialise the general HY\_OutfallRealisation type. 
 
-![Figure : Outfall realisation (UML class diagram)](figs/fig.png)
-Figure : Outfall realisation (UML class diagram) 
+The HY\_OutfallRealisation is topologically understood as boundary of the corresponding catchment, and always of lower dimension than the realised catchment. With respect to the very common topological realisation of a catchment as an edge, a 'spoke' property of type HY_Flowpath is described by means of a 'tagged value' and used to associate an upstream and downstream flowpath. The outfall realisation may be represented by any geometric object, incl. a single point.
 
-HY\_OutfallRealisation carries three properties: *shape*, *outfallType* and *realisedOutfall* defines the relationship to exactly the catchment that is realisedby the special feature type.  If required, this association shall be used to reference the catchment wherein hydrologic processes are studied and reported by the data set or data product. Outfall realisation is defined here with the option to use a geometry type defined in ISO19107: Spatial Schema. To express the type of the realised outfall verbally, a term from the HY\_TypeOfOutfall codelist may be used. Note that alternative code lists may be used but should be related to the terms in Annex E using an appropriate formalism.  
+![Figure 30: Outfall realisation (UML class diagram)](figs/fig30.png)
+Figure 30: Outfall realisation (UML class diagram) 
 
-this allows, and identifiers to be assigned by referencing the outfall even if stream networks, catchment areas and watersheds are not reliably determined.. through reference to the outfall
+HY\_OutfallRealisation carries the *realisedOutfall* association implying the *hydroComplex* feature collection, and carries two attributes: *shape* and *outfallType*. 
+
+The **realisedOutfall** association identifies exactly the catchment that contributes to the outfall, or that receives flow from the outfall. This allows identifiers to be assigned to a catchment even if flowpath, catchment area or stream network are not reliably determined. If required, this association shall be used to identify the logical outfall which is referenced by the hydrologic feature that realises the logical catchment either on separately, or as part of a typical network. 
+
+The **shape** attribute defines the geometric representation of the realised outfall, here with the option to use a geometry type defined in ISO19107: Spatial Schema, if required.
+  
+The *outfallType* attribute provides a list of terms in common use to express verbally the type of the realised outfall. If required, an implementation may use a term from the HY\_TypeOfOutfall codelist. Note that alternative code lists may be used but should be related to the terms in Annex ..., table ...  **[correct reference]** using an appropriate formalism.  
 
 | **Requirements Class** | [/req/hy_abstract/hydrocomplex/outfallrealisation] (/req/hy_abstract/hydrocomplex/outfallrealisation) | 
 | --- | --- |
@@ -372,32 +377,13 @@ this allows, and identifiers to be assigned by referencing the outfall even if s
 | Dependency | [/iso/19107/...](https://inspire-twg.jrc.it/svn/iso) |
 | Dependency | [/req/hy_abstract/hydrocomplex/outfall](/req/hy_abstract/hydrocomplex/outfall) | 
 | Dependency | [/req/hy_abstract/hydrocomplex/typeofoutfall](/req/hy_abstract/hydrocomplex/typeofoutfall) | 
-| Requirement	| [/req/hy_abstract/hydrocomplex/outfallrealisation.typeofoutfall](/req/hy_abstract/hydrocomplex/outfallrealisation.shape |
-| Requirement	| [/req/hy_abstract/hydrocomplex/outfallrealisation.typeofoutfall](/req/hy_abstract/hydrocomplex/outfallrealisation.typeofoutfall) 
-| Requirement	| [/req/hy_abstract/hydrocomplex/outfallrealisation.realisedoutfall](/req/hy_abstract/hydrocomplex/outfallrealisation.realisedoutfall) 
-
-**[needs review]**
-he reference location may be a geometric point identified by co-ordinates, or any other feature carrying such a reference point. A fixed landmark, a monitoring station, a spring where groundwater enters the surface, may be a reference point but also a point projected onto the surface or created from merging disjoint locations; vertically arranged points may be aggregated and projected onto surface, a delta of a river system merged to virtual mouth, diffuse groundwater discharge placed on rivers or lakes. 
+| Requirement	| [/req/hy_abstract/hydrocomplex/outfallrealisation.realisedoutfall](/req/hy_abstract/hydrocomplex/outfallrealisation.realisedoutfall) ]
+| Requirement	| [/req/hy_abstract/hydrocomplex/outfallrealisation.shape](/req/hy_abstract/hydrocomplex/outfallrealisation.shape) ]
+| Requirement	| [/req/hy_abstract/hydrocomplex/outfallrealisation.typeofoutfall](/req/hy_abstract/hydrocomplex/outfallrealisation.typeofoutfall) ]
 
 
-The HY\_ReferenceLocation class describes a permanent, stable reference location such as a landmark fixed and referenced by coordinates.
-Placed in the catchment network in terms of an outfall, the reference location will be the referent of the (linear) river reference system; a hydrologic feature associated with a reference location can be considered to be carrier of the referent relative to which a distance may be determined. The HY\_ReferenceLocation class carries three properties: *refPoint*, *refPointType*, *networkLocation*. 
 
-The **refPoint** and **refPointType** attributes describes the reference location as point of a particular geometry. Given that a single point may have several reported locations depending on its nature and the precision of measurement, these attributes describe an accepted common point. If required, the reference point shall be identified using the GM_Point type, or the HY\_RefPointType codelist described in Annex ... , table ... . **[insert reference]** Note that alternative code lists may be used but should be related to the terms in Annex E using an appropriate formalism.  
-
-The **networkLocation** association locates the reference location in a given network of catchments. If required, this association shall be used to determine a referent topologically as inflow to a receiving or outflow of a contributing catchment.
-
-| **Requirements Class** | [/req/hy_catchment/referencelocation] (/req/hy_catchment/referencelocation) | 
-| --- | --- |
-| Target type	| Implementation schema |
-| Name | HY\_ReferenceLocation | 
-| Dependency | [/iso/19107/](https://inspire-twg.jrc.it/svn/iso) |
-| Dependency | [/req/hy_catchment/refpointtype](/req/hy_catchment/refpointtype) |
-| Dependency | [/req/hy_catchment/outfall](/req/hy_catchment/outfall) |
-| Requirement	| [/req/hy_catchment/referencelocation.refpoint](/req/hy_catchment/outfall.refpoint) |
-| Requirement	| [/req/hy_catchment/referencelocation.refpointtype](/req/hy_catchment/outfall.refpointtype) |
-| Requirement	| [/req/hy_catchment/referencelocation.networklocation](/req/hy_catchment/outfall.networklocation) |
-
+**[continue here]**
 
 
 #### 7.4.5	The River Positioning system
