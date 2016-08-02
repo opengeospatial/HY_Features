@@ -381,11 +381,6 @@ The *outfallType* attribute provides a list of terms in common use to express ve
 | Requirement	| [/req/hy_abstract/hydrocomplex/outfallrealisation.shape](/req/hy_abstract/hydrocomplex/outfallrealisation.shape) ]
 | Requirement	| [/req/hy_abstract/hydrocomplex/outfallrealisation.typeofoutfall](/req/hy_abstract/hydrocomplex/outfallrealisation.typeofoutfall) ]
 
-
-
-**[continue here]**
-
-
 #### 7.4.3	The River Positioning System model
 The River Positioning System provides a simple model to place a feature of interest 'on a river' using its topological realization. It introduces the concept of Indirect Position where a position is determined relative to an already established reference location. This concept uses a linear river reference system whose origin is set at the outfall of the catchment that corresponds to the feature of interest, and whose linear shape is given by the flowpath realising the catchment between the origin and the reference location. It is important to note, that each logical catchment has its own reference system, and must have one outfall (origin) and one linear flowpath realisation (shape). 
 
@@ -396,12 +391,13 @@ Figure 31: River Positioning System (UML class diagram)
 
 The HY\_IndirectPosition feature type defines the indirect position, expressed either as the absolute distance to a reference point, or relative to the reference point or to the distance (interpolative).  Indirect position assigns to an feature of interest realizing an outfall a position in reference to an existing outfall realization using a linear river reference system.  HY\_IndirectPosition carries four properties: absolute, relative, referenceLocation, riverReferenceSystem. An implementation may use ISO 19148(2012): LinearReferencing understanding the feature to be placed as an ‘Event’ at a *locating* indirect position  in distance to an already *located* outfall realisation, and this distance expressed  as a *linear Element* (flowpath)  *fromReferent*  (outfall realization) *towardsReferent* (outfall realization).
 
-The **absolute** attribute provide an distance expression as absolute value, including an indication of accuracy and precision of the absolute value; the **relative** attribute provides an expression for the relative and interpolative distance value. If required, an implementation shall use these attributes to express the absolute or relative value using the HY\_DistanceToRefPoint and HY_RelativePosition data types, or other basic types defined in ISO19103: Conceptual Schema. To express a relative position verbally, a term from the HY\_RelativePositionDescription  code list of terms commonly used in hydrology to describe a spatial relationship between two locations may be used. Note that alternative code lists may be used but should be related to the terms in Annex …, table ... [correct ref] using an appropriate formalism. 
+The **absolute** attribute provide an distance expression as absolute value, including an indication of accuracy and precision of the absolute value; the **relative** attribute provides an expression for the relative and interpolative distance value. If required, an implementation shall use these attributes to express the absolute or relative value using the HY\_DistanceToRefPoint and HY_RelativePosition data types, or other basic types defined in ISO19103: Conceptual Schema. To express a relative position verbally, a term from the HY\_RelativePositionDescription  code list of terms commonly used in hydrology to describe a spatial relationship between two locations may be used. Note that alternative code lists may be used but should be related to the terms in Annex …, table ... **[correct ref]** using an appropriate formalism. 
 
 The **referenceLocation** association describes an existing outfall realization used for reference. If required, this association shall be used to identify a permanent reference location relative to which a position is assigned to an outfall, or the feature of interest realizing the outfall. 
 
 The **riverReferenceSystem** association describes the special linear coordinate system applied to assign the position. If required, this association shall be used to identify the origin and shape of reference system used to place an outfall, or the feature of interest realizing the outfall; an implementation may use the HY_RiverReferenceSystem feature type defined in this standard.
-HY\_IndirectPosition feature type defines an indirect position, either expressed as the distance to a reference point or as position relative to a reference point or to the distance (interpolative). This type may use ISO 19148(2012): LinearReferencing understanding the (linearly represented) outfall as an 'event' in terms of ISO 19148 that associates the inflow/outflow node to be placed with the outflow/inflow node marked by the reference location. HY\_IndirectPosition associates four properties: *absolute*, *relative*, *referenceLocation*, *riverReferenceSystem*.
+
+HY\_IndirectPosition feature type defines an indirect position, either expressed as the distance to a reference point or as position relative to a reference point or to the distance (interpolative). HY\_IndirectPosition associates four properties: *absolute*, *relative*, *referenceLocation*, *riverReferenceSystem*.
 
 | **Requirements Class** | [/req/hy_riverpositioningsystem/indirectposition] (/req/hy_riverpositioningsystem/indirectposition) |
 | --- | --- |
@@ -416,9 +412,9 @@ HY\_IndirectPosition feature type defines an indirect position, either expressed
 | Requirement |	[/req/hy_riverpositioningsystem/indirectposition.referencelocation]  (/req/hy_riverpositioningsystem/indirectposition.referencelocation) |
 | Requirement |	[/req/hy_riverpositioningsystem/indirectposition.riverreferencesystem]  (/req/hy_riverpositioningsystem/indirectposition.riverreferencesystem) |
 
-The HY\_RiverReferenceSystem feature class specializes the ISO LinearCS model, to describe the linear coordinate system of outfall nodes on the linear flowpath.  The origin of the river reference system is set at the outfall to be placed. The geometric shape is defined by the linear flowpath representing the catchment between the origin and an identified reference location upstream or downstream of the origin. The position on flowpath is provided as distance from the located start of the flowpath at origin and end at reference location towards the flowpath is directed.  Requiring an origin, a shape and an axis, HY\_RiverReferenceSystem inherits from geenralization the *axis* property, and carries the associations: *linearElement* and *locatedStart*.
+The HY\_RiverReferenceSystem feature class specializes the ISO LinearCS feature type for a linear coordinate system using inflow and outflow nodes on the linear flowpath. The origin of the river reference system is set at the outfall to be placed. The geometric shape is defined by the linear flowpath realizing the catchment between the origin and an identified reference location upstream or downstream of the origin. The position on flowpath is provided as distance from the located start of the flowpath at origin and end at the reference location towards the flowpath is directed. HY\_RiverReferenceSystem inherits from generalization the *axis* property, and carries the associations *linearElement* and *locatedStart*.
 
-The **linearElement** association defines the flowpath as the linear shape applied in the river reference system, and the **locatedStart** association defines the outfall to which a position is assigned as the origin. Bounded by inflow node and outflwo node, the flowpath starts at the feature of interest realizing the origin. If required, these associations shall be used to assign a position to an outfall, or a feature of interest understood as such.
+The **linearElement** association defines the flowpath as the linear shape applied in the river reference system, and the **locatedStart** association defines the outfall as the origin. Bounded by inflow node and outflwo node, the flowpath starts at the feature of interest realizing the origin. If required, these associations shall be used to identify the flowpath used as shape, and the start of the flowpath at a realized origin.
 
 | **Requirements Class** | [/req/hy_riverpositioningsystem/indirectposition.riverreferencesystem] (/req/hy_riverpositioningsystem/indirectposition.riverreferencesystem) |
 | --- | --- |
@@ -429,7 +425,6 @@ The **linearElement** association defines the flowpath as the linear shape appli
 | Dependency | [/req/hy_catchment/flowpath] (/req/hy_catchment/flowpath) |
 | Requirement |	[/req/hy_riverpositioningsystem/riverreferencesystem.locatedstart]  (/req/hy_riverpositioningsystem/indirectposition.locatedstart) |
 | Requirement |	[/req/hy_riverpositioningsystem/riverreferencesystem.linearelement]  (/req/hy_riverpositioningsystem/riverreferencesystem.linearelement) |
-| Requirement |	[/req/hy_riverpositioningsystem/riverreferencesystem.referencelocation]  (/req/hy_riverpositioningsystem/riverreferencesystem.referencelocation) |
 
 
 
