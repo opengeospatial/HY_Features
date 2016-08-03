@@ -124,7 +124,7 @@ The holistic idea of catchment, where a conceptual catchment has many real-world
 
 This standard defines a hydrologically determined topology model of directed outfalls, acting as inflow or outflow nodes, and the catchment which can act as the link between them. This topological catchment network pattern can be transferred to context-specific network realizations such as hydrographic networks of water bodies or channel networks that may convey water, as well as to their various representations as (poly)lines and polygons. For example, a fixed landmark on a water body, a cross-section separating a watercourse, or a station along the network, can be considered to be outfalls (outflow nodes) of a contributing catchment (link); a flowpath representing a catchment may be drawn from an (inflow) node to the (outflow) node linking the nodes through the represented catchment. As with the hydrographic (water body) and channel (conveyance) network, the abstract catchment topology model can be applied to any logical or virtual network, e.g. a network of logically connected hydrometric stations.  
 
-<img src="figs/outflowNode.png" width="250">  
+<img src="figs/overview.png" width="250">  
 Figure 14 illustrates the circular relationship between five functional components of the HY\_Features model: the catchment concept, catchment realization, hydronetworks, waterbodies, and outfalls. The cyclic nature of the basic model supports crossing scale through nesting of more or less detailed catchment realizations.
 
 ### 6.5.4 FlowPath
