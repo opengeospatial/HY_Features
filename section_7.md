@@ -73,10 +73,10 @@ The Hydro Feature schema provides the core model of catchments and their multipl
 
 The definitions applied in the Hydro Feature schema are rooted in the definitions given in the WMO Glossary of Hydrology regardless of their application context in respect to the Earth's surface. For the purpose of testing the applicability of the conceptual model in the context of surface water hydrology, the definitions in this standard refer to surface water hydrology. A conceptual model capturing the specifics of features associated with the groundwater domain is developed with reference to the GroundWaterML standard **[ correct ref ]**.
 
-The Hydro Feature schema contains five leaf packages: NamedFeature, HydroComplex, and RiverPositioning. Figure 18 shows the external and internal dependencies.
+The Hydro Feature schema contains the leaf packages: NamedFeature, HydroComplex, and RiverPositioning. Figure 18 shows the external and internal dependencies.
 
-![Figure 18: External and internal dependencies (UML class diagram)](figs/fig18.png)
-Figure 18: External and internal dependencies (UML class diagram) **[new]**
+![Figure 18: External dependencies ](figs/fig18.png)
+Figure 18: External dependencies 
 
 | **Requirements Class** | [/req/hy_abstract/*] (/req/hy_abstract/*) |
 | --- | --- |
@@ -101,16 +101,16 @@ The HY\_HydroFeature feature type is further specialised by separate feature typ
 
 The **name** association associates a name given to the hydrologic feature in cultural, political or historical context. If required, this association shall be used where names are assigned to a feature instance in cross-jurisdictional and multi-lingual contexts, that may occur with trans-boundary features. 
 
-| **Requirements Class** | [/req/namedFeature/hydrofeature] (/req/namedFeature/hydrofeature) |
+| **Requirements Class** | [/req/hy_abstract/namedFeature/hydrofeature] (/req/hy_abstract/namedFeature/hydrofeature) |
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY\_HydroFeature |
-| Dependency | [/req/namedFeature/hydrofeaturename] (/req/namedFeature/hydrofeaturename) | 
-| Requirement	| [/req/namedFeature/hydrofeature.name] (/req/namedFeature/hydrofeature.name) | 
+| Dependency | [/req/hy_abstract/namedFeature/hydrofeaturename] (/req/hy_abstract/namedFeature/hydrofeaturename) | 
+| Requirement	| [/req/hy_abstract/namedFeature/hydrofeature.name] (/req/hy_abstract/namedFeature/hydrofeature.name) | 
 
 The HY\_HydroFeatureName feature type provides an abstract pattern to handle cultural, political and historical variability of names. This allows to assign a referencable name for all or part of a hydrologic feature without necessarily have a formal model for naming. HY\_HydroFeatureName has five attributes: name, namesPart, preferredBy, usage and variantSpelling. If required, an implementation shall use this type to describe the usage of multiple names. The usage type may be identified using the HY\_NameUsage codelist described in Annex ...,  table ... 
 
-| **Requirements Class** | [/req/hy_namedFeature/hydrofeaturename] (/req/hy_namedFeature/hydrofeaturename) |
+| **Requirements Class** | [/req/hy_abstract/namedFeature/hydrofeaturename] (/req/hy_abstract/namedFeature/hydrofeaturename) |
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY\_HydroFeatureName |
@@ -244,7 +244,6 @@ The HY\_Outfall feature type (Figure 28) denotes the hydrologic determination of
 
 ![Figure 28: Outfall (UML class diagram)](figs/fig28.png)
 Figure 28: Outfall (UML class diagram)
-
 
 HY\_Outfall carries the associations: *contributingCatchment*, *receivingCatchment*, *relativePosition* and *outfallRealisation*. 
 
@@ -399,48 +398,129 @@ The **riverReferenceSystem** association describes the special linear coordinate
 
 HY\_IndirectPosition feature type defines an indirect position, either expressed as the distance to a reference point or as position relative to a reference point or to the distance (interpolative). HY\_IndirectPosition associates four properties: *absolute*, *relative*, *referenceLocation*, *riverReferenceSystem*.
 
-| **Requirements Class** | [/req/hy_riverpositioningsystem/indirectposition] (/req/hy_riverpositioningsystem/indirectposition) |
+| **Requirements Class** | [/req/hy_abstract/riverpositioningsystem/indirectposition] (/req/hy_abstract/riverpositioningsystem/indirectposition) |
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY\_IndirectPosition |
-| Dependency | [/req/hy_catchment/referencelocation] (/req/hy_catchment/referencelocation) | 
-| Dependency | [/req/hy_riverpositioningsystem/distancetorefpoint] (/req/hy_riverpositioningsystem/distancetorefpoint) | 
-| Dependency | [/req/hy_riverpositioningsystem/relativeposition] (/req/hy_riverpositioningsystem/relativeposition) | 
-| Dependency | [/req/hy_riverpositioningsystem/riverreferencesystem] (/req/hy_riverpositioningsystem/riverreferencesystem) | 
-| Requirement |	[/req/hy_riverpositioningsystem/indirectposition.absolut]  (/req/hy_riverpositioningsystem/indirectposition.absolut)
-| Requirement |	[/req/hy_riverpositioningsystem/indirectposition.relative]  (/req/hy_riverpositioningsystem/indirectposition.relative)
-| Requirement |	[/req/hy_riverpositioningsystem/indirectposition.referencelocation]  (/req/hy_riverpositioningsystem/indirectposition.referencelocation) |
-| Requirement |	[/req/hy_riverpositioningsystem/indirectposition.riverreferencesystem]  (/req/hy_riverpositioningsystem/indirectposition.riverreferencesystem) |
+| Dependency | [/req/hy_abstract/hydrocomplex/referencelocation] (/req/hy_abstract/hydrocomplex/referencelocation) | 
+| Dependency | [/req/hy_abstract/riverpositioningsystem/distancetorefpoint] (/req/hy_abstract/riverpositioningsystem/distancetorefpoint) | 
+| Dependency | [/req/hy_abstract/riverpositioningsystem/relativeposition] (/req/hy_abstract/riverpositioningsystem/relativeposition) | 
+| Dependency | [/req/hy_abstract/riverpositioningsystem/riverreferencesystem] (/req/hy_abstract/riverpositioningsystem/riverreferencesystem) | 
+| Requirement |	[/req/hy_abstract/riverpositioningsystem/indirectposition.absolut]  (/req/hy_abstract/riverpositioningsystem/indirectposition.absolut)
+| Requirement |	[/req/hy_abstract/riverpositioningsystem/indirectposition.relative]  (/req/hy_abstract/riverpositioningsystem/indirectposition.relative)
+| Requirement |	[/req/hy_abstract/riverpositioningsystem/indirectposition.referencelocation]  (/req/hy_abstract/riverpositioningsystem/indirectposition.referencelocation) |
+| Requirement |	[/req/hy_abstract/riverpositioningsystem/indirectposition.riverreferencesystem]  (/req/hy_abstract/riverpositioningsystem/indirectposition.riverreferencesystem) |
 
 The HY\_RiverReferenceSystem feature class specializes the ISO LinearCS feature type for a linear coordinate system using inflow and outflow nodes on the linear flowpath. The origin of the river reference system is set at the outfall to be placed. The geometric shape is defined by the linear flowpath realizing the catchment between the origin and an identified reference location upstream or downstream of the origin. The position on flowpath is provided as distance from the located start of the flowpath at origin and end at the reference location towards the flowpath is directed. HY\_RiverReferenceSystem inherits from generalization the *axis* property, and carries the associations *linearElement* and *locatedStart*.
 
 The **linearElement** association defines the flowpath as the linear shape applied in the river reference system, and the **locatedStart** association defines the outfall as the origin. Bounded by inflow node and outflwo node, the flowpath starts at the feature of interest realizing the origin. If required, these associations shall be used to identify the flowpath used as shape, and the start of the flowpath at a realized origin.
 
-| **Requirements Class** | [/req/hy_riverpositioningsystem/indirectposition.riverreferencesystem] (/req/hy_riverpositioningsystem/indirectposition.riverreferencesystem) |
+| **Requirements Class** | [/req/hy_riverpositioningsystem/riverreferencesystem] (/req/hy_riverpositioningsystem/indirectposition.riverreferencesystem) |
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY\_RiverReferenceSystem |
 | Dependency | [/iso/19111/...](https://inspire-twg.jrc.it/svn/iso) |
-| Dependency | [/req/hy_catchment/outfall] (/req/hy_catchment/outfall) | 
-| Dependency | [/req/hy_catchment/flowpath] (/req/hy_catchment/flowpath) |
-| Requirement |	[/req/hy_riverpositioningsystem/riverreferencesystem.locatedstart]  (/req/hy_riverpositioningsystem/indirectposition.locatedstart) |
-| Requirement |	[/req/hy_riverpositioningsystem/riverreferencesystem.linearelement]  (/req/hy_riverpositioningsystem/riverreferencesystem.linearelement) |
+| Dependency | [/req/hy_abstract/hydrocomplex/outfall] (/req/hy_abstract/hydrocomplex/outfall) | 
+| Dependency | [/req/hy_abstract/hydrocomplex/flowpath] (/req/hy_abstract/hydrocomplex/flowpath) |
+| Requirement |	[/req/hy_abstract/riverpositioningsystem/riverreferencesystem.locatedstart]  (/req/hy_abstract/riverpositioningsystem/indirectposition.locatedstart) |
+| Requirement |	[/req/hy_abstract/riverpositioningsystem/riverreferencesystem.linearelement]  (/req/hy_abstract/riverpositioningsystem/riverreferencesystem.linearelement) |
+
+## 7.5 The Surface Hydro Feature application schema
+
+The Surface Hydro Feature application schema provides common concepts of hydrologic features occurring on the land surface specifying the core concepts defined in the abstract Hydro Feature application schema. This will enable contextually related information models to build relationships to the multiple realized catchment.  Providing a standard terminology for the relationships between surface water features, typical realizations of the logical catchment and its conceptual outfall can be described in a consistent way. 
+The Surface Hydro Feature schema conceptualizes the accumulation of on the land surface in typical water bodies, each special by origin, size, or the property to move. With respect to the management of water resources, a simple concept of water storage is provided that allows to consider any water body type as a reservoir. 
+
+Following the conceptual separation of a watercourse into water body and containing channel,  the Surface Hydro Feature schema defines the network of connected depressions and channels on land surface which periodically or continuously contain water, and separate from this the hydrographic network of permanent or temporary water bodies using the channel network as connecting system. 
+The Surface Hydro Feature application schema contains the leaf packages: Channel Network, Hydrographic Network, Water Body Types and Storage. Figure 32 shows the external and internal dependencies.
+
+![Figure 32: Surface Hydro Feature, external and internal dependencies](figs/fig32.png)
+Figure 32: Surface Hydro Feature, external and internal dependencies 
+
+### 7.5.1 The Channel Network model
+The Channel Network model defines a network of connected depressions and channels which in its entirety realizes a logical catchment (Figure 33), usually as a network of linear  flowpathes realizing catchments connected to each other within the containing catchment realized by the entire network.  This allows to represent the drainage pattern, even if logically connected features may or may not be connected at the representation level.
+
+![Figure 33: Channel Network realization of catchment (UML class diagram)](figs/fig33.png)
+Figure 33: Channel Network realization of catchment (UML class diagram)
+
+A single depression or channel may realize the logical catchment either as part of the network, or via a reference location which realizes the conceptual outfall of the catchment realized by the channel or depression (Figure 34). For example, a point at an associated cross or longitudinal section may be considered to realize the outflow of the catchment which is realized by the channel expressed as a flowpath.  
+
+![Figure 34: Channel realization of outfall (UML class diagram)](figs/fig34.png)
+Figure 34: Channel realization of outfall (UML class diagram)
+
+#### 7.5.1.1 ChannelNetwork
+The HY\_ChannelNetwork feature type specializes the HY\_HydroNetwork realization defined in the core model, specifically as an aggregate of surface depressions and surface channels which continuously or periodically contain water. If the realized catchment is connected with other catchments via outfall, the depressions and channels are also connected. 
+
+HY\_ChannelNetwork associates the *surfaceDepression* and *surfaceChannel*, and carries a *drainagePattern* attribute; it inherits from generalization the *realizedCatchment*  and *flowpath* associations. 
+
+The **drainagePattern** attribute describes in general the drainage pattern. If required, an implementation may use a term from the HY\_DrainagePattern codelist.  Note that alternative code lists may be used but should be related to the terms in Annex ... , table ... . **[insert reference]** using an appropriate formalism. 
+
+The **surfaceDepression** association relates a depression which may contain stagnant water or not to the channel network. If required, this association shall be used to identify a depression which realizes the logical catchment either separately, or as part of the channel network.
+
+The **surfaceChannel** association relates a channel which may contain moving water or not to the channel network. If required, this association shall be used to identify a surface channel which realizes the logical catchment either separately, or as part of the channel network.
+
+The **flowpath** constraint is defined such that whenever the channel network is a network of flowpathes, the channel is of type HY_Flowpath. 
+
+The **contourline** constraint is defined such that whenever the channel network is a network of flowpathes, and the flowpath accompanies a contourline, the depression is of type HY_ContourLine.
+
+| **Requirements Class** | [/req/hy_surfacehydro/channelnetwork/channelnetwork] (/req/hy_surfacehydro/channelnetwork/channelnetwork) |
+| --- | --- |
+| Target type	| Implementation Schema |
+| Name | HY\_ChannelNetwork |
+| Dependency | [/req/hy_abstract/hydrocomplex/catchmentrealisation] (/req/hy_abstract/hydrocomplex/catchmentrealisation) | 
+| Dependency | [/req/hy_surfacehydro/channelnetwork/drainagepattern] (/req/hy_surfacehydro/channelnetwork/drainagepattern) | 
+| Dependency | [/req/hy_surfacehydro/channelnetwork/depression] (/req/hy_surfacehydro/channelnetwork/depression) | 
+| Dependency | [/req/hy_surfacehydro/channelnetwork/channel] (/req/hy_surfacehydro/channelnetwork/channel) | 
+| Requirement |	[/req/hy_surfacehydro/channelnetwork/channelnetwork.drainagepattern]  (/req/hy_surfacehydro/channelnetwork/channelnetwork.drainagepattern) |
+| Requirement |	[/req/hy_surfacehydro/channelnetwork/channelnetwork.surfacedepression]  (/req/hy_surfacehydro/channelnetwork/channelnetwork.surfacedepression) |
+| Requirement |	[/req/hy_surfacehydro/channelnetwork/channelnetwork.surfacechannel]  (/req/hy_surfacehydro/channelnetwork/channelnetwork.surfacechannel) |
+
+#### 7.5.1.2 Depression 
+The HY\_Depression feature type specializes the general HY\_HydroFeature class. It describes land lower than the surrounding land as container for standing water. A depression is part of the network of channels and depressions forming the connecting system for the hydrographic network. HY\_Depressions inherits from generalization the *name* property. It associates the *surfaceNetwork* in which it participates  and a body of *standingWater* .
+
+The **standingWater** association relates to the water body stagnant water. This allows to establish a relationship to a water body carrying a permanent reference location which realizes the outfall of the catchment realized by the associated water body. If required, this association shall be used to identify the water body contained in the depression. 
+
+| **Requirements Class** | [/req/hy_surfacehydro/channelnetwork/depression] (/req/hy_surfacehydro/channelnetwork/depression) |
+| --- | --- |
+| Target type	| Implementation Schema |
+| Name | HY\_Depression |
+| Dependency | [/req/hy_abstract/namedfeature/hydrofeature] (/req/hy_abstract/namedfeature/hydrofeature) | 
+| Dependency | [/req/hy_surfacehydro/channelnetwork/channelnetwork] (/req/hy_surfacehydro/channelnetwork/channelnetwork) | 
+| Dependency | [/req/hy_surfacehydro/hydrographicnetwork/waterbody] (/req/hy_surfacehydro/hydrographicnetwork/waterbody) | 
+| Requirement |	[/req/hy_surfacehydro/channelnetwork/depression.surfacenetwork]  (/req/hy_surfacehydro/channelnetwork/depression.surfacenetwork) |
+| Requirement |	[/req/hy_surfacehydro/channelnetwork/depression.standingwater]  (/req/hy_surfacehydro/channelnetwork/depression.standingwater) |
+
+#### 7.5.1.3 Channel 
+The HY\_Channel feature type specializes the general HY\_HydroFeature class with respect to a natural or man-made, open or closed channel through or along which water may flow, or not. A channel is part of the network of channels and depressions which form the connecting system for the hydrographic network; a channel may have vertical sections at right angles to the main (average) direction of flow or along its centreline. 
+
+HY\_Channel associates the *channelNetwork* in which it participates. It carries the associations: *stream*, *bedProfileTransversal* and *bedProfileLongitudinal*.  
+
+The **stream** association relates to the channel a water body periodically or continuously flowing in the channel. This allows to establish a relationship to a water body carrying a  permanent reference location which realizes the outfall of the catchment realized by the water body. If required, this association shall be used to identify the water body contained in the channel. 
+
+The **bedProfileTransversal** and **bedProfileLongitudinal** associations relate to the channel a cross or longitudinal section, which allows to establish a relationship to a vertical section carrying a permanent reference location which realizes the outfall of the catchment realized by the channel. If required, this association shall be used to identify the vertical section either at right angles to the main (average) direction of flow, or along a line. 
+
+The **outflow** constraint is defined such that whenever an outfall is realized through the associated stream, cross or longitudinal section, the outflow of the catchment realized by the channel network (the channel is part of) is of type HY_OutfallRealistion. 
+
+| **Requirements Class** | [/req/hy_surfacehydro/channelnetwork/channel] (/req/hy_surfacehydro/channelnetwork/channel) |
+| --- | --- |
+| Target type	| Implementation Schema |
+| Name | HY\_Channel |
+| Dependency | [/req/hy_abstract/namedfeature/hydrofeature] (/req/hy_abstract/namedfeature/hydrofeature) | 
+| Dependency | [/req/hy_surfacehydro/channelnetwork/channelnetwork] (/req/hy_surfacehydro/channelnetwork/channelnetwork) | 
+| Dependency | [/req/hy_surfacehydro/hydrographicnetwork/waterbody] (/req/hy_surfacehydro/hydrographicnetwork/waterbody) | 
+| Dependency | [/req/hy_surfacehydro/hydrographicnetwork/crosssection] (/req/hy_surfacehydro/hydrographicnetwork/crossection) | 
+| Dependency | [/req/hy_surfacehydro/hydrographicnetwork/longitudinalsection] (/req/hy_surfacehydro/hydrographicnetwork/longitudinalsection) | 
+| Requirement |	[/req/hy_surfacehydro/channelnetwork/channel.channelnetwork]  (/req/hy_surfacehydro/channelnetwork/channel.channelnetwork) |
+| Requirement |	[/req/hy_surfacehydro/channelnetwork/channel.stream]  (/req/hy_surfacehydro/channelnetwork/channel.stream) |
+| Requirement |	[/req/hy_surfacehydro/channelnetwork/channel.bedprofiletransversal]  (/req/hy_surfacehydro/channelnetwork/channel.bedprofiletransversal) |
+| Requirement |	[/req/hy_surfacehydro/channelnetwork/channel.bedprofilelongitudinal]  (/req/hy_surfacehydro/channelnetwork/channel.bedprofilelongitudinal) |
 
 
 
 
 **[continue here]**
 
-### 7.5 The Surface Hydro Feature application schema
-
-The Surface Hydro Feature application schema provides concepts of hydrologic features occurring on the land surface to enable contextually related information models to build relationships to the catchment model and the hydrographic network model described in this standard (sections 7.4.2 and 7.4.3).  An informative surface water  model defines the most common types of a water body accumulating water on the land surface, each special by origin, size, or the phase of the contained water, by the property to move, or their interaction with other bodies of water. Taking into account the conceptual separation of a watercourses (see section 6.5) into a water body and its containing channel, the concepts of surface water bodies are provided separately from those of the confining structures. The surface water confines model conceptualize common structures confining a water body on the land surface, including their aggregation into a network of channels, to formalise relationships to the hydrographic network model and the catchment model. The Surface Hydro Feature application schema contains the packages: HY\_SurfaceWater and HY\_SurfaceWaterConfines. 
-contains the packages: HY\_SurfaceWater and HY\_SurfaceWaterConfines. 
-
-![Figure : The surface water and surface water confines model (UML class diagram)](figs/fig.png)
-Figure : The surface water and surface water confines model (UML class diagram)
-
-#### 7.5.1	The Hydrographic Network model
-The hydrographic network model (figure 23) defines a logical network of water bodies. Conceptually, the aggregate of water bodies is understood as the hydrographic appearance of the catchment of study in the perspective of the undertaken study, and the visualisation of the hydrographic network as a cartographic representation of the catchment. Given that a topological upstream-downstream relationship is defined between catchments (see section 6.4.2), a water body has no other role than being part of the network that mirrors the network of contributing and receiving catchments. This means that the connectivity between water bodies appearing in the hydrographic network is virtual, and that water bodies can be aggregated in the hydrographic network irrespective of whether the accumulated water is flowing or not. This allows to aggregate permanent and temporary water bodies of flowing or stagnant water in a network view portraying a catchment, and to visualise the represented the catchment. To supports this concept of a virtual connectivity, parts in the hydrographic network associate typical reference points which can be located topologically as outfall of a corresponding catchment.
+### 7.5.2	The Hydrographic Network model
+The Hydrographic Network model (figure 23) defines a logical network of water bodies. Conceptually, the aggregate of water bodies is understood as the hydrographic appearance of the catchment of study in the perspective of the undertaken study, and the visualisation of the hydrographic network as a cartographic representation of the catchment. Given that a topological upstream-downstream relationship is defined between catchments (see section 6.4.2), a water body has no other role than being part of the network that mirrors the network of contributing and receiving catchments. This means that the connectivity between water bodies appearing in the hydrographic network is virtual, and that water bodies can be aggregated in the hydrographic network irrespective of whether the accumulated water is flowing or not. This allows to aggregate permanent and temporary water bodies of flowing or stagnant water in a network view portraying a catchment, and to visualise the represented the catchment. To supports this concept of a virtual connectivity, parts in the hydrographic network associate typical reference points which can be located topologically as outfall of a corresponding catchment.
 
 Following the conceptual separation of a watercourse into water body and containing channel (see section 6.5), the hydrographic network is defined independent of the network of containing channels. This approach allows to separately visualise the hydrographic network of 'blue' lines or polygons, whereby the logically connected water bodies may or may not be connected at the representation level. 
 
