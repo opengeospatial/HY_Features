@@ -307,7 +307,7 @@ The **flowpathNetwork** association defines a network as sequence of connected f
 | Requirement	| [/req/hy_hydrofeature/hydrocomplex/flowpath.contourline](/req/hy_hydrofeature/hydrocomplex/flowpath.contourline) |
 | Requirement	| [/req/hy_hydrofeature/hydrocomplex/flowpath.flowpathnetwork](/req/hy_hydrofeature/hydrocomplex/flowpath.flowpathnetwork) |
 
-HY\_ContourLine feature type specialises the HY\_Flowpath class. It defines a linear contour accompanied to a given flowpath incl. a single polygon. Topologically, the contour is also a flowpath connecting the same inflow node and outflow node, but appears simultaneously to the flowpath. Connecting equal values of a certain property, the contour line may represent shore lines, stream lines or other isolines. HY\_ContourLine inherits all properties from generalisation; it carries a *shape* attribute on its own. 
+HY\_ContourLine feature type specialises the HY\_CatchmentRealisation class. It defines a linear contour accompanied to a given flowpath incl. a single polygon. Topologically, the contour is also a flowpath connecting the same inflow node and outflow node, but appears simultaneously to the flowpath. Connecting equal values of a certain property, the contour line may represent shore lines, stream lines or other isolines. HY\_ContourLine inherits all properties from generalisation; it carries a *shape* attribute on its own. 
 
 The HY\_CatchmentBoundary feature type specialises HY\_CatchmentRealisation with respect to an implied linear geometric representation, incl. single polygon. The catchment boundary connecting the inflow and outflow of the logical catchment, whereby inflow and outflow may overlay. It is topologically understood as an edge bounded by inflow node and outflow nodes, and corresponding to left-bank and right-bank catchment faces inside of the boundary. The 'boundary' and 'spoke' properties are described by means of 'tagged values': the topological 'boundary' is of type HY\_OutfallRealisation; the topological 'spoke' is of type HY\_CatchmentArea. 
 
@@ -397,32 +397,32 @@ The **riverReferenceSystem** association describes the special linear coordinate
 
 HY\_IndirectPosition feature type defines an indirect position, either expressed as the distance to a reference point or as position relative to a reference point or to the distance (interpolative). HY\_IndirectPosition associates four properties: *absolute*, *relative*, *referenceLocation*, *riverReferenceSystem*.
 
-| **Requirements Class** | [/req/hy_hydrofeature/riverpositioningsystem/indirectposition] (/req/hy_hydrofeature/riverpositioningsystem/indirectposition) |
+| **Requirements Class** | [/req/hy_hydrofeature/positioning/indirectposition] (/req/hy_hydrofeature/positioning/indirectposition) |
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY\_IndirectPosition |
 | Dependency | [/req/hy_hydrofeature/hydrocomplex/referencelocation] (/req/hy_hydrofeature/hydrocomplex/referencelocation) | 
-| Dependency | [/req/hy_hydrofeature/riverpositioningsystem/distancetorefpoint] (/req/hy_hydrofeature/riverpositioningsystem/distancetorefpoint) | 
-| Dependency | [/req/hy_hydrofeature/riverpositioningsystem/relativeposition] (/req/hy_hydrofeature/riverpositioningsystem/relativeposition) | 
-| Dependency | [/req/hy_hydrofeature/riverpositioningsystem/riverreferencesystem] (/req/hy_hydrofeature/riverpositioningsystem/riverreferencesystem) | 
-| Requirement |	[/req/hy_hydrofeature/riverpositioningsystem/indirectposition.absolut]  (/req/hy_hydrofeature/riverpositioningsystem/indirectposition.absolut)
-| Requirement |	[/req/hy_hydrofeature/riverpositioningsystem/indirectposition.relative]  (/req/hy_hydrofeature/riverpositioningsystem/indirectposition.relative)
-| Requirement |	[/req/hy_hydrofeature/riverpositioningsystem/indirectposition.referencelocation]  (/req/hy_hydrofeature/riverpositioningsystem/indirectposition.referencelocation) |
-| Requirement |	[/req/hy_hydrofeature/riverpositioningsystem/indirectposition.riverreferencesystem]  (/req/hy_hydrofeature/riverpositioningsystem/indirectposition.riverreferencesystem) |
+| Dependency | [/req/hy_hydrofeature/positioning/distancetorefpoint] (/req/hy_hydrofeature/positioning/distancetorefpoint) | 
+| Dependency | [/req/hy_hydrofeature/positioning/relativeposition] (/req/hy_hydrofeature/positioning/relativeposition) | 
+| Dependency | [/req/hy_hydrofeature/positioning/riverreferencesystem] (/req/hy_hydrofeature/positioning/riverreferencesystem) | 
+| Requirement |	[/req/hy_hydrofeature/positioning/indirectposition.absolut]  (/req/hy_hydrofeature/positioning/indirectposition.absolut)
+| Requirement |	[/req/hy_hydrofeature/positioning/indirectposition.relative]  (/req/hy_hydrofeature/positioning/indirectposition.relative)
+| Requirement |	[/req/hy_hydrofeature/positioning/indirectposition.referencelocation]  (/req/hy_hydrofeature/positioning/indirectposition.referencelocation) |
+| Requirement |	[/req/hy_hydrofeature/positioning/indirectposition.riverreferencesystem]  (/req/hy_hydrofeature/positioning/indirectposition.riverreferencesystem) |
 
 The HY\_RiverReferenceSystem feature class specializes the ISO LinearCS feature type for a linear coordinate system using inflow and outflow nodes on the linear flowpath. The origin of the river reference system is set at the outfall to be placed. The geometric shape is defined by the linear flowpath realizing the catchment between the origin and an identified reference location upstream or downstream of the origin. The position on flowpath is provided as distance from the located start of the flowpath at origin and end at the reference location towards the flowpath is directed. HY\_RiverReferenceSystem inherits from generalization the *axis* property, and carries the associations *linearElement* and *locatedStart*.
 
 The **linearElement** association defines the flowpath as the linear shape applied in the river reference system, and the **locatedStart** association defines the outfall as the origin. Bounded by inflow node and outflwo node, the flowpath starts at the feature of interest realizing the origin. If required, these associations shall be used to identify the flowpath used as shape, and the start of the flowpath at a realized origin.
 
-| **Requirements Class** | [/req/hy_riverpositioningsystem/riverreferencesystem] (/req/hy_riverpositioningsystem/indirectposition.riverreferencesystem) |
+| **Requirements Class** | [/req/hy_positioning/riverreferencesystem] (/req/hy_positioning/indirectposition.riverreferencesystem) |
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY\_RiverReferenceSystem |
 | Dependency | [/iso/19111/...](https://inspire-twg.jrc.it/svn/iso) |
 | Dependency | [/req/hy_hydrofeature/hydrocomplex/outfall] (/req/hy_hydrofeature/hydrocomplex/outfall) | 
 | Dependency | [/req/hy_hydrofeature/hydrocomplex/flowpath] (/req/hy_hydrofeature/hydrocomplex/flowpath) |
-| Requirement |	[/req/hy_hydrofeature/riverpositioningsystem/riverreferencesystem.locatedstart]  (/req/hy_hydrofeature/riverpositioningsystem/indirectposition.locatedstart) |
-| Requirement |	[/req/hy_hydrofeature/riverpositioningsystem/riverreferencesystem.linearelement]  (/req/hy_hydrofeature/riverpositioningsystem/riverreferencesystem.linearelement) |
+| Requirement |	[/req/hy_hydrofeature/positioning/riverreferencesystem.locatedstart]  (/req/hy_hydrofeature/positioning/indirectposition.locatedstart) |
+| Requirement |	[/req/hy_hydrofeature/positioning/riverreferencesystem.linearelement]  (/req/hy_hydrofeature/positioning/riverreferencesystem.linearelement) |
 
 ## 7.5 The Surface Hydro Feature application schema
 
