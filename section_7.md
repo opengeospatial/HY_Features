@@ -201,14 +201,14 @@ The **exorheicDrainage** association references an exorheic drained catchment co
 | Requirement	| [/req/hy_hydrofeature/hydrocomplex/catchmentaggregate.endorheicdrainage](/req/hy_hydrofeature/hydrocomplex/catchmentaggregate.endorheicdrainage) |
 
 ##### 7.4.2.3	DendriticCatchment
-The HY\_DendriticCatchment feature type (Figure 26) specializes the general HY\_Catchment class specifically as a hydrologically discrete catchment, which is determined by a single common outlet to which all waters flow. This class denotes the catchment as the topological link between an inflow and an outflow allowing catchments to be connected in a dendritic network by upstream-downstream relationships, without knowing the complex hydrology between inflow and outflow. This concept requires a stable identifier that is not merely a function of an arbitrary delineation of the surface, and that catchments are delineated within a simple tree hierarchy. 
+The HY\_DendriticCatchment feature type (Figure 26) specializes the general HY\_Catchment class as a catchment which is determined by a single common downstream catchment. It represents the catchment as the topological link between an inflow and an outflow. This allows catchments to be connected in a dendritic network by upstream-downstream relationships without knowing the complex hydrology between inflow and outflow. This concept requires a stable identifier purposefully assigned to the catchment and that catchments are delineated as a simple tree hierarchy. The dendritic nature of this class is enforced through contraints that the catchment must have one and only one outlfowNode (which can be unknown), must have one and only one lowerCatchment (which may be unknown), and must an outflowNode that contributes to only one receiving catchment. **note issue #143 regarding this**
 
 ![Figure 26: Dendritic catchment (UML class diagram)](figs/fig26.png)
 Figure 26: Dendritic catchment (UML class diagram)
 
 HY\_DendriticCatchment inherits from generalization the *code*, *outflow*, *inflow*, *containing Catchment*, *containedCatchment*, *conjointCatchment*, *upperCatchment*, *lowerCatchment*, and *realisation* properties, and associates the *encompassingCatchment*.
 
-The **encompassingCatchment** association relates to the dendritic catchment the aggregate encompassing the catchment. If required, this association shall be used to identify the catchment encompassing one or more exorheic or endorheic drained catchments contributing flow to the common outlet, either from a single identified inflow, or in join with other sub-catchments crossing a divide intern of the encompassing aggregate.
+The **encompassingCatchment** association relates to the dendritic catchment the aggregate encompassing the catchment. If required, this association shall be used to identify the catchment encompassing one or more exorheic or endorheic drained catchments contributing flow to the common outlet, either from a single identified inflow, or in joining with other sub-catchments crossing a divide internal to the encompassing aggregate catchment.
 
 | **Requirements Class** | [/req/hy_hydrofeature/hydrocomplex/dendriticcatchment] (/req/hy_hydrofeature/hydrocomplex/dendriticcatchment) | 
 | --- | --- |
