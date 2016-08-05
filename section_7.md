@@ -401,7 +401,7 @@ HY\_IndirectPosition feature type defines an indirect position, either expressed
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY\_IndirectPosition |
-| Dependency | [/req/hy_hydrofeature/hydrocomplex/referencelocation] (/req/hy_hydrofeature/hydrocomplex/referencelocation) | 
+| Dependency | [/req/hy_hydrofeature/hydrocomplex/outfallrealisation] (/req/hy_hydrofeature/hydrocomplex/outfallrealisation) | 
 | Dependency | [/req/hy_hydrofeature/positioning/distancetorefpoint] (/req/hy_hydrofeature/positioning/distancetorefpoint) | 
 | Dependency | [/req/hy_hydrofeature/positioning/relativeposition] (/req/hy_hydrofeature/positioning/relativeposition) | 
 | Dependency | [/req/hy_hydrofeature/positioning/riverreferencesystem] (/req/hy_hydrofeature/positioning/riverreferencesystem) | 
@@ -633,49 +633,43 @@ Both types of vertical section associate permanent reference locations: *crossSe
 | Dependency | [/req/hy_abstract/hydrocomplex/catchment/outfallrealisation] (/req/hy_abstract/hydrocomplex/catchment/outfallrealisation) | 
 | Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/longitudinalsection.longitudinalsectionpoint]  (/req/hy_surfacehydrofeature/hydrographicnetwork/longitudinalsection.longitudinalsectionpoint)
 
-**[continue here]**
-
 #### 7.5.3 The Surface Water Body types 
 
-The Surface Water model defines typical specialisations of the water body defined in section 7.4.3 of this standard. Being a specialization of the HY\_WaterBody class, each subtype inherits from the general HY\_HydroFeature class the name and context properties which allows to handle names given in cross-jurisdiction and multi-lingual contexts to a river, canal, lake, lagoon, estuary, or impoundment, as well as to describe them in related contexts, e.g. water resources assessment. 
+The Surface Water model defines typical specialisations of a water body on the land surface. Being a specialization of the HY\_WaterBody class each subtypes inherits the *stratum*, *waterpool*, *watercourse*, *upstreamWaterBody*,* downstreamWaterBody*, *fixedLandmark*,* streamCrossSection* and *streamLongitudinalSection* properties. From the general HY\_HydroFeature class the special water bodies inherit the *name* property, which allows to handle names given to them in cross-jurisdiction and multi-lingual contexts. Each specialisation is understood to be part of the hydrographic network. In other contexts other specialisations, or a typical segmentation may exist, that not conforms to the types defined in this standard.  
 
-The HY\_River subtype defines the existence of body of surface water, participating in a hydrographic network, special due to its property to permanently or temporarily flow. 
+The HY\_River feature type defines the existence of body of surface water, participating in a hydrographic network, special due to its property to permanently or temporarily flow. 
 
-The HY\_Canal subtype defines the existence of body of surface water, participating in a hydrographic network, special due to its artificial origin (man-made).
+The HY\_Canal feature type defines the existence of body of surface water, participating in a hydrographic network, special due to its artificial origin (man-made).
 
-The HY\_Lake subtype defines the existence of body of surface water, participating in a hydrographic network, special due to its considerable size.  
+The HY\_Lake feature type defines the existence of body of surface water, participating in a hydrographic network, special due to its considerable size.  
 
-The HY\_Impoundment subtype defines the existence of body of surface water, participating in a hydrographic network, special due to be formed by collecting water, as by a dam. 
+The HY\_Impoundment feature type defines the existence of body of surface water, participating in a hydrographic network, special due to be formed by collecting water, as by a dam. 
 
-The HY\_Lagoon subtype defines the existence of body of surface water, participating in a hydrographic network, special due to its shallow depth and interaction with the open sea.
+The HY\_Lagoon feature type defines the existence of body of surface water, participating in a hydrographic network, special due to its shallow depth and interaction with the open sea.
 
-The HY\_Estuary subtype defines the existence of body of surface water, participating in a hydrographic network, special due to branching and its interaction with the open sea.
-
-Each water body specialisation is understood to be part of the hydrographic network, and may generally consist of several parts, may be stratified or used as reservoir. In other contexts other specialisations, or a typical segmentation may exist, that not conform to the types defined in this standard may use the general water body or water body part types.
-
+The HY\_Estuary feature type defines the existence of body of surface water, participating in a hydrographic network, special due to branching and its interaction with the open sea.
 
 #### 7.5.4	The Storage model
 
-The Storage model (figure 24) provides a concept to describe any water body, or a part/stratum of this, in terms of a reservoir storing water for future use. The separate storage model allows to describe the hydrographic network without the details of storage capacities that a water body may have, and vice versa storage reservoirs to be referenced independent of their role within a network. To virtually connect a reservoir (defined as special water body) with other water bodies in the hydrographic network, a typical reference point on reservoir is defined allowing to place a feature of interest relative to this using the (linear) river reference system described in section 7.4.5. Details of connectivity may be designed with a particular application. 
+The Storage model (Figure 37) provides a concept to describe any water body, in terms of a reservoir storing water for future use. The separate storage model allows to describe the hydrographic network without the details of storage capacities that a water body may have, and vice versa storage reservoirs to be referenced independent of their role within the hydrographic network. 
 
-Special concepts of surface or underground reservoirs may be defined with application. The storage concept can be applied to surface and subsurface reservoirs, whereby underground reservoirs should not be confused with the groundwater reservoir which usually refers to the containing aquifer. A conceptual model capturing the specifics of features associated with the groundwater domain will be provided with the GroundwaterML 2.0 under development. **[\*\*\* insert reference to GWML2\*\*\*]** 
+![Figure 37: Storage model (UML class diagram)](figs/fig37.png)
+Figure 37: Storage model (UML class diagram)
 
-![Figure 24: Storage model (UML class diagram)](figs/fig24.png)
-Figure 24: Storage model (UML class diagram)
-**[\*\*\*!!! Dave, fig24 updated\*\*\*]**
+The HY\_Reservoir feature type describes the water body, either natural or man-made, used for storage, regulation and control of water resources. The reservoir concept refers to a volume of water managed in zones between operating levels. HY_Reservoir 
+associates to a reservoir the *storedWaterBody* and a *reservoirZone*. 
 
-The HY\_Reservoir class specializes the water body, either natural or man-made, used for storage, regulation and control of water resources. The reservoir concept refers to a mass of water managed in zones between operating levels. Being a specialization of the HY\_WaterBody class, the reservoir inherits from the general HY\_HydroFeature class the name and context properties which allows to describe the reservoirs in a related context, e.g. flood control or water supply. 
-
-HY\_Reservoir associates to a reservoir a typical reference point: *barrierePoint*. Located in the network of catchments, a barrier point allows to place a feature of interest relative to this using the (linear) river reference system described in section 7.4.5. If required, these associations shall be used to identify on reservoir a permanent reference location located in the network of catchments as outfall. 
-
-| **Requirements Class** | [/req/hy_storage/reservoir] (/req/hy_storage/reservoir) |
+| **Requirements Class** | [/req/hy_surfacehydrofeature/storage/reservoir] (/req/hy_surfacehydrofeature/storage/reservoir) |
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY\_Reservoir |
-| Dependency | [/req/hy_hydrographicnetwork/waterbody] (/req/hy_hydrographicnetwork/waterbody) | 
-| Dependency | [/req/hy_catchment/referencelocation] (/req/hy_catchment/referencelocation) | 
-| Requirement |	[/req/hy_storage/reservoir.barrierpoint]  (/req/hy_storage/reservoir.barrierpoint) | 
+| Dependency | [/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody] (/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody) | 
+| Dependency | [/req/hy_surfacehydrofeature/hydrocomplex/outfallrealisation] (/req/hy_surfacehydrofeature/hydrocomplex/outfallrealisation) | 
+| Requirement |	[/req/hy_surfacehydrofeature/storage/reservoir.storedwaterbody]  (/req/hy_surfacehydrofeature/storage/reservoir.storedwaterbody) | 
+| Requirement |	[/req/hy_surfacehydrofeature/storage/reservoir.reservoirzone]  (/req/hy_surfacehydrofeature/storage/reservoir.reservoirzone) | 
 
+
+**[continue here]**
 
 ### 7.6 The Hydrometric Network application schema
 
