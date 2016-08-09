@@ -13,7 +13,7 @@ Table 1: HY\_Features modules, packages and concepts
 | Application schema | Concepts reflected | Leaf packages included |
 | --- | --- | --- |
 | HY\_HydroFeature  | fundamental properties and relationships between features governed by the physical laws of Hydrology, naming of hydrologic features, location of hydrologic feature along a line | NamedFeature, HydroComplex, RiverPositioningSystem |
-| HY\_SurfaceHydroFeature | hydrologic fetaures on the Earth’s land surface without complexity and detail of hydrologic and hydraulic models | ChannelNetwork, HydrographicNetwork, WaterBodyTypes, Storage |
+| HY\_SurfaceHydroFeature | hydrologic features on the Earth’s land surface without complexity and detail of hydrologic and hydraulic models | ChannelNetwork, HydrographicNetwork, WaterBodyTypes, Storage |
 | HY\_HydrometricNetwork | hydrometric network of logically connected hydrometric features located on or along a hydrologic feature | --- |
 
 The conceptual model is expressed in the Geographic Information Conceptual Schema Language (ISO 19103:2005) based on the Unified Modeling Language (UML). The organization into packages and package dependencies are shown in Figure 16. The following sections describe requirements classes for each application schema, whereby each feature addressed in the requirements shall be understood as an instance of the GF_FeatureType (aka FeatureType) «metaclass». 
@@ -78,7 +78,7 @@ The Hydro Feature schema contains the leaf packages: NamedFeature, HydroComplex,
 ![Figure 18: External dependencies ](figs/fig18.png)
 Figure 18: External dependencies 
 
-| **Requirements Class** | [/req/hy_abstract/*] (/req/hy_abstract/*) |
+| **Requirements Class** | [/req/hy_hydrofeature/*] (/req/hy_hydrofeature/*) |
 | --- | --- |
 | Target type	| Implementation schema |
 | Name | HY\_HydroFeature (abstract) |
@@ -463,7 +463,7 @@ The **surfaceChannel** association relates a channel which may contain moving wa
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY\_ChannelNetwork |
-| Dependency | [/req/hy_abstract/hydrocomplex/hydronetwork] (/req/hy_abstract/hydrocomplex/hydronetwork) | 
+| Dependency | [/req/hy_hydrofeature/hydrocomplex/hydronetwork] (/req/hy_hydrofeature/hydrocomplex/hydronetwork) | 
 | Dependency | [/req/hy_surfacehydrofeature/channelnetwork/drainagepattern] (/req/hy_surfacehydrofeature/channelnetwork/drainagepattern) | 
 | Dependency | [/req/hy_surfacehydrofeature/channelnetwork/depression] (/req/hy_surfacehydrofeature/channelnetwork/depression) | 
 | Dependency | [/req/hy_surfacehydrofeature/channelnetwork/channel] (/req/hy_surfacehydrofeature/channelnetwork/channel) | 
@@ -480,7 +480,7 @@ The **standingWater** association relates to the water body of stagnant water. T
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY\_Depression |
-| Dependency | [/req/hy_abstract/namedfeature/hydrofeature] (/req/hy_abstract/namedfeature/hydrofeature) | 
+| Dependency | [/req/hy_hydrofeature/namedfeature/hydrofeature] (/req/hy_hydrofeature/namedfeature/hydrofeature) | 
 | Dependency | [/req/hy_surfacehydrofeature/channelnetwork/channelnetwork] (/req/hy_surfacehydrofeature/channelnetwork/channelnetwork) | 
 | Dependency | [/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody] (/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody) | 
 | Requirement |	[/req/hy_surfacehydrofeature/channelnetwork/depression.surfacenetwork]  (/req/hy_surfacehydrofeature/channelnetwork/depression.surfacenetwork) |
@@ -499,7 +499,7 @@ The **bedProfileTransversal** and **bedProfileLongitudinal** associations relate
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY\_Channel |
-| Dependency | [/req/hy_abstract/namedfeature/hydrofeature] (/req/hy_abstract/namedfeature/hydrofeature) | 
+| Dependency | [/req/hy_hydrofeature/namedfeature/hydrofeature] (/req/hy_hydrofeature/namedfeature/hydrofeature) | 
 | Dependency | [/req/hy_surfacehydrofeature/channelnetwork/channelnetwork] (/req/hy_surfacehydrofeature/channelnetwork/channelnetwork) | 
 | Dependency | [/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody] (/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody) | 
 | Dependency | [/req/hy_surfacehydrofeature/hydrographicnetwork/crosssection] (/req/hy_surfacehydrofeature/hydrographicnetwork/crossection) | 
@@ -533,7 +533,7 @@ The **networkWaterBody** association relates a surface water body to the hydrogr
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY\_HydrographicNetwork |
-| Dependency | [/req/hy_abstract/hydrocomplex/hydronetwork] (/req/hy_abstract/hydrocomplex/hydronetwork) | 
+| Dependency | [/req/hy_hydrofeature/hydrocomplex/hydronetwork] (/req/hy_hydrofeature/hydrocomplex/hydronetwork) | 
 | Dependency | [/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody] (/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody) | 
 | Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/hydrographicnetwork.networkwaterbody]  (/req/hy_surfacehydrofeature/hydrographicnetwork/hydrographicnetwork.networkwaterbody) |
 
@@ -558,8 +558,8 @@ The **streamCrossSection ** and ** longitudinalCrossSection ** associations rela
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY\_WaterBody |
-| Dependency | [/req/hy_abstract/namedFeature/hydrofeature] (/req/hy_abstract/namedFeature/hydrofeature) |
-| Dependency | [/req/hy_abstract/hydrocomplex/outfallrealisation] (/req/hy_abstract/hydrocomplex/outfallrealisation) |
+| Dependency | [/req/hy_hydrofeature/namedFeature/hydrofeature] (/req/hy_hydrofeature/namedFeature/hydrofeature) |
+| Dependency | [/req/hy_hydrofeature/hydrocomplex/outfallrealisation] (/req/hy_hydrofeature/hydrocomplex/outfallrealisation) |
 | Dependency | [/req/hy_surfacehydrofeature/channelnetwork/channel] (/req/hy_surfacehydrofeature/channelnetwork/channel) | 
 | Dependency | [/req/hy_surfacehydrofeature/channelnetwork/depression] (/req/hy_surfacehydrofeature/channelnetwork/depression) | 
 | Dependency | [/req/hy_surfacehydrofeature/hydrographicnetwork/hydrographicnetwork] (/req/hy_surfacehydrofeature/hydrographicnetwork/hydrographicnetwork) | 
@@ -623,14 +623,14 @@ Both types of vertical section associate permanent reference locations: *crossSe
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY\_CrossSection |
-| Dependency | [/req/hy_abstract/hydrocomplex/catchment/outfallrealisation] (/req/hy_abstract/hydrocomplex/catchment/outfallrealisation) | 
+| Dependency | [/req/hy_hydrofeature/hydrocomplex/catchment/outfallrealisation] (/req/hy_hydrofeature/hydrocomplex/catchment/outfallrealisation) | 
 | Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/crosssection.crosssectionpoint]  (/req/hy_surfacehydrofeature/hydrographicnetwork/crosssection.crosssectionpoint)
 
 | **Requirements Class** | [/req/hy_surfacehydrofeature/hydrographicnetwork/longitudinalsection] (/req/hy_surfacehydrofeature/hydrographicnetwork/longitudinalsection) |
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY\_LongitudinalSection |
-| Dependency | [/req/hy_abstract/hydrocomplex/catchment/outfallrealisation] (/req/hy_abstract/hydrocomplex/catchment/outfallrealisation) | 
+| Dependency | [/req/hy_hydrofeature/hydrocomplex/catchment/outfallrealisation] (/req/hy_hydrofeature/hydrocomplex/catchment/outfallrealisation) | 
 | Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/longitudinalsection.longitudinalsectionpoint]  (/req/hy_surfacehydrofeature/hydrographicnetwork/longitudinalsection.longitudinalsectionpoint)
 
 #### 7.5.3 The Surface Water Body types 
@@ -668,45 +668,53 @@ associates to a reservoir the *storedWaterBody* and a *reservoirZone*.
 | Requirement |	[/req/hy_surfacehydrofeature/storage/reservoir.storedwaterbody]  (/req/hy_surfacehydrofeature/storage/reservoir.storedwaterbody) | 
 | Requirement |	[/req/hy_surfacehydrofeature/storage/reservoir.reservoirzone]  (/req/hy_surfacehydrofeature/storage/reservoir.reservoirzone) | 
 
+#### 7.5.4	The Storage model
 
-**[continue here]**
+The Storage model (Figure 37) provides a concept to describe any water body, in terms of a reservoir storing water for future use. The separate storage model allows to describe the hydrographic network without the details of storage capacities that a water body may have, and vice versa storage reservoirs to be referenced independent of their role within the hydrographic network. 
+
+![Figure 37: Storage model (UML class diagram)](figs/fig37.png)
+Figure 37: Storage model (UML class diagram)
+
+The HY\_Reservoir feature type describes the water body, either natural or man-made, used for storage, regulation and control of water resources. The reservoir concept refers to a volume of water managed in zones between operating levels. HY_Reservoir 
+associates to a reservoir the *storedWaterBody* and a *reservoirZone*. 
+
+| **Requirements Class** | [/req/hy_surfacehydrofeature/storage/reservoir] (/req/hy_surfacehydrofeature/storage/reservoir) |
+| --- | --- |
+| Target type	| Implementation Schema |
+| Name | HY\_Reservoir |
+| Dependency | [/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody] (/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody) | 
+| Dependency | [/req/hy_surfacehydrofeature/hydrocomplex/outfallrealisation] (/req/hy_surfacehydrofeature/hydrocomplex/outfallrealisation) | 
+| Requirement |	[/req/hy_surfacehydrofeature/storage/reservoir.storedwaterbody]  (/req/hy_surfacehydrofeature/storage/reservoir.storedwaterbody) | 
+| Requirement |	[/req/hy_surfacehydrofeature/storage/reservoir.reservoirzone]  (/req/hy_surfacehydrofeature/storage/reservoir.reservoirzone) | 
+
 
 ### 7.6 The Hydrometric Network application schema
 
-The Hydrometric Network schema (figure 29) defines a logical model to take into account a network of hydrometric stations as a specific appearance of the catchment of study in the perspective of an hydrologic observation, without the detail of the observation strategy. The core concept is that of a network of logically connected hydrometric stations situated in the catchment that is represented with the cartographic visualisation of the network. This enables contextually related information models to relate monitoring stations and observing posts to the hydrologic features, finally to the represented catchment, as usually required in the context of environmental reporting or when interpreting, comprising and processing results of preceding observations into a new set of data. 
+The Hydrometric Network schema (Figure 38) defines a logical model to take into account a network of hydrometric stations as a specific realization of the catchment in the perspective of hydrologic observation, without the detail of an observation strategy. The core concept is that of a network of logically connected hydrometric stations realising as a whole the catchment. This enables contextually related information models to relate monitoring stations and observing posts to hydrologic features, finally to the realised catchment, as usually required in the context of environmental reporting or when interpreting, comprising and processing observation results. 
 
-![Figure 28: Hydrometric network model (UML class diagram)](figs/fig28.png)
-Figure 28: Hydrometric network model (UML class diagram)
-**[\*\*\*insert class diagram\*\*\*]**
+![Figure 38: Hydrometric network model (UML class diagram)](figs/fig38.png)
+Figure 38: Hydrometric network model (UML class diagram)
 
-The hydrometric network model introduces the concept of 'position on river' which allows an arbitrary hydrologic station, even free from position, to be located in the network of catchments to establish upstream-downstream relationships, and to assign a position releative to a reference location, or to place another feature of interest relative to a network station using the (linear) river reference system described in section 7.4.5. 
+The hydrometric network model introduces the concept of a 'position on river' which allows an hydrologic station, even free from position, to be the realisation of the logical outfall. This supports to establish upstream-downstream relationships between hydrometric features, to assign a position relative to a 'fixed' outfall, or to place a feature of interest relative to the hydrometric station.
 
-The HY\_HydrometricNetwork class defines the network aggregate consisting of hydrometric features which may be separated into several hydrometric feature parts. To support the concept of a virtual connectivity, a hydrometric feature associate typical reference points which can be located topologically as outfall of a corresponding catchment. HY\_HydrometricFeature and HY\_HydrometricFeaturePart classes associate the aggregate in which they participate. HY\_HydrometricFeature associates a *positionOnRiver*. 
+The HY\_HydrometricNetwork feature type defines the network as aggregate of hydrometric features. The HY\_HydrometricFeature associates the *hydrometricNetwork* in which it participates and  a *positionOnRiver*. The **positionOnRiver** association relates the hydrometric feature to a permanent reference location. If required, this association shall be used to identify a reference location which realizes the conceptual outfall of the corrsponding catchment. 
 
-| **Requirements Class** | [/req/hy_hydrometricnetwork/hydrometricnetwork] (/req/hy_hydrometricnetwork/hydrometricnetwork) |
+| **Requirements Class** | [/req/hy_hydrometricfeature/hydrometricnetwork] (/req/hy_hydrometricfeature/hydrometricnetwork) |
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY\_HydrometricNetwork |
-| Dependency | [/req/hy_catchment/networkcartography] (/req/hy_catchment/networkcartography) | 
-| Requirement |	[/req/hy_hydrometricnetwork/hydrometricnetwork.visualisation]  (/req/hy_hydrometricnetwork/hydrometricnetwork.visualisation)| 
+| Dependency | [/req/hy_hydrofeature/hydrocomplex/hydronetwork] (/req/hy_hydrofeature/hydrocomplex/hydronetwork) | 
+| Dependency | [/req/hy_hydrometricfeature/hydrometricfeature] (/req/hy_hydrometricfeature/hydrometricfeature) |
+| Requirement |	[/req/hy_hydrometricfeature/hydrometricnetwork.networkstation]  (/req/hy_hydrometricfeature/hydrometricnetwork.networkstation)| 
 
 | **Requirements Class** | [/req/hy_hydrometricnetwork/hydrometricfeature] (/req/hy_hydrometricnetwork/hydrometricfeature) |
 | --- | --- |
 | Target type	| Implementation Schema |
 | Name | HY\_HydrometricFeature |
-| Dependency | [/req/hy_hydrometricnetwork/hydrometricnetwork] (/req/hy_hydrometricnetwork/hydrometricnetwork) |
-| Dependency | [/req/hy_catchment/referencelocation] (/req/hy_catchment/referencelocation) | 
-| Requirement |	[/req/hy_hydrometricnetwork/hydrometricfeature.hydrometricnetwork]  (/req/hy_hydrometricnetwork/hydrometricfeature.hydrometricnetwork)| 
+| Dependency | [/req/hy_hydrofeature/hydrocomplex/outfallrealisation] (/req/hy_hydrofeature/hydrocomplex/outfallrealisation) |
+| Dependency | [/req/hy_hydrometricfeature/hydrometricnetwork] (/req/hy_hydrometricfeature/hydrometricnetwork) |
 | Requirement |	[/req/hy_hydrometricnetwork/hydrometricfeature.positiononriver]  (/req/hy_hydrometricnetwork/hydrometricfeature.positiononriver)| 
-
-| **Requirements Class** | [/req/hy_hydrometricnetwork/hydrometricfeaturepart] (/req/hy_hydrometricnetwork/hydrometricfeaturepart) |
-| --- | --- |
-| Target type	| Implementation Schema |
-| Name | HY\_HydrometricFeaturePart |
-| Dependency | [/req/hy_hydrometricnetwork/hydrometricfeature] (/req/hy_hydrometricnetwork/hydrometricfeature) |
-| Requirement |	[/req/hy_hydrometricnetwork/hydrometricfeaturepart.hydrometricfeature]  (/req/hy_hydrometricnetwork/hydrometricfeaturepart.hydrometricfeature)| 
-
-
+| Requirement |	[/req/hy_hydrometricnetwork/hydrometricfeature.hydrometricnetwork]  (/req/hy_hydrometricnetwork/hydrometricfeature.hydrometricnetwork)| 
 
 ** END OF SECTION 7 --- END OF SECTION 7 --- END OF SECTION 7 --- END OF SECTION 7 --- END OF SECTION 7 --- END OF SECTION 7 **
 
