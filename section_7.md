@@ -16,7 +16,7 @@ Table 1: HY\_Features modules, packages and concepts
 | HY\_SurfaceHydroFeature | hydrologic features on the Earth’s land surface without complexity and detail of hydrologic and hydraulic models | ChannelNetwork, HydrographicNetwork, WaterBodyTypes, Storage |
 | HY\_HydrometricNetwork | hydrometric network of logically connected hydrometric features located on or along a hydrologic feature | --- |
 
-The conceptual model is expressed in the Geographic Information Conceptual Schema Language (ISO 19103:2005) based on the Unified Modeling Language (UML). The organization into packages and package dependencies are shown in Figure 16. The following sections describe requirements classes for each application schema, whereby each feature addressed in the requirements shall be understood as an instance of the GF_FeatureType (aka FeatureType) «metaclass». 
+The conceptual model is expressed in the Geographic Information Conceptual Schema Language (ISO 19103:2005) based on the Unified Modeling Language (UML). The organization into packages and package dependencies are shown in Figure 16. The following sections describe requirements classes for each application schema, whereby each feature addressed in the requirements shall be understood as an instance of the GF_FeatureType (aka FeatureType) «metaclass». For the purpose of consistency with the conceptual UML model the British spelling of feature type names and properties has been adopted.
 
 ![Figure 16: HY\_Features modules and packages](figs/fig16.png)  
 Figure 16: HY\_Features modules and packages  
@@ -167,7 +167,7 @@ The **realisation** association relates the catchment to a feature which realize
 | Target type	| Implementation schema |
 | Name | HY\_Catchment | 
 | Dependency | [/iso/19103/](https://inspire-twg.jrc.it/svn/iso) |
-| Dependency | [/req/hy_namedFeature/hydrofeature](/req/hy_namedFeature/hydrofeature) |
+| Dependency | [/req/hy_hydrofeature/namedFeature/hydrofeature](/req/hy_hydrofeature/namedFeature/hydrofeature) |
 | Dependency | [/req/hy_hydrofeature/hydrocomplex/outfall](/req/hy_hydrofeature/hydrocomplex/outfall) | 
 | Dependency | [/req/hy_hydrofeature/hydrocomplex/catchment](/req/hy_hydrofeature/hydrocomplex/catchment) | 
 | Dependency | [/req/hy_hydrofeature/hydrocomplex/catchmentrealisation](/req/hy_hydrofeature/hydrocomplex/catchmentrealisation) |
@@ -265,12 +265,12 @@ The **outfallRealisation** association relates the outfall to a feature which re
 | Requirement	| [/req/hy_hydrofeature/hydrocomplex/outfall.outfallrealisation](/req/hy_hydrofeature/hydrocomplex/outfall.outfallrealisation) |
 
 ##### 7.4.2.6	Catchment Realisation
-The HY\_CatchmentRealisation feature type (Figure 29) conceptualizes the multiple realization of an 'un-realized', logical catchment, by typical features used to describe a catchment as a unit of study shared across sub-domains and studies. HY\_CatchmentArea, HY\_CatchmentBoundary, HY\_Flowpath are special types of catchment realization defined to topologically realise the hydrologically determined logical catchment in terms of face, edge, and node, as well as to reflect the connectivity of catchments by hydrologic features connected in networks. Topologically, the catchment area is a face bounded by catchment boundary and flowpath which are edges bounded by an inflow node and an outflow node. The HY\_HydroNetwork type realises a logical catchment as a collection of connected network features. The HY\_CartographicRealisation realizes a catchment as set of map layers.
+The HY\_CatchmentRealisation feature type (Figure 29) conceptualizes the multiple realization of an 'un-realized', logical catchment, by typical features used to describe a catchment as a unit of study shared across sub-domains and studies. HY\_CatchmentArea, HY\_CatchmentBoundary, HY\_Flowpath and HY\_WaterEdge are special types of catchment realization defined to topologically realize the hydrologically determined logical catchment in terms of face, edge, and node, as well as to reflect the connectivity of catchments by hydrologic features connected in networks. Topologically, the catchment area is a face bounded by catchment boundary and flowpath.  Flowpath and water edge are topological edges each bounded by an inflow node and an outflow node. The HY\_HydroNetwork type realizes a logical catchment as a collection of connected network features, the HY\_CartographicRealisation as a set of map layers.
 
 The catchment realization concept implies a hydrologic complex in that, if a catchment realization exists, they are in the same hydrologic complex as the catchment they realize. In this way, any feature realization of a logical catchment has the same hydrologic determination as the realized catchment. If the realized catchment is connected with other catchments via its outfall, possible feature realizations are also connected. 
 
-![Figure 29: Catchment realisation (UML class diagram)](figs/fig29.png)
-Figure 29: Catchment realisation (UML class diagram)
+![Figure 29: Catchment realization and its specializations (UML class diagram)](figs/fig29.png)
+Figure 29: Catchment realization: [/req/hy_hydrofeature/hydrocomplex/catchmentrealisation] (/req/hy_hydrofeature/hydrocomplex/catchmentrealisation), and its specialization (UML class diagram) 
 
 The catchment realization feature types defined in this standard refer to objects on the land surface for the purpose of surface water hydrology. In other contexts, other types of catchment realization may exist. Catchment realizations that do not conform to those defined in this standard, for instance realizations in 3 or 4 dimensional perspectives, may use the general HY\_CatchmentRealisation type. 
 
@@ -285,15 +285,13 @@ The **realisedCatchment** association relates a particular realization with the 
 | Dependency | [/req/hy_hydrofeature/hydrocomplex/catchment](/req/hy_hydrofeature/hydrocomplex/catchment) | 
 | Requirement	| [/req/hy_hydrofeature/hydrocomplex/catchmentrealisation.realisedcatchment](/req/hy_hydrofeature/hydrocomplex/catchmentrealisation.realisedcatchment) |
 
-The HY\_Flowpath feature type specializes HY\_CatchmentRealisation with respect to an implied linear geometric representation including a straight or curved line. The flowpath connecting the inflow and outflow of the logical catchment, is topologically an edge bounded by inflow node and outflow nodes, and corresponding to left-bank and right-bank catchment faces. The 'boundary' and 'spoke' properties are described by means of 'tagged values': the topological 'boundary' is of type HY\_OutfallRealisation, the topological 'spoke' of type HY\_CatchmentArea. 
+The HY\_Flowpath feature type specializes HY\_CatchmentRealisation with respect to an implied linear geometric representation including a straight or curved line. Hydrologically, the flowpath is a line describing a moving particle of water. Topologically, the flowpath connects the inflow and outflow of the logical catchment,  and is understood as an edge bounded by an inflow node and an outflow node, and corresponding to left-bank and right-bank catchment faces. The 'boundary' and 'spoke' properties are described by means of 'tagged values': the topological 'boundary' is of type HY\_OutfallRealisation, the topological 'spoke' of type HY\_CatchmentArea. 
 
-Through generalization, HY\_Flowpath inherits the *realisedCatchment* association including *hydroComplex*, and carries the properties: *shape*, *flowpathNetwork*, and *contourLine*. 
+Through generalization, HY\_Flowpath inherits the *realisedCatchment* association including *hydroComplex*, and carries the properties: *shape*, and *flowpathNetwork*. 
 
 The **shape** attribute defines the linear geometric representation. If required, an implementation shall use a geometry type defined in ISO19107: Spatial Schema, e.g. GM_Curve type.
 
-**[needs review] The **contourLine** association relates a contour line accompanying a given flowpath. ContourLine references the inflow and outflow node of the flowpath, and allows for an additional linear realisation of a catchment bound to the inflow and outflow nodes of a flowpath. If required, this association shall be used to assign isolines to a flowpath.  **
-
-The **flowpathNetwork** association defines a network as sequence of connected flowpathes. This concept requires a non-branching 'mainstem' of watercourses, and a single linear representation of each of these. If required, this association may be used to identify a network the realizes in its entirety a catchment that contains the catchment which is realized by the network part.  
+The **flowpathNetwork** association defines a network as sequence of connected flowpathes. This concept requires a non-branching 'mainstem' of watercourses, and a single linear representation of each of these. If required, this association may be used to identify the network which realizes as a whole the catchment that contains the catchment realized by the single part.  
 
 | **Requirements Class** | [req/hy_hydrofeature/hydrocomplex/flowpath] (req/hy_hydrofeature/hydrocomplex/flowpath) | 
 | --- | --- |
@@ -301,13 +299,27 @@ The **flowpathNetwork** association defines a network as sequence of connected f
 | Name | HY\_Flowpath | 
 | Dependency | [/iso/19107/](https://inspire-twg.jrc.it/svn/iso) |
 | Dependency | [/req/hy_hydrofeature/hydrocomplex/catchmentrealisation](/req/hy_hydrofeature/hydrocomplex/catchmentrealisation) |
-| Dependency | [/req/hy_hydrofeature/hydrocomplex/contourline](/req/hy_hydrofeature/hydrocomplex/contourline) | 
 | Dependency | [/req/hy_hydrofeature/hydrocomplex/hydronetwork](/req/hy_hydrofeature/hydrocomplex/hydronetwork) | 
 | Requirement	| [/req/hy_hydrofeature/hydrocomplex/flowpath.shape](/req/hy_hydrofeature/hydrocomplex/flowpath.shape) |
-| Requirement	| [/req/hy_hydrofeature/hydrocomplex/flowpath.contourline](/req/hy_hydrofeature/hydrocomplex/flowpath.contourline) |
 | Requirement	| [/req/hy_hydrofeature/hydrocomplex/flowpath.flowpathnetwork](/req/hy_hydrofeature/hydrocomplex/flowpath.flowpathnetwork) |
 
-**[needs review] The HY\_ContourLine feature type specializes the HY\_FlowPath class. It defines a linear contour that accompanies a given flowpath including a single polygon. Topologically, the contour is also a flowpath connecting the same inflow node and outflow node, but appears simultaneously to the flowpath. Connecting equal values of a certain property, the contour line may represent shore lines, stream lines or other isolines. HY\_ContourLine inherits all properties from generalisation; it carries a *shape* attribute on its own. **
+The HY\_WaterEdge feature type specializes HY\_CatchmentRealisation with respect to an implied linear geometric representation including a closed line. Hydrologically, the water edge follows the line of intersection between a water body stratum and the confining depression, or channel.  Topologically, the water edge realizes the catchment as an edge connecting inflow and outflow realised as nodes fixed at the inflow node and outflow node of the corresponding flowpath. The 'boundary' of type HY\_OutfallRealisation is described by means of 'tagged values'.
+
+Through generalization, HY\_WaterEdge inherits the *realisedCatchment* association including *hydroComplex*, and carries the properties: *shape*, *waterEdgeNetwork*. 
+
+The **shape** attribute defines the linear geometric representation. If required, an implementation shall use a geometry type defined in ISO19107: Spatial Schema, e.g. GM_Curve type.
+
+The **waterEdgeNetwork** association defines an aggregate of water edges forming a connected network. This concept requires an aggregate of  non-overlaying edges, and a single linear representation of each of these. If required, this association may be used to identify the network which realizes as a whole the catchment that contains the catchment realized by the single part.  
+
+| **Requirements Class** | [req/hy_hydrofeature/hydrocomplex/wateredge] (req/hy_hydrofeature/hydrocomplex/wateredge) | 
+| --- | --- |
+| Target type	| Implementation schema |
+| Name | HY\_WaterEdge | 
+| Dependency | [/iso/19107/](https://inspire-twg.jrc.it/svn/iso) |
+| Dependency | [/req/hy_hydrofeature/hydrocomplex/catchmentrealisation](/req/hy_hydrofeature/hydrocomplex/catchmentrealisation) |
+| Dependency | [/req/hy_hydrofeature/hydrocomplex/hydronetwork](/req/hy_hydrofeature/hydrocomplex/hydronetwork) | 
+| Requirement	| [/req/hy_hydrofeature/hydrocomplex/wateredge.shape](/req/hy_hydrofeature/hydrocomplex/wateredge.shape) |
+| Requirement	| [/req/hy_hydrofeature/hydrocomplex/wateredge.wateredgenetwork](/req/hy_hydrofeature/hydrocomplex/wateredge.wateredgenetwork) |
 
 The HY\_CatchmentBoundary feature type specializes HY\_CatchmentRealisation with respect to an implied linear geometric representation including a single polygon. The catchment boundary connecting the inflow and outflow of the logical catchment, whereby inflow and outflow may overlay. It is topologically understood as an edge bounded by inflow node and outflow nodes, and corresponding to left-bank and right-bank catchment faces inside of the boundary. The 'boundary' and 'spoke' properties are described by means of 'tagged values': the topological 'boundary' is of type HY\_OutfallRealisation; the topological 'spoke' is of type HY\_CatchmentArea. 
 
