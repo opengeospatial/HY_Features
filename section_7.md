@@ -95,7 +95,7 @@ Figure 18: External dependencies
 The Named Feature model (Figure 19) denotes the abstraction of the hydrology phenomenon as a named hydrologic feature. It provides an approach to identify a named hydrologic feature in cross-jurisdiction and multi-lingual contexts by considering the cultural, political and historical aspects of names assigned to hydrologic features in common usage. 
 
 ![Figure 19: Named Feature (UML class diagram)](figs/fig19.png)
-Figure 19: Named Feature (UML class diagram) 
+Figure 19: Named Feature (UML class diagram, [/req/hy_hydrofeature/namedFeature/hydrofeature] (/req/hy_hydrofeature/namedFeature/hydrofeature) )
 
 The HY\_HydroFeature feature type is further specialized by separate feature types. Each specialization inherits the properties from generalization; HY\_HydroFeature type has one association: *name*.
 
@@ -134,7 +134,7 @@ The Hydro Complex model allows the realization of a logical outfall to be any ar
 The HY\_Catchment feature type represents a hydrologically determined feature through association an outfall, and the logical network of catchments that form a connected network of smaller catchments and outfalls within the catchment. Each HY\_Catchment may provide association between its many realizations within a hydrologically determined hydrologic complex. These realizations include a both geometric and topological realizations such as an edge 'bounded' by inflow and outflow nodes. HY\_Catchment is an abstract class and may be further specialized with respect to catchment interaction. 
 
 ![Figure 20: Catchment (UML class diagram)](figs/fig20.png)
-Figure 20: Catchment (UML class diagram) 
+Figure 20: Catchment (UML class diagram, [/req/hy_hydrofeature/hydrocomplex/catchment] (/req/hy_hydrofeature/hydrocomplex/catchment) | ) 
 
 The HY\_Catchment type (Figure 20) specializes the general HY\_HydroFeature class. Through generalization, HY\_Catchment inherits the *name* property, and carries the *code* attribute and the associations: *outflow*, *inflow*, *containing Catchment*, *containedCatchment*, *conjointCatchment*, *upperCatchment*, *lowerCatchment*, *realisation*.
 
@@ -143,22 +143,22 @@ The **code** attribute may be used to assign a unique identifier to the catchmen
 The **outflow** and **inflow** associations describe the outfall in terms of outflow or inflow to or from the corresponding catchment. Assuming a dendritic network of catchments, the outflow of a contributing catchment coincides with the inflow to a receiving catchment. This allows description of upstream-downstream relations. If required, this association shall be used to identify the place to which flow is contributed, or where flow is received from.
 
 ![Figure 21: Catchment and outfall (UML class diagram)](figs/fig21.png)
-Figure 21: Catchment and outfall (UML class diagram) 
+Figure 21: Catchment and outfall (UML class diagram, [/req/hy_hydrofeature/hydrocomplex/catchment.inflow](/req/hy_hydrofeature/hydrocomplex/catchment.inflow) , [/req/hy_hydrofeature/hydrocomplex/catchment.outflow](/req/hy_hydrofeature/hydrocomplex/catchment.outflow) )  
 
 The **containingCatchment** and **containedCatchment** associations connect the nesting of catchments in a simple “is-in” containment hierarchy as typically used for high-order organization of management and reporting units. If required, this association shall be used to identify a nesting catchment or the catchments nested therein.
 
 ![Figure 22: Containing / contained catchment (UML class diagram)](figs/fig22.png)
-Figure 22: Containing / contained catchment (UML class diagram) 
+Figure 22: Containing / contained catchment (UML class diagram, [/req/hy_hydrofeature/hydrocomplex/catchment.containingcatchment](/req/hy_hydrofeature/hydrocomplex/catchment.containingcatchment) , [/req/hy_hydrofeature/hydrocomplex/catchment.containedcatchment](/req/hy_hydrofeature/hydrocomplex/catchment.containedcatchment) )
 
 The **conjointCatchment** association describes the interaction of a catchment with another catchment crossing an internal boundary line. This line may be a divide separating adjacent catchments, or a diffuse divide between non-delineated sub-catchments within an encompassing catchment, or a fictive line between distant catchments. If required, this association shall be used to identify a catchment contributing with others to a 'joined' outfall. Assuming a dendritic network of catchments, where each catchment is determined by its single outflow, this association may be used to summarize diffuse inflow into an encompassing catchment, as required to describe inflow to headwater catchments. 
 
-![Figure 23: Conjoint / contained catchment (UML class diagram)](figs/fig23.png)
-Figure 23: Conjoint / contained catchment (UML class diagram) 
+![Figure 23: Conjoint catchment (UML class diagram)](figs/fig23.png)
+Figure 23: Conjoint catchment (UML class diagram, [/req/hy_hydrofeature/hydrocomplex/catchment.conjointcatchment](/req/hy_hydrofeature/hydrocomplex/catchment.conjointcatchment) ) 
 
 The **upperCatchment** and **lowerCatchment** associations connect the catchment to the adjacent catchment above or below. This allows the description of connected catchments without knowing their inflow or outflow outfalls. If required, this association shall be used to trace the catchment network in upstream direction from mouth to source, or downstream from source to mouth. 
 
 ![Figure 24: Upper / lower catchment (UML class diagram)](figs/fig24.png)
-Figure 24: Upper / lower catchment (UML class diagram)
+Figure 24: Upper / lower catchment (UML class diagram, [/req/hy_hydrofeature/hydrocomplex/catchment.uppercatchment](/req/hy_hydrofeature/hydrocomplex/catchment.uppercatchment), [/req/hy_hydrofeature/hydrocomplex/catchment.lowercatchment](/req/hy_hydrofeature/hydrocomplex/catchment.lowercatchment) )
 
 The **realisation** association relates the catchment to a feature which realizes the logical catchment. This supports linking multiple realizations of the same catchment. If required, this association shall be used identify a particular realization. In case of a topological realization, the realization of the catchment shall be of higher dimension than the realization of the outfall.
 
@@ -184,7 +184,7 @@ The **realisation** association relates the catchment to a feature which realize
 The HY\_CatchmentAggregate feature type (Figure 25) specializes the HY\_Catchment as a set of non-overlapping dendritic and interior catchments arranged in an encompassing catchment. This allows description of multiple inflows into a catchment aggregate through several hydrologically discrete sub-catchments each with a single inflow, and contributing to a joined outflow of the catchment aggregate, including the 'nillable' outflow of interior catchments. Nillable is meant to signify that the outfall exists, in the for of flow to the subsurface or atmosphere but is unknown in a given implementation. The catchment aggregate may be part of a containing catchment at the next higher level of hierarchy, which consists of similar-scale neighboring catchments. The catchment aggregate does not necessarily imply a series of nested containing catchments. It primarily allows navigation to the 'highest' level system (total drainage basin) as typically used for reporting purposes.
 
 ![Figure 25: Catchment aggregate (UML class diagram)](figs/fig25.png)
-Figure 25: Catchment aggregate (UML class diagram)
+Figure 25: Catchment aggregate (UML class diagram, [/req/hy_hydrofeature/hydrocomplex/catchmentaggregate](/req/hy_hydrofeature/hydrocomplex/catchmentaggregate) )
 
 HY\_CatchmentAggregate inherits from generalization the *outflow*, *inflow*, *containing Catchment*, *containedCatchment*, *conjointCatchment*, *upperCatchment*, *lowerCatchment*, and *realisation* properties, and associates the *exorheicDrainage* and *endorheicDrainage*. 
 
@@ -204,7 +204,7 @@ The **exorheicDrainage** association references an exorheic drained catchment co
 The HY\_DendriticCatchment feature type (Figure 26) specializes the general HY\_Catchment class as a catchment which is determined by a single common downstream catchment. It represents the catchment as the topological link between an inflow and an outflow. This allows catchments to be connected in a dendritic network by upstream-downstream relationships without knowing the complex hydrology between inflow and outflow. This concept requires a stable identifier purposefully assigned to the catchment and that catchments are delineated as a simple tree hierarchy. The dendritic nature of this class is enforced through constraints that the catchment must have one and only one outflowNode (which can be unknown), must have one and only one lowerCatchment (which may be unknown), and must an outflowNode that contributes to only one receiving catchment. **note issue #143 regarding this**
 
 ![Figure 26: Dendritic catchment (UML class diagram)](figs/fig26.png)
-Figure 26: Dendritic catchment (UML class diagram)
+Figure 26: Dendritic catchment (UML class diagram, [/req/hy_hydrofeature/hydrocomplex/dendriticcatchment] (/req/hy_hydrofeature/hydrocomplex/dendriticcatchment) )
 
 HY\_DendriticCatchment inherits from generalization the *code*, *outflow*, *inflow*, *containing Catchment*, *containedCatchment*, *conjointCatchment*, *upperCatchment*, *lowerCatchment*, and *realisation* properties, and associates the *encompassingCatchment*.
 
@@ -222,7 +222,7 @@ The **encompassingCatchment** association relates to the dendritic catchment the
 The HY\_InteriorCatchment feature type (Figure 27) specializes the general HY\_Catchment class as a catchment which is generally not connected to other catchments. This class describes the interior catchment as a catchment enveloped by other catchments to which it may temporarily contribute. While the interior catchment concept precludes flow to neighboring surface catchments, holistically it is a candidate for establishing connections to groundwater or atmospheric systems.
 
 ![Figure 27: Interior catchment (UML class diagram)](figs/fig27.png)
-Figure 27: Interior catchment (UML class diagram)
+Figure 27: Interior catchment (UML class diagram, [/req/hy_hydrofeature/hydrocomplex/interiorcatchment](/req/hy_hydrofeature/hydrocomplex/interiorcatchment) )
 
 HY\_InteriorCatchment inherits from generalization the *code*, *outflow*, *inflow*, *containing Catchment*, *containedCatchment*, *conjointCatchment*, *upperCatchment*, *lowerCatchment*, and *realisation* properties, and associates the *envelopingCatchment*.
 
@@ -240,7 +240,7 @@ The **envelopingCatchment** association relates to the interior catchment the ag
 The HY\_Outfall feature type (Figure 28) conceptualizes the hydrologically determined outfall of a corresponding catchment (Figure 20). The logical outfall represents the logical place where a catchment interacts with another catchment, i.e. where the outflow of a contributing catchment becomes inflow into a receiving catchment. A catchment may receive flow from several catchments or contribute flow to several catchments through a single logical outfall. Logically placed in reference to a catchment which links inflow and outflow, an outfall has a position relative to another outfall that is 'fixed' by the catchment. Through unique identity, each outfall feature may associate different outfall realizations within an hydrologic complex given that each realization has the same hydrologic determination. This includes the topological realization as a node in terms of the 'boundary' of a catchment edge.  
 
 ![Figure 28: Outfall (UML class diagram)](figs/fig28.png)
-Figure 28: Outfall (UML class diagram)
+Figure 28: Outfall (UML class diagram,  [req/hy_hydrofeature/hydrocomplex/outfall] (req/hy_hydrofeature/hydrocomplex/outfall)  )
 
 HY\_Outfall carries the associations: *contributingCatchment*, *receivingCatchment*, *relativePosition* and *outfallRealisation*. 
 
@@ -270,7 +270,7 @@ The HY\_CatchmentRealisation feature type (Figure 29) conceptualizes the multipl
 The catchment realization concept implies a hydrologic complex in that, if a catchment realization exists, they are in the same hydrologic complex as the catchment they realize. In this way, any feature realization of a logical catchment has the same hydrologic determination as the realized catchment. If the realized catchment is connected with other catchments via its outfall, possible feature realizations are also connected. 
 
 ![Figure 29: Catchment realization and its specializations (UML class diagram)](figs/fig29.png)
-Figure 29: Catchment realization: [/req/hy_hydrofeature/hydrocomplex/catchmentrealisation] (/req/hy_hydrofeature/hydrocomplex/catchmentrealisation), and its specialization (UML class diagram) 
+Figure 29: Catchment realization and its specialization (UML class diagram, [/req/hy_hydrofeature/hydrocomplex/catchmentrealisation] (/req/hy_hydrofeature/hydrocomplex/catchmentrealisation) ) 
 
 The catchment realization feature types defined in this standard refer to objects on the land surface for the purpose of surface water hydrology. In other contexts, other types of catchment realization may exist. Catchment realizations that do not conform to those defined in this standard, for instance realizations in 3 or 4 dimensional perspectives, may use the general HY\_CatchmentRealisation type. 
 
@@ -361,7 +361,6 @@ The HY\_HydroNetwork feature type specializes HY\_CatchmentRealisation with resp
 
 The HY\_CartographicRealisation feature type specializes HY\_CatchmentRealisation separate cartographic layers or maps, displaying a network of hydrologic features which may be connected at the representation level, or not. HY\_HydroNetwork inherits from generalization the *realisedCatchment* association incl. *hydroComplex*.
 
-
 ##### 7.4.2.7	Outfall Realisation 
 The HY\_OutfallRealisation feature type (Figure 30) conceptualizes the idea of an arbitrary feature of interest that may be considered as outfall. Referencing the hydrologic determination of a catchment by the outfall, various hydrologic features may by associated to a corresponding catchment through reference to the outfall realization feature. Any feature referencing the outfall realization within an implied hydrologic complex may realise the logical outfall, specifically as a permanent, stable location fixed or referenced by coordinates. 
 
@@ -370,7 +369,7 @@ Permanent, fixed landmarks such as confluences, points at cross or longitudinal 
 The HY\_OutfallRealisation is topologically understood as boundary of the corresponding catchment, and always of lower dimension than the realized catchment. With respect to the very common topological realization of a catchment as an edge, a 'spoke' property of type HY_Flowpath is described by means of a 'tagged value' and used to associate an upstream and downstream flowpath. The outfall realization may be represented by any geometric object, incl. a single point.
 
 ![Figure 30: Outfall realisation (UML class diagram)](figs/fig30.png)
-Figure 30: Outfall realisation (UML class diagram) 
+Figure 30: Outfall realisation (UML class diagram,  [/req/hy_hydrofeature/hydrocomplex/outfallrealisation] (/req/hy_hydrofeature/hydrocomplex/outfallrealisation) ) 
 
 HY\_OutfallRealisation carries the *realisedOutfall* association implying the *hydroComplex* feature collection, and carries two attributes: *shape* and *outfallType*. 
 
@@ -397,7 +396,7 @@ The River Positioning System provides a simple model to place a feature of inter
 The River Positioning System references the topological realization of catchment and outfall within an implied hydrologic complex in such that origin and referent of the reference system are nodes on the boundary of the flowpath shape. Given that the flowpath realizes a logical catchment between inflow and outflow nodes, the feature of interest realizes either the inflow or outflow node of the catchment determined by the corresponding reference location upstream or downstream. Using reference locations in both directions will allow to place a feature of interest interpolative between identified inflow and outflow nodes on the flowpath, even if the realized catchment is not explicitly delineated. 
 
 ![Figure 31: River Positioning System (UML class diagram)](figs/fig31.png)
-Figure 31: River Positioning System (UML class diagram)
+Figure 31: River Positioning System (UML class diagram, [/req/hy_hydrofeature/positioning/indirectposition] (/req/hy_hydrofeature/positioning/indirectposition), [/req/hy_positioning/riverreferencesystem] (/req/hy_positioning/indirectposition.riverreferencesystem) )
 
 The HY\_IndirectPosition feature type defines the indirect position, expressed either as the absolute distance to a reference point, or relative to the reference point or to the distance (interpolative).  Indirect position assigns to an feature of interest realizing an outfall a position in reference to an existing outfall realization using a linear river reference system.  HY\_IndirectPosition carries four properties: absolute, relative, referenceLocation, riverReferenceSystem. An implementation may use ISO 19148(2012): LinearReferencing understanding the feature to be placed as an ‘Event’ at a *locating* indirect position  in distance to an already *located* outfall realization, and this distance expressed  as a *linear Element* (flowpath)  *fromReferent*  (outfall realization) *towardsReferent* (outfall realization).
 
@@ -450,17 +449,17 @@ Figure 32: Surface Hydro Feature, external and internal dependencies
 ### 7.5.1 The Channel Network model
 The Channel Network model defines a network of connected depressions and channels which in its entirety realizes a logical catchment (Figure 33), usually as a network of linear  flowpathes realizing catchments connected to each other within the containing catchment realized by the entire network.  This allows to represent the drainage pattern, even if logically connected features may or may not be connected at the representation level.
 
-![Figure 33: Channel Network realization of catchment (UML class diagram)](figs/fig33.png)
-Figure 33: Channel Network realization of catchment (UML class diagram)
+![Figure 33: Channel Network realizing the catchment (UML class diagram)](figs/fig33.png)
+Figure 33: Channel Network realizzing the catchment (UML class diagram, [/req/hy_surfacehydrofeature/channelnetwork/channelnetwork] (/req/hy_surfacehydro/channelnetwork/channelnetwork) )
 
 The channel network is defined independent of the hydrographic network. This conceptual separation references to the specific concerns of hydraulics focused on the analysis and design of channels and conduits. It allows to realize the logical catchment as a network of connected channels and depressions, regardless of water is contained therein or not.  
 
 A single depression or channel may realize the logical catchment either as part of the network, or via a reference location which realizes the conceptual outfall of the catchment realized by the channel or depression (Figure 34). For example, a point at an associated cross or longitudinal section may be considered to realize the outflow of the catchment which is realized by the channel expressed as a flowpath.  
 
-![Figure 34: Channel realization of outfall (UML class diagram)](figs/fig34.png)
-Figure 34: Channel realization of outfall (UML class diagram)
+![Figure 34: Depression and Channel realizing the outfall (UML class diagram)](figs/fig34.png)
+Figure 34: Depression and Channel realizing the outfall (UML class diagram,  [/req/hy_surfacehydrofeature/channelnetwork/depression] (/req/hy_surfacehydrofeature/channelnetwork/depression),  [/req/hy_surfacehydrofeature/channelnetwork/channel] (/req/hy_surfacehydrofeature/channelnetwork/channel) )
 
-#### 7.5.1.1 ChannelNetwork **[needs review re contourline] **
+#### 7.5.1.1 ChannelNetwork 
 The HY\_ChannelNetwork feature type specializes the HY\_HydroNetwork realization defined in the core model, specifically as an aggregate of surface depressions and surface channels which continuously or periodically contain water, without imposing a particular drainage pattern. This allows to represent the network, even if logically connected features may or may not be connected at the representation level. If the realized catchment is connected with other catchments via outfall, the channel network is considered connected to the channel network realizing these catchments.  If required, an application focused on the structures containing a water body may use the defined relationships s to describe the realization of a catchment by the channel network, or network parts associated with the hydrographic network.
 
 HY\_ChannelNetwork associates the *surfaceDepression* and *surfaceChannel*, and carries a *drainagePattern* attribute; it inherits from generalization the *realizedCatchment*  and *flowpath* associations. Depending on the application, the channel network and the related features may be described by suitable attributes. A *flowpath* constraint is defined such that whenever the channel network is a network of flowpathes, the surface channel is of type HY_Flowpath, and a *contourline* constraint such that whenever the channel network is a network of flowpathes, and the flowpath accompanies a contourline, the surface depression is of type HY_ContourLine.** 
@@ -525,16 +524,16 @@ The **bedProfileTransversal** and **bedProfileLongitudinal** associations relate
 The Hydrographic Network model defines a logical network of water bodies which in its entirety realizes a logical catchment (Figure 35), usually as a network of linear  flowpathes realizing catchments connected to each other within a containing catchment that is realized by the entire network.  This allows to represent the network of ‘blue lines’, even if logically connected features may or may not be connected at the representation level.
 
 ![Figure 35: Hydrographic Network realizing the catchment (UML class diagram)](figs/fig35.png)
-Figure 35: Hydrographic Network realizing the catchment (UML class diagram)
+Figure 35: Hydrographic Network realizing the catchment (UML class diagram, [/req/hy_surfacehydro/hydrographicnetwork/hydrographicnetwork] (/req/hy_hydrographicnetwork/hydrographicnetwork) )
 
 The hydrographic network is defined independent of the channel network. This conceptual separation references to the specific concerns of hydrology studying the occurrence, accumulation, and circulation of water. It and allows to realize the logical catchment as a network of moving or standing water bodies, regardless of the channel wherein it may move, or not.
 
 A single water body realizes the logical catchment either as part of the hydrographic network, or via a reference location which realizes the conceptual outfall of the catchment realized by the water body (Figure 36). For example, a fixed landmark, or a point at an associated cross or longitudinal section is considered to realize the outflow of the catchment which is realized by the channel expressed as a flowpath.  
 
 ![Figure 36: Water Body realizing the outfall (UML class diagram)](figs/fig36.png)
-Figure 36: Water Body realizing the outfall  (UML class diagram)
+Figure 36: Water Body realizing the outfall  (UML class diagram, [/req/hy_surfacehydro/hydrographicnetwork/waterbody] (/req/hy_hydrographicnetwork/waterbody) )
 
-##### 7.5.2.1	HydrographicNetwork **[needs review re contourline]** 
+##### 7.5.2.1	HydrographicNetwork 
 The HY\_HydrographicNetwork feature type specializes the HY\_HydroNetwork realization defined in the core model, specifically as aggregate of permanent or temporary bodies of water standing in depressions or moving in channels. If the realized catchment is connected with other catchments via outfall, the hydrographic network is considered connected to the network realizing these catchments. This allows to represent the network, even if logically connected features may or may not be connected at the representation level. If required, an application focused on surface water bodies contained in channels or depressions  may use the defined relationships s to describe the realization of a catchment by the hydrographic network, or network parts associated with the channel network.
 
 HY\_HydrographicNetwork inherits from generalization the *realizedCatchment* and *flowpath* associations, and associates a *networkWaterBody. A *flowpath* constraint is defined such that whenever the hydrographic network is a network of flowpathes, the network water body is of type HY_Flowpath, and a *contourline* constraint such that whenever the hydrographic  network is a network of flowpathes, and the flowpath accompanies a contourline, the network water body is of type HY_ContourLine.
@@ -549,7 +548,7 @@ The **networkWaterBody** association relates a surface water body to the hydrogr
 | Dependency | [/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody] (/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody) | 
 | Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/hydrographicnetwork.networkwaterbody]  (/req/hy_surfacehydrofeature/hydrographicnetwork/hydrographicnetwork.networkwaterbody) |
 
-##### 7.5.2.2	WaterBody and WaterBodyStratum
+##### 7.5.2.2	WaterBody 
 The HY\_WaterBody feature type specializes the general HY\_HydroFeature class. The water body as part of the hydrographic network, either standing in a water pool, or flowing as stream in a watercourse, which are parts of the channel network. A water body may be segmented in vertical sections at right angles to the main (average) direction of flow or along its centreline, and horizontal strata. Conceptually, each water body, or a stratum, is understood as a reservoir used for storage, regulation or control of water recourses. 
 
 HY\_WaterBody inherits from the generalization the *name* property, associates the *hydrographicNetwork* in which it participates, and carries the associations: *stratum*, *waterpool*, *watercourse*, *upstreamWaterBody*,* downstreamWaterBody*, *fixedLandmark*,* streamCrossSection* and *streamLongitudinalSection*. An *outflow* constraint is defined such that whenever an outfall is realized through the associated cross or longitudinal section, the outflow of the catchment realized by the hydrographic network (the water body is part of) is of type HY_OutfallRealistion; a *contourline* constraint such that whenever the hydrographic network is a network of flowpathes, and the flowpath accompanies a contourline, the stratum is of type HY_ContourLine.
@@ -665,8 +664,8 @@ The HY\_Estuary feature type defines the existence of body of surface water, par
 
 The Storage model (Figure 37) provides a concept to describe any water body, in terms of a reservoir storing water for future use. The separate storage model allows to describe the hydrographic network without the details of storage capacities that a water body may have, and vice versa storage reservoirs to be referenced independent of their role within the hydrographic network. 
 
-![Figure 37: Storage model (UML class diagram)](figs/fig37.png)
-Figure 37: Storage model (UML class diagram)
+![Figure 37: Reservoir realizing an outfall (UML class diagram)](figs/fig37.png)
+Figure 37: Reservoir realizing an outfall (UML class diagram, [/req/hy_surfacehydrofeature/storage/reservoir] (/req/hy_surfacehydrofeature/storage/reservoir) )
 
 The HY\_Reservoir feature type describes the water body, either natural or man-made, used for storage, regulation and control of water resources. The reservoir concept refers to a volume of water managed in zones between operating levels. HY_Reservoir 
 associates to a reservoir the *storedWaterBody* and a *reservoirZone*. 
@@ -685,7 +684,7 @@ associates to a reservoir the *storedWaterBody* and a *reservoirZone*.
 The Hydrometric Network schema (Figure 38) defines a logical model to take into account a network of hydrometric stations as a specific realization of the catchment in the perspective of hydrologic observation, without the detail of an observation strategy. The core concept is that of a network of logically connected hydrometric stations realizing as a whole the catchment. This enables contextually related information models to relate monitoring stations and observing posts to hydrologic features, finally to the realized catchment, as usually required in the context of environmental reporting or when interpreting, comprising and processing observation results. 
 
 ![Figure 38: Hydrometric network model (UML class diagram)](figs/fig38.png)
-Figure 38: Hydrometric network model (UML class diagram)
+Figure 38: Hydrometric network model (UML class diagram,  [/req/hy_hydrometricfeature/hydrometricnetwork] (/req/hy_hydrometricfeature/hydrometricnetwork) )
 
 The hydrometric network model introduces the concept of a 'position on river' which allows an hydrologic station, even free from position, to be the realization of the logical outfall. This supports to establish upstream-downstream relationships between hydrometric features, to assign a position relative to a 'fixed' outfall, or to place a feature of interest relative to the hydrometric station.
 
