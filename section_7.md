@@ -539,7 +539,7 @@ A single water body realizes the logical catchment either as part of the hydrogr
 ![Figure 36: Water Body realizing the outfall (UML class diagram)](figs/fig36.png)
 Figure 36: Water Body realizing the outfall  (UML class diagram, [/req/hy_surfacehydro/hydrographicnetwork/waterbody] (/req/hy_hydrographicnetwork/waterbody) )
 
-##### 7.5.2.1	HydrographicNetwork 
+##### 7.5.2.1	Hydrographic Network 
 The HY\_HydrographicNetwork feature type specializes the HY\_HydroNetwork realization defined in the core model, specifically as aggregate of permanent or temporary bodies of water standing in depressions or moving in channels. If the realized catchment is connected with other catchments via outfall, the hydrographic network is considered connected to the network realizing these catchments. This allows to represent the network, even if logically connected features may or may not be connected at the representation level. If required, an application focused on surface water bodies contained in channels or depressions  may use the defined relationships s to describe the realization of a catchment by the hydrographic network, or network parts associated with the channel network.
 
 HY\_HydrographicNetwork inherits from generalization the *realizedCatchment*, *flowPath* and *waterEdge* associations, and associates a *networkWaterBody. A *flow line* constraint is defined such that whenever the hydrographic network is a network of flowpathes, the network water body is of type HY_Flowpath, and a *waters edge* constraint such that the network water body is of type HY_WaterEdge whenever the hydrographic network is a network of water edges.
@@ -596,6 +596,7 @@ The **storage** association associates to the water body a reservoir storing wat
 | Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.streamcrosssection]  (/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.streamcrosssection) |
 | Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.streamlongitudinalsection]  (/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.streamlongitudinalsection) |
 
+##### 7.5.2.3	Water Body Stratum
 The HY\_WaterBodyStratum feature type describes a horizontal layer in a stratified water body determined by differences in thermal or salinity characteristics or by oxygen or nutrient content, or by virtual storage zones of a reservoir. HY\_WaterBodyStratum carries the properties: *stratumType* and *benchmark*.
 
 The **stratumType** attribute characterizes in general the stratum using a term from a controlled vocabulary. If required, an implementation may use the Scoped Name type defined in the ISO 19103. 
@@ -610,7 +611,26 @@ The **benchmark** association relates to the water body permanent reference loca
 | Dependency | [/req/hy_hydrofeature/hydrocomplex/outfallrealisation] (/req/hy_hydrofeature/hydrocomplex/outfallrealisation) |
 | Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbodystratum.benchmark]  (/req/hy_surfacehydrofeature/hydrographicnetwork/waterbodystratum.benchmark) 
 
-##### 7.5.2.3	Water-LiquidPhase and Water-SolidPhase 
+##### 7.5.2.4	Cross-Section and Longitudinal Section
+The HY\_CrossSection and HY\_LongitudinalSection feature types conceptualize the segmentation of a water body or a containing channel through vertical sections. Taking into account the conceptual separation of a watercourse, the cross section concept refers to both the cross section of a water body orthogonal to the direction of flow, and to the transversal bed profile of a channel.
+
+Both types of vertical section associate permanent reference locations: *crossSectionPoint* and *longitudalinalSectionPoint*. If required, this associations shall be used to identify a reference location at a vertical section which realizes the conceptual outfall of the catchment realized by the associated channel or water body. 
+
+| **Requirements Class** | [/req/hy_surfacehydrofeature/hydrographicnetwork/crosssection] (/req/hy_surfacehydrofeature/hydrographicnetwork/crosssection) |
+| --- | --- |
+| Target type	| Implementation Schema |
+| Name | HY\_CrossSection |
+| Dependency | [/req/hy_hydrofeature/hydrocomplex/catchment/outfallrealisation] (/req/hy_hydrofeature/hydrocomplex/catchment/outfallrealisation) | 
+| Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/crosssection.crosssectionpoint]  (/req/hy_surfacehydrofeature/hydrographicnetwork/crosssection.crosssectionpoint)
+
+| **Requirements Class** | [/req/hy_surfacehydrofeature/hydrographicnetwork/longitudinalsection] (/req/hy_surfacehydrofeature/hydrographicnetwork/longitudinalsection) |
+| --- | --- |
+| Target type	| Implementation Schema |
+| Name | HY\_LongitudinalSection |
+| Dependency | [/req/hy_hydrofeature/hydrocomplex/catchment/outfallrealisation] (/req/hy_hydrofeature/hydrocomplex/catchment/outfallrealisation) | 
+| Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/longitudinalsection.longitudinalsectionpoint]  (/req/hy_surfacehydrofeature/hydrographicnetwork/longitudinalsection.longitudinalsectionpoint)
+
+##### 7.5.2.5	Water-LiquidPhase and Water-SolidPhase 
 The HY\_Water\_LiquidPhase and HY\_Water\_SolidPhase feature types provide simple concepts of the accumulation of water in water bodies. This definition refers to the matter accumulated to a mass of water. In its liquid form water is considered accumulated in water bodies; in its solid phase water may be accumulated after melting, or as a layer of ice or snow on an open water body. The accumulation of water in the atmosphere or below the land surface, e.g. rain, soil moisture or groundwater, is not in scope of this standard, as well as the accumulation of snow and ice in glaciers which is subject of glaciology science. Contextually related information models may use the HY\_Water\_LiquidPhase and HY\_Water\_SolidPhase feature types to build relationships to an accumulating water body, and ultimately to the catchment realized either by the water body or by the network of which the water body is part. 
 
 HY\_Water\_LiquidPhase carries the association accumulatingWaterBody; HY\_Water\_SolidPhase associates two properties: *snowmelt* and *coveredWaterBody*. If required, these associations shall be used to identify the water body (part of the network) where liquid water as a material is accumulated. 
@@ -630,25 +650,6 @@ HY\_Water\_LiquidPhase carries the association accumulatingWaterBody; HY\_Water\
 | Dependency | [/req/hy_surfacehydrofeature/hydrographicnetwork/waterliquidphase] (/req/hy_surfacehydrofeature/hydrographicnetwork/waterliquidphase) | 
 | Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/watersolidphase.coveredwaterbody]  (/req/hy_surfacehydrofeature/hydrographicnetwork/watersolidphase.coveredwaterbody) |
 | Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/watersolidphase.snowmelt]  (/req/hy_surfacehydrofeature/hydrographicnetwork/watersolidphase.snowmelt) |
-
-##### 7.5.2.4	Cross-Section and Longitudinal Section
-The HY\_CrossSection and HY\_LongitudinalSection feature types conceptualize the segmentation of a water body or a containing channel through vertical sections. Taking into account the conceptual separation of a watercourse, the cross section concept refers to both the cross section of a water body orthogonal to the direction of flow, and to the transversal bed profile of a channel; the longitudinal section concept refers to centre, stream or contour lines, and a longitudinal bed profile. 
-
-Both types of vertical section associate permanent reference locations: *crossSectionPoint* and *longitudalinalSectionPoint*. If required, this associations shall be used to identify a reference location at a vertical section which realizes the conceptual outfall of the catchment realized by the associated channel or water body. 
-
-| **Requirements Class** | [/req/hy_surfacehydrofeature/hydrographicnetwork/crosssection] (/req/hy_surfacehydrofeature/hydrographicnetwork/crosssection) |
-| --- | --- |
-| Target type	| Implementation Schema |
-| Name | HY\_CrossSection |
-| Dependency | [/req/hy_hydrofeature/hydrocomplex/catchment/outfallrealisation] (/req/hy_hydrofeature/hydrocomplex/catchment/outfallrealisation) | 
-| Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/crosssection.crosssectionpoint]  (/req/hy_surfacehydrofeature/hydrographicnetwork/crosssection.crosssectionpoint)
-
-| **Requirements Class** | [/req/hy_surfacehydrofeature/hydrographicnetwork/longitudinalsection] (/req/hy_surfacehydrofeature/hydrographicnetwork/longitudinalsection) |
-| --- | --- |
-| Target type	| Implementation Schema |
-| Name | HY\_LongitudinalSection |
-| Dependency | [/req/hy_hydrofeature/hydrocomplex/catchment/outfallrealisation] (/req/hy_hydrofeature/hydrocomplex/catchment/outfallrealisation) | 
-| Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/longitudinalsection.longitudinalsectionpoint]  (/req/hy_surfacehydrofeature/hydrographicnetwork/longitudinalsection.longitudinalsectionpoint)
 
 #### 7.5.3 The Surface Water Body types 
 
