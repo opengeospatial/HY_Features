@@ -134,7 +134,7 @@ The Hydro Complex model allows the realization of a logical outfall to be any ar
 The HY\_Catchment feature type represents a hydrologically determined feature through association an outfall, and the logical network of catchments that form a connected network of smaller catchments and outfalls within the catchment. Each HY\_Catchment may provide association between its many realizations within a hydrologically determined hydrologic complex. These realizations include a both geometric and topological realizations such as an edge 'bounded' by inflow and outflow nodes. HY\_Catchment is an abstract class and may be further specialized with respect to catchment interaction. 
 
 ![Figure 20: Catchment (UML class diagram)](figs/fig20.png)
-Figure 20: Catchment (UML class diagram, [/req/hy_hydrofeature/hydrocomplex/catchment] (/req/hy_hydrofeature/hydrocomplex/catchment) | ) 
+Figure 20: Catchment (UML class diagram, [/req/hy_hydrofeature/hydrocomplex/catchment] (/req/hy_hydrofeature/hydrocomplex/catchment) ) 
 
 The HY\_Catchment type (Figure 20) specializes the general HY\_HydroFeature class. Through generalization, HY\_Catchment inherits the *name* property, and carries the *code* attribute and the associations: *outflow*, *inflow*, *containing Catchment*, *containedCatchment*, *conjointCatchment*, *upperCatchment*, *lowerCatchment*, *realisation*.
 
@@ -377,7 +377,7 @@ The **realisedOutfall** association identifies exactly the catchment that contri
 
 The **shape** attribute defines the geometric representation of the realised outfall, here with the option to use a geometry type defined in ISO19107: Spatial Schema, if required.
   
-The *outfallType* attribute provides a list of terms in common use to express verbally the type of the realized outfall. If required, an implementation may use a term from the HY\_TypeOfOutfall codelist. Note that alternative code lists may be used but should be related to the terms in Annex ..., table ...  **[correct reference]** using an appropriate formalism.  
+The **outfallType** attribute provides a list of terms in common use to express verbally the type of the realized outfall. If required, an implementation may use a term from the HY\_TypeOfOutfall codelist. Note that alternative code lists may be used but should be related to the terms in Annex ...E.1  **[correct reference]** using an appropriate formalism.  
 
 | **Requirements Class** | [/req/hy_hydrofeature/hydrocomplex/outfallrealisation] (/req/hy_hydrofeature/hydrocomplex/outfallrealisation) | 
 | --- | --- |
@@ -542,7 +542,7 @@ Figure 36: Water Body realizing the outfall  (UML class diagram, [/req/hy_surfac
 ##### 7.5.2.1	Hydrographic Network 
 The HY\_HydrographicNetwork feature type specializes the HY\_HydroNetwork realization defined in the core model, specifically as aggregate of permanent or temporary bodies of water standing in depressions or moving in channels. If the realized catchment is connected with other catchments via outfall, the hydrographic network is considered connected to the network realizing these catchments. This allows to represent the network, even if logically connected features may or may not be connected at the representation level. If required, an application focused on surface water bodies contained in channels or depressions  may use the defined relationships s to describe the realization of a catchment by the hydrographic network, or network parts associated with the channel network.
 
-HY\_HydrographicNetwork inherits from generalization the *realizedCatchment*, *flowPath* and *waterEdge* associations, and associates a *networkWaterBody. A *flow line* constraint is defined such that whenever the hydrographic network is a network of flowpathes, the network water body is of type HY_Flowpath, and a *waters edge* constraint such that the network water body is of type HY_WaterEdge whenever the hydrographic network is a network of water edges.
+HY\_HydrographicNetwork inherits from generalization the *realizedCatchment*, *flowPath* and *waterEdge* associations, and associates a *networkWaterBody*. A *flow line* constraint is defined such that whenever the hydrographic network is a network of flowpathes, the network water body is of type HY_Flowpath, and a *waters edge* constraint such that the network water body is of type HY_WaterEdge whenever the hydrographic network is a network of water edges.
 
 The **networkWaterBody** association relates a surface water body to the hydrographic network. If required, this association shall be used to identify a water body which realizes the logical catchment either separately, or as part of the network.
 
@@ -569,7 +569,7 @@ The **fixedLandmark** association relates to the water body permanent reference 
 
 The **stratum** association relates a horizontal stratum. If required, this association shall be used to identify a layer of consistent characteristics, or a storage zone of a reservoir, carrying a permanent reference location which realizes the outfall of the catchment which is realized by the water body.
 
-The **streamCrossSection ** and ** longitudinalCrossSection ** associations relate to the water body a vertical section either at right angles to the main (average) direction of flow, or along a centre line.  If required, this association shall be used to identify the vertical section carrying a permanent reference location which realizes the outfall of the catchment which is realized by the water body.
+The **streamCrossSection** and **longitudinalCrossSection** associations relate to the water body a vertical section either at right angles to the main (average) direction of flow, or along a centre line.  If required, this association shall be used to identify the vertical section carrying a permanent reference location which realizes the outfall of the catchment which is realized by the water body.
 
 The **storage** association associates to the water body a reservoir storing water as a resource for future use. If required, this association shall be used to describe storage characteristics of the water body participating in the hydrographic network. 
 
@@ -591,7 +591,7 @@ The **storage** association associates to the water body a reservoir storing wat
 | Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.watercourse]  (/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.watercourse) |
 | Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.hydrographicnetwork]  (/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.hydrographicnetwork) |
 | Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.upstreamwaterbody]  (/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.upstreamwaterbody) |
-| Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.downstreamwaterbody]  (/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.downstreamwaterbody |
+| Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.downstreamwaterbody]  (/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.downstreamwaterbody) |
 | Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.stratum]  (/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.stratum) |
 | Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.streamcrosssection]  (/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.streamcrosssection) |
 | Requirement |	[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.streamlongitudinalsection]  (/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.streamlongitudinalsection) |
