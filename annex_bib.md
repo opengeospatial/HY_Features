@@ -8,7 +8,7 @@ OGC, 2008: OGC Hydrology Domain Working Group Charter. Open Geospatial Consortiu
 
 OGC, 2012: OGC WaterML 2.0: Part 1- Timeseries. Open Geospatial Consortium. 2012. OGC 10-126r4. Online, https://portal.opengeospatial.org/files/?artifact_id=57222. 
 
-OGC, 2013: OGC HY_HY_Features: a Common Hydrologic Feature Model. OGC Discussion Paper. Open Geospatial Consortium. 2013. OGC 11-039r3. Online, https://portal.opengeospatial.org/files/?artifact_id=55157.
+OGC, 2013: OGC HY\_Features: a Common Hydrologic Feature Model. OGC Discussion Paper. Open Geospatial Consortium. 2013. OGC 11-039r3. Online, https://portal.opengeospatial.org/files/?artifact_id=55157.
 
 OGC, 2016: OGC WaterML 2.0: Part 4- GroundwaterML 2 (GWML2). Open Geospatial Consortium. 2016. OGC 16-032r2.
 
@@ -16,7 +16,7 @@ USGS, 1992: Hydrologic units, hydrologic unit codes, and hydrologic unit names (
 
 WMO, 2012: WMO Guide to Hydrological Practices. Volume I: Hydrology – From Measurement to Hydrological Information. WMO (Series); no. 168., ed. World Meteorological Organization. 2012, Geneva. Online also, http://www.whycos.org/chy/guide/168_Vol_I_en.pdf.
 
-WMO, 2016: International Glossary of Hydrology / Glossaire International d'Hydrologie. WMO (Series); no. 385, ed. World Meteorological Organization. World Meteorological Organization. 2012, Geneva. ISBN 978-92-63-03385-8. United Nations Educational, Scientific and Cultural Organization. 2012, Geneve. ISBN 978-92-3-001154-3. 
+WMO, 2016: International Glossary of Hydrology / Glossaire International d'Hydrologie. WMO (Series); no. 385, ed. World Meteorological Organization. World Meteorological Organization. 2012, Geneva. ISBN 978-92-63-03385-8. United Nations Educational, Scientific and Cultural Organization. 2016, Geneve. ISBN 978-92-3-001154-3. 
 
 
 
