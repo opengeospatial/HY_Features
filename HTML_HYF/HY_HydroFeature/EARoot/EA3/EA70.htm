@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_RelativePosition</title>
+<title>RiverPositioningSystem::HY_DistanceToReferent</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,11 +34,11 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_RelativePosition", " : "))</script>  : Public  &lt;&lt;DataType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_DistanceToReferent", " : "))</script>  : Public  &lt;&lt;DataType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">19/05/2011 11:30:52</td>
+			<td width="85%" class="ObjectDetailsValue">04/08/2010 07:34:52</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
@@ -87,14 +87,14 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{71A38116-8D2E-47f0-833B-6A5EA82879F5}</td>
+			<td class="ObjectDetailsValue">{0719ADA7-1E14-4055-8FED-BBE940051F20}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="../EA3.htm">temp_overallOverview</a>, <a href="EA66.htm">River Reference System</a>, <a href="EA64.htm">Fig31: River Reference System</a></td>
+			<td class="ObjectDetailsValue"><a href="../EA3.htm">temp_overallOverview</a>, <a href="EA68.htm">River Reference System</a>, <a href="EA66.htm">Fig31: River Reference System</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">relative position, expressed as percentage of the total distance to the reference point (interpolative), or using a term from codelist, e.g. the RelativePositionDescription codelist defined in this standard.</div>
+	<div class="ObjectDetailsNotes">distance to a reference point including simple statements on accuracy and precision of the position.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;/i&gt;&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -107,44 +107,44 @@ function nameClassifier(name, separator)
 		</tr>
 						<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="EA72.htm">HY_RelativePositionDescription</a></i><br /><strong>&nbsp;&nbsp;description</strong>
+					<i>Public CharacterString</i><br /><strong>&nbsp;&nbsp;accuracyStatement</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes118')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes118" border="0" />Details:
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes114')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes114" border="0" />Details:
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes118_00" style="display: none;">
+						<tr id="DetailsImageAttributes114_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes118_01" style="display: none;">
+						<tr id="DetailsImageAttributes114_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes118_02" style="display: none;">
+						<tr id="DetailsImageAttributes114_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes118_03" style="display: none;">
+						<tr id="DetailsImageAttributes114_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes118_03" style="display: none;">
+						<tr id="DetailsImageAttributes114_03" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td>Range:0 to 1</td>
 						</tr>
 					</table>
 					
-					sequenceNumber=1<br>
+					sequenceNumber=2<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			term, providing a verbal description&#160; of the spatial relationship to a reference point.
+			simple statement whether the distance value agrees with the value accepted as being true.&#160; This statement assumes that all known corrections have been applied. 
 		</td>
 	</tr>
 </table></div>
@@ -153,33 +153,33 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public Real</i><br /><strong>&nbsp;&nbsp;interpolative</strong>
+					<i>Public Length</i><br /><strong>&nbsp;&nbsp;distanceValue</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes119')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes119" border="0" />Details:
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes115')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes115" border="0" />Details:
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes119_00" style="display: none;">
+						<tr id="DetailsImageAttributes115_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes119_01" style="display: none;">
+						<tr id="DetailsImageAttributes115_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes119_02" style="display: none;">
+						<tr id="DetailsImageAttributes115_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes119_03" style="display: none;">
+						<tr id="DetailsImageAttributes115_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes119_03" style="display: none;">
+						<tr id="DetailsImageAttributes115_03" style="display: none;">
 							<td width="75"><i>Range: </i></td>
-							<td>Range:0 to 1</td>
+							<td></td>
 						</tr>
 					</table>
 					
@@ -190,7 +190,53 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			number, expressing the distance to a reference point relative to the total length of the linear element starting/ending at the reference point, e.g. percent along a flowpath.
+			distance value expressed as length, including the unit of length applied.
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public Distance</i><br /><strong>&nbsp;&nbsp;precisionStatement</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes116')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes116" border="0" />Details:
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes116_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes116_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes116_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes116_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes116_03" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to 1</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=3<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			simple statement on the smallest unit of division on the scale of measurement.
 		</td>
 	</tr>
 </table></div>

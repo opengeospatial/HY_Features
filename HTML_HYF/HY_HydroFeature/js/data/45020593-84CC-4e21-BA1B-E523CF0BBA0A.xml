@@ -1,4 +1,4 @@
-tocTab[tocTab.length] = new Array("0:1", "", "Package dependencies", "EARoot/EA1.htm", "176.png", "5411", "0", "", "Package diagram0","{554A88B8-00F5-4a55-AEB0-ACE29F93A4EE}");
-tocTab[tocTab.length] = new Array("0:2", "", "Hydrometric Network Realisation", "EARoot/EA3.htm", "175.png", "5410", "0", "", "Diagram diagram0","{E8220B60-2F06-4be6-B608-0E3BEDB1F85E}");
-tocTab[tocTab.length] = new Array("0:3", "", "«FeatureType» HY_HydrometricFeature", "EARoot/EA5.htm", "5.png", "11960", "0", "", "Class0","{BB084F13-AED3-4c9d-9E8F-2C46B9CBC703}");
-tocTab[tocTab.length] = new Array("0:4", "", "«FeatureType» HY_HydrometricNetwork", "EARoot/EA6.htm", "5.png", "11959", "0", "", "Class0","{5D9E5E19-3F78-4eb2-94E3-74D083F92886}");
+tocTab[tocTab.length] = new Array("0:1", "", "Fig38: Package dependencies", "EARoot/EA1.htm", "176.png", "5883", "0", "", "Package diagram0","{554A88B8-00F5-4a55-AEB0-ACE29F93A4EE}");
+tocTab[tocTab.length] = new Array("0:2", "", "Fig39: Hydrometric Network Realisation", "EARoot/EA3.htm", "175.png", "5882", "0", "", "Diagram diagram0","{E8220B60-2F06-4be6-B608-0E3BEDB1F85E}");
+tocTab[tocTab.length] = new Array("0:3", "", "«FeatureType» HY_HydrometricFeature", "EARoot/EA5.htm", "5.png", "12731", "0", "", "Class0","{BB084F13-AED3-4c9d-9E8F-2C46B9CBC703}");
+tocTab[tocTab.length] = new Array("0:4", "", "«FeatureType» HY_HydrometricNetwork", "EARoot/EA6.htm", "5.png", "12730", "0", "", "Class0","{5D9E5E19-3F78-4eb2-94E3-74D083F92886}");
