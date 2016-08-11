@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title></title>
+<title>HydrographicNetwork::HY_HydrographicNetwork</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("", " : "))</script>  : Public   Note</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_HydrographicNetwork", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">30/06/2016 15:12:15</td>
+			<td width="85%" class="ObjectDetailsValue">23/08/2010 11:34:56</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">01/07/2016 11:45:44</td>
+			<td class="ObjectDetailsValue">28/07/2016 09:49:33</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -51,7 +51,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
-			<td class="ObjectDetailsValue">dornblut</td>
+			<td class="ObjectDetailsValue"></td>
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
@@ -87,15 +87,114 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{3F8BEF39-EB3C-4950-8797-DBD946CFE12F}</td>
+			<td class="ObjectDetailsValue">{575E613E-8105-4a81-9E8F-D961EBA90856}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="EA19.htm">ChannelNetworkRealisation</a></td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, informative, catchmentnetwork, ChannelNetwork_extended, surfacehydronetwork, temp_overallOverview, temp_catchmentRealisation_all, <a href="../EA1/EA7.htm">Channel - WaterBody</a>, <a href="EA15.htm">Hydrographic Network Realisation</a>, <a href="EA17.htm">WaterBody  - Channel</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">flowpath:&lt;br /&gt;&lt;/p&gt;&lt;p&gt;EXISTS flowpath, networkChannel is of type HY_Flowpath&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;outflow node: &lt;br /&gt;&lt;/p&gt;&lt;p&gt;EXISTS networkChannel.profileTransversal.crossSectionPoint.networkLocation OR&lt;br /&gt;&lt;/p&gt;&lt;p&gt;networkChannel.profileLongitudinalSection.longitudinalSectionPoint.networkLocation, realisedCatchment.outflowNode&#160; is of type HY_ReferenceLocation&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">catchment realisation, specifically as aggregate of permanent or temporary water bodies. If the realised catchment is connected with other catchments via its outfall, the network water bodies are also connected.</div>
 
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA24.htm">«FeatureType» HY_WaterBody</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> networkWaterBody<br />
+						water body aggregated in the hydrographic network. 
+
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> hydrographicNetwork<br />
+						hydrographic network the water body is part of.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink44" onclick="parent.toggleDiv('detailsDIVLink44','DetailsImageLink44')" />Details:
+							<div id="detailsDIVLink44" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">hydrographic network of one or more water bodies.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ConstraintsTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+			  	<tr>
+					<td width="80%" class="TableHeading">Constraint</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Status</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">flowpath</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints45" onclick="parent.toggleDiv('detailsDIVConstraints45','DetailsImageConstraints45')" />Details:
+							<div id="detailsDIVConstraints45" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">EXISTS flowpath, networkWaterBody is of type HY_Flowpath</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">outflow node</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints46" onclick="parent.toggleDiv('detailsDIVConstraints46','DetailsImageConstraints46')" />Details:
+							<div id="detailsDIVConstraints46" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">EXISTS networkWaterBody.fixedLandmark.realisedOutfall, OR&lt;br /&gt;&lt;/p&gt;&lt;p&gt;networkWaterBody.streamCrossSection.crossSectionPoint.realisedOutfall, OR&lt;br /&gt;&lt;/p&gt;&lt;p&gt;networkWaterBody.streamLongitudinalSection.longitudinalSectionPoint.realisedOutfall,&#160; realisedCatchment.outflow&#160; is of type HY_OutfallRealisation&lt;br /&gt;&lt;/p&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA24.htm">«FeatureType» HY_WaterBody</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Weak</td>
+					<td width="40%" class="TableRow" valign="top">hydrographic network of one or more water bodies.</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
 <div class="pageFooter"></div>
  
 </body>
