@@ -1,7 +1,7 @@
 ## ANNEX E - Code lists for the HY_Features model
-### E.1 Terms identifying a fixed landmark determined as reference point
+### E.1 Terms identifying a fixed landmark determined to realize the conceptual outfall
 
-| Codelist | **Reference Point Typ** |
+| Codelist | **Type of Outfall** |
 | --- | --- |
 | barrage | barrier across a stream provided with a series of gates or other control mechanisms to control the water-surface level upstream, to regulate the flow or to divert water supplies into a canal. |
 | bifurcation | division of a stream into two branches.
@@ -25,7 +25,7 @@
 
 ### E.2 Terms commonly used in hydrology to describe a spatial relation between two points
 
-| Codelist | **Relative position Type** |
+| Codelist | **Relative Position Type** |
 | --- | --- |
 | at | located at the (reference) point |
 | between | located between two (reference) points |
@@ -37,7 +37,7 @@
 
 ### E.3 Terms commonly used in hydrology to describe a drainage pattern 
 
-| Codelist | **Drainage pattern** |
+| Codelist | **Drainage Pattern** |
 | --- | --- |
 | annular | main rivers have circular pattern with subsidiary channels at right angels. |
 | centripetal | streams flow inward to center. |
@@ -49,7 +49,7 @@
 | rectangular | drainage forms a perpendicular net with the two directions equally developed. |
 | trellis | a dominant drainage direction with a secondary direction perpendicular to this; primary tributaries join main stream at right angles, secondary tributaries parallel main stem. |
 
-### E.4 ISO standards relevant to the romanisation, transcription or transliteration of characters of another alphabet into Latin characters
+### E.4 ISO standards relevant to the romanization, transcription or transliteration of characters of another alphabet into Latin characters
 
 | Codelist | **Transliteration Standard Code** |
 | --- | --- |
