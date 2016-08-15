@@ -191,7 +191,7 @@ Feature (abstraction of a real-world phenomenon) of a type defined in the hydrol
 
 ### 4.12 hydrologic realization
 
-Ayn hydrologic feature 'making real' a hydrologic concept within a hydrologic complex (4.10).
+Hydrologic feature that realizes a hydrologic concept within the hydrologic complex. (4.10).
 
 ### 4.13 hydrology
 
