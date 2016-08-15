@@ -3,18 +3,14 @@
 ## i. Abstract
 
 The OGC HY\_Features implementation standard defines a standard information model for the identification of hydrologic features independent from geometric representation and scale. The conceptual model describes hydrologic features by defining the fundamental relationships among major components of the hydrosphere. This includes relationships such as the hierarchy of catchments, the segmentation of watercourses, and the topological connectivity of hydrologic features.
-
 The standard is based on the concept that a given hydrologic feature may have multiple representations. This supports referencing the same feature(s) in different information systems and assists the organization and cataloging of observations, model results, or other studies of a feature. The ability to represent the same watershed, river, or other hydrologic feature in several ways is critical to aggregation of cross-referenced features into integrated datasets and data products on global, regional, or basin scales.
+The Hydrologic feature types are defined using the OGC General Feature Model (ISO 19109:2006) with reference to definitions within the International Glossary for Hydrology. The conceptual model is expressed in the Geographic Information Conceptual Schema Language (ISO 19103:2005) using the Unified Modeling Language (UML). 
 
-The Hydrologic feature types are defined using the OGC General Feature Model (ISO19109:2006) with reference to definitions within the International Glossary for Hydrology.  The conceptual model is expressed in the Geographic Information Conceptual Schema Language (ISO19103:2005) using the Unified Modeling Language (UML).
 
 ## ii. Keywords
 
 The following are keywords to be used by search engines and document catalogues.
-
-ogcdoc, OGC document, hydrology, feature, identification, conceptual model, UML, implementation standard
-
-
+ogcdoc, OGC document, hydrology, feature, identification, conceptual model, UML, implementation standard.
 
 ## iii. Preface
 
@@ -28,11 +24,28 @@ _Recipients of this document are requested to submit, with their comments, notif
 
 ## iv. Submitting organizations
 
-The following organizations submitted this Document to the Open Geospatial Consortium (OGC):
+The following organizations contributed to the initiation or development of this standard and submitted this Document to the Open Geospatial Consortium OGC): 
 
-a)Federal Institute of Hydrology (BfG), Global Runoff Data Centre of WMO
-b)CSIRO, Land and Water
-c)USGS
+•	U.S. Geological Survey (USGS), USA
+
+•	Federal Institute of Hydrology (BfG) , Germany
+
+•	CSIRO Land and Water, Australia
+
+•	Bureau of Meteorology, Australia 
+
+•	Metalinkage, Australia
+
+•	BRGM, France
+
+•	University of Texas at Austin, USA
+
+•	Eurecat, Spain
+
+•	INCLAM S. A., Spain
+
+•	52°North, Germany
+
 
 ## v. Submitters
 
@@ -43,7 +56,10 @@ All questions regarding this submission should be directed to the editor or the 
 | David Blodgett | USGS |
 | Irina Dornblut | Federal Institute of Hydrology (BfG), Germany |
 | Robert A. Atkinson | Metalinkage.com.au (2007-2014 with  CSIRO) |
-| Bruce Simons | CSIRO |
+| Joshua Liebermann | --- | 
+| Darren Smith | Australian Bureau of Meteorology |
+| Bruce Simons | CSIRO Land and Water |
+| --- | --- |
 
 ## 1. Scope
 
@@ -147,15 +163,15 @@ The essential logic separation of concerns between a common concept and its repr
 
 ### 4.3 data
 
-documented value of some characteristics of a real-world phenomenon.
+Documented value of some characteristics of a real-world phenomenon.
 
 ### 4.4 data set
 
-data compiled and arranged into a set.
+Data compiled and arranged into a set.
 
 ### 4.5 data product
 
-dataset compiled for a specific purpose, e.g. for global dissemination using Web services.
+Dataset compiled for a specific purpose, e.g. for global dissemination using Web services.
 
 ### 4.6 domain feature
 
