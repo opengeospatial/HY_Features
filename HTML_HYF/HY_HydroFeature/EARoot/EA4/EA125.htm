@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">16/06/2016 09:07:06</td>
+			<td class="ObjectDetailsValue">10/08/2016 16:04:17</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -51,7 +51,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
-			<td class="ObjectDetailsValue">dornblut</td>
+			<td class="ObjectDetailsValue"></td>
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">informative, ChannelNetwork_extended, <a href="../EA3.htm">overallOverview</a>, <a href="../EA3/EA82.htm">Hydrographic Network_extended</a>, <a href="EA108.htm">River Positioning</a>, <a href="EA112.htm">Context Diagram : HY_IndirectPosition</a>, <a href="EA118.htm">Context Diagram : HY_RiverReferenceSystem</a>, <a href="EA120.htm">Context Diagram : HY_RiverReferenceSystemAxis</a></td>
+			<td class="ObjectDetailsValue">informative, ChannelNetwork_extended, <a href="../EA3.htm">temp_overallOverview</a>, <a href="../EA1/EA24.htm">Fig13:</a>, <a href="../EA1/EA26.htm">Fig14:</a>, <a href="../EA2/EA83.htm">Fig28: Outfall</a>, <a href="EA120.htm">River Reference System</a>, <a href="EA116.htm">Fig31: River Reference System</a>, <a href="EA118.htm">Fig31_: River Reference System</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">topology-based reference system to simply assign a position &#39;along a river&#39; using its geometric representation. The origin of the river reference system is set at the location to be placed, understood as outfall of a catchment. The geometric shape is defined by the linear flowpath representing the catchment between the origin and an identified reference location upstream or downstream of the origin. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The position on flowpath is provided as distance from the located start of the flowpath at origin and end at refrecne location towards the flowpath is directed. HY_RiverReferenceSystem shall support one axis.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: Each catchment has its own Reference System which can be combined as necessary using catchment topology. Each Reference System must have one outfall (origin) and one FlowPath (shape).&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">special linear coordinate system, to simply assign a position &#39;along a river&#39; using the linear realisation of a catchment and its geometric representation. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The origin of the river reference system is set at the location to be placed, understood as outfall of a corresponding catchment. The geometric shape is defined by the linear flowpath realising the catchment between the origin and an identified reference location upstream or downstream of the origin. The position is provided as distance from the start of the flowpath located at origin to the end located at the reference location towards the flowpath is directed. The coordinate system axis is inherited from&#160; generalization (CS_LinearCS type).&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Each catchment has its own Reference System which can be combined as necessary using catchment topology. Each Reference System must have one outfall (origin) and one FlowPath (shape).&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -110,32 +110,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA1/EA62.htm">«FeatureType» HY_FlowPath</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> linearElement<br />
-						flowpath representing the catchment between origin and reference location as the linear shape used in the river reference system (linear element in term sof ISO 19148)
-	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink134" onclick="parent.toggleDiv('detailsDIVLink134','DetailsImageLink134')" />Details:
-							<div id="detailsDIVLink134" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">shape reflected in the river reference system.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: defined as linear representation of a catchment, the flowpath provides the shape in the river reference system (linear element in terms of ISO 19148) &lt;br /&gt;&lt;/p&gt;</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA1/EA65.htm">«FeatureType» HY_Outfall</a><br />
+						<a href="../EA2/EA107.htm">«FeatureType» HY_Outfall</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -150,8 +125,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink135" onclick="parent.toggleDiv('detailsDIVLink135','DetailsImageLink135')" />Details:
-							<div id="detailsDIVLink135" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink138" onclick="parent.toggleDiv('detailsDIVLink138','DetailsImageLink138')" />Details:
+							<div id="detailsDIVLink138" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">origin of the river reference system.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: considering each place on, or projected ont, the land surface as outfall of a corresponding catchment, the start of the representing flowpath (linear element in terms of ISO 19148) marks the origin of the river reference system.&lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
@@ -160,7 +135,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA126.htm">«DataType» HY_RiverReferenceSystemAxis</a><br />
+						<a href="../EA2/EA104.htm">«FeatureType» HY_FlowPath</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -168,15 +143,16 @@ function nameClassifier(name, separator)
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> axis<br />
-						axis orientation from the located start (origin) directed towards the referent (reference point).	
+						<strong>Name:</strong> linearElement<br />
+						flowpath representing the catchment between origin and reference location as the linear shape used in the river reference system (linear element in term sof ISO 19148)
+	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink136" onclick="parent.toggleDiv('detailsDIVLink136','DetailsImageLink136')" />Details:
-							<div id="detailsDIVLink136" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">orientation of the river reference system.</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink139" onclick="parent.toggleDiv('detailsDIVLink139','DetailsImageLink139')" />Details:
+							<div id="detailsDIVLink139" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">shape reflected in the river reference system.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: defined as linear representation of a catchment, the flowpath provides the shape in the river reference system (linear element in terms of ISO 19148) &lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
 						</div>
@@ -194,7 +170,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA123.htm">«DataType» HY_IndirectPosition</a><br />
+						<a href="EA123.htm">«FeatureType» HY_IndirectPosition</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -208,8 +184,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink137" onclick="parent.toggleDiv('detailsDIVLink137','DetailsImageLink137')" />Details:
-							<div id="detailsDIVLink137" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink140" onclick="parent.toggleDiv('detailsDIVLink140','DetailsImageLink140')" />Details:
+							<div id="detailsDIVLink140" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">linear reference system used for positioning.</div>
 
 							</div>

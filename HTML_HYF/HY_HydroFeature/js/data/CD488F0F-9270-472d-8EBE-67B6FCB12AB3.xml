@@ -1,8 +1,8 @@
-tocTab[tocTab.length] = new Array("0.3:1", "", "Fig31: River Reference System", "EARoot/EA3/EA78.htm", "175.png", "5926", "0", "", "Class diagram0","{F3F9F26F-6B2A-4292-9BB5-8AB70F981CF3}");
-tocTab[tocTab.length] = new Array("0.3:2", "", "Fig31_: River Reference System", "EARoot/EA3/EA80.htm", "175.png", "5927", "0", "", "Class diagram0","{555B7EEE-4514-4379-9B92-C1CFE2CC81F9}");
-tocTab[tocTab.length] = new Array("0.3:3", "", "River Reference System", "EARoot/EA3/EA82.htm", "175.png", "5925", "0", "", "Diagram diagram0","{D609921A-7C8D-4411-ADAC-0794D654525D}");
-tocTab[tocTab.length] = new Array("0.3:4", "", "«DataType» HY_DistanceToReferent", "EARoot/EA3/EA84.htm", "5.png", "12755", "0", "", "Class0","{0719ADA7-1E14-4055-8FED-BBE940051F20}");
-tocTab[tocTab.length] = new Array("0.3:5", "", "«FeatureType» HY_IndirectPosition", "EARoot/EA3/EA85.htm", "5.png", "12756", "0", "", "Class0","{62A4DBD2-8FB5-4489-AE38-E5EC4723D314}");
-tocTab[tocTab.length] = new Array("0.3:6", "", "«DataType» HY_RelativePosition", "EARoot/EA3/EA86.htm", "5.png", "12757", "0", "", "Class0","{71A38116-8D2E-47f0-833B-6A5EA82879F5}");
-tocTab[tocTab.length] = new Array("0.3:7", "", "«FeatureType» HY_RiverReferenceSystem", "EARoot/EA3/EA87.htm", "5.png", "12759", "0", "", "Class0","{EA0E3CF3-DF2C-407f-A0FD-ED4E2BB1A05C}");
-tocTab[tocTab.length] = new Array("0.3:8", "", "«CodeList» HY_RelativePositionDescription", "EARoot/EA3/EA88.htm", "5.png", "12758", "0", "", "Class0","{B5645583-E781-43c3-B270-D4EC7EA02D52}");
+tocTab[tocTab.length] = new Array("0.4:1", "", "Fig31: River Reference System", "EARoot/EA4/EA116.htm", "175.png", "6120", "0", "", "Class diagram0","{F3F9F26F-6B2A-4292-9BB5-8AB70F981CF3}");
+tocTab[tocTab.length] = new Array("0.4:2", "", "Fig31_: River Reference System", "EARoot/EA4/EA118.htm", "175.png", "6121", "0", "", "Class diagram0","{555B7EEE-4514-4379-9B92-C1CFE2CC81F9}");
+tocTab[tocTab.length] = new Array("0.4:3", "", "River Reference System", "EARoot/EA4/EA120.htm", "175.png", "6119", "0", "", "Diagram diagram0","{D609921A-7C8D-4411-ADAC-0794D654525D}");
+tocTab[tocTab.length] = new Array("0.4:4", "", "«DataType» HY_DistanceToReferent", "EARoot/EA4/EA122.htm", "5.png", "13065", "0", "", "Class0","{0719ADA7-1E14-4055-8FED-BBE940051F20}");
+tocTab[tocTab.length] = new Array("0.4:5", "", "«FeatureType» HY_IndirectPosition", "EARoot/EA4/EA123.htm", "5.png", "13066", "0", "", "Class0","{62A4DBD2-8FB5-4489-AE38-E5EC4723D314}");
+tocTab[tocTab.length] = new Array("0.4:6", "", "«DataType» HY_RelativePosition", "EARoot/EA4/EA124.htm", "5.png", "13067", "0", "", "Class0","{71A38116-8D2E-47f0-833B-6A5EA82879F5}");
+tocTab[tocTab.length] = new Array("0.4:7", "", "«FeatureType» HY_RiverReferenceSystem", "EARoot/EA4/EA125.htm", "5.png", "13069", "0", "", "Class0","{EA0E3CF3-DF2C-407f-A0FD-ED4E2BB1A05C}");
+tocTab[tocTab.length] = new Array("0.4:8", "", "«CodeList» HY_RelativePositionDescription", "EARoot/EA4/EA126.htm", "5.png", "13068", "0", "", "Class0","{B5645583-E781-43c3-B270-D4EC7EA02D52}");
