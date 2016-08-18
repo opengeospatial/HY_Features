@@ -54,27 +54,27 @@ Figure C1-5: C1, Typical catchments with one inflow and one outflow each; C2, Jo
 #### 6.3.1 Hierarchy of catchments
 Any catchment may be nested or aggregated in a larger containing catchment or split into multiple sub units forming a hierarchy of catchments. Two types of catchment hierarchy are supported in HY_Features: basic nesting and dendritic aggregation: 1) Basic nesting allows any catchment to have a reference to a containing catchment (Figure 7). This allows collections of sub-catchments to be grouped into larger units, but does not define any particular interconnections between these sub-catchments. 2) Dendritic hierarchies are collections of catchments with simple topological relationships that allow determination of contribution of flow to downstream catchments. To reflect the organization of catchments in dendritic networks, a special dendritic catchment is defined that permanently contributes exorheic flow to a receiving catchment (Figure 8), and an interior catchment of endorheic flow that contributes temporarily to a receiving catchment. 
 
-<img src="figs/containingCatchment.png" width="250">  
-Figure 6: Catchment hierarchy – A catchment (dark grey) may be nested within a containing catchment which is another catchment (light grey)
+<img src="figs/fig7.png" width="250">  
+Figure 7: Catchment hierarchy – A catchment (dark grey) may be nested within a containing catchment which is another catchment (light grey)
 
-<img src="figs/simpleCatchmentNetwork.png" width="250">  
-Figure 7: Catchment hierarchy – A catchment (dark grey) may be part of a simple dendritic network of catchments which is also a catchment. 
+<img src="figs/fig8.png" width="250">  
+Figure 8: Catchment hierarchy – A catchment (dark grey) may be part of a simple dendritic network of catchments which is also a catchment. 
 
 #### 6.3.2 Topological network of catchments
 Given the idea that a non-geospatial schematic representation of a feature can show its connection in a topological network, a catchment can be thought of as a hydrologic unit whose terrain and morphology results in a topological link between inflow and outflow. The red line in Figure 8 illustrates how a single catchment, represented by a boundary, an area, a stream network, and a main flowline, can also be represented using a straight line that is not geospatially representative but is a valid schematic representation of the connection between inflow and outflow.
 
-<img src="figs/flowPath.png" width="250">  
-Figure 5: A catchment area (grey) and a flowpath connecting inflow to outflow (red) depicting a definable unit where hydrological processes take place. 
+<img src="figs/fig9.png" width="250">  
+Figure 9: A catchment area (grey) and a flowpath connecting inflow to outflow (red) depicting a definable unit where hydrological processes take place. 
 
 In this network of catchments, two or more catchments that flow into another, flow to the same outflow node (Figure 10) which is the inflow node of a receiving downstream catchment (Figure 11); the upstream catchment may be understood as the catchment contributing flow to the inflow node of a receiving catchment. In a network of dendritic catchments, outflow nodes on the network serve only one receiving catchment (Figure 10 and Figure 11). 
 
 Nodes stand alone as points of interaction in the network, in reality they are (potentially complex) watershed outlets, denoted as outfall features. Whether an outfall (node) is referred to as an inflow or outflow node is always in reference to a catchment. This means that a node serves as the outflow node of some contributing catchment(s) and the inflow node of some receiving catchment(s). In this standard, the inflow and outflow role names of the conceptual outfall (node) are used to unambiguously describe the node's role with respect to a catchment.
 
-<img src="figs/identifiedOutflow.png" width="250">
-Figure 8: Catchments contributing to an identified outflow node. Note that some catchments contribute to a common outflow node.
+<img src="figs/fig10.png" width="250">
+Figure 10: Catchments contributing to an identified outflow node. Note that some catchments contribute to a common outflow node.
 
-<img src="figs/identifiedInflow.png" width="250">  
-Figure 9: Catchments receive inflow via an identified inflow node. Note that nodes are not necessarily geographic features, but are rather nodes in a graph representation of the river network.
+<img src="figs/fig11.png" width="250">  
+Figure 11: Catchments receive inflow via an identified inflow node. Note that nodes are not necessarily geographic features, but are rather nodes in a graph representation of the river network.
 
 In a dendritic network, the outflow node that one or more dendritic catchments flow to (which is not necessarily a single geometric point) must contribute to one and only one receiving catchment, unless it is a terminal catchment. Given that the dendritic catchment is defined as a special type of the more general catchment concept, it inherits the general nesting as defined for the catchment as shown in Figure 7.
 
@@ -84,20 +84,20 @@ It is worth noting that non-dendritic networks are often represented as a dendri
 
 
 <img src="figs/nonDendriticEnc1.png" width="250"> <img src="figs/nonDendriticEnc2.png" width="250"> <img src="figs/nonDendriticEnc3.png" width="250">  
-Figure C6: Non-dendritic topology example.
+Figure 12: Non-dendritic topology example.  
 
 There are two ways that catchments with multiple inflows can share a common outlet: 1) as separate sub-catchments, each represented by a flowpath between a single inflow and the outflow (Figure 6, C1) as a non-divided catchment contributing as a whole to the outflow node (Figure 6, C2). The latter case, referred to here as a conjoint catchment, may result in several paths which water actually follows. Although it may be hard to determine what part of the contributing catchment each path represents, to determine the main flowpath, or to perform linear referencing (along the main flowpath), a conjoint catchment is often easier to delineate and more convenient. Alternatively, complex hydrography can also be combined into larger catchments (Figure 12, C8) to avoid the complexity of having multiple inflows all together.
 
 ### 6.4 River reference system
 Considering any identified location on a network as the outflow node of a contributing catchment, or the inflow node of a receiving catchment, an arbitrary new location can be placed on the network in reference to the existing outfall up- or downstream. Understanding such a reference as a positioning "along a river", the linear flowpath representation of a catchment can be used for linear referencing. HY_Features defines the concept of a river reference system which has three components: 1) an origin at an inflow or outflow outfall; 2) a shape defined by the flowpath of a catchment that connects to the origin; and 3) a linear distance or relative (percentage) measurement system. Each catchment has its own reference system which can be combined as necessary using catchment topology; each river reference system must have one outfall (origin) and one representing flowpath (shape). Figure 12, and Figure 13 illustrate how a newly introduced network location can be located upstream of a catchment outflow node or downstream of a catchment inflow node.
 
-<img src="figs/inflowNode.png" width="250">  
-Figure 12: Position (yellow dot) downstream of a reference point (red dot)  
+<img src="figs/fig13.png" width="250">  
+Figure 13: Position (yellow dot) downstream of a reference point (red dot)  
 Red: inflowNode of receivingCatchment - locatedStart (origin) of riverReferenceSystem,  
 Yellow: reference point (referent) - outflowNode of the (dark highlighted) catchment
 
-<img src="figs/outflowNode.png" width="250">  
-Figure 13: Position (yellow dot) downstream of a reference point (red dot)  
+<img src="figs/fig14.png" width="250">  
+Figure 14: Position (yellow dot) downstream of a reference point (red dot)  
 Red: outflowNode of contributingCatchment - locatedStart (origin) of riverReferenceSystem,  
 Yellow: reference point (referent) – inflowNode of the (light highlighted) catchment 
 
