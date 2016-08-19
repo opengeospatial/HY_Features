@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HydrographicNetwork::HY_Water_LiquidPhase</title>
+<title>HydrographicNetwork::HY_WaterBodyStratum</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_Water_LiquidPhase", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_WaterBodyStratum", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">22/11/2012 15:13:47</td>
+			<td width="85%" class="ObjectDetailsValue">09/08/2012 14:34:28</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">19/07/2016 16:44:28</td>
+			<td class="ObjectDetailsValue">10/08/2016 16:19:49</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,20 +87,75 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{861D6478-338A-4503-9B4E-CC5440C175B4}</td>
+			<td class="ObjectDetailsValue">{A951A308-ECD3-442e-8235-C9AFEF79CCA0}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Precipitation-Runoff, temp_overallOverview</td>
+			<td class="ObjectDetailsValue">Precipitation-Runoff, surfacehydronetwork, Fig36_: Water Body Realisation, temp_overallOverview, temp_catchmentRealisation_all, <a href="../EA1/EA15.htm">Channel - WaterBody</a>, <a href="../EA1/EA11.htm">Fig34: Channel Realisation</a>, <a href="../EA1/EA13.htm">Fig34_: Channel Realisation</a>, <a href="EA23.htm">Fig36: Water Body Realisation</a>, <a href="EA25.htm">WaterBody - Channel</a>, <a href="../EA4/EA42.htm">Fig37: Reservoir Realisation</a>, <a href="../EA4/EA46.htm">Reservoir_extended</a>, <a href="../EA4/EA44.htm">Fig37_: Reservoir Realisation</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">liquid phase of water (material). </div>
+	<div class="ObjectDetailsNotes">layer of consistent characteristics of a body of water (mass of water). A stratum may be determined by differences in thermal or salinity characteristics or by oxygen or nutrient content, but also by virtual storage zones of a reservoir. </div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
 			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
 			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
 		</ul>
+<div class="ItemBody" id="AttributesTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="100%" class="TableHeading">Attribute</td>
+		</tr>
+						<tr>
+				<td width="100%" class="TableRow">
+					<i>Public ScopedName</i><br /><strong>&nbsp;&nbsp;stratumType</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes60')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes60" border="0" />Details:
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes60_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes60_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes60_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes60_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes60_03" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to *</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=1<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			term from a controlled vocabulary expressing the type of the stratum or zone. 
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>
+	</table>
+</div>
 		<div class="ItemBody" id="AssociationsToTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
@@ -110,23 +165,25 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA37.htm">«FeatureType» HY_WaterBodyStratum</a><br />
+						<a href="../EA4/EA48.htm">«FeatureType» HY_Reservoir</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
+						<strong>Name:</strong> reservoirZone<br />
+						horizontal layer in the reservoir, e.g. management zone, flood control zone
+
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> accumulatingWaterBody<br />
-						water body (stratum) wherein liquid water is accumulated.	
+						<strong>Name:</strong> &nbsp;<br />
+						
+	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink36" onclick="parent.toggleDiv('detailsDIVLink36','DetailsImageLink36')" />Details:
-							<div id="detailsDIVLink36" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">accumulation of water in a water body.</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink61" onclick="parent.toggleDiv('detailsDIVLink61','DetailsImageLink61')" />Details:
+							<div id="detailsDIVLink61" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">impounding of water in surface or underground reservoirs, for future use. This class defines the existence or formation of a vertical layer of consistent characteristics. This refers to strata&#160; identified by differences in thermal or salinity characteristics or by oxygen or nutrient content. </div>
 
 							</div>
 						</div>
@@ -144,7 +201,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA35.htm">«FeatureType» HY_Water_SolidPhase</a><br />
+						<a href="EA29.htm">«FeatureType» HY_Water_LiquidPhase</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -152,16 +209,62 @@ function nameClassifier(name, separator)
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> snowmelt<br />
-						liquid water from melting of snow. 	
+						<strong>Name:</strong> accumulatingWaterBody<br />
+						water body (stratum) wherein liquid water is accumulated.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink37" onclick="parent.toggleDiv('detailsDIVLink37','DetailsImageLink37')" />Details:
-							<div id="detailsDIVLink37" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">liquid water originating from snowmelt. </div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62" onclick="parent.toggleDiv('detailsDIVLink62','DetailsImageLink62')" />Details:
+							<div id="detailsDIVLink62" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">accumulation of water in a water body.</div>
 
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA32.htm">«FeatureType» HY_WaterBody</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> stratum<br />
+						horizontal layer in the body of water, e.g. halocline, thermocline	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink63" onclick="parent.toggleDiv('detailsDIVLink63','DetailsImageLink63')" />Details:
+							<div id="detailsDIVLink63" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA1/EA17.htm">«FeatureType» HY_Depression</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> confinedWaterBody<br />
+						water body confined by the depression.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink64" onclick="parent.toggleDiv('detailsDIVLink64','DetailsImageLink64')" />Details:
+							<div id="detailsDIVLink64" class="DetailsDiv" >
+							&nbsp;
 							</div>
 						</div>
 					</td>
