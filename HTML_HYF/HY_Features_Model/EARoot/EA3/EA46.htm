@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_HydrographicNetwork::HY_Water_SolidPhase</title>
+<title>RiverPositioningSystem::HY_RiverReferenceSystem</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_Water_SolidPhase", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_RiverReferenceSystem", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">26/11/2012 11:14:58</td>
+			<td width="85%" class="ObjectDetailsValue">04/08/2010 16:07:48</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">13/04/2016 11:26:48</td>
+			<td class="ObjectDetailsValue">18/07/2016 12:18:40</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,19 +87,19 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{AFD31810-39EC-450c-8E27-3622720CA313}</td>
+			<td class="ObjectDetailsValue">{EA0E3CF3-DF2C-407f-A0FD-ED4E2BB1A05C}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Precipitation-Runoff, <a href="../EA3.htm">overallOverview</a>, <a href="EA40.htm">Hydrographic Network</a></td>
+			<td class="ObjectDetailsValue">informative, ChannelNetwork_extended, <a href="../EA5.htm">overallOverview</a>, <a href="EA41.htm">River Positioning</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">solid form of water (chemical compound). &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This definition is concluded from the definitions of water and ice.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;(Source: water, ice. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF1353EN.HTM,&lt;/i&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0639EN.HTM)&lt;/i&gt;&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">topology-based reference system to simply assign a position &#39;along a river&#39; using its geometric representation. The origin of the river reference system is set at the location to be placed, understood as outfall of a catchment; the coordinate system axis is inherited from the generalization to CS_LinearCS. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The geometric shape is defined by the linear flowpath representing the catchment between the origin and an identified reference location upstream or downstream of the origin. The position on flowpath is provided as distance from the located start of the flowpath at origin and end at refrecne location towards the flowpath is directed. HY_RiverReferenceSystem shall support one axis.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: Each catchment has its own Reference System which can be combined as necessary using catchment topology. Each Reference System must have one outfall (origin) and one FlowPath (shape).&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
-			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
 		</ul>
 		<div class="ItemBody" id="AssociationsToTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
@@ -110,7 +110,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA48.htm">«FeatureType» HY_WaterBodyPart</a><br />
+						<a href="../EA1/EA28.htm">«FeatureType» HY_FlowPath</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -118,16 +118,16 @@ function nameClassifier(name, separator)
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> coveredWaterBody<br />
-						body of open water covered by a layer of ice or snow.
+						<strong>Name:</strong> linearElement<br />
+						flowpath representing the catchment between origin and reference location as the linear shape used in the river reference system (linear element in term sof ISO 19148)
 	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink98" onclick="parent.toggleDiv('detailsDIVLink98','DetailsImageLink98')" />Details:
-							<div id="detailsDIVLink98" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">body of water whose surface is covered by ice or snow&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;(Source: ice cover. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0644EN.HTM)&lt;/i&gt;&lt;br /&gt;&lt;/p&gt;</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink120" onclick="parent.toggleDiv('detailsDIVLink120','DetailsImageLink120')" />Details:
+							<div id="detailsDIVLink120" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">shape reflected in the river reference system.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: defined as linear representation of a catchment, the flowpath provides the shape in the river reference system (linear element in terms of ISO 19148) &lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
 						</div>
@@ -135,7 +135,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA45.htm">«FeatureType» HY_Water_LiquidPhase</a><br />
+						<a href="../EA1/EA30.htm">«FeatureType» HY_Outfall</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -143,15 +143,16 @@ function nameClassifier(name, separator)
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> snowmelt<br />
-						liquid water from melting of snow. 	
+						<strong>Name:</strong> locatedStart<br />
+						origin of the river reference system at the start of the linear flowpath, i.e. at the inflow or outflow node of the represented catchment. (located start in term sof ISO 19148)
+	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink99" onclick="parent.toggleDiv('detailsDIVLink99','DetailsImageLink99')" />Details:
-							<div id="detailsDIVLink99" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">liquid water originating from snowmelt. </div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink121" onclick="parent.toggleDiv('detailsDIVLink121','DetailsImageLink121')" />Details:
+							<div id="detailsDIVLink121" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">origin of the river reference system.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: considering each place on, or projected ont, the land surface as outfall of a corresponding catchment, the start of the representing flowpath (linear element in terms of ISO 19148) marks the origin of the river reference system.&lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
 						</div>
@@ -160,67 +161,41 @@ function nameClassifier(name, separator)
 
 			</table>
 		</div>
-<div class="ItemBody" id="TaggedValTable">
-	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
-		<tr>
-			<td width="50%" class="TableHeading">Tag</td>
-			<td width="50%" class="TableHeading">Value</td>
-		</tr>
-					<tr>
-				<td width="50%" class="TableRow" valign="top">byValuePropertyType</td>
-				<td width="50%" class="TableRow" valign="top">false</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario100" onclick="parent.toggleDiv('detailsDIVScenario100','DetailsImageScenario100')" />Details:
-						<div id="detailsDIVScenario100" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Create a property type that requires that the instance is encoded inline (applies to ISO 19136:2007 encoding rule). Always set to false in INSPIRE.<br /></div>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA44.htm">«FeatureType» HY_IndirectPosition</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> riverReferenceSystem<br />
+						linear river reference system applied. This supports to place a feature of interest using the linear flowpath representing the catchment whose outfall marks the located start of the 'drawn' flowpath.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink122" onclick="parent.toggleDiv('detailsDIVLink122','DetailsImageLink122')" />Details:
+							<div id="detailsDIVLink122" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">linear reference system used for positioning.</div>
 
+							</div>
 						</div>
-					</div>
-				</td>
-			</tr>			<tr>
-				<td width="50%" class="TableRow" valign="top">isCollection</td>
-				<td width="50%" class="TableRow" valign="top">false</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario101" onclick="parent.toggleDiv('detailsDIVScenario101','DetailsImageScenario101')" />Details:
-						<div id="detailsDIVScenario101" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Identifies the feature type as a feature collection.<br /></div>
+					</td>
+				</tr>
 
-						</div>
-					</div>
-				</td>
-			</tr>			<tr>
-				<td width="50%" class="TableRow" valign="top">noPropertyType</td>
-				<td width="50%" class="TableRow" valign="top">false</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario102" onclick="parent.toggleDiv('detailsDIVScenario102','DetailsImageScenario102')" />Details:
-						<div id="detailsDIVScenario102" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Surpress creation of a standard property type that supports inline or by-reference encoding (applies to ISO 19136:2007 encoding rule). Always set to false in INSPIRE.<br /></div>
-
-						</div>
-					</div>
-				</td>
-			</tr>			<tr>
-				<td width="50%" class="TableRow" valign="top">xsdEncodingRule</td>
-				<td width="50%" class="TableRow" valign="top">iso19136_2007</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario103" onclick="parent.toggleDiv('detailsDIVScenario103','DetailsImageScenario103')" />Details:
-						<div id="detailsDIVScenario103" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: iso19136_2007,iso19139_2007,iso19136_2007_INSPIRE_Extensions<br />Default: iso19136_2007<br />Description: XML Schema encoding rule to apply<br /></div>
-
-						</div>
-					</div>
-				</td>
-			</tr>
-	</table>
-</div>	</div>
+			</table>
+		</div>
+	</div>
 <div class="pageFooter"></div>
  
 </body>

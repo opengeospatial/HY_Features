@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_Utilities::EXT_MultilingualKeyword</title>
+<title>HydroComplex</title>
 <link href="../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("EXT_MultilingualKeyword", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HydroComplex", " : "))</script>  : Public  &lt;&lt;leaf&gt;&gt; Package</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">13/03/2010 14:49:32</td>
+			<td width="85%" class="ObjectDetailsValue">22/02/2011 17:07:12</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">29/04/2016 12:40:55</td>
+			<td class="ObjectDetailsValue">10/08/2016 07:44:51</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,120 +87,54 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{CF266C89-FD2C-41e8-A6A8-5AA1AEBCA950}</td>
+			<td class="ObjectDetailsValue">{BA04FEE3-AC79-482c-91A2-760F5C7BFA6D}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="EA3.htm">Utilities</a></td>
+			<td class="ObjectDetailsValue"></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">keyword used in an multilingual context. </div>
+	<div class="ObjectDetailsNotes">The Hydro Complex model conceptualizes the hydrosphere as a logical network of connected catchments. It denotes the hydrologic determination of the catchment by its common outlet. Conceptually, any catchment has a common outlet for its runoff, and any place to which water may flow due to physical laws associates a corresponding catchment, even if catchment and outfall may be &#8216;nillable&#8217; in a particular application. A catchment interacts with upper and lower catchments via its outlet and ultimately contributes flow to the outfall of a containing catchment. Depending on the perspective of a particular study or reporting, the logical catchment is multiple realised in typical features, and geometrically represented by various types of data and data products. Like flowpath, catchment area, and catchment boundary, the networks connecting flowpathes, areas or boundaries, and also different cartographic layers displaying the networks are typical realisations of a logical catchment, usually represented using an appropriate geometry type. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The Hydro Complex model implies a collection of hydrologic features closed under the condition of the hydrologic determination of a catchment where the union of catchment and its common outlet (conceptualised as outfall) is realised by typical hydrologic features within the same hydro(sphere) complex. This concept references the topological closure of catchment and outfall in such that a realisation of the logical catchment is always of higher topological dimension than the realisation of the corresponding outfall in terms of a topological boundary. For example, a linear flowpath realising a catchment may be understood as an edge between inflow and outflow nodes; the areal realisation of a catchment as a face bounded by linear inflow and outflow.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_Catchment and the HY_Outfall types conceptualize the hydrologic determination of the catchment by defining an outfall in the role of an outflow of a contributing catchment, or inflow to a receiving catchment (Figure 20) . Understanding the catchment as the logical link between inflow and outflow, an hierarchical network of catchments (Figure 21) is implied that ultimately links inflow and outflow of the catchment containing this network catchments. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
-			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
 		</ul>
-<div class="ItemBody" id="AttributesTable">
-	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+<div class="ItemBody" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
 		<tr>
-			<td width="100%" class="TableHeading">Attribute</td>
+			<td width="50%" class="TableHeading">Tag</td>
+			<td width="50%" class="TableHeading">Value</td>
 		</tr>
-						<tr>
-				<td width="100%" class="TableRow">
-					<i>Public <a href="EA7.htm">EXT_LocalisedCharacterString</a></i><br /><strong>&nbsp;&nbsp;keyword</strong>
-				</td>
-			</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">xsdDocument</td>
+				<td width="50%" class="TableRow" valign="top">hy_catchment.xsd</td>
+			</tr>	
 			<tr>
-				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes14')" style="text-decoration: none; color: #000000;"></BR><img src="../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes14" border="0" />Details:
-					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
-					
-						<tr id="DetailsImageAttributes14_00" style="display: none;">
-							<td width="75"><i>Alias:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes14_01" style="display: none;">
-							<td width="75"><i>Initial:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes14_02" style="display: none;">
-							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes14_03" style="display: none;">
-							<td width="75"><i>Ordered: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes14_03" style="display: none;">
-							<td width="75"><i>Range: </i></td>
-							<td></td>
-						</tr>
-					</table>
-					
-					sequenceNumber=1<br>
-						<div class="ObjectDetailsNotes"><table>
-	<tr>
-		<td valign="top">
-			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
-		</td>
-		<td>
-			significant word, phrase or name commonly or conventionally used describing an agreed meaning.
-		</td>
-	</tr>
-</table></div>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario0" onclick="parent.toggleDiv('detailsDIVScenario0','DetailsImageScenario0')" />Details:
+						<div id="detailsDIVScenario0" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Default: FIXME<br />Description: Name of an XML Schema document to create representing the content of this package<br /></div>
 
-						
+						</div>
+					</div>
 				</td>
 			</tr>			<tr>
-				<td width="100%" class="TableRow">
-					<i>Public <a href="EA6.htm">EXT_KeywordRole</a></i><br /><strong>&nbsp;&nbsp;type</strong>
-				</td>
-			</tr>
+				<td width="50%" class="TableRow" valign="top">xsdEncodingRule</td>
+				<td width="50%" class="TableRow" valign="top">iso19136_2007</td>
+			</tr>	
 			<tr>
-				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes15')" style="text-decoration: none; color: #000000;"></BR><img src="../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes15" border="0" />Details:
-					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
-					
-						<tr id="DetailsImageAttributes15_00" style="display: none;">
-							<td width="75"><i>Alias:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes15_01" style="display: none;">
-							<td width="75"><i>Initial:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes15_02" style="display: none;">
-							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes15_03" style="display: none;">
-							<td width="75"><i>Ordered: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes15_03" style="display: none;">
-							<td width="75"><i>Range: </i></td>
-							<td></td>
-						</tr>
-					</table>
-					
-					sequenceNumber=2<br>
-						<div class="ObjectDetailsNotes"><table>
-	<tr>
-		<td valign="top">
-			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
-		</td>
-		<td>
-			role of the keyword.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: This is a domain specific context, so not using the (broken) ISO 19115 keyword list, but choosing an empty container that can be appropriately populated with relevant terms in an extension model.&lt;br /&gt;&lt;/p&gt;
-		</td>
-	</tr>
-</table></div>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario1" onclick="parent.toggleDiv('detailsDIVScenario1','DetailsImageScenario1')" />Details:
+						<div id="detailsDIVScenario1" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: iso19136_2007 | iso19139_2007 | iso19136_2007_INSPIRE_Extensions<br />Default: iso19136_2007<br />Description: XML Schema encoding rule to apply<br /></div>
 
-						
+						</div>
+					</div>
 				</td>
 			</tr>
 	</table>
-</div>
-	</div>
+</div>	</div>
 <div class="pageFooter"></div>
  
 </body>

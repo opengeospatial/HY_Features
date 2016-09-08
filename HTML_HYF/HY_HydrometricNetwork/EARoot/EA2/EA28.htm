@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">10/08/2016 16:19:49</td>
+			<td class="ObjectDetailsValue">08/09/2016 09:08:10</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Network represents DendriticCatchment, Precipitation-Runoff, catchmentnetwork, ChannelNetwork_extended, surfacehydronetwork, Fig35_: Hydrographic Network Realisation, Fig36_: Water Body Realisation, temp_overallOverview, temp_catchmentRealisation_all, Fig17: Hydro Feature Special, <a href="../EA1/EA11.htm">Channel - WaterBody</a>, <a href="EA17.htm">Fig35: Hydrographic Network Realisation</a>, <a href="EA19.htm">Fig36: Water Body Realisation</a>, <a href="EA21.htm">WaterBody - Channel</a>, <a href="../EA4/EA38.htm">Fig37: Reservoir Realisation</a>, <a href="../EA4/EA40.htm">Reservoir_extended</a>, Fig37_: Reservoir Realisation</td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, Precipitation-Runoff, catchmentnetwork, ChannelNetwork_extended, surfacehydronetwork, Fig35_: Hydrographic Network Realisation, Fig36_: Water Body Realisation, Fig37_: Reservoir Realisation, temp_overallOverview, temp_catchmentRealization_all, Fig18: Hydro Feature Special, <a href="../EA1/EA11.htm">Channel - WaterBody</a>, <a href="EA17.htm">Fig36: Hydrographic Network Realization</a>, <a href="EA19.htm">Fig37: Water Body Realization</a>, <a href="EA21.htm">WaterBody - Channel</a>, <a href="../EA4/EA38.htm">Fig38: Reservoir Realization</a>, <a href="../EA4/EA40.htm">Reservoir_extended</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">mass of&#160; (liquid) water, distinct from other masses of water, that is accumulated in streams on the land surface, incl.&#160; subterranean streams passing through large interstices such as cave or cavern. </div>
+	<div class="ObjectDetailsNotes">mass of&#160; (liquid) water, distinct from other masses of water that is accumulated in streams on the land surface, including&#160; subterranean streams passing through large interstices such as cave or cavern. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_WaterBody feature type specializes the general HY_HydroFeature class. The water body as part of the hydrographic network, either standing in a water pool, or flowing as stream in a watercourse, which are parts of the channel network. A water body may be segmented in vertical sections at right angles to the main (average) direction of flow or along its centerline, and horizontal strata. Conceptually, each water body, or a stratum, is understood as a reservoir used for storage, regulation or control of water recourses. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -121,7 +121,7 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> downstreamWaterBody<br />
-						water body immediately downstream
+						water body immediately downstream.
 	
 					</td>
 				</tr>
@@ -146,14 +146,15 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> stratum<br />
-						horizontal layer in the body of water, e.g. halocline, thermocline	
+						horizontal layer in the body of water, e.g. halocline, thermocline.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink48" onclick="parent.toggleDiv('detailsDIVLink48','DetailsImageLink48')" />Details:
 							<div id="detailsDIVLink48" class="DetailsDiv" >
-							&nbsp;
+							<div class="ObjectDetailsNotes">stratified water body.</div>
+
 							</div>
 						</div>
 					</td>
@@ -238,11 +239,11 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> standingWater<br />
-						body of generally stagnant water
+						body of generally stagnant water.
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> waterpool<br />
-						natural or man-made depression in a channelbed or flood plain wherein water stands, incl. large interstices in the ground, such as cave, cavern or a group of these. 
+						natural or man-made depression in a channelbed or flood plain wherein water stands, incuding large interstices in the ground, such as cave, cavern or a group of these. 
 	
 					</td>
 				</tr>
@@ -250,7 +251,8 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink52" onclick="parent.toggleDiv('detailsDIVLink52','DetailsImageLink52')" />Details:
 							<div id="detailsDIVLink52" class="DetailsDiv" >
-							&nbsp;
+							<div class="ObjectDetailsNotes">standing water.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This definition is rooted in the definition given in the WMO Glossary of hydrology which includes a body of stagnant water in a pool including large interstices in the ground, such as cave, cavern or a group of these. For the purpose of testing the applicability of the conceptual model in the context of surface water hydrology, the definition of &#39;stream&#39; in this standard refers to water flowing in a surface channel or passing through large interstices, such as a cave, cavern or a group of these. &lt;br /&gt;&lt;/p&gt;</div>
+
 							</div>
 						</div>
 					</td>
@@ -272,7 +274,7 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> storage<br />
-						storage characteristics of the water body participating in the hydrographic network 
+						storage characteristics of the reservoir. 
 
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -284,34 +286,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink53" onclick="parent.toggleDiv('detailsDIVLink53','DetailsImageLink53')" />Details:
 							<div id="detailsDIVLink53" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA1/EA14.htm">«FeatureType» HY_Channel</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> watercourse<br />
-						natural or man-made channel through or along which water may flow, incl. large interstices in the ground, such as cave, cavern or a group of these. 
-
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> stream<br />
-						body of water, generally flowing in a natural surface channel, incl. subterranean streams.
-
-Note: This definition is rooted in the definition given in the WMO Glossary of hydrology which includes water flowing in an open or closed conduit, a jet of water issuing from an orifice, or a body of flowing groundwater. For the purpose of testing the applicability of the conceptual model in the context of surface water hydrology, the definition of 'stream' in this standard refers to water flowing in a surface channel or passing through large interstices, such as a cave, cavern or a group of these. 
-	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink54" onclick="parent.toggleDiv('detailsDIVLink54','DetailsImageLink54')" />Details:
-							<div id="detailsDIVLink54" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">water body flowing through or along the channel.</div>
+							<div class="ObjectDetailsNotes">impounding of water in surface or underground reservoirs, for future use. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
 						</div>
@@ -334,8 +309,8 @@ Note: This definition is rooted in the definition given in the WMO Glossary of h
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink55" onclick="parent.toggleDiv('detailsDIVLink55','DetailsImageLink55')" />Details:
-							<div id="detailsDIVLink55" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink54" onclick="parent.toggleDiv('detailsDIVLink54','DetailsImageLink54')" />Details:
+							<div id="detailsDIVLink54" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">body of water whose surface is covered by ice or snow&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;(Source: ice cover. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0644EN.HTM)&lt;/i&gt;&lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
@@ -353,7 +328,34 @@ Note: This definition is rooted in the definition given in the WMO Glossary of h
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> downstreamWaterBody<br />
-						water body immediately downstream
+						water body immediately downstream.
+	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink55" onclick="parent.toggleDiv('detailsDIVLink55','DetailsImageLink55')" />Details:
+							<div id="detailsDIVLink55" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">simple upstream/downstream relation between two water body segments.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA1/EA14.htm">«FeatureType» HY_Channel</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> watercourse<br />
+						natural or man-made channel through or along which water may flow, incl. large interstices in the ground, such as cave, cavern or a group of these. 
+
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> stream<br />
+						body of water, generally flowing in a natural surface channel, incl. subterranean streams.
+
 	
 					</td>
 				</tr>
@@ -361,7 +363,7 @@ Note: This definition is rooted in the definition given in the WMO Glossary of h
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink56" onclick="parent.toggleDiv('detailsDIVLink56','DetailsImageLink56')" />Details:
 							<div id="detailsDIVLink56" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">simple upstream/downstream relation between two water body segments.</div>
+							<div class="ObjectDetailsNotes">water body flowing through or along the channel.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This definition is rooted in the definition given in the WMO Glossary of hydrology which includes water flowing in an open or closed conduit, a jet of water issuing from an orifice, or a body of flowing groundwater. For the purpose of testing the applicability of the conceptual model in the context of surface water hydrology, the definition of &#39;stream&#39; in this standard refers to water flowing in a surface channel or passing through large interstices, such as a cave, cavern or a group of these. &lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
 						</div>
@@ -378,7 +380,7 @@ Note: This definition is rooted in the definition given in the WMO Glossary of h
 					<td width="10%" class="TableHeading">Status</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">stratum edge</td>
+					<td width="80%" class="TableRow">stratum-edge</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
@@ -393,7 +395,7 @@ Note: This definition is rooted in the definition given in the WMO Glossary of h
 					</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">outflow at landmark</td>
+					<td width="80%" class="TableRow">outflow-at-landmark</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
@@ -401,14 +403,14 @@ Note: This definition is rooted in the definition given in the WMO Glossary of h
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints58" onclick="parent.toggleDiv('detailsDIVConstraints58','DetailsImageConstraints58')" />Details:
 							<div id="detailsDIVConstraints58" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">EXISTS fixedLandmark.realisedOutfall, hydrographicNetwork.realisedCatchment.outflow&#160; is of type HY_OutfallRealisation</div>
+							<div class="ObjectDetailsNotes">EXISTS fixedLandmark.realizedOutfall, hydrographicNetwork.realizedCatchment.outflow&#160; is of type HY_OutfallRealization</div>
 
 							</div>
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">outflow at section</td>
+					<td width="80%" class="TableRow">outflow-at-section</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
@@ -416,7 +418,7 @@ Note: This definition is rooted in the definition given in the WMO Glossary of h
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints59" onclick="parent.toggleDiv('detailsDIVConstraints59','DetailsImageConstraints59')" />Details:
 							<div id="detailsDIVConstraints59" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">EXISTS&lt;br /&gt;&lt;/p&gt;&lt;p&gt;streamCrossSection.crossSectionPoint.realisedOutfall, OR&lt;br /&gt;&lt;/p&gt;&lt;p&gt;streamLongitudinalSection.longitudinalSectionPoint.realisedOutfall , hydrographicNetwork.realisedCatchment.outflow&#160; is of type HY_OutfallRealisation&lt;br /&gt;&lt;/p&gt;</div>
+							<div class="ObjectDetailsNotes">EXISTS&lt;br /&gt;&lt;/p&gt;&lt;p&gt;streamCrossSection.crossSectionPoint.realizedOutfall, OR&lt;br /&gt;&lt;/p&gt;&lt;p&gt;streamLongitudinalSection.longitudinalSectionPoint.realizedOutfall , hydrographicNetwork.realizedCatchment.outflow&#160; is of type HY_OutfallRealization&lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
 						</div>

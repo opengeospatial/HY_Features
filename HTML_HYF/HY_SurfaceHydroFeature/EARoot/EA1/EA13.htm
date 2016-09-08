@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">10/08/2016 16:08:15</td>
+			<td class="ObjectDetailsValue">08/09/2016 09:13:26</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">surfacehydronetwork, temp_overallOverview, temp_catchmentRealisation_all, Fig17: Hydro Feature Special, <a href="EA7.htm">Fig33: Channel Network Realisation</a>, <a href="EA11.htm">Channel - WaterBody</a>, <a href="EA9.htm">Fig34: Channel Realisation</a>, Fig33_: Channel Network Realisation, Fig34_: Channel Realisation, <a href="../EA2/EA21.htm">WaterBody - Channel</a></td>
+			<td class="ObjectDetailsValue">surfacehydronetwork, Fig33_: Channel Network Realisation, Fig34_: Channel Realisation, temp_overallOverview, temp_catchmentRealization_all, Fig18: Hydro Feature Special, <a href="EA7.htm">Fig34: Channel Network Realization</a>, <a href="EA11.htm">Channel - WaterBody</a>, <a href="EA9.htm">Fig35: Channel Realization</a>, <a href="../EA2/EA21.htm">WaterBody - Channel</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">landform lower than the surrounding land, containing water, or not.</div>
+	<div class="ObjectDetailsNotes">landform lower than the surrounding land, containing water, or not.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_Depression feature type specializes the general HY_HydroFeature class. It describes land lower than the surrounding land as container for standing water. A depression is part of the network of channels and depressions forming the connecting system for the wherein water bodies stand as parts of hydrographic network. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -121,14 +121,15 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> confinedWaterBody<br />
-						water body confined by the depression.	
+						water body (stratum) confined by the depression.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink8" onclick="parent.toggleDiv('detailsDIVLink8','DetailsImageLink8')" />Details:
 							<div id="detailsDIVLink8" class="DetailsDiv" >
-							&nbsp;
+							<div class="ObjectDetailsNotes">water body contained in the depression.</div>
+
 							</div>
 						</div>
 					</td>
@@ -140,11 +141,11 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> surfaceDepression<br />
-						depression aggregeated in the channel network. 
+						depression aggregated in the channel network. 
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> surfaceNetwork<br />
-						channel network the depression is part of	
+						channel network the depression is part of.	
 					</td>
 				</tr>
 				<tr>
@@ -173,11 +174,11 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> standingWater<br />
-						body of generally stagnant water
+						body of generally stagnant water.
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> waterpool<br />
-						natural or man-made depression in a channelbed or flood plain wherein water stands, incl. large interstices in the ground, such as cave, cavern or a group of these. 
+						natural or man-made depression in a channelbed or flood plain wherein water stands, incuding large interstices in the ground, such as cave, cavern or a group of these. 
 	
 					</td>
 				</tr>
@@ -185,7 +186,8 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10" onclick="parent.toggleDiv('detailsDIVLink10','DetailsImageLink10')" />Details:
 							<div id="detailsDIVLink10" class="DetailsDiv" >
-							&nbsp;
+							<div class="ObjectDetailsNotes">standing water.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This definition is rooted in the definition given in the WMO Glossary of hydrology which includes a body of stagnant water in a pool including large interstices in the ground, such as cave, cavern or a group of these. For the purpose of testing the applicability of the conceptual model in the context of surface water hydrology, the definition of &#39;stream&#39; in this standard refers to water flowing in a surface channel or passing through large interstices, such as a cave, cavern or a group of these. &lt;br /&gt;&lt;/p&gt;</div>
+
 							</div>
 						</div>
 					</td>
@@ -201,7 +203,7 @@ function nameClassifier(name, separator)
 					<td width="10%" class="TableHeading">Status</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">depression edge</td>
+					<td width="80%" class="TableRow">depression-edge</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
@@ -216,7 +218,7 @@ function nameClassifier(name, separator)
 					</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">outflow at benchmark</td>
+					<td width="80%" class="TableRow">outflow-at-benchmark</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
@@ -224,7 +226,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints12" onclick="parent.toggleDiv('detailsDIVConstraints12','DetailsImageConstraints12')" />Details:
 							<div id="detailsDIVConstraints12" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">EXISTS confinedWaterBody.benchmark.realisedOutfall, surfaceNetwork.realisedCatchment.outflow is of type HY_OutfallRealisation</div>
+							<div class="ObjectDetailsNotes">EXISTS confinedWaterBody.benchmark.realizedOutfall, surfaceNetwork.realizedCatchment.outflow is of type HY_OutfallRealization</div>
 
 							</div>
 						</div>

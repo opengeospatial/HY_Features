@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">10/08/2016 16:04:57</td>
+			<td class="ObjectDetailsValue">08/09/2016 09:13:43</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Network represents DendriticCatchment, Context Diagram : HY_TopographicNetwork, surfacehydronetwork, temp_overallOverview, temp_catchmentRealisation_all, <a href="EA7.htm">Fig33: Channel Network Realisation</a>, Fig33_: Channel Network Realisation</td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, Context Diagram : HY_TopographicNetwork, surfacehydronetwork, Fig33_: Channel Network Realisation, temp_overallOverview, temp_catchmentRealization_all, <a href="EA7.htm">Fig34: Channel Network Realization</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">catchment realisation, specifically as network of depressions and channels which continuously or periodically contain water. If the realised catchment is connected with other catchments via outfall, the depressions and channels are also connected.</div>
+	<div class="ObjectDetailsNotes">catchment realization, specifically as network of depressions and channels which continuously or periodically contain water.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_ChannelNetwork feature type specializes the HY_HydroNetwork realization defined in the core model, specifically as an aggregate of surface depressions and surface channels which continuously or periodically contain water, without imposing a particular drainage pattern. This allows to represent the network, even if logically connected features may or may not be connected at the representation level. If the realized catchment is connected with other catchments via outfall, the channel network is considered connected to the channel network realizing these catchments. If required, an application focused on the structures containing a water body may use the defined relationships s to describe the realization of a catchment by the channel network, or network parts associated with the hydrographic network.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -156,6 +156,29 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
+						<a href="EA13.htm">«FeatureType» HY_Depression</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> surfaceDepression<br />
+						depression aggregated in the channel network. 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> surfaceNetwork<br />
+						channel network the depression is part of.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink19" onclick="parent.toggleDiv('detailsDIVLink19','DetailsImageLink19')" />Details:
+							<div id="detailsDIVLink19" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
 						<a href="EA14.htm">«FeatureType» HY_Channel</a><br />
 						Class &nbsp;
 					</td>
@@ -170,33 +193,10 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink19" onclick="parent.toggleDiv('detailsDIVLink19','DetailsImageLink19')" />Details:
-							<div id="detailsDIVLink19" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">network of one or more channels.</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA13.htm">«FeatureType» HY_Depression</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> surfaceDepression<br />
-						depression aggregeated in the channel network. 
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> surfaceNetwork<br />
-						channel network the depression is part of	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink20" onclick="parent.toggleDiv('detailsDIVLink20','DetailsImageLink20')" />Details:
 							<div id="detailsDIVLink20" class="DetailsDiv" >
-							&nbsp;
+							<div class="ObjectDetailsNotes">network of one or more channels.</div>
+
 							</div>
 						</div>
 					</td>
@@ -212,7 +212,7 @@ function nameClassifier(name, separator)
 					<td width="10%" class="TableHeading">Status</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">channel path</td>
+					<td width="80%" class="TableRow">channel-path</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
@@ -227,7 +227,7 @@ function nameClassifier(name, separator)
 					</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">channel edge</td>
+					<td width="80%" class="TableRow">channel-edge</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
@@ -253,16 +253,16 @@ function nameClassifier(name, separator)
 					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA14.htm">«FeatureType» HY_Channel</a></td>
-					<td width="15%" class="TableRow" valign="top">Class</td>
-					<td width="15%" class="TableRow" valign="top">Weak</td>
-					<td width="40%" class="TableRow" valign="top">network of one or more channels.</td>
-				</tr>
-				<tr>
 					<td width="30%" class="TableRow" valign="top"><a href="EA13.htm">«FeatureType» HY_Depression</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Weak</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA14.htm">«FeatureType» HY_Channel</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Weak</td>
+					<td width="40%" class="TableRow" valign="top">network of one or more channels.</td>
 				</tr>
 
 			</table>
