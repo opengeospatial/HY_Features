@@ -1,0 +1,10 @@
+tocTab[tocTab.length] = new Array("0:1", "", "hyf107", "EARoot/EA1.htm", "175.png", "4135", "0", "", "Logical diagram0","{9E4D293F-A89B-4b79-BDCE-03E13F62577A}");
+tocTab[tocTab.length] = new Array("0:2", "", "informative", "EARoot/EA3.htm", "175.png", "4222", "0", "", "Logical diagram0","{F685B96C-5C93-4001-8349-C2F7BC442304}");
+tocTab[tocTab.length] = new Array("0:3", "", "HydrometricFeature-DendriticCatchment", "EARoot/EA5.htm", "175.png", "3640", "0", "", "Logical diagram0","{45B6F2CD-C64B-4429-BA42-939006E4E759}");
+tocTab[tocTab.length] = new Array("0:4", "", "Catchment hierarchy", "EARoot/EA7.htm", "175.png", "3642", "0", "", "Logical diagram0","{A567590B-BF8C-41e0-8F20-79A05A93AF67}");
+tocTab[tocTab.length] = new Array("0:5", "", "Flowpath represents DendriticCatchment", "EARoot/EA9.htm", "175.png", "3641", "0", "", "Logical diagram0","{FEE2D7A8-AF13-442a-A996-65A31E2ECDFA}");
+tocTab[tocTab.length] = new Array("0:6", "", "Network represents DendriticCatchment", "EARoot/EA11.htm", "175.png", "3643", "0", "", "Logical diagram0","{CE77E4A1-E8F8-4a57-91CA-8D0F1EC75445}");
+tocTab[tocTab.length] = new Array("0:7", "", "Precipitation-Runoff", "EARoot/EA13.htm", "175.png", "3644", "0", "", "Logical diagram0","{AC6EC439-A392-4095-B734-C3122B101BDD}");
+tocTab[tocTab.length] = new Array("0:8", "", "«FeatureType» HY_Glacier", "EARoot/EA21.htm", "5.png", "9387", "0", "", "Class0","{09128B25-1E8F-43fb-A0F8-BFAFAED58CF1}");
+tocTab[tocTab.length] = new Array("0.1", "", "«stub» HY_AtmosphericHydroFeature", "EARoot/EA19.htm", "4.png", "", "", "{4C70824F-751B-4255-961D-04ECE007D027}", "Package");
+tocTab[tocTab.length] = new Array("0.2", "", "«stub» HY_SubsurfaceHydroFeature", "EARoot/EA20.htm", "4.png", "", "", "{DD55A1E2-BE69-4819-8820-85916714A0C0}", "Package");

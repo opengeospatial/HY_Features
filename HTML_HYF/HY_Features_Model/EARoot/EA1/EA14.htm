@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_SurfaceWater::HY_River</title>
+<title>ChannelNetwork::HY_Channel</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_River", " : "))</script> HY_Stream : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_Channel", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">05/11/2008 16:31:13</td>
+			<td width="85%" class="ObjectDetailsValue">04/05/2010 16:18:22</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">21/04/2016 11:20:38</td>
+			<td class="ObjectDetailsValue">10/08/2016 16:08:15</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -51,7 +51,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
-			<td class="ObjectDetailsValue">dornblut</td>
+			<td class="ObjectDetailsValue"></td>
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
@@ -87,15 +87,182 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{BA444B9E-6E65-406b-B959-268DA67400F1}</td>
+			<td class="ObjectDetailsValue">{68C40568-F042-4b27-8E75-FCC7A7D4B74F}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Hydro Feature Special, <a href="../EA3.htm">SurfaceHydroFeature</a>, <a href="EA7.htm">SurfaceWaterBodies</a></td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, TopographicRealisation_??, ChannelNetwork_extended, surfacehydronetwork, temp_overallOverview, temp_catchmentRealisation_all, Fig17: Hydro Feature Special, <a href="EA7.htm">Fig33: Channel Network Realisation</a>, <a href="EA11.htm">Channel - WaterBody</a>, <a href="EA9.htm">Fig34: Channel Realisation</a>, Fig33_: Channel Network Realisation, Fig34_: Channel Realisation, <a href="../EA2/EA21.htm">WaterBody - Channel</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">large stream which serves as the natural drainage channel for a drainage basin. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;(Source:&#160; river. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF1014EN.HTM)&lt;/i&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;/i&gt;This class defines the existence of the body of water, as a participant in a hydrographic network. This body of water is special due to its property to permanently or temporarily flow.&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">watercourse, clearly distinguished, which periodically or continuously contains moving water, or which forms a connecting link between two bodies of water. </div>
 
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
+			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsToTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA15.htm">«FeatureType» HY_ChannelNetwork</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> surfaceChannel<br />
+						channel aggregeated in the channel network. 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> channelNetwork<br />
+						channel network the channel is part of.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink13" onclick="parent.toggleDiv('detailsDIVLink13','DetailsImageLink13')" />Details:
+							<div id="detailsDIVLink13" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">network of one or more channels.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA2/EA28.htm">«FeatureType» HY_WaterBody</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> watercourse<br />
+						natural or man-made channel through or along which water may flow, incl. large interstices in the ground, such as cave, cavern or a group of these. 
+
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> stream<br />
+						body of water, generally flowing in a natural surface channel, incl. subterranean streams.
+
+Note: This definition is rooted in the definition given in the WMO Glossary of hydrology which includes water flowing in an open or closed conduit, a jet of water issuing from an orifice, or a body of flowing groundwater. For the purpose of testing the applicability of the conceptual model in the context of surface water hydrology, the definition of 'stream' in this standard refers to water flowing in a surface channel or passing through large interstices, such as a cave, cavern or a group of these. 
+	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink14" onclick="parent.toggleDiv('detailsDIVLink14','DetailsImageLink14')" />Details:
+							<div id="detailsDIVLink14" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">water body flowing through or along the channel.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA2/EA24.htm">«FeatureType» HY_LongitudinalSection</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> bedProfileLongitudinal<br />
+						longitudinal shape of a channel in a vertical plane.
+	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink15" onclick="parent.toggleDiv('detailsDIVLink15','DetailsImageLink15')" />Details:
+							<div id="detailsDIVLink15" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">vertical section of the channel segment in longitudinal direction.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA2/EA23.htm">«FeatureType» HY_CrossSection</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> bedProfileTransversal<br />
+						transversal shape of a channel in a vertical plane.
+	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink16" onclick="parent.toggleDiv('detailsDIVLink16','DetailsImageLink16')" />Details:
+							<div id="detailsDIVLink16" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">vertical section of the channel segment in transversal direction.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ConstraintsTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+			  	<tr>
+					<td width="80%" class="TableHeading">Constraint</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Status</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">outflow at profle</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints17" onclick="parent.toggleDiv('detailsDIVConstraints17','DetailsImageConstraints17')" />Details:
+							<div id="detailsDIVConstraints17" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">EXISTS bedprofileTransversal.crossSectionPoint.realisedOutfall, OR bedprofileLongitudinal.longitudinalSectionPoint.realisedOutfall , OR&lt;br /&gt;&lt;/p&gt;&lt;p&gt;channelNetwork.realisedCatchment.outflow is of type HY_OutfallRealisation&lt;br /&gt;&lt;/p&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA15.htm">«FeatureType» HY_ChannelNetwork</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Weak</td>
+					<td width="40%" class="TableRow" valign="top">network of one or more channels.</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA13.htm">«FeatureType» HY_Depression</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
 <div class="pageFooter"></div>
  
 </body>

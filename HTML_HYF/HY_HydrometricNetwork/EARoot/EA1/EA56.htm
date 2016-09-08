@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HydroComplex::HY_InteriorCatchment</title>
+<title>HydroComplex::HY_WaterEdge</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_InteriorCatchment", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_WaterEdge", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">07/03/2016 09:33:18</td>
+			<td width="85%" class="ObjectDetailsValue">27/07/2016 14:27:27</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">10/08/2016 16:02:37</td>
+			<td class="ObjectDetailsValue">08/09/2016 08:58:43</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,21 +87,67 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{E19DBC78-21C6-46af-A474-647E243FD1DA}</td>
+			<td class="ObjectDetailsValue">{5A17B5A9-79B3-49c3-BD09-7CCCB7F459D7}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">hyf107, allClass Diagram, Fig20_: Catchment, Fig25_: CatchmentAggregate, Fig27_: InteriorCatchment, <a href="../EA3.htm">temp_overallOverview</a>, <a href="../EA7.htm">Fig17: Hydro Feature Special</a>, <a href="EA19.htm">Catchment Hierarchy</a>, <a href="EA15.htm">Fig20: Catchment</a>, <a href="EA27.htm">Fig25: CatchmentAggregate</a>, <a href="EA31.htm">Fig27: InteriorCatchment</a></td>
+			<td class="ObjectDetailsValue">Fig29_: Catchment Realisation, Fig35_: Hydrographic Network Realisation, Fig33_: Channel Network Realisation, <a href="../EA3.htm">temp_overallOverview</a>, <a href="../EA5.htm">temp_catchmentRealization_all</a>, <a href="EA31.htm">Fig30: Catchment Realization</a>, <a href="EA41.htm">FlowPath-WaterEdge</a>, Fig34: Channel Network Realization, Fig36: Hydrographic Network Realization</td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">special catchment wherein all waters are collected endorheic, and not connected to other catchments. It may be surrounded by enveloping catchments to which it may contribute depending on the flow conditions. </div>
+	<div class="ObjectDetailsNotes">feature realization of an &#39;un-realized&#39; catchment specifically as path connecting the inflow and outflow of the logical catchment it realizes.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_WaterEdge feature type specializes HY_CatchmentRealisation with respect to an implied linear geometric representation including a closed line. Hydrologically, the water edge follows the line of intersection between a water body stratum and the confining depression, or channel. Topologically, the water edge realizes the catchment as an edge connecting inflow and outflow realized as nodes fixed at the inflow node and outflow node of the corresponding flowpath. The &#39;boundary&#39; of type HY_OutfallRealisation is described by means of &#39;tagged values&#39;.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
 			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
-			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
 			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
+<div class="ItemBody" id="AttributesTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="100%" class="TableHeading">Attribute</td>
+		</tr>
+						<tr>
+				<td width="100%" class="TableRow">
+					<i>Public GM_MultiCurve</i><br /><strong>&nbsp;&nbsp;shape</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes98')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes98" border="0" />Details:
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes98_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes98_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes98_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes98_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes98_03" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to *</td>
+						</tr>
+					</table>
+					
+					
+						&nbsp;
+						
+				</td>
+			</tr>
+	</table>
+</div>
 		<div class="ItemBody" id="AssociationsToTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
@@ -111,23 +157,26 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA50.htm">«FeatureType» HY_CatchmentAggregate</a><br />
+						<a href="EA56.htm">«FeatureType» HY_WaterEdge</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> endorheicDrainage<br />
-						water ultimately drained to an internal sink (blind drainage).
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> envelopingCatchment<br />
-						catchment enveloping one or more endorheic drained sub-catchments.	
+						<strong>Name:</strong> correspondingWaterEdge<br />
+						corresponding water edge having ends fixed at the inflow node and the outflow node of the related water edge. 'snapping' the both inflow nodes into one node on  and both outflow nodes into one node, the representing curves may be closed. 
+
+	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink56" onclick="parent.toggleDiv('detailsDIVLink56','DetailsImageLink56')" />Details:
-							<div id="detailsDIVLink56" class="DetailsDiv" >
-							&nbsp;
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink99" onclick="parent.toggleDiv('detailsDIVLink99','DetailsImageLink99')" />Details:
+							<div id="detailsDIVLink99" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">another water edge related to the water edge realizing the catchment.</div>
+
 							</div>
 						</div>
 					</td>
@@ -135,23 +184,60 @@ function nameClassifier(name, separator)
 
 			</table>
 		</div>
-		<div class="ItemBody" id="ConstraintsTable">
+		<div class="ItemBody" id="AssociationsFromTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
-			  	<tr>
-					<td width="80%" class="TableHeading">Constraint</td>
-					<td width="10%" class="TableHeading">Type</td>
-					<td width="10%" class="TableHeading">Status</td>
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">outflow:0</td>
-					<td width="10%" class="TableRow">Invariant</td>
-					<td width="10%" class="TableRow">Approved</td>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA56.htm">«FeatureType» HY_WaterEdge</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> correspondingWaterEdge<br />
+						corresponding water edge having ends fixed at the inflow node and the outflow node of the related water edge. 'snapping' the both inflow nodes into one node on  and both outflow nodes into one node, the representing curves may be closed. 
+
+	
+					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints57" onclick="parent.toggleDiv('detailsDIVConstraints57','DetailsImageConstraints57')" />Details:
-							<div id="detailsDIVConstraints57" class="DetailsDiv" >
-							&nbsp;
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink100" onclick="parent.toggleDiv('detailsDIVLink100','DetailsImageLink100')" />Details:
+							<div id="detailsDIVLink100" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">another water edge related to the water edge realizing the catchment.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA51.htm">«FeatureType» HY_HydroNetwork</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> wateredgeNetwork<br />
+						aggregate of water edges forming a connected network. 
+
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> waterEdge<br />
+						path following the line of intersection of a (horizontal) water body stratum and a f the confiing depression, or channel, 	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink101" onclick="parent.toggleDiv('detailsDIVLink101','DetailsImageLink101')" />Details:
+							<div id="detailsDIVLink101" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">aggregate of water edges.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This concept requires an aggregate of&#160; non-overlaying edges, and a single linear representation of each of these.&lt;br /&gt;&lt;/p&gt;</div>
+
 							</div>
 						</div>
 					</td>
@@ -159,7 +245,53 @@ function nameClassifier(name, separator)
 
 			</table>
 		</div>
-		<div class="ItemBody" id="LinksTable">
+<div class="ItemBody" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="50%" class="TableHeading">Tag</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">boundary</td>
+				<td width="50%" class="TableRow" valign="top">HY_OutfallRealization</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario102" onclick="parent.toggleDiv('detailsDIVScenario102','DetailsImageScenario102')" />Details:
+						<div id="detailsDIVScenario102" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">inflowNode</td>
+				<td width="50%" class="TableRow" valign="top">boundary</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario103" onclick="parent.toggleDiv('detailsDIVScenario103','DetailsImageScenario103')" />Details:
+						<div id="detailsDIVScenario103" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">inflow node on contour line realising the catchment = realisedCatchment.inflow.outfallRealisation </div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">outflowNode</td>
+				<td width="50%" class="TableRow" valign="top">boundary</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario104" onclick="parent.toggleDiv('detailsDIVScenario104','DetailsImageScenario104')" />Details:
+						<div id="detailsDIVScenario104" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">outflow node on contour line realising the catchment = realisedCatchment.outflow.outfallRealisation </div>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>		<div class="ItemBody" id="LinksTable">
 			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
 					<td width="30%" class="TableHeading">Object</td>
@@ -168,15 +300,9 @@ function nameClassifier(name, separator)
 					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA48.htm">«FeatureType» HY_Catchment</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA48.htm">«FeatureType» HY_CatchmentRealization</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
-					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
-				</tr>
-				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA50.htm">«FeatureType» HY_CatchmentAggregate</a></td>
-					<td width="15%" class="TableRow" valign="top">Class</td>
-					<td width="15%" class="TableRow" valign="top">Weak</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
 				</tr>
 
