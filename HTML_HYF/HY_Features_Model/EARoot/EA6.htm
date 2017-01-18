@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_HydrometricNetwork::HY_HydrometricNetwork</title>
+<title>HY_HydrometricNetwork</title>
 <link href="../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">10/08/2016 16:22:15</td>
+			<td class="ObjectDetailsValue">29/09/2016 10:07:34</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Network represents DendriticCatchment, Fig39_: Hydrometric Network Realisation, temp_overallOverview, temp_catchmentRealisation_all, <a href="EA3.htm">Fig39: Hydrometric Network Realisation</a></td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, Fig39_: Hydrometric Network Realisation, <a href="EA3.htm">Fig46: Hydrometric Network Realization</a>, temp_overallOverview, temp_catchmentRealization_all</td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">catchment realisation, specifically as an aggregate of logically connected monitoring stations, incl. an aggregate of geometric points. If the realised catchment is connected with other catchments via outfall, the network stations are considered connected.</div>
+	<div class="ObjectDetailsNotes">catchment realization, specifically as an aggregate of logically connected monitoring stations, including an aggregate of geometric points. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_HydrometricNetwork feature type specializes the HY_HydroNetwork realization defined in the core model specifically as an aggregate of hydrometric features. If the realized catchment is connected with other catchments via outfall, the network stations are considered connected.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -144,7 +144,7 @@ function nameClassifier(name, separator)
 					<td width="10%" class="TableHeading">Status</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">outflow</td>
+					<td width="80%" class="TableRow">outflow_at_station</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
@@ -152,7 +152,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints2" onclick="parent.toggleDiv('detailsDIVConstraints2','DetailsImageConstraints2')" />Details:
 							<div id="detailsDIVConstraints2" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">EXISTS positionOnRiver.realisedOutfall,&#160; realisedCatchment.outflow&#160; is of type HY_OutfallRealisation</div>
+							<div class="ObjectDetailsNotes">EXISTS positionOnRiver.realizedOutfall,&#160; realizedCatchment.outflow&#160; is of type HY_OutfallRealization</div>
 
 							</div>
 						</div>

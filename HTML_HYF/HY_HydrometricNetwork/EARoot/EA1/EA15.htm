@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">08/09/2016 09:13:43</td>
+			<td class="ObjectDetailsValue">12/01/2017 12:25:04</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Network represents DendriticCatchment, Context Diagram : HY_TopographicNetwork, surfacehydronetwork, Fig33_: Channel Network Realisation, temp_overallOverview, temp_catchmentRealization_all, <a href="EA7.htm">Fig34: Channel Network Realization</a></td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, Context Diagram : HY_TopographicNetwork, surfacehydronetwork, Fig33_: Channel Network Realisation, <a href="../EA1.htm">Fig38: Requirements Class: Surface Hydro Feature</a>, <a href="EA9.htm">Fig40: Channel Network Realization</a>, temp_overallOverview, temp_catchmentRealization_all</td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">catchment realization, specifically as network of depressions and channels which continuously or periodically contain water.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_ChannelNetwork feature type specializes the HY_HydroNetwork realization defined in the core model, specifically as an aggregate of surface depressions and surface channels which continuously or periodically contain water, without imposing a particular drainage pattern. This allows to represent the network, even if logically connected features may or may not be connected at the representation level. If the realized catchment is connected with other catchments via outfall, the channel network is considered connected to the channel network realizing these catchments. If required, an application focused on the structures containing a water body may use the defined relationships s to describe the realization of a catchment by the channel network, or network parts associated with the hydrographic network.&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_ChannelNetwork feature type specializes the HY_HydroNetwork realization defined in the Hydro Feature core model, specifically as an aggregate of surface depressions and surface channels which continuously or periodically contain water, without imposing a particular drainage pattern. This allows to represent the network, even if logically connected features may or may not be connected at the representation level. If the realized catchment is connected with other catchments via outfall, the channel network is considered connected to the channel network realizing these catchments. If required, an application focused on the structures containing a water body may use the defined relationships s to describe the realization of a catchment by the channel network, or network parts associated with the hydrographic network.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_ChannelNetwork associates the &lt;i&gt;surfaceDepression&lt;/i&gt; and &lt;i&gt;surfaceChannel&lt;/i&gt;, and carries a &lt;i&gt;drainagePattern&lt;/i&gt; attribute; it inherits through generalization the &lt;i&gt;realizedCatchment&lt;/i&gt;, &lt;i&gt;flowpath&lt;/i&gt; and &lt;i&gt;waterEdge&lt;/i&gt; associations as well as &lt;i&gt;catchmentBoundary&lt;/i&gt; and &lt;i&gt;catchmentArea&lt;/i&gt; associations. Depending on the application, the channel network and the related features may be described by suitable attributes. A &lt;i&gt;channel-path&lt;/i&gt; and a &lt;i&gt;channel-edge&lt;/i&gt; constraint are defined to support the recognition of channel and depression as flowpath realizing the catchment. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -141,7 +141,17 @@ function nameClassifier(name, separator)
 					</table>
 					
 					
-						&nbsp;
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			drainage pattern. An implementation may use a term from the HY_DrainagePattern code list. Note that alternative code lists may be used but should be related to the terms in Annex B.3 using an appropriate formalism. 
+		</td>
+	</tr>
+</table></div>
+
 						
 				</td>
 			</tr>
@@ -161,11 +171,11 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> surfaceDepression<br />
-						depression aggregated in the channel network. 
+						depression on the land surface which realizes the logical catchment either separately, or as part of the channel network.
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> surfaceNetwork<br />
-						channel network the depression is part of.	
+						network of surface channels and depressions, the depression is part of.	
 					</td>
 				</tr>
 				<tr>
@@ -184,11 +194,11 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> surfaceChannel<br />
-						channel aggregeated in the channel network. 
+						channel on the land surface which realizes the logical catchment either separately, or as part of the channel network.
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> channelNetwork<br />
-						channel network the channel is part of.	
+						network of surface channels and depressions, the channel is part of	
 					</td>
 				</tr>
 				<tr>
@@ -235,7 +245,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints22" onclick="parent.toggleDiv('detailsDIVConstraints22','DetailsImageConstraints22')" />Details:
 							<div id="detailsDIVConstraints22" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">EXISTS wateredge, surfaceChannel and surfaceDepression&#160; are of type HY_Flowpath</div>
+							<div class="ObjectDetailsNotes">EXISTS wateredge, surfaceChannel and surfaceDepression&#160; are of type HY_WaterEdge</div>
 
 							</div>
 						</div>

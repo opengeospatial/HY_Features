@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_HydroFeature</title>
+<title>HY_DendriticCatchment</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_HydroFeature", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_DendriticCatchment", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">25/06/2009 16:43:21</td>
+			<td width="85%" class="ObjectDetailsValue">25/06/2010 08:54:19</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">28/07/2016 16:03:43</td>
+			<td class="ObjectDetailsValue">29/09/2016 12:08:40</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,18 +87,19 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{A8ACD296-95A0-45f6-961E-4C92E4A95944}</td>
+			<td class="ObjectDetailsValue">{6B1D4D62-941B-4919-9DEF-69C6198591A7}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="../EA3.htm">temp_overallOverview</a>, <a href="../EA7.htm">Fig17: Hydro Feature Special</a>, <a href="../EA1/EA13.htm">Fig20: Catchment</a>, <a href="EA59.htm">Fig19: Named Hydro Feature</a></td>
+			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, Flowpath represents DendriticCatchment, Catchment hierarchy, Network represents DendriticCatchment, hyf107, catchmentnetwork, allClass Diagram, Fig20_: Catchment, Fig25_: CatchmentAggregate, Fig26_: DendriticCatchment, dendtritic catchment, Fig8:, <a href="../EA7.htm">temp_overallOverview</a>, <a href="../EA3.htm">Fig24: Hydro Feature Special</a>, <a href="../EA1.htm">Fig22: Hydro Feature</a>, <a href="EA48.htm">Catchment Hierarchy</a>, <a href="EA24.htm">Fig26: Catchment</a>, <a href="EA34.htm">Fig31: CatchmentAggregate</a>, <a href="EA36.htm">Fig32: DendriticCatchment</a>, <a href="EA46.htm">Hydro Complex Classes</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">abstract notion of the hydrology phenomenon, further elucidated in different concrete feature types which specify the properties each specialization uses to define one or more aspects of the hydrology of a feature. This includes related phenomena that participate in hydrologic systems but have specific characteristics. Given the complexity of the domain, and the nature of real-world physical phenomena, for any given feature a wide range of possible characteristics, states and representations may be relevant. </div>
+	<div class="ObjectDetailsNotes">special catchment wherein all waters flow to a single common outlet. A dendritic catchment is permanently connected to others in a dendritic network. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_DendriticCatchment feature type (Figure 27) specializes the general HY_Catchment class as a catchment which is determined by a single common downstream catchment. It represents the catchment as the topological link between an inflow and an outflow. This allows catchments to be connected in a dendritic network by upstream-downstream relationships without knowing the complex hydrology between inflow and outflow. This concept requires a stable identifier purposefully assigned to the catchment and that catchments are delineated as a simple tree hierarchy. The dendritic nature of this class is enforced through constraints that the catchment must have one and only one outflow (which can be unknown), must have one and only one lowerCatchment (which may be unknown), and must have an outflow that contributes to only one receiving catchment. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
+			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
 			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
 		<div class="ItemBody" id="AssociationsToTable">
@@ -110,23 +111,78 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA63.htm">«FeatureType» HY_HydroFeatureName</a><br />
+						<a href="EA59.htm">«FeatureType» HY_CatchmentAggregate</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
+						<strong>Name:</strong> exorheicDrainage<br />
+						water ultimately drained to the ocean, or an internal sink.
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> name<br />
-						name given to the hydrologic feature in cultural, political or historical context.	
+						<strong>Name:</strong> encompassingCatchment<br />
+						catchment encompassing one or more exorheic drained catchments.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink103" onclick="parent.toggleDiv('detailsDIVLink103','DetailsImageLink103')" />Details:
-							<div id="detailsDIVLink103" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">name taking cultural, political or historical context into account.</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink49" onclick="parent.toggleDiv('detailsDIVLink49','DetailsImageLink49')" />Details:
+							<div id="detailsDIVLink49" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">upstream containment hierarchy of catchments and dendritic sub-catchments.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ConstraintsTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+			  	<tr>
+					<td width="80%" class="TableHeading">Constraint</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Status</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">single-outflow</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints50" onclick="parent.toggleDiv('detailsDIVConstraints50','DetailsImageConstraints50')" />Details:
+							<div id="detailsDIVConstraints50" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">1..1</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">single-lower-catchment</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints51" onclick="parent.toggleDiv('detailsDIVConstraints51','DetailsImageConstraints51')" />Details:
+							<div id="detailsDIVConstraints51" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">1..1</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">single-receiving-catchment</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints52" onclick="parent.toggleDiv('detailsDIVConstraints52','DetailsImageConstraints52')" />Details:
+							<div id="detailsDIVConstraints52" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">1..1</div>
 
 							</div>
 						</div>
@@ -144,7 +200,13 @@ function nameClassifier(name, separator)
 					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="../EA1/EA46.htm">«FeatureType» HY_Catchment</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA59.htm">«FeatureType» HY_CatchmentAggregate</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Weak</td>
+					<td width="40%" class="TableRow" valign="top">upstream containment hierarchy of catchments and dendritic sub-catchments.</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA57.htm">«FeatureType» HY_Catchment</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>

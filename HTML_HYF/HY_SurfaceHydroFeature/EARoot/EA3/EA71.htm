@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">02/08/2016 12:35:32</td>
+			<td class="ObjectDetailsValue">12/01/2017 12:11:00</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,16 +91,17 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, informative, ChannelNetwork_extended, <a href="../EA3.htm">temp_overallOverview</a>, <a href="../EA1/EA33.htm">Fig28: Outfall</a>, <a href="../EA1/EA37.htm">Fig30: Outfall Realisation</a>, <a href="EA68.htm">River Reference System</a>, <a href="EA66.htm">Fig31: River Reference System</a></td>
+			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, informative, ChannelNetwork_extended, Fig30_: Outfall Realisation, outfall_, Fig18: position outflow node, Fig19: position inflow node, Fig20: intermediate position , temp_overallOverview, <a href="../EA1.htm">Fig22: Hydro Feature</a>, <a href="../EA2/EA36.htm">Fig34: Outfall</a>, <a href="../EA2/EA40.htm">Fig36: Outfall Realization</a>, <a href="EA68.htm">River Positioning Classes with tags</a>, <a href="EA66.htm">Fig37: River Positioning System</a>, LR</td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">indirect position, either expressed as the distance to a reference point or as position relative to a reference point or to the distance (interpolative).&#160; &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: This type may use ISO 19148: LinearReferencing understanding the indirect position as the location associated with an Outfall (understood as an event in terms of ISO 19148), providing a distance absolute, relative or interpolative to a reference location identified by coordinates (in terms of the referent).&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_IndirectPosition feature type defines the location referenced along a logical axis, without the necessity of a geometric realization which it however may have. Indirect position uses a catchment-specific reference system which defines the flowpath as the required linear element along which the position is determined, and the location where the flowpath starts as the origin. The indirect position then is expressed as the distance from the upstream or/and downstream end of the flowpath, or from a referent that is already located on that flowpath. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The (indirect) position of an outflow node referenced along an upstream oriented flowpath can be expressed as distance from an upstream inflow node located on that flowpath, while the (indirect) position of an inflow node referenced along a downstream oriented flowpath can be expressed as distance from a downstream outflow node located on the flowpath. An &#8216;intermediate&#8217; position referencing known inflow and outflow nodes bounding a flowpath at both ends can be expressed as part of the distance along the entire flowpath, measured from the upstream end of an upstream flowpath, or/and from the downstream end of a downstream flowpath. A position referencing an already referenced location on the flowpath can be expressed as part of the distance along the entire flowpath, measured from the &#8216;located referent&#8217;. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_IndirectPosition carries the &lt;i&gt;distanceExpression&lt;/i&gt;, and &lt;i&gt;distanceDescription&lt;/i&gt; attributes, and associates the &lt;i&gt;locatedReferent&lt;/i&gt; and a&#160; &lt;i&gt;riverReferenceSystem&lt;/i&gt;. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
 			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
 			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
 		</ul>
 <div class="ItemBody" id="AttributesTable">
 	<table border="0" cellspacing="0" cellpadding="0" class="Table">
@@ -109,31 +110,31 @@ function nameClassifier(name, separator)
 		</tr>
 						<tr>
 				<td width="100%" class="TableRow">
-					<i>Public HY_DistanceToReferent</i><br /><strong>&nbsp;&nbsp;absolute</strong>
+					<i>Public <a href="EA70.htm">HY_DistanceFromReferent</a></i><br /><strong>&nbsp;&nbsp;distanceExpression</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes117')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes117" border="0" />Details:
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes122')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes122" border="0" />Details:
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes117_00" style="display: none;">
+						<tr id="DetailsImageAttributes122_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes117_01" style="display: none;">
+						<tr id="DetailsImageAttributes122_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes117_02" style="display: none;">
+						<tr id="DetailsImageAttributes122_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes117_03" style="display: none;">
+						<tr id="DetailsImageAttributes122_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes117_03" style="display: none;">
+						<tr id="DetailsImageAttributes122_03" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td>Range:0 to 1</td>
 						</tr>
@@ -146,7 +147,7 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			distance (length) to the identified reference point. In case of a direct position (i.e. when coordinates are known) the distance to the reference point equals to 0.00. 
+			absolute or interpolative value of the distance from the feature being referenced, including an indication of accuracy and precision of the absolute value. An implementation may use the HY_DistanceFromReferent (data type) referencing basic types. Alternatively, the types described in ISO 19103: Conceptual Schema may be used.
 		</td>
 	</tr>
 </table></div>
@@ -155,59 +156,49 @@ function nameClassifier(name, separator)
 				</td>
 			</tr>			<tr>
 				<td width="100%" class="TableRow">
-					<i>Public <a href="EA72.htm">HY_RelativePosition</a></i><br /><strong>&nbsp;&nbsp;relative</strong>
+					<i>Public <a href="EA73.htm">HY_DistanceDescription</a></i><br /><strong>&nbsp;&nbsp;distanceDescription</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes118')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes118" border="0" />Details:
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes123')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes123" border="0" />Details:
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes118_00" style="display: none;">
+						<tr id="DetailsImageAttributes123_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes118_01" style="display: none;">
+						<tr id="DetailsImageAttributes123_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes118_02" style="display: none;">
+						<tr id="DetailsImageAttributes123_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes118_03" style="display: none;">
+						<tr id="DetailsImageAttributes123_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes118_03" style="display: none;">
+						<tr id="DetailsImageAttributes123_03" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td>Range:0 to 1</td>
 						</tr>
 					</table>
 					
-					sequenceNumber=2<br>
+					sequenceNumber=1<br>
 						<div class="ObjectDetailsNotes"><table>
 	<tr>
 		<td valign="top">
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			position relative to the identified reference point.
+			term describing the distance from the feature being referenced An implementation may use the HY_DistanceDescription code list. Alternatively, the types described in ISO 19103: Conceptual Schema may be used. Alternative code lists may be used but should be related to the terms in Annex B.2 using an appropriate formalism. 
 		</td>
 	</tr>
 </table></div>
 
-						<i>Constraints:</i><br><span style= "margin-left: .5cm;">&nbsp; distanceToRefPoint not documented </span>
-<table>
-	<tr>
-		<td>
-			<span style= "margin-left: 1.5cm;"> <span>
-		</td>
-		<td>
-			&nbsp;
-		</td>
-	</td>
-</table> 
+						
 				</td>
 			</tr>
 	</table>
@@ -221,31 +212,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA1/EA58.htm">«FeatureType» HY_OutfallRealisation</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> referenceLocation<br />
-						permanent reference location placed in the network of catchments as outfall (referent in terms of ISO 19148). This allows to place an arbitrary feature of interest using catchment topology. If required, this association shall be used to identify the location upstream and/or downstream relative to which a position is assigned to the outfall.	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink119" onclick="parent.toggleDiv('detailsDIVLink119','DetailsImageLink119')" />Details:
-							<div id="detailsDIVLink119" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">location to which the position refers to.</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA73.htm">«FeatureType» HY_RiverReferenceSystem</a><br />
+						<a href="EA72.htm">«FeatureType» HY_RiverReferenceSystem</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -254,14 +221,39 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> riverReferenceSystem<br />
-						linear river reference system applied. This supports to place a feature of interest using the linear flowpath representing the catchment whose outfall marks the located start of the 'drawn' flowpath.	
+						catchment-specific linear reference system defining the outfall of catchment as origin, and the one-dimensional flowpath as linear element forming the axis. 
+	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink120" onclick="parent.toggleDiv('detailsDIVLink120','DetailsImageLink120')" />Details:
-							<div id="detailsDIVLink120" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">linear reference system used for positioning.</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink124" onclick="parent.toggleDiv('detailsDIVLink124','DetailsImageLink124')" />Details:
+							<div id="detailsDIVLink124" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">linear reference system used for positioning.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This supports to place any feature of interest on the linear flowpath that realizes the catchment whose outfall marks the located start of the &#39;drawn&#39; flowpath.&lt;br /&gt;&lt;/p&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA2/EA63.htm">«FeatureType» HY_OutfallRealization</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> locatedReferent<br />
+						identifies an existing ‘realized’ outfall used as the permanent reference location relative to which a position is assigned to an outfall, or the feature of interest recognized as outfall.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink125" onclick="parent.toggleDiv('detailsDIVLink125','DetailsImageLink125')" />Details:
+							<div id="detailsDIVLink125" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">location to which the position refers.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This allows to place an arbitrary feature of interest using catchment topology. If required, this association shall be used to identify the location upstream and/or downstream relative to which a position is assigned to the outfall.&lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
 						</div>
@@ -279,7 +271,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA1/EA57.htm">«FeatureType» HY_Outfall</a><br />
+						<a href="../EA2/EA62.htm">«FeatureType» HY_Outfall</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -288,14 +280,14 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> relativePosition<br />
-						position of outfall in the hydrographic network relative to a reference location, fixed and referenced by coordinates.	
+						assigns a position to the outfall relative to a reference location fixed in the logical network of catchments, i.e. to another, already existing (realized) outfall. Commonly, this is used to locate an outfall such as at a hydrometric station, to a reference outfall such as a confluence but it can be used to locate any outfall relative to another.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink121" onclick="parent.toggleDiv('detailsDIVLink121','DetailsImageLink121')" />Details:
-							<div id="detailsDIVLink121" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">relative position of the outfall in the hydrologic network. </div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink126" onclick="parent.toggleDiv('detailsDIVLink126','DetailsImageLink126')" />Details:
+							<div id="detailsDIVLink126" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">position of the outfall on the hydrologic network. </div>
 
 							</div>
 						</div>
@@ -304,7 +296,127 @@ function nameClassifier(name, separator)
 
 			</table>
 		</div>
-	</div>
+<div class="ItemBody" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="50%" class="TableHeading">Tag</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">distanceAlong</td>
+				<td width="50%" class="TableRow" valign="top">HY_DistanceFromReferent</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario127" onclick="parent.toggleDiv('detailsDIVScenario127','DetailsImageScenario127')" />Details:
+						<div id="detailsDIVScenario127" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">distanceFromInflowNode</td>
+				<td width="50%" class="TableRow" valign="top">distanceAlong</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario128" onclick="parent.toggleDiv('detailsDIVScenario128','DetailsImageScenario128')" />Details:
+						<div id="detailsDIVScenario128" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">distanceFromOutflowNode</td>
+				<td width="50%" class="TableRow" valign="top">distanceAlong</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario129" onclick="parent.toggleDiv('detailsDIVScenario129','DetailsImageScenario129')" />Details:
+						<div id="detailsDIVScenario129" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">downstreamReferent</td>
+				<td width="50%" class="TableRow" valign="top">inflowPosition</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario130" onclick="parent.toggleDiv('detailsDIVScenario130','DetailsImageScenario130')" />Details:
+						<div id="detailsDIVScenario130" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">known location being referenced to locate a feature along a downstream flowpath. The position of the new feature is expressed as distance from the downstream referent, whereby the position of the referent is expressed as distance from another downstream referent, ultimately from a known outflow node.</div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">inflowPosition</td>
+				<td width="50%" class="TableRow" valign="top">distanceFromOutflowNode</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario131" onclick="parent.toggleDiv('detailsDIVScenario131','DetailsImageScenario131')" />Details:
+						<div id="detailsDIVScenario131" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">located inflow of a logical catchment which is realized by a downstream flowpath between inflow node and outflow node. the position of the inflow&nbsp;<WBR> is expressed as distance from the outflow node bounding the flowpath at the downstream end.<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">linearElement</td>
+				<td width="50%" class="TableRow" valign="top">HY_Flowpath</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario132" onclick="parent.toggleDiv('detailsDIVScenario132','DetailsImageScenario132')" />Details:
+						<div id="detailsDIVScenario132" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">linearReferencingMethod</td>
+				<td width="50%" class="TableRow" valign="top">HY_RiverReferenceSystem</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario133" onclick="parent.toggleDiv('detailsDIVScenario133','DetailsImageScenario133')" />Details:
+						<div id="detailsDIVScenario133" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">outflowPosition</td>
+				<td width="50%" class="TableRow" valign="top">distanceFromInflowNode</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario134" onclick="parent.toggleDiv('detailsDIVScenario134','DetailsImageScenario134')" />Details:
+						<div id="detailsDIVScenario134" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">located outflow of a logical catchment which is realized by an upstream flowpath between outflow node and inflow node. the position of the outflow&nbsp;<WBR> is expressed as distance from the inflow node bounding the flowpath at the upstream end.<br /><br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">upstreamReferent</td>
+				<td width="50%" class="TableRow" valign="top">outflowPosition</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario135" onclick="parent.toggleDiv('detailsDIVScenario135','DetailsImageScenario135')" />Details:
+						<div id="detailsDIVScenario135" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">known location being referenced to locate a feature along an upstream flowpath. The position of the new feature is expressed as distance from the upstream referent, whereby the position of the referent is expressed as distance from another upstream referent, ultimately from a known inflow node.<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>	</div>
 <div class="pageFooter"></div>
  
 </body>
