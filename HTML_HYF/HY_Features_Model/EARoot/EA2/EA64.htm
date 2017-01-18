@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>NamedFeature::HY_HydroFeature</title>
+<title>HY_HydroNetwork</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_HydroFeature", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_HydroNetwork", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">25/06/2009 16:43:21</td>
+			<td width="85%" class="ObjectDetailsValue">15/06/2016 10:01:37</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">10/08/2016 15:42:04</td>
+			<td class="ObjectDetailsValue">05/10/2016 12:42:55</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,18 +87,20 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{A8ACD296-95A0-45f6-961E-4C92E4A95944}</td>
+			<td class="ObjectDetailsValue">{50BFCF9E-F639-4b92-999F-99D1B94B7A45}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Fig20_: Catchment, <a href="../EA3.htm">temp_overallOverview</a>, <a href="../EA7.htm">Fig17: Hydro Feature Special</a>, <a href="../EA1/EA15.htm">Fig20: Catchment</a>, <a href="EA61.htm">Fig19: Named Hydro Feature</a></td>
+			<td class="ObjectDetailsValue">catchmentnetwork, Context Diagram : HY_TopographicNetwork, TopographicRealisation_??, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig39_: Hydrometric Network Realisation, Fig29_: Catchment Realisation, Fig35_: Hydrographic Network Realisation, Fig33_: Channel Network Realisation, Fig46: Hydrometric Network Realization, <a href="../EA7.htm">temp_overallOverview</a>, <a href="../EA9.htm">temp_catchmentRealization_all</a>, <a href="../EA1.htm">Fig22: Hydro Feature</a>, <a href="EA42.htm">Fig35: Catchment Realization</a>, <a href="EA54.htm">FlowPath-WaterEdge</a>, <a href="EA52.htm">CatchmentArea</a>, <a href="EA50.htm">CatchmentBoundary</a>, <a href="EA46.htm">Hydro Complex Classes</a>, <a href="EA22.htm">Fig13: Catchment Realization with tags</a>, Fig40: Channel Network Realization, Fig42: Hydrographic Network Realization</td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">abstract notion of the hydrology phenomenon, further elucidated in different concrete feature types which specify the properties each specialization uses to define one or more aspects of the hydrology of a feature. This includes related phenomena that participate in hydrologic systems but have specific characteristics. Given the complexity of the domain, and the nature of real-world physical phenomena, for any given feature a wide range of possible characteristics, states and representations may be relevant. </div>
+	<div class="ObjectDetailsNotes">feature realization of an &#39;un-realized&#39; catchment specifically as a network of connected hydrologic features.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_HydroNetwork feature type specializes HY_CatchmentRealization with respect to a network of connected hydrologic features. Such a network realizes in the hierarchical network of logically connected catchments contained in a higher-order catchment. It may be a sequence of flowpaths, an aggregate of water edges, an aggregate of catchment areas or a mesh of catchment boundaries. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
 			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
 		<div class="ItemBody" id="AssociationsToTable">
@@ -110,23 +112,49 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA65.htm">«FeatureType» HY_HydroFeatureName</a><br />
+						<a href="EA60.htm">«FeatureType» HY_CatchmentBoundary</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
+						<strong>Name:</strong> boundaryNetwork<br />
+						mesh of boundary lines forming a connected network. 
+
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> name<br />
-						name given to the hydrologic feature in cultural, political or historical context.	
+						<strong>Name:</strong> catchmentBoundary<br />
+						catchment boundary realizing a catchment as part of a network	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink107" onclick="parent.toggleDiv('detailsDIVLink107','DetailsImageLink107')" />Details:
-							<div id="detailsDIVLink107" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">name taking cultural, political or historical context into account.</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink64" onclick="parent.toggleDiv('detailsDIVLink64','DetailsImageLink64')" />Details:
+							<div id="detailsDIVLink64" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">mesh of boundary lines.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This concept requires a&#160; mesh of non-overlapping boundary lines, and a single linear representation of each of these.&lt;br /&gt;&lt;/p&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA69.htm">«FeatureType» HY_WaterEdge</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> wateredgeNetwork<br />
+						aggregate of water edges forming a connected network. 
+
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> waterEdge<br />
+						water edge realizing a catchment as part of a network.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink65" onclick="parent.toggleDiv('detailsDIVLink65','DetailsImageLink65')" />Details:
+							<div id="detailsDIVLink65" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">aggregate of water edges.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This concept requires an aggregate of&#160; non-overlaying edges, and a single linear representation of each of these.&lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
 						</div>
@@ -135,7 +163,87 @@ function nameClassifier(name, separator)
 
 			</table>
 		</div>
-		<div class="ItemBody" id="LinksTable">
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA58.htm">«FeatureType» HY_CatchmentArea</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> catchmentArea<br />
+						catchment area realizing a catchment as part of a network.
+
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> areaNetwork<br />
+						aggregate of catchment areas forming a connected network. 	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink66" onclick="parent.toggleDiv('detailsDIVLink66','DetailsImageLink66')" />Details:
+							<div id="detailsDIVLink66" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">aggregate of catchment areas.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This concept requires a non-overlapping aggregate of areas, and a single areal representation of each of these.&lt;br /&gt;&lt;/p&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA63.htm">«FeatureType» HY_FlowPath</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> flowpath<br />
+						flowpath realizing a catchment as part of a network.
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> flowpathNetwork <br />
+						sequence of flowpathes forming a connected network. 	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink67" onclick="parent.toggleDiv('detailsDIVLink67','DetailsImageLink67')" />Details:
+							<div id="detailsDIVLink67" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">network of flowpaths.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This concept requires a non-branching &#39;mainstem&#39; of channels or water bodies, and a single linear representation of each of these.&lt;br /&gt;&lt;/p&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+<div class="ItemBody" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="50%" class="TableHeading">Tag</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">connection</td>
+				<td width="50%" class="TableRow" valign="top">true</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario68" onclick="parent.toggleDiv('detailsDIVScenario68','DetailsImageScenario68')" />Details:
+						<div id="detailsDIVScenario68" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">network features are connected within the realisation</div>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>		<div class="ItemBody" id="LinksTable">
 			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
 					<td width="30%" class="TableHeading">Object</td>
@@ -144,7 +252,7 @@ function nameClassifier(name, separator)
 					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="../EA1/EA48.htm">«FeatureType» HY_Catchment</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA61.htm">«FeatureType» HY_CatchmentRealization</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>

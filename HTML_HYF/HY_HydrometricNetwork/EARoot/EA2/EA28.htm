@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">08/09/2016 09:08:10</td>
+			<td class="ObjectDetailsValue">12/01/2017 12:32:24</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Network represents DendriticCatchment, Precipitation-Runoff, catchmentnetwork, ChannelNetwork_extended, surfacehydronetwork, Fig35_: Hydrographic Network Realisation, Fig36_: Water Body Realisation, Fig37_: Reservoir Realisation, temp_overallOverview, temp_catchmentRealization_all, Fig18: Hydro Feature Special, <a href="../EA1/EA11.htm">Channel - WaterBody</a>, <a href="EA17.htm">Fig36: Hydrographic Network Realization</a>, <a href="EA19.htm">Fig37: Water Body Realization</a>, <a href="EA21.htm">WaterBody - Channel</a>, <a href="../EA4/EA38.htm">Fig38: Reservoir Realization</a>, <a href="../EA4/EA40.htm">Reservoir_extended</a></td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, Precipitation-Runoff, catchmentnetwork, ChannelNetwork_extended, surfacehydronetwork, Fig35_: Hydrographic Network Realisation, Fig36_: Water Body Realisation, Fig37_: Reservoir Realisation, <a href="../EA1.htm">Fig38: Requirements Class: Surface Hydro Feature</a>, <a href="EA17.htm">Fig42: Hydrographic Network Realization</a>, <a href="EA19.htm">Fig43: Water Body Realization</a>, <a href="EA21.htm">WaterBody - Channel</a>, <a href="../EA4/EA40.htm">Fig44: Reservoir Realization</a>, <a href="../EA4/EA42.htm">Reservoir_extended</a>, temp_overallOverview, temp_catchmentRealization_all, Fig24: Hydro Feature Special</td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">mass of&#160; (liquid) water, distinct from other masses of water that is accumulated in streams on the land surface, including&#160; subterranean streams passing through large interstices such as cave or cavern. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_WaterBody feature type specializes the general HY_HydroFeature class. The water body as part of the hydrographic network, either standing in a water pool, or flowing as stream in a watercourse, which are parts of the channel network. A water body may be segmented in vertical sections at right angles to the main (average) direction of flow or along its centerline, and horizontal strata. Conceptually, each water body, or a stratum, is understood as a reservoir used for storage, regulation or control of water recourses. &lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_WaterBody feature type specializes the general HY_HydroFeature class. The water body is part of the hydrographic network, either standing in a water pool, or flowing as stream in a watercourse, which are parts of the channel network. A water body may be segmented in vertical sections at right angles to the main (average) direction of flow or along its centerline, and horizontal strata. Conceptually, each water body, or a stratum, is understood as a reservoir used for storage, regulation or control of water recourses. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_WaterBody inherits from generalization the &lt;i&gt;name&lt;/i&gt; property, and the &lt;i&gt;flow line&lt;/i&gt; and &lt;i&gt;water edge&lt;/i&gt; constraints. It associates the &lt;i&gt;hydrographicNetwork&lt;/i&gt; in which it participates, the containing &lt;i&gt;waterpool&lt;/i&gt; and &lt;i&gt;watercourse&lt;/i&gt;, the vertical &lt;i&gt;streamCrossSection&lt;/i&gt;, &lt;i&gt;streamLongitudinalSection&lt;/i&gt;, a horizontal &lt;i&gt;stratum&lt;/i&gt;, and a reservoir for &lt;i&gt;storage&lt;/i&gt; of water. A &lt;i&gt;stratum-edge&lt;/i&gt; constraint is defined such that whenever the water body is part of the hydrographic network, the confined stratum is of type HY_WaterEdge. &lt;i&gt;Outflow-at-section&lt;/i&gt; and &lt;i&gt;outflow-at-landmark&lt;/i&gt; constraint emphasizes the recognition of a fixed landmark as outflow of the catchment realized by hydrographic network.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -117,11 +117,11 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> upstreamWaterBody<br />
-						water body immediately upstream 
+						identifies another water body immediately upstream, 
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> downstreamWaterBody<br />
-						water body immediately downstream.
+						identifies another water body immediately downstream
 	
 					</td>
 				</tr>
@@ -129,7 +129,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink47" onclick="parent.toggleDiv('detailsDIVLink47','DetailsImageLink47')" />Details:
 							<div id="detailsDIVLink47" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">simple upstream/downstream relation between two water body segments.</div>
+							<div class="ObjectDetailsNotes">identifies another water body immediately upstream or downstream, allowing to trace the hydrographic network without knowing the inflow or outflow of the catchment realized by the water body.</div>
 
 							</div>
 						</div>
@@ -146,7 +146,7 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> stratum<br />
-						horizontal layer in the body of water, e.g. halocline, thermocline.	
+						identifies a horizontal layer of consistent characteristics, or a storage zone of a reservoir, carrying a permanent reference location which realizes the outfall of the catchment which is realized by the water body.	
 					</td>
 				</tr>
 				<tr>
@@ -166,7 +166,7 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> networkWaterBody<br />
-						water body aggregated in the hydrographic network. 
+						water body which realizes the logical catchment either separately, or as part of the hydrographic network.
 
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -219,15 +219,14 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> streamCrossSection<br />
-						vertical section of a stream at right angles to the main (average) direction of flow.	
+						identifies a vertical section either at right angles to the main (average) direction of flow, or along a centerline, carrying a permanent reference location which realizes the outfall of the catchment which is realized by the water body.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink51" onclick="parent.toggleDiv('detailsDIVLink51','DetailsImageLink51')" />Details:
 							<div id="detailsDIVLink51" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">vertical section of the water body segment in transversal direction.</div>
-
+							&nbsp;
 							</div>
 						</div>
 					</td>
@@ -239,11 +238,11 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> standingWater<br />
-						body of generally stagnant water.
+						identifies the body of stagnant water contained in the depression. 
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> waterpool<br />
-						natural or man-made depression in a channelbed or flood plain wherein water stands, incuding large interstices in the ground, such as cave, cavern or a group of these. 
+						identifies the natural or artificial depression which contains standing water, including large interstices in the ground, such as cave, cavern or a group of these. 
 	
 					</td>
 				</tr>
@@ -269,24 +268,23 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA4/EA42.htm">«FeatureType» HY_Reservoir</a><br />
+						<a href="../EA4/EA44.htm">«FeatureType» HY_Reservoir</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> storage<br />
-						storage characteristics of the reservoir. 
-
+						identifies a reservoir storing water as a resource for future use. This may be used to describe storage characteristics of the water body participating in the hydrographic network. 
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> storedWaterBody<br />
-						network water body that specifies the connectivity of the storage reservoir in the hydrographic network.	
+						identifies the network water body that specifies the connectivity of the storage reservoir in the hydrographic network	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink53" onclick="parent.toggleDiv('detailsDIVLink53','DetailsImageLink53')" />Details:
 							<div id="detailsDIVLink53" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">impounding of water in surface or underground reservoirs, for future use. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</div>
+							<div class="ObjectDetailsNotes">impounding of water in surface or underground reservoirs, for future use. </div>
 
 							</div>
 						</div>
@@ -324,11 +322,11 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> upstreamWaterBody<br />
-						water body immediately upstream 
+						identifies another water body immediately upstream, 
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> downstreamWaterBody<br />
-						water body immediately downstream.
+						identifies another water body immediately downstream
 	
 					</td>
 				</tr>
@@ -336,7 +334,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink55" onclick="parent.toggleDiv('detailsDIVLink55','DetailsImageLink55')" />Details:
 							<div id="detailsDIVLink55" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">simple upstream/downstream relation between two water body segments.</div>
+							<div class="ObjectDetailsNotes">identifies another water body immediately upstream or downstream, allowing to trace the hydrographic network without knowing the inflow or outflow of the catchment realized by the water body.</div>
 
 							</div>
 						</div>
@@ -349,13 +347,12 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> watercourse<br />
-						natural or man-made channel through or along which water may flow, incl. large interstices in the ground, such as cave, cavern or a group of these. 
+						
 
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> stream<br />
-						body of water, generally flowing in a natural surface channel, incl. subterranean streams.
-
+						identifies the water body periodically or continuously flowing in the channel, including subterranean streams.
 	
 					</td>
 				</tr>
@@ -436,37 +433,37 @@ function nameClassifier(name, separator)
 					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="../EA3/EA37.htm">«FeatureType» HY_River</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA3/EA39.htm">«FeatureType» HY_River</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="../EA3/EA34.htm">«FeatureType» HY_Impoundment</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA3/EA36.htm">«FeatureType» HY_Impoundment</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="../EA3/EA32.htm">«FeatureType» HY_Canal</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA3/EA34.htm">«FeatureType» HY_Canal</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="../EA3/EA36.htm">«FeatureType» HY_Lake</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA3/EA38.htm">«FeatureType» HY_Lake</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="../EA3/EA33.htm">«FeatureType» HY_Estuary</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA3/EA35.htm">«FeatureType» HY_Estuary</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="../EA3/EA35.htm">«FeatureType» HY_Lagoon</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA3/EA37.htm">«FeatureType» HY_Lagoon</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>

@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">08/09/2016 09:13:06</td>
+			<td class="ObjectDetailsValue">12/01/2017 12:40:10</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Network represents DendriticCatchment, TopographicRealisation_??, ChannelNetwork_extended, surfacehydronetwork, Fig33_: Channel Network Realisation, Fig34_: Channel Realisation, temp_overallOverview, temp_catchmentRealization_all, Fig18: Hydro Feature Special, <a href="EA7.htm">Fig34: Channel Network Realization</a>, <a href="EA11.htm">Channel - WaterBody</a>, <a href="EA9.htm">Fig35: Channel Realization</a>, <a href="../EA2/EA21.htm">WaterBody - Channel</a></td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, TopographicRealisation_??, ChannelNetwork_extended, surfacehydronetwork, Fig33_: Channel Network Realisation, Fig34_: Channel Realisation, <a href="../EA1.htm">Fig38: Requirements Class: Surface Hydro Feature</a>, <a href="EA9.htm">Fig40: Channel Network Realization</a>, <a href="EA11.htm">Fig41: Channel Realization</a>, <a href="../EA2/EA21.htm">WaterBody - Channel</a>, temp_overallOverview, temp_catchmentRealization_all, Fig24: Hydro Feature Special</td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">watercourse, clearly distinguished, which periodically or continuously contains moving water, or which forms a connecting link between two bodies of water. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_Channel feature type specializes the general HY_HydroFeature class with respect to a natural or man-made, open or closed channel through or along which water may flow, or not. A channel is part of the network of channels and depressions which form the connecting system for the hydrographic network; a channel may have vertical sections at right angles to the main (average) direction of flow or along its centreline. &lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_Channel feature type specializes the HY_Depression class with respect to a natural or man-made, open or closed channel through or along which water may flow, or not. A channel is part of the network of channels and depressions which forms the connecting system for the hydrographic network; a channel may have vertical sections at right angles to the main (average) direction of flow or along its centerline. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_Channel associates the &lt;i&gt;channelNetwork&lt;/i&gt; in which it participates. It carries the associations: &lt;i&gt;stream&lt;/i&gt;, &lt;i&gt;bedProfileTransversal&lt;/i&gt; and &lt;i&gt;bedProfileLongitudinal&lt;/i&gt;. HY_Channel inherits from generalization the &lt;i&gt;confinedWaterBody&lt;/i&gt; association and the constraints &lt;i&gt;waterbody-edge&lt;/i&gt; and &lt;i&gt;outflow-at-benchmark&lt;/i&gt;. An &lt;i&gt;outflow-at-profile&lt;/i&gt; constraint emphasizes the recognition of vertical section as outflow of the catchment realized by channel network.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -120,8 +120,7 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> bedProfileLongitudinal<br />
-						longitudinal shape of a channel in a vertical plane.
-	
+						identifies a longitudinal vertical shape of a channel, carrying a permanent reference location which realizes the outfall of the catchment which is realized by the channel.	
 					</td>
 				</tr>
 				<tr>
@@ -145,8 +144,7 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> bedProfileTransversal<br />
-						transversal shape of a channel in a vertical plane.
-	
+						identifies a transversal  vertical shape of a channel, carrying a permanent reference location which realizes the outfall of the catchment which is realized by the channel.	
 					</td>
 				</tr>
 				<tr>
@@ -166,11 +164,11 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> surfaceChannel<br />
-						channel aggregeated in the channel network. 
+						channel on the land surface which realizes the logical catchment either separately, or as part of the channel network.
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> channelNetwork<br />
-						channel network the channel is part of.	
+						network of surface channels and depressions, the channel is part of	
 					</td>
 				</tr>
 				<tr>
@@ -190,13 +188,12 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> watercourse<br />
-						natural or man-made channel through or along which water may flow, incl. large interstices in the ground, such as cave, cavern or a group of these. 
+						
 
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> stream<br />
-						body of water, generally flowing in a natural surface channel, incl. subterranean streams.
-
+						identifies the water body periodically or continuously flowing in the channel, including subterranean streams.
 	
 					</td>
 				</tr>
