@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">18/01/2017 09:06:13</td>
+			<td class="ObjectDetailsValue">19/01/2017 10:02:39</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,7 +91,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, hyf107, informative, catchmentnetwork, TopographicRealisation_??, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig39_: Hydrometric Network Realisation, Fig20_: Catchment, Fig30_: Outfall Realisation, Fig36_: Water Body Realisation, Fig34_: Channel Realisation, Fig37_: Reservoir Realisation, catchmentrealization, outfall_, Fig10: contributing catchment, Fig11: receiving catchment, Fig18: position outflow node, Fig19: position inflow node, Fig41: Channel Realization, Fig43: Water Body Realization, Fig44: Reservoir Realization, Reservoir_extended, temp_overallOverview, temp_catchmentRealization_all, Fig46: Hydrometric Network Realization, <a href="../EA1.htm">Fig22: Hydro Feature</a>, <a href="EA22.htm">Fig27: Catchment and Outfall</a>, <a href="EA20.htm">Fig26: Catchment</a>, <a href="EA36.htm">Fig34: Outfall</a>, <a href="EA40.htm">Fig36: Outfall Realization</a>, <a href="EA42.htm">Hydro Complex Classes</a>, <a href="../EA3/EA68.htm">River Positioning Classes with tags</a>, <a href="../EA3/EA66.htm">Fig37: River Positioning System</a>, LR</td>
+			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, hyf107, informative, catchmentnetwork, TopographicRealisation_??, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig39_: Hydrometric Network Realisation, Fig20_: Catchment, Fig30_: Outfall Realisation, Fig36_: Water Body Realisation, Fig34_: Channel Realisation, Fig37_: Reservoir Realisation, catchmentrealization, outfall_, Fig10: contributing catchment, Fig11: receiving catchment, Fig18: position outflow node, Fig19: position inflow node, Fig41: Channel Realization, Fig43: Water Body Realization, Fig44: Reservoir Realization, Reservoir_extended, temp_overallOverview, temp_catchmentRealization_all, Fig46: Hydrometric Network Realization, LR, <a href="../EA1.htm">Fig22: Hydro Feature</a>, <a href="EA22.htm">Fig27: Catchment and Outfall</a>, <a href="EA20.htm">Fig26: Catchment</a>, <a href="EA36.htm">Fig34: Outfall</a>, <a href="EA40.htm">Fig36: Outfall Realization</a>, <a href="EA42.htm">Hydro Complex Classes</a>, <a href="../EA3/EA68.htm">River Positioning Classes with tags</a>, <a href="../EA3/EA66.htm">Fig37: River Positioning System</a></td>
 		</tr>
 	</table>
 	<div class="ObjectDetailsNotes">The HY_Outfall feature type (Figure 34) conceptualizes the hydrologically determined outfall of a corresponding catchment (Figure 27). The outfall represents the logical place where a catchment interacts with another catchment, i.e. where the outflow of a contributing catchment becomes inflow into a receiving catchment. A catchment may receive flow from several upstream catchments or contribute flow to several downstream catchments through a single logical outfall. Through unique identity, each outfall feature may associate different outfall realizations within an hydrologic complex given that each realization has the same hydrologic determination. This includes the topological realization as a node on the one-dimensional flowpath (edge) in terms of a topological &#39;boundary&#39;. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Logically placed in reference to a catchment which links inflow and outflow, an outfall has a position relative to another outfall that is &#39;fixed&#39; by the catchment Referencing the union of catchment and outfall, the topological realization can be used to define a linear river reference system with the inflow/outflow node as origin and the flowpath realizing the catchment as linear element along which a position can be determined. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_Outfall carries the associations: &lt;i&gt;contributingCatchment&lt;/i&gt;, &lt;i&gt;receivingCatchment&lt;/i&gt;, &lt;i&gt;relativePosition&lt;/i&gt; and &lt;i&gt;outfallRealization&lt;/i&gt;. The linear referencing along a flowpath is enforced by &lt;i&gt;outflow-on-flowpath&lt;/i&gt; and an &lt;i&gt;inflow-on-flowpath&lt;/i&gt; constraints. &lt;br /&gt;&lt;/p&gt;</div>
@@ -257,7 +257,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints76" onclick="parent.toggleDiv('detailsDIVConstraints76','DetailsImageConstraints76')" />Details:
 							<div id="detailsDIVConstraints76" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">EXISTS relativePosition.riverReferenceSystem.linearElement , receivingCatchment.realization is of type HY_Flowpath</div>
+							<div class="ObjectDetailsNotes">EXISTS&#160; receivingCatchment , relativePosition.riverReferenceSystem.linearElement.realizedCatchment IS of type HY_Catchment</div>
 
 							</div>
 						</div>
@@ -272,7 +272,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints77" onclick="parent.toggleDiv('detailsDIVConstraints77','DetailsImageConstraints77')" />Details:
 							<div id="detailsDIVConstraints77" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">EXISTS relativePosition.riverReferenceSystem.linearElement , contributingCatchment.realization is of type HY_Flowpath</div>
+							<div class="ObjectDetailsNotes">EXISTS&#160; contributingCatchment , relativePosition.riverReferenceSystem.linearElement.realizedCatchment IS of type HY_Catchment</div>
 
 							</div>
 						</div>
