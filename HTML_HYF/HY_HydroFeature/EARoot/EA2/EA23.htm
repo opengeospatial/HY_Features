@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_CrossSection</title>
+<title>HydrographicNetwork::HY_CrossSection</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">29/09/2016 09:45:13</td>
+			<td class="ObjectDetailsValue">12/01/2017 12:45:22</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">TopographicRealisation_??, ChannelNetwork_extended, Fig36_: Water Body Realisation, Fig34_: Channel Realisation, <a href="../EA3.htm">Fig38: Requirements Class: Surface Hydro Feature</a>, <a href="../EA1/EA11.htm">Fig41: Channel Realization</a>, <a href="EA19.htm">Fig43: Water Body Realization</a>, <a href="EA21.htm">WaterBody - Channel</a>, <a href="../EA4/EA42.htm">Reservoir_extended</a>, temp_overallOverview, temp_catchmentRealization_all</td>
+			<td class="ObjectDetailsValue">TopographicRealisation_??, ChannelNetwork_extended, Fig36_: Water Body Realisation, Fig34_: Channel Realisation, <a href="../EA1.htm">Fig38: Requirements Class: Surface Hydro Feature</a>, <a href="../EA1/EA11.htm">Fig41: Channel Realization</a>, <a href="EA19.htm">Fig43: Water Body Realization</a>, <a href="EA21.htm">WaterBody - Channel</a>, <a href="../EA4/EA42.htm">Reservoir_extended</a>, temp_overallOverview, temp_catchmentRealization_all</td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">vertical section of a stream or stream bed at right angles to the main (average) direction of flow. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_CrossSection and HY_LongitudinalSection feature types conceptualize the segmentation of a water body or a containing channel through vertical sections. Taking into account the conceptual separation of a watercourse, the cross section concept refers to both the cross section of a water body orthogonal to the direction of flow, and to the transversal bed profile of a channel. &lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_CrossSection conceptualizes the segmentation of a water body or a containing channel through vertical sections. Taking into account the conceptual separation of a watercourse, the cross section concept refers to both the cross section of a water body orthogonal to the direction of flow, and to the transversal bed profile of a channel, &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Cross section associates a &lt;i&gt;crossSectionPoint&lt;/i&gt; and which should be used to identify a permanent reference location at a vertical section which realizes the conceptual outfall of the catchment realized by the associated channel or water body. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -118,15 +118,14 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> streamCrossSection<br />
-						vertical section of a stream at right angles to the main (average) direction of flow.	
+						identifies a vertical section either at right angles to the main (average) direction of flow, or along a centerline, carrying a permanent reference location which realizes the outfall of the catchment which is realized by the water body.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink32" onclick="parent.toggleDiv('detailsDIVLink32','DetailsImageLink32')" />Details:
 							<div id="detailsDIVLink32" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">vertical section of the water body segment in transversal direction.</div>
-
+							&nbsp;
 							</div>
 						</div>
 					</td>
@@ -142,8 +141,7 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> bedProfileTransversal<br />
-						transversal shape of a channel in a vertical plane.
-	
+						identifies a transversal  vertical shape of a channel, carrying a permanent reference location which realizes the outfall of the catchment which is realized by the channel.	
 					</td>
 				</tr>
 				<tr>

@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">18/01/2017 09:36:28</td>
+			<td class="ObjectDetailsValue">19/01/2017 09:55:00</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,7 +91,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">informative, ChannelNetwork_extended, outfall_, Fig18: position outflow node, Fig19: position inflow node, Fig20: intermediate position , temp_overallOverview, <a href="../EA1.htm">Fig22: Hydro Feature</a>, <a href="../EA2/EA36.htm">Fig34: Outfall</a>, <a href="EA68.htm">River Positioning Classes with tags</a>, <a href="EA66.htm">Fig37: River Positioning System</a>, LR</td>
+			<td class="ObjectDetailsValue">informative, ChannelNetwork_extended, outfall_, Fig18: position outflow node, Fig19: position inflow node, Fig20: intermediate position , temp_overallOverview, LR, <a href="../EA1.htm">Fig22: Hydro Feature</a>, <a href="../EA2/EA36.htm">Fig34: Outfall</a>, <a href="EA68.htm">River Positioning Classes with tags</a>, <a href="EA66.htm">Fig37: River Positioning System</a></td>
 		</tr>
 	</table>
 	<div class="ObjectDetailsNotes">The HY_RiverReferenceSystem feature defines the catchment-specific linear reference system where the flowpath which realizes the catchment is the linear element forming the axis and the outfall of a catchment forms the origin where the flowpath starts. It is important to note, that the flowpath reflects the topological pattern of a catchment &#8216;bounded&#8217; by inflow and outflow, and does not necessarily reflect the direction of the natural flow. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_RiverReferenceSystem associates the &lt;i&gt;linearElement&lt;/i&gt; and the &lt;i&gt;origin&lt;/i&gt;. Constraints &lt;i&gt;start-at-outflow&lt;/i&gt;&#160; and &lt;i&gt;start-at-inflow&lt;/i&gt; are defined enforcing the start of the flowpath at the inflow or outflow of the realized catchment.&lt;br /&gt;&lt;/p&gt;</div>
@@ -210,7 +210,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints139" onclick="parent.toggleDiv('detailsDIVConstraints139','DetailsImageConstraints139')" />Details:
 							<div id="detailsDIVConstraints139" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">EXISTS origin , linearElement.realizedCatchment.outflow is of type HY_Outfall</div>
+							<div class="ObjectDetailsNotes">EXISTS linearElement.realizedCatchment.outflow , origin IS of type HY_Outfall</div>
 
 							</div>
 						</div>
@@ -225,7 +225,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints140" onclick="parent.toggleDiv('detailsDIVConstraints140','DetailsImageConstraints140')" />Details:
 							<div id="detailsDIVConstraints140" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">EXISTS origin , linearElement.realizedCatchment.inflow is of type HY_Outfall</div>
+							<div class="ObjectDetailsNotes">EXISTS linearElement.realizedCatchment.inflow , origin IS of type HY_Outfall</div>
 
 							</div>
 						</div>
