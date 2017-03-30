@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">12/01/2017 12:25:50</td>
+			<td class="ObjectDetailsValue">30/03/2017 10:46:55</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">surfacehydronetwork, Fig33_: Channel Network Realisation, Fig34_: Channel Realisation, <a href="../EA1.htm">Fig38: Requirements Class: Surface Hydro Feature</a>, <a href="EA9.htm">Fig40: Channel Network Realization</a>, <a href="EA11.htm">Fig41: Channel Realization</a>, <a href="../EA2/EA21.htm">WaterBody - Channel</a>, temp_overallOverview, temp_catchmentRealization_all, Fig24: Hydro Feature Special</td>
+			<td class="ObjectDetailsValue">surfacehydronetwork, Fig33_: Channel Network Realisation, Fig34_: Channel Realisation, temp_overallOverview, temp_catchmentRealization_all, Fig24: Hydro Feature Special, NEW_hydroComplex_all, <a href="../EA1.htm">Fig38: Requirements Class: Surface Hydro Feature</a>, <a href="EA9.htm">NEW_Fig40: Channel Network Realization</a>, <a href="EA11.htm">NEW_Fig41: Channel Realization</a>, <a href="../EA2/EA21.htm">WaterBody - Channel</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The HY_Depression feature type specializes the general HY_HydroFeature class. It describes land lower than the surrounding land as container for standing water. A depression is part of the network of channels and depressions forming the connecting system for the wherein water bodies stand as parts of hydrographic network.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_Depression inherits from generalization the &lt;i&gt;name&lt;/i&gt; property, and the &lt;i&gt;channel-path&lt;/i&gt; and &lt;i&gt;channel-edge&lt;/i&gt; constraints. It associates the &lt;i&gt;surfaceNetwork&lt;/i&gt; in which it participates, a body of &lt;i&gt;standingWater&lt;/i&gt; and a &lt;i&gt;confinedWaterBody&lt;/i&gt;. A &lt;i&gt;waterbody-edge&lt;/i&gt; constraint is defined to support the recognition of the confined water body as water edge realizing the catchment. An &lt;i&gt;outflow-at-benchmark&lt;/i&gt; constraint emphasizes the recognition of a benchmark on the confined water body as outflow of the catchment realized by the channel network. &lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_Depression feature type specializes the general HY_HydroFeature class. It describes land lower than the surrounding land as container for standing water. A depression is part of the network of channels and depressions forming the connecting system for the wherein water bodies stand as parts of hydrographic network.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_Depression inherits from generalization the &lt;i&gt;name&lt;/i&gt; property, and the &lt;i&gt;channel-path&lt;/i&gt; and &lt;i&gt;channel-edge&lt;/i&gt; constraints. It associates the &lt;i&gt;surfaceNetwork&lt;/i&gt; in which it participates, a body of &lt;i&gt;standingWater&lt;/i&gt; and a &lt;i&gt;confinedWaterBody&lt;/i&gt;. An &lt;i&gt;outflow-at-benchmark&lt;/i&gt; constraint emphasizes the recognition of a benchmark on the confined water body as (said to be coincident with) the outflow of the catchment that is realized by the surface network the depression is part of.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -112,30 +112,6 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA2/EA29.htm">«FeatureType» HY_WaterBodyStratum</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> confinedWaterBody<br />
-						identifies a stratum of water body  contained in the depression.	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink8" onclick="parent.toggleDiv('detailsDIVLink8','DetailsImageLink8')" />Details:
-							<div id="detailsDIVLink8" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">water body contained in the depression.</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
 						<a href="EA15.htm">«FeatureType» HY_ChannelNetwork</a><br />
 						Class &nbsp;
 					</td>
@@ -150,9 +126,33 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink8" onclick="parent.toggleDiv('detailsDIVLink8','DetailsImageLink8')" />Details:
+							<div id="detailsDIVLink8" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA2/EA29.htm">«FeatureType» HY_WaterBodyStratum</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> confinedWaterBody<br />
+						identifies a stratum of water body  contained in the depression.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink9" onclick="parent.toggleDiv('detailsDIVLink9','DetailsImageLink9')" />Details:
 							<div id="detailsDIVLink9" class="DetailsDiv" >
-							&nbsp;
+							<div class="ObjectDetailsNotes">water body contained in the depression.</div>
+
 							</div>
 						</div>
 					</td>
@@ -203,7 +203,7 @@ function nameClassifier(name, separator)
 					<td width="10%" class="TableHeading">Status</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">margin-edge</td>
+					<td width="80%" class="TableRow">outflow-at-benchmark</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>
@@ -211,21 +211,6 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints11" onclick="parent.toggleDiv('detailsDIVConstraints11','DetailsImageConstraints11')" />Details:
 							<div id="detailsDIVConstraints11" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">EXISTS surfaceNetwork, confinedWaterBody is of type HY_WaterEdge</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="80%" class="TableRow">outflow-at-benchmark</td>
-					<td width="10%" class="TableRow">Invariant</td>
-					<td width="10%" class="TableRow">Approved</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints12" onclick="parent.toggleDiv('detailsDIVConstraints12','DetailsImageConstraints12')" />Details:
-							<div id="detailsDIVConstraints12" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">EXISTS confinedWaterBody.benchmark.realizedOutfall, surfaceNetwork.realizedCatchment.outflow is of type HY_OutfallRealization</div>
 
 							</div>

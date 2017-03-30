@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>NamedFeature::HY_HydroFeatureContext</title>
+<title>HydroComplex::HY_CartographicRealization</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_HydroFeatureContext", " : "))</script>  : Public  &lt;&lt;DataType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_CartographicRealization", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">06/09/2009 16:42:27</td>
+			<td width="85%" class="ObjectDetailsValue">08/11/2010 09:25:52</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">15/06/2016 16:12:15</td>
+			<td class="ObjectDetailsValue">30/03/2017 10:01:40</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -51,7 +51,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
-			<td class="ObjectDetailsValue">Rob Atkinson</td>
+			<td class="ObjectDetailsValue"></td>
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
@@ -87,50 +87,32 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{B0C30046-2D87-4ace-9849-5AC91504A59A}</td>
+			<td class="ObjectDetailsValue">{AE854BA0-E282-44c2-BD6B-1A54A18566A7}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="../EA11.htm">Hydro Feature Special</a>, <a href="EA69.htm">Named Hydro Feature</a>, <a href="EA73.htm">Context Diagram : HY_HydroFeatureContext</a>, <a href="EA71.htm">Context Diagram : HY_HydroFeature</a></td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, hyf107, allClass Diagram, temp_overallOverview, temp_catchmentRealization_all, <a href="../EA1.htm">NEW_Fig22: Hydro Feature</a>, <a href="EA72.htm">NEW_Fig35: Catchment Realization</a>, <a href="EA24.htm">NEW_hydroComplex_all</a>, <a href="EA26.htm">Context Diagram : HY_CartographicRealization</a>, <a href="EA38.htm">Context Diagram : HY_CatchmentRealization</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">generally applicable characteristics assigned to the hydrologic feature in a spatial, temporal or classification context.</div>
+	<div class="ObjectDetailsNotes">The HY_CartographicRealization feature type realizes an &#39;un-realized&#39; catchment specifically as set of separate cartographic layers or maps.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_CartographicRealization specializes HY_CatchmentRealization with respect to a visualization of hydrologic features which may be connected at the representation level, or not. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Through generalization, HY_CartographicRealization inherits the &lt;i&gt;shape&lt;/i&gt; and &lt;i&gt;realizedCatchment&lt;/i&gt; properties.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
-			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
-		<div class="ItemBody" id="AssociationsFromTable">
-			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
-					<td width="40%" class="TableHeading">Element</td>
-					<td width="30%" class="TableHeading">Source Role</td>
-					<td width="30%" class="TableHeading">Target Role</td>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA77.htm">«FeatureType» HY_HydroFeature</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> hydroFeature<br />
-						hydrologic feature characterised in a given context.
-Note: Reference to the catchment - this is required to be navigable to allow discovery of catchments based on characteristics.
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> context<br />
-						context wherein the hydro feature characteristics are assigned.	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink83" onclick="parent.toggleDiv('detailsDIVLink83','DetailsImageLink83')" />Details:
-							<div id="detailsDIVLink83" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">characteristics assigned to the hydrologic feature in a spatial, temporal or classification context.</div>
-
-							</div>
-						</div>
-					</td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA83.htm">«FeatureType» HY_CatchmentRealization</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
 				</tr>
 
 			</table>

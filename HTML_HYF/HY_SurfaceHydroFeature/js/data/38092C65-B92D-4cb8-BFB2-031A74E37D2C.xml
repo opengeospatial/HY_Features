@@ -1,3 +1,3 @@
-tocTab[tocTab.length] = new Array("0.4:1", "", "Fig44: Reservoir Realization", "EARoot/EA4/EA40.htm", "175.png", "6928", "0", "", "Diagram diagram0","{1C7C5972-E85B-499f-9E24-D4FD16E909A1}");
-tocTab[tocTab.length] = new Array("0.4:2", "", "Reservoir_extended", "EARoot/EA4/EA42.htm", "175.png", "6929", "0", "", "Diagram diagram0","{AEB813A7-0D04-4f5e-BB4A-0963CE7FA173}");
-tocTab[tocTab.length] = new Array("0.4:3", "", "«FeatureType» HY_Reservoir", "EARoot/EA4/EA44.htm", "5.png", "14369", "0", "", "Class0","{E07A08BD-9953-4354-ACD1-9E3D8CBAA512}");
+tocTab[tocTab.length] = new Array("0.4:1", "", "NEW_Fig44: Reservoir Realization", "EARoot/EA4/EA38.htm", "175.png", "7299", "0", "", "Diagram diagram0","{1C7C5972-E85B-499f-9E24-D4FD16E909A1}");
+tocTab[tocTab.length] = new Array("0.4:2", "", "Reservoir_extended", "EARoot/EA4/EA40.htm", "175.png", "7300", "0", "", "Diagram diagram0","{AEB813A7-0D04-4f5e-BB4A-0963CE7FA173}");
+tocTab[tocTab.length] = new Array("0.4:3", "", "«FeatureType» HY_Reservoir", "EARoot/EA4/EA42.htm", "5.png", "14845", "0", "", "Class0","{E07A08BD-9953-4354-ACD1-9E3D8CBAA512}");

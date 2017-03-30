@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">12/01/2017 12:25:04</td>
+			<td class="ObjectDetailsValue">30/03/2017 10:47:15</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Network represents DendriticCatchment, Context Diagram : HY_TopographicNetwork, surfacehydronetwork, Fig33_: Channel Network Realisation, <a href="../EA1.htm">Fig38: Requirements Class: Surface Hydro Feature</a>, <a href="EA9.htm">Fig40: Channel Network Realization</a>, temp_overallOverview, temp_catchmentRealization_all</td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, Context Diagram : HY_TopographicNetwork, surfacehydronetwork, Fig33_: Channel Network Realisation, temp_overallOverview, temp_catchmentRealization_all, NEW_hydroComplex_all, <a href="../EA1.htm">Fig38: Requirements Class: Surface Hydro Feature</a>, <a href="EA9.htm">NEW_Fig40: Channel Network Realization</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The HY_ChannelNetwork feature type specializes the HY_HydroNetwork realization defined in the Hydro Feature core model, specifically as an aggregate of surface depressions and surface channels which continuously or periodically contain water, without imposing a particular drainage pattern. This allows to represent the network, even if logically connected features may or may not be connected at the representation level. If the realized catchment is connected with other catchments via outfall, the channel network is considered connected to the channel network realizing these catchments. If required, an application focused on the structures containing a water body may use the defined relationships s to describe the realization of a catchment by the channel network, or network parts associated with the hydrographic network.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_ChannelNetwork associates the &lt;i&gt;surfaceDepression&lt;/i&gt; and &lt;i&gt;surfaceChannel&lt;/i&gt;, and carries a &lt;i&gt;drainagePattern&lt;/i&gt; attribute; it inherits through generalization the &lt;i&gt;realizedCatchment&lt;/i&gt;, &lt;i&gt;flowpath&lt;/i&gt; and &lt;i&gt;waterEdge&lt;/i&gt; associations as well as &lt;i&gt;catchmentBoundary&lt;/i&gt; and &lt;i&gt;catchmentArea&lt;/i&gt; associations. Depending on the application, the channel network and the related features may be described by suitable attributes. A &lt;i&gt;channel-path&lt;/i&gt; and a &lt;i&gt;channel-edge&lt;/i&gt; constraint are defined to support the recognition of channel and depression as flowpath realizing the catchment. &lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_ChannelNetwork feature type specializes the HY_HydroNetwork realization defined in the Hydro Feature core model, specifically as an aggregate of surface depressions and surface channels which continuously or periodically contain water, without imposing a particular drainage pattern. This allows to represent the network, even if logically connected features may or may not be connected at the representation level. If the realized catchment is connected with other catchments via a hydrologic nexus, the channel network is considered connected to the channel networks realizing these catchments. If required, an application focused on the structures containing a water body may use the defined relationships s to describe the realization of a catchment by the channel network, or network parts associated with the hydrographic network.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_ChannelNetwork associates the &lt;i&gt;surfaceDepression&lt;/i&gt; and &lt;i&gt;surfaceChannel&lt;/i&gt;, and carries a &lt;i&gt;drainagePattern&lt;/i&gt; attribute; it inherits through generalization the &lt;i&gt;realizedCatchment&lt;/i&gt;, &lt;i&gt;catchmentOutlet&lt;/i&gt;, &lt;i&gt;flowpath,&lt;/i&gt; &lt;i&gt;catchmentDivide&lt;/i&gt; and &lt;i&gt;catchmentArea &lt;/i&gt;associations. A &lt;i&gt;channel-path&lt;/i&gt; constraint is defined to support the recognition of channel and depression as flowpath realizing the catchment. Depending on the application, the channel network and the related features may be described by suitable attributes.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -115,26 +115,26 @@ function nameClassifier(name, separator)
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes18')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes18" border="0" />Details:
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes17')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes17" border="0" />Details:
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes18_00" style="display: none;">
+						<tr id="DetailsImageAttributes17_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes18_01" style="display: none;">
+						<tr id="DetailsImageAttributes17_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes18_02" style="display: none;">
+						<tr id="DetailsImageAttributes17_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes18_03" style="display: none;">
+						<tr id="DetailsImageAttributes17_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes18_03" style="display: none;">
+						<tr id="DetailsImageAttributes17_03" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td>Range:0 to 1</td>
 						</tr>
@@ -180,8 +180,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink19" onclick="parent.toggleDiv('detailsDIVLink19','DetailsImageLink19')" />Details:
-							<div id="detailsDIVLink19" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink18" onclick="parent.toggleDiv('detailsDIVLink18','DetailsImageLink18')" />Details:
+							<div id="detailsDIVLink18" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
@@ -203,8 +203,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink20" onclick="parent.toggleDiv('detailsDIVLink20','DetailsImageLink20')" />Details:
-							<div id="detailsDIVLink20" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink19" onclick="parent.toggleDiv('detailsDIVLink19','DetailsImageLink19')" />Details:
+							<div id="detailsDIVLink19" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">network of one or more channels.</div>
 
 							</div>
@@ -228,24 +228,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints21" onclick="parent.toggleDiv('detailsDIVConstraints21','DetailsImageConstraints21')" />Details:
-							<div id="detailsDIVConstraints21" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints20" onclick="parent.toggleDiv('detailsDIVConstraints20','DetailsImageConstraints20')" />Details:
+							<div id="detailsDIVConstraints20" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">EXISTS flowpath, surfaceChannel and surfaceDepression&#160; are of type HY_Flowpath</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="80%" class="TableRow">channel-edge</td>
-					<td width="10%" class="TableRow">Invariant</td>
-					<td width="10%" class="TableRow">Approved</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints22" onclick="parent.toggleDiv('detailsDIVConstraints22','DetailsImageConstraints22')" />Details:
-							<div id="detailsDIVConstraints22" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">EXISTS wateredge, surfaceChannel and surfaceDepression&#160; are of type HY_WaterEdge</div>
 
 							</div>
 						</div>
