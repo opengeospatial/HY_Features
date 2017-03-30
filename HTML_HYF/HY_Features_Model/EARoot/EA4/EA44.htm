@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HY_Reservoir</title>
+<title>Storage::HY_Reservoir</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">29/09/2016 09:47:54</td>
+			<td class="ObjectDetailsValue">12/01/2017 12:55:42</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">surfacehydronetwork, Fig37_: Reservoir Realisation, <a href="../EA3.htm">Fig38: Requirements Class: Surface Hydro Feature</a>, <a href="EA40.htm">Fig44: Reservoir Realization</a>, <a href="EA42.htm">Reservoir_extended</a>, temp_overallOverview, temp_catchmentRealization_all</td>
+			<td class="ObjectDetailsValue">surfacehydronetwork, Fig37_: Reservoir Realisation, <a href="../EA1.htm">Fig38: Requirements Class: Surface Hydro Feature</a>, <a href="EA40.htm">Fig44: Reservoir Realization</a>, <a href="EA42.htm">Reservoir_extended</a>, temp_overallOverview, temp_catchmentRealization_all</td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">volume of water, used for storage, regulation and control of water resources. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_Reservoir feature type describes the water body, either natural or man-made, used for storage, regulation and control of water resources. The reservoir concept refers to a volume of water managed in zones between operating levels. &lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_Reservoir feature type describes the water body, either natural or man-made, used for storage, regulation and control of water resources. The reservoir concept refers to a volume of water managed in zones between operating levels. HY_Reservoir associates to a reservoir the &lt;i&gt;storedWaterBody&lt;/i&gt; and a &lt;i&gt;reservoirZone&lt;/i&gt;. </div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -115,12 +115,11 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> storage<br />
-						storage characteristics of the reservoir. 
-
+						identifies a reservoir storing water as a resource for future use. This may be used to describe storage characteristics of the water body participating in the hydrographic network. 
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> storedWaterBody<br />
-						network water body that specifies the connectivity of the storage reservoir in the hydrographic network.	
+						identifies the network water body that specifies the connectivity of the storage reservoir in the hydrographic network	
 					</td>
 				</tr>
 				<tr>
@@ -150,7 +149,7 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> reservoirZone<br />
-						horizontal layer in the reservoir, e.g. management zone, flood control zone
+						identifies the water body stratum used for storage, for example a management zone, or flood control zone.
 
 					</td>
 					<td width="30%" class="TableRow" valign="top">

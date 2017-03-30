@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>RiverPositioningSystem</title>
+<title>RiverReferencing</title>
 <link href="../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,7 +34,7 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("RiverPositioningSystem", " : "))</script>  : Public  &lt;&lt;leaf&gt;&gt; Package</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("RiverReferencing", " : "))</script>  : Public  &lt;&lt;leaf&gt;&gt; Package</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">12/01/2017 12:10:15</td>
+			<td class="ObjectDetailsValue">30/03/2017 12:06:25</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -94,7 +94,7 @@ function nameClassifier(name, separator)
 			<td class="ObjectDetailsValue"></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The River Positioning System (Figure 37) provides a simple model to place a feature of interest &#39;on a river&#39;. It introduces the concept of indirect position where a position is determined relative to an already established reference location. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This concept uses a linear river reference system whose origin is set at the outfall of a catchment, and whose linear shape is given by a flowpath realizing the catchment between its outfall and another known outfall. It is important to note, that each logical catchment has its own reference system, and must have one outfall (origin) and one linear flowpath realization (shape). &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The River Positioning System references the one-dimensional topological realization of catchment and outfall within the implied hydrologic complex in such that the origin and the already located referent are nodes on the boundary of the same flowpath. Given that a flowpath realizes a logical catchment between inflow and outflow nodes, the feature of interest is either the inflow or the outflow node located at flowpath start, while the location being referenced is located at the upstream or downstream end of the flowpath. Using located referents in both directions allows placement of a feature of interest interpolative between inflow and outflow nodes on a flowpath even if the realized catchment is not explicitly delineated. &lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The River Positioning System (Figure 37) provides a simple model to place a feature of interest &#39;on a river&#39;. It introduces the concept of indirect position where a position is determined relative to an already located referent, usually the outlet of a catchment, or a feature recognized as (said to be coincident with) thh outlet.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This concept uses a linear river referencing using the flowpath realizing a particular catchment as linear element along which as position can be assigned to a feature of interest relative to the catchment&#39;s outlet located on that flowpath. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The River Referencing references the one-dimensional topological realization of catchment within the implied hydrologic complex in such that the already located referent may be recognized as a node on the boundary of the flowpath edge. Given that a flowpath realizes a particular catchment between inflow and outflow, the catchment outlet realizing that catchment forms the known referent located either at the upstream or the downstream end of the flowpath. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;A feature of interest then can be located along the flowpath referencing the located catchment&#160; outlet, or a feature that is recognized as (said to be coincident with) the outlet (Figures 18 and Figure 19).&#160; The position of is expressed/measured as distance from that catchment outlet. Using located referents in both directions allows placement of a feature of interest between both referents and expression of the intermediate position as percentage of the measured distance (Figure 20).&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">

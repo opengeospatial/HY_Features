@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">12/01/2017 12:29:15</td>
+			<td class="ObjectDetailsValue">30/03/2017 10:33:41</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Network represents DendriticCatchment, catchmentnetwork, ChannelNetwork_extended, surfacehydronetwork, Fig35_: Hydrographic Network Realisation, <a href="../EA1.htm">Fig38: Requirements Class: Surface Hydro Feature</a>, <a href="EA17.htm">Fig42: Hydrographic Network Realization</a>, temp_overallOverview, temp_catchmentRealization_all</td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, catchmentnetwork, ChannelNetwork_extended, surfacehydronetwork, Fig35_: Hydrographic Network Realisation, temp_overallOverview, temp_catchmentRealization_all, NEW_hydroComplex_all, <a href="../EA1.htm">Fig38: Requirements Class: Surface Hydro Feature</a>, <a href="EA17.htm">NEW_Fig42: Hydrographic Network Realization</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The HY_HydrographicNetwork feature type specializes the HY_HydroNetwork realization defined in the Hydro Feature core model, specifically as aggregate of permanent or temporary bodies of water standing in depressions or moving in channels. If the realized catchment is connected with other catchments via outfall, the hydrographic network is considered connected to the network realizing these catchments. This allows to represent the network, even if logically connected features may or may not be connected at the representation level. If required, an application focused on surface-water bodies contained in channels or depressions may use the defined relationships s to describe the realization of a catchment by the hydrographic network, or network parts associated with the channel network.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_HydrographicNetwork inherits from generalization the &lt;i&gt;realizedCatchment&lt;/i&gt;, &lt;i&gt;flowpath&lt;/i&gt; and &lt;i&gt;waterEdge&lt;/i&gt;, as well as &lt;i&gt;catchmentBoundary&lt;/i&gt; and &lt;i&gt;catchmentArea&lt;/i&gt; associations, and associates a &lt;i&gt;networkWaterBody&lt;/i&gt;. A &lt;i&gt;flowline&lt;/i&gt; and a &lt;i&gt;water-edge&lt;/i&gt; constraint support the recognition of the water body as flowpath realizing the catchment. &lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_HydrographicNetwork feature type specializes the HY_HydroNetwork realization defined in the Hydro Feature core model, specifically as aggregate of permanent or temporary bodies of water standing in depressions or moving in channels. If the realized catchment is connected with other catchments via a hydrologic nexus, the hydrographic network is considered connected to the networks realizing these catchments. This allows to represent the network, even if logically connected features may or may not be connected at the representation level. If required, an application focused on surface-water bodies contained in channels or depressions may use the defined relationships s to describe the realization of a catchment by the hydrographic network, or network parts associated with the channel network.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_HydrographicNetwork inherits through generalization the &lt;i&gt;realizedCatchment&lt;/i&gt;, &lt;i&gt;catchmentOutlet&lt;/i&gt;, &lt;i&gt;flowpath,&lt;/i&gt; &lt;i&gt;catchmentDivide&lt;/i&gt; and &lt;i&gt;catchmentArea &lt;/i&gt;associations, and associates a &lt;i&gt;networkWaterBody&lt;/i&gt;. A &lt;i&gt;flowline&lt;/i&gt; constraint supports the recognition of the water body as flowpath realizing the catchment. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -126,8 +126,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink38" onclick="parent.toggleDiv('detailsDIVLink38','DetailsImageLink38')" />Details:
-							<div id="detailsDIVLink38" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink36" onclick="parent.toggleDiv('detailsDIVLink36','DetailsImageLink36')" />Details:
+							<div id="detailsDIVLink36" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">hydrographic network of one or more water bodies.</div>
 
 							</div>
@@ -151,24 +151,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints39" onclick="parent.toggleDiv('detailsDIVConstraints39','DetailsImageConstraints39')" />Details:
-							<div id="detailsDIVConstraints39" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints37" onclick="parent.toggleDiv('detailsDIVConstraints37','DetailsImageConstraints37')" />Details:
+							<div id="detailsDIVConstraints37" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">EXISTS flowpath, networkWaterBody is of type HY_Flowpath</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="80%" class="TableRow">waterbody-edge</td>
-					<td width="10%" class="TableRow">Invariant</td>
-					<td width="10%" class="TableRow">Approved</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints40" onclick="parent.toggleDiv('detailsDIVConstraints40','DetailsImageConstraints40')" />Details:
-							<div id="detailsDIVConstraints40" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">EXISTS wateredge, networkWaterBody is of type HY_WaterEdge</div>
 
 							</div>
 						</div>
