@@ -1,0 +1,140 @@
+https://github.com/opengeospatial/HY_Features/issues/184
+Comment:  
+
+Hello,
+I strongly suggest the term "outfall" be avoided in the HY Features model. In normal parlance, outfalls are associated with sewage as the place where a sewer empties into a water body, ocean, or stream. Also, "outfall" does connote drainage of a basin.
+I suggest instead a more neutral term that does not connote sewage, and yet still connotes draining of an arbitrary basin.
+I suggest instead: "POUR POINT”.
+Another possibility is "OUT FLOW". Another neutral term that does not connote sewage, and yet still connotes draining of an arbitrary basin.
+Thank you and best regards,
+Michael Tinker
+National Geospatial Technical Operations Center
+US Geological Survey
+
+Response:
+The SWG has renamed HY_OutFall to HY_HydroNexus, have a HY_HydroLocation in place of HY_OutfallRealization, and added an additional catchment realization “HY_CatchmentOutlet” to encompass the concept of pour point. OutFall is no longer used as a normative term in the specification.
+
+https://github.com/opengeospatial/HY_Features/issues/201
+Comment:
+
+Obstacles such as falls, rapids, dams, and barrages are given as realizations of outfalls, as are hydrometric stations and other entities (Annex B). On page 54 the following statement is given: “The outfall represents the logical place where a catchment interacts with another catchment, i.e. where the outflow of a contributing catchment becomes inflow into a receiving catchment.” So presumably outfall plays different roles, that quoted plus a general term for obstacle, and perhaps other roles as well. Is this correct? Note that many falls and rapids are fairly small and practically would not have realized catchments associated with them. This also applies to many small dams that were built a century ago and are no longer treated as active control structures.
+Pour point, outfall, hydrometric feature. Pour point is not found either in this document or the International Glossary of Hydrography. Presumably it can be treated as a hydrometric feature, whether or not it is part of a hydrometric network. Of interest here is the correct term for arbitrary positions along a flow path for which a hydrologist might want a catchment defined to feed hydrologic models. Presumably these positions can all be considered as outfalls. Is this correct?
+
+Response:
+The term "outfall" is no longer going to be used in the normative specification. It was being used in several ways which lead to confusion. The feature that was HY_OutFall is now named HY_HydroNexus to be clear that this is a feature meant to represent the logical place where a catchment interacts with another. An additional catchment realization, HY_CatchmentOutlet, as been added to encompass the concept of "pour point". What was HY_OutfallRealization is now named HY_HydroLocation and is meant to represent features that are referenced to the network and, if catchments were realized to accompany them, could become HY_CatchmentOutlet or HY_HydroNexus features. This clarification will be made in the spec.
+
+https://github.com/opengeospatial/HY_Features/issues/197
+Comment:
+
+The term order is used, as in “... potential constraints between higher-order catchments ...” (page 20). Order is not defined in the document, although stream order (especially as defined by Strahler) and watershed order are commonly used in various domains. As order may be defined in many ways, definitions and a brief discussion would seem to be warranted. Alternatively the term could be ignored altogether in favor of degrees of catchment containment, but this would likely be less acceptable, and in any case would not reference the stream network directly.
+
+Response:
+Will scan document for the term "order". Ensure consistent usage.
+
+https://github.com/opengeospatial/HY_Features/issues/208
+Comment:
+
+Sources, specifically glaciers and wetlands. Section 7.4.2.5 contains a brief discusion of snowfields and glaciers. Given that meltwater from them serves as the principal water source for a significant number of people around the world, a somewhat larger discussion of them may be in order. Similarly, wetlands located in a variety of terrain positions are hugely important water resources that hold very large volumes of water. They are briefly mentioned in section 6.3. It may be worth considering “source” (or some other term?) as a hydrologic feature (Figure 24) that includes snowfields and glaciers, and perhaps wetlands as well.
+
+Response:
+The SWG recognizes the features the reviewer mentions as important. However, these specific features are out of the intended scope of HY_Features, their recognition in the specification should lead future work or implementations without attempting to standardize features that are intentionally out of scope. Further clarification that these features are out of scope for this specification will be added to the specification.
+
+https://github.com/opengeospatial/HY_Features/issues/208
+Comment:
+
+Temporal. Time is clearly relevant here, especially as one of the objectives is to support varying “... spatial and temporal representations.” Perhaps it is too detailed or seen as out of scope for this document, but a brief discussion of feature succession might be in order when remapping for example occurs. (Note though that in the temporal schema (191081S(E)2002) it is stated in section 5.5.4.2.3: “There are both spatial and temporal aspects to feature succession, in that the feature instances in the association occupy the same spatial location, at different times and in a particular order.” If a braided stream replaces a single line stream, then strictly speaking the spatial location is not the same - assuming that location is synonymous with position. Even if the new mapping involves no braids, the flowpath(s)/channel(s) may have moved.) Another notion of temporal pertains to time series, as related for example to hydrometric station data. This may also be worth mentioning, but it is a different case from the issue described above. Also different (and as discussed at the Canada-US Salt Lake City meeting) is network connectivity that differs under differing flow regimes. This is significant in many different environments and again should be noted.
+
+Response:
+While these temporal issues are clearly important, they are purposefully out of scope for HY_Features. An implementation, or future standardization work may attempt to take on these issues. A note regarding temporal aspects of features being out of scope will be added to the specification.
+
+https://github.com/opengeospatial/HY_Features/issues/208
+Comment:
+
+Feature identifiers. Perhaps this is an implementation detail. Nevertheless, a discussion of options or alternatives would be useful. For example if URLs are to be supported, then that might be of interest to state; if they are, then a statement about their preferred or expected structure would be helpful. If identifiers can be “intelligent” or “meaningless” or anything else that some organization wishes to use, then that might be worth stating, as would a comment about whether or not the identifiers can be expected to be permanent, immutable and globally unique.
+
+Response:
+Since HY_Features is a conceptual model, such implementation details are out of scope. A future implementation of the conceptual model would clearly need to answer questions such as these, but this is out of scope for the current specification.
+
+https://github.com/opengeospatial/HY_Features/issues/203
+Comment:
+
+Reach and reach catchment. As the term reach is not used, neither is reach catchment. The concepts though are discussed and illustrated in figures. Nevertheless, some crucial ideas are missing. A reach is a constrained notion of a flowpath, every instance of these flowpaths has a corresponding catchment, and these catchments form a true coverage. This is worth stating, but to do so requires that an elementary flowpath equivalent to a reach be defined. Additionally, if a hydrographic network is simplified by removing shorter first-order streams (or smaller first-order catchments or some other related measure) iteratively to the desired level of generalization, then the corresponding catchments become aggregations of the original catchments. Arguably this is an important property when trying to relate representations at different scales. The notion of a reach catchment is fundamental to the NHD and will likely be in a future version of Canada’s NHN. Some hydrology packages require reach catchments. So it would be very germane for HY_Features to recognize the concept in some fashion. Please also see related comments found a couple of pages below on directed graph and topology.
+
+Reach catchments are of fundamental importance, both conceptually and literally as a basic unit of aggregation. They are required by some widely used hydrologic software packages such as SPARROW. It is recommended that reaches and reach catchments be recognized in HY_Features, although other terms could be used. For example, an elementary flowpath could be specified as a flowpath constrained such that its interior (the line minus its endpoints) cannot include confluences. An e lementary catchment has a one-to-one relationship with an elementary flowpath. Aggregation is relevant to both.
+
+Response:
+A section regarding the "scheme" of an implemented dataset with regard to HY_Features will be added. The "reach-catchment" arrangement described here is clearly a "scheme" that is supported by HY_Features and will be used to illustrate the "scheme" concept. 
+
+https://github.com/opengeospatial/HY_Features/issues/202
+Comment:
+
+Contracted node. The concept behind this Australian Hydrological Geospatial Fabric term is very useful. Based on a recent Canada-US meeting in Salt Lake City, this idea is likely to be critical to information sharing between the two countries and to data management within each country. An alternative name might be identified outfall. The document does not at this point discuss nodes (a topological construct) and contracted refers to contract, but could be confused with contraction, as in contraction hierarchy, a connected graph construct. The Australian fabric document also discussed confidence levels associated with the contracted nodes, which is a useful concept that should be included. The document also refers to contracted catchments and contracted areas associated with the contracted nodes. Potentially these could be named identified catchments.
+
+Contracted nodes emerged at a recent Canada-US meeting in Salt Lake City as a hugely useful concept in bridging the gap between an approach requiring identifiers on every feature of interest (relevant to linked open data and the Internet of Things) and an alternative approach with no identifiers (relevant to very high feature density resulting from lidar or high resolution imagery based mapping that may be updated relatively frequently). This is far more than an implementation detail. The terms identified outfall and identified catchment were suggested earlier in this note to build on the terminology currently in HY_Features and to emphasize the idea of identifiers. Regardless of the terms used, the concepts have clear ramifications as to how such data is managed, used and queried. They should be included in HY_Features.
+
+Response:
+The SWG will ellaborate on the idea that a given dataset may have some “contracted” catchments that are published at a higher level of confidence or implied permanence of identity than others but that this model is not specifying such implementation / governance issues.
+
+Additionally, we will clarify that contracted is in relation to feature identity being permanent according to a contract. "recognized" may be a good term in place of contracted.
+
+https://github.com/opengeospatial/HY_Features/issues/207
+Comment:
+Topology. In HY_Features, core concepts include catchments and outfalls. The hydrographic networks are considered as realizations of these dual concepts. Arguably the underlying model does not care whether the networks are topologically clean. This is a very serious limitations of the document, and not a good one! The idea of topological network constraints is fundamental to many implemented hydrographic specifications. It also is the enabling mechanism tieing geometry to graph, allowing for a range of spatial/topological and graph algorithms to be applied. In addition to the outfalls, flowpaths and catchments forming connected graphs, reach catchments form classic coverages; this is a fundamental notion not adequately addressed in Sections 6.2 and 6.3 or elsewhere. Topology should not be seen as mostly an implementation detail outside the document’s scope. HY_Features will have a much more prominent role if appropriate discussion is included. This may also make it more practical to relate this work to the surface water ontology effort by Varanka and Usery.
+
+Draft Response:
+
+https://github.com/opengeospatial/HY_Features/issues/207
+Comment:
+Directed graph. This term is not used in the document. The notion that stream networks (at least linear flowpath networks within containing catchments), dendritic or otherwise, can be represented as acyclic directed graphs is of consequence. (Cyclic structures may exist, but outside of tidal situations, water flows in only one direction making its behaviour acyclic in a graph context.) It has ramifications in terms of query processing of upstream/downstream relationships for example (without resorting to using a river reference system or intelligent identifiers). It can also be related to RDF, which is mentioned as a future objective.
+
+Draft Response:
+
+https://github.com/opengeospatial/HY_Features/issues/207
+Comment:
+Degree (or valency) of a node (vertex). This really is another graph theoretic construct. It may be worth discussing whether any assumptions exist regarding the minimum or maximum degree of nodes at upstream or downstream endpoints where flowpath segments meet. This relates to the notion of a fundamental flowpath instance, to a dendritic structure, and to some stream coding systems that have been used historically and that may be relevant to some software.
+
+Draft Response:
+
+https://github.com/opengeospatial/HY_Features/issues/207
+Comment:
+Most hydrographic mapping involves strict adherence to topological rules. They guarantee that a perfectly behaved network is manifest in the data and that both graph and spatial methodologies can be successfully deployed. It can be claimed that these conditions and behavior are guaranteed by the assumed relationships among the catchments. Arguably this is true, but only to a degree, and in any case a direct discussion of network topology and related graph theory would be of much practical benefit. It need not be lengthy. Whether it should necessarily be considered as normative needs further discussion.
+
+Draft Response:
+
+https://github.com/opengeospatial/HY_Features/issues/211
+Comment:
+Linear referencing is emphasized. It remains one option that is used currently in the US in particular but it comes with a high maintenance cost while adding complexity to update strategies. Also as applied, it often forces unnecessary simplification in non-dendritic systems. Graph traversal techniques and localized spatial search routines are now available that are far simpler to maintain, that involve fewer constraints on the data and that can be implemented as services. Linear referencing as applied to hydrography was first used (to our knowledge) on large hydrographic systems in the 1980s in British Columbia. Fast graph theoretic approaches and fast topological/spatial techniques came about much later. They should not be discounted. Consider how Google supports route planning or what the open source G raphHopper and JTS packages provide.
+
+Draft Response:
+Note that linear referencing need not be the only way to locate features on the network.
+
+https://github.com/opengeospatial/HY_Features/issues/210
+Comment:
+Implementation examples. The document defines a feature model but gives no guidance regarding implementation. On page 1 there is mention of an OWL/RDF implementation to follow. Nevertheless, at this point even some small implementation examples in a simple tabular form would be of benefit. Perhaps this could be handled by a single example describing a few different features.
+
+Draft Response:
+Note that an interoperability experiment to define this is planned.
+
+https://github.com/opengeospatial/HY_Features/issues/209
+Comment:
+General comment about scale and ephemeral. Increasingly lidar and high resolution imagery are being used for topographic mapping purposes. Very detailed linear forms and depressions are / will be captured that may be considered as ephemeral drainage elements. It would be instructive to know if the HY_ChannelNetwork feature type is intended to cover such features, even though they may not be fully connected.
+
+Elevation. The relationship between hydrography / hydrologic features and elevation is not discussed. It may be useful as background to briefly discuss the relationships.
+
+Draft Response:
+Note that HY_ChannelNetwork may represent topo-bathy channels. Generally clarify the idea of “container” as elevation.
+
+https://github.com/opengeospatial/HY_Features/issues/206
+Comment:
+Flowpath direction/orientation. Throughout the document the terms “downstream flowpath” and “upstream flowpath” are used. Cases are described for each of these. If one wants to trace a path through a stream network, guidance appears to be available from the tags upstreamFlowpathStart and downstreamFlowpathStart (Figure 13). If one were interested only in the flowpaths, and not the catchments, are these tags the means by which tracing could be done? This specific issue does not seem to be addressed explicitly in the document. However, on page 76 the list of properties of a waterbody includes upstreamWaterBody and downstreamWaterBody. Presumably these provide another option, assuming that the flowpaths and the waterbodies are associated.
+
+Draft Response:
+Clarify network navigation in the case that a dataset only includes flowpaths would be supported by an implementation and may be the subject of future standardization efforts, but is not explicitely in scope for HY_Features.
+
+https://github.com/opengeospatial/HY_Features/issues/205
+Comment:
+The terms mainstem and HY_FlowPath. It is stated that a mainstem can be defined by a single flowpath; presumably it could also be defined by a collection of connected flowpaths. Is this correct? Can a confluence to confluence stream segment be broken into multiple flowpaths, and if so, are there any constraints on the segmentation?
+
+Draft Response:
+Further elaborate how HY_Flowpath may be made up of many sub-catchment’s HY_Flowpaths.
+
