@@ -82,25 +82,29 @@ Comment:
 Topology. In HY_Features, core concepts include catchments and outfalls. The hydrographic networks are considered as realizations of these dual concepts. Arguably the underlying model does not care whether the networks are topologically clean. This is a very serious limitations of the document, and not a good one! The idea of topological network constraints is fundamental to many implemented hydrographic specifications. It also is the enabling mechanism tieing geometry to graph, allowing for a range of spatial/topological and graph algorithms to be applied. In addition to the outfalls, flowpaths and catchments forming connected graphs, reach catchments form classic coverages; this is a fundamental notion not adequately addressed in Sections 6.2 and 6.3 or elsewhere. Topology should not be seen as mostly an implementation detail outside the document’s scope. HY_Features will have a much more prominent role if appropriate discussion is included. This may also make it more practical to relate this work to the surface water ontology effort by Varanka and Usery.
 
 Draft Response:
+While the SWG appreciates the idea the topology should not be seen as mostly an implementation detail, HY_Features was intentionally designed to 1) leave details of geometry and topology implementation largely up to implementors of hydrologic / hydrographic data sets/standards/systems and 2) allow future standardization efforts to specify such details as the comunity has a need for such a standard and the energy to establish one. For these reasons, details of topology in catchment realization and representation are left up to implementors and future standards activites.
 
 https://github.com/opengeospatial/HY_Features/issues/207
 Comment:
 Directed graph. This term is not used in the document. The notion that stream networks (at least linear flowpath networks within containing catchments), dendritic or otherwise, can be represented as acyclic directed graphs is of consequence. (Cyclic structures may exist, but outside of tidal situations, water flows in only one direction making its behaviour acyclic in a graph context.) It has ramifications in terms of query processing of upstream/downstream relationships for example (without resorting to using a river reference system or intelligent identifiers). It can also be related to RDF, which is mentioned as a future objective.
 
 Draft Response:
+Terminology from non-hydrology domains, especially as it pertains to data system implementation is avoided. The specifics of a graph described by hydrologic information is very much an implementation detail that, while an important aspect of some hydrologic data systems, is not a core feature of the HY_Features model. Directed graphs are supported by the catchment-hydroNexus model and a note to that affect will be added. 
 
 https://github.com/opengeospatial/HY_Features/issues/207
 Comment:
 Degree (or valency) of a node (vertex). This really is another graph theoretic construct. It may be worth discussing whether any assumptions exist regarding the minimum or maximum degree of nodes at upstream or downstream endpoints where flowpath segments meet. This relates to the notion of a fundamental flowpath instance, to a dendritic structure, and to some stream coding systems that have been used historically and that may be relevant to some software.
 
 Draft Response:
+This level of graph construct is well out of scope for HY_Features. While important for some implementations, it will not be included in the standard.
 
 https://github.com/opengeospatial/HY_Features/issues/207
 Comment:
 Most hydrographic mapping involves strict adherence to topological rules. They guarantee that a perfectly behaved network is manifest in the data and that both graph and spatial methodologies can be successfully deployed. It can be claimed that these conditions and behavior are guaranteed by the assumed relationships among the catchments. Arguably this is true, but only to a degree, and in any case a direct discussion of network topology and related graph theory would be of much practical benefit. It need not be lengthy. Whether it should necessarily be considered as normative needs further discussion.
 
 Draft Response:
-
+In the experience of the SWG, the premise of this comment does not hold. That is, "Most hydrographic mapping involves strict adherence to topological rules." is simple not the case. It is quite rare that idealized topological rules are strictly followed, in fact it is the exception to the rule. For this reason, HY_Features seaks to provide a set of hydrologic data types and relationships that can be used to allow identification and encapsulation of the complexity (read messiness) of real-world hydrologic data. Given this goal, a discussion of topological rules for hydrologic data is avoided and is left to future work.
+ 
 https://github.com/opengeospatial/HY_Features/issues/211
 Comment:
 Linear referencing is emphasized. It remains one option that is used currently in the US in particular but it comes with a high maintenance cost while adding complexity to update strategies. Also as applied, it often forces unnecessary simplification in non-dendritic systems. Graph traversal techniques and localized spatial search routines are now available that are far simpler to maintain, that involve fewer constraints on the data and that can be implemented as services. Linear referencing as applied to hydrography was first used (to our knowledge) on large hydrographic systems in the 1980s in British Columbia. Fast graph theoretic approaches and fast topological/spatial techniques came about much later. They should not be discounted. Consider how Google supports route planning or what the open source G raphHopper and JTS packages provide.
