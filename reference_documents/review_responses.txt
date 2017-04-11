@@ -12,7 +12,7 @@ National Geospatial Technical Operations Center
 US Geological Survey
 
 Response:
-The SWG has renamed HY_OutFall to HY_HydroNexus, have a HY_HydroLocation in place of HY_OutfallRealization, and added an additional catchment realization “HY_CatchmentOutlet” to encompass the concept of pour point. OutFall is no longer used as a normative term in the specification.
+The SWG has renamed HY_OutFall to HY_HydroNexus, have a HY_HydroLocation in place of HY_OutfallRealization, and added an HY_HydroLocation type of pour point in addition to outlet and others to encompass the concept of pour point. OutFall is no longer used as a normative term in the specification.
 
 https://github.com/opengeospatial/HY_Features/issues/201
 Comment:
@@ -103,21 +103,21 @@ Comment:
 Most hydrographic mapping involves strict adherence to topological rules. They guarantee that a perfectly behaved network is manifest in the data and that both graph and spatial methodologies can be successfully deployed. It can be claimed that these conditions and behavior are guaranteed by the assumed relationships among the catchments. Arguably this is true, but only to a degree, and in any case a direct discussion of network topology and related graph theory would be of much practical benefit. It need not be lengthy. Whether it should necessarily be considered as normative needs further discussion.
 
 Draft Response:
-In the experience of the SWG, the premise of this comment does not hold. That is, "Most hydrographic mapping involves strict adherence to topological rules." is simple not the case. It is quite rare that idealized topological rules are strictly followed, in fact it is the exception to the rule. For this reason, HY_Features seaks to provide a set of hydrologic data types and relationships that can be used to allow identification and encapsulation of the complexity (read messiness) of real-world hydrologic data. Given this goal, a discussion of topological rules for hydrologic data is avoided and is left to future work.
+In the experience of the SWG, the premise of this comment does not hold. That is, "Most hydrographic mapping involves strict adherence to topological rules." is simply not the case. It is quite rare that idealized topological rules are strictly followed, in fact it is the exception to the rule. For this reason, HY_Features seaks to provide a set of hydrologic data types and relationships that can be used to allow identification and encapsulation of the complexity (read messiness) of real-world hydrologic data. Given this goal, a discussion of topological rules for hydrologic data is avoided and is left to future work.
  
 https://github.com/opengeospatial/HY_Features/issues/211
 Comment:
 Linear referencing is emphasized. It remains one option that is used currently in the US in particular but it comes with a high maintenance cost while adding complexity to update strategies. Also as applied, it often forces unnecessary simplification in non-dendritic systems. Graph traversal techniques and localized spatial search routines are now available that are far simpler to maintain, that involve fewer constraints on the data and that can be implemented as services. Linear referencing as applied to hydrography was first used (to our knowledge) on large hydrographic systems in the 1980s in British Columbia. Fast graph theoretic approaches and fast topological/spatial techniques came about much later. They should not be discounted. Consider how Google supports route planning or what the open source G raphHopper and JTS packages provide.
 
 Draft Response:
-Note that linear referencing need not be the only way to locate features on the network.
+We have added a note that linear referencing need not be the only way to locate features on the network but alternate methods are up to individual implementations and/or future standardization efforts.
 
 https://github.com/opengeospatial/HY_Features/issues/210
 Comment:
 Implementation examples. The document defines a feature model but gives no guidance regarding implementation. On page 1 there is mention of an OWL/RDF implementation to follow. Nevertheless, at this point even some small implementation examples in a simple tabular form would be of benefit. Perhaps this could be handled by a single example describing a few different features.
 
 Draft Response:
-Note that an interoperability experiment to define this is planned.
+A note that an interoperability experiment to define this is planned will be added to the spec.
 
 https://github.com/opengeospatial/HY_Features/issues/209
 Comment:
@@ -126,19 +126,40 @@ General comment about scale and ephemeral. Increasingly lidar and high resolutio
 Elevation. The relationship between hydrography / hydrologic features and elevation is not discussed. It may be useful as background to briefly discuss the relationships.
 
 Draft Response:
-Note that HY_ChannelNetwork may represent topo-bathy channels. Generally clarify the idea of “container” as elevation.
+A note that HY_ChannelNetwork may represent topo-bathy channels will be added to the spec. We will generally clarify the idea of “container” as elevation.
 
 https://github.com/opengeospatial/HY_Features/issues/206
 Comment:
 Flowpath direction/orientation. Throughout the document the terms “downstream flowpath” and “upstream flowpath” are used. Cases are described for each of these. If one wants to trace a path through a stream network, guidance appears to be available from the tags upstreamFlowpathStart and downstreamFlowpathStart (Figure 13). If one were interested only in the flowpaths, and not the catchments, are these tags the means by which tracing could be done? This specific issue does not seem to be addressed explicitly in the document. However, on page 76 the list of properties of a waterbody includes upstreamWaterBody and downstreamWaterBody. Presumably these provide another option, assuming that the flowpaths and the waterbodies are associated.
 
 Draft Response:
-Clarify network navigation in the case that a dataset only includes flowpaths would be supported by an implementation and may be the subject of future standardization efforts, but is not explicitely in scope for HY_Features.
+While network navigation is supported in the catchment/nexus model, we will clarify that network navigation in the case that a dataset only includes flowpaths would be supported by an implementation (seperate from HY_Features) and may be the subject of future standardization efforts, but is not explicitely in scope for HY_Features.
 
 https://github.com/opengeospatial/HY_Features/issues/205
 Comment:
 The terms mainstem and HY_FlowPath. It is stated that a mainstem can be defined by a single flowpath; presumably it could also be defined by a collection of connected flowpaths. Is this correct? Can a confluence to confluence stream segment be broken into multiple flowpaths, and if so, are there any constraints on the segmentation?
 
 Draft Response:
-Further elaborate how HY_Flowpath may be made up of many sub-catchment’s HY_Flowpaths.
+We will further elaborate how HY_Flowpath may be made up of many sub-catchment’s HY_Flowpaths.
 
+https://github.com/opengeospatial/HY_Features/issues/200
+Comment:
+Catchment boundaries through waterbodies. Catchment boundaries will exist through lakes with more than one outlet, as noted above. A similar situation exists with glaciers with multiple tongues. Even a single glacier section may flow into different watersheds. (Consider the alluvial fans emanating from the Mount Robson Glacier. The fans exist on the continental divide, flowing southwest into Berg Lake in British Columbia and northeast into Adolphus Lake in Alberta on the other side of the divide.) Admittedly catchment boundaries through lakes and glaciers are comparatively uncommon, but the phenomenon can be found worldwide and may be worth mentioning.
+
+Draft Response:
+Multiple-outlet waterbodies are handled and will be added as an example in the complex topology section.
+
+https://github.com/opengeospatial/HY_Features/issues/199
+Comment:
+Emphasis on dendritic structures. Modeling catchments and flowpaths as dendritic structures leads to some simplifications that can be exploited. However, it can also increase complexity - some jurisdictions implementing this model force secondary streams or braids to be disconnected from upstream waterbodies (which you might say is not necessary, but this is what they do nonetheless). Figure 12 and the related discussion describe how aggregating reach catchments can lead to dendritic catchments: “Using this encapsulation approach, catchments can be represented using a simple tree structure with clear upstream-downstream relations.” (page 26) This is certainly so, but there are cases where the removal of cycles is detrimental to a hydrologic understanding of the area in question. Montreal is bounded by rivers, as is Manhattan. A section of Winnipeg is particularly interesting in that a major river is on one side and a controlled channel (the Red River Floodway) on the other that may or may not contain water. Some larger lakes exist with multiple outlets; these are sometimes referred to as bifurcation lakes (with the assumption of specifically two outlets). The same kinds of statements can be made about distributaries on deltas. For example, consider the city of Richmond, British Columbia, which is bounded by channels of the Fraser River. Approaches to network modeling that do not need to leverage dendritic behaviour may be worth noting. Please see the comment on directed graphs below.
+
+Draft Response:
+The emphasis put on dendritic structures was not intended to indicate that non-dendritic networks are not supported. A summary of how non-dendritic networks arr supported by the catchment model will be added prior to discussing dendritic simplification of complex hydrography.
+
+https://github.com/opengeospatial/HY_Features/issues/198
+Comment:
+Non-contributing or prairiepot hole or indeterminate are not in the document. The following image shows an active agricultural area in Saskatchewan described by such terms in which verifiable catchment boundaries and drainage direction are not easily defined, even though more typical drainage patterns can be found within several kilometres. Such areas are common in parts of the North American Prairies. Water flow in these cases does not fit neatly into the strict exorheic/endorheic paradigm. Simply treating them as interior catchments does not convey their hydrologic behaviour effectively.
+Urban hydrography presents major challenges and is not mentioned. One approach that has been put forward for urban areas is to define catchments and outlets, but not streams. Other options can be envisioned, but nevertheless, it may be worthwhile to include this catchment realization in section 6.2 or elsewhere.
+
+Draft Response: 
+Specifics of complex hydrography, such as those explained above, are beyond the scope of the current HY_Features work. The catchment cmodel is intended to allow encapsulation of such complex situations, accomplishing the goal of catchment identification, and placement of such systems into a larger hydrographic network. Specific handling for such situations is left to implementations and/or future standardization efforts.
