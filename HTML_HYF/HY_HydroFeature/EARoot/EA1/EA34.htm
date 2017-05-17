@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>hydro location :HY_HydroLocation</title>
+<title>C2 :HY_DendriticCatchment</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("hydro location", " : "))</script>  : Public   Object instance</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("C2", " : "))</script>  : Public   Object instance</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">02/01/2017 12:49:31</td>
+			<td width="85%" class="ObjectDetailsValue">17/08/2016 14:06:18</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">06/04/2017 09:38:45</td>
+			<td class="ObjectDetailsValue">02/01/2017 12:05:03</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -51,7 +51,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
-			<td class="ObjectDetailsValue">dornblut</td>
+			<td class="ObjectDetailsValue">Robert</td>
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
@@ -87,19 +87,19 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{27130E94-E3C2-4f13-8068-493564EAE96E}</td>
+			<td class="ObjectDetailsValue">{7F65162A-C92C-4e41-A2F5-9A40ECF1DEF7}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="EA18.htm">FigXX: position FOI - reference location</a></td>
+			<td class="ObjectDetailsValue"><a href="EA4.htm">Fig8: upper-lower catchment</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">1dim realization</div>
-
+	
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
 			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
 		</ul>
 		<div class="ItemBody" id="AssociationsToTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
@@ -110,7 +110,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA35.htm">n1: HY_IndirectPosition</a><br />
+						<a href="EA33.htm">C1: HY_DendriticCatchment</a><br />
 						Object &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -118,14 +118,14 @@ function nameClassifier(name, separator)
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> referencedPosition<br />
+						<strong>Name:</strong> lowerCatchment<br />
 						&nbsp;	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink7" onclick="parent.toggleDiv('detailsDIVLink7','DetailsImageLink7')" />Details:
-							<div id="detailsDIVLink7" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink16" onclick="parent.toggleDiv('detailsDIVLink16','DetailsImageLink16')" />Details:
+							<div id="detailsDIVLink16" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
@@ -143,7 +143,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA45.htm">P -  expressed location: HY_IndirectPosition</a><br />
+						<a href="EA33.htm">C1: HY_DendriticCatchment</a><br />
 						Object &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -151,14 +151,66 @@ function nameClassifier(name, separator)
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> referenceLocation<br />
+						<strong>Name:</strong> upperCatchment<br />
 						&nbsp;	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink8" onclick="parent.toggleDiv('detailsDIVLink8','DetailsImageLink8')" />Details:
-							<div id="detailsDIVLink8" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink17" onclick="parent.toggleDiv('detailsDIVLink17','DetailsImageLink17')" />Details:
+							<div id="detailsDIVLink17" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ConstraintsTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+			  	<tr>
+					<td width="80%" class="TableHeading">Constraint</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Status</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">outflow:1..1</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints18" onclick="parent.toggleDiv('detailsDIVConstraints18','DetailsImageConstraints18')" />Details:
+							<div id="detailsDIVConstraints18" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">lowerCatchment: 1..1</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints19" onclick="parent.toggleDiv('detailsDIVConstraints19','DetailsImageConstraints19')" />Details:
+							<div id="detailsDIVConstraints19" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">outflow.receivingCatchment: 1..1</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints20" onclick="parent.toggleDiv('detailsDIVConstraints20','DetailsImageConstraints20')" />Details:
+							<div id="detailsDIVConstraints20" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>

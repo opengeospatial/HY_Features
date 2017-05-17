@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HydroComplex::HY_CatchmentRealization</title>
+<title>HydroComplex::HY_FlowPath </title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_CatchmentRealization", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_FlowPath ", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">05/11/2010 14:27:32</td>
+			<td width="85%" class="ObjectDetailsValue">24/04/2013 15:37:57</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">30/03/2017 10:01:40</td>
+			<td class="ObjectDetailsValue">04/05/2017 14:01:14</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,124 +87,20 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{F95F2B6D-6CCD-45af-848D-70F197200916}</td>
+			<td class="ObjectDetailsValue">{BAEBC4B0-8A02-47df-95C3-C8AE3298EAFE}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Flowpath represents DendriticCatchment, Network represents DendriticCatchment, hyf107, catchmentnetwork, Context Diagram : HY_TopographicNetwork, TopographicRealisation_??, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig39_: Hydrometric Network Realisation, Fig20_: Catchment, Fig35_: Hydrographic Network Realisation, Fig33_: Channel Network Realisation, catchmentrealization, outfall_, Fig10: contributing catchment, Fig11: receiving catchment, temp_overallOverview, temp_catchmentRealization_all, LR, <a href="../EA1.htm">NEW_Fig22: Hydro Feature</a>, <a href="EA72.htm">NEW_Fig35: Catchment Realization</a>, <a href="EA24.htm">NEW_hydroComplex_all</a>, <a href="EA26.htm">Context Diagram : HY_CartographicRealization</a>, <a href="EA28.htm">Context Diagram : HY_Catchment</a>, <a href="EA32.htm">Context Diagram : HY_CatchmentArea</a>, <a href="EA34.htm">Context Diagram : HY_CatchmentDivide</a>, <a href="EA38.htm">Context Diagram : HY_CatchmentRealization</a>, <a href="EA42.htm">Context Diagram : HY_FlowPath </a>, <a href="EA46.htm">Context Diagram : HY_HydroNetwork</a>, <a href="EA36.htm">Context Diagram : HY_CatchmentOutlet </a>, <a href="EA54.htm">NEW_Fig26: Catchment</a>, NEW_Fig40: Channel Network Realization, NEW_Fig42: Hydrographic Network Realization, NEW_Fig46: Hydrometric Network Realization</td>
+			<td class="ObjectDetailsValue">Flowpath represents DendriticCatchment, hyf107, informative, catchmentnetwork, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig35_: Hydrographic Network Realisation, Fig33_: Channel Network Realisation, catchmentrealization, outfall_, temp_overallOverview, temp_catchmentRealization_all, LR, NEW_Fig40: Channel Network - Catchment - Nexus, NEW_Fig42: Hydrographic Network - Catchment - Nexus, check_model, NEW_Fig46: Hydrometric Feature - Nexus - Catchment, <a href="../EA1.htm">NEW_Fig22: Hydro Feature</a>, <a href="EA70.htm">NEW_Fig35: Catchment Realization</a>, <a href="EA24.htm">NEW_hydroComplex_all</a>, <a href="EA32.htm">Context Diagram : HY_CatchmentArea</a>, <a href="EA38.htm">Context Diagram : HY_CatchmentRealization</a>, <a href="EA42.htm">Context Diagram : HY_FlowPath </a>, <a href="EA46.htm">Context Diagram : HY_HydroNetwork</a>, <a href="EA36.htm">Context Diagram : HY_CatchmentOutlet </a>, <a href="../EA3/EA93.htm">NEW_Fig37: River Referencing</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The &lt;b&gt;HY_CatchmentRealization&lt;/b&gt; feature type (Figure 35) conceptualizes the multiple realization of an &#39;un-realized&#39; logical catchment by typical features used to describe the internal, hydrologically determined relationships connecting flows from atmospheric and groundwater sources to the catchment&#39;s common outlet. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Each catchment-realization feature may be connected with IN-coming or OUT-going features of the same type to assist a topology-based sorting of these features in typical network. For example, a sorting by incoming upward flowpaths may assist the navigation from mouth to source.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The catchment-realization concept implies a hydrologic complex in that, if a catchment realization exists, this exists in the same hydrologic complex as the catchment it realizes. Any feature realization of the logical catchment references the hydrologic determination of the realized catchment. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The catchment realization features defined in this standard refer to objects on the land surface for the purpose of surface water hydrology. In other contexts, other types of catchment realization may exist. Catchment realizations that do not conform to those defined in this standard, for instance realizations in 3- or 4-dimensional perspectives, may be implemented specializing/using the general HY_CatchmentRealization type. HY_CatchmentRealization carries a &lt;i&gt;shape&lt;/i&gt; attrtibute, and &lt;i&gt;realizedCatchment&lt;/i&gt;,&lt;i&gt; IN(coming)&lt;/i&gt; and &lt;i&gt;OUT(going)&lt;/i&gt; associations.&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The &lt;b&gt;HY_Flowpath&lt;/b&gt; feature type realizes an &#39;un-realized&#39; catchment specifically as a path connecting the inflow and outflow of the logical catchment it realizes.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_Flowpath specializes HY_CatchmentRealization with respect to an implied linear geometric representation including a straight or curved line. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Topologically, the flowpath connects the inflow and outflow of the logical catchment, and is understood as an edge bounded by an inflow node and an outflow node, and corresponding to left-bank and right-bank catchment faces. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Hydrologically, the flowpath is a line describing a moving particle of water. Through generalization, HY_Flowpath inherits the &lt;i&gt;shape&lt;/i&gt; and the &lt;i&gt;realizedCatchment&lt;/i&gt; properties. The optional &lt;i&gt;shape&lt;/i&gt; of the flowpath is usually a single curve. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
-			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
-			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
 			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
 			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
-<div class="ItemBody" id="AttributesTable">
-	<table border="0" cellspacing="0" cellpadding="0" class="Table">
-		<tr>
-			<td width="100%" class="TableHeading">Attribute</td>
-		</tr>
-						<tr>
-				<td width="100%" class="TableRow">
-					<i>Public GM_Object</i><br /><strong>&nbsp;&nbsp;shape</strong>
-				</td>
-			</tr>
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes36')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes36" border="0" />Details:
-					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
-					
-						<tr id="DetailsImageAttributes36_00" style="display: none;">
-							<td width="75"><i>Alias:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes36_01" style="display: none;">
-							<td width="75"><i>Initial:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes36_02" style="display: none;">
-							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes36_03" style="display: none;">
-							<td width="75"><i>Ordered: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes36_03" style="display: none;">
-							<td width="75"><i>Range: </i></td>
-							<td>Range:0 to 1</td>
-						</tr>
-					</table>
-					
-					
-						&nbsp;
-						
-				</td>
-			</tr>
-	</table>
-</div>
-		<div class="ItemBody" id="AssociationsToTable">
-			<table border="0" cellspacing="0" cellpadding="0" class="Table">
-				<tr>
-					<td width="40%" class="TableHeading">Element</td>
-					<td width="30%" class="TableHeading">Source Role</td>
-					<td width="30%" class="TableHeading">Target Role</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA83.htm">«FeatureType» HY_CatchmentRealization</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> OUT<br />
-						outgoing catchment-realization feature of the same type, associated via a catchment-realization feature of lower topological dimension. Example: an downward flowpath may be associated to HY_Flowpath via its downstream end of type HY_CatchmentOutlet.
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> IN<br />
-						incoming catchment-realization feature of the same type, associated using a catchment-realization feature of lower topological dimension. Example: an upward flowpath may be associated to HY_Flowpath via its upstream end of type HY_CatchmentOutlet.	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink37" onclick="parent.toggleDiv('detailsDIVLink37','DetailsImageLink37')" />Details:
-							<div id="detailsDIVLink37" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA79.htm">«FeatureType» HY_Catchment</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> catchmentRealizationFeature<br />
-						topological or geographic feature which realizes the logical catchment. 
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> realizedCatchment<br />
-						identifies the one and only one catchment that is realized by a particular feature. 
-Referencing the hydrologic complex containing the catchment and all of its realizations, supports a catchment's existence to be recognized and linked to multiple realizations without the complexity and full detail of a scientific model. By referencing the catchment topology, topological relationships can be established and common identifiers assigned	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink38" onclick="parent.toggleDiv('detailsDIVLink38','DetailsImageLink38')" />Details:
-							<div id="detailsDIVLink38" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">collection of hydrologic features realizing the catchment in a hydrologic complex.</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-
-			</table>
-		</div>
 		<div class="ItemBody" id="AssociationsFromTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
@@ -214,22 +110,46 @@ Referencing the hydrologic complex containing the catchment and all of its reali
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA83.htm">«FeatureType» HY_CatchmentRealization</a><br />
+						<a href="EA84.htm">«FeatureType» HY_HydroNetwork</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> OUT<br />
-						outgoing catchment-realization feature of the same type, associated via a catchment-realization feature of lower topological dimension. Example: an downward flowpath may be associated to HY_Flowpath via its downstream end of type HY_CatchmentOutlet.
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> IN<br />
-						incoming catchment-realization feature of the same type, associated using a catchment-realization feature of lower topological dimension. Example: an upward flowpath may be associated to HY_Flowpath via its upstream end of type HY_CatchmentOutlet.	
+						<strong>Name:</strong> flowpath<br />
+						flowpath that participates in the hydrologic network	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink39" onclick="parent.toggleDiv('detailsDIVLink39','DetailsImageLink39')" />Details:
-							<div id="detailsDIVLink39" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink37" onclick="parent.toggleDiv('detailsDIVLink37','DetailsImageLink37')" />Details:
+							<div id="detailsDIVLink37" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">sequence of flowpaths forming a connected network, which realizes as a whole the catchment that contains the catchment realized by the single flowpath. This concept requires a non-branching &#39;main-stem&#39; of watercourses, and a single linear representation of each of these.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA3/EA96.htm">«FeatureType» HY_IndirectPosition</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> linearElement<br />
+						identifies a flowpath used as the linear element along which a position is assigned to a hydro-location, or any feature of interest.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink38" onclick="parent.toggleDiv('detailsDIVLink38','DetailsImageLink38')" />Details:
+							<div id="detailsDIVLink38" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
@@ -247,37 +167,7 @@ Referencing the hydrologic complex containing the catchment and all of its reali
 					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA80.htm">«FeatureType» HY_CatchmentArea</a></td>
-					<td width="15%" class="TableRow" valign="top">Class</td>
-					<td width="15%" class="TableRow" valign="top">Generalization</td>
-					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
-				</tr>
-				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA87.htm">«FeatureType» HY_CatchmentOutlet </a></td>
-					<td width="15%" class="TableRow" valign="top">Class</td>
-					<td width="15%" class="TableRow" valign="top">Generalization</td>
-					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
-				</tr>
-				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA85.htm">«FeatureType» HY_FlowPath </a></td>
-					<td width="15%" class="TableRow" valign="top">Class</td>
-					<td width="15%" class="TableRow" valign="top">Generalization</td>
-					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
-				</tr>
-				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA78.htm">«FeatureType» HY_CartographicRealization</a></td>
-					<td width="15%" class="TableRow" valign="top">Class</td>
-					<td width="15%" class="TableRow" valign="top">Generalization</td>
-					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
-				</tr>
-				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA82.htm">«FeatureType» HY_CatchmentDivide</a></td>
-					<td width="15%" class="TableRow" valign="top">Class</td>
-					<td width="15%" class="TableRow" valign="top">Generalization</td>
-					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
-				</tr>
-				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA86.htm">«FeatureType» HY_HydroNetwork</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA81.htm">«FeatureType» HY_CatchmentRealization</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>

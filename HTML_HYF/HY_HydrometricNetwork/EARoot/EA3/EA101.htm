@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HydrographicNetwork::HY_HydrographicNetwork</title>
+<title>RiverReferencing::HY_IndirectPosition</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_HydrographicNetwork", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_IndirectPosition", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">23/08/2010 11:34:56</td>
+			<td width="85%" class="ObjectDetailsValue">22/06/2010 09:55:01</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">16/06/2016 09:07:06</td>
+			<td class="ObjectDetailsValue">25/04/2017 11:51:40</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -51,7 +51,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
-			<td class="ObjectDetailsValue">dornblut</td>
+			<td class="ObjectDetailsValue"></td>
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
@@ -87,20 +87,179 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{575E613E-8105-4a81-9E8F-D961EBA90856}</td>
+			<td class="ObjectDetailsValue">{62A4DBD2-8FB5-4489-AE38-E5EC4723D314}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Network represents DendriticCatchment, informative, WaterBody- Flowpath, Waterbody - Channel, ChannelNetwork_extended, <a href="../EA3.htm">overallOverview</a>, <a href="../EA5.htm">HydrographicRealisation</a>, <a href="../EA1/EA28.htm">Catchment Representation</a>, <a href="EA82.htm">Hydrographic Network_extended</a>, <a href="EA86.htm">Context Diagram : HY_HydrographicNetwork</a>, <a href="EA90.htm">Context Diagram : HY_WaterBody</a></td>
+			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, informative, ChannelNetwork_extended, outfall_, temp_overallOverview, LR, NEW_Fig44: Reservoir Realization, <a href="../EA1.htm">NEW_Fig22: Hydro Feature</a>, <a href="../EA2/EA77.htm">NEW_Fig36: Hydro-Location</a>, <a href="../EA2/EA29.htm">NEW_hydroComplex_all</a>, <a href="EA96.htm">Context Diagram : HY_IndirectPosition</a>, <a href="EA98.htm">NEW_Fig37: River Referencing</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">aggregate of permanent and temporary water bodies. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;(Source: hydrographical network. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0608EN.HTM)&lt;/i&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: A watercourse, commonly understood as natural or man-made channel through or along water may flow or not, is conceptually separated into the body of water and the containing channel. This separation references the different scientific concerns of hydrology, studying the occurrence, accumulation and circulation of water, and hydraulic engineering focused on the analysis and design of the water flow regime.&#160; &lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_IndirectPosition feature type defines the location referenced along a logical axis, without the necessity of a geometric realization which it however may have.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The indirect position concept uses the flowpath as linear element&#160; along which a position may be assigned referencing a known location, usually the catchment outlet, or a feature that can be identified as (said to be coincident with) the outlet.The indirect position is expressed as distance from that referent already located on the flowpath, e.g. the upstream or downstream end of the flowpath. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_IndirectPosition carries the &lt;i&gt;distanceExpression&lt;/i&gt;, and &lt;i&gt;distanceDescription&lt;/i&gt; attributes, and associates the &lt;i&gt;linearElement&lt;/i&gt; and the &lt;i&gt;locatedReferent.&lt;/i&gt;&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
+			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
 			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
-			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
 		</ul>
+<div class="ItemBody" id="AttributesTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="100%" class="TableHeading">Attribute</td>
+		</tr>
+						<tr>
+				<td width="100%" class="TableRow">
+					<i>Public <a href="EA100.htm">HY_DistanceFromReferent</a></i><br /><strong>&nbsp;&nbsp;distanceExpression</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes80')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes80" border="0" />Details:
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes80_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes80_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes80_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes80_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes80_03" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to 1</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=1<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			absolute or interpolative value of the distance from the feature being referenced, including an indication of accuracy and precision of the absolute value. An implementation may use the HY_DistanceFromReferent (data type) referencing basic types of measure incl. the unit measure. Alternatively, the types described in ISO 19103: Conceptual Schema may be used.
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public <a href="EA102.htm">HY_DistanceDescription</a></i><br /><strong>&nbsp;&nbsp;distanceDescription</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes81')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes81" border="0" />Details:
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes81_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes81_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes81_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes81_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes81_03" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to 1</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=1<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			term describing the distance from the feature being referenced An implementation may use the HY_DistanceDescription code list. Alternatively, the types described in ISO 19103: Conceptual Schema may be used. Alternative code lists may be used but should be related to the terms in Annex B.2 using an appropriate formalism. 
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>
+	</table>
+</div>
+		<div class="ItemBody" id="AssociationsToTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA2/EA88.htm">«FeatureType» HY_FlowPath </a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> linearElement<br />
+						identifies a flowpath used as the linear element along which a position is assigned to a hydro-location, or any feature of interest.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink82" onclick="parent.toggleDiv('detailsDIVLink82','DetailsImageLink82')" />Details:
+							<div id="detailsDIVLink82" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA2/EA92.htm">«FeatureType» HY_HydroLocation</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> locatedReferent<br />
+						identifies the known, already located referent such as a catchment outlet a relative to which a position may be assigned to a feature of interest.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink83" onclick="parent.toggleDiv('detailsDIVLink83','DetailsImageLink83')" />Details:
+							<div id="detailsDIVLink83" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">hydro-location referenced by the position.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This allows to place an arbitrary feature of interest using catchment topology. If required, this association shall be used to identify the located referent (upstream and/or downstream) relative to which a position is assigned. &lt;br /&gt;&lt;/p&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
 		<div class="ItemBody" id="AssociationsFromTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
@@ -110,24 +269,23 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA105.htm">«FeatureType» HY_WaterBody</a><br />
+						<a href="../EA2/EA92.htm">«FeatureType» HY_HydroLocation</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> networkWaterBody<br />
-						aggregated water body.
+						<strong>Name:</strong> referenceLocation<br />
+						permanent, stable reference location such as a landmark fixed and referenced by coordinates.
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> hydrographicNetwork<br />
-						hydrographic network the water body is part of.	
+						<strong>Name:</strong> referencedPosition<br />
+						position expressed as measured or otherwise described distance from a known, already located referent. Commonly, this is used to locate a feature of interest such as a hydrometric station in relation to a catchment's outlet fixed by co-ordinates.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink91" onclick="parent.toggleDiv('detailsDIVLink91','DetailsImageLink91')" />Details:
-							<div id="detailsDIVLink91" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">hydrographic network of one or more water bodies.</div>
-
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink84" onclick="parent.toggleDiv('detailsDIVLink84','DetailsImageLink84')" />Details:
+							<div id="detailsDIVLink84" class="DetailsDiv" >
+							&nbsp;
 							</div>
 						</div>
 					</td>
@@ -135,31 +293,42 @@ function nameClassifier(name, separator)
 
 			</table>
 		</div>
-		<div class="ItemBody" id="LinksTable">
-			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
-				<tr>
-					<td width="30%" class="TableHeading">Object</td>
-					<td width="15%" class="TableHeading">Type</td>
-					<td width="15%" class="TableHeading">Connection</td>
-					<td width="40%" class="TableHeading">Notes</td>
+		<div class="ItemBody" id="ConstraintsTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+			  	<tr>
+					<td width="80%" class="TableHeading">Constraint</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Status</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="../EA1/EA62.htm">«FeatureType» HY_FlowPath</a></td>
-					<td width="15%" class="TableRow" valign="top">Class</td>
-					<td width="15%" class="TableRow" valign="top">Generalization</td>
-					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+					<td width="80%" class="TableRow">point-referent</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA105.htm">«FeatureType» HY_WaterBody</a></td>
-					<td width="15%" class="TableRow" valign="top">Class</td>
-					<td width="15%" class="TableRow" valign="top">Weak</td>
-					<td width="40%" class="TableRow" valign="top">hydrographic network of one or more water bodies.</td>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints85" onclick="parent.toggleDiv('detailsDIVConstraints85','DetailsImageConstraints85')" />Details:
+							<div id="detailsDIVConstraints85" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">EXISTS linearElement , locatedReferent is of type GM_Point</div>
+
+							</div>
+						</div>
+					</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="../EA1/EA60.htm">«FeatureType» HY_CatchmentRealisation</a></td>
-					<td width="15%" class="TableRow" valign="top">Class</td>
-					<td width="15%" class="TableRow" valign="top">Generalization</td>
-					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+					<td width="80%" class="TableRow">measure-along-flowpath</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints86" onclick="parent.toggleDiv('detailsDIVConstraints86','DetailsImageConstraints86')" />Details:
+							<div id="detailsDIVConstraints86" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">EXISTS distanceExpression , linearElement is of type HY_Flowpath</div>
+
+							</div>
+						</div>
+					</td>
 				</tr>
 
 			</table>

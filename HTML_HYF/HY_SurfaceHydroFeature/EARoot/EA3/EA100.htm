@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HydrographicNetwork::HY_CrossSection</title>
+<title>RiverReferencing::HY_DistanceFromReferent</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_CrossSection", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_DistanceFromReferent", " : "))</script>  : Public  &lt;&lt;DataType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">06/09/2010 10:50:20</td>
+			<td width="85%" class="ObjectDetailsValue">04/08/2010 07:34:52</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">16/06/2016 09:07:06</td>
+			<td class="ObjectDetailsValue">25/04/2017 12:17:59</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -51,7 +51,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
-			<td class="ObjectDetailsValue">dornblut</td>
+			<td class="ObjectDetailsValue"></td>
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
@@ -87,89 +87,211 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{3E6996FB-87DB-4e41-BA59-CD0A304CFE24}</td>
+			<td class="ObjectDetailsValue">{0719ADA7-1E14-4055-8FED-BBE940051F20}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Waterbody - Channel, ChannelNetwork_extended, <a href="../EA3.htm">overallOverview</a>, <a href="../EA9.htm">TopographicRealisation</a>, <a href="EA82.htm">Hydrographic Network_extended</a>, <a href="EA80.htm">WaterBodyPart_extended</a>, <a href="EA84.htm">Context Diagram : HY_CrossSection</a>, <a href="EA92.htm">Context Diagram : HY_WaterBodyPart</a></td>
+			<td class="ObjectDetailsValue">temp_overallOverview, <a href="../EA1.htm">NEW_Fig22: Hydro Feature</a>, <a href="../EA2/EA29.htm">NEW_hydroComplex_all</a>, <a href="EA96.htm">Context Diagram : HY_IndirectPosition</a>, <a href="EA98.htm">NEW_Fig37: River Referencing</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">vertical section of an object at right angles to the main (average) direction of flow. - the geometric representation (plane or space curves, polygon) may vary with application and needs to be defined there.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Taking into account the separation of a watercourse into water body and confining structure, this concept applies to both the (blue) stream cross section at right angles to the main (average) direction of flow, as well as to the transversal bed profile (shape) of a stream bed in a vertical plane.&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_DistanceFromReferent data type provides the distance measure from a located referent as an absolute or interpolative value, including simple statements on accuracy and precision of the measured position.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;/i&gt;&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
-			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
-			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
 		</ul>
-		<div class="ItemBody" id="AssociationsToTable">
-			<table border="0" cellspacing="0" cellpadding="0" class="Table">
-				<tr>
-					<td width="40%" class="TableHeading">Element</td>
-					<td width="30%" class="TableHeading">Source Role</td>
-					<td width="30%" class="TableHeading">Target Role</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA1/EA67.htm">«FeatureType» HY_ReferenceLocation</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> crossSectionPoint<br />
-						point on the cross section referenced by coordinates.	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink89" onclick="parent.toggleDiv('detailsDIVLink89','DetailsImageLink89')" />Details:
-							<div id="detailsDIVLink89" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">point located on the cross-section. </div>
+<div class="ItemBody" id="AttributesTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="100%" class="TableHeading">Attribute</td>
+		</tr>
+						<tr>
+				<td width="100%" class="TableRow">
+					<i>Public Length</i><br /><strong>&nbsp;&nbsp;absolute</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes76')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes76" border="0" />Details:
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes76_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes76_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes76_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes76_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes76_03" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to 1</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=1<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			geometric expression of the distance measured from a located referent. An implementation may use the types described in ISO 19103: Conceptual Schema.
+		</td>
+	</tr>
+</table></div>
 
-							</div>
-						</div>
-					</td>
-				</tr>
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public Real</i><br /><strong>&nbsp;&nbsp;interpolative</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes77')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes77" border="0" />Details:
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes77_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes77_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes77_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes77_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes77_03" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to 1</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=1<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			interpolative expression (percentage) of the distance measured from a located referent. An implementation may use the types described in ISO 19103: Conceptual Schema.
+		</td>
+	</tr>
+</table></div>
 
-			</table>
-		</div>
-		<div class="ItemBody" id="AssociationsFromTable">
-			<table border="0" cellspacing="0" cellpadding="0" class="Table">
-				<tr>
-					<td width="40%" class="TableHeading">Element</td>
-					<td width="30%" class="TableHeading">Source Role</td>
-					<td width="30%" class="TableHeading">Target Role</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA106.htm">«FeatureType» HY_WaterBodyPart</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> streamCrossSection<br />
-						vertical section of a stream at right angles to the main (average) direction of flow.
-(Source: cross section. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0276EN.HTM)	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink90" onclick="parent.toggleDiv('detailsDIVLink90','DetailsImageLink90')" />Details:
-							<div id="detailsDIVLink90" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">vertical section of the water body segment in transversal direction.</div>
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public CharacterString</i><br /><strong>&nbsp;&nbsp;accuracyStatement</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes78')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes78" border="0" />Details:
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes78_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes78_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes78_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes78_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes78_03" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to 1</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=2<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			simple statement whether the distance value agrees with the value accepted as being true.&#160; This statement assumes that all known corrections have been applied. An implementation may use the types described in ISO 19103: Conceptual Schema.
+		</td>
+	</tr>
+</table></div>
 
-							</div>
-						</div>
-					</td>
-				</tr>
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public Distance</i><br /><strong>&nbsp;&nbsp;precisionStatement</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes79')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes79" border="0" />Details:
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes79_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes79_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes79_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes79_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes79_03" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to 1</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=3<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			simple statement on the smallest unit of division on the scale of measurement. An implementation may use the types described in ISO 19103: Conceptual Schema.
+		</td>
+	</tr>
+</table></div>
 
-			</table>
-		</div>
+						
+				</td>
+			</tr>
+	</table>
+</div>
 	</div>
 <div class="pageFooter"></div>
  

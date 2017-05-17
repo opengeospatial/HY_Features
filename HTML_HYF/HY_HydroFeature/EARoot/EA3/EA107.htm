@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HydrographicNetwork::HY_WaterBodyStratum</title>
+<title>RiverReferencing::HY_IndirectPosition</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_WaterBodyStratum", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_IndirectPosition", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">09/08/2012 14:34:28</td>
+			<td width="85%" class="ObjectDetailsValue">22/06/2010 09:55:01</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">16/06/2016 09:07:06</td>
+			<td class="ObjectDetailsValue">30/03/2017 11:04:57</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -51,7 +51,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
-			<td class="ObjectDetailsValue">dornblut</td>
+			<td class="ObjectDetailsValue"></td>
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
@@ -87,22 +87,20 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{A951A308-ECD3-442e-8235-C9AFEF79CCA0}</td>
+			<td class="ObjectDetailsValue">{62A4DBD2-8FB5-4489-AE38-E5EC4723D314}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Precipitation-Runoff, <a href="../EA3.htm">overallOverview</a>, <a href="EA82.htm">Hydrographic Network_extended</a>, <a href="EA80.htm">WaterBodyPart_extended</a>, <a href="EA96.htm">Context Diagram : HY_Water_LiquidPhase</a>, <a href="EA92.htm">Context Diagram : HY_WaterBodyPart</a>, <a href="EA94.htm">Context Diagram : HY_WaterBodyStratum</a>, <a href="../EA5/EA130.htm">Storage</a></td>
+			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, informative, ChannelNetwork_extended, outfall_, temp_overallOverview, LR, NEW_Fig46: Hydrometric Network Realization, <a href="../EA1.htm">NEW_Fig22: Hydro Feature</a>, <a href="../EA2/EA77.htm">NEW_Fig36: Fluence</a>, <a href="../EA2/EA27.htm">NEW_hydroComplex_all</a>, <a href="EA102.htm">Context Diagram : HY_IndirectPosition</a>, <a href="EA98.htm">Context Diagram : HY_HydroLocation</a>, <a href="EA104.htm">NEW_Fig37: River Referencing</a>, NEW_Fig41: Channel Realization, NEW_Fig43: Water Body Realization, NEW_Fig44: Reservoir Realization</td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">layer of consistent characteristics in a body of water (mass of water). A stratum may be determined by differences in thermal or salinity characteristics or by oxygen or nutrient content, but also by virtual storage zones of a reservoir. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The water body stratum is part of the hydrographic network, and with respect to the concept of a zone-based reservoir management associated with the reservoir.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This definition refers to the general existence or formation of a stratum in a water body as defined in the IGH, applied to zone-based reservoir operation&lt;i&gt;.&lt;/i&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;(Source: stratification. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF1225EN.HTM)&lt;/i&gt;&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_IndirectPosition feature type defines the location referenced along a logical axis, without the necessity of a geometric realization which it however may have.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The indirect position concept uses the flowpath as linear element&#160; along which a position may be assigned referencing a known location, usually the catchment outlet, or a feature that can be identified as (said to be coincident with) the outlet.The indirect position is expressed as distance from that referent already located on the flowpath, e.g. the upstream or downstream end of the flowpath. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_IndirectPosition carries the &lt;i&gt;distanceExpression&lt;/i&gt;, and &lt;i&gt;distanceDescription&lt;/i&gt; attributes, and associates the &lt;i&gt;linearElement&lt;/i&gt; and the &lt;i&gt;locatedReferent.&lt;/i&gt;&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
 			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
 			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
-			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
-			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
 <div class="ItemBody" id="AttributesTable">
 	<table border="0" cellspacing="0" cellpadding="0" class="Table">
@@ -111,33 +109,33 @@ function nameClassifier(name, separator)
 		</tr>
 						<tr>
 				<td width="100%" class="TableRow">
-					<i>Public ScopedName</i><br /><strong>&nbsp;&nbsp;stratumType</strong>
+					<i>Public <a href="EA106.htm">HY_DistanceFromReferent</a></i><br /><strong>&nbsp;&nbsp;distanceExpression</strong>
 				</td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes116')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes116" border="0" />Details:
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes97')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes97" border="0" />Details:
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes116_00" style="display: none;">
+						<tr id="DetailsImageAttributes97_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes116_01" style="display: none;">
+						<tr id="DetailsImageAttributes97_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes116_02" style="display: none;">
+						<tr id="DetailsImageAttributes97_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes116_03" style="display: none;">
+						<tr id="DetailsImageAttributes97_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes116_03" style="display: none;">
+						<tr id="DetailsImageAttributes97_03" style="display: none;">
 							<td width="75"><i>Range: </i></td>
-							<td>Range:0 to *</td>
+							<td>Range:0 to 1</td>
 						</tr>
 					</table>
 					
@@ -148,7 +146,53 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			term from a controlled vocabulary expressing the type of the stratum or zone. 
+			absolute or interpolative value of the distance from the feature being referenced, including an indication of accuracy and precision of the absolute value. An implementation may use the HY_DistanceFromReferent (data type) referencing basic types of measure incl. the unit measure. Alternatively, the types described in ISO 19103: Conceptual Schema may be used.
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public <a href="EA108.htm">HY_DistanceDescription</a></i><br /><strong>&nbsp;&nbsp;distanceDescription</strong>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">										
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes98')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes98" border="0" />Details:
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+					
+						<tr id="DetailsImageAttributes98_00" style="display: none;">
+							<td width="75"><i>Alias:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes98_01" style="display: none;">
+							<td width="75"><i>Initial:</i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes98_02" style="display: none;">
+							<td width="75"><i>Stereotype: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes98_03" style="display: none;">
+							<td width="75"><i>Ordered: </i></td>
+							<td></td>
+						</tr>
+						<tr id="DetailsImageAttributes98_03" style="display: none;">
+							<td width="75"><i>Range: </i></td>
+							<td>Range:0 to 1</td>
+						</tr>
+					</table>
+					
+					sequenceNumber=1<br>
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			term describing the distance from the feature being referenced An implementation may use the HY_DistanceDescription code list. Alternatively, the types described in ISO 19103: Conceptual Schema may be used. Alternative code lists may be used but should be related to the terms in Annex B.2 using an appropriate formalism. 
 		</td>
 	</tr>
 </table></div>
@@ -167,23 +211,23 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA106.htm">«FeatureType» HY_WaterBodyPart</a><br />
+						<a href="../EA2/EA90.htm">«FeatureType» HY_CatchmentOutlet </a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> stratum<br />
-						stratum or zone aggregated in water body segment.
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> stratifiedWaterBody<br />
-						stratified water body the stratum or zone is part of.	
+						<strong>Name:</strong> locatedReferent<br />
+						identifies the catchment outlet as permanent referent relative to which a position may be assigned to a fluence, or any feature of interest.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink117" onclick="parent.toggleDiv('detailsDIVLink117','DetailsImageLink117')" />Details:
-							<div id="detailsDIVLink117" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">water body segment of one or more strata (layers)</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink99" onclick="parent.toggleDiv('detailsDIVLink99','DetailsImageLink99')" />Details:
+							<div id="detailsDIVLink99" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">location to which the position refers.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This allows to place an arbitrary feature of interest using catchment topology. If required, this association shall be used to identify the location upstream and/or downstream relative to which a position is assigned to the outfall.&lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
 						</div>
@@ -191,26 +235,23 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA5/EA132.htm">«FeatureType» HY_Reservoir</a><br />
+						<a href="../EA2/EA88.htm">«FeatureType» HY_FlowPath </a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> reservoirZone<br />
-						zone of a reservoir. 
-Note: network element that specifies the connectivity of the storage in the hydrographic network.
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> storage<br />
-						storage characteristics of the water body participating in the hydrographic network .
-	
+						<strong>Name:</strong> linearElement<br />
+						identifies a catchment realization used as the permanent reference relative to which a position is assigned to a fluence, or any feature of interest.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink118" onclick="parent.toggleDiv('detailsDIVLink118','DetailsImageLink118')" />Details:
-							<div id="detailsDIVLink118" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">impounding of water in surface or underground reservoirs, for future use. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;(Source: storage. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF1215EN.HTM)&lt;/i&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Note: This class defines the existence or formation of a vertical layer of consistent characteristics. This refers to strata&#160; identified by differences in thermal or salinity characteristics or by oxygen or nutrient content. &lt;br /&gt;&lt;/p&gt;</div>
-
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink100" onclick="parent.toggleDiv('detailsDIVLink100','DetailsImageLink100')" />Details:
+							<div id="detailsDIVLink100" class="DetailsDiv" >
+							&nbsp;
 							</div>
 						</div>
 					</td>
@@ -227,104 +268,26 @@ Note: network element that specifies the connectivity of the storage in the hydr
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA103.htm">«FeatureType» HY_Water_LiquidPhase</a><br />
+						<a href="../EA2/EA93.htm">«FeatureType» HY_HydroLocation</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
+						<strong>Name:</strong> referenceLocation<br />
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> accumulatingWaterBody<br />
-						water body (stratum) wherein liquid water is accumulated.	
+						<strong>Name:</strong> referencedPosition<br />
+						position expressed as measured or otherwise described distance from a known referent. Commonly, this is used to locate a feature of interest such as a hydrometric station in relation to a catchment's outlet fixed by co-ordinates.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink119" onclick="parent.toggleDiv('detailsDIVLink119','DetailsImageLink119')" />Details:
-							<div id="detailsDIVLink119" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">accumulation of water in a water body.</div>
-
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink101" onclick="parent.toggleDiv('detailsDIVLink101','DetailsImageLink101')" />Details:
+							<div id="detailsDIVLink101" class="DetailsDiv" >
+							&nbsp;
 							</div>
 						</div>
 					</td>
-				</tr>
-
-			</table>
-		</div>
-<div class="ItemBody" id="TaggedValTable">
-	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
-		<tr>
-			<td width="50%" class="TableHeading">Tag</td>
-			<td width="50%" class="TableHeading">Value</td>
-		</tr>
-					<tr>
-				<td width="50%" class="TableRow" valign="top">byValuePropertyType</td>
-				<td width="50%" class="TableRow" valign="top">false</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario120" onclick="parent.toggleDiv('detailsDIVScenario120','DetailsImageScenario120')" />Details:
-						<div id="detailsDIVScenario120" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Create a property type that requires that the instance is encoded inline (applies to ISO 19136:2007 encoding rule). Always set to false in INSPIRE.<br /></div>
-
-						</div>
-					</div>
-				</td>
-			</tr>			<tr>
-				<td width="50%" class="TableRow" valign="top">isCollection</td>
-				<td width="50%" class="TableRow" valign="top">false</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario121" onclick="parent.toggleDiv('detailsDIVScenario121','DetailsImageScenario121')" />Details:
-						<div id="detailsDIVScenario121" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Identifies the feature type as a feature collection.<br /></div>
-
-						</div>
-					</div>
-				</td>
-			</tr>			<tr>
-				<td width="50%" class="TableRow" valign="top">noPropertyType</td>
-				<td width="50%" class="TableRow" valign="top">false</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario122" onclick="parent.toggleDiv('detailsDIVScenario122','DetailsImageScenario122')" />Details:
-						<div id="detailsDIVScenario122" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: true,false<br />Default: false<br />Description: Surpress creation of a standard property type that supports inline or by-reference encoding (applies to ISO 19136:2007 encoding rule). Always set to false in INSPIRE.<br /></div>
-
-						</div>
-					</div>
-				</td>
-			</tr>			<tr>
-				<td width="50%" class="TableRow" valign="top">xsdEncodingRule</td>
-				<td width="50%" class="TableRow" valign="top">iso19136_2007</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario123" onclick="parent.toggleDiv('detailsDIVScenario123','DetailsImageScenario123')" />Details:
-						<div id="detailsDIVScenario123" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: iso19136_2007,iso19139_2007,iso19136_2007_INSPIRE_Extensions<br />Default: iso19136_2007<br />Description: XML Schema encoding rule to apply<br /></div>
-
-						</div>
-					</div>
-				</td>
-			</tr>
-	</table>
-</div>		<div class="ItemBody" id="LinksTable">
-			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
-				<tr>
-					<td width="30%" class="TableHeading">Object</td>
-					<td width="15%" class="TableHeading">Type</td>
-					<td width="15%" class="TableHeading">Connection</td>
-					<td width="40%" class="TableHeading">Notes</td>
-				</tr>
-				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA106.htm">«FeatureType» HY_WaterBodyPart</a></td>
-					<td width="15%" class="TableRow" valign="top">Class</td>
-					<td width="15%" class="TableRow" valign="top">Weak</td>
-					<td width="40%" class="TableRow" valign="top">water body segment of one or more strata (layers)</td>
 				</tr>
 
 			</table>

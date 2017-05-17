@@ -1,10 +1,6 @@
-tocTab[tocTab.length] = new Array("0.3:1", "", "Context Diagram : HY_DistanceDescription", "EARoot/EA3/EA91.htm", "175.png", "7514", "0", "", "Class diagram0","{90032395-85EA-4a3c-85F3-04EF9F4728EE}");
-tocTab[tocTab.length] = new Array("0.3:2", "", "Context Diagram : HY_HydroLocation", "EARoot/EA3/EA93.htm", "175.png", "7515", "0", "", "Class diagram0","{334A2F83-9DA7-40aa-9C87-BCF3C88F48C4}");
-tocTab[tocTab.length] = new Array("0.3:3", "", "Context Diagram : HY_HydroLocationType", "EARoot/EA3/EA95.htm", "175.png", "7516", "0", "", "Class diagram0","{C1B2A37D-1174-4cc1-9824-2334ED5D3D31}");
-tocTab[tocTab.length] = new Array("0.3:4", "", "Context Diagram : HY_IndirectPosition", "EARoot/EA3/EA97.htm", "175.png", "7513", "0", "", "Class diagram0","{D20E8ADA-895F-404c-A649-EE2C632E0CEA}");
-tocTab[tocTab.length] = new Array("0.3:5", "", "NEW_Fig37: River Referencing", "EARoot/EA3/EA99.htm", "175.png", "7517", "0", "", "Logical diagram0","{BE6C2611-36B7-47d9-8443-DD66AD8133DA}");
-tocTab[tocTab.length] = new Array("0.3:6", "", "«DataType» HY_DistanceFromReferent", "EARoot/EA3/EA101.htm", "5.png", "15017", "0", "", "Class0","{0719ADA7-1E14-4055-8FED-BBE940051F20}");
-tocTab[tocTab.length] = new Array("0.3:7", "", "«FeatureType» HY_IndirectPosition", "EARoot/EA3/EA102.htm", "5.png", "15019", "0", "", "Class0","{62A4DBD2-8FB5-4489-AE38-E5EC4723D314}");
-tocTab[tocTab.length] = new Array("0.3:8", "", "«CodeList» HY_DistanceDescription", "EARoot/EA3/EA103.htm", "5.png", "15020", "0", "", "Class0","{B5645583-E781-43c3-B270-D4EC7EA02D52}");
-tocTab[tocTab.length] = new Array("0.3:9", "", "«FeatureType» HY_HydroLocation", "EARoot/EA3/EA104.htm", "5.png", "15021", "0", "", "Class0","{CBE94F0D-9CA6-4cc3-9730-F0F7F31C2EB4}");
-tocTab[tocTab.length] = new Array("0.3:10", "", "«CodeList» HY_HydroLocationType", "EARoot/EA3/EA105.htm", "5.png", "15018", "0", "", "Class0","{37EEFFBD-3F6A-47b3-BDC4-44D912B3B3BD}");
+tocTab[tocTab.length] = new Array("0.3:1", "", "Context Diagram : HY_DistanceDescription", "EARoot/EA3/EA89.htm", "175.png", "7988", "0", "", "Class diagram0","{90032395-85EA-4a3c-85F3-04EF9F4728EE}");
+tocTab[tocTab.length] = new Array("0.3:2", "", "Context Diagram : HY_IndirectPosition", "EARoot/EA3/EA91.htm", "175.png", "7987", "0", "", "Class diagram0","{D20E8ADA-895F-404c-A649-EE2C632E0CEA}");
+tocTab[tocTab.length] = new Array("0.3:3", "", "NEW_Fig37: River Referencing", "EARoot/EA3/EA93.htm", "175.png", "7989", "0", "", "Logical diagram0","{BE6C2611-36B7-47d9-8443-DD66AD8133DA}");
+tocTab[tocTab.length] = new Array("0.3:4", "", "«DataType» HY_DistanceFromReferent", "EARoot/EA3/EA95.htm", "5.png", "15553", "0", "", "Class0","{0719ADA7-1E14-4055-8FED-BBE940051F20}");
+tocTab[tocTab.length] = new Array("0.3:5", "", "«FeatureType» HY_IndirectPosition", "EARoot/EA3/EA96.htm", "5.png", "15554", "0", "", "Class0","{62A4DBD2-8FB5-4489-AE38-E5EC4723D314}");
+tocTab[tocTab.length] = new Array("0.3:6", "", "«CodeList» HY_DistanceDescription", "EARoot/EA3/EA97.htm", "5.png", "15555", "0", "", "Class0","{B5645583-E781-43c3-B270-D4EC7EA02D52}");

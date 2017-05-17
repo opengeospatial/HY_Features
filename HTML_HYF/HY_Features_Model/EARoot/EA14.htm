@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>RiverPositioningSystem</title>
+<title>HydroComplex</title>
 <link href="../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("RiverPositioningSystem", " : "))</script>  : Public  &lt;&lt;leaf&gt;&gt; Package</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HydroComplex", " : "))</script>  : Public  &lt;&lt;leaf&gt;&gt; Package</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">25/11/2011 09:37:39</td>
+			<td width="85%" class="ObjectDetailsValue">22/02/2011 17:07:12</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">06/09/2016 15:11:32</td>
+			<td class="ObjectDetailsValue">30/03/2017 12:34:42</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -55,7 +55,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
-			<td class="ObjectDetailsValue">0.0.4</td>
+			<td class="ObjectDetailsValue">1.0</td>
 		</tr>
 		<tr id="proj02" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
@@ -87,14 +87,14 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{CD488F0F-9270-472d-8EBE-67B6FCB12AB3}</td>
+			<td class="ObjectDetailsValue">{BA04FEE3-AC79-482c-91A2-760F5C7BFA6D}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
 			<td class="ObjectDetailsValue"></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The River Positioning System (Figure 32) a simple model to place a feature of interest &#39;on a river&#39; using its topological realization. It introduces the concept of indirect position where a position is determined relative to an already established reference location. This concept uses a linear river reference system whose origin is set at the outfall of a catchment, and whose linear shape is given by a flowpath realizing the catchment between the origin (outfall) and the reference location or another outfall. It is important to note, that each logical catchment has its own reference system, and must have one outfall (origin) and one linear flowpath realization (shape). &lt;br /&gt;&lt;/p&gt;&lt;p&gt;The River Positioning System references the topological realization of catchment and outfall within an implied hydrologic complex in such that the origin and referent of the reference system are nodes on the boundary of the flowpath shape. Given that a flowpath realizes a logical catchment between inflow and outflow nodes, the feature of interest being referenced realizes an inflow or outflow node of a catchment that is determined by the corresponding reference location upstream or downstream of an origin outfall. Using reference locations in both directions allows placement of a feature of interest at an interpolated distance between the identified inflow and outflow nodes on a flowpath even if the realized catchment is not explicitly delineated. &lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The Hydro Complex package is a collection of hydrologic features that form a hydrologically closed system. This includes the catchment, its inflow and outflow (conceptualized as hydrologic nexus) as well as various realizations of a catchment by typical hydrologic features. In this complex, the hydrologically determined unity of catchment and its common outlet forms an internal catchment (topology) pattern recognizing the catchment as a link between inflow and outflow, expressed for example as a flowpath &#39;bounded&#39; by the catchment outlet at upstream or downstream end. This catchment pattern is then applied to describe the connectivity of catchments in hydrographic, channel networks, or hydrometric networks. The Hydro Complex model also allows for catchments to be recognized through reference to a catchment&#39;s outlet even if stream networks, catchment areas or catchment boundary are not available. It is intended that hydrological reporting applications may use this model without the full complexity and detail of scientific catchment models.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The &lt;b&gt;Catchment&lt;/b&gt; model conceptualizes the internal catchment pattern through inter-related &#39;catchment realization&#39; features such as catchment outlet and flowpath , and through an &#39;hydroNexus&#39; feature in the role of the connector between interacting catchments&#160; (Figure 26 and Figure 27) whereby each catchment realizes the internal catchment pattern. Conceptually, each catchment has a nexus, and any nexus has a corresponding catchment, even if catchment and/or nexus may not be present in a particular application. Catchments interact with upper and lower catchments via the associated nexus, and ultimately contribute to the common outlet&#160; of a containing catchment. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -108,12 +108,12 @@ function nameClassifier(name, separator)
 		</tr>
 					<tr>
 				<td width="50%" class="TableRow" valign="top">xsdDocument</td>
-				<td width="50%" class="TableRow" valign="top">hy_positioning.xsd</td>
+				<td width="50%" class="TableRow" valign="top">hy_catchment.xsd</td>
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario4" onclick="parent.toggleDiv('detailsDIVScenario4','DetailsImageScenario4')" />Details:
-						<div id="detailsDIVScenario4" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario2" onclick="parent.toggleDiv('detailsDIVScenario2','DetailsImageScenario2')" />Details:
+						<div id="detailsDIVScenario2" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Default: FIXME<br />Description: Name of an XML Schema document to create representing the content of this package<br /></div>
 
 						</div>
@@ -125,8 +125,8 @@ function nameClassifier(name, separator)
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario5" onclick="parent.toggleDiv('detailsDIVScenario5','DetailsImageScenario5')" />Details:
-						<div id="detailsDIVScenario5" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario3" onclick="parent.toggleDiv('detailsDIVScenario3','DetailsImageScenario3')" />Details:
+						<div id="detailsDIVScenario3" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Values: iso19136_2007 | iso19139_2007 | iso19136_2007_INSPIRE_Extensions<br />Default: iso19136_2007<br />Description: XML Schema encoding rule to apply<br /></div>
 
 						</div>

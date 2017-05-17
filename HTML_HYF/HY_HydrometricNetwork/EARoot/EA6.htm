@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">30/03/2017 10:42:10</td>
+			<td class="ObjectDetailsValue">03/05/2017 10:25:45</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,7 +91,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Network represents DendriticCatchment, Fig39_: Hydrometric Network Realisation, temp_overallOverview, temp_catchmentRealization_all, NEW_hydroComplex_all, <a href="EA3.htm">NEW_Fig46: Hydrometric Network Realization</a></td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, Fig39_: Hydrometric Network Realisation, temp_overallOverview, temp_catchmentRealization_all, <a href="EA3.htm">NEW_Fig46: Hydrometric Feature - Nexus - Catchment</a>, NEW_hydroComplex_all</td>
 		</tr>
 	</table>
 	<div class="ObjectDetailsNotes">The HY_HydrometricNetwork feature type specializes the HY_HydroNetwork realization specifically as a collection of hydrometric features. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_HydrometricNetwork inherits through generalization the &lt;i&gt;realizedCatchment&lt;/i&gt;, &lt;i&gt;catchmentOutlet&lt;/i&gt;, &lt;i&gt;flowpath,&lt;/i&gt; &lt;i&gt;catchmentDivide&lt;/i&gt; and &lt;i&gt;catchmentArea &lt;/i&gt;associations, and associates a &lt;i&gt;networkStation&lt;/i&gt;. An &lt;i&gt;outflow-at-station&lt;/i&gt; constraint emphasizes the recognition of a monitoring station as (said to be coincident with) the outlet of the catchment that is realized by the hydrometric network the station is part of.&lt;br /&gt;&lt;/p&gt;</div>
@@ -99,7 +99,6 @@ function nameClassifier(name, separator)
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
-			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
 			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
 		<div class="ItemBody" id="AssociationsFromTable">
@@ -116,7 +115,7 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> networkStation<br />
-						identifies the hydrometric feature which realizes the logical catchment either separately, or as part of the hydrometric network.
+						hydrometric feature which realizes the logical catchment either separately, or as part of the hydrometric network.
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> hydrometricNetwork<br />
@@ -125,34 +124,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageLink1" onclick="parent.toggleDiv('detailsDIVLink1','DetailsImageLink1')" />Details:
-							<div id="detailsDIVLink1" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageLink2" onclick="parent.toggleDiv('detailsDIVLink2','DetailsImageLink2')" />Details:
+							<div id="detailsDIVLink2" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">hydrometric network of one or more hydrometric stations.</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-
-			</table>
-		</div>
-		<div class="ItemBody" id="ConstraintsTable">
-			<table border="0" cellspacing="0" cellpadding="0" class="Table">
-			  	<tr>
-					<td width="80%" class="TableHeading">Constraint</td>
-					<td width="10%" class="TableHeading">Type</td>
-					<td width="10%" class="TableHeading">Status</td>
-				</tr>
-				<tr>
-					<td width="80%" class="TableRow">outflow_at_station</td>
-					<td width="10%" class="TableRow">Invariant</td>
-					<td width="10%" class="TableRow">Approved</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints2" onclick="parent.toggleDiv('detailsDIVConstraints2','DetailsImageConstraints2')" />Details:
-							<div id="detailsDIVConstraints2" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">EXISTS positionOnRiver.realizedOutfall,&#160; realizedCatchment.outflow&#160; is of type HY_OutfallRealization</div>
 
 							</div>
 						</div>

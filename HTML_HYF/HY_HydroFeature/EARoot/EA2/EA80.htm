@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HydroComplex::HY_CatchmentArea</title>
+<title>HydroComplex::HY_CatchmentDivide</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_CatchmentArea", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_CatchmentDivide", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">14/07/2016 12:30:01</td>
+			<td width="85%" class="ObjectDetailsValue">08/11/2010 09:22:26</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">30/03/2017 09:57:17</td>
+			<td class="ObjectDetailsValue">04/05/2017 14:00:39</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,77 +87,20 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{EB109B5B-9ECC-4205-9E71-C24EEA5BDC4D}</td>
+			<td class="ObjectDetailsValue">{5BA816C0-9421-430b-9C8D-A3F69890E675}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">catchmentrealization, temp_overallOverview, temp_catchmentRealization_all, <a href="../EA1.htm">NEW_Fig22: Hydro Feature</a>, <a href="EA72.htm">NEW_Fig35: Catchment Realization</a>, <a href="EA24.htm">NEW_hydroComplex_all</a>, <a href="EA32.htm">Context Diagram : HY_CatchmentArea</a>, <a href="EA34.htm">Context Diagram : HY_CatchmentDivide</a>, <a href="EA38.htm">Context Diagram : HY_CatchmentRealization</a>, <a href="EA42.htm">Context Diagram : HY_FlowPath </a>, <a href="EA46.htm">Context Diagram : HY_HydroNetwork</a></td>
+			<td class="ObjectDetailsValue">hyf107, catchmentnetwork, allClass Diagram, temp_overallOverview, temp_catchmentRealization_all, check_model, <a href="../EA1.htm">NEW_Fig22: Hydro Feature</a>, <a href="EA70.htm">NEW_Fig35: Catchment Realization</a>, <a href="EA24.htm">NEW_hydroComplex_all</a>, <a href="EA32.htm">Context Diagram : HY_CatchmentArea</a>, <a href="EA34.htm">Context Diagram : HY_CatchmentDivide</a>, <a href="EA38.htm">Context Diagram : HY_CatchmentRealization</a>, <a href="EA46.htm">Context Diagram : HY_HydroNetwork</a>, <a href="EA36.htm">Context Diagram : HY_CatchmentOutlet </a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The &lt;b&gt;HY_CatchmentArea&lt;/b&gt; feature type realizes an &#39;un-realized&#39; catchment specifically as a catchment area connecting the inflow and outflow of the catchment it realizes. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_CatchmentArea specializes HY_CatchmentRealization with respect to an internal catchment topology understanding the catchment area as face that bounded by edges such as a upper drainage divide and a lower flowpath. Hydrologically, catchment area refers to the area having a common outlet for its runoff.&#160; HY_CatchmentArea may be represented using an areal geometry type.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Through generalization, HY_CatchmentArea inherits the &lt;i&gt;shape&lt;/i&gt; and &lt;i&gt;realizedCatchment&lt;/i&gt; properties. It associates the &lt;i&gt;drainingFlowpath,&lt;/i&gt; &lt;i&gt;drainageDivide, ,&lt;/i&gt; and &lt;i&gt;areaNetwork&lt;/i&gt;.&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The &lt;b&gt;HY_CatchmentDivide&lt;/b&gt; feature type realizes an &#39;un-realized&#39; catchment specifically as catchment boundary connecting the inflow and outflow of the logical catchment it realizes, whereby inflow and outflow may overlay. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Implying a linear geometric representation, a catchment boundary is topologically understood as an edge bounded by inflow node and outflow nodes, and corresponding to left-bank and right-bank catchment faces inside of the boundary. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Hydrologically, the boundary refers to the summit line separating adjacent catchments. HY_CatchmentDivide inherits from generalization the &lt;i&gt;shape&lt;/i&gt; and the &lt;i&gt;realizedCatchment&lt;/i&gt; properties. The &lt;i&gt;shape&lt;/i&gt; of the catchment divide may be implemented as a composition of succeeding curves or a polygon ring.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
-			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
 			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
 			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
-		<div class="ItemBody" id="AssociationsToTable">
-			<table border="0" cellspacing="0" cellpadding="0" class="Table">
-				<tr>
-					<td width="40%" class="TableHeading">Element</td>
-					<td width="30%" class="TableHeading">Source Role</td>
-					<td width="30%" class="TableHeading">Target Role</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA85.htm">«FeatureType» HY_FlowPath </a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> drainedArea<br />
-						catchment area drained by the flowpath
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> drainingFlowpath<br />
-						flowpath that drains the catchment area	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink26" onclick="parent.toggleDiv('detailsDIVLink26','DetailsImageLink26')" />Details:
-							<div id="detailsDIVLink26" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA82.htm">«FeatureType» HY_CatchmentDivide</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> contributingArea<br />
-						contributing catchment area encircled by the catchment divide
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> drainageDivide<br />
-						catchment divide encircling the contributing catchment area 	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink27" onclick="parent.toggleDiv('detailsDIVLink27','DetailsImageLink27')" />Details:
-							<div id="detailsDIVLink27" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-
-			</table>
-		</div>
 		<div class="ItemBody" id="AssociationsFromTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
@@ -167,25 +110,23 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA86.htm">«FeatureType» HY_HydroNetwork</a><br />
+						<a href="EA84.htm">«FeatureType» HY_HydroNetwork</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> &nbsp;<br />
-						
-
+						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> catchmentArea<br />
-						catchment area that participates in the network.
-	
+						<strong>Name:</strong> catchmentDivide<br />
+						catchment divide that participates in the hydrologic network. 	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink28" onclick="parent.toggleDiv('detailsDIVLink28','DetailsImageLink28')" />Details:
-							<div id="detailsDIVLink28" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">aggregate of catchment areas forming a connected network, which realizes as a whole the catchment that contains the catchment realized by the single catchment area. This concept requires an aggregate of non-overlapping catchment areas, and a single areal representation of each of these.</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink30" onclick="parent.toggleDiv('detailsDIVLink30','DetailsImageLink30')" />Details:
+							<div id="detailsDIVLink30" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">mesh of boundary lines forming a connected network, which realizes as a whole the catchment that contains the catchment realized by a single boundary. This concept requires an mesh of non-overlapping boundary lines, and a single linear representation of each of these.</div>
 
 							</div>
 						</div>
@@ -203,7 +144,7 @@ function nameClassifier(name, separator)
 					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA83.htm">«FeatureType» HY_CatchmentRealization</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA81.htm">«FeatureType» HY_CatchmentRealization</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>

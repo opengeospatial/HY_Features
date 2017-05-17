@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>WaterBodyTypes</title>
+<title>ChannelNetwork</title>
 <link href="../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("WaterBodyTypes", " : "))</script>  : Public  &lt;&lt;Leaf&gt;&gt; Package</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("ChannelNetwork", " : "))</script>  : Public  &lt;&lt;Leaf&gt;&gt; Package</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">15/03/2011 15:50:40</td>
+			<td width="85%" class="ObjectDetailsValue">15/03/2011 15:52:16</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">12/01/2017 12:52:49</td>
+			<td class="ObjectDetailsValue">30/03/2017 11:29:45</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,14 +87,14 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{95C22E38-E5BC-4698-8285-F7535F967B37}</td>
+			<td class="ObjectDetailsValue">{77272814-1764-495f-80A7-7E6B03CB8DA1}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
 			<td class="ObjectDetailsValue"></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The Surface Water model defines typical specializations of a water body on the land surface. Being a specialization of the HY_WaterBody class each subtypes inherits the &lt;i&gt;stratum&lt;/i&gt;, &lt;i&gt;waterpool&lt;/i&gt;, &lt;i&gt;watercourse&lt;/i&gt;, &lt;i&gt;upstreamWaterBody&lt;/i&gt;, &lt;i&gt;downstreamWaterBody, fixedLandmark&lt;/i&gt;, &lt;i&gt;streamCrossSection&lt;/i&gt; and &lt;i&gt;streamLongitudinalSection&lt;/i&gt; properties. From the general HY_HydroFeature class the special water bodies inherit the &lt;i&gt;name&lt;/i&gt; property, which allows to handle names given to them in cross-jurisdiction and multi-lingual contexts. Each specialization is understood to be part of the hydrographic network. In other contexts other specializations, or a typical segmentation may exist, that not conforms to the types defined in this standard.</div>
+	<div class="ObjectDetailsNotes">The Channel Network model defines a network of connected depressions and channels which, in its entirety, can realize a logical catchment (Figure 40). Usually this is a network of linear flowpaths realizing catchments connected to each other within the containing catchment realized by the entire network. This allows representation of the drainage pattern even if logically connected features may or may not be connected in the context of a particular representation.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The channel network is defined independent of the hydrographic network. This separates the concerns of hydraulics, focused on the analysis and design of channels and conduits, from the concerns of hydrology, focused on the occurrence and movement of water over land and in water bodies. It allows a logical catchment to be realized as a network of connected channels and depressions, regardless of water is contained therein or not. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;A single depression or channel may realize the logical catchment, either as part of the network (Figure 40) or via a typical location located in the channel network through referencing a catchment&#39;s outlet (Figure 41). For example, an identified point at an associated cross or longitudinal section can be recognized as (said to be coincident&#160; with)&#160; the known outlet of the catchment that is realized by the channel expressed as a flowpath. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -108,12 +108,12 @@ function nameClassifier(name, separator)
 		</tr>
 					<tr>
 				<td width="50%" class="TableRow" valign="top">xsdDocument</td>
-				<td width="50%" class="TableRow" valign="top">hy_waterbody.xsd</td>
+				<td width="50%" class="TableRow" valign="top">hy_waterbodyconfines.xsd</td>
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario4" onclick="parent.toggleDiv('detailsDIVScenario4','DetailsImageScenario4')" />Details:
-						<div id="detailsDIVScenario4" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario0" onclick="parent.toggleDiv('detailsDIVScenario0','DetailsImageScenario0')" />Details:
+						<div id="detailsDIVScenario0" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Description: Name of an XML Schema document to create representing the content of this package<br /></div>
 
 						</div>
@@ -125,8 +125,8 @@ function nameClassifier(name, separator)
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario5" onclick="parent.toggleDiv('detailsDIVScenario5','DetailsImageScenario5')" />Details:
-						<div id="detailsDIVScenario5" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario1" onclick="parent.toggleDiv('detailsDIVScenario1','DetailsImageScenario1')" />Details:
+						<div id="detailsDIVScenario1" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Values: iso19136_2007 | iso19139_2007 | iso19136_2007_INSPIRE_Extensions<br />Default: iso19136_2007<br />Description: XML Schema encoding rule to apply<br /></div>
 
 						</div>
