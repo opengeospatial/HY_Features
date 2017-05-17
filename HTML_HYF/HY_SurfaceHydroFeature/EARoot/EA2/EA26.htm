@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">30/03/2017 10:33:41</td>
+			<td class="ObjectDetailsValue">03/05/2017 16:01:16</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Network represents DendriticCatchment, catchmentnetwork, ChannelNetwork_extended, surfacehydronetwork, Fig35_: Hydrographic Network Realisation, temp_overallOverview, temp_catchmentRealization_all, NEW_hydroComplex_all, <a href="../EA1.htm">Fig38: Requirements Class: Surface Hydro Feature</a>, <a href="EA17.htm">NEW_Fig42: Hydrographic Network Realization</a></td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, catchmentnetwork, ChannelNetwork_extended, surfacehydronetwork, Fig35_: Hydrographic Network Realisation, temp_overallOverview, temp_catchmentRealization_all, <a href="../EA1.htm">Fig38: Requirements Class: Surface Hydro Feature</a>, <a href="EA19.htm">NEW_Fig42: Hydrographic Network - Catchment - Nexus</a>, NEW_hydroComplex_all</td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The HY_HydrographicNetwork feature type specializes the HY_HydroNetwork realization defined in the Hydro Feature core model, specifically as aggregate of permanent or temporary bodies of water standing in depressions or moving in channels. If the realized catchment is connected with other catchments via a hydrologic nexus, the hydrographic network is considered connected to the networks realizing these catchments. This allows to represent the network, even if logically connected features may or may not be connected at the representation level. If required, an application focused on surface-water bodies contained in channels or depressions may use the defined relationships s to describe the realization of a catchment by the hydrographic network, or network parts associated with the channel network.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_HydrographicNetwork inherits through generalization the &lt;i&gt;realizedCatchment&lt;/i&gt;, &lt;i&gt;catchmentOutlet&lt;/i&gt;, &lt;i&gt;flowpath,&lt;/i&gt; &lt;i&gt;catchmentDivide&lt;/i&gt; and &lt;i&gt;catchmentArea &lt;/i&gt;associations, and associates a &lt;i&gt;networkWaterBody&lt;/i&gt;. A &lt;i&gt;flowline&lt;/i&gt; constraint supports the recognition of the water body as flowpath realizing the catchment. &lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_HydrographicNetwork feature type specializes the HY_HydroNetwork realization defined in the Hydro Feature core model, specifically as aggregate of permanent or temporary bodies of water standing in depressions or moving in channels. If the realized catchment is connected with other catchments via a hydrologic nexus, the hydrographic network is considered connected to the networks realizing these catchments. This allows to represent the network, even if logically connected features may or may not be connected at the representation level. If required, an application focused on surface-water bodies contained in channels or depressions may use the defined relationships s to describe the realization of a catchment by the hydrographic network, or network parts associated with the channel network.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_HydrographicNetwork inherits through generalization the &lt;i&gt;realizedCatchment&lt;/i&gt;, &lt;i&gt;flowpath,&lt;/i&gt; &lt;i&gt;catchmentDivide&lt;/i&gt; and &lt;i&gt;catchmentArea &lt;/i&gt;associations, and associates a &lt;i&gt;networkWaterBody&lt;/i&gt;. A &lt;i&gt;flowline&lt;/i&gt; constraint supports the recognition of the water body as flowpath realizing the catchment. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -145,7 +145,7 @@ function nameClassifier(name, separator)
 					<td width="10%" class="TableHeading">Status</td>
 				</tr>
 				<tr>
-					<td width="80%" class="TableRow">flowline</td>
+					<td width="80%" class="TableRow">waterbody-flowpath</td>
 					<td width="10%" class="TableRow">Invariant</td>
 					<td width="10%" class="TableRow">Approved</td>
 				</tr>

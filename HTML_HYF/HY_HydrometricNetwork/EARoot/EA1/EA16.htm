@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>NamedFeature::HY_HydroFeature</title>
+<title>ChannelNetwork::HY_Channel</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_HydroFeature", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_Channel", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">25/06/2009 16:43:21</td>
+			<td width="85%" class="ObjectDetailsValue">04/05/2010 16:18:22</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">12/01/2017 11:27:10</td>
+			<td class="ObjectDetailsValue">03/05/2017 10:25:49</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,18 +87,19 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{A8ACD296-95A0-45f6-961E-4C92E4A95944}</td>
+			<td class="ObjectDetailsValue">{68C40568-F042-4b27-8E75-FCC7A7D4B74F}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Fig20_: Catchment, temp_overallOverview, <a href="../EA5.htm">Fig24: Hydro Feature Special</a>, <a href="../EA1.htm">Fig22: Hydro Feature</a>, <a href="EA11.htm">Fig25: Named Hydro Feature</a>, <a href="EA13.htm">Named Feature Classes</a>, <a href="../EA2/EA22.htm">Fig26: Catchment</a></td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, TopographicRealisation_??, ChannelNetwork_extended, surfacehydronetwork, Fig33_: Channel Network Realisation, Fig34_: Channel Realisation, temp_overallOverview, temp_catchmentRealization_all, <a href="../EA1.htm">Fig38: Requirements Class: Surface Hydro Feature</a>, <a href="../EA5.htm">WaterBody - Channel</a>, <a href="EA11.htm">NEW_Fig40: Channel Network - Catchment - Nexus</a>, <a href="EA13.htm">NEW_Fig41: Channel - Nexus - Catchment</a>, Fig24: Hydro Feature Special, NEW_hydroComplex_all</td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">basic feature reflecting the overall properties hydrologic features have, such as names in cross-jurisdictional and multi-lingual contexts. The HY_HydroFeature type has one association: &lt;i&gt;name&lt;/i&gt;. This links&#160; a HY_HydroFeature&#160; object to zero or more HY_HydroFeatureName objects. </div>
+	<div class="ObjectDetailsNotes">The HY_Channel feature type specializes the HY_Depression class with respect to a natural or man-made, open or closed channel through or along which water may flow, or not. A channel is part of the network of channels and depressions which forms the connecting system for the hydrographic network; a channel may have vertical sections at right angles to the main (average) direction of flow or along its centerline. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_Channel associates the &lt;i&gt;channelNetwork&lt;/i&gt; in which it participates. It carries the associations: &lt;i&gt;stream&lt;/i&gt;, &lt;i&gt;bedProfileTransversal&lt;/i&gt; and &lt;i&gt;bedProfileLongitudinal&lt;/i&gt;. HY_Channel inherits from generalization the &lt;i&gt;confinedWaterBody&lt;/i&gt; association and the constraints &lt;i&gt;outflow-at-benchmark&lt;/i&gt;. An &lt;i&gt;outflow-at-profile&lt;/i&gt; constraint emphasizes the recognition of vertical section as (said to be coincident with) the outlet of the catchment that is realized by the channel network the station is part of.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
+			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
 			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
 		<div class="ItemBody" id="AssociationsToTable">
@@ -110,7 +111,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA17.htm">«FeatureType» HY_HydroFeatureName</a><br />
+						<a href="../EA2/EA24.htm">«FeatureType» HY_LongitudinalSection</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -118,15 +119,114 @@ function nameClassifier(name, separator)
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> name<br />
-						name given to the hydrologic feature in cultural, political or historical context	
+						<strong>Name:</strong> bedProfileLongitudinal<br />
+						identifies a longitudinal vertical shape of a channel, carrying a permanent reference location which realizes the nexus of the catchment which is realized by the channel.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10" onclick="parent.toggleDiv('detailsDIVLink10','DetailsImageLink10')" />Details:
-							<div id="detailsDIVLink10" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">name taking into account the cultural, political or historical context .</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink12" onclick="parent.toggleDiv('detailsDIVLink12','DetailsImageLink12')" />Details:
+							<div id="detailsDIVLink12" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">vertical section of the channel segment in longitudinal direction.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA2/EA23.htm">«FeatureType» HY_CrossSection</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> bedProfileTransversal<br />
+						identifies a transversal  vertical shape of a channel, carrying a permanent reference location which realizes the nexus of the catchment which is realized by the channel.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink13" onclick="parent.toggleDiv('detailsDIVLink13','DetailsImageLink13')" />Details:
+							<div id="detailsDIVLink13" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">vertical section of the channel segment in transversal direction.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA17.htm">«FeatureType» HY_ChannelNetwork</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> surfaceChannel<br />
+						channel on the land surface which realizes the logical catchment either separately, or as part of the channel network.
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> channelNetwork<br />
+						network of surface channels and depressions, the channel is part of	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink14" onclick="parent.toggleDiv('detailsDIVLink14','DetailsImageLink14')" />Details:
+							<div id="detailsDIVLink14" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">network of one or more channels.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA2/EA28.htm">«FeatureType» HY_WaterBody</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> watercourse<br />
+						
+
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> stream<br />
+						identifies the water body periodically or continuously flowing in the channel, including subterranean streams.
+	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink15" onclick="parent.toggleDiv('detailsDIVLink15','DetailsImageLink15')" />Details:
+							<div id="detailsDIVLink15" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">water body flowing through or along the channel.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This definition is rooted in the definition given in the WMO Glossary of hydrology which includes water flowing in an open or closed conduit, a jet of water issuing from an orifice, or a body of flowing groundwater. For the purpose of testing the applicability of the conceptual model in the context of surface water hydrology, the definition of &#39;stream&#39; in this standard refers to water flowing in a surface channel or passing through large interstices, such as a cave, cavern or a group of these. &lt;br /&gt;&lt;/p&gt;</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ConstraintsTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+			  	<tr>
+					<td width="80%" class="TableHeading">Constraint</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Status</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">outlet-at-profle</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints16" onclick="parent.toggleDiv('detailsDIVConstraints16','DetailsImageConstraints16')" />Details:
+							<div id="detailsDIVConstraints16" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">EXISTS bedprofileTransversal.crossSectionPoint.realizedNexus, OR bedprofileLongitudinal.longitudinalSectionPoint.realizedNexus , OR&lt;br /&gt;&lt;/p&gt;&lt;p&gt;channelNetwork.realizedCatchment.outflow is of type HY_HydroLocation&lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
 						</div>
@@ -144,10 +244,16 @@ function nameClassifier(name, separator)
 					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="../EA2/EA61.htm">«FeatureType» HY_Catchment</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA15.htm">«FeatureType» HY_Depression</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA17.htm">«FeatureType» HY_ChannelNetwork</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Weak</td>
+					<td width="40%" class="TableRow" valign="top">network of one or more channels.</td>
 				</tr>
 
 			</table>

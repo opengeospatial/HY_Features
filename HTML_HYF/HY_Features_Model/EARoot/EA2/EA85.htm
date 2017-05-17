@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HydroComplex::HY_FlowPath </title>
+<title>HydroComplex::HY_InteriorCatchment</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_FlowPath ", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_InteriorCatchment", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">24/04/2013 15:37:57</td>
+			<td width="85%" class="ObjectDetailsValue">07/03/2016 09:33:18</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">30/03/2017 11:05:36</td>
+			<td class="ObjectDetailsValue">04/05/2017 14:07:17</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,19 +87,19 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{BAEBC4B0-8A02-47df-95C3-C8AE3298EAFE}</td>
+			<td class="ObjectDetailsValue">{E19DBC78-21C6-46af-A474-647E243FD1DA}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Flowpath represents DendriticCatchment, hyf107, informative, catchmentnetwork, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig35_: Hydrographic Network Realisation, Fig33_: Channel Network Realisation, catchmentrealization, outfall_, temp_overallOverview, temp_catchmentRealization_all, LR, <a href="../EA1.htm">NEW_Fig22: Hydro Feature</a>, <a href="EA72.htm">NEW_Fig35: Catchment Realization</a>, <a href="EA24.htm">NEW_hydroComplex_all</a>, <a href="EA32.htm">Context Diagram : HY_CatchmentArea</a>, <a href="EA38.htm">Context Diagram : HY_CatchmentRealization</a>, <a href="EA42.htm">Context Diagram : HY_FlowPath </a>, <a href="EA46.htm">Context Diagram : HY_HydroNetwork</a>, <a href="EA36.htm">Context Diagram : HY_CatchmentOutlet </a>, <a href="../EA3/EA99.htm">NEW_Fig37: River Referencing</a>, NEW_Fig40: Channel Network Realization, NEW_Fig42: Hydrographic Network Realization</td>
+			<td class="ObjectDetailsValue">hyf107, allClass Diagram, Fig20_: Catchment, temp_overallOverview, check_model, <a href="../EA5.htm">Fig24: Hydro Feature Special</a>, <a href="../EA1.htm">NEW_Fig22: Hydro Feature</a>, <a href="EA74.htm">Catchment Hierarchy</a>, <a href="EA62.htm">Fig31: CatchmentAggregate</a>, <a href="EA66.htm">Fig33: InteriorCatchment</a>, <a href="EA24.htm">NEW_hydroComplex_all</a>, <a href="EA28.htm">Context Diagram : HY_Catchment</a>, <a href="EA30.htm">Context Diagram : HY_CatchmentAggregate</a>, <a href="EA50.htm">Context Diagram : HY_InteriorCatchment</a>, <a href="EA52.htm">NEW_Fig26: Catchment</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The &lt;b&gt;HY_Flowpath&lt;/b&gt; feature type realizes an &#39;un-realized&#39; logical catchment specifically as a path connecting the inflow and outflow of the catchment it realizes. HY_Flowpath &#39;drains&#39; a catchment area through connecting flows from atmospheric and groundwater sources to the catchment&#39;s common outlet. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_Flowpath specializes HY_CatchmentRealization with respect to an internal catchment topology understanding the flowpath as an edge that forms the lower boundary of the catchment area understood as a face, and is itself bounded by nodes at upstream and downstream ends. Hydrologically, the flowpath is reflects a &#39;line&#39; describing a moving particle of water. HY_Flowpath may be represented using a linear geometry type.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Through generalization, HY_Flowpath inherits the &lt;i&gt;shape&lt;/i&gt; and &lt;i&gt;realizedCatchment&lt;/i&gt; properties. It associates the &lt;i&gt;drainedArea,&lt;/i&gt; &lt;i&gt;upstreamEnd, downstreamEnd,&lt;/i&gt; and &lt;i&gt;flowpathNetwork&lt;/i&gt;.&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">HY_InteriorCatchment inherits from generalization the &lt;i&gt;code&lt;/i&gt;, &lt;i&gt;outflow&lt;/i&gt;, &lt;i&gt;inflow&lt;/i&gt;, &lt;i&gt;containingCatchment&lt;/i&gt;, &lt;i&gt;containedCatchment&lt;/i&gt;, &lt;i&gt;conjointCatchment&lt;/i&gt;, &lt;i&gt;upperCatchment&lt;/i&gt;, &lt;i&gt;lowerCatchment&lt;/i&gt;, and &lt;i&gt;catchmentRealization&lt;/i&gt; properties, and associates the &lt;i&gt;envelopingCatchment&lt;/i&gt;. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;A &lt;i&gt;nillable-outflow&lt;/i&gt; constraint emphasizes the non-existing outflow&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
-			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
 			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
 		<div class="ItemBody" id="AssociationsToTable">
@@ -111,46 +111,24 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA87.htm">«FeatureType» HY_CatchmentOutlet </a><br />
+						<a href="EA79.htm">«FeatureType» HY_CatchmentAggregate</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> upwardFlowpath<br />
-						&nbsp;
+						<strong>Name:</strong> endorheicDrainage<br />
+						identifies an exorheic drained catchment which is not, but may be temporarily connected to enveloping catchments. 
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> downstreamEnd<br />
-						&nbsp;	
+						<strong>Name:</strong> envelopingCatchment<br />
+						identifies a catchment surrounding the interior catchment	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink44" onclick="parent.toggleDiv('detailsDIVLink44','DetailsImageLink44')" />Details:
-							<div id="detailsDIVLink44" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA87.htm">«FeatureType» HY_CatchmentOutlet </a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> downwardFlowpath<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> upstreamEnd<br />
-						&nbsp;	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink45" onclick="parent.toggleDiv('detailsDIVLink45','DetailsImageLink45')" />Details:
-							<div id="detailsDIVLink45" class="DetailsDiv" >
-							&nbsp;
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink42" onclick="parent.toggleDiv('detailsDIVLink42','DetailsImageLink42')" />Details:
+							<div id="detailsDIVLink42" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">should be used to identify an exorheic drained catchment which is not, but may be temporarily connected to enveloping catchments. </div>
+
 							</div>
 						</div>
 					</td>
@@ -158,78 +136,23 @@ function nameClassifier(name, separator)
 
 			</table>
 		</div>
-		<div class="ItemBody" id="AssociationsFromTable">
+		<div class="ItemBody" id="ConstraintsTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
-				<tr>
-					<td width="40%" class="TableHeading">Element</td>
-					<td width="30%" class="TableHeading">Source Role</td>
-					<td width="30%" class="TableHeading">Target Role</td>
+			  	<tr>
+					<td width="80%" class="TableHeading">Constraint</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Status</td>
 				</tr>
 				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA80.htm">«FeatureType» HY_CatchmentArea</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> drainedArea<br />
-						catchment area drained by the flowpath
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> drainingFlowpath<br />
-						flowpath that drains the catchment area	
-					</td>
+					<td width="80%" class="TableRow">nillable-outflow</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink46" onclick="parent.toggleDiv('detailsDIVLink46','DetailsImageLink46')" />Details:
-							<div id="detailsDIVLink46" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA3/EA102.htm">«FeatureType» HY_IndirectPosition</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> linearElement<br />
-						identifies a catchment realization used as the permanent reference relative to which a position is assigned to a fluence, or any feature of interest.	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink47" onclick="parent.toggleDiv('detailsDIVLink47','DetailsImageLink47')" />Details:
-							<div id="detailsDIVLink47" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA86.htm">«FeatureType» HY_HydroNetwork</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> flowpath<br />
-						flowpath that participates in the hydrologic network	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink48" onclick="parent.toggleDiv('detailsDIVLink48','DetailsImageLink48')" />Details:
-							<div id="detailsDIVLink48" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">sequence of flowpaths forming a connected network, which realizes as a whole the catchment that contains the catchment realized by the single flowpath. This concept requires a non-branching &#39;main-stem&#39; of watercourses, and a single linear representation of each of these.</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints43" onclick="parent.toggleDiv('detailsDIVConstraints43','DetailsImageConstraints43')" />Details:
+							<div id="detailsDIVConstraints43" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">0..0</div>
 
 							</div>
 						</div>
@@ -247,10 +170,16 @@ function nameClassifier(name, separator)
 					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA83.htm">«FeatureType» HY_CatchmentRealization</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA77.htm">«FeatureType» HY_Catchment</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA79.htm">«FeatureType» HY_CatchmentAggregate</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Weak</td>
+					<td width="40%" class="TableRow" valign="top">should be used to identify an exorheic drained catchment which is not, but may be temporarily connected to enveloping catchments. </td>
 				</tr>
 
 			</table>

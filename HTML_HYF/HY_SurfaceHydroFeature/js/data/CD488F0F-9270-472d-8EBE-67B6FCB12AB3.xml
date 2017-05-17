@@ -1,6 +1,6 @@
-tocTab[tocTab.length] = new Array("0.3:1", "", "Fig37: River Positioning System", "EARoot/EA3/EA75.htm", "175.png", "7162", "0", "", "Diagram diagram0","{2451C85F-7FB4-44ad-8CC1-EDA075CD2B77}");
-tocTab[tocTab.length] = new Array("0.3:2", "", "River Positioning Classes with tags", "EARoot/EA3/EA77.htm", "175.png", "7161", "0", "", "Diagram diagram0","{B59B4228-0E44-4e99-AB29-2691B09CB1D9}");
-tocTab[tocTab.length] = new Array("0.3:3", "", "«DataType» HY_DistanceFromReferent", "EARoot/EA3/EA79.htm", "5.png", "14684", "0", "", "Class0","{0719ADA7-1E14-4055-8FED-BBE940051F20}");
-tocTab[tocTab.length] = new Array("0.3:4", "", "«FeatureType» HY_IndirectPosition", "EARoot/EA3/EA80.htm", "5.png", "14685", "0", "", "Class0","{62A4DBD2-8FB5-4489-AE38-E5EC4723D314}");
-tocTab[tocTab.length] = new Array("0.3:5", "", "«FeatureType» HY_RiverReferenceSystem", "EARoot/EA3/EA81.htm", "5.png", "14687", "0", "", "Class0","{EA0E3CF3-DF2C-407f-A0FD-ED4E2BB1A05C}");
-tocTab[tocTab.length] = new Array("0.3:6", "", "«CodeList» HY_DistanceDescription", "EARoot/EA3/EA82.htm", "5.png", "14686", "0", "", "Class0","{B5645583-E781-43c3-B270-D4EC7EA02D52}");
+tocTab[tocTab.length] = new Array("0.3:1", "", "Context Diagram : HY_DistanceDescription", "EARoot/EA3/EA89.htm", "175.png", "7988", "0", "", "Class diagram0","{90032395-85EA-4a3c-85F3-04EF9F4728EE}");
+tocTab[tocTab.length] = new Array("0.3:2", "", "Context Diagram : HY_IndirectPosition", "EARoot/EA3/EA91.htm", "175.png", "7987", "0", "", "Class diagram0","{D20E8ADA-895F-404c-A649-EE2C632E0CEA}");
+tocTab[tocTab.length] = new Array("0.3:3", "", "NEW_Fig37: River Referencing", "EARoot/EA3/EA93.htm", "175.png", "7989", "0", "", "Logical diagram0","{BE6C2611-36B7-47d9-8443-DD66AD8133DA}");
+tocTab[tocTab.length] = new Array("0.3:4", "", "«DataType» HY_DistanceFromReferent", "EARoot/EA3/EA95.htm", "5.png", "15553", "0", "", "Class0","{0719ADA7-1E14-4055-8FED-BBE940051F20}");
+tocTab[tocTab.length] = new Array("0.3:5", "", "«FeatureType» HY_IndirectPosition", "EARoot/EA3/EA96.htm", "5.png", "15554", "0", "", "Class0","{62A4DBD2-8FB5-4489-AE38-E5EC4723D314}");
+tocTab[tocTab.length] = new Array("0.3:6", "", "«CodeList» HY_DistanceDescription", "EARoot/EA3/EA97.htm", "5.png", "15555", "0", "", "Class0","{B5645583-E781-43c3-B270-D4EC7EA02D52}");
