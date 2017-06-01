@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HydroComplex::HY_HydroLocation</title>
+<title>HY_HydroLocation</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">04/05/2017 13:57:20</td>
+			<td class="ObjectDetailsValue">23/05/2017 11:31:21</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,7 +91,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, hyf107, informative, TopographicRealisation_??, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig39_: Hydrometric Network Realisation, Fig36_: Water Body Realisation, Fig34_: Channel Realisation, Fig37_: Reservoir Realisation, outfall_, temp_overallOverview, temp_catchmentRealization_all, check_tracking, NEW_Fig41: Channel - Nexus - Catchment, NEW_Fig43: Water Body - Nexus - Catchment, NEW_Fig44: Reservoir - Nexus - Catchment, Reservoir_extended, check_model, NEW_Fig46: Hydrometric Feature - Nexus - Catchment, <a href="../EA1.htm">NEW_Fig22: Hydro Feature</a>, <a href="EA68.htm">NEW_Fig34: HydroNexus</a>, <a href="EA72.htm">NEW_Fig36: Hydro-Location</a>, <a href="EA24.htm">NEW_hydroComplex_all</a>, <a href="../EA3/EA91.htm">Context Diagram : HY_IndirectPosition</a>, <a href="../EA3/EA93.htm">NEW_Fig37: River Referencing</a></td>
+			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, hyf107, informative, TopographicRealisation_??, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig39_: Hydrometric Network Realisation, Fig36_: Water Body Realisation, Fig34_: Channel Realisation, Fig37_: Reservoir Realisation, outfall_, temp_overallOverview, temp_catchmentRealization_all, check_tracking, check_model, NEW_Fig46: Hydrometric Feature - Nexus - Catchment, NEW_Fig41: Channel - Nexus - Catchment, NEW_Fig43: Water Body - Nexus - Catchment, NEW_Fig44: Reservoir - Nexus - Catchment, Reservoir_extended, <a href="../EA1.htm">Fig21: Hydro Feature</a>, <a href="EA68.htm">NEW_Fig34: HydroNexus</a>, <a href="EA72.htm">NEW_Fig36: Hydro-Location</a>, <a href="EA24.htm">NEW_hydroComplex_all</a>, <a href="../EA3/EA91.htm">Context Diagram : HY_IndirectPosition</a>, <a href="../EA3/EA93.htm">NEW_Fig37: River Referencing</a></td>
 		</tr>
 	</table>
 	<div class="ObjectDetailsNotes">The HY_HydroLocation feature type conceptualizes the idea that the hydro nexus can be realized by practically any feature of interest. Using the hydro nexus to define and reference the hydrologic determination of a catchment, hydrologic features may be associated to a corresponding catchment through reference to the feature that realizes its nexus. Any hydrologically significant feature that can be identified as (said to be) the outlet of a catchment may realize the hydro nexus. Typically this will be a permanent, stable location that is fixed and/or referenced by coordinates. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Landmarks such as confluences, points corresponding to vertical sections, or the position of a monitoring station on a river are typical realizations of the hydro nexus. In other than surface water contexts other types may realize a catchment&#39;s hydro nexus. Other kinds of hydro nexus realizations that don&#39;t carry normal surface water characteristics as defined in this standard, e.g. a spring where groundwater enters the surface, an arbitrary point projected onto the surface, or an nexus that collects many disjoint locations may use or specialize the general HY_HydroLocation type. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Topologically, the HY_HydroLocation should be understood to be the boundary of the corresponding catchment, and always of lower topological dimension than the catchment.. Even though the topological realization of a hydro nexus is typically as a node between catchment edges, a nexus realization may also have any geometric representation, including a single point.&lt;br /&gt;&lt;/p&gt;</div>
@@ -146,7 +146,7 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			geometric representation of the realized outfall
+			geometric representation of the realized outfall.
 		</td>
 	</tr>
 </table></div>
@@ -192,7 +192,7 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			expresses the type of the realized outfall, using a term from the HY_ RealizedOutfallType code list, or a controlled vocabulary. Alternative code lists may be used but should be related to the terms in Annex B.1 using an appropriate formalism.
+			expresses the type of the realized outfall, using a term from the HY_ HydroLocationType code list, or a controlled vocabulary. Alternative code lists may be used but should be related to the terms in Annex B.1 using an appropriate formalism.
 		</td>
 	</tr>
 </table></div>
