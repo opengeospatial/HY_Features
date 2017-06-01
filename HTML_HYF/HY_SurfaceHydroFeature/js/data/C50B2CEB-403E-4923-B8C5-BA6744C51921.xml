@@ -1,6 +1,6 @@
-tocTab[tocTab.length] = new Array("0:1", "", "Fig38: Requirements Class: Surface Hydro Feature", "EARoot/EA1.htm", "175.png", "7895", "0", "", "Diagram diagram0","{EA56E166-F7B3-4f62-ADBF-D202CED464A8}");
-tocTab[tocTab.length] = new Array("0:2", "", "Fig39:  SHF extDependencies", "EARoot/EA3.htm", "176.png", "7894", "0", "", "Package diagram0","{64334BD7-698B-4164-B0AA-5C7EF4E83188}");
-tocTab[tocTab.length] = new Array("0:3", "", "WaterBody - Channel", "EARoot/EA5.htm", "175.png", "7896", "0", "", "Diagram diagram0","{B1D2998E-1E2F-425e-979E-3D91B9A3EA09}");
+tocTab[tocTab.length] = new Array("0:1", "", "Fig37: Surface Hydro Feature Classes", "EARoot/EA1.htm", "175.png", "8086", "0", "", "Diagram diagram0","{EA56E166-F7B3-4f62-ADBF-D202CED464A8}");
+tocTab[tocTab.length] = new Array("0:2", "", "Fig38:  SHF extDependencies", "EARoot/EA3.htm", "176.png", "8085", "0", "", "Package diagram0","{64334BD7-698B-4164-B0AA-5C7EF4E83188}");
+tocTab[tocTab.length] = new Array("0:3", "", "WaterBody - Channel", "EARoot/EA5.htm", "175.png", "8087", "0", "", "Diagram diagram0","{B1D2998E-1E2F-425e-979E-3D91B9A3EA09}");
 tocTab[tocTab.length] = new Array("0.1", "1", "«Leaf» ChannelNetwork", "EARoot/EA7.htm", "4.png", "", "", "{77272814-1764-495f-80A7-7E6B03CB8DA1}", "Package");
 tocTab[tocTab.length] = new Array("0.2", "1", "«Leaf» HydrographicNetwork", "EARoot/EA8.htm", "4.png", "", "", "{82C9C32F-AE40-4d4b-BAAB-9A1040E5C098}", "Package");
 tocTab[tocTab.length] = new Array("0.3", "1", "«Leaf» WaterBodyTypes", "EARoot/EA9.htm", "4.png", "", "", "{95C22E38-E5BC-4698-8285-F7535F967B37}", "Package");

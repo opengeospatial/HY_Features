@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HydroComplex::HY_CatchmentRealization</title>
+<title>HY_CatchmentRealization</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -91,7 +91,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Flowpath represents DendriticCatchment, Network represents DendriticCatchment, hyf107, catchmentnetwork, Context Diagram : HY_TopographicNetwork, TopographicRealisation_??, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig39_: Hydrometric Network Realisation, Fig20_: Catchment, Fig35_: Hydrographic Network Realisation, Fig33_: Channel Network Realisation, catchmentrealization, outfall_, temp_overallOverview, temp_catchmentRealization_all, LR, NEW_Fig40: Channel Network - Catchment - Nexus, NEW_Fig42: Hydrographic Network - Catchment - Nexus, check_model, NEW_Fig46: Hydrometric Feature - Nexus - Catchment, <a href="../EA1.htm">NEW_Fig22: Hydro Feature</a>, <a href="EA70.htm">NEW_Fig35: Catchment Realization</a>, <a href="EA24.htm">NEW_hydroComplex_all</a>, <a href="EA26.htm">Context Diagram : HY_CartographicRealization</a>, <a href="EA28.htm">Context Diagram : HY_Catchment</a>, <a href="EA32.htm">Context Diagram : HY_CatchmentArea</a>, <a href="EA34.htm">Context Diagram : HY_CatchmentDivide</a>, <a href="EA38.htm">Context Diagram : HY_CatchmentRealization</a>, <a href="EA42.htm">Context Diagram : HY_FlowPath </a>, <a href="EA46.htm">Context Diagram : HY_HydroNetwork</a>, <a href="EA36.htm">Context Diagram : HY_CatchmentOutlet </a>, <a href="EA52.htm">NEW_Fig26: Catchment</a></td>
+			<td class="ObjectDetailsValue">Flowpath represents DendriticCatchment, Network represents DendriticCatchment, hyf107, catchmentnetwork, Context Diagram : HY_TopographicNetwork, TopographicRealisation_??, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig39_: Hydrometric Network Realisation, Fig20_: Catchment, Fig35_: Hydrographic Network Realisation, Fig33_: Channel Network Realisation, catchmentrealization, outfall_, temp_overallOverview, temp_catchmentRealization_all, LR, check_model, NEW_Fig46: Hydrometric Feature - Nexus - Catchment, NEW_Fig40: Channel Network - Catchment - Nexus, NEW_Fig42: Hydrographic Network - Catchment - Nexus, <a href="../EA1.htm">Fig21: Hydro Feature</a>, <a href="EA70.htm">NEW_Fig35: Catchment Realization</a>, <a href="EA24.htm">NEW_hydroComplex_all</a>, <a href="EA26.htm">Context Diagram : HY_CartographicRealization</a>, <a href="EA28.htm">Context Diagram : HY_Catchment</a>, <a href="EA32.htm">Context Diagram : HY_CatchmentArea</a>, <a href="EA34.htm">Context Diagram : HY_CatchmentDivide</a>, <a href="EA38.htm">Context Diagram : HY_CatchmentRealization</a>, <a href="EA42.htm">Context Diagram : HY_FlowPath </a>, <a href="EA46.htm">Context Diagram : HY_HydroNetwork</a>, <a href="EA36.htm">Context Diagram : HY_CatchmentOutlet </a>, <a href="EA52.htm">NEW_Fig26: Catchment</a></td>
 		</tr>
 	</table>
 	<div class="ObjectDetailsNotes">The HY_CatchmentRealization feature type (Figure 35) conceptualizes the multiple realization of an &#39;un-realized&#39;, logical catchment, by typical features used to describe a catchment as a unit of study shared across sub-domains and studies. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The catchment realization concept implies a hydrologic complex in that, if a catchment realization exists, this exists in the same hydrologic complex as the catchment it realizes. In this way, any feature realization of a logical catchment references the hydrologic determination of the realized catchment. If the realized catchment is connected with other catchments via inflow and/or outflow hydro nexuses, possible feature realizations are also connected. A topological realization of the logical catchment is always of higher topological dimension than the realization of the corresponding hydro nexus in terms of a topological boundary. For example, a linear flowpath realizing a catchment may be understood as an edge between inflow and outflow nodes; the areal realization of a catchment as a face bounded by linear inflow and outflow.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The catchment realization features defined in this standard refer to objects on the land surface for the purpose of surface water hydrology. In other contexts, other types of catchment realization may exist. Catchment realizations that do not conform to those defined in this standard, for instance realizations in 3- or 4-dimensional perspectives, may be implemented using the general HY_CatchmentRealization type. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_CatchmentRealization carries a &lt;i&gt;shape &lt;/i&gt;attribute&lt;i&gt; &lt;/i&gt;and associates the &lt;i&gt;realizedCatchment&lt;/i&gt;. &lt;br /&gt;&lt;/p&gt;</div>
@@ -199,13 +199,13 @@ function nameClassifier(name, separator)
 					<td width="40%" class="TableHeading">Notes</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA84.htm">«FeatureType» HY_HydroNetwork</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA78.htm">«FeatureType» HY_CatchmentArea</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
 				</tr>
 				<tr>
-					<td width="30%" class="TableRow" valign="top"><a href="EA78.htm">«FeatureType» HY_CatchmentArea</a></td>
+					<td width="30%" class="TableRow" valign="top"><a href="EA84.htm">«FeatureType» HY_HydroNetwork</a></td>
 					<td width="15%" class="TableRow" valign="top">Class</td>
 					<td width="15%" class="TableRow" valign="top">Generalization</td>
 					<td width="40%" class="TableRow" valign="top">&nbsp;</td>

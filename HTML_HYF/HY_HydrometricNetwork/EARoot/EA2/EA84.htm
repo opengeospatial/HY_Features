@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HydroComplex::HY_HydroNetwork</title>
+<title>HY_HydroNetwork</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -91,7 +91,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">catchmentnetwork, Context Diagram : HY_TopographicNetwork, TopographicRealisation_??, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig39_: Hydrometric Network Realisation, Fig35_: Hydrographic Network Realisation, Fig33_: Channel Network Realisation, temp_overallOverview, temp_catchmentRealization_all, NEW_Fig40: Channel Network - Catchment - Nexus, NEW_Fig42: Hydrographic Network - Catchment - Nexus, check_model, NEW_Fig46: Hydrometric Feature - Nexus - Catchment, <a href="../EA1.htm">NEW_Fig22: Hydro Feature</a>, <a href="EA70.htm">NEW_Fig35: Catchment Realization</a>, <a href="EA24.htm">NEW_hydroComplex_all</a>, <a href="EA32.htm">Context Diagram : HY_CatchmentArea</a>, <a href="EA34.htm">Context Diagram : HY_CatchmentDivide</a>, <a href="EA38.htm">Context Diagram : HY_CatchmentRealization</a>, <a href="EA42.htm">Context Diagram : HY_FlowPath </a>, <a href="EA46.htm">Context Diagram : HY_HydroNetwork</a>, <a href="EA36.htm">Context Diagram : HY_CatchmentOutlet </a></td>
+			<td class="ObjectDetailsValue">catchmentnetwork, Context Diagram : HY_TopographicNetwork, TopographicRealisation_??, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig39_: Hydrometric Network Realisation, Fig35_: Hydrographic Network Realisation, Fig33_: Channel Network Realisation, temp_overallOverview, temp_catchmentRealization_all, check_model, NEW_Fig46: Hydrometric Feature - Nexus - Catchment, NEW_Fig40: Channel Network - Catchment - Nexus, NEW_Fig42: Hydrographic Network - Catchment - Nexus, <a href="../EA1.htm">Fig21: Hydro Feature</a>, <a href="EA70.htm">NEW_Fig35: Catchment Realization</a>, <a href="EA24.htm">NEW_hydroComplex_all</a>, <a href="EA32.htm">Context Diagram : HY_CatchmentArea</a>, <a href="EA34.htm">Context Diagram : HY_CatchmentDivide</a>, <a href="EA38.htm">Context Diagram : HY_CatchmentRealization</a>, <a href="EA42.htm">Context Diagram : HY_FlowPath </a>, <a href="EA46.htm">Context Diagram : HY_HydroNetwork</a>, <a href="EA36.htm">Context Diagram : HY_CatchmentOutlet </a></td>
 		</tr>
 	</table>
 	<div class="ObjectDetailsNotes">The &lt;b&gt;HY_HydroNetwork&lt;/b&gt; feature type realizes an &#39;un-realized&#39; catchment as a network of connected hydrologic features. Such a network realizes the hierarchical network of logically connected catchments contained in a larger catchment. It may be a sequence of flowpaths,&#160; an aggregate of catchment areas or a mesh of catchment divides. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_HydroNetwork feature type specializes HY_CatchmentRealization. Through generalization it inherits the &lt;i&gt;shape&lt;/i&gt; and the &lt;i&gt;realizedCatchment&lt;/i&gt; properties, and carries the associations &lt;i&gt;flowpath&lt;/i&gt;, &lt;i&gt;catchmentDivide&lt;/i&gt; and &lt;i&gt;catchmentArea&lt;/i&gt;. The optional &lt;i&gt;shape&lt;/i&gt; of the is usually given through the individual geometry of the network parts. &lt;br /&gt;&lt;/p&gt;</div>
@@ -110,32 +110,6 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA78.htm">«FeatureType» HY_CatchmentArea</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						
-
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> catchmentArea<br />
-						catchment area that participates in the network.
-	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink39" onclick="parent.toggleDiv('detailsDIVLink39','DetailsImageLink39')" />Details:
-							<div id="detailsDIVLink39" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">aggregate of catchment areas forming a connected network, which realizes as a whole the catchment that contains the catchment realized by the single catchment area. This concept requires an aggregate of non-overlapping catchment areas, and a single areal representation of each of these.</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
 						<a href="EA83.htm">«FeatureType» HY_FlowPath </a><br />
 						Class &nbsp;
 					</td>
@@ -150,8 +124,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink40" onclick="parent.toggleDiv('detailsDIVLink40','DetailsImageLink40')" />Details:
-							<div id="detailsDIVLink40" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink39" onclick="parent.toggleDiv('detailsDIVLink39','DetailsImageLink39')" />Details:
+							<div id="detailsDIVLink39" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">sequence of flowpaths forming a connected network, which realizes as a whole the catchment that contains the catchment realized by the single flowpath. This concept requires a non-branching &#39;main-stem&#39; of watercourses, and a single linear representation of each of these.</div>
 
 							</div>
@@ -174,9 +148,35 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink40" onclick="parent.toggleDiv('detailsDIVLink40','DetailsImageLink40')" />Details:
+							<div id="detailsDIVLink40" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">mesh of boundary lines forming a connected network, which realizes as a whole the catchment that contains the catchment realized by a single boundary. This concept requires an mesh of non-overlapping boundary lines, and a single linear representation of each of these.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA78.htm">«FeatureType» HY_CatchmentArea</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						
+
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> catchmentArea<br />
+						catchment area that participates in the network.
+	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink41" onclick="parent.toggleDiv('detailsDIVLink41','DetailsImageLink41')" />Details:
 							<div id="detailsDIVLink41" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">mesh of boundary lines forming a connected network, which realizes as a whole the catchment that contains the catchment realized by a single boundary. This concept requires an mesh of non-overlapping boundary lines, and a single linear representation of each of these.</div>
+							<div class="ObjectDetailsNotes">aggregate of catchment areas forming a connected network, which realizes as a whole the catchment that contains the catchment realized by the single catchment area. This concept requires an aggregate of non-overlapping catchment areas, and a single areal representation of each of these.</div>
 
 							</div>
 						</div>
