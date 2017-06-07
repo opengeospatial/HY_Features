@@ -89,7 +89,7 @@ Comment:
 Directed graph. This term is not used in the document. The notion that stream networks (at least linear flowpath networks within containing catchments), dendritic or otherwise, can be represented as acyclic directed graphs is of consequence. (Cyclic structures may exist, but outside of tidal situations, water flows in only one direction making its behaviour acyclic in a graph context.) It has ramifications in terms of query processing of upstream/downstream relationships for example (without resorting to using a river reference system or intelligent identifiers). It can also be related to RDF, which is mentioned as a future objective.
 
 Response:
-Terminology from non-hydrology domains, especially as it pertains to data system implementation is avoided. The specifics of a graph described by hydrologic information is very much an implementation detail that, while an important aspect of some hydrologic data systems, is not a core feature of the HY_Features model. Directed graphs are supported by the catchment-hydroNexus model and a note to that affect will be added. 
+Terminology from non-hydrology domains, especially as it pertains to data system implementation is avoided. The specifics of a graph described by hydrologic information is very much an implementation detail that, while an important aspect of some hydrologic data systems, is not a core feature of the HY_Features model. Directed graphs are supported by the catchment-hydroNexus.
 
 https://github.com/opengeospatial/HY_Features/issues/207
 Comment:
