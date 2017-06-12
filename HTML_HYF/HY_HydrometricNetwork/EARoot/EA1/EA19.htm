@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">01/06/2017 08:52:56</td>
+			<td class="ObjectDetailsValue">12/06/2017 11:25:44</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -94,7 +94,7 @@ function nameClassifier(name, separator)
 			<td class="ObjectDetailsValue">Network represents DendriticCatchment, Context Diagram : HY_TopographicNetwork, surfacehydronetwork, Fig33_: Channel Network Realisation, temp_overallOverview, temp_catchmentRealization_all, NEW_hydroComplex_all, <a href="../EA1.htm">Fig37: Surface Hydro Feature Classes</a>, <a href="EA13.htm">Fig39: Channel Network - Catchment - Nexus</a>, <a href="EA11.htm">Channel Network Classes</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The HY_ChannelNetwork feature type specializes the HY_HydroNetwork realization defined in the Hydro Feature core model, specifically as an aggregate of surface depressions and surface channels which continuously or periodically contain water, without imposing a particular drainage pattern. This allows to represent the network, even if logically connected features may or may not be connected at the representation level. If the realized catchment is connected with other catchments via a hydrologic nexus, the channel network is considered connected to the channel networks realizing these catchments. If required, an application focused on the structures containing a water body may use the defined relationships s to describe the realization of a catchment by the channel network, or network parts associated with the hydrographic network.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_ChannelNetwork associates the &lt;i&gt;surfaceDepression&lt;/i&gt; and &lt;i&gt;surfaceChannel&lt;/i&gt;, and carries a &lt;i&gt;drainagePattern&lt;/i&gt; attribute; it inherits through generalization the &lt;i&gt;realizedCatchment&lt;/i&gt;, &lt;i&gt;flowpath,&lt;/i&gt; &lt;i&gt;catchmentDivide&lt;/i&gt; and &lt;i&gt;catchmentArea &lt;/i&gt;associations. A &lt;i&gt;channel-path&lt;/i&gt; constraint is defined to support the recognition of channel and depression as flowpath realizing the catchment. Depending on the application, the channel network and the related features may be described by suitable attributes.&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_ChannelNetwork feature type specializes the HY_HydroNetwork realization defined in the Hydro Feature core model, specifically as an aggregate of surface depressions and surface channels which continuously or periodically contain water, without imposing a particular drainage pattern. This allows representation of the network, even if logically connected features are not connected at the representation level. If the realized catchment is connected with other catchments via hydro nexuses, the channel network is considered connected to the channel network realizing these catchments. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_ChannelNetwork has &lt;i&gt;surfaceDepression&lt;/i&gt; and &lt;i&gt;surfaceChannel &lt;/i&gt;associations, and carries a &lt;i&gt;drainagePattern&lt;/i&gt; attribute; it inherits through generalization the &lt;i&gt;shape&lt;/i&gt; attribute, the &lt;i&gt;realizedCatchment&lt;/i&gt; association as well as &lt;i&gt;flowpath&lt;/i&gt;, &lt;i&gt;catchmentDivide&lt;/i&gt; and &lt;i&gt;catchmentArea&lt;/i&gt; associations. Depending on the application, the channel network and the related features may be described by suitable attributes. A &lt;i&gt;channel-flowpath&lt;/i&gt; constraint is defined to support the recognition of the channel as flowpath realizing the catchment. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -115,26 +115,26 @@ function nameClassifier(name, separator)
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes17')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes17" border="0" />Details:
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes9')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes9" border="0" />Details:
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes17_00" style="display: none;">
+						<tr id="DetailsImageAttributes9_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes17_01" style="display: none;">
+						<tr id="DetailsImageAttributes9_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes17_02" style="display: none;">
+						<tr id="DetailsImageAttributes9_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes17_03" style="display: none;">
+						<tr id="DetailsImageAttributes9_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes17_03" style="display: none;">
+						<tr id="DetailsImageAttributes9_03" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td>Range:0 to 1</td>
 						</tr>
@@ -147,7 +147,7 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			drainage pattern. An implementation may use a term from the HY_DrainagePattern code list. Note that alternative code lists may be used but should be related to the terms in Annex B.3 using an appropriate formalism. 
+			drainage pattern. An implementation may use a term from the HY_DrainagePattern code list. Note that alternative code lists may be used but should be related to the terms in this code list using an appropriate formalism. 
 		</td>
 	</tr>
 </table></div>
@@ -171,7 +171,7 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> surfaceDepression<br />
-						depression on the land surface which realizes the logical catchment either separately, or as part of the channel network.
+						depression on the land surface which realizes the catchment either separately, or as part of the channel network.
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> surfaceNetwork<br />
@@ -180,8 +180,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink18" onclick="parent.toggleDiv('detailsDIVLink18','DetailsImageLink18')" />Details:
-							<div id="detailsDIVLink18" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10" onclick="parent.toggleDiv('detailsDIVLink10','DetailsImageLink10')" />Details:
+							<div id="detailsDIVLink10" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
@@ -194,17 +194,17 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> surfaceChannel<br />
-						channel on the land surface which realizes the logical catchment either separately, or as part of the channel network.
+						channel on the land surface which realizes the catchment either separately, or as part of the channel network.
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> channelNetwork<br />
-						network of surface channels and depressions, the channel is part of	
+						network of surface channels and depressions, the channel is part of.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink19" onclick="parent.toggleDiv('detailsDIVLink19','DetailsImageLink19')" />Details:
-							<div id="detailsDIVLink19" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink11" onclick="parent.toggleDiv('detailsDIVLink11','DetailsImageLink11')" />Details:
+							<div id="detailsDIVLink11" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">network of one or more channels.</div>
 
 							</div>
@@ -228,9 +228,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints20" onclick="parent.toggleDiv('detailsDIVConstraints20','DetailsImageConstraints20')" />Details:
-							<div id="detailsDIVConstraints20" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">EXISTS flowpath, surfaceChannel and surfaceDepression&#160; are of type HY_Flowpath</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints12" onclick="parent.toggleDiv('detailsDIVConstraints12','DetailsImageConstraints12')" />Details:
+							<div id="detailsDIVConstraints12" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">EXISTS flowpath, surfaceChannel and surfaceDepression&#160; are of type HY_Flowpath, &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;defines that whenever a flowpath exists as part of a network, the surface depression and surface channel should be recognized as a flowpath. Geometrically represented as a curve, channel-flowpath will support to &#8216;measure&#8217; a position on, or along, the channel using its centreline as shape.&lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
 						</div>

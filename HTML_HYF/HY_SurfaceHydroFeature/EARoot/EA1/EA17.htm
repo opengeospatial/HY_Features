@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">03/05/2017 16:01:18</td>
+			<td class="ObjectDetailsValue">12/06/2017 11:24:41</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">surfacehydronetwork, Fig33_: Channel Network Realisation, Fig34_: Channel Realisation, temp_overallOverview, temp_catchmentRealization_all, Fig23: Hydro Feature Special, NEW_hydroComplex_all, <a href="../EA1.htm">Fig37: Surface Hydro Feature Classes</a>, <a href="../EA5.htm">WaterBody - Channel</a>, <a href="EA13.htm">Fig39: Channel Network - Catchment - Nexus</a>, <a href="EA15.htm">Fig40: Channel - Nexus - Catchment</a>, <a href="EA11.htm">Channel Network Classes</a></td>
+			<td class="ObjectDetailsValue">surfacehydronetwork, Fig33_: Channel Network Realisation, Fig34_: Channel Realisation, temp_overallOverview, temp_catchmentRealization_all, NEW_hydroComplex_all, Fig23: Hydro Feature Special, <a href="../EA1.htm">Fig37: Surface Hydro Feature Classes</a>, <a href="../EA5.htm">WaterBody - Channel</a>, <a href="EA13.htm">Fig39: Channel Network - Catchment - Nexus</a>, <a href="EA15.htm">Fig40: Channel - Nexus - Catchment</a>, <a href="EA11.htm">Channel Network Classes</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The HY_Depression feature type specializes the general HY_HydroFeature class. It describes land lower than the surrounding land as container for standing water. A depression is part of the network of channels and depressions forming the connecting system for the wherein water bodies stand as parts of hydrographic network.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_Depression inherits from generalization the &lt;i&gt;name&lt;/i&gt; property, and the &lt;i&gt;channel-path&lt;/i&gt; and &lt;i&gt;channel-edge&lt;/i&gt; constraints. It associates the &lt;i&gt;surfaceNetwork&lt;/i&gt; in which it participates, a body of &lt;i&gt;standingWater&lt;/i&gt; and a &lt;i&gt;confinedWaterBody&lt;/i&gt;. An &lt;i&gt;outflow-at-benchmark&lt;/i&gt; constraint emphasizes the recognition of a benchmark on the confined water body as (said to be coincident with) the outflow of the catchment that is realized by the surface network the depression is part of.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;. &lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_Depression feature type specializes the general HY_HydroFeature class. It describes land lower than the surrounding land as a container for standing water. A depression is part of the network of channels and depressions forming the connecting system in which waterbodies are contained as parts of hydrographic network. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Through generalization, HY_Depression inherits the &lt;i&gt;name&lt;/i&gt; property. It has associations for the &lt;i&gt;surfaceNetwork&lt;/i&gt; in which it participates, a body of &lt;i&gt;standingWater&lt;/i&gt; and a stratum of a &lt;i&gt;confinedWaterBody&lt;/i&gt;. An &lt;i&gt;outlet-at-benchmark&lt;/i&gt; constraint emphasizes that a benchmark on the confined waterbody at the outlet of the catchment that is realized by the channel network. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -121,13 +121,13 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> confinedWaterBody<br />
-						identifies a stratum of water body  contained in the depression.	
+						identifies a stratum of waterbody contained in the depression.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink8" onclick="parent.toggleDiv('detailsDIVLink8','DetailsImageLink8')" />Details:
-							<div id="detailsDIVLink8" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink0" onclick="parent.toggleDiv('detailsDIVLink0','DetailsImageLink0')" />Details:
+							<div id="detailsDIVLink0" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">water body contained in the depression.</div>
 
 							</div>
@@ -141,7 +141,7 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> surfaceDepression<br />
-						depression on the land surface which realizes the logical catchment either separately, or as part of the channel network.
+						depression on the land surface which realizes the catchment either separately, or as part of the channel network.
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> surfaceNetwork<br />
@@ -150,8 +150,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink9" onclick="parent.toggleDiv('detailsDIVLink9','DetailsImageLink9')" />Details:
-							<div id="detailsDIVLink9" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink1" onclick="parent.toggleDiv('detailsDIVLink1','DetailsImageLink1')" />Details:
+							<div id="detailsDIVLink1" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
@@ -184,8 +184,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10" onclick="parent.toggleDiv('detailsDIVLink10','DetailsImageLink10')" />Details:
-							<div id="detailsDIVLink10" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink2" onclick="parent.toggleDiv('detailsDIVLink2','DetailsImageLink2')" />Details:
+							<div id="detailsDIVLink2" class="DetailsDiv" >
 							<div class="ObjectDetailsNotes">standing water.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;This definition is rooted in the definition given in the WMO Glossary of hydrology which includes a body of stagnant water in a pool including large interstices in the ground, such as cave, cavern or a group of these. For the purpose of testing the applicability of the conceptual model in the context of surface water hydrology, the definition of &#39;stream&#39; in this standard refers to water flowing in a surface channel or passing through large interstices, such as a cave, cavern or a group of these. &lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
@@ -209,9 +209,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints11" onclick="parent.toggleDiv('detailsDIVConstraints11','DetailsImageConstraints11')" />Details:
-							<div id="detailsDIVConstraints11" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">EXISTS confinedWaterBody.benchmark.realizedNexus , surfaceNetwork.realizedCatchment.outflow is of type HY_HydroLocation</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints3" onclick="parent.toggleDiv('detailsDIVConstraints3','DetailsImageConstraints3')" />Details:
+							<div id="detailsDIVConstraints3" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">EXISTS confinedWaterBody.benchmark.realizedNexus , surfaceNetwork.realizedCatchment.outflow is of type HY_HydroLocation,&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;defines that a benchmark hydro location which realizes a hydro nexus, should be recognized as outflow of the contributing catchment realized by the surface network the depression is part of.&lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
 						</div>

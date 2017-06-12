@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title></title>
+<title>HY_HydrometricNetwork::HY_HydrometricFeature</title>
 <link href="../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("", " : "))</script>  : Public   Note</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_HydrometricFeature", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">21/06/2016 15:01:02</td>
+			<td width="85%" class="ObjectDetailsValue">14/09/2010 11:43:55</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">28/06/2016 15:07:13</td>
+			<td class="ObjectDetailsValue">01/06/2017 08:59:40</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -51,7 +51,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
-			<td class="ObjectDetailsValue">iche</td>
+			<td class="ObjectDetailsValue"></td>
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
@@ -87,15 +87,98 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{F93D6AEF-24A8-4bd7-AB9A-917729B651C2}</td>
+			<td class="ObjectDetailsValue">{BB084F13-AED3-4c9d-9E8F-2C46B9CBC703}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"></td>
+			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, Network represents DendriticCatchment, Fig39_: Hydrometric Network Realisation, temp_overallOverview, temp_catchmentRealization_all, check_tracking, check_model, Fig23: Hydro Feature Special, NEW_hydroComplex_all, <a href="EA5.htm">Fig45: Hydrometric Feature - Nexus - Catchment</a>, <a href="EA1.htm">Hydrometric Network Classes</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">feature realisation of a the abstract catchment specifically as a stream centre line connecting the inflow and outflow of the conceptual catchment its realises, incl. a straight line.&#160; the flowpath may be represented geometrically as a curve. this concept requires a non-branching mainstem connecting inflow and outflow, and a single linear representation.</div>
+	<div class="ObjectDetailsNotes">The HY_HydrometricFeature feature type provides a concept of a monitoring station at which data on water are obtained, which may realize the logical catchment either separately, or as part of the hydrometric network (Figure 46).&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;A hydrometric feature associates a &lt;i&gt;position on river &lt;/i&gt;which could be used to specify a feature of interest as location of hydrologic significance such as a catchment outlet that may realize the conceptual nexus of the corresponding catchment.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_HydrometricFeature associates the &lt;i&gt;hydrometricNetwork&lt;/i&gt; in which it participates, and a &lt;i&gt;positionOnRiver&lt;/i&gt;. &lt;br /&gt;&lt;/p&gt;</div>
 
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
+			<li onClick="parent.toggleItem('Constraints');" id="ConstraintsTitle">Constraints</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsToTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA8.htm">«FeatureType» HY_HydrometricNetwork</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> networkStation<br />
+						hydrometric feature which realizes the logical catchment either separately, or as part of the hydrometric network.
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> hydrometricNetwork<br />
+						hydrometric network the hydrometric feature  is part of.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageLink0" onclick="parent.toggleDiv('detailsDIVLink0','DetailsImageLink0')" />Details:
+							<div id="detailsDIVLink0" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">hydrometric network of one or more hydrometric stations.</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ConstraintsTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+			  	<tr>
+					<td width="80%" class="TableHeading">Constraint</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Status</td>
+				</tr>
+				<tr>
+					<td width="80%" class="TableRow">outlet-at-station</td>
+					<td width="10%" class="TableRow">Invariant</td>
+					<td width="10%" class="TableRow">Approved</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints1" onclick="parent.toggleDiv('detailsDIVConstraints1','DetailsImageConstraints1')" />Details:
+							<div id="detailsDIVConstraints1" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">EXISTS positionOnRiver.realizedNexus, hydrometricNewtwork.realizedCatchment.outflow&#160; is of type HY_HydroLocation</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA8.htm">«FeatureType» HY_HydrometricNetwork</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Weak</td>
+					<td width="40%" class="TableRow" valign="top">hydrometric network of one or more hydrometric stations.</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
 <div class="pageFooter"></div>
  
 </body>

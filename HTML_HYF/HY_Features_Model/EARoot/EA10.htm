@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>RiverReferencing</title>
+<title>Storage</title>
 <link href="../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("RiverReferencing", " : "))</script>  : Public  &lt;&lt;leaf&gt;&gt; Package</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("Storage", " : "))</script>  : Public  &lt;&lt;Leaf&gt;&gt; Package</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">25/11/2011 09:37:39</td>
+			<td width="85%" class="ObjectDetailsValue">17/03/2011 16:57:28</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">04/05/2017 15:19:23</td>
+			<td class="ObjectDetailsValue">12/01/2017 12:55:22</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -51,11 +51,11 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
-			<td class="ObjectDetailsValue">dornblut</td>
+			<td class="ObjectDetailsValue">atk093</td>
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
-			<td class="ObjectDetailsValue">0.0.4</td>
+			<td class="ObjectDetailsValue">1.0</td>
 		</tr>
 		<tr id="proj02" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
@@ -87,14 +87,14 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{CD488F0F-9270-472d-8EBE-67B6FCB12AB3}</td>
+			<td class="ObjectDetailsValue">{38092C65-B92D-4cb8-BFB2-031A74E37D2C}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
 			<td class="ObjectDetailsValue"></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The River Referencing (Figure 37) provides a simple model to place a feature of interest &#39;on a river&#39;. It introduces the concept of indirect position where a position is determined relative to an already established reference location. This concept uses a linear river referencing whose linear shape is given by a flowpath realizing the catchment between its inflow and outflow. It is important to note, that each logical catchment has its own reference system, which defines the start (origin) and the orientation of the linear flowpath (axis) along which the distance from a known referent can be measured. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;An implementation SHOULD unambiguously specify whether the direction of the measure (from referent) is with or opposite the catchment-specific orientation of the flowpath.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The River Referencing system uses the one-dimensional topological realization of catchment within the implied hydrologic complex in such that the feature to be placed and the already located referent are nodes on the boundary of the same flowpath. Given that a flowpath realizes a logical catchment between inflow and outflow nodes, the feature of interest is either the inflow or the outflow node located at flowpath start, while the location being referenced is located at the upstream or downstream end of the flowpath. Using located referents in both directions allows placement of a feature of interest interpolative between inflow and outflow nodes on a flowpath even if the realized catchment is not explicitly delineated.&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The Storage model (Figure 44) provides a concept to describe any water body, in terms of a reservoir storing water for future use. The separate storage model allows to describe the hydrographic network without the details of storage capacities that a water body may have, and vice versa storage reservoirs to be referenced independent of their role within the hydrographic network. </div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -108,13 +108,13 @@ function nameClassifier(name, separator)
 		</tr>
 					<tr>
 				<td width="50%" class="TableRow" valign="top">xsdDocument</td>
-				<td width="50%" class="TableRow" valign="top">hy_positioning.xsd</td>
+				<td width="50%" class="TableRow" valign="top">hy_storage.xsd</td>
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario4" onclick="parent.toggleDiv('detailsDIVScenario4','DetailsImageScenario4')" />Details:
-						<div id="detailsDIVScenario4" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Default: FIXME<br />Description: Name of an XML Schema document to create representing the content of this package<br /></div>
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario6" onclick="parent.toggleDiv('detailsDIVScenario6','DetailsImageScenario6')" />Details:
+						<div id="detailsDIVScenario6" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Description: Name of an XML Schema document to create representing the content of this package<br /></div>
 
 						</div>
 					</div>
@@ -125,8 +125,8 @@ function nameClassifier(name, separator)
 			</tr>	
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario5" onclick="parent.toggleDiv('detailsDIVScenario5','DetailsImageScenario5')" />Details:
-						<div id="detailsDIVScenario5" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario7" onclick="parent.toggleDiv('detailsDIVScenario7','DetailsImageScenario7')" />Details:
+						<div id="detailsDIVScenario7" class="DetailsDiv" >
 						<div class="ObjectDetailsNotes">Values: iso19136_2007 | iso19139_2007 | iso19136_2007_INSPIRE_Extensions<br />Default: iso19136_2007<br />Description: XML Schema encoding rule to apply<br /></div>
 
 						</div>

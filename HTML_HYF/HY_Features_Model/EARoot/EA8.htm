@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>NamedFeature</title>
+<title>HY_HydrometricNetwork::HY_HydrometricNetwork</title>
 <link href="../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("NamedFeature", " : "))</script>  : Public  &lt;&lt;leaf&gt;&gt; Package</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_HydrometricNetwork", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">28/02/2011 16:34:05</td>
+			<td width="85%" class="ObjectDetailsValue">13/02/2009 15:03:47</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">12/01/2017 11:24:43</td>
+			<td class="ObjectDetailsValue">01/06/2017 08:59:40</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -51,7 +51,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="proj00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
-			<td class="ObjectDetailsValue">atk093</td>
+			<td class="ObjectDetailsValue"></td>
 		</tr>
 		<tr id="proj01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
@@ -87,54 +87,72 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{82D7B4C0-B5F1-4f90-A1F3-C1493FE2DB9E}</td>
+			<td class="ObjectDetailsValue">{5D9E5E19-3F78-4eb2-94E3-74D083F92886}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"></td>
+			<td class="ObjectDetailsValue">Network represents DendriticCatchment, Fig39_: Hydrometric Network Realisation, temp_overallOverview, temp_catchmentRealization_all, NEW_hydroComplex_all, <a href="EA5.htm">Fig45: Hydrometric Feature - Nexus - Catchment</a>, <a href="EA1.htm">Hydrometric Network Classes</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The &lt;b&gt;Named Feature&lt;/b&gt; package (Figure 25) defines the HY_HydroFeature type as basic feature to reflect the overall properties hydrologic features have, such as names in cross-jurisdictional and multi-lingual contexts. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_HydroFeatureName type provides an pattern to handle cultural, political and historical variability of names. This supports the assignment of a referenceable name for all or parts of a hydrologic feature without necessarily having a formal model for the naming. HY_HydroFeatureName carries five attributes: &lt;i&gt;name&lt;/i&gt;, &lt;i&gt;namesPart&lt;/i&gt;, &lt;i&gt;preferredBy&lt;/i&gt;, &lt;i&gt;usage&lt;/i&gt; and &lt;i&gt;variantSpelling&lt;/i&gt;.&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_HydrometricNetwork feature type specializes the HY_HydroNetwork realization specifically as a collection of hydrometric features. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_HydrometricNetwork inherits through generalization the &lt;i&gt;realizedCatchment&lt;/i&gt;, &lt;i&gt;catchmentOutlet&lt;/i&gt;, &lt;i&gt;flowpath,&lt;/i&gt; &lt;i&gt;catchmentDivide&lt;/i&gt; and &lt;i&gt;catchmentArea &lt;/i&gt;associations, and associates a &lt;i&gt;networkStation&lt;/i&gt;. An &lt;i&gt;outflow-at-station&lt;/i&gt; constraint emphasizes the recognition of a monitoring station as (said to be coincident with) the outlet of the catchment that is realized by the hydrometric network the station is part of.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
-			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
 		</ul>
-<div class="ItemBody" id="TaggedValTable">
-	<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
-		<tr>
-			<td width="50%" class="TableHeading">Tag</td>
-			<td width="50%" class="TableHeading">Value</td>
-		</tr>
-					<tr>
-				<td width="50%" class="TableRow" valign="top">xsdDocument</td>
-				<td width="50%" class="TableRow" valign="top">hy_namedfeature.xsd</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario0" onclick="parent.toggleDiv('detailsDIVScenario0','DetailsImageScenario0')" />Details:
-						<div id="detailsDIVScenario0" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Description: Name of an XML Schema document to create representing the content of this package<br /></div>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA7.htm">«FeatureType» HY_HydrometricFeature</a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> networkStation<br />
+						hydrometric feature which realizes the logical catchment either separately, or as part of the hydrometric network.
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> hydrometricNetwork<br />
+						hydrometric network the hydrometric feature  is part of.	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageLink2" onclick="parent.toggleDiv('detailsDIVLink2','DetailsImageLink2')" />Details:
+							<div id="detailsDIVLink2" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">hydrometric network of one or more hydrometric stations.</div>
 
+							</div>
 						</div>
-					</div>
-				</td>
-			</tr>			<tr>
-				<td width="50%" class="TableRow" valign="top">xsdEncodingRule</td>
-				<td width="50%" class="TableRow" valign="top">iso19136_2007</td>
-			</tr>	
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="2">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageScenario1" onclick="parent.toggleDiv('detailsDIVScenario1','DetailsImageScenario1')" />Details:
-						<div id="detailsDIVScenario1" class="DetailsDiv" >
-						<div class="ObjectDetailsNotes">Values: iso19136_2007 | iso19139_2007 | iso19136_2007_INSPIRE_Extensions<br />Default: iso19136_2007<br />Description: XML Schema encoding rule to apply<br /></div>
+					</td>
+				</tr>
 
-						</div>
-					</div>
-				</td>
-			</tr>
-	</table>
-</div>	</div>
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA7.htm">«FeatureType» HY_HydrometricFeature</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Weak</td>
+					<td width="40%" class="TableRow" valign="top">hydrometric network of one or more hydrometric stations.</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
 <div class="pageFooter"></div>
  
 </body>

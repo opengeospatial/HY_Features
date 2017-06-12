@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">01/06/2017 08:59:40</td>
+			<td class="ObjectDetailsValue">12/06/2017 12:02:51</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, Network represents DendriticCatchment, Fig39_: Hydrometric Network Realisation, temp_overallOverview, temp_catchmentRealization_all, check_tracking, check_model, Fig23: Hydro Feature Special, NEW_hydroComplex_all, <a href="EA5.htm">Fig45: Hydrometric Feature - Nexus - Catchment</a>, <a href="EA1.htm">Hydrometric Network Classes</a></td>
+			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, Network represents DendriticCatchment, Fig39_: Hydrometric Network Realisation, temp_overallOverview, temp_catchmentRealization_all, check_tracking, check_model, NEW_hydroComplex_all, Fig23: Hydro Feature Special, <a href="EA5.htm">Fig45: Hydrometric Feature - Nexus - Catchment</a>, <a href="EA1.htm">Hydrometric Network Classes</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The HY_HydrometricFeature feature type provides a concept of a monitoring station at which data on water are obtained, which may realize the logical catchment either separately, or as part of the hydrometric network (Figure 46).&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;A hydrometric feature associates a &lt;i&gt;position on river &lt;/i&gt;which could be used to specify a feature of interest as location of hydrologic significance such as a catchment outlet that may realize the conceptual nexus of the corresponding catchment.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_HydrometricFeature associates the &lt;i&gt;hydrometricNetwork&lt;/i&gt; in which it participates, and a &lt;i&gt;positionOnRiver&lt;/i&gt;. &lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_HydrometricFeature feature type provides a concept of a monitoring station at which data on water are obtained that realizes the catchment either separately or as part of the hydrometric network (Figure 45). &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_HydrometricFeature has associations for the &lt;i&gt;hydrometricNetwork&lt;/i&gt; in which it participates, and a &lt;i&gt;positionOnRiver&lt;/i&gt;. An &lt;i&gt;outlet-at-station&lt;/i&gt; constraint emphasizes the recognition of a monitoring station as outlet of the catchment that is realized by the hydrometric network.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -116,7 +116,7 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> networkStation<br />
-						hydrometric feature which realizes the logical catchment either separately, or as part of the hydrometric network.
+						hydrometric feature which realizes the catchment either separately, or as part of the hydrometric network.
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> hydrometricNetwork<br />
@@ -152,7 +152,7 @@ function nameClassifier(name, separator)
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints1" onclick="parent.toggleDiv('detailsDIVConstraints1','DetailsImageConstraints1')" />Details:
 							<div id="detailsDIVConstraints1" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">EXISTS positionOnRiver.realizedNexus, hydrometricNewtwork.realizedCatchment.outflow&#160; is of type HY_HydroLocation</div>
+							<div class="ObjectDetailsNotes">EXISTS positionOnRiver.realizedNexus, hydrometricNewtwork.realizedCatchment.outflow&#160; is of type HY_HydroLocation,&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;defines that a monitoring station should be recognized as the outflow of the contributing catchment realized by the hydrometric network the station is part of.&lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
 						</div>
