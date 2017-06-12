@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">04/05/2017 14:05:54</td>
+			<td class="ObjectDetailsValue">12/06/2017 12:39:30</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, hyf107, informative, catchmentnetwork, TopographicRealisation_??, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig39_: Hydrometric Network Realisation, Fig20_: Catchment, Fig36_: Water Body Realisation, Fig34_: Channel Realisation, Fig37_: Reservoir Realisation, catchmentrealization, outfall_, temp_overallOverview, temp_catchmentRealization_all, LR, check_model, <a href="../EA1.htm">Fig21: Hydro Feature</a>, <a href="EA22.htm">Fig26: Catchment and Nexus</a>, <a href="EA36.htm">Fig33: HydroNexus</a>, <a href="EA40.htm">Fig35: Hydro-Location</a>, NEW_hydroComplex_all, <a href="EA20.htm">Fig25: Catchment</a>, <a href="EA18.htm">Hydro Complex Classes</a>, Fig39: Channel Network - Catchment - Nexus, Fig40: Channel - Nexus - Catchment, Fig41: Hydrographic Network - Catchment - Nexus, Fig42: Water Body - Nexus - Catchment, Fig43: Reservoir - Nexus - Catchment, Fig45: Hydrometric Feature - Nexus - Catchment</td>
+			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, hyf107, informative, catchmentnetwork, TopographicRealisation_??, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig39_: Hydrometric Network Realisation, Fig20_: Catchment, Fig36_: Water Body Realisation, Fig34_: Channel Realisation, Fig37_: Reservoir Realisation, catchmentrealization, outfall_, temp_overallOverview, temp_catchmentRealization_all, LR, check_model, NEW_hydroComplex_all, <a href="../EA1.htm">Fig21: Hydro Feature</a>, <a href="EA22.htm">Fig26: Catchment and Nexus</a>, <a href="EA36.htm">Fig33: HydroNexus</a>, <a href="EA40.htm">Fig35: Hydro-Location</a>, <a href="EA20.htm">Fig25: Catchment</a>, <a href="EA18.htm">Hydro Complex Classes</a>, Fig39: Channel Network - Catchment - Nexus, Fig40: Channel - Nexus - Catchment, Fig41: Hydrographic Network - Catchment - Nexus, Fig42: Water Body - Nexus - Catchment, Fig43: Reservoir - Nexus - Catchment, Fig45: Hydrometric Feature - Nexus - Catchment</td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The HY_HydroNexus feature type (Figure 34) conceptualizes the hydrologically determined nexus of a corresponding catchment (Figure 27). &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The hydro nexus represents the logical place where a catchment interacts with another catchment, i.e. where the outflow of a contributing catchment becomes inflow into a receiving catchment. A catchment may receive flow from several upstream catchments or contribute flow to several downstream catchments through a single logical hydro nexus. Through unique identity, each hydro nexus feature may be associated with different realizations within an hydrologic complex given that each realization has the same hydrologic determination. This includes the topological realization as a node on the one-dimensional flowpath (edge) in terms of a topological &#39;boundary&#39;. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Logically placed in reference to a catchment which links inflow and outflow, a hydro nexus has a position relative to another hydro nexus that is &#39;fixed&#39; by the catchment Referencing the union of catchment and hydro nexus, the topological realization can be used to define a linear river reference system with the inflow/outflow node as origin and the flowpath realizing the catchment as linear element along which a position can be determined. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_HydroNexus carries the associations: &lt;i&gt;contributingCatchment&lt;/i&gt;, &lt;i&gt;receivingCatchment&lt;/i&gt;, and &lt;i&gt;nexusRealization&lt;/i&gt;. &lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_HydroNexus feature type (Figure 33) conceptualizes a hydrologically determined nexus of a corresponding catchment (Figure 26). The hydro nexus represents the place where a catchment interacts with another catchment, i.e. where the outflow of a contributing catchment becomes inflow into a receiving catchment. A catchment may receive flow from several upstream catchments or contribute flow to several downstream catchments through a single hydro nexus. Through shared identity, each hydro nexus feature may be associated with different realizations within a hydrologic complex given that each realization has the same hydrologic function or characteristics. This includes the topological realization as a node on the one-dimensional flowpath (edge) in terms of a topological &#39;boundary&#39;. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Placed topologically relative to a catchment which links inflow and outflow, a hydro nexus has a position relative to another hydro nexus that is &#39;fixed&#39; in the network by the catchments it is associated with. Additionally, the union of catchment and hydro nexus(es) can be used to define a linear river reference system, where an inflow or outflow node is the origin and the flowpath realizing the catchment is the linear element along which a position can be determined. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -115,19 +115,18 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> inflow<br />
-						hydro-nexus in terms of an inflow of the receiving catchment. 
+						hydro nexus in terms of an inflow to the receiving catchment. For a dendritic network of catchments, the outflow of a contributing catchment coincides with the inflow to a receiving catchment. This supports description of upstream-downstream relationships between catchments.
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> receivingCatchment<br />
-						identifies the catchment that receives flow from the hydro-nexus. This allows to connect a catchment's inflow to an identified outflow and to determine its position through referencing the outflow	
+						identifies the catchment that receives flow from this hydro nexus. This allows connection of a catchment's inflow to an identified outflow and to determine its position through referencing the outflow. 	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink44" onclick="parent.toggleDiv('detailsDIVLink44','DetailsImageLink44')" />Details:
-							<div id="detailsDIVLink44" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">hydrologic nexus connecting the contributing catchment to the receiving catchment. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;For a dendritic network of catchments, the outflow of a contributing catchment coincides with the inflow to a receiving catchment at the nexus. This supports description of upstream-downstream relationships between catchments.&lt;br /&gt;&lt;/p&gt;</div>
-
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink38" onclick="parent.toggleDiv('detailsDIVLink38','DetailsImageLink38')" />Details:
+							<div id="detailsDIVLink38" class="DetailsDiv" >
+							&nbsp;
 							</div>
 						</div>
 					</td>
@@ -139,17 +138,17 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> realizedNexus<br />
-						nexus realized by a specific location
+						identifies the one and only one nexus that is realized by a particular feature. Referencing the hydrologic complex containing the hydro nexus and all of its realizations, supports an arbitrary feature of interest to be recognized as outlet of a catchment, and to be placed using the river referencing defined in this standard. 
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> nexusRealization<br />
-						identifies a hydrologic feature which realizes the hydro nexus. In case of a topological realization, the realization of the nexus is of lower dimension than the realization of the corresponding catchment. Example: an outflow node realizing the nexus would be of lower dimension than the flowpath edge realizing the contributing catchment. 	
+						identifies a hydrologic feature which realizes the hydro nexus. A topological nexus realization is of lower dimension than the realization of the corresponding catchment. Example: an outflow node realizing the nexus would be of lower dimension than the flowpath edge realizing the contributing catchment. 	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink45" onclick="parent.toggleDiv('detailsDIVLink45','DetailsImageLink45')" />Details:
-							<div id="detailsDIVLink45" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink39" onclick="parent.toggleDiv('detailsDIVLink39','DetailsImageLink39')" />Details:
+							<div id="detailsDIVLink39" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
@@ -172,19 +171,18 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> contributingCatchment<br />
-						identifies the catchment that contributes flow to the hydro-nexus. This allows to connect a catchment's outflow to an identified inflow and to determine its position through referencing the inflow. 
+						identifies the catchment that contributes flow to this hydro nexus. This allows connection of a catchment's outflow to an identified inflow and to determine its position through referencing the inflow. 
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> outflow<br />
-						hydro-nexus in terms of an outflow of the contributing catchment. 	
+						hydro nexus in terms of an outflow of the contributing catchment. For a dendritic network of catchments, the outflow of a contributing catchment coincides with the inflow to a receiving catchment. This supports description of upstream-downstream relationships between catchments.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink46" onclick="parent.toggleDiv('detailsDIVLink46','DetailsImageLink46')" />Details:
-							<div id="detailsDIVLink46" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">nexus in terms of an outflow of the contributing catchment, or inflow to the receiving catchment. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;For a dendritic network of catchments, the outflow of a contributing catchment coincides with the inflow to a receiving catchment. This supports description of upstream-downstream relationships between catchments.&lt;br /&gt;&lt;/p&gt;</div>
-
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink40" onclick="parent.toggleDiv('detailsDIVLink40','DetailsImageLink40')" />Details:
+							<div id="detailsDIVLink40" class="DetailsDiv" >
+							&nbsp;
 							</div>
 						</div>
 					</td>

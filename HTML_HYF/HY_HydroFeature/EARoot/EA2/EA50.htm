@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">01/06/2017 08:40:59</td>
+			<td class="ObjectDetailsValue">12/06/2017 11:05:56</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, Flowpath represents DendriticCatchment, Catchment hierarchy, Network represents DendriticCatchment, hyf107, catchmentnetwork, allClass Diagram, Fig20_: Catchment, dendtritic catchment, temp_overallOverview, check_model, Fig8: upper-lower catchment, <a href="../EA5.htm">Fig23: Hydro Feature Special</a>, <a href="../EA1.htm">Fig21: Hydro Feature</a>, <a href="EA42.htm">Catchment Hierarchy</a>, <a href="EA30.htm">Fig30: CatchmentAggregate</a>, <a href="EA32.htm">Fig31: DendriticCatchment</a>, NEW_hydroComplex_all, <a href="EA20.htm">Fig25: Catchment</a>, <a href="EA18.htm">Hydro Complex Classes</a></td>
+			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, Flowpath represents DendriticCatchment, Catchment hierarchy, Network represents DendriticCatchment, hyf107, catchmentnetwork, allClass Diagram, Fig20_: Catchment, dendtritic catchment, temp_overallOverview, check_model, Fig8: upper-lower catchment, NEW_hydroComplex_all, <a href="../EA5.htm">Fig23: Hydro Feature Special</a>, <a href="../EA1.htm">Fig21: Hydro Feature</a>, <a href="EA42.htm">Catchment Hierarchy</a>, <a href="EA30.htm">Fig30: CatchmentAggregate</a>, <a href="EA32.htm">Fig31: DendriticCatchment</a>, <a href="EA20.htm">Fig25: Catchment</a>, <a href="EA18.htm">Hydro Complex Classes</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The HY_DendriticCatchment feature type (Figure 32) specializes the general HY_Catchment class as a catchment which is determined by a single common downstream catchment. It represents the catchment as the topological link between an inflow and an outflow. This allows catchments to be connected in a dendritic network by upstream-downstream relationships without knowing the complex hydrology between inflow and outflow. This concept requires a stable identifier purposefully assigned to the catchment and that catchments are delineated as a simple tree hierarchy.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_DendriticCatchment inherits from generalization the &lt;i&gt;code&lt;/i&gt;, &lt;i&gt;outflow&lt;/i&gt;, &lt;i&gt;inflow&lt;/i&gt;, &lt;i&gt;containingCatchment&lt;/i&gt;, &lt;i&gt;containedCatchment&lt;/i&gt;, &lt;i&gt;conjointCatchment&lt;/i&gt;, &lt;i&gt;upperCatchment&lt;/i&gt;, &lt;i&gt;lowerCatchment&lt;/i&gt;, and &lt;i&gt;catchmentRealization&lt;/i&gt; properties, and associates with the &lt;i&gt;encompassingCatchment&lt;/i&gt;. The dendritic nature of this feature is enforced through &lt;i&gt;single-outflow, single-receiving-catchment &lt;/i&gt;and &lt;i&gt;single-lower-catchment&lt;/i&gt; constraints&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_DendriticCatchment feature type (Figure 31) specializes the general HY_Catchment class as a catchment which is determined by a single common downstream catchment. It represents the catchment as the topological link between an inflow and an outflow. This allows catchments to be connected in a dendritic network by upstream-downstream relationships without knowing the complex hydrology between inflow and outflow. This concept requires a stable identifier purposefully assigned to the catchment and that catchments are delineated as a simple tree hierarchy. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_DendriticCatchment inherits from generalization the &lt;i&gt;code&lt;/i&gt;, &lt;i&gt;outflow&lt;/i&gt;, &lt;i&gt;inflow&lt;/i&gt;, &lt;i&gt;containingCatchment&lt;/i&gt;, &lt;i&gt;containedCatchment&lt;/i&gt;, &lt;i&gt;conjointCatchment&lt;/i&gt;, &lt;i&gt;upperCatchment&lt;/i&gt;, &lt;i&gt;lowerCatchment&lt;/i&gt;, and &lt;i&gt;catchmentRealization&lt;/i&gt; properties, and has an &lt;i&gt;encompassingCatchment&lt;/i&gt; association. The dendritic nature of this feature is enforced through &lt;i&gt;single-outflow, single-receiving-catchment &lt;/i&gt;and&lt;i&gt; single-lower-catchment&lt;/i&gt; constraints.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -116,7 +116,7 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> exorheicDrainage<br />
-						identifies an endorheic drained catchments, which is  permanently connected to the enveloping aggregate. 
+						should be used to identify an exorheic-drained catchment which is not, but may be temporarily connected to enveloping catchments. 
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> encompassingCatchment<br />
@@ -125,8 +125,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink33" onclick="parent.toggleDiv('detailsDIVLink33','DetailsImageLink33')" />Details:
-							<div id="detailsDIVLink33" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink27" onclick="parent.toggleDiv('detailsDIVLink27','DetailsImageLink27')" />Details:
+							<div id="detailsDIVLink27" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
@@ -149,9 +149,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints34" onclick="parent.toggleDiv('detailsDIVConstraints34','DetailsImageConstraints34')" />Details:
-							<div id="detailsDIVConstraints34" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">1..1</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints28" onclick="parent.toggleDiv('detailsDIVConstraints28','DetailsImageConstraints28')" />Details:
+							<div id="detailsDIVConstraints28" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">1..1, &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;defines a cardinality of &#8216;1&#8217; indicating that the dendritic catchment contributes to one and only one single outflow. A single outflow can be unknown (nillable) in a particular application, for example in case of a delta to which a virtual outflow is assigned. An implementation SHOULD unambiguously specify whether the outflow exists, or is nillable. &lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
 						</div>
@@ -164,9 +164,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints35" onclick="parent.toggleDiv('detailsDIVConstraints35','DetailsImageConstraints35')" />Details:
-							<div id="detailsDIVConstraints35" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">1..1</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints29" onclick="parent.toggleDiv('detailsDIVConstraints29','DetailsImageConstraints29')" />Details:
+							<div id="detailsDIVConstraints29" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">1..1, &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;defines a cardinality of &#8216;1&#8217; indicating that one and only one single catchment receives flow via the outflow of the catchment. A receiving catchment can be unknown (nillable) in a particular application, for example in case of the latest catchment contributing flow to the ocean or an internal sink. An implementation SHOULD unambiguously specify whether the receiving catchment exists, or is nillable.&lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
 						</div>
@@ -179,9 +179,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints36" onclick="parent.toggleDiv('detailsDIVConstraints36','DetailsImageConstraints36')" />Details:
-							<div id="detailsDIVConstraints36" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">1..1</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageConstraints30" onclick="parent.toggleDiv('detailsDIVConstraints30','DetailsImageConstraints30')" />Details:
+							<div id="detailsDIVConstraints30" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">1..1, &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;defines a cardinality of &#8216;1&#8217; indicating that one and only one lower catchment exists neighboring the catchment. A lower catchment can be unknown (nillable) in a particular application, for example in case of the latest catchment contributing flow to the ocean or an internal sink. An implementation SHOULD unambiguously specify whether the lower catchment exists, or is nillable.&lt;br /&gt;&lt;/p&gt;</div>
 
 							</div>
 						</div>

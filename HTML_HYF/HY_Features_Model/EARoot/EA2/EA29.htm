@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>HydrographicNetwork::HY_WaterBodyStratum</title>
+<title>HydrographicNetwork::HY_Water_LiquidPhase</title>
 <link href="../../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {	
@@ -34,15 +34,15 @@ function nameClassifier(name, separator)
 <div class="pageHeader"></div>
 <div class="PageBody">
 	<div id="name_classifier" style="display: none;"></div>
-	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_WaterBodyStratum", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("HY_Water_LiquidPhase", " : "))</script>  : Public  &lt;&lt;FeatureType&gt;&gt; Class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">09/08/2012 14:34:28</td>
+			<td width="85%" class="ObjectDetailsValue">22/11/2012 15:13:47</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">03/05/2017 10:25:46</td>
+			<td class="ObjectDetailsValue">01/06/2017 08:54:00</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -87,75 +87,20 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{A951A308-ECD3-442e-8235-C9AFEF79CCA0}</td>
+			<td class="ObjectDetailsValue">{861D6478-338A-4503-9B4E-CC5440C175B4}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">Precipitation-Runoff, surfacehydronetwork, Fig36_: Water Body Realisation, Fig33_: Channel Network Realisation, Fig34_: Channel Realisation, Fig37_: Reservoir Realisation, temp_overallOverview, temp_catchmentRealization_all, check_tracking, check_model, NEW_hydroComplex_all, <a href="../EA1.htm">Fig38: Requirements Class: Surface Hydro Feature</a>, <a href="../EA5.htm">WaterBody - Channel</a>, <a href="../EA1/EA13.htm">NEW_Fig41: Channel - Nexus - Catchment</a>, <a href="EA19.htm">NEW_Fig42: Hydrographic Network - Catchment - Nexus</a>, <a href="EA21.htm">NEW_Fig43: Water Body - Nexus - Catchment</a>, <a href="../EA4/EA38.htm">NEW_Fig44: Reservoir - Nexus - Catchment</a>, <a href="../EA4/EA40.htm">Reservoir_extended</a></td>
+			<td class="ObjectDetailsValue">Precipitation-Runoff, temp_overallOverview, <a href="../EA1.htm">Fig37: Surface Hydro Feature Classes</a>, <a href="EA21.htm">Hydrographic network Classes</a></td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The HY_WaterBodyStratum feature type describes a horizontal layer in a stratified water body determined by differences in thermal or salinity characteristics or by oxygen or nutrient content, or by virtual storage zones of a reservoir. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;A water body stratum associates a &lt;i&gt;benchmark&lt;/i&gt; which could be used to describe a permanent reference location on the stratified water body which realizes the conceptual nexus of the catchment that is realized by that water body. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_WaterBodyStratum carries the properties: &lt;i&gt;stratumType&lt;/i&gt; and &lt;i&gt;benchmark&lt;/i&gt;.&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The HY_Water_LiquidPhase provides a simple concept of accumulation of liquid water in water bodies. This definition refers to the matter accumulated to a mass of water. In its liquid form water is considered accumulated in water bodies. The accumulation of water in the atmosphere or below the land surface, e.g. rain, soil moisture or groundwater, is not in scope of this standard, as well as the accumulation of snow and ice in glaciers which is subject of glaciology science. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Contextually related information models may use the HY_Water_LiquidPhase feature type to build relationships to an accumulating water body, and ultimately to the catchment realized either by the water body or by the network of which the water body is part. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_Water_LiquidPhase associates the &lt;i&gt;accumulatingWaterBody&lt;/i&gt;. These associations may be used to identify the water body (as part of the hydrographic network) wherein water is accumulated. &lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
-			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
 			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
 			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
 		</ul>
-<div class="ItemBody" id="AttributesTable">
-	<table border="0" cellspacing="0" cellpadding="0" class="Table">
-		<tr>
-			<td width="100%" class="TableHeading">Attribute</td>
-		</tr>
-						<tr>
-				<td width="100%" class="TableRow">
-					<i>Public ScopedName</i><br /><strong>&nbsp;&nbsp;stratumType</strong>
-				</td>
-			</tr>
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes56')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes56" border="0" />Details:
-					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
-					
-						<tr id="DetailsImageAttributes56_00" style="display: none;">
-							<td width="75"><i>Alias:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes56_01" style="display: none;">
-							<td width="75"><i>Initial:</i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes56_02" style="display: none;">
-							<td width="75"><i>Stereotype: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes56_03" style="display: none;">
-							<td width="75"><i>Ordered: </i></td>
-							<td></td>
-						</tr>
-						<tr id="DetailsImageAttributes56_03" style="display: none;">
-							<td width="75"><i>Range: </i></td>
-							<td>Range:0 to *</td>
-						</tr>
-					</table>
-					
-					sequenceNumber=1<br>
-						<div class="ObjectDetailsNotes"><table>
-	<tr>
-		<td valign="top">
-			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
-		</td>
-		<td>
-			characterizes the stratum using a term from a controlled vocabulary. An implementation may use the ScopedName type described in ISO 19103: Conceptual Schema.
-		</td>
-	</tr>
-</table></div>
-
-						
-				</td>
-			</tr>
-	</table>
-</div>
 		<div class="ItemBody" id="AssociationsToTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
@@ -165,25 +110,23 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA4/EA42.htm">«FeatureType» HY_Reservoir</a><br />
+						<a href="EA33.htm">«FeatureType» HY_WaterBodyStratum</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> reservoirZone<br />
-						identifies the water body stratum used for storage, for example a management zone, or flood control zone.
-
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						
-	
+						<strong>Name:</strong> accumulatingWaterBody<br />
+						water body (stratum) wherein liquid water is accumulated.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink57" onclick="parent.toggleDiv('detailsDIVLink57','DetailsImageLink57')" />Details:
-							<div id="detailsDIVLink57" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">volume of water managed in zones between operating levels. </div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink34" onclick="parent.toggleDiv('detailsDIVLink34','DetailsImageLink34')" />Details:
+							<div id="detailsDIVLink34" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">accumulation of water in a water body.</div>
 
 							</div>
 						</div>
@@ -201,7 +144,7 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA25.htm">«FeatureType» HY_Water_LiquidPhase</a><br />
+						<a href="EA31.htm">«FeatureType» HY_Water_SolidPhase</a><br />
 						Class &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -209,63 +152,15 @@ function nameClassifier(name, separator)
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> accumulatingWaterBody<br />
-						water body (stratum) wherein liquid water is accumulated.	
+						<strong>Name:</strong> snowmelt<br />
+						liquid water from melting of snow. 	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink58" onclick="parent.toggleDiv('detailsDIVLink58','DetailsImageLink58')" />Details:
-							<div id="detailsDIVLink58" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">accumulation of water in a water body.</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="EA28.htm">«FeatureType» HY_WaterBody</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> stratum<br />
-						identifies a horizontal layer of consistent characteristics, or a storage zone of a reservoir, carrying a permanent reference location which realizes the outfall of the catchment which is realized by the water body.	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink59" onclick="parent.toggleDiv('detailsDIVLink59','DetailsImageLink59')" />Details:
-							<div id="detailsDIVLink59" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">stratified water body.</div>
-
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
-						<a href="../EA1/EA15.htm">«FeatureType» HY_Depression</a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> confinedWaterBody<br />
-						identifies a stratum of water body  contained in the depression.	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink60" onclick="parent.toggleDiv('detailsDIVLink60','DetailsImageLink60')" />Details:
-							<div id="detailsDIVLink60" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">water body contained in the depression.</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink35" onclick="parent.toggleDiv('detailsDIVLink35','DetailsImageLink35')" />Details:
+							<div id="detailsDIVLink35" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">liquid water originating from snowmelt. </div>
 
 							</div>
 						</div>

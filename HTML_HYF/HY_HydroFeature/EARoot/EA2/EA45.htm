@@ -42,7 +42,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">01/06/2017 08:36:04</td>
+			<td class="ObjectDetailsValue">12/06/2017 11:04:41</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -91,10 +91,10 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, Flowpath represents DendriticCatchment, Catchment hierarchy, Network represents DendriticCatchment, hyf107, informative, catchmentnetwork, TopographicRealisation_??, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig39_: Hydrometric Network Realisation, Fig20_: Catchment, Fig35_: Hydrographic Network Realisation, catchment, dendtritic catchment, catchmentrealization, outfall_, temp_overallOverview, temp_catchmentRealization_all, LR, check_model, Fig7: containing-contained catchment, Fig8: upper-lower catchment, <a href="../EA5.htm">Fig23: Hydro Feature Special</a>, <a href="../EA1.htm">Fig21: Hydro Feature</a>, <a href="EA22.htm">Fig26: Catchment and Nexus</a>, <a href="EA42.htm">Catchment Hierarchy</a>, <a href="EA38.htm">Fig34: Catchment Realization</a>, <a href="EA24.htm">Fig27: Containing- Contained Catchment</a>, <a href="EA28.htm">Fig29: Upper- Lower Catchment</a>, <a href="EA26.htm">Fig28: Conjoint Catchment</a>, <a href="EA30.htm">Fig30: CatchmentAggregate</a>, <a href="EA32.htm">Fig31: DendriticCatchment</a>, <a href="EA34.htm">Fig32: InteriorCatchment</a>, <a href="EA36.htm">Fig33: HydroNexus</a>, NEW_hydroComplex_all, <a href="EA20.htm">Fig25: Catchment</a>, <a href="EA18.htm">Hydro Complex Classes</a>, Fig39: Channel Network - Catchment - Nexus, Fig40: Channel - Nexus - Catchment, Fig41: Hydrographic Network - Catchment - Nexus, Fig42: Water Body - Nexus - Catchment, Fig43: Reservoir - Nexus - Catchment, Fig45: Hydrometric Feature - Nexus - Catchment</td>
+			<td class="ObjectDetailsValue">HydrometricFeature-DendriticCatchment, Flowpath represents DendriticCatchment, Catchment hierarchy, Network represents DendriticCatchment, hyf107, informative, catchmentnetwork, TopographicRealisation_??, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig39_: Hydrometric Network Realisation, Fig20_: Catchment, Fig35_: Hydrographic Network Realisation, catchment, dendtritic catchment, catchmentrealization, outfall_, temp_overallOverview, temp_catchmentRealization_all, LR, check_model, Fig7: containing-contained catchment, Fig8: upper-lower catchment, NEW_hydroComplex_all, <a href="../EA5.htm">Fig23: Hydro Feature Special</a>, <a href="../EA1.htm">Fig21: Hydro Feature</a>, <a href="EA22.htm">Fig26: Catchment and Nexus</a>, <a href="EA42.htm">Catchment Hierarchy</a>, <a href="EA38.htm">Fig34: Catchment Realization</a>, <a href="EA24.htm">Fig27: Containing- Contained Catchment</a>, <a href="EA28.htm">Fig29: Upper- Lower Catchment</a>, <a href="EA26.htm">Fig28: Conjoint Catchment</a>, <a href="EA30.htm">Fig30: CatchmentAggregate</a>, <a href="EA32.htm">Fig31: DendriticCatchment</a>, <a href="EA34.htm">Fig32: InteriorCatchment</a>, <a href="EA36.htm">Fig33: HydroNexus</a>, <a href="EA20.htm">Fig25: Catchment</a>, <a href="EA18.htm">Hydro Complex Classes</a>, Fig39: Channel Network - Catchment - Nexus, Fig40: Channel - Nexus - Catchment, Fig41: Hydrographic Network - Catchment - Nexus, Fig42: Water Body - Nexus - Catchment, Fig43: Reservoir - Nexus - Catchment, Fig45: Hydrometric Feature - Nexus - Catchment</td>
 		</tr>
 	</table>
-	<div class="ObjectDetailsNotes">The Catchment model conceptualizes the hydrologic determination of a catchment through an inflow and outflow hydro nexus features with the role of getting flow from a contributing catchment, or providing inflow to a receiving catchment&#160; Conceptually, each catchment has an outflow hydro nexus, and any hydro nexus has a corresponding catchment, even if catchment and/or hydro nexus may not be present in a particular application. A catchment interacts with upper and lower catchments via associated hydro nexuses, and ultimately contributes flow to the hydro nexus of a containing catchment. The catchment should be understood as the logical link between two hydro nexuses.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_Catchment feature type captures the union of catchment and hydro nexus, and the multiple realization of the logical catchment. These realizations include both topological realizations, as well as their geometric representation. HY_Catchment&#160; may be further specialized with respect to catchment interaction. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_Catchment feature type specializes the general HY_HydroFeature type. Through generalization, HY_Catchment inherits the &lt;i&gt;name&lt;/i&gt; property. It carries a &lt;i&gt;code&lt;/i&gt; attribute and the associations: &lt;i&gt;outflow&lt;/i&gt;, &lt;i&gt;inflow&lt;/i&gt;, &lt;i&gt;containingCatchment&lt;/i&gt;, &lt;i&gt;containedCatchment&lt;/i&gt;, &lt;i&gt;conjointCatchment&lt;/i&gt;, &lt;i&gt;upperCatchment&lt;/i&gt;, &lt;i&gt;lowerCatchment&lt;/i&gt;, &lt;i&gt;catchmentRealization&lt;/i&gt; .&lt;br /&gt;&lt;/p&gt;</div>
+	<div class="ObjectDetailsNotes">The Catchment model conceptualizes the hydrologic determination of a catchment through inflow and outflow hydro nexus features with the role of getting flow from a contributing catchment, or providing inflow to a receiving catchment (Figure 25 and Figure 26). Conceptually, each catchment has an outflow hydro nexus, and any hydro nexus has a corresponding catchment, even if catchment and/or hydro nexus may not be present in a particular application. A catchment interacts with upper and lower catchments via associated hydro nexuses, and ultimately contributes flow to the hydro nexus of a containing catchment. The catchment should be understood as the logical link between two hydro nexuses.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_Catchment feature type captures the union of catchment and hydro nexus, and the multiple realizations of the holistic catchment concept. These realizations include both topological realizations, as well as their geometric representation. HY_Catchment may be further specialized with respect to catchment interaction. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The HY_Catchment feature type (Figure 26) specializes the general HY_HydroFeature type. Through generalization, HY_Catchment inherits the &lt;i&gt;name&lt;/i&gt; property. It carries a &lt;i&gt;code&lt;/i&gt; attribute and the associations: &lt;i&gt;outflow&lt;/i&gt;, &lt;i&gt;inflow&lt;/i&gt;, &lt;i&gt;containingCatchment&lt;/i&gt;, &lt;i&gt;containedCatchment&lt;/i&gt;, &lt;i&gt;conjointCatchment&lt;/i&gt;, &lt;i&gt;upperCatchment&lt;/i&gt;, &lt;i&gt;lowerCatchment&lt;/i&gt;, &lt;i&gt;catchmentRealization&lt;/i&gt;.&lt;br /&gt;&lt;/p&gt;</div>
 
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
@@ -115,26 +115,26 @@ function nameClassifier(name, separator)
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">										
-					<a href="#" onclick="parent.toggleData('DetailsImageAttributes17')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes17" border="0" />Details:
+					<a href="#" onclick="parent.toggleData('DetailsImageAttributes11')" style="text-decoration: none; color: #000000;"></BR><img src="../../images/plus03.gif" align="absmiddle" id="DetailsImageAttributes11" border="0" />Details:
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
 					
-						<tr id="DetailsImageAttributes17_00" style="display: none;">
+						<tr id="DetailsImageAttributes11_00" style="display: none;">
 							<td width="75"><i>Alias:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes17_01" style="display: none;">
+						<tr id="DetailsImageAttributes11_01" style="display: none;">
 							<td width="75"><i>Initial:</i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes17_02" style="display: none;">
+						<tr id="DetailsImageAttributes11_02" style="display: none;">
 							<td width="75"><i>Stereotype: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes17_03" style="display: none;">
+						<tr id="DetailsImageAttributes11_03" style="display: none;">
 							<td width="75"><i>Ordered: </i></td>
 							<td></td>
 						</tr>
-						<tr id="DetailsImageAttributes17_03" style="display: none;">
+						<tr id="DetailsImageAttributes11_03" style="display: none;">
 							<td width="75"><i>Range: </i></td>
 							<td>Range:0 to 1</td>
 						</tr>
@@ -147,7 +147,7 @@ function nameClassifier(name, separator)
 			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
 		</td>
 		<td>
-			unique identifier to the catchment in given the realization context. The code attribute should be implemented using a controlled classification or coding system. Example: WMO Basin Codes
+			unique identifier to the catchment in given context. The code attribute should be implemented using a controlled classification or coding system. Example: WMO Basin Codes. 
 		</td>
 	</tr>
 </table></div>
@@ -183,9 +183,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink18" onclick="parent.toggleDiv('detailsDIVLink18','DetailsImageLink18')" />Details:
-							<div id="detailsDIVLink18" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">nesting of catchments in a simple &#8220;is-in&#8221; containment hierarchy as typically used for organization of management and reporting units. </div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink12" onclick="parent.toggleDiv('detailsDIVLink12','DetailsImageLink12')" />Details:
+							<div id="detailsDIVLink12" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">nesting of catchments in a simple &#8220;is-in&#8221; containment hierarchy as typically used for nested organization of management and reporting units. </div>
 
 							</div>
 						</div>
@@ -208,9 +208,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink19" onclick="parent.toggleDiv('detailsDIVLink19','DetailsImageLink19')" />Details:
-							<div id="detailsDIVLink19" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">neighboring catchment immediately above or below of the catchment. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;This allows to trace the catchment network in an upstream direction from mouth to source, or downstream from source to mouth.&lt;br /&gt;&lt;/p&gt;</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink13" onclick="parent.toggleDiv('detailsDIVLink13','DetailsImageLink13')" />Details:
+							<div id="detailsDIVLink13" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">neighboring catchment immediately above or below of the catchment. This allows to trace the catchment network in an upstream direction from mouth to source, or downstream from source to mouth.</div>
 
 							</div>
 						</div>
@@ -233,9 +233,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink20" onclick="parent.toggleDiv('detailsDIVLink20','DetailsImageLink20')" />Details:
-							<div id="detailsDIVLink20" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">catchment interacting with another catchment across an internal boundary, and&#160; contributing together with these to a single, common outfall.. This internal boundary may be a divide separating adjacent catchments, or a diffuse divide between non-delineated sub-catchments within an encompassing catchment, or a fictive boundary between distant catchments. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;A dendritic network of catchments provided, where each catchment is determined by its single outflow, this association can be used to summarize diffuse inflow into a catchment, as typical for headwater catchments, or spread outflow occurring for example in estuary catchments.&lt;br /&gt;&lt;/p&gt;</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink14" onclick="parent.toggleDiv('detailsDIVLink14','DetailsImageLink14')" />Details:
+							<div id="detailsDIVLink14" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">catchment interacting with another catchment across an internal boundary, and contributing together with these to a single, common hydro nexus. This internal boundary may be a divide separating adjacent catchments, or a diffuse divide between non-delineated sub-catchments within an encompassing catchment, or a fictive boundary between distant catchments. A dendritic network of catchments provided, where each catchment is determined by its single outflow, this association can be used to summarize diffuse inflow into a catchment, as typical for headwater catchments, or spread outflow occurring for example in estuary catchments.</div>
 
 							</div>
 						</div>
@@ -248,19 +248,18 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> contributingCatchment<br />
-						identifies the catchment that contributes flow to the hydro-nexus. This allows to connect a catchment's outflow to an identified inflow and to determine its position through referencing the inflow. 
+						identifies the catchment that contributes flow to this hydro nexus. This allows connection of a catchment's outflow to an identified inflow and to determine its position through referencing the inflow. 
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> outflow<br />
-						hydro-nexus in terms of an outflow of the contributing catchment. 	
+						hydro nexus in terms of an outflow of the contributing catchment. For a dendritic network of catchments, the outflow of a contributing catchment coincides with the inflow to a receiving catchment. This supports description of upstream-downstream relationships between catchments.	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink21" onclick="parent.toggleDiv('detailsDIVLink21','DetailsImageLink21')" />Details:
-							<div id="detailsDIVLink21" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">nexus in terms of an outflow of the contributing catchment, or inflow to the receiving catchment. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;For a dendritic network of catchments, the outflow of a contributing catchment coincides with the inflow to a receiving catchment. This supports description of upstream-downstream relationships between catchments.&lt;br /&gt;&lt;/p&gt;</div>
-
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink15" onclick="parent.toggleDiv('detailsDIVLink15','DetailsImageLink15')" />Details:
+							<div id="detailsDIVLink15" class="DetailsDiv" >
+							&nbsp;
 							</div>
 						</div>
 					</td>
@@ -294,9 +293,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink22" onclick="parent.toggleDiv('detailsDIVLink22','DetailsImageLink22')" />Details:
-							<div id="detailsDIVLink22" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">nesting of catchments in a simple &#8220;is-in&#8221; containment hierarchy as typically used for organization of management and reporting units. </div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink16" onclick="parent.toggleDiv('detailsDIVLink16','DetailsImageLink16')" />Details:
+							<div id="detailsDIVLink16" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">nesting of catchments in a simple &#8220;is-in&#8221; containment hierarchy as typically used for nested organization of management and reporting units. </div>
 
 							</div>
 						</div>
@@ -318,10 +317,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink23" onclick="parent.toggleDiv('detailsDIVLink23','DetailsImageLink23')" />Details:
-							<div id="detailsDIVLink23" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">collection of hydrologic features realizing the catchment in a hydrologic complex.</div>
-
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink17" onclick="parent.toggleDiv('detailsDIVLink17','DetailsImageLink17')" />Details:
+							<div id="detailsDIVLink17" class="DetailsDiv" >
+							&nbsp;
 							</div>
 						</div>
 					</td>
@@ -343,9 +341,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink24" onclick="parent.toggleDiv('detailsDIVLink24','DetailsImageLink24')" />Details:
-							<div id="detailsDIVLink24" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">neighboring catchment immediately above or below of the catchment. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;This allows to trace the catchment network in an upstream direction from mouth to source, or downstream from source to mouth.&lt;br /&gt;&lt;/p&gt;</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink18" onclick="parent.toggleDiv('detailsDIVLink18','DetailsImageLink18')" />Details:
+							<div id="detailsDIVLink18" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">neighboring catchment immediately above or below of the catchment. This allows to trace the catchment network in an upstream direction from mouth to source, or downstream from source to mouth.</div>
 
 							</div>
 						</div>
@@ -368,9 +366,9 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink25" onclick="parent.toggleDiv('detailsDIVLink25','DetailsImageLink25')" />Details:
-							<div id="detailsDIVLink25" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">catchment interacting with another catchment across an internal boundary, and&#160; contributing together with these to a single, common outfall.. This internal boundary may be a divide separating adjacent catchments, or a diffuse divide between non-delineated sub-catchments within an encompassing catchment, or a fictive boundary between distant catchments. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;A dendritic network of catchments provided, where each catchment is determined by its single outflow, this association can be used to summarize diffuse inflow into a catchment, as typical for headwater catchments, or spread outflow occurring for example in estuary catchments.&lt;br /&gt;&lt;/p&gt;</div>
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink19" onclick="parent.toggleDiv('detailsDIVLink19','DetailsImageLink19')" />Details:
+							<div id="detailsDIVLink19" class="DetailsDiv" >
+							<div class="ObjectDetailsNotes">catchment interacting with another catchment across an internal boundary, and contributing together with these to a single, common hydro nexus. This internal boundary may be a divide separating adjacent catchments, or a diffuse divide between non-delineated sub-catchments within an encompassing catchment, or a fictive boundary between distant catchments. A dendritic network of catchments provided, where each catchment is determined by its single outflow, this association can be used to summarize diffuse inflow into a catchment, as typical for headwater catchments, or spread outflow occurring for example in estuary catchments.</div>
 
 							</div>
 						</div>
@@ -383,19 +381,18 @@ function nameClassifier(name, separator)
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> inflow<br />
-						hydro-nexus in terms of an inflow of the receiving catchment. 
+						hydro nexus in terms of an inflow to the receiving catchment. For a dendritic network of catchments, the outflow of a contributing catchment coincides with the inflow to a receiving catchment. This supports description of upstream-downstream relationships between catchments.
 					</td>
 					<td width="30%" class="TableRow" valign="top">
 						<strong>Name:</strong> receivingCatchment<br />
-						identifies the catchment that receives flow from the hydro-nexus. This allows to connect a catchment's inflow to an identified outflow and to determine its position through referencing the outflow	
+						identifies the catchment that receives flow from this hydro nexus. This allows connection of a catchment's inflow to an identified outflow and to determine its position through referencing the outflow. 	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink26" onclick="parent.toggleDiv('detailsDIVLink26','DetailsImageLink26')" />Details:
-							<div id="detailsDIVLink26" class="DetailsDiv" >
-							<div class="ObjectDetailsNotes">hydrologic nexus connecting the contributing catchment to the receiving catchment. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;For a dendritic network of catchments, the outflow of a contributing catchment coincides with the inflow to a receiving catchment at the nexus. This supports description of upstream-downstream relationships between catchments.&lt;br /&gt;&lt;/p&gt;</div>
-
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink20" onclick="parent.toggleDiv('detailsDIVLink20','DetailsImageLink20')" />Details:
+							<div id="detailsDIVLink20" class="DetailsDiv" >
+							&nbsp;
 							</div>
 						</div>
 					</td>

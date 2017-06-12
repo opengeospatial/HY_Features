@@ -1,7 +1,7 @@
-tocTab[tocTab.length] = new Array("0.3:1", "", "Surface Water Body Types", "EARoot/EA3/EA34.htm", "175.png", "8092", "0", "", "Diagram diagram0","{0FB09F65-7C40-46c5-9140-304286617FA7}");
-tocTab[tocTab.length] = new Array("0.3:2", "", "«FeatureType» HY_Canal", "EARoot/EA3/EA36.htm", "5.png", "15679", "0", "", "Class0","{C40CB239-2A1C-4484-BFAB-7A709E768EB8}");
-tocTab[tocTab.length] = new Array("0.3:3", "", "«FeatureType» HY_Estuary", "EARoot/EA3/EA37.htm", "5.png", "15680", "0", "", "Class0","{E9D48B07-E613-4c0b-87EA-219D5D3622D3}");
-tocTab[tocTab.length] = new Array("0.3:4", "", "«FeatureType» HY_Impoundment", "EARoot/EA3/EA38.htm", "5.png", "15677", "0", "", "Class0","{54ECCC6A-B16F-4ff9-9A20-5A1A70686B6D}");
-tocTab[tocTab.length] = new Array("0.3:5", "", "«FeatureType» HY_Lagoon", "EARoot/EA3/EA39.htm", "5.png", "15681", "0", "", "Class0","{F188B44E-4E5F-42d1-B6E0-0E9A3A65B1C0}");
-tocTab[tocTab.length] = new Array("0.3:6", "", "«FeatureType» HY_Lake", "EARoot/EA3/EA40.htm", "5.png", "15676", "0", "", "Class0","{0654819B-E41C-4f9b-AC43-B5109848FA08}");
-tocTab[tocTab.length] = new Array("0.3:7", "", "«FeatureType» HY_River", "EARoot/EA3/EA41.htm", "5.png", "15678", "0", "", "Class0","{BA444B9E-6E65-406b-B959-268DA67400F1}");
+tocTab[tocTab.length] = new Array("0.3:1", "", "Surface Water Body Types", "EARoot/EA3/EA34.htm", "175.png", "8130", "0", "", "Diagram diagram0","{0FB09F65-7C40-46c5-9140-304286617FA7}");
+tocTab[tocTab.length] = new Array("0.3:2", "", "«FeatureType» HY_Canal", "EARoot/EA3/EA36.htm", "5.png", "15732", "0", "", "Class0","{C40CB239-2A1C-4484-BFAB-7A709E768EB8}");
+tocTab[tocTab.length] = new Array("0.3:3", "", "«FeatureType» HY_Estuary", "EARoot/EA3/EA37.htm", "5.png", "15733", "0", "", "Class0","{E9D48B07-E613-4c0b-87EA-219D5D3622D3}");
+tocTab[tocTab.length] = new Array("0.3:4", "", "«FeatureType» HY_Impoundment", "EARoot/EA3/EA38.htm", "5.png", "15730", "0", "", "Class0","{54ECCC6A-B16F-4ff9-9A20-5A1A70686B6D}");
+tocTab[tocTab.length] = new Array("0.3:5", "", "«FeatureType» HY_Lagoon", "EARoot/EA3/EA39.htm", "5.png", "15734", "0", "", "Class0","{F188B44E-4E5F-42d1-B6E0-0E9A3A65B1C0}");
+tocTab[tocTab.length] = new Array("0.3:6", "", "«FeatureType» HY_Lake", "EARoot/EA3/EA40.htm", "5.png", "15729", "0", "", "Class0","{0654819B-E41C-4f9b-AC43-B5109848FA08}");
+tocTab[tocTab.length] = new Array("0.3:7", "", "«FeatureType» HY_River", "EARoot/EA3/EA41.htm", "5.png", "15731", "0", "", "Class0","{BA444B9E-6E65-406b-B959-268DA67400F1}");
