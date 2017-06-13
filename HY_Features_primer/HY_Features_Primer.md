@@ -9,6 +9,20 @@
     position: fixed;
     top: 150px;
 }
+.footer {
+    color: black;
+    position: fixed;
+    top: 90%;
+    text-align:right;
+    width:5%;
+}
+.footer2 {
+    color: black;
+    position: fixed;
+    top: 90%;
+    text-align:right;
+    width:5%;
+}
 </style>
 
 WaterML2 Part 3: Surface Hydrology Features (HY_Features)
@@ -22,10 +36,14 @@ height: 900
   <img src="catchmentNetwork.png"></img>
 </div>
 
+<div class="footer">1</div>
+
 ========================================================
 left: 50%
 
 **What is HY_Features?**
+
+<div class="footer2">2</div>
 
 HY_Features is a conceptual model defined in the Unified
 Modeling Language (UML).
@@ -35,7 +53,6 @@ Modeling Language (UML).
 - HY_Features models hydrologic units and waterbodies.
 
 ***
-
 <div class="iu">
 <img src="intro_uml.png">
 </div>
@@ -53,6 +70,8 @@ This should help provide:
 2. a common language for documenting datasets,
 3. a standard conceptual model for data and software.
 
+<div class="footer">3</div>
+
 ========================================================
 
 **What kinds of features are in HY_Features?**
@@ -67,6 +86,8 @@ features that drain them. The core feature concepts are:
 an holistic feature.
 - **waterbody**: a distinct named or otherwise identified body of water.
 - **container**: a depression or channel that may hold a waterbody.
+
+<div class="footer">4</div>
 
 ========================================================
 
@@ -83,6 +104,8 @@ In other words a catchment is...
 - an area in which hydrologic processes take place
 - the link from one inlet hydro nexus to one outlet hydro nexus
 
+<div class="footer">5</div>
+
 ========================================================
 
 **What is a Hydro Nexus?**
@@ -98,6 +121,8 @@ A hydro nexus...
 - can act as an inlet to or an outlet from a catchment
 - can recieve flow from and give flow to multiple catchments
 
+<div class="footer">6</div>
+
 ========================================================
 
 **What is hydrologic realization?**
@@ -108,10 +133,12 @@ have several hydrology-specific interpretations.
 HY_Features deals with this by saying they can be **realized** in a number of ways.
 
 <div align="center">
-<img src="fig5.png" height=600>
+<img src="fig5.png" height=420>
 </div>
 
 <small>_Note that "realization" and "realized" are UML class association names between a holistic feature (the realized feature) and a specific feature (the realization feature)._</small>
+
+<div class="footer">7</div>
 
 ========================================================
 
@@ -123,32 +150,40 @@ of catchments, a network of waterbodies, a topologogy,
 a complex network, or a collection of monitoring sites.
 
 <div align="center">
-<img src="fig5.png" height=600>
+<img src="fig5.png" height=420>
 </div>
 
 <small>_Note that these realizations are meant to be conceptual.
 The graphics are only meant to illustrate the concept._</small>
 
+<div class="footer">8</div>
+
 ========================================================
 
 **How do waterbodies work in HY_Features?**
 
-First, consider a main flowpath waterbody of a catchment. Zoom out to a network of catchments and their flowpaths. Now we have a network of waterbodies, each of which is a realization of a catchment.
+- First, consider a main flowpath waterbody of a catchment. 
+- Zoom out to a network of catchments and their flowpaths. 
+- Now we have a network of waterbodies, each of which is a realization of a catchment.
 
 <div align="center">
-<img src="singleFlowpath.png" height=600><img src="catchmentNetwork.png" height=600><img src="base.png" height=600>
+<img src="singleFlowpath.png" height=500><img src="catchmentNetwork.png" height=500><img src="base.png" height=500>
 </div>
+
+<div class="footer">9</div>
 
 ========================================================
 left: 70%
 
+<div class="footer2">10</div>
+
 **How do waterbodies work in HY_Features?**
 
-A main flowpath or network of waterbodies realizes a catchment.
+- A main flowpath or network of waterbodies realizes a catchment.
 
-A main flowpath or network delivers a catchment's flow to a hydro nexus.
+- A main flowpath or network delivers a catchment's flow to a hydro nexus.
 
-A hydro nexus is realized by a hydro location on the waterbody network.
+- A hydro nexus is realized by a hydro location on the waterbody network.
 
 ***
 
@@ -156,6 +191,8 @@ A hydro nexus is realized by a hydro location on the waterbody network.
 
 ========================================================
 left: 70%
+
+<div class="footer2">11</div>
 
 **Waterbody -- Hydro Location and Catchment -- Hydro Nexus**
 
@@ -171,6 +208,8 @@ best illustrated as a sequence of steps.
 ========================================================
 left: 70%
 
+<div class="footer2">12</div>
+
 **Waterbody -- Hydro Location and Catchment -- Hydro Nexus**
 
 The relationship between these four types of features, is
@@ -185,6 +224,8 @@ best illustrated as a sequence of steps.
 
 ========================================================
 left: 70%
+
+<div class="footer2">13</div>
 
 **Waterbody -- Hydro Location and Catchment -- Hydro Nexus**
 
@@ -202,6 +243,8 @@ best illustrated as a sequence of steps.
 ========================================================
 left: 70%
 
+<div class="footer2">14</div>
+
 **Waterbody -- Hydro Location and Catchment -- Hydro Nexus**
 
 The relationship between these four types of features, is
@@ -217,6 +260,8 @@ best illustrated as a sequence of steps.
 
 ========================================================
 left: 70%
+
+<div class="footer2">15</div>
 
 **Waterbody -- Hydro Location and Catchment -- Hydro Nexus**
 
@@ -235,6 +280,8 @@ best illustrated as a sequence of steps.
 ========================================================
 left: 70%
 
+<div class="footer2">16</div>
+
 **Waterbody -- Hydro Location and Catchment -- Hydro Nexus**
 
 The relationship between these four types of features, is
@@ -252,6 +299,8 @@ best illustrated as a sequence of steps.
 
 ========================================================
 left: 70%
+
+<div class="footer2">17</div>
 
 **Waterbody -- Hydro Location and Catchment -- Hydro Nexus**
 
