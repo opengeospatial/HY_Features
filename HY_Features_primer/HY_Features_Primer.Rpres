@@ -142,9 +142,9 @@ HY_Features deals with this by saying they can be **realized** in a number of wa
 **What is hydrologic realization?**
 
 As shown in this figure, a catchment can be
-realized as a divide, an area, a main flowpath, a network
-of catchments, a network of waterbodies, a topologogy,
-a complex network, or a collection of monitoring sites.
+realized as a divide (A), an area (B), a main flowpath (C), a network
+of catchments (D), a network of waterbodies (E), a dendritic topologic network (F),
+a complex feature network (G), or a collection of monitoring sites (H).
 
 <div align="center">
 <img src="fig5.png" height=420>
