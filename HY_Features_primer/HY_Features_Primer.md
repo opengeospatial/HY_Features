@@ -31,6 +31,7 @@ author: David L. Blodgett
 date: 06-2017
 width: 1440
 height: 900
+A conceptual feature model for surface hydrology.
 
 <div class="br" style="margin-left:-300px; margin-top:-300px;">
   <img src="catchmentNetwork.png"></img>
@@ -43,12 +44,13 @@ left: 50%
 
 <div class="footer2">1</div>
 
-HY_Features is a conceptual model describing surface hydrology features and their relationships
+HY_Features is a conceptual model describing hydrology features and their relationships
 
 - The model describes hydrology specific feature types, e.g. catchments, drainage networks, rivers, lakes and waterbodies.
 - Defined in the Unified Modeling Language (UML).
 - All features "specialize" a general HY_HydroFeature.
 - HY_Features models hydrologic units and waterbodies.
+- Focus is on surface water features and the networks they form.
 
 ***
 <div class="iu">
@@ -142,9 +144,9 @@ HY_Features deals with this by saying they can be **realized** in a number of wa
 **What is hydrologic realization?**
 
 As shown in this figure, a catchment can be
-realized as a divide (A), an area (B), a main flowpath (C), a network
-of catchments (D), a network of waterbodies (E), a dendritic topologic network (F),
-a complex feature network (G), or a collection of monitoring sites (H).
+realized as a divide (A.), an area (B.), a main flowpath (C.), a network
+of catchments (D.), a network of waterbodies (E.), a dendritic topologic network (F.),
+a complex feature network (G.), or a collection of monitoring sites (H.).
 
 <div align="center">
 <img src="fig5.png" height=420>
@@ -312,6 +314,31 @@ Hydro nexuses *34*, and *56* are realized as hydro locations.
 ***
 
 ![](sequence_6.png)
+
+========================================================
+left: 70%
+
+<div class="footer2">17</div>
+
+**Waterbody -- Hydro Location and Catchment -- Hydro Nexus**
+
+Imagine that there are alternate representations of the 
+catchment between Hydro Nexus *34* and *56*. These may be:
+
+- for mapping at a different spatial scale
+- from a different data processing method
+- defined by a different originating organization
+- representative of a different process such as surface 
+water contributing or groundwater contributing catchment
+
+As long as these various representations are described as
+the same kind of catchment realization and identified with
+the same catchment identifier, they can be associated and
+related data and reports can also be unambiguously linked.
+
+***
+
+![](sequence_7.png)
 
 
 
