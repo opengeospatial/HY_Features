@@ -340,5 +340,53 @@ related data and reports can also be unambiguously linked.
 
 ![](sequence_7.png)
 
+========================================================
+left: 70%
+
+<div class="footer2">18</div>
+
+**Networks of Waterbodies or Channels and Catchment Interactions**
+
+A catchment can be realized as a network of waterbodies, 
+shown here as a simple blue line network meant to represent
+waterbodies. 
+
+A catchment can also be realized as the network of its channels, 
+shown here as orange lines that contain the waterbodies.
+
+Also illustrated here, two catchments interact at a hydrologic 
+location referenced to the waterbody network.
+
+***
+
+![](sequence_8.png)
+
+========================================================
+left: 70%
+
+<div class="footer2">19</div>
+
+**Networks of Waterbodies or Channels and Catchment Interactions**
+
+If we create hydro nexuses and realize them with hydrolocations and 
+also create catchment boundary realizations for each of the waterbodies
+in the network, it becomes clear that a waterbody or catchment network
+can be thought of as a network of catchment realizations.
+
+Systems of channels, waterbodies, hydro locations and catchments 
+can can be defined at many scales and tied together through shared 
+identifiers for hydro nexuses and catchments.
+
+The ability to both tie datasets together accross scales and to 
+support linking various data sets that represent the same real-world 
+features, is the primary goal of HY_Features conceptual model. Future 
+work will be able to build on this conceptual basis, adding formal 
+encodings for linking data together and encoding hydrographic data 
+directly.
+
+***
+
+![](sequence_9.png)
+
 
 
