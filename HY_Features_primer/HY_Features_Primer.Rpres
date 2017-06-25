@@ -33,6 +33,10 @@ width: 1440
 height: 900
 A conceptual feature model for surface hydrology.
 
+For more info, visit the [SWG home page.](http://www.opengeospatial.org/projects/groups/hydrofeatswg)
+
+If you are an OGC member, [get the latest spec on pending docs.](https://portal.opengeospatial.org/files/?artifact_id=74219&version=2)
+
 <div class="br" style="margin-left:-300px; margin-top:-300px;">
   <img src="catchmentNetwork.png"></img>
 </div>
