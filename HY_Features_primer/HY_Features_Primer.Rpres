@@ -42,7 +42,7 @@ If you are an OGC member, [get the latest spec on pending docs.](https://portal.
 </div>
 
 ========================================================
-left: 50%
+left: 60%
 
 **What is HY_Features?**
 
@@ -52,8 +52,9 @@ HY_Features is a conceptual model describing hydrology features and their relati
 
 - The model describes hydrology specific feature types, e.g. catchments, drainage networks, rivers, lakes and waterbodies.
 - Defined in the Unified Modeling Language (UML).
-- All features "specialize" a general HY_HydroFeature.
-- HY_Features models hydrologic units and waterbodies.
+- All features specialize the General Feature of the ISO / OGC General Feature Model.
+- Most features "specialize" a general HY_HydroFeature providing multilingual naming.
+- HY_Features models hydrologic units and surface waterbodies.
 - Focus is on surface water features and the networks they form.
 
 ***
@@ -70,9 +71,14 @@ identification of hydrologic features.
 
 This should help provide:
 
-1. a shared set of hydrologic feature types,
+1. shared feature types defined for use in the hydrology domain,
 2. a common language for documenting datasets,
-3. a standard conceptual model for data and software.
+3. a standard conceptual model for data and software,
+4. a means to unify hydrologic feature identities across data products.
+
+<div class="br" style="margin-left:-300px; margin-top:-300px;">
+  <img src="catchmentNetwork.png"></img>
+</div>
 
 <div class="footer">2</div>
 
@@ -84,11 +90,16 @@ HY_Features includes: hydrologic units,
 the junction features that join them, and the waterbody
 features that drain them. The core feature concepts are:
 
-- **catchment**: a holistic and abstract hydrologic unit feature.
-- **hydro nexus**: a holistic and abstract junction or node feature.
+- **catchment**: a holistic and abstract hydrologic unit concept, that links inflow and outflow.
+- **hydro nexus**: a holistic and abstract junction concept, that connects interacting catchments.
 - **realization**: a hydrology-specific way of interpreting a holistic feature.
-- **waterbody**: a distinct named or otherwise identified body of water.
-- **container**: a depression or channel that may hold a waterbody.
+- **waterbody**: an identified body of water, that accumulates runoff in a catchment.
+- **container**: a depression or channel that may hold a waterbody, that drains a catchment.
+- **hydro network**: a network of catchments that forms a larger, containing catchment. 
+
+Note: Catchment and nexus are not modeled as abstract classes in UML. Abstract 
+is used to describe that these are meant to represent the abstract notion 
+of a hydrologic unit or junction.
 
 <div class="footer">3</div>
 
@@ -96,7 +107,7 @@ features that drain them. The core feature concepts are:
 
 **What is a catchment?**
 
-Catchment is a holistic and abstract featuretype.
+Catchment is a holistic abstract notion of a hydrologic unit (a feature type).
 
 It is a physiographic unit defined by a common outlet (and
 potentially an upstream inlet.)
@@ -120,9 +131,12 @@ Theoretically, there is a hydro nexus anywhere on the landscape.
 However, we usually identify significant places to break up our catchments.
 
 A hydro nexus...
-- is a node at the boundary of a catchment
+- can act as a pour point at the boundary of a catchment
 - can act as an inlet to or an outlet from a catchment
 - can receive flow from and give flow to multiple catchments
+
+Note: Typically, a hydro nexus is a location at the end of a flow path, but other
+realizations, such as areas of infiltration, could be introduced in future work. 
 
 <div class="footer">5</div>
 
