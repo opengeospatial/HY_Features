@@ -382,19 +382,18 @@ network that realizes the whole catchment.
 ![](sequence_8.png)
 
 ========================================================
-left: 70%
+left: 75%
 
 <div class="footer2">19</div>
 
 **Networks of Waterbodies or Channels and Catchment Interactions**
 
 If we create hydro locations at junctions in the waterbody network 
-and associate them with hydro nexuses and catchments (realized 
-as boundaries and flowpaths in this figure), it becomes clear 
+and associate them with hydro nexuses and catchments, it becomes clear 
 that a waterbody or catchment (boundary) network is also be a 
 network of many individual catchment realizations.
 
-If we connect water bodies and/or channels at hydro locations at 
+If we connect water bodies with hydro locations at 
 their inlets and outlets, we get a network of catchments interacting at 
 their hydro nexuses. By using consistent identifiers for the hydro 
 nexuses and the associated catchments, datasets representing 
