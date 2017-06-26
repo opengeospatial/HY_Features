@@ -269,7 +269,7 @@ best illustrated as a sequence of steps.
 
 1. Given a **waterbody** feature, lets say it's a line.
 2. Choose two locations on that line, you have two **hydrologic locations**.
-3. Delineate the **divide** around the **area** that drains to the blue line.
+3. Delineate the **divide** around the **area** that contributes to the blue line between the two hydro locations.
 
 ***
 
@@ -340,8 +340,8 @@ left: 70%
 
 **Waterbody -- Hydro Location and Catchment -- Hydro Nexus**
 
-Imagine that there are alternate representations of the 
-catchment between Hydro Nexus *34* and *56*. These may be:
+Imagine that there are alternate data or geometric representations 
+of the catchment between Hydro Nexus *34* and *56*. These may be:
 
 - for mapping at a different spatial scale
 - from a different data processing method
@@ -349,10 +349,10 @@ catchment between Hydro Nexus *34* and *56*. These may be:
 - representative of a different process such as surface 
 water contributing or groundwater contributing catchment
 
-As long as these various representations are described as
-the same kind of catchment realization and identified with
-the same catchment identifier, they can be associated and
-related data and reports can also be unambiguously linked.
+As long as various data products represent the same 
+hydrology-specific catchment realization and identify 
+the same realized catchment, they can be associated directly 
+or related data and reports can also be unambiguously linked.
 
 ***
 
@@ -366,14 +366,16 @@ left: 70%
 **Networks of Waterbodies or Channels and Catchment Interactions**
 
 A catchment can be realized as a network of waterbodies, 
-shown here as a simple blue line network meant to represent
+shown here as a simple network of blue lines meant to represent
 waterbodies. 
 
 A catchment can also be realized as the network of its channels, 
-shown here as orange lines that contain the waterbodies.
+shown here as a network of orange lines that may contain the waterbodies.
 
-Also illustrated here, two catchments interact at a hydrologic 
-location referenced to the waterbody network.
+Also illustrated here, two catchments and their associated waterbodies/channels
+interact at a hydrologic location that is referenced to the waterbody/channel 
+network that realizes the whole catchment.
+
 
 ***
 
@@ -386,14 +388,18 @@ left: 70%
 
 **Networks of Waterbodies or Channels and Catchment Interactions**
 
-If we create hydro nexuses and realize them with hydrolocations and 
-also create catchment boundary realizations for each of the waterbodies
-in the network, it becomes clear that a waterbody or catchment network
-can be thought of as a network of catchment realizations.
+If we create hydro locations at junctions in the waterbody network 
+and associate them with hydro nexuses and catchments (realized 
+as boundaries and flowpaths in this figure), it becomes clear 
+that a waterbody or catchment (boundary) network is also be a 
+network of many individual catchment realizations.
 
-Systems of channels, waterbodies, hydro locations and catchments 
-can can be defined at many scales and tied together through shared 
-identifiers for hydro nexuses and catchments.
+If we connect water bodies and/or channels at hydro locations at 
+their inlets and outlets, we get a network of catchments interacting at 
+their hydro nexuses. By using consistent identifiers for the hydro 
+nexuses and the associated catchments, datasets representing 
+waterbodies/channels that are built at different scales can be 
+tied together.
 
 The ability to both tie datasets together accross scales and to 
 support linking various data sets that represent the same real-world 
