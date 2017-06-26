@@ -42,7 +42,7 @@ If you are an OGC member, [get the latest spec on pending docs.](https://portal.
 </div>
 
 ========================================================
-left: 50%
+left: 60%
 
 **What is HY_Features?**
 
@@ -52,8 +52,9 @@ HY_Features is a conceptual model describing hydrology features and their relati
 
 - The model describes hydrology specific feature types, e.g. catchments, drainage networks, rivers, lakes and waterbodies.
 - Defined in the Unified Modeling Language (UML).
-- All features "specialize" a general HY_HydroFeature.
-- HY_Features models hydrologic units and waterbodies.
+- All features specialize the General Feature of the ISO / OGC General Feature Model.
+- Most features "specialize" a general HY_HydroFeature providing multilingual naming.
+- HY_Features models hydrologic units and surface waterbodies.
 - Focus is on surface water features and the networks they form.
 
 ***
@@ -70,9 +71,14 @@ identification of hydrologic features.
 
 This should help provide:
 
-1. a shared set of hydrologic feature types,
+1. shared feature types defined for use in the hydrology domain,
 2. a common language for documenting datasets,
-3. a standard conceptual model for data and software.
+3. a standard conceptual model for data and software,
+4. a means to unify hydrologic feature identities across data products.
+
+<div class="br" style="margin-left:-300px; margin-top:-300px;">
+  <img src="catchmentNetwork.png"></img>
+</div>
 
 <div class="footer">2</div>
 
@@ -84,11 +90,16 @@ HY_Features includes: hydrologic units,
 the junction features that join them, and the waterbody
 features that drain them. The core feature concepts are:
 
-- **catchment**: a holistic and abstract hydrologic unit feature.
-- **hydro nexus**: a holistic and abstract junction or node feature.
+- **catchment**: a holistic and abstract hydrologic unit concept, that links inflow and outflow.
+- **hydro nexus**: a holistic and abstract junction concept, that connects interacting catchments.
 - **realization**: a hydrology-specific way of interpreting a holistic feature.
-- **waterbody**: a distinct named or otherwise identified body of water.
-- **container**: a depression or channel that may hold a waterbody.
+- **waterbody**: an identified body of water, that accumulates runoff in a catchment.
+- **container**: a depression or channel that may hold a waterbody, that drains a catchment.
+- **hydro network**: a network of catchments that forms a larger, containing catchment. 
+
+Note: Catchment and nexus are not modeled as abstract classes in UML. Abstract 
+is used to describe that these are meant to represent the abstract notion 
+of a hydrologic unit or junction.
 
 <div class="footer">3</div>
 
@@ -96,7 +107,7 @@ features that drain them. The core feature concepts are:
 
 **What is a catchment?**
 
-Catchment is a holistic and abstract featuretype.
+Catchment is a holistic abstract notion of a hydrologic unit (a feature type).
 
 It is a physiographic unit defined by a common outlet (and
 potentially an upstream inlet.)
@@ -120,9 +131,12 @@ Theoretically, there is a hydro nexus anywhere on the landscape.
 However, we usually identify significant places to break up our catchments.
 
 A hydro nexus...
-- is a node at the boundary of a catchment
+- can act as a pour point at the boundary of a catchment
 - can act as an inlet to or an outlet from a catchment
 - can receive flow from and give flow to multiple catchments
+
+Note: Typically, a hydro nexus is a location at the end of a flow path, but other
+realizations, such as areas of infiltration, could be introduced in future work. 
 
 <div class="footer">5</div>
 
@@ -255,7 +269,7 @@ best illustrated as a sequence of steps.
 
 1. Given a **waterbody** feature, lets say it's a line.
 2. Choose two locations on that line, you have two **hydrologic locations**.
-3. Delineate the **divide** around the **area** that drains to the blue line.
+3. Delineate the **divide** around the **area** that contributes to the blue line between the two hydro locations.
 
 ***
 
@@ -326,8 +340,8 @@ left: 70%
 
 **Waterbody -- Hydro Location and Catchment -- Hydro Nexus**
 
-Imagine that there are alternate representations of the 
-catchment between Hydro Nexus *34* and *56*. These may be:
+Imagine that there are alternate data or geometric representations 
+of the catchment between Hydro Nexus *34* and *56*. These may be:
 
 - for mapping at a different spatial scale
 - from a different data processing method
@@ -335,10 +349,10 @@ catchment between Hydro Nexus *34* and *56*. These may be:
 - representative of a different process such as surface 
 water contributing or groundwater contributing catchment
 
-As long as these various representations are described as
-the same kind of catchment realization and identified with
-the same catchment identifier, they can be associated and
-related data and reports can also be unambiguously linked.
+As long as various data products represent the same 
+hydrology-specific catchment realization and identify 
+the same realized catchment, they can be associated directly 
+or related data and reports can also be unambiguously linked.
 
 ***
 
@@ -352,14 +366,16 @@ left: 70%
 **Networks of Waterbodies or Channels and Catchment Interactions**
 
 A catchment can be realized as a network of waterbodies, 
-shown here as a simple blue line network meant to represent
+shown here as a simple network of blue lines meant to represent
 waterbodies. 
 
 A catchment can also be realized as the network of its channels, 
-shown here as orange lines that contain the waterbodies.
+shown here as a network of orange lines that may contain the waterbodies.
 
-Also illustrated here, two catchments interact at a hydrologic 
-location referenced to the waterbody network.
+Also illustrated here, two catchments and their associated waterbodies/channels
+interact at a hydrologic location that is referenced to the waterbody/channel 
+network that realizes the whole catchment.
+
 
 ***
 
@@ -372,14 +388,18 @@ left: 70%
 
 **Networks of Waterbodies or Channels and Catchment Interactions**
 
-If we create hydro nexuses and realize them with hydrolocations and 
-also create catchment boundary realizations for each of the waterbodies
-in the network, it becomes clear that a waterbody or catchment network
-can be thought of as a network of catchment realizations.
+If we create hydro locations at junctions in the waterbody network 
+and associate them with hydro nexuses and catchments (realized 
+as boundaries and flowpaths in this figure), it becomes clear 
+that a waterbody or catchment (boundary) network is also be a 
+network of many individual catchment realizations.
 
-Systems of channels, waterbodies, hydro locations and catchments 
-can can be defined at many scales and tied together through shared 
-identifiers for hydro nexuses and catchments.
+If we connect water bodies and/or channels at hydro locations at 
+their inlets and outlets, we get a network of catchments interacting at 
+their hydro nexuses. By using consistent identifiers for the hydro 
+nexuses and the associated catchments, datasets representing 
+waterbodies/channels that are built at different scales can be 
+tied together.
 
 The ability to both tie datasets together accross scales and to 
 support linking various data sets that represent the same real-world 
