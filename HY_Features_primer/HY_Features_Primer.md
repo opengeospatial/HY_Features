@@ -25,6 +25,8 @@
 }
 </style>
 
+# Short Link: https://goo.gl/#analytics/goo.gl/tun2d2/all_time
+
 WaterML2 Part 3: Surface Hydrology Features (HY_Features)
 ========================================================
 author: David L. Blodgett
@@ -36,6 +38,8 @@ A conceptual feature model for surface hydrology.
 For more info, visit the [SWG home page.](http://www.opengeospatial.org/projects/groups/hydrofeatswg)
 
 If you are an OGC member, [get the latest spec on pending docs.](https://portal.opengeospatial.org/files/?artifact_id=74219&version=2)
+
+Latest version of this [presentation here.](http://opengeospatial.github.io/HY_Features/HY_Features_primer/HY_Features_Primer.html#/)
 
 <div class="br" style="margin-left:-300px; margin-top:-300px;">
   <img src="catchmentNetwork.png"></img>
@@ -340,19 +344,20 @@ left: 70%
 
 **Waterbody -- Hydro Location and Catchment -- Hydro Nexus**
 
-Imagine that there are alternate data or geometric representations 
-of the catchment between Hydro Nexus *34* and *56*. These may be:
+In many cases, several alternate geometric representations 
+for the catchment defined between Nexus 34 and 56 will exist:
 
-- for mapping at a different spatial scale
-- from a different data processing method
-- defined by a different originating organization
-- representative of a different process such as surface 
-water contributing or groundwater contributing catchment
+- for mapping at different scales
+- from differing data capture or processing methods 
+(e.g raster, vector)
+- originating from different organizations
+- for representing different processes, for example 
+surface water or groundwater contributing catchments
 
-As long as various data products represent the same 
+As long as alternate data products represent the same 
 hydrology-specific catchment realization and identify 
-the same realized catchment, they can be associated directly 
-or related data and reports can also be unambiguously linked.
+the same realized catchment, they can be associated 
+directly along with any related data and reports.
 
 ***
 
