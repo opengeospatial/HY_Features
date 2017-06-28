@@ -418,8 +418,6 @@ left: 75%
 
 **Ways of Conforming to HY_Features -- Conformance Classes**
 
-There are two ways of "conforming" to the HY_Features conceptual model.  
-
 **1) Data Model Mapping**  
 HY_Features can be useful in describing the characteristics of an existing data 
 model. In this case, conformance is accomplished by recording how a given dataset 
@@ -428,13 +426,10 @@ As long as the mapping itself considers all mandatory elements of HY_Features, i
 would be considered conformant. 
 
 **2) Implementation of an Encoding of HY_Features**  
-Direct implementation of HY_Features is possible and expected. In this case, all 
-mandatory properties, associations, and default values are required in the 
-implementation for one or more HY_Features feature type. Note that conformance may 
-be achieved by implementing only one (or more) HY_Features feature types. 
-Implementations would necessarily extend and profile the HY_Features conceptual 
-model, adding specific geometric representations and specifying which HY_Features 
-featuretypes are to be included.
+In this case, all mandatory properties, associations, and default values are 
+required in the implementation for one or more HY_Features feature type. Implementations 
+would necessarily extend and profile the HY_Features conceptual model, adding specific 
+geometric representations and specifying which HY_Features featuretypes are to be included.
 
 ***
 
