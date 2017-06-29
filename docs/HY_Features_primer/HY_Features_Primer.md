@@ -25,8 +25,6 @@
 }
 </style>
 
-# Short Link: https://goo.gl/#analytics/goo.gl/tun2d2/all_time
-
 WaterML2 Part 3: Surface Hydrology Features (HY_Features)
 ========================================================
 author: David L. Blodgett
