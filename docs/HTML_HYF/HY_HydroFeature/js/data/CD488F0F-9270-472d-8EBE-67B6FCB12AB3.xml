@@ -1,0 +1,5 @@
+tocTab[tocTab.length] = new Array("0.3:1", "", "River Referencing Classes", "EARoot/EA3/EA57.htm", "175.png", "8120", "0", "", "Diagram diagram0","{5E17E465-2B6E-44cc-811C-5918D84E5474}");
+tocTab[tocTab.length] = new Array("0.3:2", "", "Fig36: River Referencing", "EARoot/EA3/EA59.htm", "175.png", "8119", "0", "", "Logical diagram0","{BE6C2611-36B7-47d9-8443-DD66AD8133DA}");
+tocTab[tocTab.length] = new Array("0.3:3", "", "«DataType» HY_DistanceFromReferent", "EARoot/EA3/EA61.htm", "5.png", "15709", "0", "", "Class0","{0719ADA7-1E14-4055-8FED-BBE940051F20}");
+tocTab[tocTab.length] = new Array("0.3:4", "", "«FeatureType» HY_IndirectPosition", "EARoot/EA3/EA62.htm", "5.png", "15710", "0", "", "Class0","{62A4DBD2-8FB5-4489-AE38-E5EC4723D314}");
+tocTab[tocTab.length] = new Array("0.3:5", "", "«CodeList» HY_DistanceDescription", "EARoot/EA3/EA63.htm", "5.png", "15711", "0", "", "Class0","{B5645583-E781-43c3-B270-D4EC7EA02D52}");
