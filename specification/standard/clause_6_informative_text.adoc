@@ -29,6 +29,7 @@ The concept of catchment used in this standard is that it is described physicall
 .Illustration of multiple representations of a catchment
 image::figures/fig3.png[]
 
+[#section6_3]
 === Catchment and realizations of the catchment concept
 
 The core concept of the HY_Features model is that a study of the Hydrology phenomenon will reference common conceptual entities of the real world such as catchment, water body, channel, or stream gaging site, through the use of features according to a specific model (as per ISO 19109 General Feature Model). Depending on the field of study or application, complex hydrology phenomenon features may be realized in many ways. This leads to the idea that each study of a catchment may portray it in a particular way leading to multiple realizations of the same conceptual entity.
@@ -99,6 +100,7 @@ It is worth noting that non-dendritic networks are often represented as a dendri
 .Encapsulation of non-dendritic stream network topology. The left figure shows a case where it is not possible to determine to what extent flow from catchment F contributes to catchments E, B or C. The right figure shows how catchments E, B, and C can be aggregated so nodes N2 and N3 are treated as a single virtual inflow node, so that all the flow from catchments D and F accumulate in the resulting catchment X.
 image::figures/fig12.png[]
 
+[#section6_4]
 === River reference system
 Considering any identified location on a network as the outflow node of a contributing catchment, or the inflow node of a receiving catchment, an arbitrary new location can be placed on the network in reference to the existing outfall up- or downstream. Understanding such a reference as a positioning "along a river", the linear flowpath representation of a catchment can be used for linear referencing. HY_Features defines the concept of a river reference system which has three components: 1) an origin at an inflow or outflow outfall; 2) a shape defined by the flowpath of a catchment that connects to the origin; and 3) a linear distance or relative (percentage) measurement system. Each catchment has its own reference system which can be combined as necessary using catchment topology; each river reference system must have one outfall (origin) and one representing flowpath (shape). link:#figure13[Figure 13], and Figure 14 illustrate how a newly introduced network location can be located downstream of a catchment inflow, or upstream of a catchment outflow.
 
@@ -110,7 +112,46 @@ image::figures/fig13.png[]
 .Position (yellow dot) upstream of a reference point (red dot). Typically, r1 would be the origin and P, the referenced point; however, the river reference system model allows for the referenced point to be the origin of it’s own river reference system.
 image::figures/fig14.png[]
 
+=== Hydrographic and hydrometric networks
 
+Hydrographic data is commonly organized into networks. HY_Features includes catchment realizations for the hydrographic network of waterbodies, channel network connected conveyances, and hydrometric network of monitoring stations. The following sections first describe the individual network types uniquely, then describe how these networks relate to each other in the context of the overall HY_Features model. The main function of these network models is to allow an aggregate of hydrologic features at one scale to act as a single encapsulated entity at another scale. 
+
+==== Hydrographic and channel networks
+
+Following the definitions in the UNESCO-WMO "International Glossary of Hydrology" [9] a water body is understood as the mass of liquid water accumulated on or below the land surface as a body of flowing water, which in some parts may have stagnant water that is not moving or flowing. The water body concept formalized in this specification is consistent with this definition, but focuses on surface water bodies only. A conceptual model capturing the specifics of bodies of groundwater as well as aquifers containing groundwater are provided by the WaterML2 Part 4 - GroundwaterML2 specification [6]. 
+
+A watercourse is commonly understood as a natural or man-made channel through or along which water may or may not flow [9]. A water body is generally a flowing body of water contained by a natural watercourse, but could also be in a manmade open or closed conduit [9]. Given that the channel network (or drainage pattern) exists independent of whether it contains water, HY_Features conceptually separates natural and manmade hydrographic features into the body of water and the unit that contains the water body. This distinction is helpful to separate concerns of hydrology--studying the occurrence, accumulation, and circulation of water--and hydraulics--focused on the analysis and design of watercourses. Note that flow-through lakes and lakes without outflows are considered to be water bodies whose container is modeled as a surface depression.
+
+Water bodies with their associated water courses can be aggregated into hydrographic and channel networks identified as the hydrographic or channel network of the catchment the network drains. Individual waterbodies can be described with vertical cross- or longitudinal sections. A water body may also be stratified into distinct horizontal layers for distinct thermal, salinity, oxygen, nutrient, or storage characteristics. Water may be stored and managed in reservoirs for future use, regulation, or control. Conceptually, each water body accumulating water may be managed as a reservoir. To model reservoir storage at multiple reservoir stages or elevations, HY_Features includes an association between a reservoir and its waterbody stratum. The concept of stratum could also be applied to bathymetric contours of a lake to describe the container of a lake water body. 
+
+To place waterbodies topologically or geographically in a network, the HY_Features model provides a mechanism to associate waterbodies with a realization of a catchment outfall. In the case of a hydrographic network that realizes an entire catchment, the HY_Features catchment relationships can be used for both the larger catchment realized by the whole hydrographic network and the catchment(s) whose outfalls are used to locate waterbodies within the hydrographic network. This builds the idea outlined in link:#section6_3[section 6.3] in that every identified waterbody has a conceptual catchment that can be arranged topologically within a catchment network and is described in greater detail in link:#section6_5_3[section 6.5.3].
+
+==== Hydrometric networks
+
+Water bodies are observed using monitoring stations which are typically physical locations with a well-established cross section they monitor. It is common practice to locate a monitoring station in relation to local landmarks and permanent reference points along a stream or in relation to the outlet of the monitored water body. The river reference system, described in link:#section6_4[section 6.4], gives a mechanism to locate such points in relation to establish catchment outfall locations such as confluences. When aggregated into a network, monitoring stations within a catchment can be said to make up a logically connected hydrometric network which monitors a catchment. 
+
+The purpose of HY_Features hydrometric stations and network is to support linking identified monitoring stations, (thought to be the sampling feature in terms of the observations and measurements standard) and a river or other hydrologic feature (thought to be the domain or sampled feature in terms of observations and measurements). The monitoring feature role of hydrometric features is unique in contrast to all other outfall realizations in HY_Features, which would be used as observed domain features in observations and measurements.
+
+[#section6_5_3]
+==== HydroNetwork: hydrographic network, channel network and station network - different views of catchment topology
+
+Maps displaying a representation of a catchment are very common in hydrology research and engineering. Depending on the scientific concern, different aspects of the hydrology phenomenon are represented using application specific map symbols. Respecting the separation of scientific concerns, HY_Features distinguishes between these by defining separate realizations of the catchment and outfall concepts which may be simple points, lines, or polygons, and may be complex aggregate networks made up of collections of point, line, or polygon representations. The need to support such collections across scales is supported through the general concept of the HydroNetwork described below.
+ 
+The holistic idea of catchment, where a conceptual catchment has many real-world realizations, allows us to consider realizations of a catchment that correspond to different phenomena as variations of a common catchment pattern. Using this approach, the relationship of a catchment to a set of catchments can be transferred to any representation of that catchment regardless of the geometric representation in a particular data product. For example, an entire hydrographic network representation of a catchment can have simple relationships to the hydrographic network of its up and downstream catchments if the network itself is understood to adopt basic catchment characteristics. 
+
+This standard defines a hydrologically determined topology model of directed outfalls, acting as inflow or outflow nodes, and the catchment which can act as the link between them. This topological catchment network pattern can be transferred to context-specific network realizations such as hydrographic networks of water bodies or channel networks that may convey water, as well as to their various representations as (poly)lines and polygons. For example, a fixed landmark on a water body, a cross-section separating a watercourse, or a station along the network, can be considered to be outfalls (outflow nodes) of a contributing catchment (link); a flowpath representing a catchment may be drawn from an ‘inflow‘ node to the ‘outflow‘ node linking the nodes through the represented catchment. As with the hydrographic (water body) and channel (conveyance) network, the abstract catchment topology model can be applied to any logical or virtual network, e.g. a network of logically connected hydrometric stations. 
+
+[#figure15]
+.Cyclic nature of the HY_Features basic model
+image::figures/fig15.png[]
+
+link:#figure15[Figure 15] illustrates the circular relationship between five functional components of the HY_Features model: the catchment concept, catchment realization, hydro networks, waterbodies, and outfalls. The cyclic nature of the basic model supports crossing scale through nesting of more or less detailed catchment realizations.
+
+==== FlowPath
+
+In practice, catchments are associated with a single mainstem flowpath (link:#figure5[Figure 5c]). Some elevation-derived hydrographic datasets define one flowpath per catchment such that every line connecting two confluences has a single associated drainage area. Others have an identifiable mainstem river that flows from headwaters or inflow to outflow. In either case, the main flowpath typically carries the name of the catchment and its outlet is considered the mouth of the river or catchment. HY_Features includes a simple linear realization of the catchment concept that is meant to encompass the mainstem idea.
+
+The flowpath concept is associated with a hydrographic or channel network in that any hydrographic or channel network can have one identified flowpath connecting its inflow to outflow node. In this way, at large scales, complex networks of channels can have one mainstem flowpath made up of many smaller scale reaches. At very small scales a network made up of one reach also has a single main flowpath. In both cases, the flowpath is associated with a catchment and should be understood to be the one linear connection between inflow and outflow node. Because hydrographic and channel networks are aggregates of waterbodies and channels, it follows that the flowpath concept is related to waterbodies and channels through the networks that aggregate them.
 
 
 
