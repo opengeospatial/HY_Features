@@ -140,6 +140,34 @@ The *realisation* association relates the catchment to a feature which realizes 
 
 include::requirements/req06.adoc[]
 
+===== Catchment Aggregate
+
+The HY_CatchmentAggregate feature type (link:#figure25[Figure 25]) specializes the HY_Catchment as a set of non-overlapping dendritic and interior catchments arranged in an encompassing catchment. This allows description of multiple inflows into a catchment aggregate through several hydrologically discrete sub-catchments each with a single inflow, and contributing to a joined outflow of the catchment aggregate, including the 'nillable' outflow of interior catchments. Nillable is meant to signify that the outfall exists, in the form of flow to the subsurface or atmosphere but is unknown in a given implementation. The catchment aggregate may be part of a containing catchment at the next higher level of hierarchy, which consists of similar-scale neighboring catchments. The catchment aggregate does not necessarily imply a series of nested containing catchments. It primarily allows navigation to the 'highest' level system (total drainage basin) as typically used for reporting purposes.
+
+[#figure25]
+.Catchment aggregate (UML class diagram, https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchmentaggregate[/req/hy_hydrofeature/hydrocomplex/catchmentaggregate])
+image::figures/fig25.png[]
+HY_CatchmentAggregate inherits from generalization the _outflow_, _inflow_, _containingCatchment_, _containedCatchment_, _conjointCatchment_, _upperCatchment_, _lowerCatchment_, and _realisation_ properties, and associates the _exorheicDrainage_ and _endorheicDrainage_. 
+
+The *exorheicDrainage* association references an exorheic drained catchment connected to others in a dendritic network. The *endorheicDrainage* association references an endorheic drained catchment, temporarily connected to the enveloping aggregate. If required, these associations shall be used to identify aggregated catchment parts which permanently or temporarily interact with other catchment parts at the same hierarchy level. 
+
+include::requirements/req07.adoc[] 
+
+===== Dendritic Catchment
+
+The HY_DendriticCatchment feature type (link:#figure26[Figure 26]) specializes the general HY_Catchment class as a catchment which is determined by a single common downstream catchment. It represents the catchment as the topological link between an inflow and an outflow. This allows catchments to be connected in a dendritic network by upstream-downstream relationships without knowing the complex hydrology between inflow and outflow. This concept requires a stable identifier purposefully assigned to the catchment and that catchments are delineated as a simple tree hierarchy. The dendritic nature of this class is enforced through constraints that the catchment must have one and only one outflow (which can be unknown), must have one and only one lowerCatchment (which may be unknown), and must have an outflow that contributes to only one receiving catchment. 
+
+[#figure26]
+.Dendritic catchment (UML class diagram, https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/dendriticcatchment[/req/hy_hydrofeature/hydrocomplex/dendriticcatchment])
+image::figures/fig26.png[]
+
+HY_DendriticCatchment inherits from generalization the code, _outflow_, _inflow_, _containingCatchment_, _containedCatchment_, _conjointCatchment_, _upperCatchment_, _lowerCatchment_, and _realisation_ properties, and associates the encompassingCatchment.
+
+
+The *encompassingCatchment* association relates to the dendritic catchment the aggregate encompassing the catchment. If required, this association shall be used to identify the catchment encompassing one or more exorheic or endorheic drained catchments contributing flow to the common outlet, either from a single identified inflow, or in joining with other sub-catchments crossing a divide internal to the encompassing aggregate catchment.
+
+include::requirements/req08.adoc[] 
+
 === Template
 
 Paragraph – intro text for the requirement class.
