@@ -168,6 +168,41 @@ The *encompassingCatchment* association relates to the dendritic catchment the a
 
 include::requirements/req08.adoc[] 
 
+===== Interior Catchment
+
+The HY_InteriorCatchment feature type (link:#figure27[Figure 27]) specializes the general HY_Catchment class as a catchment which is generally not connected to other catchments. This class describes the interior catchment as a catchment enveloped by other catchments to which it may temporarily contribute. While the interior catchment concept precludes flow to neighboring surface catchments, holistically it is a candidate for establishing connections to groundwater or atmospheric systems.
+
+[#figure27]
+.Interior catchment (UML class diagram, https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/interiorcatchment[/req/hy_hydrofeature/hydrocomplex/interiorcatchment])
+image::figures/fig27.png[]
+
+HY_InteriorCatchment inherits from generalization the code, _outflow_, _inflow_, _containingCatchment_, _containedCatchment_, _conjointCatchment_, _upperCatchment_, _lowerCatchment_, and _realisation_ properties, and associates the envelopingCatchment.
+
+The *envelopingCatchment* association relates to the interior catchment the aggregate surrounding the catchment. If required, this association shall be used to identify the catchment enveloping one or more endorheic drained catchments contributing 'nillable' flow to the common outlet. 
+
+include::requirements/req09.adoc[] 
+
+===== Outfall
+
+The HY_Outfall feature type (link:#figure28[Figure 28]) conceptualizes the hydrologically determined outfall of a corresponding catchment (link:#figure21[Figure 21]). The logical outfall represents the logical place where a catchment interacts with another catchment, i.e. where the outflow of a contributing catchment becomes inflow into a receiving catchment. A catchment may receive flow from several catchments or contribute flow to several catchments through a single logical outfall. Logically placed in reference to a catchment which links inflow and outflow, an outfall has a position relative to another outfall that is 'fixed' by the catchment. Through unique identity, each outfall feature may associate different outfall realizations within an hydrologic complex given that each realization has the same hydrologic determination. This includes the topological realization as a node in terms of the 'boundary' on a catchment edge. 
+
+[#figure28]
+.Outfall (UML class diagram, https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/outfall[req/hy_hydrofeature/hydrocomplex/outfall])
+image::figures/fig28.png[]
+
+HY_Outfall carries the associations: _contributingCatchment_, _receivingCatchment_, _relativePosition_ and _outfallRealisation_. 
+
+The *contributingCatchment* association relates the outfall to the catchment that contributes flow to it. This allows relation of a catchment's outflow to an identified inflow and to determine its position through referencing an outfall. If required, this association shall be used to identify the catchment connecting the outfall and an inflow used for reference. 
+
+The *receivingCatchment* association relates to the outfall to a catchment that receives flow from it. This allows relation of a catchment's inflow to an identified outflow and to determine its position through referencing an outfall. If required, this association shall be used to identify the catchment connecting the outfall and the outflow used for reference.
+
+The *relativePosition* association assigns a position to the outfall relative to a reference location (typically an outfall realization) fixed in the logical network of catchments. This means that the position of an outfall is determined relative to another realized outfall. If required, this association shall be used to assign a position to an inflow or outflow of a catchment using existing reference location(s). Commonly, this is used to locate an outfall such as at a hydrometric station, to a reference outfall such as a confluence but it can be used to locate any outfall relative to another.
+
+
+The *outfallRealisation* association relates the outfall to a feature which realizes the logical outfall. If required, this association shall be used to describe the 'real' object considered to be outfall of a catchment. In case of a topological realization, the realization of the outfall shall be of lower dimension than the realization of the corresponding catchment.
+
+include::requirements/req10.adoc[] 
+
 === Template
 
 Paragraph – intro text for the requirement class.
