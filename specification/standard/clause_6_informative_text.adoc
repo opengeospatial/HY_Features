@@ -6,7 +6,7 @@ Processes that continuously deplete and replenish water resources cause or resul
 
 [#figure2]
 .Processes of the Hydrologic Cycle
-image::../../figs/fig2.png[]
+image::figures/fig2.png[]
 
 Water is moving from the atmosphere to the Earth and back to the atmosphere due to the processes forming the Water Cycle (link:#figure2[Figure 2]). Water from precipitation reaching the land surface is accumulated in water bodies occupying empty space on the land surface or in water bearing formations of soil and rock. Excess water overflows these formations and is driven downhill by gravity. Water flowing over soil or rock causes erosion to occur. This erosion tends to concentrate flowing water into water bodies that flow downhill using a connecting system of channels intersecting other water bodies along their way to a common outlet, conceptualized as a potentially complex outfall feature.
 
@@ -27,7 +27,7 @@ The concept of catchment used in this standard is that it is described physicall
 
 [#figure3]
 .Illustration of multiple representations of a catchment
-image::../../figs/fig3.png[]
+image::figures/fig3.png[]
 
 === Catchment and realizations of the catchment concept
 
@@ -35,13 +35,13 @@ The core concept of the HY_Features model is that a study of the Hydrology pheno
 
 [#figure4]
 .Idealized catchment. This idealized catchment diagram is used to represent the catchment concept with no emphasis on any realization or representation. In the diagrams below, aspects of this diagram are highlighted to emphasize particular concepts of the HY_Features conceptual model.
-image::../../figs/fig4.png[]
+image::figures/fig4.png[]
 
 Across hydrologic disciplines the concept of catchment defined in this standard is the recognized conceptual unit of study where hydrologic processes take place. Catchment boundary, catchment area, and linear flowpath are the most common geometric realizations of a catchment, and are widely used to create cartographic views of a catchment. Map layers that separately visualize the hydrographic network of water bodies (typically as blue lines for small rivers and blue polygons for larger rivers and lakes) and of channels (typically lines displaying a drainage pattern indicating the path flow may follow), or a network of hydrometric monitoring stations, are usually combined to portray the represented catchment as a whole. Such cartographic data products are usually exposed in map services, while the water body or channel features are provided with an appropriate geometry and location usually in features services. To illustrate these ideas, link:#figure4[Figure 4] shows an idealized watershed with different graphical representations highlighted.
 
 [#figure5]
 .Multiple graphical realizations of a catchment (from top left to bottom right): a) Catchment boundary, b)   Catchment area, c) flowpath of catchment d) network of sub catchments, e) cartographic view, f) abstract flow paths, g) hydrographic network, h) network of logically connected monitoring stations.
-image::../../figs/fig5.png[]
+image::figures/fig5.png[]
 
 Each of these graphical realizations is a different way of looking at the catchment and its interaction with other features. It is generally not possible to inspect a particular realization and understand all characteristics of the catchment because different types of features are often realized using identical data models. For example, a map showing a set of catchment polygons may display an aggregate of sub-catchments, or a collection of catchment polygons that overlap each other occupying the same space. In order to understand what catchment concept is being realized, the more detailed information about their type and role in a data model needs to be declared. These relationships and potential constraints may be declared between a high-order catchment and the catchments generally nested therein, or between an aggregate network of catchments that encompasses nested catchments without any overlap, or the upstream-downstream direction of flow for a set of catchment polygons.
 
@@ -53,7 +53,7 @@ Catchments may be connected in topological networks which provide continuity bet
 
 [#figure6]
 .(C1-C5, from left to right): C1, Typical catchments with one inflow and one outflow each; C2, Joined (conjoint) catchments flowing into a single downstream catchment; C3, catchments joining in a waterbody or wetland with no clear network; C4, catchments joining through intermittent or subsurface flows C5, catchments that join through areas of complex or braided channels
-image::../../figs/fig6.png[]
+image::figures/fig6.png[]
 
 In a network of catchments, morphological detail may be specified in many ways. Inflows are generally conceptual in headwaters, and outflows are often complex where water flows out of a network. As shown in link:#figure6[Figure 6] catchments may connect through simple confluences (C1), water bodies or wetlands (C3), intermittent or subsurface flows (C4) or complex braided streams (C5). Although these cases require different geographic representations, they can be represented using the same catchment topology. Since all these cases can be specified using simple topology, no special treatment is required to handle the variation of flow processes.
 
@@ -63,11 +63,11 @@ Any catchment may be nested or aggregated in a larger containing catchment or sp
 
 [#figure7]
 .Catchment hierarchy – A catchment (dark grey), may be nested within a containing catchment which is another catchment (light grey)
-image::../../figs/fig7.png[]
+image::figures/fig7.png[]
 
 [#figure8]
 .Catchment hierarchy – A catchment (C1, C2, or C3) may be part of a simple dendritic network of catchments which is also a catchment.
-image::../../figs/fig8.png[]
+image::figures/fig8.png[]
 
 ==== Topological network of catchments
 
@@ -75,15 +75,15 @@ Given the idea that a non-geospatial schematic representation of a feature can s
 
 [#figure9]
 .A catchment area (grey) and a flowpath connecting inflow to outflow (red) depicting a definable unit where hydrological processes take place.
-image::../../figs/fig9.png[]
+image::figures/fig9.png[]
 
 [#figure10]
 .Catchments contributing to an identified outflow node. Note that some catchments contribute to a common outflow node.
-image::../../figs/fig10.png[]
+image::figures/fig10.png[]
 
 [#figure11]
 .Catchments receive inflow via an identified inflow node. Note that nodes are not necessarily geographic features, but are rather nodes in a graph representation of the river network.
-image::../../figs/fig11.png[]
+image::figures/fig11.png[]
 
 The catchment C1, shown in link:#figure10[Figure 10], contributes flow to outflow node n1. Node n2, shown in link:#figure11[Figure 11], contributes inflow to catchment C1. Networks of catchments can be constructed using this construct and the idea that two or more catchments that flow into the same downstream catchment, first flow to the same outflow node which is the inflow node of the receiving downstream catchment. In a network of dendritic catchments, outflow nodes on the network serve only one receiving catchment.
 
@@ -91,15 +91,26 @@ Nodes may seem to stand alone as points of interaction in the network, but In re
 
 In a dendritic network, the outflow node that one or more dendritic catchments flow to (which is not necessarily a single geometric point) must contribute to one and only one receiving catchment, unless it is a terminal catchment. Given that the dendritic catchment is defined as a special type of the more general catchment concept, it inherits the general nesting as defined for the catchment as shown in link:#figure7[Figure 7].
 
-Being topological nodes, inflow and outflow nodes have no explicit positions but are potentially complex watershed outlets. In fact, a node may be represented by a complex geometry with multiple parts. This is important in the case of a catchment that contains a broad river bottom with complex braided channels and two or more primary inflows. There may be no clear way to identify an inflow location, but from a topological perspective each contributing catchment can be said to contribute to the same node and that diffused inflow can be said to contribute to the catchment in question (#figure12[Figure 12]). Note that in this case, the complexity required to support geospatially accurate linear referencing may be lost in the interest of easy network navigation capabilities.
+Being topological nodes, inflow and outflow nodes have no explicit positions but are potentially complex watershed outlets. In fact, a node may be represented by a complex geometry with multiple parts. This is important in the case of a catchment that contains a broad river bottom with complex braided channels and two or more primary inflows. There may be no clear way to identify an inflow location, but from a topological perspective each contributing catchment can be said to contribute to the same node and that diffused inflow can be said to contribute to the catchment in question (link:#figure12[Figure 12]). Note that in this case, the complexity required to support geospatially accurate linear referencing may be lost in the interest of easy network navigation capabilities.
 
-It is worth noting that non-dendritic networks are often represented as a dendritic catchment network by introducing joint catchments that contain the non-dendritic parts. #figure12[Figure 12] shows an example of a network with a non-dendritic topology, where it is not possible to determine to what extent flow from catchment F contributes to catchments E, B or C (C7). C8 shows the same topology where catchments E, B, and C have been aggregated and the nodes N2 and N3 are treated as a single virtual inflow node, so that all the flow from catchments D and F accumulate in the resulting catchment X. Using this encapsulation approach, catchments can be represented using a simple tree structure where an upstream-downstream relation can be built without the need for complex hydrography between inflow and outflow nodes.
+It is worth noting that non-dendritic networks are often represented as a dendritic catchment network by introducing joint catchments that contain the non-dendritic parts. link:#figure12[Figure 12] shows an example of a network with a non-dendritic topology, where it is not possible to determine to what extent flow from catchment F contributes to catchments E, B or C (C7). C8 shows the same topology where catchments E, B, and C have been aggregated and the nodes N2 and N3 are treated as a single virtual inflow node, so that all the flow from catchments D and F accumulate in the resulting catchment X. Using this encapsulation approach, catchments can be represented using a simple tree structure where an upstream-downstream relation can be built without the need for complex hydrography between inflow and outflow nodes.
 
 [#figure12]
 .Encapsulation of non-dendritic stream network topology. The left figure shows a case where it is not possible to determine to what extent flow from catchment F contributes to catchments E, B or C. The right figure shows how catchments E, B, and C can be aggregated so nodes N2 and N3 are treated as a single virtual inflow node, so that all the flow from catchments D and F accumulate in the resulting catchment X.
-image::../../figs/fig12.png[]
+image::figures/fig12.png[]
 
 === River reference system
+Considering any identified location on a network as the outflow node of a contributing catchment, or the inflow node of a receiving catchment, an arbitrary new location can be placed on the network in reference to the existing outfall up- or downstream. Understanding such a reference as a positioning "along a river", the linear flowpath representation of a catchment can be used for linear referencing. HY_Features defines the concept of a river reference system which has three components: 1) an origin at an inflow or outflow outfall; 2) a shape defined by the flowpath of a catchment that connects to the origin; and 3) a linear distance or relative (percentage) measurement system. Each catchment has its own reference system which can be combined as necessary using catchment topology; each river reference system must have one outfall (origin) and one representing flowpath (shape). link:#figure13[Figure 13], and Figure 14 illustrate how a newly introduced network location can be located downstream of a catchment inflow, or upstream of a catchment outflow.
+
+[#figure13]
+.Position (yellow dot) downstream of a reference point (red dot). While referenced positions (P) are usually referenced to permanent locations like confluences (r2), they can also be considered to be the outflow of contributing catchment and thus, the origin of a river reference system of their own.
+image::figures/fig13.png[]
+
+[#figure14]
+.Position (yellow dot) upstream of a reference point (red dot). Typically, r1 would be the origin and P, the referenced point; however, the river reference system model allows for the referenced point to be the origin of it’s own river reference system.
+image::figures/fig14.png[]
+
+
 
 
 

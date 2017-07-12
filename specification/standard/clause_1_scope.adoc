@@ -31,4 +31,4 @@ The model concepts may be used to describe the relationships of observation resu
 
 [#figure1]
 .HY_Features in the context of the OGC Abstract Specifications
-image::../../figs/fig1.png[]
+image::figures/fig1.png[]
