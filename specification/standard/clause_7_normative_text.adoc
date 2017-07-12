@@ -44,6 +44,15 @@ include::requirements/req01.adoc[]
 
 An implementation schema conforming to HY_Features SHALL provide a formal mapping from one or more Feature Types present in the implementation schema to Feature Types defined in this standard specification, including all mandatory properties defined by the realized HY_Features concept. Default values to be assumed must be specified in this mapping.
 
+=== The HY_Features data conformance (encoding)
+
+As a conceptual model HY_Features does not specify conformance requirements regarding the structure of possible encodings. It does however specify that equivalence of feature instances can be expressed. The requirement that arises is therefore that the content of feature identification elements can be matched among implementations. This does not demand the use of identical identifiers across different implementations, but it does require that implementations provide a mechanism to match identifiers from different schemes.
+
+include::requirements/req02.adoc[]
+
+Implementations of HY_Features SHALL either use common identifiers for instances of Feature Types mapped to the same underlying HY_Features Feature Type, OR provide a mechanism to match identifiers from different identification schemes.
+
+
 
 === Template
 
