@@ -46,3 +46,60 @@ image::../../figs/fig5.png[]
 Each of these graphical realizations is a different way of looking at the catchment and its interaction with other features. It is generally not possible to inspect a particular realization and understand all characteristics of the catchment because different types of features are often realized using identical data models. For example, a map showing a set of catchment polygons may display an aggregate of sub-catchments, or a collection of catchment polygons that overlap each other occupying the same space. In order to understand what catchment concept is being realized, the more detailed information about their type and role in a data model needs to be declared. These relationships and potential constraints may be declared between a high-order catchment and the catchments generally nested therein, or between an aggregate network of catchments that encompasses nested catchments without any overlap, or the upstream-downstream direction of flow for a set of catchment polygons.
 
 In some cases, a catchment may be realized as an identified feature without specified geometry that takes part in a topological network of catchments. This is common, for example, in data systems supporting hydrologic modeling. Catchment attributes needed to parameterize a model may be generated using various geospatial data sets, but the geometric information is not necessary for the actual modelling. In applications like this, and in data systems supporting such applications, a catchment can be realized by an identifier, attributes, and topological connections that are not necessarily the same as would be implied by geometric representation of a catchment. That is, while a catchment has a geometric representation that is an area, which would imply it is a topological face, the catchment can have a non-geometric realization that is a topological edge which conveys flow from inflow to outflow. This flexibility, where a realization of a catchment feature does not need to have an explicit geometric representation allows a decoupling of visual and conceptual concerns with the ability to explicitly link data products that would not otherwise be easily related.
+
+=== Catchment hierarchy and network topology
+
+Catchments may be connected in topological networks which provide continuity between catchments, the ability to aggregate catchments, and to trace catchment networks up- or down-stream. Topological connectivity is typically indicated by adjacent polygon edges, nesting of polygons, or through connection of linear features at nodes. However, since geometric realization of hydrography serves many purposes and may not be needed at all, it is not appropriate to rely only on geometry as the basis for topology. Instead, topology can be expressed as relationships between conceptual features of a particular type which may or may not have explicit geometric realizations.
+
+[#figure6]
+.(C1-C5, from left to right): C1, Typical catchments with one inflow and one outflow each; C2, Joined (conjoint) catchments flowing into a single downstream catchment; C3, catchments joining in a waterbody or wetland with no clear network; C4, catchments joining through intermittent or subsurface flows C5, catchments that join through areas of complex or braided channels
+image::../../figs/fig6.png[]
+
+In a network of catchments, morphological detail may be specified in many ways. Inflows are generally conceptual in headwaters, and outflows are often complex where water flows out of a network. As shown in link:#figure6[Figure 6] catchments may connect through simple confluences (C1), water bodies or wetlands (C3), intermittent or subsurface flows (C4) or complex braided streams (C5). Although these cases require different geographic representations, they can be represented using the same catchment topology. Since all these cases can be specified using simple topology, no special treatment is required to handle the variation of flow processes.
+
+==== Hierarchy of catchments
+
+Any catchment may be nested or aggregated in a larger containing catchment or split into multiple sub units forming a hierarchy of catchments. Two types of catchment hierarchy are supported in HY_Features: basic nesting and dendritic aggregation: 1) Basic nesting allows any catchment to have a reference to a containing catchment (link:#figure7[Figure 7]). This allows collections of sub-catchments to be grouped into larger units, but does not define any particular interconnections between these sub-catchments. 2) Dendritic hierarchies are collections of catchments with simple topological relationships that allow determination of contribution of flow to downstream catchments. To reflect the organization of catchments in dendritic networks, a special dendritic catchment is defined that permanently contributes exorheic flow to a receiving catchment (link:#figure8[Figure 8]), and an interior catchment of endorheic flow that contributes temporarily to a receiving catchment.
+
+[#figure7]
+.Catchment hierarchy – A catchment (dark grey), may be nested within a containing catchment which is another catchment (light grey)
+image::../../figs/fig7.png[]
+
+[#figure8]
+.Catchment hierarchy – A catchment (C1, C2, or C3) may be part of a simple dendritic network of catchments which is also a catchment.
+image::../../figs/fig8.png[]
+
+==== Topological network of catchments
+
+Given the idea that a non-geospatial schematic representation of a feature can show its connection in a topological network, a catchment can be thought of as a hydrologic unit whose terrain and morphology results in a topological link between inflow and outflow. The red line in link:#figure9[Figure 9] illustrates how a single catchment, represented by a boundary, an area, a stream network, and a main flowline, could also be represented using a single line that is not geospatially representative but is a valid schematic representation of the connection between inflow and outflow.
+
+[#figure9]
+.A catchment area (grey) and a flowpath connecting inflow to outflow (red) depicting a definable unit where hydrological processes take place.
+image::../../figs/fig9.png[]
+
+[#figure10]
+.Catchments contributing to an identified outflow node. Note that some catchments contribute to a common outflow node.
+image::../../figs/fig10.png[]
+
+[#figure11]
+.Catchments receive inflow via an identified inflow node. Note that nodes are not necessarily geographic features, but are rather nodes in a graph representation of the river network.
+image::../../figs/fig11.png[]
+
+The catchment C1, shown in link:#figure10[Figure 10], contributes flow to outflow node n1. Node n2, shown in link:#figure11[Figure 11], contributes inflow to catchment C1. Networks of catchments can be constructed using this construct and the idea that two or more catchments that flow into the same downstream catchment, first flow to the same outflow node which is the inflow node of the receiving downstream catchment. In a network of dendritic catchments, outflow nodes on the network serve only one receiving catchment.
+
+Nodes may seem to stand alone as points of interaction in the network, but In reality, they are (potentially complex) watershed outlets, denoted as outfall features. Whether an outfall (node) is referred to as an inflow or outflow node is always in reference to a particular catchment. This means that a node serves as the outflow node of some contributing catchment(s) and the inflow node of some receiving catchment(s). In this standard, the inflow and outflow role names of the conceptual outfall (node) are used to unambiguously describe the node's role with respect to a catchment.
+
+In a dendritic network, the outflow node that one or more dendritic catchments flow to (which is not necessarily a single geometric point) must contribute to one and only one receiving catchment, unless it is a terminal catchment. Given that the dendritic catchment is defined as a special type of the more general catchment concept, it inherits the general nesting as defined for the catchment as shown in link:#figure7[Figure 7].
+
+Being topological nodes, inflow and outflow nodes have no explicit positions but are potentially complex watershed outlets. In fact, a node may be represented by a complex geometry with multiple parts. This is important in the case of a catchment that contains a broad river bottom with complex braided channels and two or more primary inflows. There may be no clear way to identify an inflow location, but from a topological perspective each contributing catchment can be said to contribute to the same node and that diffused inflow can be said to contribute to the catchment in question (#figure12[Figure 12]). Note that in this case, the complexity required to support geospatially accurate linear referencing may be lost in the interest of easy network navigation capabilities.
+
+It is worth noting that non-dendritic networks are often represented as a dendritic catchment network by introducing joint catchments that contain the non-dendritic parts. #figure12[Figure 12] shows an example of a network with a non-dendritic topology, where it is not possible to determine to what extent flow from catchment F contributes to catchments E, B or C (C7). C8 shows the same topology where catchments E, B, and C have been aggregated and the nodes N2 and N3 are treated as a single virtual inflow node, so that all the flow from catchments D and F accumulate in the resulting catchment X. Using this encapsulation approach, catchments can be represented using a simple tree structure where an upstream-downstream relation can be built without the need for complex hydrography between inflow and outflow nodes.
+
+[#figure12]
+.Encapsulation of non-dendritic stream network topology. The left figure shows a case where it is not possible to determine to what extent flow from catchment F contributes to catchments E, B or C. The right figure shows how catchments E, B, and C can be aggregated so nodes N2 and N3 are treated as a single virtual inflow node, so that all the flow from catchments D and F accumulate in the resulting catchment X.
+image::../../figs/fig12.png[]
+
+=== River reference system
+
+
+
