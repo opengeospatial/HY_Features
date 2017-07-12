@@ -43,3 +43,22 @@ OGC: OGC 12-019, OGC City Geography Markup Language (CityGML) Encoding Standard 
 
 OGC: OGC 14-005r3, OGC IndoorGML (2014)
 ====
+
+ISO 19101:2002, Geographic Information—Reference Model 
+
+ISO/TS 19103:2005, Geographic Information — Conceptual schema language 
+
+ISO 19107:2003, Geographic Information — Spatial schema 
+
+ISO 19108:2006, Geographic Information — Temporal schema 
+
+ISO 19109:2006, Geographic Information — Rules for application schemas 
+
+ISO 19111:2007, Geographic Information — Referencing by coordinates 
+
+ISO 19115:2012, Geographic Information — Metadata – Fundamentals  
+
+ISO 19148:2012, Geographic Information — Linear referencing
+
+ISO 19156:2011, Geographic Information — Observations and Measurements
+

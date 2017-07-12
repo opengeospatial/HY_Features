@@ -3,5 +3,92 @@ This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r8], which 
 
 For the purposes of this document, the following additional terms and definitions apply.
 
-=== *term name*
-text of the definition
+=== *application schema*
+Conceptual schema for data required by one or more applications [ISO 19101]
+
+=== *catchment*
+A physiographic unit where hydrologic processes take place. This class denotes a physiographic unit, which is defined by a hydrologically determined outlet to which all waters flow. While a catchment exists, it may or may not be clearly identified for repeated study.
+
+[NOTE]
+This approach considers the catchment concept to be the basic unit of study in hydrology, water resources management, and environmental reporting. The approach is meant to be holistic, referring to the continuous interaction of surface and subsurface waters within a catchment, even if a particular representation of the catchment refers to only surface or subsurface aspects of the catchment. Special subtypes such as drainage basin and groundwater basin may be defined with a particular application.
+
+The synonym use of the terms catchment and catchment area as documented in the WMO-UNESCO International Glossary of Hydrology (which is the key reference for the definitions in the Hydrologic Features (HY_Features) model) does not clearly distinguish between the catchment concept and its geometric representations such as catchment area, nor between catchment and its possible specializations like drainage basin and groundwater basin.
+
+The essential logical separation of concerns between a common concept and its representation (interpretable data) is dealt with by defining separate features for the catchment and its representation and may be understood as a refinement of the complex, ambiguous definition given in the glossary. See also clause 5.4 of this standard on the use of WMO terminology.
+
+=== *data*
+Documented value of some characteristics of a real-world phenomenon.
+
+=== *data set*
+Data compiled and arranged into a set.
+
+=== *data product*
+Data set compiled for a specific purpose, e.g. for global dissemination using Web services.
+
+=== *domain feature*
+Feature of a type defined within a particular application domain [ISO 19156].
+
+=== *feature*
+Abstraction of real-world phenomena [ISO 19101].
+
+=== *hydrographic network*
+Aggregate of rivers and other permanent or temporary watercourses, and also lakes and reservoirs [WMO, 2016].
+
+[NOTE]
+Not to be confused with the network of hydrological stations and observing posts.
+
+=== *hydrography*
+Science dealing with the description and measurement of open bodies of water [WMO, 2016]. 
+
+[NOTE] 
+In this context, hydrography refers to the description of surface water bodies. Its measurement in terms of surveying, e.g. for navigational purposes, is not in the concern of the HY_Features model. *[is this still true? - thinking on water edge]*
+
+=== *hydrologic complex*
+Collection of separate hydrologic features forming a closed, hydrologically determined system where the union of catchment(s) and a common outlet (conceptualized as an outfall) is realized by a ‘complex’ of hydrologic features. This concept is rooted in the idea of topological closure of catchment and outfall such that a realization of the logical catchment is always of higher topological dimension than the realization of the corresponding outfall. For example, a linear flowpath realizing a catchment may be understood as an edge between inflow and outflow nodes; the areal realization of a catchment as a face bounded by linear inflow and outflow.
+
+[NOTE] 
+Hydrologic determination means that any catchment has a common outlet for its runoff. Any place to which water may flow can be associated with a corresponding catchment, even if catchment and outfall may be  unknown or un represented in a particular application. 
+
+=== *hydrologic feature*
+Feature (abstraction of a real-world phenomenon) of a type defined in the hydrology domain. A feature whose identity needs to be maintained and tracked through a processing chain from measurement to distribution of hydrologic information.
+
+=== *hydrologic realization*
+Hydrologic feature that realizes a hydrologic concept within the hydrologic complex.
+
+=== *hydrology*
+Science that deals with the waters above and below the land surfaces of the Earth, their occurrence, circulation and distribution, both in time and space, their biological, chemical and physical properties, their reaction with their environment, including their relation to living beings [WMO, 2016].
+
+=== *hydrometric feature*
+Feature (abstraction of a real-world phenomenon) of a type defined in the process of measurement and analysis of water including methods, techniques and instrumentation used in hydrology (hydrometry) [WMO, 2016]. 
+
+[NOTE]
+The hydrometric feature refers to a physical structure intended to observe properties of a hydrologic feature. Used to sample a hydrologic feature, a hydrometric feature may be considered a sampling feature of observation. A sampling feature is described in general in ISO 19156: Observation and Measurement, the special monitoring point of hydrologic observation is described in the OGC WaterML 2.0: Part 1- Timeseries standard [4].
+
+=== *hydrometry*
+Science of the measurement and analysis of water including methods, techniques and instrumentation used in hydrology [WMO, 2016].
+
+=== *mapping*
+Establishing a semantic relationship between particular implementations of a common concept and the realized normative concept using a formalism that specifies how elements from a source model may be transformed to a target model.
+
+=== *named feature*
+Feature identified by a name.
+
+[NOTE]
+Hydrologic features and their real-world representations have names within common experience, but may have different names in their cultural, political and historical contexts.
+
+=== *representation*
+Any processable data, data set, or data product, which can be used in the place of an existing feature concept.
+
+=== *river positioning system*
+Linear system used to reference indirect positions along a watercourse.
+
+=== *storage (of water)*
+Impounding of water in surface or underground reservoirs, for future use [WMO, 2016]. 
+
+[NOTE]
+Storage refers to a water body in terms of a usable water resource. The management of the reservoir as human action with the objective to efficient and sustainable use the resource, is not in the scope of the conceptual model. Yet, often an indication is required whether a water body is used for storage.
+
+=== *water body*
+Mass of water distinct from other masses of water [WMO, 2016]. 
+
+
