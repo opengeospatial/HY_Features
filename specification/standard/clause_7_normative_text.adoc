@@ -52,6 +52,46 @@ include::requirements/req02.adoc[]
 
 Implementations of HY_Features SHALL either use common identifiers for instances of Feature Types mapped to the same underlying HY_Features Feature Type, OR provide a mechanism to match identifiers from different identification schemes.
 
+=== The Hydro Feature application schema
+
+The Hydro Feature schema provides the core concepts of a named hydrologic feature, of a catchment and its multiple realizations, and of a river positioning using a linear referencing. Hydrologic features are identified by hydrologically significant characteristics and feature topology according to hydrologic rules. Providing a standard terminology for the typical relationships between hydrologic features allows the hydrosphere to be expressed in a consistent way across multiple data products, regardless of various spatial or temporal representations. 
+
+Hydrologic features are usually named in cross-jurisdictional and multi-lingual contexts. The Hydro Feature schema provides a concept for a named hydrologic feature which allows the use of multiple names and identifiers without the need for a formal naming model. The named hydrologic feature is further described using various domain-specific feature types, which specify properties of the specializations to define one or more aspects of the hydrology phenomenon (link:#figure17[Figure 17]).
+
+The Hydro Feature schema provides the core model of catchments and their multiple realizations. The catchment model denotes the hydrologic definition of a catchment by its outlet, conceptualized as HY_Outfall, and the interaction of catchments through such defined outfalls. This allows division of the hydrosphere into a logically connected network of catchments. Depending on the perspective of a particular study, the logical catchment can be realized in multiple ways by geometric or topologic features. The Hydro Feature schema provides a model to place a catchment's outfall relative to a feature which realizes the logical outfall. The river positioning model provides a river reference system which allows linear referencing of an outfall (typically a monitoring location) using the linear realization of a catchment that corresponds to another outfall (typically a confluence).
+
+[#figure17]
+.Hydrologic features describing separate aspects of the hydrology phenomenon
+image::figures/fig17.png[]
+
+The definitions applied in the Hydro Feature schema are rooted in the definitions given in the WMO Glossary of Hydrology regardless of their application context in respect to the Earth's surface. For the purpose of testing the applicability of the conceptual model in the context of surface water hydrology, the definitions in this standard refer to surface water hydrology. A conceptual model capturing the specifics of features associated with the groundwater domain is developed with reference to the OGC WaterML 2: Part 4 – GroundwaterML2 standard [6].
+
+The Hydro Feature schema contains the leaf packages: NamedFeature, HydroComplex, and RiverPositioningSystem. link:#figure18[Figure 18] shows the external dependencies.
+
+[#figure18]
+.Hydro Feature – external dependencies
+image::figures/fig18.png[]
+
+include::requirements/req03.adoc[]
+
+==== The Named Feature model
+
+The Named Feature model (link:#figure19[Figure 19]) denotes the abstraction of the hydrology phenomenon as a named hydrologic feature. It provides an approach to identify a named hydrologic feature in cross-jurisdiction and multi-lingual contexts by considering the cultural, political and historical aspects of names assigned to hydrologic features in common usage. 
+
+[#figure19]
+.Named Feature (UML class diagram, https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/namedFeature/hydrofeature[/req/hy_hydrofeature/namedFeature/hydrofeature])
+image::figures/fig19.png[]
+
+The HY_HydroFeature feature type is further specialized by separate feature types. Each specialization inherits the properties from generalization; HY_HydroFeature type has one association: _name_.
+
+The *name* associates a name given to the hydrologic feature in cultural, political or historical context. If required, this association shall be used where names are assigned to a feature instance in cross-jurisdictional and multi-lingual contexts, that may occur with trans-boundary features. 
+
+include::requirements/req04.adoc[]
+
+The HY_HydroFeatureName feature type provides an abstract pattern to handle cultural, political and historical variability of names. This the assignment of a referencable name for all or part of a hydrologic feature without necessarily have a formal model for naming. HY_HydroFeatureName has five attributes: _name_, _namesPart_, _preferredBy_, _usage_ and _variantSpelling_. If required, an implementation shall use this type to describe the usage of multiple names. The usage type may be identified using the HY_NameUsage code list described in link:#anex6_4[Annex B.4].
+
+include::requirements/req05.adoc[]
+
 
 
 === Template

@@ -1,0 +1,20 @@
+[cols="1,4",width="90%"]
+|===
+2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
+2+|https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/namedFeature/hydrofeaturename[/req/hy_hydrofeature/namedFeature/hydrofeaturename] {set:cellbgcolor:#FFFFFF}
+|Target type |Implementation Schema
+|Name |HY_HydroFeatureName
+|Dependency |https://inspire-twg.jrc.it/svn/iso/[/iso/19103/]
+|Dependency |https://inspire-twg.jrc.it/svn/iso/[/iso/19115/]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/namedFeature/nameusage[/req/hy_hydrofeature/namedFeature/nameusage]
+|*Requirement 1* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/namedFeature/hydrofeature.name[/req/hy_hydrofeature/namedFeature/hydrofeature.name]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 2* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/namedFeature/hydrofeature.namespart[/req/hy_hydrofeature/namedFeature/hydrofeature.namespart]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 3* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/namedFeature/hydrofeature.preferredby[/req/hy_hydrofeature/namedFeature/hydrofeature.preferredBy]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 4* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/namedFeature/hydrofeature.usage[/req/hy_hydrofeature/namedFeature/hydrofeature.usage]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 5* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/namedFeature/hydrofeature.variantspelling[/req/hy_hydrofeature/namedFeature/hydrofeature.variantspelling]
+{set:cellbgcolor:#FFFFFF}
+|===
