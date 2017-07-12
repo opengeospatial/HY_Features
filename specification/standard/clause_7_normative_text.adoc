@@ -92,7 +92,53 @@ The HY_HydroFeatureName feature type provides an abstract pattern to handle cult
 
 include::requirements/req05.adoc[]
 
+==== The Hydro Complex model
 
+The Hydro Complex model conceptualizes the hydrologic definition of a catchment through an 'outfall' feature with the role of getting flow from a contributing catchment, or providing inflow to a receiving catchment (link:#figure20[Figure 20] and link:#figure21[Figure 21]). Conceptually, each catchment has an outfall, and any outfall has a corresponding catchment, even if catchment and/or outfall may not be present in a particular application. A catchment interacts with upper and lower catchments via associated outfalls, and ultimately contributes flow to the outfall of a containing catchment. The catchment should be understood as the logical link between two outfalls.
+
+The Hydro Complex model implies a collection of hydrologic features that form a hydrologically closed system. The union of a catchment, its inflow and outflow (conceptualized as outfalls) is realized by typical hydrologic features to form a single hydrologic complex. A topological realization of the logical catchment is always of higher topological dimension than the realization of the corresponding outfall in terms of a topological boundary. For example, a linear flowpath realizing a catchment may be understood as an edge between inflow and outflow nodes; the areal realization of a catchment as a face bounded by linear inflow and outflow.
+
+The Hydro Complex model allows the realization of a logical outfall to be any arbitrary location with various realizations of its own. Such a 'real' outfall provides an identifiable reference feature to which alternative catchment realizations may refer. This very general outfall feature supports establishment of topological relationships between hydrographic features, or between hydrographic and hydrometric features. The Hydro Complex model also allows for catchments to be recognized through reference to an outfall even if stream networks, catchment areas or watersheds are not available. It is intended that hydrological reporting applications may use this model without the full complexity and detail of scientific catchment models.
+
+===== Catchment
+
+The HY_Catchment feature type represents a hydrologically determined feature through association an outfall, and the logical network of catchments that form a connected network of smaller catchments and outfalls within the catchment. Each HY_Catchment may provide association between its many realizations within a hydrologically determined hydrologic complex. These realizations include both geometric and topological realizations such as an edge 'bounded' by inflow and outflow nodes. HY_Catchment is an abstract class and may be further specialized with respect to catchment interaction.
+
+[#figure20]
+.Catchment (UML class diagram, https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment[/req/hy_hydrofeature/hydrocomplex/catchment])
+image::figures/fig20.png[]
+
+The HY_Catchment type (link:#figure20[Figure 20]) specializes the general HY_HydroFeature class. Through generalization, HY_Catchment inherits the name property, and carries the code attribute and the associations: _outflow_, _inflow_, _containingCatchment_, _containedCatchment_, _conjointCatchment_, _upperCatchment_, _lowerCatchment_, _realisation_.
+
+The *code* attribute may be used to assign a unique identifier to the catchment in given context. If required, the code attribute shall be implemented using a controlled classification or coding system. Example: WMO Basin Codes. 
+
+The *outflow* and *inflow* associations describe the outfall in terms of outflow or inflow to or from the corresponding catchment. Assuming a dendritic network of catchments, the outflow of a contributing catchment coincides with the inflow to a receiving catchment. This allows description of upstream-downstream relations. If required, this association shall be used to identify the place to which flow is contributed, or where flow is received from.
+
+[#figure21]
+.Catchment and outfall (UML class diagram, https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment.inflow[/req/hy_hydrofeature/hydrocomplex/catchment.inflow] , https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment.outflow[/req/hy_hydrofeature/hydrocomplex/catchment.outflow])
+image::figures/fig21.png[]
+
+The *containingCatchment* and *containedCatchment* associations connect the nesting of catchments in a simple “is-in” containment hierarchy as typically used for high-order organization of management and reporting units. If required, this association shall be used to identify a nesting catchment or the catchments nested therein.
+
+[#figure22]
+.Containing / contained catchment (UML class diagram, https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment.containingcatchment[/req/hy_hydrofeature/hydrocomplex/catchment.containingcatchment] , https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment.containedcatchment[/req/hy_hydrofeature/hydrocomplex/catchment.containedcatchment])
+image::figures/fig22.png[]
+
+The *conjointCatchment* association describes the interaction of a catchment with another catchment crossing an internal boundary line. This line may be a divide separating adjacent catchments, or a diffuse divide between non-delineated sub-catchments within an encompassing catchment, or a fictive line between distant catchments. If required, this association shall be used to identify a catchment contributing with others to a 'joined' outfall. Assuming a dendritic network of catchments, where each catchment is determined by its single outflow, this association may be used to summarize diffuse inflow into an encompassing catchment, as required to describe inflow to headwater catchments.
+
+[#figure23]
+.Conjoint catchment (UML class diagram, https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment.conjointcatchment[/req/hy_hydrofeature/hydrocomplex/catchment.conjointcatchment])
+image::figures/fig23.png[]
+
+The *upperCatchment* and *lowerCatchment* associations connect the catchment to the adjacent catchment above or below. This allows the description of connected catchments without knowing their inflow or outflow outfalls. If required, this association shall be used to trace the catchment network in upstream direction from mouth to source, or downstream from source to mouth.
+
+[#figure24]
+.Upper / lower catchment (UML class diagram, https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment.uppercatchment[/req/hy_hydrofeature/hydrocomplex/catchment.uppercatchment], https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment.lowercatchment[/req/hy_hydrofeature/hydrocomplex/catchment.lowercatchment])
+image::figures/fig24.png[]
+
+The *realisation* association relates the catchment to a feature which realizes the logical catchment. This supports linking multiple realizations of the same catchment. If required, this association shall be used identify a particular realization. In case of a topological realization, the realization of the catchment shall be of higher dimension than the realization of the outfall.
+
+include::requirements/req06.adoc[]
 
 === Template
 
