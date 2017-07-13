@@ -1,0 +1,34 @@
+[cols="1,4",width="90%"]
+|===
+2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
+2+|https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrographicnetwork/waterbody[/req/hy_surfacehydro/hydrographicnetwork/waterbody] {set:cellbgcolor:#FFFFFF}
+|Target type |Implementation schema
+|Name |HY_WaterBody
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/namedFeature/hydrofeature[/req/hy_hydrofeature/namedFeature/hydrofeature]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/outfallrealisation[/req/hy_hydrofeature/hydrocomplex/outfallrealisation]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/channelnetwork/channel[/req/hy_surfacehydrofeature/channelnetwork/channel]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/channelnetwork/depression[/req/hy_surfacehydrofeature/channelnetwork/depression]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/hydrographicnetwork[/req/hy_surfacehydrofeature/hydrographicnetwork/hydrographicnetwork]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/stratum[/req/hy_surfacehydrofeature/hydrographicnetwork/stratum]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/crosssection[/req/hy_surfacehydrofeature/hydrographicnetwork/crosssection]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/longitudinalsection[/req/hy_surfacehydrofeature/hydrographicnetwork/longitudinalsection]
+|*Requirement 1* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.fixedlandmark[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.fixedlandmark]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 2* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.waterpool[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.waterpool]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 3* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.watercourse[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.watercourse]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 4* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.hydrographicnetwork[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.hydrographicnetwork]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 5* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.upstreamwaterbody[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.upstreamwaterbody]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 6* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.downstreamwaterbody[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.downstreamwaterbody]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 7* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.stratum[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.stratum]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 8* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.streamcrosssection[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.streamcrosssection]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 9* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.streamlongitudinalsection[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody.streamlongitudinalsection]
+{set:cellbgcolor:#FFFFFF}
+|===

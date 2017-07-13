@@ -313,7 +313,9 @@ The *linearElement* association defines the flowpath as the linear shape applied
 
 include::requirements/req18.adoc[]
 
-=== The Surface Hydro Feature application schemaThe Surface Hydro Feature application schema provides common concepts of hydrologic features occurring on the land surface and specifies the core concepts defined in the abstract Hydro Feature application schema. This will enable contextually linked information models to build relationships between multiple realizations of the same catchments. Typical realizations of the catchment concept and logical outfalls can be described in a consistent way using standard terminology for the relationships between surface water features defined in this application schema. 
+=== The Surface Hydro Feature application schema
+
+The Surface Hydro Feature application schema provides common concepts of hydrologic features occurring on the land surface and specifies the core concepts defined in the abstract Hydro Feature application schema. This will enable contextually linked information models to build relationships between multiple realizations of the same catchments. Typical realizations of the catchment concept and logical outfalls can be described in a consistent way using standard terminology for the relationships between surface water features defined in this application schema. 
 
 The Surface Hydro Feature schema conceptualizes the accumulation of water on the land surface in water bodies, each made unique by its origin, size, or movement. With respect to the management and storage of water resources, a concept of water storage is provided and allows any water body type to be considered a managed reservoir.
 
@@ -362,6 +364,114 @@ The HY_Depression feature type specializes the general HY_HydroFeature class. It
 The *standingWater* association relates a body of stagnant water to a containing pool. This allows to establish a relationship to a water body carrying a permanent reference location which realizes the outfall of the catchment realized by the associated water body. If required, this association shall be used to identify the water body contained in the depression.
 
 The *confinedWaterBody* association relates a stratum of the contained water body to the depression. If required, this association shall be used to identify the horizontal layer carrying a permanent reference location which realizes the outfall of the catchment which is realized by the depression.
+
+include::requirements/req20.adoc[]
+
+==== Channel
+
+The HY_Channel feature type specializes the general HY_HydroFeature class with respect to a natural or man-made, open or closed channel through or along which water may flow, or not. A channel is part of the network of channels and depressions which form the connecting system for the hydrographic network; a channel may have vertical sections at right angles to the main (average) direction of flow or along its centreline. 
+
+HY_Channel associates the channelNetwork in which it participates. It carries the associations: stream, bedProfileTransversal and bedProfileLongitudinal. HY_Channel inherits from generalization the confinedWaterBody association and the constraints depression edge and outflow at benchmark. An outflow at profile constraint is defined such that whenever an outfall is realized at a bed profile, the outflow of the catchment realized by the channel network is of type HY_OutfallRealisation.
+
+The *stream* association relates to the channel a water body periodically or continuously flowing in the channel. This allows to establish a relationship to a water body carrying a permanent reference location which realizes the outfall of the catchment realized by the water body. If required, this association shall be used to identify the water body contained in the channel.
+
+The *bedProfileTransversal* and *bedProfileLongitudinal* associations relate to the channel a transversal or longitudinal vertical shape. If required, this association shall be used to identify the vertical section carrying a permanent reference location which realizes the outfall of the catchment which is realized by the channel.
+
+include::requirements/req21.adoc[]
+
+==== The Hydrographic Network model
+
+The Hydrographic Network model defines a logical network of water bodies which in its entirety realizes a logical catchment (link:#figure34[Figure 34]), usually as a network of linear flowpaths and/or water edges realizing catchments connected to each other within a containing catchment that is realized by the entire network. This allows to represent the network of ‘blue lines’, even if logically connected features may or may not be connected at the representation level.
+
+[#figure35]
+.Hydrographic Network realizing the catchment (UML class diagram, https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrographicnetwork/hydrographicnetwork[/req/hy_surfacehydro/hydrographicnetwork/hydrographicnetwork])
+image::figures/fig35.png[]
+
+The hydrographic network is defined independent of the channel network. This conceptual separation references to the specific concerns of hydrology studying the occurrence, accumulation, and circulation of water. It and allows to realize the logical catchment as a network of moving or standing water bodies, regardless of the channel wherein it may move, or not.
+
+A single water body realizes the logical catchment either as part of the hydrographic network (link:#figure35[Figure 35]), or via a reference location which realizes the conceptual outfall of the catchment realized by the water body (link:#figure36[Figure 36]). For example, a fixed landmark, or a point at an associated cross or longitudinal section is considered to realize the outflow of the catchment which is realized by the channel expressed as a flowpath.
+
+[#figure36]
+.Water Body realizing the outfall (UML class diagram, https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrographicnetwork/waterbody[/req/hy_surfacehydro/hydrographicnetwork/waterbody])
+image::figures/fig36.png[]
+
+===== Hydrographic Network
+
+The HY_HydrographicNetwork feature type specializes the HY_HydroNetwork realization defined in the core model, specifically as aggregate of permanent or temporary bodies of water standing in depressions or moving in channels. If the realized catchment is connected with other catchments via outfall, the hydrographic network is considered connected to the network realizing these catchments. This allows to represent the network, even if logically connected features may or may not be connected at the representation level. If required, an application focused on surface water bodies contained in channels or depressions may use the defined relationships s to describe the realization of a catchment by the hydrographic network, or network parts associated with the channel network.HY_HydrographicNetwork inherits from generalization the _realisedCatchment_, _flowpath_ and _waterEdge_, as well as _catchmentBoundary_ and _catchmentArea_ associations, and associates a _networkWaterBody_. A flowline constraint is defined such that whenever the hydrographic network is a network of flowpaths, the network water body is of type HY_Flowpath, and a _watersedge_ constraint such that the network water body is of type HY_WaterEdge whenever the hydrographic network is a network of water edges.
+
+The *networkWaterBody* association relates a surface water body to the hydrographic network. If required, this association shall be used to identify a water body which realizes the logical catchment either separately, or as part of the network.
+
+include::requirements/req22.adoc[]
+
+===== WaterBody
+
+The HY_WaterBody feature type specializes the general HY_HydroFeature class. The water body as part of the hydrographic network, either standing in a water pool, or flowing as stream in a watercourse, which are parts of the channel network. A water body may be segmented in vertical sections at right angles to the main (average) direction of flow or along its centerline, and horizontal strata. Conceptually, each water body, or a stratum, is understood as a reservoir used for storage, regulation or control of water recourses. 
+
+HY_WaterBody inherits from generalization the name property, and the flow line and water edge constraints. It associates the _hydrographicNetwork_ in which it participates, the containing _waterpool_ and watercourse, the vertical _streamCrossSection_, _streamLongitudinalSection_, a horizontal _stratum_, and a reservoir for _storage_ of water. A _stratum edge_ constraint is defined such that whenever the water body is part of the hydrographic network, the confined stratum is of type HY_WaterEdge. An _outflow_ at _section_ and an _outflow at landmark_ constraint are defined such that the outflow of the catchment which is realized by the hydrographic network is of type HY_OutfallRealisation whenever an outfall is realized at a fixed landmark, a cross or longitudinal section.
+
+The *waterpool* association relates to a water body the natural or artificial depression wherein water may stand, incl. large interstices in the ground, such as cave, cavern or a group of these. If required, this association shall be used to identify the pool which continuously or periodically contains standing water.
+
+The *watercourse* association relates to a water body the natural or man-made channel through or along which water may flow, incl. large interstices in the ground, such as cave, cavern or a group of these. If required, this association shall be used to identify the watercourse which continuously or periodically contains moving water.
+
+The *upstreamWaterBody* and *downstreamWaterBody* associations relate to a water body another water body immediately up or downstream. If required, these associations shall be used to identify a water body to trace the hydrographic network without knowing the inflow or outflow of the catchment realized by the water body.
+
+The *fixedLandmark* association relates to the water body permanent reference location. If required, this association shall be used to identify a fixed landmark which realizes the conceptual outfall of the catchment realized by the water body.
+
+The *stratum* association relates a horizontal stratum. If required, this association shall be used to identify a layer of consistent characteristics, or a storage zone of a reservoir, carrying a permanent reference location which realizes the outfall of the catchment which is realized by the water body.
+
+The *streamCrossSection* and *streamLongitudinalSection* associations relate to the water body a vertical section either at right angles to the main (average) direction of flow, or along a centre line. If required, this association shall be used to identify the vertical section carrying a permanent reference location which realizes the outfall of the catchment which is realized by the water body.
+
+The *storage* association associates to the water body a reservoir storing water as a resource for future use. If required, this association shall be used to describe storage characteristics of the water body participating in the hydrographic network.
+
+
+include::requirements/req23.adoc[]
+
+
+===== Water Body Stratum
+
+The HY_WaterBodyStratum feature type describes a horizontal layer in a stratified water body determined by differences in thermal or salinity characteristics or by oxygen or nutrient content, or by virtual storage zones of a reservoir. HY_WaterBodyStratum carries the properties: _stratumType_ and _benchmark_.
+
+The *stratumType* attribute characterizes in general the stratum using a term from a controlled vocabulary. If required, an implementation may use the Scoped Name type defined in the ISO 19103: Conceptual Schema.
+
+The *benchmark* association relates to the water body permanent reference location. If required, this association shall be used to identify a benchmark which realizes the conceptual outfall of the catchment realized by the water body.
+
+include::requirements/req24.adoc[]
+
+===== Cross-Section and Longitudinal Section
+
+The HY_CrossSection and HY_LongitudinalSection feature types conceptualize the segmentation of a water body or a containing channel through vertical sections. Taking into account the conceptual separation of a watercourse, the cross section concept refers to both the cross section of a water body orthogonal to the direction of flow, and to the transversal bed profile of a channel.
+
+Both types of vertical section associate permanent reference locations: _crossSectionPoint_ and _longitudalinalSectionPoint_. If required, this associations shall be used to identify a reference location at a vertical section which realizes the conceptual outfall of the catchment realized by the associated channel or water body.
+
+include::requirements/req25.adoc[]
+
+include::requirements/req26.adoc[]
+
+===== Water-LiquidPhase and Water-SolidPhase
+
+The HY_Water_LiquidPhase and HY_Water_SolidPhase feature types provide simple concepts of the accumulation of water in water bodies. This definition refers to the matter accumulated to a mass of water. In its liquid form water is considered accumulated in water bodies; in its solid phase water may be accumulated after melting, or as a layer of ice or snow on an open water body. The accumulation of water in the atmosphere or below the land surface, e.g. rain, soil moisture or groundwater, is not in scope of this standard, as well as the accumulation of snow and ice in glaciers which is subject of glaciology science. Contextually related information models may use the HY_Water_LiquidPhase and HY_Water_SolidPhase feature types to build relationships to an accumulating water body, and ultimately to the catchment realized either by the water body or by the network of which the water body is part. 
+
+HY_Water_LiquidPhase carries the association _accumulatingWaterBody_; HY_Water_SolidPhase associates two properties: _snowmelt_ and _coveredWaterBody_. If required, these associations shall be used to identify the water body (part of the network) where liquid water as a material is accumulated.
+
+include::requirements/req27.adoc[]
+
+include::requirements/req28.adoc[]
+
+==== The Surface Water Body types
+
+The Surface Water model defines typical specializations of a water body on the land surface. Being a specialization of the HY_WaterBody class each subtypes inherits the _stratum_, _waterpool_, _watercourse_, _upstreamWaterBody_, _downstreamWaterBody_, _fixedLandmark_, _streamCrossSection_ and _streamLongitudinalSection_ properties. From the general HY_HydroFeature class the special water bodies inherit the name property, which allows to handle names given to them in cross-jurisdiction and multi-lingual contexts. Each specialization is understood to be part of the hydrographic network. In other contexts other specializations, or a typical segmentation may exist, that not conforms to the types defined in this standard.  
+
+The HY_River feature type defines the existence of body of surface water, participating in a hydrographic network, special due to its property to permanently or temporarily flow.
+
+The HY_Canal feature type defines the existence of body of surface water, participating in a hydrographic network, special due to its artificial origin (man-made).
+
+The HY_Lake feature type defines the existence of body of surface water, participating in a hydrographic network, special due to its considerable size. 
+
+The HY_Impoundment feature type defines the existence of body of surface water, participating in a hydrographic network, special due to be formed by collecting water, as by a dam. 
+
+The HY_Lagoon feature type defines the existence of body of surface water, participating in a hydrographic network, special due to its shallow depth and interaction with the open sea.
+
+The HY_Estuary feature type defines the existence of body of surface water, participating in a hydrographic network, special due to branching and its interaction with the open sea.
 
 
 === Template
