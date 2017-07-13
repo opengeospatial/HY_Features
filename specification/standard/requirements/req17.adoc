@@ -1,0 +1,19 @@
+[cols="1,4",width="90%"]
+|===
+2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
+2+|https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/positioning/indirectposition[/req/hy_hydrofeature/positioning/indirectposition] {set:cellbgcolor:#FFFFFF}
+|Target type |Implementation schema
+|Name |HY_IndirectPosition
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/outfallrealisation[/req/hy_hydrofeature/hydrocomplex/outfallrealisation]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/positioning/distancetorefpoint[/req/hy_hydrofeature/positioning/distancetorefpoint]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/positioning/relativeposition[/req/hy_hydrofeature/positioning/relativeposition]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/positioning/riverreferencesystem[/req/hy_hydrofeature/positioning/riverreferencesystem]
+|*Requirement 1* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/positioning/indirectposition.absolut[/req/hy_hydrofeature/positioning/indirectposition.absolut]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 2* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/positioning/indirectposition.relative[/req/hy_hydrofeature/positioning/indirectposition.relative]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 3* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/positioning/indirectposition.referencelocation[/req/hy_hydrofeature/positioning/indirectposition.referencelocation]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 4* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/positioning/indirectposition.riverreferencesystem[/req/hy_hydrofeature/positioning/indirectposition.riverreferencesystem]
+{set:cellbgcolor:#FFFFFF}
+|===
