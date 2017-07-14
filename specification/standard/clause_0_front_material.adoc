@@ -1,30 +1,44 @@
 [big]*i.     Abstract*
 
-<Insert Abstract Text here>
+The OGC Surface Hydrology Features (HY_Features) implementation standard defines a standard information model for the identification of surface hydrologic features independent of geometric representation and scale. The conceptual model describes hydrologic features by defining the fundamental relationships among major components of the hydrosphere. This includes relationships such as the hierarchy of catchments, the segmentation of watercourses, and the topological connectivity of hydrologic features such as watersheds and water bodies. 
+The standard is based on the concept that a given hydrologic feature may have multiple representations. This supports referencing the same feature(s) in different information systems or products and assists the organization and cataloging of observations, model results, or other studies of a feature. The ability to represent the same watershed, river, or other hydrologic feature in several ways is critical to aggregation of cross-referenced features into integrated datasets and data products on global, regional, or basin scales.Hydrologic feature types are defined using the OGC General Feature Model (ISO 19109:2006) with reference to definitions from the International Glossary for Hydrology. The conceptual model is expressed in the Geographic Information Conceptual Schema Language (ISO 19103:2005) using the Unified Modeling Language (UML).
 
 [big]*ii.    Keywords*
 
 The following are keywords to be used by search engines and document catalogues.
 
-ogcdoc, OGC document,  <tags separated by commas>
+ogcdoc, OGC document, hydrology, feature, identification, conceptual model, UML, implementation standard.
 
 [big]*iii.   Preface*
 
-[NOTE]
-====
-Insert Preface Text here. Give OGC specific commentary: describe the technical content, reason for document, history of the document and precursors, and plans for future work. >
-Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
+This standard defines the HY_Features common hydrologic feature model for the identification of hydrologic features. It is intended to be used to document and share information about the objects of study and reporting in Hydrology in many applications. This standard was originally commissioned to link hydrologic information across the scientific and technical programs of the World Meteorological Organization (WMO), and to assist the WMO Members to discover, access and use hydrologic data from different sources.
+This standard has been designed to support the need for governance and guidance by national and international authorities. Aspects of the standard that support this end are; 1) its canonical form, 2) its implementation neutrality, 3) conformity to internationally recognized standards of geographic information, and its use of semantics inferred from terminology endorsed by the WMO and the UN Educational, Scientific and Cultural Organization (UNESCO).
+Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
+_Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation._
 
-Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
-====
 [big]*iv.    Submitting organizations*
 
 The following organizations submitted this Document to the Open Geospatial Consortium (OGC):
 
-Organization name(s)
+* U.S. Geological Survey (USGS), USA* Federal Institute of Hydrology (BfG) , Germany* CSIRO Land and Water, Australia* Bureau of Meteorology, Australia * Metalinkage, Australia* BRGM, France* University of Texas at Austin, USA* Eurecat, Spain* INCLAM S. A., Spain* 52°North, Germany
 
 [big]*v.     Submitters*
 
 All questions regarding this submission should be directed to the editor or the submitters:
 
-Name  Affiliation
+[cols=“1,1”]
+|===
+|*Name* |*Affiliation*
+|David Blodgett | U.S. Geological Survey
+|Irina Dornblut| Federal Institute of Hydrology (BfG)
+|Robert A. Atkinson | Metalinkage
+|Joshua Liebermann|Harvard University
+|Darren Smith|Australian Bureau of Meteorology
+|Bruce Simons|CSIRO Land and Water
+|David Arctur|University of Texas at Austin
+|===
+
+[big]*v.  Changes to the OGC® Abstract Specification*
+
+This standard requires no changes to the OpenGIS ® Abstract Specification.
+
