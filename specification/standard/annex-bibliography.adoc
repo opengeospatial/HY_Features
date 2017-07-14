@@ -23,7 +23,7 @@
 [[WMO2012]]
 [8] Guide to Hydrological Practices. Volume I: Hydrology – From Measurement to Hydrological Information. World Meteorological Organization (ed.). WMO (Series), no168. WMO , Geneva  (2012), http://www.whycos.org/chy/guide/168_Vol_I_en.pdf.
 
-	[[WMO2016]][9] International Glossary of Hydrology / Glossaire International d'Hydrologie. World Meteorological Organization, United Nations Educational, Scientific and Cultural Organization (eds.). WMO (Series), no385. WMO, Geneva (2016). ISBN 978-92-63-03385-8. ISBN 978-92-3-001154-3.
+[[WMO2016]][9] International Glossary of Hydrology / Glossaire International d'Hydrologie. World Meteorological Organization, United Nations Educational, Scientific and Cultural Organization (eds.). WMO (Series), no385. WMO, Geneva (2016). ISBN 978-92-63-03385-8. ISBN 978-92-3-001154-3.
 
 [[MCKAY2012]][10] McKay, L., Bondelid, T., Dewald, T., Johnston, J., Moore, R., and Rea, A.: NHDPlus Version 2: User Guide, Horizon Systems (2012), ftp://ftp.horizon-systems.com/nhdplus/NHDPlusV21/Documentation/NHDPlusV2_User_Guide.pdf
 

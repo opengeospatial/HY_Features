@@ -1,8 +1,5 @@
 == Scope
-[NOTE]
-====
-Insert Scope text here. Give the subject of the document and the aspects of that scope covered by the document.
-====
+
 This OGC Implementation Standard defines a common feature model for the identification and description of surface hydrologic features using established models and patterns in use in the Hydrology domain and endorsed by WMO and UNESCO such as those documented in the "International Glossary of Hydrology". +
 
 Part 1 (this document) introduces the conceptual model itself. The normative model is a machine-readable UML artifact published by the OGC in conjunction with this document at: #[insert URL here]#. +

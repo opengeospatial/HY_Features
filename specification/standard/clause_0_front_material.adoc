@@ -20,7 +20,25 @@ This standard defines the HY_Features common hydrologic feature model for the id
 
 The following organizations submitted this Document to the Open Geospatial Consortium (OGC):
 
-* U.S. Geological Survey (USGS), USA* Federal Institute of Hydrology (BfG) , Germany* CSIRO Land and Water, Australia* Bureau of Meteorology, Australia * Metalinkage, Australia* BRGM, France* University of Texas at Austin, USA* Eurecat, Spain* INCLAM S. A., Spain* 52°North, Germany
+* U.S. Geological Survey (USGS), USA 
+
+* Federal Institute of Hydrology (BfG), Germany 
+
+* CSIRO Land and Water, Australia 
+
+* Bureau of Meteorology, Australia 
+
+* Metalinkage, Australia 
+
+* BRGM, France 
+
+* University of Texas at Austin, USA 
+
+* Eurecat, Spain 
+
+* INCLAM S. A., Spain 
+
+* 52°North, Germany 
 
 [big]*v.     Submitters*
 
