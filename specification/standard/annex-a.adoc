@@ -5,15 +5,52 @@
 [NOTE]
 Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)
 
-=== Conformance Class A
+[#annexA_1]
+=== Introduction
 
-==== Requirement 1
+These test suites ascertain the compliance of the conformance targets for the HY_Features specification with the specification itself. Each instance of hydrologic feature data is encoded according to a specific interchange schema, so the role of conformance with the abstract specification is that such an implementation schema can be related to the common definitions of HY_Features.
+An implementation schema conforming to HY_Features SHALL provide a formal mapping from one or more Feature Types present in the implementation schema to Feature Types defined in this standard specification, including all mandatory properties defined by the realized HY_Features concept. Default values to be assumed must be specified in this mapping.
+
+[#annexA_2]
+=== Conformance Class: HY_HydroFeature application schema equivalence
+
 [cols=">20h,<80d",width="100%"]
 |===
-|Test id: |/conf/conf-class-a/req-name-1
-|Requirement: |/req/req-class-a/req-name-1
-|Test purpose: | Verify that...
-|Test method: | Inspect...
+|Conformance Class|https://github.com/opengeospatial/HY_Features/blob/master/spec/hydrology/hydrofeature/1.0/conf/hy_hydrofeature[/spec/hydrology/hydrofeature/1.0/conf/hy_ hydrofeature]
+|Test id: |https://github.com/opengeospatial/HY_Features/blob/master/conf/uml_hydrofeature/namedfeature/[/conf/uml_hydrofeature/namedfeature/*]
+|Test id: |https://github.com/opengeospatial/HY_Features/blob/master/conf/uml_hydrofeature/hydrocomplex/[/conf/uml_hydrofeature/hydrocomplex/*]
+|Test id: |https://conf/uml_hydrofeature/positioning/[/conf/uml_hydrofeature/positioning/*]
+|Requirement: |All relevant elements of a data exchange schema including hydrologic features are mapped to equivalent HY_Features elements.
+|Test purpose: | All relevant elements of a data exchange schema including hydrologic features are mapped to equivalent HY_Features elements.
+|Test method: | Inspect the mapping between the data exchange schema and the HY_Features model to determine that all relevant schema elements are mapped to HY_Features equivalents.
+|Test Type| Capability
 |===
 
-==== Requirement 2
+[#annexA_3]
+=== Conformance Class: HY_SurfaceHydroFeature application schema equivalence
+
+[cols=">20h,<80d",width="100%"]
+|===
+|Conformance Class|https://github.com/opengeospatial/HY_Features/blob/master/ spec/hydrology/surfacehydrofeature/1.0/conf/hy_surfacehydrofeature[/spec/hydrology/surfacehydrofeature/1.0/conf/hy_ surfacehydrofeature]
+|Test id: |https://github.com/opengeospatial/HY_Features/blob/master/conf/uml_surfacehydrofeature/channelnetwork/[/conf/uml_surfacehydrofeature/channelnetwork/*]
+|Test id: |https://github.com/opengeospatial/HY_Features/blob/master/conf/uml_surfacehydrofeature/hydrographicnetwork/[/conf/uml_surfacehydrofeature/hydrographicnetwork/*]
+|Test id: |https://github.com/opengeospatial/HY_Features/blob/master/conf/uml_surfacehydrofeature/surfacewaterbodies/[/conf/uml_surfacehydrofeature/surfacewaterbodies/*]
+|Test id: |https://github.com/opengeospatial/HY_Features/blob/master/conf/uml_surfacehydrofeature/storage/[/conf/uml_surfacehydrofeature/storage/*]
+|Requirement: |All relevant elements of a data exchange schema including hydrologic features are mapped to equivalent HY_Features elements.
+|Test purpose: | All relevant elements of a data exchange schema including hydrologic features are mapped to equivalent HY_Features elements.
+|Test method: | Inspect the mapping between the data exchange schema and the HY_Features model to determine that all relevant schema elements are mapped to HY_Features equivalents.
+|Test Type| Capability
+|===
+
+[#annexA_4]
+=== Conformance Class: HY_HydrometricFeature application schema equivalence
+
+[cols=">20h,<80d",width="100%"]
+|===
+|Conformance Class|https://github.com/opengeospatial/HY_Features/blob/master/ spec/hydrology/hydrometricfeature/1.0/conf/hy_hydrometricfeature[/spec/hydrology/hydrometricfeature/1.0/conf/hy_ hydrometricfeature]
+|Test id: |https://github.com/opengeospatial/HY_Features/blob/master/conf/uml_hydrometricfeature/hydrometricfeature/[/conf/uml_ hydrometricfeature/hydrometricfeature/*]
+|Requirement: |All relevant elements of a data exchange schema including hydrologic features are mapped to equivalent HY_Features elements.
+|Test purpose: |All relevant elements of a data exchange schema including hydrologic features are mapped to equivalent HY_Features elements.
+|Test method: |Inspect the mapping between the data exchange schema and the HY_Features model to determine that all relevant schema elements are mapped to HY_Features equivalents.
+|Test Type| Capability
+|===
