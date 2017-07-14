@@ -1,0 +1,58 @@
+[appendix]
+:appendix-caption: Annex
+== HY_Features-AHGF Mapping
+
+This is a descriptive mapping for the Australian Hydrological Geospatial Fabric (AHGF) [11]. It is intended to provide an understanding of the basic relationship of HY_Features concepts and the AHGF hydrologic feature implementation.
+
+[#annexC_1]
+=== Catchment Model
+
+
+[cols="1,2,6"]
+|===
+|*HY_Features Name*|*AHGF Class*|*Comment*
+|HY_Catchment|ConCatID|Logical features identified via ConCatID with topological relationships defined via ConNodeID (HY_Outfall). Can also be seen as the contributing set of logical features sharing a common ConCatID.
+|HY_DendriticCatchment|ConCatID|All logical HY_Catchment features are constrained to be dendritic in the Geofabric.
+|HY_InteriorCatchment|Not represented|All catchment areas defined by a particular DEM are considered to flow to a single common outlet. 
+
+Note: Areas not flowing to a common outlet are aggregated with areas that do according to saddle points in the terrain model.
+|HY_CatchmentAggregate|Collections of ConNodeID|Network following connectivity via ConNodeID encapsulating divergent flows to remain dendritic in nature.
+|HY_Outfall|ConNodeID|All ConNodeID act in the role of outflow node (To_Node) for one or more ConCatID catchment(s) and most also act in the role of inflow node (From_Node) for a single ConCatID catchment.
+|HY_Outfallrealization|AHGFNetworkNode|HY_ReferenceLocation can be used as a reference location for any point associated with a feature. In reality this will normally be a realisation of a ConNodeID (with associated coordinates) or the Geofabric realisation of event locations (AHGFNetworkNode::GhostNode) used to register Hydrometric features on the network.
+|HY_CatchmentRealization|Feature identified by ConCatID|Any feature or collection of features identified by a single ConCatID. Single instances of AHGFContractedCatchment and AHGFLink as well as collections of AHGFNetworkStream, AHGFNetworkNode, AHGFCatchment (low level sub-catchments) and AHGFWaterbody. Note: features of subtype AHGFContractedCatchment::NoFlowArea do not have a ConNodeID (i.e. No HY_Outfall)
+|HY_CatchmentArea|AHGF Contracted Catchment, AHGFCatchment|A single AHGFContractedCatchment or a collection of AHGFCatchment (both 2D simple surfaces derived from a common Digital Elevation model).
+|HY_CatchmentBoundary|Not represented|Can be seen as the boundary (or boundaries) of the polygon feature(s) that realise HY_CatchmentArea.
+|HY_CartographicRealization|AHGFMappedStream|AHGFMappedStream is a feature class of the Geofabric Surface Cartography product, perhaps all feature classes in this product can be considered as HY_CartographicRealization.
+|===
+
+[#annexC_2]
+=== Hydrographic Network
+
+[cols="1,2,6"]
+|===
+|*HY_Features Name*|*AHGF Class*|*Comment*
+|HY_Hydrographic Network|AHGFNetworkStream|Subset of AHGFNetworkStream features (subtypes: NetworkFlowSegment & NetworkWaterAreaSegment) provides a particular HY_CatchmentRealization. This network realization can be supplemented with its corresponding HY_ChannelNetwork instance.
+|HY_WaterBody|AHGFNetworkStream|AHGFNetworkStream features (subtypes: NetworkFlowSegment & NetworkWaterAreaSegment).
+|HY_ChannelNetwork|AHGFNetworkStream|Subset of AHGFNetworkStream:: NetworkArtificialFlowSegment provides a particular HY_CatchmentRealization. This network realization is only complete when combined with the corresponding HY_HydrographicNetwork instance.
+|HY_Depression|Not represented|—
+|HY_Channel|AHGFNetworkStream|AHGFNetworkStream features (subtype: NetworkArtificialFlowSegment). For version 3 products AHGFNetworkStream features are related to the relevant logical HY_Catchment via ConCatID.
+|HY_Reservoir|AHGFWaterbody::Reservoir|Reservoir subtype of AHGFWaterbody. 
+|HY_FlowPath|AHGFLink|Note: Geofabric currently has no FlowPath for headwater (AHGFContractedCatchment) areas.
+|HY_WaterEdge|Not represented|—
+|HY_LongitudinalSection|Not represented|—
+|HY_WaterBodyStratum|Not represented|—
+|HY_Water_LiquidPhase|Not represented|—
+|HY_Water_SolidPhase|Not represented|—
+|===
+
+[#annexC_3]
+=== Hydrometric Network
+
+[cols="1,2,6"]
+|===
+|*HY_Features Name*|*AHGF Class*|*Comment*
+|HY_HydrometricNetwork|Not represented|SPossible future plans to produce a geoschematic representation of the hydrometric features at some stage.
+|HY_HydrometricFeature|AHGFNetworkNode:: AHGFGhostNode|Ghost Nodes are a representation of Hydrometric features located on a Hydrographic Network representation. Note: Currently, V3 has a separate AHGFGhostNode feature class for ghost nodes. There are plans to include these features as part of the Hydrology Reporting Catchments product forming outfalls for AHGFContractedCatchment (HY_DendriticCatchment) features.
+|HY_RiverReferenceSystem|Not represented|Measures are not yet explicitly included in AHGF.
+|HY_IndirectPostition|Measures are not yet explicitly included in AHGF.
+|===
