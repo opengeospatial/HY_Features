@@ -474,6 +474,49 @@ The HY_River feature type defines the existence of body of surface water, partic
 The HY_Estuary feature type defines the existence of body of surface water, participating in a hydrographic network, special due to branching and its interaction with the open sea.
 
 
+==== The Storage Model
+
+The Storage model (link:#figure37[Figure 37]) provides a concept to describe any water body, in terms of a reservoir storing water for future use. The separate storage model allows to describe the hydrographic network without the details of storage capacities that a water body may have, and vice versa storage reservoirs to be referenced independent of their role within the hydrographic network. 
+
+
+[#figure37]
+.Reservoir realizing an outfall (UML class diagram, https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/storage/reservoir[/req/hy_surfacehydrofeature/storage/reservoir])
+image::figures/fig37.png[]
+
+
+The HY_Reservoir feature type describes the water body, either natural or man-made, used for storage, regulation and control of water resources. The reservoir concept refers to a volume of water managed in zones between operating levels. HY_Reservoir associates to a reservoir the _storedWaterBody_ and a _reservoirZone_.
+
+
+include::requirements/req29.adoc[]
+
+
+=== The Hydrometric Network application schema
+
+The Hydrometric Network schema (link:#figure39[Figure 39]) defines a logical model to take into account a network of hydrometric stations as a specific realization of the catchment in the perspective of hydrologic observation, without the detail of an observation strategy. The Hydrometric Network specifies the core concepts defined in the abstract Hydro Feature application schema (Figure 38). The general concept is that of a network of logically connected hydrometric stations realizing as a whole the catchment. This enables contextually related information models to relate monitoring stations and observing posts to hydrologic features, finally to the realized catchment, as usually required in the context of environmental reporting or when interpreting, comprising and processing observation results.
+
+
+[#figure38]
+.Hydrometric Network – dependencies
+image::figures/fig38.png[]
+
+
+The hydrometric network model introduces the concept of a 'position on river' which allows an hydrologic station, even free from position, to be the realization of the logical outfall. This supports to establish upstream-downstream relationships between hydrometric features, to assign a position relative to a 'fixed' outfall, or to place a feature of interest relative to the hydrometric station.
+
+
+[#figure39]
+.Hydrometric network model (UML class diagram, https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrometricfeature/hydrometricnetwork[/req/hy_hydrometricfeature/hydrometricnetwork])
+image::figures/fig39.png[]
+
+The HY_HydrometricNetwork feature type specializes the HY_HydroNetwork realization defined in the core model specifally as an aggregate of hydrometric features. HY_HydrographicNetwork inherits from generalization the _realisedCatchment_, _flowpath_ and _waterEdge_, as well as _catchmentBoundary_ and _catchmentArea_ associations. The *networkStation* association relates a monitoring station at which data on water are obtained. If required, this association shall be used to identify the hydrometric station, which realizes the logical catchment either separately, or as part of the hydrometric network.
+
+The HY_HydrometricFeature associates the _hydrometricNetwork_ in which it participates and a _positionOnRiver_. The *positionOnRiver* association relates the hydrometric feature to a permanent reference location. If required, this association shall be used to identify a reference location which realizes the conceptual outfall of the catchment corresponding to the hydrometric feature.
+
+
+include::requirements/req30.adoc[]
+
+include::requirements/req31.adoc[]
+
+
 === Template
 
 Paragraph – intro text for the requirement class.
