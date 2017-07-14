@@ -64,7 +64,7 @@ The Hydro Feature schema provides the core model of catchments and their multipl
 .Hydrologic features describing separate aspects of the hydrology phenomenon
 image::figures/fig17.png[]
 
-The definitions applied in the Hydro Feature schema are rooted in the definitions given in the WMO Glossary of Hydrology regardless of their application context in respect to the Earth's surface. For the purpose of testing the applicability of the conceptual model in the context of surface water hydrology, the definitions in this standard refer to surface water hydrology. A conceptual model capturing the specifics of features associated with the groundwater domain is developed with reference to the OGC WaterML 2: Part 4 – GroundwaterML2 standard [6].
+The definitions applied in the Hydro Feature schema are rooted in the definitions given in the WMO Glossary of Hydrology regardless of their application context in respect to the Earth's surface. For the purpose of testing the applicability of the conceptual model in the context of surface water hydrology, the definitions in this standard refer to surface water hydrology. A conceptual model capturing the specifics of features associated with the groundwater domain is developed with reference to the OGC WaterML 2: Part 4 – GroundwaterML2 standard link:#OGC2016[[6]].
 
 The Hydro Feature schema contains the leaf packages: NamedFeature, HydroComplex, and RiverPositioningSystem. link:#figure18[Figure 18] shows the external dependencies.
 

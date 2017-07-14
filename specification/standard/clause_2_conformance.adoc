@@ -2,6 +2,7 @@
 This standard defines the conceptual model for identification of hydrologic features and their fundamental relationships. The conceptual model may be used in two ways: a) to derive implementation classes for data exchange or b) via reference (referred to here as mapping) from terms used in an implementation to the equivalent terms in the HY_Features model. The form of such a mapping is not specified in this standard, but in general there is correspondence expected between particular implementations of hydrologic features and realized HY_Features concepts. There will be an exact correspondence or a correspondence to a specialization of a HY_Features class with narrower scope. Since no technical semantic mapping standard is supported by the OGC standards baseline at this time, only the expressivity requirements of mappings are specified in relevant conformance clauses. +
 
 Requirements for OGC HY_Features standardization target types are considered:
+
 * Encodings (such as OWL and RDF) of the HY_Features conceptual UML model described in this standard and
 * Application schemas formally mapped to HY_Features concepts including Feature Type classes and associative relationships.
 
