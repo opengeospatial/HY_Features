@@ -1,0 +1,47 @@
+[appendix]
+:appendix-caption: Annex
+== HY_Features-INSPIRE Hydrography Theme
+
+This table assigns core features as defined in the INSPIRE Hydrography theme [2] to HY_Features core concepts. It also indicates relationship between both terms and potential conditions in which they can be associated.
+
+This table should not be understood in terms of a  ‘conceptual mapping’ of clearly defined relationships between two logical concepts, but rather as a simple approach to show compatibility of concepts, based on the meaning expressed in the definitions, and without imposing a particular implementation. Since each dataset that implements the INSPIRE theme will have a different legacy of documentation and information modeling, a conceptual mapping would be expressed differently.  Applications implementing the INSPIRE Hydrography theme can use this listing to understand how a particular dataset may relate to the HY_Features concepts. 
+
+[#annexE_1]
+=== Catchment Model
+
+
+[cols=“1,1,2,6”]
+|===
+|*HY_Features Name*|*Relationship between concepts*|*INSPIRE Hydrography Name + potential condition(s)*|*Comment*
+|HY_Catchment|Is like|DrainageBasin +In case that HY_Catchment is realized by HY_CatchmentArea|Area having a common outlet for its surface runoff. +NOTE 1 Regarding the different classifications of drainage basins, no distinction is made between drainage basins / sub-basins since this will vary with application. It is possible to build basins from other basins. +NOTE 2 The outlet of a drainage basin may be a canal or a lake. +NOTE 3 Synonyms for drainage basin include: catchment; catchment area; drainage area; river basin; watershed
+|HY_DendriticCatchment|Is narrower than|DrainageBasin +In case that HY_Catchment is realized by HY_CatchmentArea +With one outlet|Area having a common outlet for its surface runoff. +NOTE 1 Regarding the different classifications of drainage basins, no distinction is made between drainage basins / sub-basins since this will vary with application. It is possible to build basins from other basins. +NOTE 2 The outlet of a drainage basin may be a canal or a lake. +NOTE 3 Synonyms for drainage basin include: catchment; catchment area; drainage area; river basin; watershed.
+|HY_InteriorCatchment|—|Not represented|—
+|HY_InteriorCatchment|Is Like|RiverBasin +In case that HY_Catchment is realized by HY_CatchmentArea|The area of land from which all surface run-off flows through a sequence of streams, rivers and, possibly, lakes into the sea at a single river mouth, estuary or delta.
+|HY_Outfall|Is Like|HydroNode +In case that HY_Catchment is realized by HY_FlowPath|A node within the hydrographic network. NOTE May represent a physical confluence, bifurcation/confluence/vanishing point etc., or it may be associated with a hydrographic point of interest or facility.
+|HY_OutfallRealization|Is Like|HydroPOI|A natural place where water appears, disappears or changes its flow. +EXAMPLE Fluvial points (waterfall, cascade, rapids, breaker), spring/water hole (spring, source, geyser, thermal spring, natural fountain, well, also fumarole, artesian), sinkhole (sinkhole, drainage loss). +NOTE A hydro point of interest may create a flow constriction in the network.
+|HY_CatchmentRealization|—|Not represented|—
+|HY_CatchmentArea|Is Like|DrainageBasin|Area having a common outlet for its surface runoff. +NOTE 1 Regarding the different classifications of drainage basins, no distinction is made between drainage basins / sub-basins since this will vary with application. It is possible to build basins from other basins. +NOTE 2 The outlet of a drainage basin may be a canal or a lake. +NOTE 3 Synonyms for drainage basin include: catchment; catchment area; drainage area; river basin; watershed.
+|HY_CatchmentBoundary|—|Not represented|—
+|HY_CartographicRealization|—|Not represented|—
+|===
+
+[#annexE_2]
+=== Hydrographic Network Model
+
+[cols=“1,1,2,6”]
+|===
+|*HY_Features Name*|*Relationship between concepts*|*INSPIRE Hydrography Name + potential condition(s)*|*Comment*
+|HY_HydrographicNetwork|Is narrower than|WatercourseLinkSequence +In case that features of interest are water bodies and not channels. +AND +In case that network is non branching.| A sequence of watercourse links representing a non-branching path through a hydrographic network.
+|HY_WaterBody|Is narrower than|WatercourseLink +In case that features of interest are water bodies and not channels.|A segment of a watercourse within a hydrographic network.  A watercourse link may be fictitious, with no direct correspondence to a real-world object and included only to ensure a closed network.
+|HY_ChannelNetwork|Is narrower|WatercourseLinkSequence +In case that features of interest are channels and not water bodies. +AND +In case that network is non branching.|A sequence of watercourse links representing a non-branching path through a hydrographic network.
+|HY_Depression|Is like|StandingWater +In case that geometry is surface or point.|Any known inland waterway body. +EXAMPLE Lake/pond, reservoir, river/stream, etc. +NOTE: May include islands, represented as 'holes' in its geometry. Islands may be surrounded by a shore and / or land-ware boundary.
+|HY_Channel|Is narrower|WatercourseLink +In case that features of interest are channels and not water bodies.|A segment of a watercourse within a hydrographic network.  A watercourse link may be fictitious, with no direct correspondence to a real-world object and included only to ensure a closed network.
+|HY_Reservoir|Is like|StandingWater +In case that geometry is surface or point.|Any known inland waterway body. +EXAMPLE Lake/pond, reservoir, river/stream, etc. +NOTE: May include islands, represented as 'holes' in its geometry. Islands may be surrounded by a shore and / or land-ware boundary.
+|HY_FlowPath|Is like|WatercourseLink +With a fictitious representation|A segment of a watercourse within a hydrographic network.  A watercourse link may be fictitious, with no direct correspondence to a real-world object and included only to ensure a closed network.
+|HY_WaterEdge|Is like|LandWaterBoundary|The line where a land mass is in contact with a body of water.
+|HY_LongitudinalSection|Is narrower|—|—
+|HY_CrossSection|Is narrower|—|—
+|HHY_WaterBodyStratum|Is narrower|—|—
+|HY_Water_LiquidPhase|Is narrower|—|—
+|HY_Water_SolidPhase|Is narrower|—|—
+|===

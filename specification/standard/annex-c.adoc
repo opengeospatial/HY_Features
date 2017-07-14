@@ -54,5 +54,5 @@ Note: Areas not flowing to a common outlet are aggregated with areas that do acc
 |HY_HydrometricNetwork|Not represented|SPossible future plans to produce a geoschematic representation of the hydrometric features at some stage.
 |HY_HydrometricFeature|AHGFNetworkNode:: AHGFGhostNode|Ghost Nodes are a representation of Hydrometric features located on a Hydrographic Network representation. Note: Currently, V3 has a separate AHGFGhostNode feature class for ghost nodes. There are plans to include these features as part of the Hydrology Reporting Catchments product forming outfalls for AHGFContractedCatchment (HY_DendriticCatchment) features.
 |HY_RiverReferenceSystem|Not represented|Measures are not yet explicitly included in AHGF.
-|HY_IndirectPostition|Measures are not yet explicitly included in AHGF.
+|HY_IndirectPostition|Not represented|Measures are not yet explicitly included in AHGF.
 |===
