@@ -1,0 +1,13 @@
+[cols="1,4",width="90%"]
+|===
+2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
+2+|https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/waterbodystratum[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbodystratum] {set:cellbgcolor:#FFFFFF}
+|Target type |Implementation schema
+|Name |HY_WaterBodyStratum
+|Dependency |https://inspire-twg.jrc.it/svn/iso[/iso/19103/]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/outfallrealisation[/req/hy_hydrofeature/hydrocomplex/outfallrealisation]
+|*Requirement 1* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/waterbodystratum.benchmark[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbodystratum.benchmark]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 2* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/waterbodystratum.benchmark[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbodystratum.stratumtype]
+{set:cellbgcolor:#FFFFFF}
+|===

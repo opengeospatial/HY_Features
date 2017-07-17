@@ -1,0 +1,10 @@
+[cols="1,4",width="90%"]
+|===
+2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
+2+|https://github.com/opengeospatial/HY_Features/blob/master/req/hy_features_conceptual_model[/req/hy_features_conceptual_model] {set:cellbgcolor:#FFFFFF}
+|Target type |Implementation Schema
+|Name |HY_Features Conceptual Conformance
+|Dependency |https://inspire-twg.jrc.it/svn/iso/[/iso/19109/]
+|*Requirement 1* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/%20hy_features_conceptual_model/mapping[/req/ hy_features_conceptual_model/mapping]
+{set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,13 @@
+[cols="1,4",width="90%"]
+|===
+2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
+2+|https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/storage/reservoir[/req/hy_surfacehydrofeature/storage/reservoir] {set:cellbgcolor:#FFFFFF}
+|Target type |Implementation schema
+|Name |HY_Reservoir
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrocomplex/outfallrealisation[/req/hy_surfacehydrofeature/hydrocomplex/outfallrealisation]
+|*Requirement 1* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/storage/reservoir.storedwaterbody[/req/hy_surfacehydrofeature/storage/reservoir.storedwaterbody]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 2* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/storage/reservoir.reservoirzone[/req/hy_surfacehydrofeature/storage/reservoir.reservoirzone]
+{set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,92 @@
+[appendix]
+:appendix-caption: Annex
+== HY_Features- SANDRE  Mapping
+
+This is a descriptive mapping for the French National Service for Water Data and Reference-dataset Management (SANDRE) [12]. It is intended to provide an understanding of the basic relationship of HY_Features concepts and the SANDRE hydrologic feature dictionary for Hydrography. +
+Please notice that terms for SANDRE are based on French words.
+
+[#annexF_1]
+=== Catchment Model
+
+
+[cols="1,2,6"]
+|===
+|*HY_Features Name*|*SANDRE name*|*Comment*
+|HY_Catchment|RegionHydro +
+OR +
+SecteurHydro + 
+OR +
+SousSecteurHydro +
+OR +
+ZoneHydro|SANDRE make distinction between basins and sub-basins
+|HY_Catchment|RegionHydro +
+OR +
+SecteurHydro + 
+OR +
+SousSecteurHydro +
+OR +
+ZoneHydro|SANDRE: all catchments are dendritic
+|HY_InteriorCatchment|Not represented|—
+|HY_CatchmentAggregate|RegionHydro +
+OR +
+SecteurHydro +
+OR +
+SousSecteurHydro|SANDRE: RegionHydro are aggregation of SecteurHydro that are aggregation of SousSecteurHydro that are aggregation of ZoneHydro.
+|HY_Outfall|NoeudHydrographique|HY_Outfall can be seen as a specific NoeudHydrographique
+|HY_OutfallRealization|NoeudHydrographique|NoeudHydrographique
+|HY_CatchmentRealization|Not represented|—
+|HY_CatchmentArea|RegionHydro +
+OR +
+SecteurHydro +
+OR +
+SousSecteurHydro +
+OR +
+ZoneHydro|While the polygon representing a catchment might be thought of as an area, the subset of a DEM or another land cover dataset would be more in line with the meaning of CatchmentArea.
+|HY_CatchmentBoundary|LimiteHydroBassin|SANDRE : LimiteHydroBassin is the boundary of a catchment. It has a linear representation
+|HY_CartographicRealization|Not represented|—
+|===
+
+[#annexF_2]
+=== Hydrographic Network Model
+
+[cols="1,2,6"]
+|===
+|*HY_Features Name*|*SANDRE Name*|*Comment*
+|HY_Hydrographic Network|Not Represented|SANDRE focuses on channels, not on water bodies
+|HY_WaterBody|Not Represented|SANDRE focuses on channels, not on water bodies
+|HY_ChannelNetwork|CoursEau +
+OR +
+TronconHydrographique|SANDRE: EntiteHydroSurface is an aggregation of EltHydroSurface. Both have a surfacic representation.
+|HY_Depression|EntiteHydroSurface +
+OR +
+EltHydroSurface|SANDRE: EntiteHydroSurface is an aggregation of EltHydroSurface. Both have a surfacic representation.
+|HY_Channel|TronconHydrographique +
+OR +
+TronconHydrograElt +
+OR +
+EltHydroSurface|SANDRE: CoursEau is aggregation of TronconHydrographique that is an aggregation of TronconHydrograElt. All of them have a linear representation. EntiteHydroSurface
+|HY_Reservoir|EntiteHydroSurface +
+OR +
+EltHydroSurface +
+OR +
+PointEauIsole|SANDRE: EntiteHydroSurface is an aggregation of EltHydroSurface. Both have a surfacic representation. +
+PointEauIsole can be used in case that HY_Reservoir is not linked to the hydrographic network and is represented by a point  
+|HY_FlowPath|Not Represented|—
+|HY_WaterEdge|Not represented|—
+|HY_LongitudinalSection|Not represented|—
+|HY_WaterBodyStratum|Not represented|—
+|HY_Water_LiquidPhase|Not represented|—
+|HY_Water_SolidPhase|Not represented|—
+|===
+
+[#annexF_3]
+=== Hydrometric Network
+
+[cols="1,2,6"]
+|===
+|*HY_Features Name*|*AHGF Class*|*Comment*
+|HY_HydrometricNetwork|Not represented|—
+|HY_HydrometricFeature|Not Represented|—
+|HY_RiverReferenceSystem|Not represented|—
+|HY_IndirectPostition|Not represented|—
+|===

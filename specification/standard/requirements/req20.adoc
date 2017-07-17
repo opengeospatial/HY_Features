@@ -1,0 +1,17 @@
+[cols="1,4",width="90%"]
+|===
+2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
+2+|https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/channelnetwork/depression[/req/hy_surfacehydrofeature/channelnetwork/depression] {set:cellbgcolor:#FFFFFF}
+|Target type |Implementation schema
+|Name |HY_Depression
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/namedfeature/hydrofeature[/req/hy_hydrofeature/namedfeature/hydrofeature]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/channelnetwork/channelnetwork[/req/hy_surfacehydrofeature/channelnetwork/channelnetwork]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbody]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/hydrographicnetwork/waterbodystratum[/req/hy_surfacehydrofeature/hydrographicnetwork/waterbodystratum]
+|*Requirement 1* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/channelnetwork/depression.surfacenetwork[/req/hy_surfacehydrofeature/channelnetwork/depression.surfacenetwork]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 2* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/channelnetwork/depression.standingwater[/req/hy_surfacehydrofeature/channelnetwork/depression.standingwater]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 3* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_surfacehydrofeature/channelnetwork/depression.confinedwaterbody[/req/hy_surfacehydrofeature/channelnetwork/depression.confinedwaterbody]
+{set:cellbgcolor:#FFFFFF}
+|===

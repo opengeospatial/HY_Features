@@ -5,5 +5,9 @@
 [width="90%",options="header"]
 |===
 |Date |Release |Editor | Primary clauses modified |Description
-|2016-04-28 |0.1 |G. Editor |all |initial version
+|08-10-2014 |0.1 |Irina Dornblut |Initial version |Initial draft in OGC template
+|12-11-2014 |0.1 |Irina Dornblut |Section7, Annex D included |Editing requirements classes, Annex D included
+|15-08-2016 |0.3 |David Blodgett; Irina Dornblut |Completely revised version |Draft in OGC template
+|18-08-2016 |0.4 |Irina Dornblut |Figs7,8,9,10,11,13,14  |added
+|18-31-2016 |0.5 |David Blodgett, Darren Smith, David Arctur |Entire Document |General edit for clarity and consistency.
 |===

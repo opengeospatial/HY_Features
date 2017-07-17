@@ -1,0 +1,27 @@
+[cols="1,4",width="90%"]
+|===
+2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
+2+|https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment[/req/hy_hydrofeature/hydrocomplex/catchment] {set:cellbgcolor:#FFFFFF}
+|Target type |Implementation schema
+|Name |HY_Catchment
+|Dependency |https://inspire-twg.jrc.it/svn/iso/[/iso/19103/]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/outfall[/req/hy_hydrofeature/hydrocomplex/outfall]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment[/req/hy_hydrofeature/hydrocomplex/catchment]
+|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchmentrealisation[/req/hy_hydrofeature/hydrocomplex/catchmentrealisation]
+|*Requirement 1* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment.outflow[/req/hy_hydrofeature/hydrocomplex/catchment.outflow]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 2* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment.inflow[/req/hy_hydrofeature/hydrocomplex/catchment.inflow]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 3* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment.containingcatchment[/req/hy_hydrofeature/hydrocomplex/catchment.containingcatchment]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 4* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment.containedcatchment[/req/hy_hydrofeature/hydrocomplex/catchment.containedcatchment]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 5* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment.conjointcatchment[/req/hy_hydrofeature/hydrocomplex/catchment.conjointcatchment]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 6* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment.uppercatchment[/req/hy_hydrofeature/hydrocomplex/catchment.uppercatchment]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 7* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment.lowercatchment[/req/hy_hydrofeature/hydrocomplex/catchment.lowercatchment]
+{set:cellbgcolor:#FFFFFF}
+|*Requirement 8* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/hydrocomplex/catchment.realisation[/req/hy_hydrofeature/hydrocomplex/catchment.realisation]
+{set:cellbgcolor:#FFFFFF}
+|===
