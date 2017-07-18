@@ -716,9 +716,274 @@ Specific HY_Features classes supporting the referencing 'along a river'
 include HY_IndirectPosition, HY_DistanceFromReferent and
 HY_DistanceDescription described in section 7.3.3 of this standard
 
-Table 1 provides a descriptive 'mapping' intended to provide a basic
+link:#table1[Table 1] provides a descriptive 'mapping' intended to provide a basic
 understanding of how the HY_Features river positioning system may
 specify the OGC standard Linear referencing model. The river positioning
 system is described in detail in section 7.3.3 of this standard, the OGC
 linear referencing model within the OGC Abstract Specification Topic 19,
 Linear referencing (aka ISO/FDIS19148:2011).
+
+[#table1]
+.Table 1: HY_Features river positioning concepts comparable with the OGC Linear referencing model
+[width="100%",cols="34%,33%,33%",]
+|=======================================================================
+a|
+*HY_Features concept* +
+(internal HYF reference)
+
+ a|
+*Description*
+
+ a|
+*OGC LR concept* +
+(internal LR reference)
+
+a|
+*River Referencing* (leaf package), describing the system applied to
+place a hydrologic feature on a (linear) watercourse/stream feature. The
+feature location is specified as an indirect position expressed as
+distance along the watercourse on which the feature is to be placed.
+
+a|
+A (hydrologic) feature of interest which is located along the locating
+one-dimensional flowpath referencing inflow and/or outflow already
+located on that flowpath, corresponds in general to the linear
+referencing along a linear element described in the OGC standard model
+for Linear referencing.
+
+a|
+*Linear Referencing model* (leaf package),
+specification of a location relative to a linear element as a
+measurement along that element. This model describes allocation as
+position expressed as distance along a linear element.
+
+a|
+*Indirect Position* (7.3.3.1), position expressing the location of a
+hydrologic feature (of interest) relative to the known location of
+another feature along an axis, +
+
+has _distance expression_ and _distance description_,
+_referenceLocation_ and an (already) _locatedReferent association._
+
+ a|
+Feature that specifies a location through referencing along a 'linear'
+hydrologic feature. +
+
+Indirect position is expressed as 'distance from referent' located at
+the upstream or downstream end of the flowpath, or as a term describing
+this distance.
+
+a|
+*Position Expression* (6.2.2.1) specifies a linearly referenced
+location. Fundamental properties are 'linear element', 'distance
+expression' and 'LRM' [linear referencing method] describing the 'manner
+of measurement'.
+
+a|
+ 
+
+ a|
+River referencing may be understood as a hydrology-specific referencing
+method applied to specify a location along a linear hydrologic feature.
+The river referencing results in an abstract, interpolative or
+descriptive value, which implies the usage of an appropriate method. +
+
+The 'units' and 'type' properties of the referencing method are covered
+by the HY_DistanceFromReferent data type.
+
+a|
+**Linear Referencing Method** (6.1.1.3) specifies how a linear element
+is measured. by 'name', 'type', 'units' and optional 'constraints'.
+
+a|
+*Flowpath* (7.3.2.6), realizes a catchment specifically as a path
+connecting the inflow and outflow of the catchment it realizes. +
+
+Has a _realized catchment_ association.
+
+a|
+one-dimensional topological realization of a catchment forming the
+linear element along which an indirect position is determined. +
+
+topologically the flowpath can be understood as an edge bounded by
+catchment outlet nodes
+
+ a|
+*Linear Element* (6.1.1.2) describes a feature that can be measured in a
+linear, one-dimensional, sense, incl. linear topological features such
+instances of directed edges.
+
+a|
+*Hydro Location* (7.3.2.7), in the role of any hydrologic feature to be
+located on the network through referencing another hydrologically
+significant hydro location, +
+
+Has a _referenced position association._
+
+a|
+Feature being linearly located,
+understood as 'feature event' that 'occurs' somewhere in the network of
+abstract catchments which is realized as a network of its linear
+flowpaths. +
+
+A hydro location at distance 0 from the hydro nexus referent would be of
+type inlet or outlet and could be considered a realization of a hydro
+nexus.
+
+ a|
+Linearly located *Feature* (6.1.1.5) that is located along an associated
+locating feature using a linear referencing system. A feature linearly
+located specifies where along the locating feature the located feature
+occurs (feature event)
+
+a|
+*Hydro Location* (7.3.2.7), in the role of an already located
+hydrologically significant referent that may realize the hydro nexus
+where a catchment interacts with another catchment, +
+
+Has a _realized_ _nexus_ association
+
+ a|
+Feature being used as a reference, located at the upstream or downstream
+end of a flowpath which realizes the catchment whose hydro nexus is
+realized by the located referent.
+
+a|
+*Referent* (6.1.1.4.2) specifies a known, already referenced location
+on the linear element 'from' where a distance can be measured.
+
+a|
+*Distance From Referent* (7.3.3.3), distance from a located referent as
+an absolute or interpolative value. 
+
+a|
+Data type, expressing an indirect position value  as distance along the
+flowpath 'measured' from a referent located at its upstream or
+downstream end, or elsewhere on the flowpath. +
+
+The attribute names may reflect the 'type' property of LRM, the use of
+basic data types supports the 'units' property of LRM. +
+
+a|
+*Distance Expression* (6.1.1.4) specifies the measured value from the
+start, or another known location, on the linear element along that
+element.
+
+a|
+*Distance Description* (Table B.2), describes the spatial relation
+between two locations 
+
+a|
+Terms common in hydrology to describe the
+distance between a location being placed and a location being used as a
+reference. These terms may be used to express an offset the distance
+expression may have. 
+
+a|
+*Offset* (6.1.1.4.3) qualifies the distance expression with respect to
+locations not directly located on the linear element.
+
+|=======================================================================
+
+==== Network navigation
+Realizing catchments as topological edges bounded by hydro nexus nodes,
+a network of catchments may be traced upstream from the sea or a sink
+traversing from outflow node along catchment edge to inflow node of
+(multiple) upper catchments recursively. One can navigate all the way
+'upstream' eventually arriving at the outflow node of the headwater
+catchments, which do not have an inflow hydro nexus. Starting at a
+spring, the catchment network can be traced in the 'downstream'
+direction, first to the single outflow node to which the catchment
+contributes then further downstream eventually arriving at an outflow
+node of an estuary or delta with no downstream catchment. In a given
+realization, a sequence of linear flowpaths, each realizing a catchment
+connected in the catchment network, may be drawn as streams or
+watercourses, which may or may not be geometrically connected in the
+representation.
+
+When geometrically connected, the edge-node topology described above
+could be implemented based on a geometric network made up entirely of
+geometrically connected flowpaths. In some cases, the geometric network
+is all that is required to satisfy network navigation requirements. A
+second approach is to use the geometric network to create a topological
+edge-node network. In other cases, waterbodies and channel parts of a
+particular network may not form a well-connected network or be
+represented using different types of geometry, not suited to geometric
+network traversal. In such cases, a non-geometric topological
+(node-edge) realization, made up of catchments and hydro nexuses only
+could be used.
+
+The network navigation approach described here corresponds generally to
+the standard network (navigation) model defined within ISO 19133:
+Location-based services - Tracking and navigation which is considered as
+a general framework to trace a network of catchments. Provided that a
+catchment is topologically realized comparable with the ISO topology
+model as directed edge (flowpath) and the hydro nexus as directed
+(inflow/outflow) node, the catchment network (as well as its
+hydrographic, geomorphologic or hydrometric realizations) can be
+navigated using the concepts of the ISO network (navigation) model.
+
+In terms of network navigation, the hydrographic, channel or station
+network can be thought of as a set of junctions and links that connect
+these junctions. The realization of an inflow/outflow node is comparable
+with the 0-dimensional junction associating 'incoming and outgoing
+links', and the flowpath is comparable with 1-dimensional link
+associated with a 'start' and an 'end' set by the inflow or outflow node
+
+link:#table2[Table 2] provides a descriptive 'mapping' intended to provide a basic
+understanding of how the HY_Features network navigation may specify the
+Tracking and navigation model.
+
+[#table2]
+.Table 2: HY_Features concepts comparable with the OGC Network navigation model
+[width="100%",cols="34%,33%,33%",]
+|=======================================================================
+a|
+*HY_Features concept*
+
+a|
+*Description*
+
+a|
+*ISO 19133 concept*
+
+a|
+Catchment realization network (6.3.1), aggregate of hydrologic features
+realizing a catchment
+
+a|
+The logical network of catchments interacting at hydro nexuses can be
+realized as networks of specific catchment realizations. The network of
+one-dimensional flowpaths connected by 0-dimensional inflow/outflow
+nodes can be understood as navigation network.
+
+a|
+Network (4.17), abstract structure consisting of a set of 0-dimensional
+objects called junctions, and a set of 1-dimensional objects called
+links that connect the junctions, each link being associated with a
+start (origin, source) junction and end (destination, sink) junction
+
+a|
+Flowpath (7.3.2.6), one-dimensional feature that realizes a catchment,
+associated to the _realized catchment_ |The topological realization, a
+directed edge bounded by inflow and outflow nodes can be understood as a
+connecting link between junctions. 
+
+a|
+Link (4.8), directed topological connection between two junctions 
+consisting of an edge and a direction
+
+a|
+Hydro Location (7.3.2.5), hydrologic feature that can be a realization
+of an outlet, associated to the _realized hydro nexus_
+
+a|
+The topological (0-dimensional) realization as inflow or outflow node
+forming the boundary of the flowpath realizing the corresponding
+catchment, can be understood as junction.
+
+a|
+Junction (4.6), single topological node in a network with its associated 
+collection of turns, incoming and outgoing links
+
+|=======================================================================
