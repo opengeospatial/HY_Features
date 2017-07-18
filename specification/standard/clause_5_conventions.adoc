@@ -1,17 +1,17 @@
 == Conventions
-This sections provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.
+This section provides details and examples for any conventions used in
+the document. Examples of conventions are symbols, abbreviations, use of
+XML schema, or special notes regarding how to read the document.
 
 === Identifiers
 The normative provisions in this specification are denoted by the URI
 
 http://www.opengis.net/spec/{standard}/{m.n}
 
-All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
+All requirements and conformance tests that appear in this document are
+denoted by partial URIs which are relative to this base.
 
-[glossary]
 === Symbols (and abbreviated terms)
-
-[glossary]
 CHy :: WMO Commission for Hydrology
 GML :: Geography Markup Language
 GRDC :: Global Runoff Data Centre (GRDC)
@@ -21,22 +21,62 @@ ISO :: International Organization for Standardization
 OGC :: Open Geospatial Consortium
 OWL :: Web Ontology Language
 UML :: Unified Modeling Language
-WaterML 2 :: WaterML 2.0 – an observation model for hydrology
+WaterML 2 :: working title for the indented suite of water-related OGC
+standards
 WIS :: WMO Information System
 WIGOS :: WMO Integrated Global Observing System
 WMO :: World Meteorological Organization
 XML :: eXtensible Markup Language
 
 === UML notation
-Most diagrams that appear in this specification are presented using the Unified Modelling Language (UML) static structure diagram, as described in Sub-clause 5.2 of the OGC Web Services Common Implementation Specification (OGC 04-016r2). UML classes are named in UpperCamelCase and property names in lowerCamelCase.
+Most diagrams that appear in this specification are presented using the
+Unified Modeling Language (UML) static structure diagram, as described
+in Sub-clause 5.2 of the OGC Web Services Common Implementation
+Specification (OGC 04-016r2). UML classes are named in UpperCamelCase
+and property names in lowerCamelCase.
 
 === WMO Terminology
-The HY_Features model uses—as far as possible—terminology recommended by the WMO Commission for Hydrology for use in the WMO Member countries. The key reference is the "International Glossary of Hydrology" [9], a joint publication of the WMO and the UNESCO. Wherever appropriate, terms from this glossary are applied to the feature concepts in this standard to capture meaning and contextual relationships. The synonym approach widely used in this glossary is interpreted in that way that glossary terms, when explicitly defined as synonyms, were defined as such even if they are not synonymous in every respect. Differences in terminology were explored through reconciling the explicit definitions documented in the glossary with aspects reflected in various data sets and products in use. The accepted terms were augmented with the relationships inferred from other terminology in order to define complex terms that do not clearly distinguish between a specific logical concept and its geometric representation or between a general term and its specific conceptual meaning. The definitions used in the conceptual model described in this standard may be understood as a conceptual refining of the definitions given in the WMO/UNESCO Glossary of Hydrology. 
+The HY_Features model uses--as far as possible--terminology recommended by
+the WMO Commission for Hydrology for use in the WMO Member countries.
+The key reference is the "International Glossary of Hydrology" <<9>> a joint 
+publication of the WMO and the UNESCO (hereinafter referred to as WMO/UNESCO 
+glossary of hydrology). Wherever appropriate, terms from this glossary are 
+applied to the featureconcepts in this standard to capture meaning and 
+contextualrelationships. The synonym approach widely used in this glossary is
+interpreted as signifying that synonymous terms are not necessarily
+synonymous in every respect. Differences in terminology were explored
+through reconciling the explicit definitions documented in the glossary
+with usage reflected in various data sets and products. The accepted
+terms were augmented with the relationships inferred from other
+terminology in order to define complex terms that do not clearly
+distinguish between a specific logical concept and its geometric
+representation or between a general term and its specific conceptual
+meaning. The definitions used in the conceptual model described in this
+standard may be understood as a conceptual refining and/or narrowing of
+the definitions given in the WMO/UNESCO Glossary of Hydrology.
 
-Though basically rooted in the definitions given in the WMO Glossary of Hydrology, for the purpose of testing the applicability of the conceptual model in the context of surface water hydrology, the definitions applied to hydrologic features defined in this standard refer to surface water. 
+Some words have been avoided because of their disparate uses in various
+implementation schemes. The words "reach" and "mainstem" are examples
+that are used to refer to such a variety of collections of features,
+that they have been avoided. Similarly, the term "watershed" is used and
+defined differently depending on its context and has been avoided.
+Unfortunately, it is inevitable that the terminology in HY_Features will
+conflict with one or more schemes or implementations of hydrologic
+features. In these cases, great care will need to be taken and the
+specific feature type names from HY_Features should be used when
+necessary.
 
-Some requirements classes defined in this standard refer to the Scoped Name concept of ISO 19103: CONCEPTUAL SCHEMA. Intended to form a basis for information and data sharing in the community of the WMO member countries, the Scoped Name should reflect a name endorsed by the WMO.
+Though rooted in the definitions given in the WMO/UNESCO Glossary of
+Hydrology, many of the hydrologic features in this standard have been
+defined more specifically for relevance to the surface water domain.
+Some requirements defined in this standard refer to the Scoped Name
+concept of ISO 19103: Conceptual Schema and any such _Scoped Name_
+implementations should reflect if possible a name endorsed by the WMO.
 
 === Naming convention
 
-The _HY_-prefix used in the UML model follows the ISO naming conventions for UML elements. There is no explicit requirement to use this name in an implementation for the same semantic elements, but it is required to provide an explicit mapping between terminology used and HY_Features to unambiguously indicate hydrologic feature concepts to support unambiguous interpretation in cross-domain applications. While there is not a recognized standard method for recording mappings between abstract element names and implementations; it is expected that system interoperability will be facilitated by making such mappings available as part of a dataset's documentation.
+The _HY_-prefix used in the UML model follows the ISO naming conventions
+for UML elements. There is no explicit requirement to use this same name
+in a corresponding implemented term but conformance will require that
+each such term be clearly connected back to its corresponding conceptual
+model term.

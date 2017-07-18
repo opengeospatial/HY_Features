@@ -1,94 +1,365 @@
 == Terms and Definitions
-This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r8], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this standard.
+This document uses the terms defined in Sub-clause 5.3 of [OGC
+06-121r8], which is based on the ISO/IEC Directives, Part 2, Rules for
+the structure and drafting of International Standards. In particular,
+the word SHALL (not "must") is the verb form used to indicate a
+requirement to be strictly followed to conform to this standard.
 
-For the purposes of this document, the following additional terms and definitions apply.
+For the purposes of this document, the following additional terms and
+definitions apply.
 
-=== *application schema*
+=== application schema
 Conceptual schema for data required by one or more applications [ISO 19101]
 
-=== *catchment*
-A physiographic unit where hydrologic processes take place. This class denotes a physiographic unit, which is defined by a hydrologically determined outlet to which all waters flow. While a catchment exists, it may or may not be clearly identified for repeated study.
+=== boundary (line)
+Geometric representation of a (catchment) boundary, usually a geometric
+composite curve.
 
 [NOTE]
-This approach considers the catchment concept to be the basic unit of study in hydrology, water resources management, and environmental reporting. The approach is meant to be holistic, referring to the continuous interaction of surface and subsurface waters within a catchment, even if a particular representation of the catchment refers to only surface or subsurface aspects of the catchment. Special subtypes such as drainage basin and groundwater basin may be defined with a particular application.
+This definition references the definition of a _divide_ described
+as summit or boundary line <<9>>.
 
-The synonym use of the terms catchment and catchment area as documented in the WMO-UNESCO International Glossary of Hydrology (which is the key reference for the definitions in the Hydrologic Features (HY_Features) model) does not clearly distinguish between the catchment concept and its geometric representations such as catchment area, nor between catchment and its possible specializations like drainage basin and groundwater basin.
+=== catchment
+A physiographic unit where hydrologic processes take place. This class
+denotes a physiographic unit, which is defined by a hydrologically
+determined outlet to which all waters flow. While a catchment exists, it
+may or may not be clearly identified for repeated study.
 
-The essential logical separation of concerns between a common concept and its representation (interpretable data) is dealt with by defining separate features for the catchment and its representation and may be understood as a refinement of the complex, ambiguous definition given in the glossary. See also clause 5.4 of this standard on the use of WMO terminology.
+[NOTE]
+====
+This approach considers the catchment concept to be the basic unit
+of study in hydrology, water resources management, and environmental
+reporting. The approach is meant to be holistic, referring to the
+continuous interaction of surface and subsurface waters within a
+catchment, even if a particular representation of the catchment refers
+to only surface or subsurface aspects of the catchment. Special subtypes
+such as drainage basin and groundwater basin may be defined with a
+particular application. +
 
-=== *data*
+The synonymous use of the terms catchment and catchment area in the
+WMO/UNESCO International Glossary of Hydrology (which is the key
+reference for the definitions in the HY_Features model) does not clearly
+distinguish between the catchment concept and its geometric
+representations such as catchment area, nor between catchment and its
+possible specializations like drainage basin and groundwater basin. +
+
+To satisfy the need for a both a holistic definition of catchment and
+various refinements of it, the catchment feature type is refined by
+defining feature types that reflect distinct perspectives on the
+holistic catchment concept. In this standard, this type of refinement is
+referred to as hydrology-specific catchment realization. Also see clause
+5.4 of this standard on the use of WMO terminology.
+====
+
+=== catchment area
+Two-dimensional (areal) hydrology-specific realization of the holistic
+catchment. Topologically, the catchment area can be understood as a face
+bounded by catchment divide and flowpath edges. The concept of a face
+bounded by edges is described in detail in the ISO topology model
+[ISO19107]. The catchment area is usually represented as a geometric
+surface, and the measure of the catchment area may be denoted as surface
+area.
+
+=== catchment divide
+One-dimensional (linear) feature that is a hydrology-specific
+realization of the holistic catchment. Topologically, catchment divide
+can be understood as an edge bounded by inflow and outflow nodes. The
+concept of an edge bounded by nodes is described in detail in the ISO
+topology model [ISO19107]. The catchment divide is usually represented
+as a geometric curve, or as a polygon ring feature.
+
+=== catchment network (topology)
+Edge-node topology pattern of a set of catchments connected by their
+hydro nexuses. The topology pattern is derived from flowpaths, but
+ultimately reflects the inferred hydrologic connectivity between
+catchments and their hydro nexuses whether or not corroborated by
+geometric representations.
+
+=== (internal) catchment topology
+Topology pattern between hydrology-specific realization of a particular
+catchment. Example: Catchment area associating its catchment divide and
+the draining flowpath. This could include subsurface and atmospheric
+volumes, surficial catchment area, network of drainage channels and/or
+waterbodies, a linear flowpath, and an outlet (and possible inlet) node.
+
+=== channel
+Natural or artificial waterway, clearly distinguished, which
+periodically or continuously contains moving water, or which forms a
+connecting link between two bodies of water <<9>>.
+
+=== channel network
+Connected set of depressions and channels that continuously or
+periodically contain water.
+
+=== cross section (of a stream)
+Section of a stream at right angles to the main (average) direction of
+flow <<9>>.
+
+=== cross section (of a stream bed)
+transversal section of a stream bed in a vertical plane. This definition
+references the definition of a _bed profile_ describing the shape of a
+stream bed in a vertical plane <<9>>.
+
+=== data
 Documented value of some characteristics of a real-world phenomenon.
 
-=== *data set*
+=== data set
 Data compiled and arranged into a set.
 
-=== *data product*
+=== data product
 Data set compiled for a specific purpose, e.g. for global dissemination using Web services.
 
-=== *domain feature*
-Feature of a type defined within a particular application domain [ISO 19156].
+=== dendritic catchment
+Catchment in which all waters flow to a single common outlet. A
+dendritic catchment is permanently connected to others in a dendritic
+(tree) network, the most common _drainage pattern_ of streams ultimately
+flowing into the ocean after joining together at confluences into larger
+and larger streams.
 
-=== *feature*
+=== depression
+Landform lower than the surrounding land and partially or completely
+closed that is able to but does not necessarily contain water.
+
+=== domain feature
+Feature of a type defined within a particular application domain. [ISO
+19156].
+
+=== endorheic (drainage)
+Draining [ultimately] into interior catchments <<9>>.
+
+=== exorheic (drainage)
+Draining [ultimately] into the ocean.
+
+=== feature
 Abstraction of real-world phenomena [ISO 19101].
 
-=== *hydrographic network*
+=== flowpath (also flow path)
+One-dimensional (linear) feature that is a hydrology-specific
+realization of the holistic catchment. Topologically, flowpath can be
+understood to be an edge bounded by inflow and outflow nodes, and
+associated with left-bank and right-bank sub-catchment faces. The
+concept of an edge bounded by nodes is described in detail in the ISO
+topology model [ISO19107]. The flowpath is usually represented as a
+geometric curve.
+
+[NOTE]
+====
+A flowpath feature may form the "main stem" of the stream
+network flowing to the catchment outflow node from its inlet node(s).
+
+With respect to the river referencing system described in this
+standard, the flowpath corresponds to the linear element 'that serves as
+the axis along which linear referencing is performed' as described in
+the OGC Abstract Specification Topic 19, Linear referencing [aka ISO
+19148].
+====
+
+NOTE 3: Hydrologically, the flowpath references the _path line_ __
+described by a moving particle of water <<9>>.
+
+=== flow line (also flowline)
+Geometric property of a flowpath, usually a geometric curve.
+
+[NOTE]
+This definition references the definition of a _path-line_ <<9>>
+through using the synonym __flow line__ to express the geometric
+property of a flowpath.
+
+=== hydrographic network
 Aggregate of rivers and other permanent or temporary watercourses, and also lakes and reservoirs [WMO, 2016].
 
 [NOTE]
 Not to be confused with the network of hydrological stations and observing posts.
 
-=== *hydrography*
-Science dealing with the description and measurement of open bodies of water [WMO, 2016]. 
+=== hydrologic complex
+Collection of distinct hydrologic features forming a hydrologically
+connected system where the union of one or more catchments and a common
+hydro nexus is realized by multiple complexes of hydrology-specific
+topological elements. For example, a single catchment may be
+hydrologically realized as a face-edge complex of subcatchment areas and
+divides, or an edge-node network of flowpaths and hydro nexus nodes, and
+also as a dendritic edge-node network of either waterbodies or
+containing channels.
+
+=== hydrologic feature
+Feature of a type defined in the hydrology domain, whose identity can be
+maintained and tracked through a processing chain from measurement to
+distribution of hydrologic information.
+
+=== hydro(-logic) location
+Any location of hydrologic significance located "on" a hydrologic
+network that is a hydrology-specific realization of a hydrologic nexus.
+In a given dataset, hydro locations may or may not have an associated
+hydrologic nexus and associated catchment features. In such cases, hydro
+locations would typically be linearly-referenced to a defined set of
+catchments' flowpaths. Topologically, a hydro-location can be understood
+as an inlet or outlet node located at the end of a flowpath edge. The
+hydrologic location is usually represented as a geometric point.
+
+NOTE: With respect to the river referencing system described in this
+standard, a hydro-location feature can correspond to either the referent
+that specifies a 'known, already referenced location on the linear
+element' as described in the OGC Abstract Specification Topic 19, Linear
+referencing [aka ISO 19148] or the reference location whose distance
+from a referent can be measured along a linear element.
+
+=== hydro(-logic) nexus
+Conceptual outlet for water contained by a catchment. The hydro nexus
+concept represents the place where a catchment interacts with another
+catchment. Every catchment flows to a hydro nexus, conversely every
+location in a hydrologic system can be thought of as a hydro nexus that
+drains some catchment. Similar to catchments, hydro nexuses can be
+realized in several hydrology-specific ways.
+
+If a given hydro nexus does not have a known hydrology-specific
+realization or is undetermined, it is termed 'nillable' in this
+standard. For example, a hydro nexus exists in the form of flow to the
+subsurface or atmosphere but may be undetermined and unrepresented
+within implementations focused on surface water hydrology and would not
+be included or referenced.
+
+=== hydrologic realization
+A hydrologic feature type that reflects a distinct hydrology-specific
+perspective of the catchment or hydro nexus feature types. Shares
+identity and catchment-nexus relationships with the catchment or nexus
+it realizes but has hydrologically determined topological properties
+that express unique ways of perceiving catchments and hydrologic
+nexuses. Distinct from representation in that it is a refinement of the
+holistic catchment, allowing for multiple geometric representations of
+each hydrologic realization.
+
+=== hydrology
+Science that deals with the waters above and below the land surfaces of
+the Earth, their occurrence, circulation and distribution, both in time
+and space, their biological, chemical and physical properties, their
+reaction with their environment, including their relation to living
+beings. <<9>>
+
+=== hydrometric feature
+Feature of a type which denotes a physical structure intended to observe
+properties of a hydrologic feature.
 
 [NOTE] 
-In this context, hydrography refers to the description of surface water bodies. Its measurement in terms of surveying, e.g. for navigational purposes, is not in the concern of the HY_Features model. *[is this still true? - thinking on water edge]*
+This definition references the definition of a _hydrometric
+station_ at which data on water in rivers, lakes or reservoirs are
+obtained on physical and chemical properties of water <<9>>. A hydrometric
+feature may be a composite station configured by arranging several
+monitoring components. Used to sample a hydrologic feature, a
+hydrometric feature may be considered a _sampling feature_ as defined in
+the ISO Observation model. A sampling feature is described in general in
+ISO 19156: Observation and Measurement, the special monitoring point of
+hydrologic observation is described in the OGC WaterML 2.0: Part 1-
+Timeseries standard <<4>>.
 
-=== *hydrologic complex*
-Collection of separate hydrologic features forming a closed, hydrologically determined system where the union of catchment(s) and a common outlet (conceptualized as an outfall) is realized by a ‘complex’ of hydrologic features. This concept is rooted in the idea of topological closure of catchment and outfall such that a realization of the logical catchment is always of higher topological dimension than the realization of the corresponding outfall. For example, a linear flowpath realizing a catchment may be understood as an edge between inflow and outflow nodes; the areal realization of a catchment as a face bounded by linear inflow and outflow.
+=== hydrometric network
+Aggregate of hydrologically connected monitoring stations situated on
+and used for hydrologic observation of a feature such as a catchment or
+hydrographic network. This definition references the definition of a
+synonymous _hydrological network_ consisting of hydrological stations
+and observing posts situated within a catchment in such a way as to
+provide the means of studying its hydrological regime <<9>>.
 
-[NOTE] 
-Hydrologic determination means that any catchment has a common outlet for its runoff. Any place to which water may flow can be associated with a corresponding catchment, even if catchment and outfall may be  unknown or un represented in a particular application. 
+=== hydrometry
+Science of the measurement and analysis of water including methods,
+techniques and instrumentation used in hydrology <<9>>.
 
-=== *hydrologic feature*
-Feature (abstraction of a real-world phenomenon) of a type defined in the hydrology domain. A feature whose identity needs to be maintained and tracked through a processing chain from measurement to distribution of hydrologic information.
+=== indirect position
+Position expressing the location of a feature relative to the known
+location of another feature. Indirect position requires a logical axis,
+bounded by the feature being placed and the feature being used as a
+reference, along which the position can be determined. Common examples
+in hydrology are mileposts along a river referencing the river source
+and/or mouth, and the placement of monitoring stations referencing
+already located stations.
 
-=== *hydrologic realization*
-Hydrologic feature that realizes a hydrologic concept within the hydrologic complex.
+=== interior catchment
+Catchment in which all waters are collected and drainage is endorheic;
+an interior catchment does not drain to other catchments. This
+definition is rooted in the _blind drainage_ pattern of water collecting
+in sinks or lakes not connected to streams <<9>>.
 
-=== *hydrology*
-Science that deals with the waters above and below the land surfaces of the Earth, their occurrence, circulation and distribution, both in time and space, their biological, chemical and physical properties, their reaction with their environment, including their relation to living beings [WMO, 2016].
+=== longitudinal section (of a stream)
+Vertical section of a stream in longitudinal direction. This definition
+is rooted in the definition of a _longitudinal section_ along a
+channel at its center line <<9>>, but generalized for all types of
+vertical section along a line.
 
-=== *hydrometric feature*
-Feature (abstraction of a real-world phenomenon) of a type defined in the process of measurement and analysis of water including methods, techniques and instrumentation used in hydrology (hydrometry) [WMO, 2016]. 
+=== longitudinal section (of a stream bed)
+Longitudinal section of a stream bed in a vertical plane. This
+definition references the definition of a _bed profile_ describing the
+shape of a stream bed in a vertical plane <<9>>.
+
+=== main stem (also mainstem)
+Main course along which water flows in a catchment excluding
+tributaries. For any identified catchment, the flowpath connecting
+inflow and outflow locations would typically correspond to or follow the
+main stem, but the main stem is conceptually broader than the catchment
+flowpath concept of HY_Features.
+
+=== mapping
+Establishing a semantic relationship between concepts in different
+information models using a formalism that specifies how elements from a
+source information model may be transformed into elements of a target
+model. Every pair of N models generally require a separate (2-way)
+mapping for each source concept (a total of N!/[2(N-2)!] mappings).
+Mappings that in contrast involve transformation by way of a common
+concept can be more efficiently expanded to more than two models as each
+additional model only requires mapping once into the set of common
+concepts (N mappings).
+
+=== named feature
+Feature identified by a name. Hydrologic features may have multiple
+names depending on the cultural, political or historical context.
+
+=== nillable
+Nillable is meant in this standard to signify that a feature property
+logically exists but may not be determined in a given implementation.
+
+=== referent
+Feature with a known location being used as a reference to locate
+another feature on the logical axis that stretches between the two. The
+(indirect) position of a new location is expressed as the distance along
+that linear element from the known referent to the feature being placed.
+
+=== representation
+Any process-able data, data set, or data product which characterizes a
+given feature concept.
+
+
+=== river referencing
+Referencing along a river applied to place a feature on a (linear)
+waterbody feature. The feature location is specified as an indirect
+position expressed as distance along the watercourse on which the
+feature is to be placed.
 
 [NOTE]
-The hydrometric feature refers to a physical structure intended to observe properties of a hydrologic feature. Used to sample a hydrologic feature, a hydrometric feature may be considered a sampling feature of observation. A sampling feature is described in general in ISO 19156: Observation and Measurement, the special monitoring point of hydrologic observation is described in the OGC WaterML 2.0: Part 1- Timeseries standard [4].
+A (hydrologic) feature of interest which is located along the
+locating one-dimensional flowpath between inflow and outflow nodes,
+corresponds to the linear referencing described in the OGC Abstract
+Specification Topic 19, Linear referencing 'specifying a location
+relative to a linear element along that element' [ISO 19148].
 
-=== *hydrometry*
-Science of the measurement and analysis of water including methods, techniques and instrumentation used in hydrology [WMO, 2016].
 
-=== *mapping*
-Establishing a semantic relationship between particular implementations of a common concept and the realized normative concept using a formalism that specifies how elements from a source model may be transformed to a target model.
-
-=== *named feature*
-Feature identified by a name.
-
-[NOTE]
-Hydrologic features and their real-world representations have names within common experience, but may have different names in their cultural, political and historical contexts.
-
-=== *representation*
-Any processable data, data set, or data product, which can be used in the place of an existing feature concept.
-
-=== *river positioning system*
-Linear system used to reference indirect positions along a watercourse.
-
-=== *storage (of water)*
-Impounding of water in surface or underground reservoirs, for future use [WMO, 2016]. 
+=== storage (of water)
+Impounding of water in surface or underground reservoirs, for future
+use. <<9>>
 
 [NOTE]
-Storage refers to a water body in terms of a usable water resource. The management of the reservoir as human action with the objective to efficient and sustainable use the resource, is not in the scope of the conceptual model. Yet, often an indication is required whether a water body is used for storage.
+NOTE: Storage refers to a body of water from the perspective of a usable
+water resource. The management of a reservoir itself, as a human action
+with the objective of efficient and sustainable use of the resource, is
+not in the scope of the conceptual model.
 
-=== *water body*
-Mass of water distinct from other masses of water [WMO, 2016]. 
+=== stream
+Water, generally flowing in a natural surface channel, or in an open or
+closed conduit, a jet of water issuing from an orifice, or a body of
+flowing groundwater <<9>>.
 
+=== waterbody (also water body)
+Mass of water distinct from other masses of water <<9>>.
+
+=== watercourse
+Natural or man-made channel through or along which water may flow <<9>>,
+including large interstices in the ground, such as cave, cavern or a
+group of these in karst terrain.
 

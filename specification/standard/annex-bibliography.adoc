@@ -3,31 +3,36 @@
 [[Bibliography]]
 = Bibliography
 
-[[EC2000]]
-[1] European Parliament and the Council: Directive 2000/60/EC of the European Parliament and of the Council of 23 October 2000 establishing a framework for the Community action in the field of water policy (EU Water Framework Directive). European Commission (2000)
+[#1]#[1] European Parliament and the Council: Directive 2000/60/EC of the European Parliament and of the Council of 23 October 2000 establishing a framework for the Community action in the field of water policy (EU Water Framework Directive). European Commission (2000)#
 
-[[INSPIRE2014]]
-[2] INSPIRE Thematic Working Group Hydrography: D2.8.I.8 Data Specification on Hydrography – Technical Guidelines. D2.8.I.8_v3.1. European Commission (2014), http://inspire.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_HY_v3.1.pdf
+[#2]#[2] INSPIRE Thematic Working Group Hydrography: D2.8.I.8 Data Specification on Hydrography – Technical Guidelines. D2.8.I.8_v3.1. European Commission (2014), http://inspire.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_HY_v3.1.pdf#
 
-[[OGC2008]]
+[[3]]
 [3] OGC Hydrology Domain Working Group Charter. OGC 08-095r5, Open Geospatial Consortium (2008), https://portal.opengeospatial.org/files/?artifact_id=59773
 
-[[OGC2012]]
+[[4]]
 [4] OGC WaterML 2.0: Part 1- Timeseries. OGC 10-126r4, Open Geospatial Consortium (2012). https://portal.opengeospatial.org/files/?artifact_id=57222
-[[OGC2013]]
-[5] OGC HY_Features: a Common Hydrologic Feature Model: Discussion Paper. OGC 11-039r3, Open Geospatial Consortium (2013), https://portal.opengeospatial.org/files/?artifact_id=55157[[OGC2016]]
+
+[[5]]
+[5] OGC HY_Features: a Common Hydrologic Feature Model: Discussion Paper. OGC 11-039r3, Open Geospatial Consortium (2013), https://portal.opengeospatial.org/files/?artifact_id=55157
+
+[[6]]
 [6] OGC WaterML 2.0: Part 4- GroundwaterML 2 (GWML2). OGC 16-032r2, Open Geospatial Consortium (2016)
 
-[[USGS1992]][7] Hydrologic units, hydrologic unit codes, and hydrologic unit names (Modified from Slack and Landwehr, 1992 and Seaber, Kapinos, & Knapp, 1987). US Geological Survey (1992), https://water.usgs.gov/nawqa/sparrow/wrr97/geograp/hucs.txt 
+[[7]]
+[7] Hydrologic units, hydrologic unit codes, and hydrologic unit names (Modified from Slack and Landwehr, 1992 and Seaber, Kapinos, & Knapp, 1987). US Geological Survey (1992), https://water.usgs.gov/nawqa/sparrow/wrr97/geograp/hucs.txt 
 
-[[WMO2012]]
+[[8]]
 [8] Guide to Hydrological Practices. Volume I: Hydrology – From Measurement to Hydrological Information. World Meteorological Organization (ed.). WMO (Series), no168. WMO , Geneva  (2012), http://www.whycos.org/chy/guide/168_Vol_I_en.pdf.
 
-[[WMO2016]][9] International Glossary of Hydrology / Glossaire International d'Hydrologie. World Meteorological Organization, United Nations Educational, Scientific and Cultural Organization (eds.). WMO (Series), no385. WMO, Geneva (2016). ISBN 978-92-63-03385-8. ISBN 978-92-3-001154-3.
+[#9]#[9] International Glossary of Hydrology / Glossaire International d'Hydrologie. World Meteorological Organization, United Nations Educational, Scientific and Cultural Organization (eds.). WMO (Series), no385. WMO, Geneva (2016). ISBN 978-92-63-03385-8. ISBN 978-92-3-001154-3.#
 
-[[MCKAY2012]][10] McKay, L., Bondelid, T., Dewald, T., Johnston, J., Moore, R., and Rea, A.: NHDPlus Version 2: User Guide, Horizon Systems (2012), ftp://ftp.horizon-systems.com/nhdplus/NHDPlusV21/Documentation/NHDPlusV2_User_Guide.pdf
+[[10]]
+[10] McKay, L., Bondelid, T., Dewald, T., Johnston, J., Moore, R., and Rea, A.: NHDPlus Version 2: User Guide, Horizon Systems (2012), ftp://ftp.horizon-systems.com/nhdplus/NHDPlusV21/Documentation/NHDPlusV2_User_Guide.pdf
 
-[[BOM2015]][11]Bureau of Meteorology: Australian Hydrological Geospatial Fabric (Geofabric) version 3.0, Product Guide, Bureau of Meteorology, Australia (2015), http://www.bom.gov.au/water/geofabric/documents/v3_0/ahgf_productguide_V3_0_release.pdf
+[[11]]
+[11]Bureau of Meteorology: Australian Hydrological Geospatial Fabric (Geofabric) version 3.0, Product Guide, Bureau of Meteorology, Australia (2015), http://www.bom.gov.au/water/geofabric/documents/v3_0/ahgf_productguide_V3_0_release.pdf
 
-[[SANDRE2010]][12] National service for water-data and reference-dataset management (2010), http://www.sandre.eaufrance.fr/concept/national-service-water-data-and-reference-dataset-management?lang=en	
+[[12]]
+[12] National service for water-data and reference-dataset management (2010), http://www.sandre.eaufrance.fr/concept/national-service-water-data-and-reference-dataset-management?lang=en	
 
