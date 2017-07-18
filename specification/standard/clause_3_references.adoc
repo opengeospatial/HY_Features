@@ -1,21 +1,35 @@
 == References
-The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
+The following normative documents contain provisions that, through
+reference in this text, constitute provisions of this document. For
+dated references, subsequent amendments to, or revisions of, any of
+these publications do not apply. For undated references, the latest
+edition of the normative document referred to applies.
 
-ISO 19101:2002, Geographic Information—Reference Model 
+OGC Abstract Specification Topic 1, Feature Geometry +
+(aka ISO 19107:2003, Geographic Information -- Spatial schema)
 
-ISO/TS 19103:2005, Geographic Information — Conceptual schema language 
+OGC Abstract Specification Topic 2, Spatial referencing by coordinates +
+(aka ISO 19111:2007, Geographic Information -- Referencing by
+coordinates)
 
-ISO 19107:2003, Geographic Information — Spatial schema 
+OGC Abstract Specification Topic 5, Features +
+(aka ISO 19101:2002, Geographic Information -- Reference Model)
 
-ISO 19108:2006, Geographic Information — Temporal schema 
+OGC Abstract Specification Topic 11, Metadata (aka ISO 19115-1:2014,
+Geographic Information -- Metadata Ð Fundamentals)
 
-ISO 19109:2006, Geographic Information — Rules for application schemas 
+OGC Abstract Specification Topic 19, Geographic information - Linear
+referencing (aka ** ISO 19148:2012, Geographic Information -- Linear
+referencing)
 
-ISO 19111:2007, Geographic Information — Referencing by coordinates 
+OGC Abstract Specification Topic 20, Observations and Measurements (aka
+ISO 19156:2011, Geographic Information -- Observations and Measurements)
 
-ISO 19115:2012, Geographic Information — Metadata – Fundamentals  
+ISO/TS 19103:2005, Geographic Information -- Conceptual schema language
 
-ISO 19148:2012, Geographic Information — Linear referencing
+ISO 19108:2006, Geographic Information -- Temporal schema
 
-ISO 19156:2011, Geographic Information — Observations and Measurements
+ISO 19109:2006, Geographic Information -- Rules for application schemas
 
+ISO 19133:2005, Geographic Information -- Location-based services Ð
+Tracking and navigation

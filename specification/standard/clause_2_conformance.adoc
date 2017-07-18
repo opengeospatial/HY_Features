@@ -1,18 +1,41 @@
 == Conformance
-This standard defines the conceptual model for identification of hydrologic features and their fundamental relationships. The conceptual model may be used in two ways: a) to derive implementation classes for data exchange or b) via reference (referred to here as mapping) from terms used in an implementation to the equivalent terms in the HY_Features model. The form of such a mapping is not specified in this standard, but in general there is correspondence expected between particular implementations of hydrologic features and realized HY_Features concepts. There will be an exact correspondence or a correspondence to a specialization of a HY_Features class with narrower scope. Since no technical semantic mapping standard is supported by the OGC standards baseline at this time, only the expressivity requirements of mappings are specified in relevant conformance clauses. +
+This standard defines a conceptual model for hydrologic features and
+their fundamental relationships. Requirements for conformance with the
+conceptual model are defined for two types of implementation targets: a)
+implementation schemas for representation of hydrologic data or b)
+implementation mappings between terms or concepts from two or more other
+existing hydro data schemas based on common intermediary HY_Features
+concepts. Any conformant implementations are required to satisfy the
+requirements defined in Clause 7 of this document for the requirements
+class(es) with which they assert conformance. This is true whether the
+implementation is explicit in the case of a schema (such as an OWL/RDF
+ontology or XML schema) or implicit in the case of common concepts for a
+schema mapping (such as an XSLT rule). The accuracy or detail with which
+an external term is mapped to a HY_Features common concept is beyond the
+scope of this standard, as is specification of a particular concept
+mapping methodology. +
 
-Requirements for OGC HY_Features standardization target types are considered:
+Annexes C-G of this document provide, nevertheless, informative mappings
+to and from HY_Features for the following hydro data models: +
 
-* Encodings (such as OWL and RDF) of the HY_Features conceptual UML model described in this standard and
-* Application schemas formally mapped to HY_Features concepts including Feature Type classes and associative relationships.
+* Australian Hydrological Geospatial Fabric (AHGF) [11],
+* USGS National Hydrography Dataset Plus (NHD Plus)[10],
+* INSPIRE Hydrography theme [2],
+* French National Service for Water Data and Reference-dataset
+Management (SANDRE) [12],
+* Canadian National Hydrography Network (NHN) [13]
 
-For brevity, the terminology implement is used to indicate either a direct encoding or existence of a formalized mapping that would enable a client, at run-time, to determine that a particular implementation class implements a specific HY_Features concept.
+These mappings are intended to provide a general understanding of the
+correspondence between HY_Features concepts and existing conceptual /
+physical models. They are informative with respect to any future mapping
+implementations. +
 
-Part 2 of this standard (a future document) is intended to provide an OWL encoding of the HY_Features application schema, whereby the mapping from the implementation to this specification will be formalized through use of encoding rules that allow direct correspondence of schema elements with the UML elements defined.
+Conformance of implementation targets with this standard shall be
+verified using all the relevant tests specified in Annex A (normative)
+of this document. The framework, concepts, and methodology for testing,
+and the criteria to be met to claim conformance are specified in the OGC
+Compliance Testing Policies and Procedures and the https://cite.opengeospatial.org/[OGC Compliance
+Testing web site].
 
-
-Conformance with this standard shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.
-
-In order to conform to this OGC™ interface standard, a software implementation shall choose to implement any one of the conformance levels specified in Annex A (normative).
-
-All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.
+All requirements-classes and conformance-classes described in this
+document are owned by the HY_Features standard.

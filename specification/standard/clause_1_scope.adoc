@@ -1,31 +1,108 @@
 == Scope
 
-This OGC Implementation Standard defines a common feature model for the identification and description of surface hydrologic features using established models and patterns in use in the Hydrology domain and endorsed by WMO and UNESCO such as those documented in the "International Glossary of Hydrology". +
+This OGC Implementation Standard defines a common conceptual feature
+model for use in identification of features as typical features of the
+hydrology domain using established models and patterns in use in the
+Hydrology domain and endorsed by WMO and UNESCO such as those documented
+in the "International Glossary of Hydrology". +
 
-Part 1 (this document) introduces the conceptual model itself. The normative model is a machine-readable UML artifact published by the OGC in conjunction with this document at: #[insert URL here]#. +
+This standard, along with expected future implementations of this
+conceptual model, will form the third part of an intended 'OGC WaterML
+2' suite of standards that groups water-related OGC standards. Following
+_Part 1: Timeseries_, _Part 2:_ __Ratings, Gaugings and Sections__, this
+standard is titled _Part 3: Surface Hydrology Features Conceptual
+Model_. +
 
-Part 2 (a future document) is expected to define an OWL and RDF representation of the conceptual model suitable for defining links between data that reference the HY_Features model, to support documentation and discovery of data and to aid future data transformation efforts. This work may provide a basis for further work in the wider OGC on a methodology (tooling) to publish ontologies to support their practical use.
-The initial scope is defined by the WMO Commission for Hydrology (WMH-CHy): to facilitate data sharing within the hydrologic community of the WMO Member countries and to improve the quality of data products based on these data by defining hydrologic features to convey the identification of water-objects through the data processing chain "from measurement to hydrological information" link:#WMO2012[[8]].
+This document introduces the HY_Features conceptual model only. The
+normative model is a machine-readable UML artifact published by the OGC
+in conjunction with this document at: #*[insert URL here]*#. Clause 7 of
+this document presents requirements classes (ways of conforming to the
+conceptual model) and requirements for model implementations to meet in
+order to be considered conformant with the conceptual model. Conformance
+classes indicating how to demonstrate conformance to requirements are
+presented in Annex A. +
 
-To enable semantic interoperability of hydrologic data and services, it is necessary to agree on common concepts and methods for machine interpretation of the concepts. To this goal, the HY_Features model was developed in order to formalize the concepts and relationships of hydrologic features using the WMO/UNESCO "International Glossary of Hydrology" as a starting point. +
+Future standards documents in this series are expected to specify
+particular implementations of the conceptual model. For example, an
+OWL/RDF implementation will define machine-processable entities and
+relationships in the OWL schema language that implement the HY_Features
+conceptual model elements. HY_Features implementations are expected to
+support documentation and discovery of data as well as aid data
+transformation efforts. For example, a discovery service such as a
+catchment catalog might use HY_Features concepts to index services that
+provide differing catchment representations as well as related water
+quality and quantity observations. A catalog client could then use the
+index for automated analysis and data product generation. +
 
-This standard is meant to support the linkage of data products distributed across differing applications and jurisdictions. To enable this, a holistic concept of catchment is defined and the surface-water aspects of the concept are modeled. This will allow a particular surface catchment to be represented in different data products while retaining its identity. In addition to unique identification of features in multiple systems, a second objective is to provide a standard terminology and ontology to describe relationships between hydrologic features. This may be useful in building a data transfer format for specific subsets, particularly catchment hierarchy and river network topology but such data transfer format development is not in scope for this standard. +
+The initial scope has been defined by the WMO Commission for Hydrology
+(WMO-CHy): to facilitate data sharing within the hydrologic community of
+the WMO Member countries and to improve the quality of data products
+based on these data by defining hydrologic features to convey their
+identification through the data processing chain "from measurement to
+hydrological information" link:#WMO2012[[8\]]. +
 
-The HY_Features model provides a basis for common and stable references to hydrologic features in a wide variety of applications:
+To enable semantic interoperability of hydrologic data and services, it
+is necessary to agree on common concepts and methods. The HY_Features
+model was developed in order to formalize concepts and relationships of
+hydrologic and hydrographic features using the WMO/UNESCO "International
+Glossary of Hydrology" as a starting point. One of HY_Features main
+objectives is to provide a standard terminology for description of
+relationships between hydrologic features that can be used to implement
+data transfer formats. However, this conceptual model should be seen as
+a building block toward a hydrographic data interchange data standard,
+but such a standard would require additional efforts. +
 
-* to link hydrologic observations to their feature-of-interest, e.g. link a streamflow observation to the river or catchment being observed,
-* to allow aggregation of cross-referenced features into integrated datasets and data products on global, regional, or basin scales,
-* to enable information systems to unambiguously link data across distributed systems and domains,
-* to enable cross-domain or multi-discipline services to communicate through reference to standard concepts.
+HY_Features is meant to support linking data products across differing
+applications and jurisdictions. To enable this, the concept of a
+holistic catchment is defined and "hydrology-specific realizations" of
+the catchment concept are modeled as typical hydrologic features. This
+allows a particular catchment to be represented in different feature
+data products for different purposes while still retaining its identity. +
 
-This standard defines a set of Application Schemas (normative) containing feature type definitions that conform to the OGC General Feature Model (GFM) (ISO 19101:2002 and ISO 19109:2006), expressed in the Geographic Information Conceptual Schema Language (ISO 19103:2005) using the Unified Modeling Language (UML). +
-The GFM is a meta-model developed to serve as the general conceptual model for features and feature properties in the context of geographic information. A feature type is identified by a set of typical characteristics (property type) such as attributes, association, or operations as well as by possible constraints. Each attribute, association or operation is identified on its own by properties and constraints. Conformity to the GFM is assured by instantiating the general feature type as feature classes specific to the application domain. +
+The HY_Features model provides a basis for common and stable references
+that identify hydrologic features in a wide variety of applications: +
 
-As shown in link:#figure1[Figure 1], the HY_Features conceptual model realizes the GFM by providing a domain-specific instance of the general GF_FeatureType (aka FeatureType) «metaclass» capturing the Hydrology phenomenon. Since its concern is primarily the issue of feature identification, a basic type HY_HydroFeature is defined to reflect the overall properties hydrologic features have such as identifier, name and context. Special feature types are defined to reflect different aspects of hydrology by the typical characteristics each specialization carries. Given the complexity of the domain, a wide range of possible properties may be relevant for a given hydrologic feature type. +
+* to link hydrologic observations to their feature-of-interest, e.g.
+link a streamflow observation to the river or catchment being observed,
+* to allow aggregation of cross-referenced features into integrated
+datasets and data products on global, regional, or basin scales,
+* to enable systems to unambiguously link data between systems and
+domains,
+* to enable cross-domain or multi-discipline services to communicate
+through reference to standard concepts.
 
-link:#figure1[Figure 1] also shows how the HY_Features model allows the feature-of-interest concept of the Observation and Measurement (O&M) model (ISO 19156:2011) to be realized for hydrologic observations. Depending on the application, the target of an observation may be a Domain Feature, like a water body, or a Sampling Feature, such as a stream gage, used as a proxy for a Domain Feature. Specifically, observation-centric data models such as the WaterML2.0 implementation profiles of O&M may use the concepts provided in this standard to identify domain-specific relationships between a sampling feature and the ultimate sampled feature. +
+While HY_Features is intended to support a wide variety of applications,
+it is narrowly focused on surface water hydrographic features. As such,
+nuances of waterbodies and storages such as glaciers, snowfields, and
+wetlands are left to future work. Additionally, temporal aspects of
+hydrologic features are not addressed in this standard and would be
+expected to be handled by implementations using HY_Features classes for
+feature identification. Finally, as this standard precedes expected
+encoding standards, implementation details, such as the structure and
+handling of feature identifiers are out of scope. +
 
-The model concepts may be used to describe the relationships of observation results to the hydrologic feature of interest they are meant to represent and in this way to link spatial and non-spatial hydrologic data. In particular, this allows links to be implemented in a standard way between resources on the Web. For example, a discovery service such as a catalog of catchments could use the concepts defined here to provide machine interpretable pointers to services that provide differing geospatial representations of the same catchments as well as data from water quality and water quantity observations that characterize some aspects of the catchments. A client could then use those links for automated workflows and data product generation.
+This standard defines a conceptual model (normative) containing feature
+type definitions that conform to the OGC General Feature Model (GFM)
+(ISO 19101:2002 and ISO 19109:2006), expressed in the Geographic
+Information Conceptual Schema Language (ISO 19103:2005) using the
+Unified Modeling Language (UML). The GFM is a meta-model developed as a
+general framework for features and their properties in the context of
+geographic information. Feature types specific to an application domain
+are defined as instances of the general feature metaclass with their own
+sets of typical characteristics (property types and constraints) such as
+attributes, associations, or operations. +
+
+As shown in link:#figure1[Figure 1], the HY_Features conceptual model 
+defines instances of the general feature metaclass specific to the hydrology 
+domain. A general HY_HydroFeature type is defined to carry properties such as
+identifier and name that all hydrologic features should have. Specific
+feature types are then derived from HY_HydroFeature to reflect different
+aspects of hydrology and carry properties specific to each aspect.
+link:#figure1[Figure 1] also illustrates that HY_Features features can 
+fill the role of features-of-interest or sampling features for hydrologic 
+observation data conforming to the Observation and Measurement (O&M) model 
+(ISO 19156:2011) or to hydro-specific O&M profiles such as in the OGC
+WaterML 2' suite of water-related standards. +
 
 [#figure1]
 .HY_Features in the context of the OGC Abstract Specifications

@@ -2,187 +2,988 @@
 
 === The abstract idea of the hydrology phenomenon
 
-Processes that continuously deplete and replenish water resources cause or result in a wide range of phenomena that are the subject of monitoring, modeling and reporting in hydrology and related sciences. These distinctly named or otherwise uniquely identified real-world hydrologic phenomena are conceptualized and referred to as hydrologic features in this standard. This standard applies to data and data products that represent these hydrologically defined features.
+Processes that continuously deplete and replenish water resources cause
+or result in a wide range of phenomena that are the subject of
+monitoring, modeling and reporting in hydrology and related sciences.
+This standard conceptualizes these distinctly named or otherwise
+uniquely identified real-world hydrologic phenomena as hydrologic
+features.
 
 [#figure2]
 .Processes of the Hydrologic Cycle
 image::figures/fig2.png[]
 
-Water is moving from the atmosphere to the Earth and back to the atmosphere due to the processes forming the Water Cycle (link:#figure2[Figure 2]). Water from precipitation reaching the land surface is accumulated in water bodies occupying empty space on the land surface or in water bearing formations of soil and rock. Excess water overflows these formations and is driven downhill by gravity. Water flowing over soil or rock causes erosion to occur. This erosion tends to concentrate flowing water into water bodies that flow downhill using a connecting system of channels intersecting other water bodies along their way to a common outlet, conceptualized as a potentially complex outfall feature.
+Water is moving from the atmosphere to the Earth and back to the
+atmosphere due to the processes forming the Water Cycle (link:#figure2[Figure 2]).
+Water from precipitation reaching the land surface is accumulated in
+waterbodies occupying empty space on the land surface or in water
+bearing formations of soil and rock. Excess water overflows these
+formations and is driven downhill by gravity. Water flowing over soil or
+rock causes erosion to occur. This erosion tends to concentrate flowing
+water into waterbodies that flow downhill using a connecting system of
+channels intersecting other waterbodies along their way to a common
+outlet, conceptualized as a single (potentially complex or ambiguous)
+hydrologic location which may be described as an outlet, confluence, or
+nexus.
 
-Looking back upstream from the outfall, the corresponding catchment feature can be described as a main linear flowpath feature, an areal feature, a boundary feature that encompasses the drained area, a network of water body features, a network of channel features, or a network of hydrometric station features, all representing the catchment. The concepts and terminology used in the preceding sentences form the conceptual and semantic basis for this standard.
+Looking back upstream from the outlet location, the corresponding
+catchment feature draining to it can be thought to have several distinct
+hydrology-specific forms: a flowpath feature, a catchment area feature,
+a catchment divide feature, a network feature of waterbodies, a network
+feature of channels (or waterbody containers), or a network feature of
+hydrometric (or observation) stations. All these are examples of what
+are referred to in HY_Features as _realizations_ of the holistic
+catchment concept.
 
-As described above, the most general abstraction of the hydrology phenomenon is the catchment. A catchment is a recognized unit of study where hydrologic processes form physiographic features that are realized in various data products. In this specification, the term realization is used to imply that a catchment is recognized and identified for the purpose of referencing it by name or within a topology of other catchments. The term representation is used where geometry is used to represent a catchment's physical features. Using these definitions, we can say that a catchment is an unrealized conceptual feature that can be realized by features for use in topological networks and features with explicit geometry.
+The most general conceptualization of hydrology phenomena is the
+catchment. A catchment is a recognized unit of study where hydrologic
+processes form physiographic features that are described in various data
+products. It serves as the commonly recognized unit of water resources
+assessment and management that can cross administrative jurisdictions.
+In multi-stakeholder collaboration and cross-domain research projects,
+catchments may be recognized as shared monitoring and reporting units.
+Most typically, river monitoring stations are assigned to a recognized
+catchment. Catchment inflow and outflows connect information between
+recognized catchments. Regardless of the way catchments are realized and
+represented, their basic identification can serve as the critical link
+between disciplines and jurisdictions. Examples of defined
+organizational catchments include the "Hydrologic Unit Code" (HUC)
+catchments defined by the U.S. Geological Survey for research and
+regulatory data systems to use as a reference link:#USGS1992[[7\]] and "River Basin
+Districts" of the European Water Framework Directive link:#EC2000[[1\]]. In contrast to
+these, monitoring and research stations and hydrologic locations like
+bridges and confluences often imply or hydrologically determine
+identified catchments.
 
-Depending on application and scale, the same catchment may be realized in many different ways. The following describe different examples where this multiple realization concept is important:
+In this specification, a catchment feature provides a means to have an
+_identified_ grouping of hydrologic study activities and data artifacts.
+A catchment may be _realized_ by catchment-realization features whose
+connectivity may be described using one or more topological properties
+and geographic characteristics _represented_ by geometric properties.
+The term _realization_ is used here to imply that a holistic feature
+type like catchment can have more specific hydrologic feature types that
+share identity with but express a different aspect of it. The term
+realization is not meant to be interpreted as a Unified Modeling
+Language realization relationship.
 
-- The most typical example is that scaling a map-visualization up or down leads to multiple more or less detailed representations of the same realized hydrologic feature.
-- Analyses and reports from various disciplines reference differing spatial representations of the same conceptual catchment.
-- Some applications require cartographic (visual) representations while others are focused on topological (network connectivity) realizations only (link:#figure3[Figure 3]).
-- A catchment may be represented geometrically by streamlines, drainage area or the bounding polygon, or realized topologically as a face, edge, and/or nodes.
+The three terms, _identification, realization,_ and _representation,_
+are very important to understanding the HY_Features conceptual model.
+_Identification_ of a hydrologic feature implies that a feature has a
+hydrologically significant identity and would normally have a name in
+common usage. _Realization_ implies a particular hydrologic feature type
+which has specific hydrologically determined topological properties and
+relationships. _Representation_ implies that the particular realization
+of a feature has been defined by a particular geometric shape. For
+example, the Amazon River is _identified_ in that we have a name for it
+and a vague notion of the Amazon River catchment. We can _realize_ the
+Amazon River catchment, thinking of it in a number of ways: as a
+boundary ridge line, a surface covering the drained area, a linear
+flowpath from source to mouth, etc. Each of those hydrologic
+realizations may have different representations: the boundary may have
+surface and groundwater contributing variants, the area might have
+elevation and land cover variants, the flowpath might have a one
+dimensional simple and three-dimensional complex variant. Using
+HY_Features, each of these representations could be identified as being
+a particular representation of a particular hydrologic realization of
+the Amazon River catchment.
 
-Catchments can be realized as geographic streams and outfalls, simplified geographic stream representations, schematics of streams and outfalls, an aggregate of catchments, simplified representations of catchment aggregates, or schematics showing how catchments relate.
+Depending on application and (spatial) scale, the same catchment may be
+realized in a number of different ways. The following are examples of
+the multiple realization pattern:
 
-The concept of catchment used in this standard is that it is described physically as illustrated above. It can also be described as the recognized unit of water resources assessment and management across administrative jurisdictions. In multi-stakeholder collaboration and cross-domain research projects, the catchment is recognized as a shared monitoring and reporting unit, in that monitoring stations are usually on a river in a recognized catchment, attributes of the catchment may be in reference to its geometry, and its inflow and outflow are network locations connecting it to other catchments in a topology. Examples of catchments include "Hydrologic Unit Code" (HUC) catchments defined by the U.S. Geological Survey for research and regulatory data systems to use as a reference link:#USGS1992[[7]] and "River Basin Districts" of the European Water Framework Directive link:#EC2000[[1]].
+1.     The most typical example is that scaling a map-visualization up
+or down requires realization of a catchment as a single flowpath or
+boundary at one scale and a network of flowpaths or boundaries at
+another scale.
+
+2.     Analyses and reports from different disciplines may reference
+differing realizations of the same conceptual catchment. For example,
+one discipline may realize a network of waterbodies while another
+realizes a network of channels.
+
+3.     Some applications require cartographic (visual) realizations
+while others are focused on topological (network connectivity)
+realizations only.
+
+4.     A catchment may be realized geometrically by streamline, drainage
+area/surface, bounding polygon, or stream network, and realized
+topologically as a face, or an edge.
+
+link:#figure3[Figure 3] illustrates some possible alternative catchment realizations.
 
 [#figure3]
 .Illustration of multiple representations of a catchment
 image::figures/fig3.png[]
 
-[#section6_3]
 === Catchment and realizations of the catchment concept
 
-The core concept of the HY_Features model is that a study of the Hydrology phenomenon will reference common conceptual entities of the real world such as catchment, water body, channel, or stream gaging site, through the use of features according to a specific model (as per ISO 19109 General Feature Model). Depending on the field of study or application, complex hydrology phenomenon features may be realized in many ways. This leads to the idea that each study of a catchment may portray it in a particular way leading to multiple realizations of the same conceptual entity.
+The core concept of the HY_Features model is that studies of hydrology
+phenomena have a need to reference common conceptual entities of the
+hydrosphere--such as catchment, waterbody, channel, or monitoring
+position--through the use of feature types defined in a specific model
+(as per ISO 19109 General Feature Model). Depending on the field of
+study or application, complex hydrology phenomena may be hydrologically
+realized as different feature types. Recognizing the catchment as the
+holistic unit of study allows multiple realizations and the information
+they carry to be connected to the same identified conceptual entity.
+link:#figure4[Figure 4] is a graphic meant to represent the basic catchment concept
+visually without highlighting any particular realizations.
 
 [#figure4]
-.Idealized catchment. This idealized catchment diagram is used to represent the catchment concept with no emphasis on any realization or representation. In the diagrams below, aspects of this diagram are highlighted to emphasize particular concepts of the HY_Features conceptual model.
+.This figure should be interpreted as the idealized catchment concept independent of realization or representation. Later figures use it as a base upon which realizations are highlighted.
 image::figures/fig4.png[]
 
-Across hydrologic disciplines the concept of catchment defined in this standard is the recognized conceptual unit of study where hydrologic processes take place. Catchment boundary, catchment area, and linear flowpath are the most common geometric realizations of a catchment, and are widely used to create cartographic views of a catchment. Map layers that separately visualize the hydrographic network of water bodies (typically as blue lines for small rivers and blue polygons for larger rivers and lakes) and of channels (typically lines displaying a drainage pattern indicating the path flow may follow), or a network of hydrometric monitoring stations, are usually combined to portray the represented catchment as a whole. Such cartographic data products are usually exposed in map services, while the water body or channel features are provided with an appropriate geometry and location usually in features services. To illustrate these ideas, link:#figure4[Figure 4] shows an idealized watershed with different graphical representations highlighted.
+Fundamental to the catchment concept is that each catchment is defined
+by and paired hydrologically with a __hydro nexus__ which forms the
+outlet to which all catchment waters drain and potentially the inlet
+that corresponds with the outlet(s) of upstream catchment(s). A hydro
+nexus is always defined as the feature that provides connectivity
+between catchments and can have a hydrology-specific realization that is
+a hydrologic location. Hydrologic locations stand alone as features such
+as confluences, stream gages, pour points, or bridges and can be the
+real-world feature that we think of as the location of a nexus between
+two or more catchments. It's important to highlight that hydrologic
+locations do not have to realize a hydro nexus. In many cases, they will
+be network-linked features without associated catchments, while in other
+cases, they are realizations of hydro nexus features.
+
+Hydro nexuses, like catchments, are features that may have one or more
+hydrology-specific realizations that are single locations, complex
+locations, or even diffuse or indistinct geographies. In the absence of
+such realizations, systems of catchments and hydro nexuses can form a
+topological complex based on their hydrologic connectivity even if their
+topological elements are not or cannot be represented geometrically.
+Building on concepts of hydrologically determined catchment topology and
+multiple catchment realizations, a collection of hydrologic features
+that realize a larger catchment can be said to form a _hydro complex_
+that is comprised of the collection of catchment and hydro nexus
+features and any other feature(s) that realize the catchment and/or the
+hydro nexus. A hydro complex may include multiple realized topologies
+such as flowpath, catchment area, stream or channel networks.
 
 [#figure5]
-.Multiple graphical realizations of a catchment (from top left to bottom right): a) Catchment boundary, b)   Catchment area, c) flowpath of catchment d) network of sub catchments, e) cartographic view, f) abstract flow paths, g) hydrographic network, h) network of logically connected monitoring stations.
+.Multiple catchment realizations (top left to bottom right): a) catchment boundary, b) catchment area, [[flowpath]]c) catchment flowpath d) subcatchment network, e) hydrographic network, f) geo-schematic network, g) flow network, h) hydrometric network of monitoring stations.
 image::figures/fig5.png[]
 
-Each of these graphical realizations is a different way of looking at the catchment and its interaction with other features. It is generally not possible to inspect a particular realization and understand all characteristics of the catchment because different types of features are often realized using identical data models. For example, a map showing a set of catchment polygons may display an aggregate of sub-catchments, or a collection of catchment polygons that overlap each other occupying the same space. In order to understand what catchment concept is being realized, the more detailed information about their type and role in a data model needs to be declared. These relationships and potential constraints may be declared between a high-order catchment and the catchments generally nested therein, or between an aggregate network of catchments that encompasses nested catchments without any overlap, or the upstream-downstream direction of flow for a set of catchment polygons.
+Catchment area, catchment divide, and linear flowpath are the most
+common topological realizations of the catchment concept, and are widely
+used to create cartographic representations of a catchment. Map layers
+that provide visualizations of the hydrographic network of waterbodies
+(typically as blue lines for small rivers and blue polygons for larger
+rivers and lakes) or of channels (typically lines displaying a drainage
+pattern indicating the path that flow may follow), or a network of
+hydrometric monitoring stations, are usually combined to represent the
+catchment as a whole. link:#figure5[Figure 5] adds graphical representations of such
+realizations to the idealized catchment of link:#figure4[Figure 4].
 
-In some cases, a catchment may be realized as an identified feature without specified geometry that takes part in a topological network of catchments. This is common, for example, in data systems supporting hydrologic modeling. Catchment attributes needed to parameterize a model may be generated using various geospatial data sets, but the geometric information is not necessary for the actual modelling. In applications like this, and in data systems supporting such applications, a catchment can be realized by an identifier, attributes, and topological connections that are not necessarily the same as would be implied by geometric representation of a catchment. That is, while a catchment has a geometric representation that is an area, which would imply it is a topological face, the catchment can have a non-geometric realization that is a topological edge which conveys flow from inflow to outflow. This flexibility, where a realization of a catchment feature does not need to have an explicit geometric representation allows a decoupling of visual and conceptual concerns with the ability to explicitly link data products that would not otherwise be easily related.
+==== Hydrologic Features Schemes
+Each hydrology-specific realization of a catchment is a different way of
+thinking of the catchment that emphasizes different hydrologic and/or
+topological characteristics. While these distinctions are useful, many
+nuances of a given dataset may not be evident from the feature types
+alone. For example, a map of catchment polygons may portray a
+non-overlapping coverage of sub-catchments, or a collection of
+overlapping catchment polygons that correspond to monitoring stations.
+It is very important to understand that every hydrologic feature dataset
+follows a unique "scheme" with regard to the general concepts of
+HY_Features. That is, catchments' type and role in a particular
+application or dataset, such as catchment hierarchy, upstream-downstream
+relationships, and cross-scale realization correspondence, will vary
+according to the needs of the application.
 
-=== Catchment hierarchy and network topology
+Some applications have no need for geometric representations of
+catchments at all. In such schemes, topological networks of catchments
+without geometries are used by themselves. An example of this might be a
+data system supporting hydrologic modeling. Geospatial data may be used
+to parameterize models that then run only using topological catchment
+relationships. In this kind of scheme, the topological realization may
+not correspond to a single geometric representation. For example, when
+it is modeling a diffuse area of drainage between two model units. a
+hydro nexus may take on the topological role of a node but not
+represented geometrically as a single point.
 
-Catchments may be connected in topological networks which provide continuity between catchments, the ability to aggregate catchments, and to trace catchment networks up- or down-stream. Topological connectivity is typically indicated by adjacent polygon edges, nesting of polygons, or through connection of linear features at nodes. However, since geometric realization of hydrography serves many purposes and may not be needed at all, it is not appropriate to rely only on geometry as the basis for topology. Instead, topology can be expressed as relationships between conceptual features of a particular type which may or may not have explicit geometric realizations.
+A very common scheme that includes geometric representation is sometimes
+referred to as the "reach-catchment" scheme and is typified by the U.S.
+NHDPlus [10]. In this case, the catchment network forms a continuous
+coverage of incremental drainage units where each catchment corresponds
+to one and only one flowpath. This scheme comes about as a result of
+elevation derived hydrography where, at a given scale, incremental
+drainage polygons are defined for every confluence-to-confluence
+flowpath. This scheme can be described using HY_Features, but many of
+its specific constraints and nuances are implementation details that
+would be specified in a profile and/or implementation of HY_Features.
+
+Considering datasets that include multiple realizations and/or
+representations of features across two or more scales, the idea of the
+implementation scheme is very important. For example, consider a dataset
+that has high-resolution and low-resolution variants of
+reach-catchments, as described above. The flowpaths of the
+low-resolution catchments may or may not be represented by the union of
+the set of high-resolution catchments' flowpaths that connect its inflow
+to outflow. A scheme may also include different kinds of realizations or
+representations for higher or lower resolution features. For example, at
+one scale, all waterbodies in a network may be represented as linear
+flowpaths merely connecting catchment inlet to catchment outlet. At
+finer scales, the same waterbodies may be represented as waterbody
+polygons that show inundated area or even as some form of mesh or
+surface representing the containing bathymetry and/or the waterbody
+volume. All these examples are supported by HY_Features, but would need
+to be specified as a profile or with implementation by a particular
+application.
+
+Another example of a dataset-scheme is the idea of a "contracted
+catchment" and a "contracted node" which are used in the Australian
+Hydrological Geospatial Fabric [11] to describe catchments, and
+associated outlet locations. The word contracted is used as in a legal
+contract, meaning that a "contracted node" is one for which a contract
+that it will be realized and given a representation in future versions
+of the dataset has been established. Many hydrologic data sets have
+similar varying-levels of permanence and governance of features'
+identity. As far as HY_Features is concerned, these are implementation
+details that would be specified as a profile or implementation of the
+model.
+
+Specific feature types defined in the HY_Features model include
+HY_HydroFeature (in section 7.3.1), HY_Catchment, HY_HydroNexus,
+HY_CatchmentRealization, HY_HydroLocation, HY_CatchmentArea,
+HY_CatchmentDivide, HY_Flowpath, HY_HydroNetwork and
+HY_CartographicRealization (section 7.3.2).
+
+=== Catchment topology and hierarchy
+An unlimited number of overlapping catchments can potentially be defined
+in a given region since every point in that region corresponds to some
+catchment that drains to it. However, catchments are normally connected
+in drainage networks and built around significant features of the
+terrain such as confluences. Catchment networks, that might form a
+continuous coverage of the landscape, provide continuity between
+catchments, the ability to aggregate catchments, and to trace flow up-
+or down-stream.
+
+In a network of catchments, morphological detail may be specified in
+many ways. Inflows and outflows are often complex where water flows out
+of one catchment and into another. As shown in link:#figure6[Figure 6], catchments may
+connect through simple confluences (Figure 6a), waterbodies or wetlands
+(Figure 6c), intermittent or subsurface flows (Figure 6d), complex
+braided streams (Figure 6e), or distributary systems like deltas (Figure
+6f). In some situations, diffuse (multiple) inflows can be conceptually
+joined in a 'conjoint' catchment (Figure 6b) and spread (multiple)
+outflows may be joined in a catchment flowing out at a single,
+conceptual outflow (Figure 6e).
 
 [#figure6]
-.(C1-C5, from left to right): C1, Typical catchments with one inflow and one outflow each; C2, Joined (conjoint) catchments flowing into a single downstream catchment; C3, catchments joining in a waterbody or wetland with no clear network; C4, catchments joining through intermittent or subsurface flows C5, catchments that join through areas of complex or braided channels
+.Catchment connectivity examples (top left to bottom right): a) Simple catchments with one inflow and one outflow each; b) conjoint catchments with an ambiguous divide flowing into a single downstream catchment; c) catchments joining in a waterbody or wetland with no clear network at their shared nexus; d) catchments joining through intermittent or subsurface flows; e) catchments that join through areas of complex or braided channels with an ambiguous divide near their junction; f) catchments with distributary hydro nexuses such as in a delta.
 image::figures/fig6.png[]
 
-In a network of catchments, morphological detail may be specified in many ways. Inflows are generally conceptual in headwaters, and outflows are often complex where water flows out of a network. As shown in link:#figure6[Figure 6] catchments may connect through simple confluences (C1), water bodies or wetlands (C3), intermittent or subsurface flows (C4) or complex braided streams (C5). Although these cases require different geographic representations, they can be represented using the same catchment topology. Since all these cases can be specified using simple topology, no special treatment is required to handle the variation of flow processes.
+Although these cases require different geographic representations, they
+can be represented using the same pattern of the catchment and hydro
+nexus. Since all these cases can be specified referencing a simple
+internal edge-node catchment topology, no special treatment is required
+to handle the variation of flow processes. While link:#figure6[Figure 6] 
+illustrates a simple dendritic junction, and a method to handle complexity 
+through encapsulation, it's important to note that HY_Features can support
+non-dendritic network topology where a given hydro nexus may be
+distributary and contribute flow (be an inflow hydro nexus) to multiple
+catchments.
 
-==== Hierarchy of catchments
-
-Any catchment may be nested or aggregated in a larger containing catchment or split into multiple sub units forming a hierarchy of catchments. Two types of catchment hierarchy are supported in HY_Features: basic nesting and dendritic aggregation: 1) Basic nesting allows any catchment to have a reference to a containing catchment (link:#figure7[Figure 7]). This allows collections of sub-catchments to be grouped into larger units, but does not define any particular interconnections between these sub-catchments. 2) Dendritic hierarchies are collections of catchments with simple topological relationships that allow determination of contribution of flow to downstream catchments. To reflect the organization of catchments in dendritic networks, a special dendritic catchment is defined that permanently contributes exorheic flow to a receiving catchment (link:#figure8[Figure 8]), and an interior catchment of endorheic flow that contributes temporarily to a receiving catchment.
+Any catchment may also be nested in a larger containing catchment or
+split into multiple sub units to define catchment hierarchies. Two types
+of catchment hierarchical relations are supported in HY_Features: basic
+nesting and dendritic aggregation. Basic nesting allows any catchment to
+reference a containing catchment (link:#figure7[Figure 7]) without defining any
+particular interconnections between the two. Dendritic aggregations
+(link:#figure8[Figure 8]) consist of specialized dendritic catchments that contribute
+exorheic flow to an outlet and support simple topological relationships
+that allow determination of flow from upstream to downstream catchments.
+Specialized interior catchments add support for endorheic flow or
+interior drainage within dendritic aggregations.
 
 [#figure7]
-.Catchment hierarchy – A catchment (dark grey), may be nested within a containing catchment which is another catchment (light grey)
+.Catchment hierarchy, with one catchment (dark grey C1) nested within another catchment (light grey C) and corresponding HY_Features UML classes.
 image::figures/fig7.png[]
 
 [#figure8]
-.Catchment hierarchy – A catchment (C1, C2, or C3) may be part of a simple dendritic network of catchments which is also a catchment.
+.Catchment Catchment hierarchy with smaller catchments (C1, C2, C3) part of a dendritic catchment network, which is also a catchment and corresponding HY_Features UML classes.
 image::figures/fig8.png[]
 
-==== Topological network of catchments
+=== Catchment network realization
 
-Given the idea that a non-geospatial schematic representation of a feature can show its connection in a topological network, a catchment can be thought of as a hydrologic unit whose terrain and morphology results in a topological link between inflow and outflow. The red line in link:#figure9[Figure 9] illustrates how a single catchment, represented by a boundary, an area, a stream network, and a main flowline, could also be represented using a single line that is not geospatially representative but is a valid schematic representation of the connection between inflow and outflow.
+As discussed above, catchments may have a number of hydrology-specific
+realizations. A network of catchments that interact at hydro nexuses can
+be realized as a network of catchment realizations. For example, a
+network of catchments, each realized as a flowpath, can be realized as
+the network of linear flowpath edges connected by hydro location nodes.
+link:#figure9[Figure 9], link:#figure10[Figure 10], and 
+link:#figure11[Figure 11] illustrate how a single catchment C1
+is realized as a catchment area (light grey catchment area A) and also
+as a flowpath (red line F). Each catchment is potentially connected to
+other catchments at its outflow nexus n1 (Figure 10) and/or inflow nexus
+n2 (Figure 11). The flowpath geometry may trace the main flowpath
+through the catchment or it could be a purely schematic straight-line
+representation of a topological edge. Figure 9, Figure 10, and Figure
+11, include UML diagrams that describe the hydrologic features
+highlighted in the figures.
 
 [#figure9]
-.A catchment area (grey) and a flowpath connecting inflow to outflow (red) depicting a definable unit where hydrological processes take place.
+.Catchment area (grey area A) and flowpath realization (red line F) that connects catchment inflow to outflow for a defined a hydrologically significant unit (C1) and corresponding HY_Features UML classes.
 image::figures/fig9.png[]
 
 [#figure10]
-.Catchments contributing to an identified outflow node. Note that some catchments contribute to a common outflow node.
+.Catchment (C1), realized by a flowpath (red line F) and area (grey area A), contributes to a common outflow hydro nexus node (n1) and corresponding HY_Features UML classes.
 image::figures/fig10.png[]
 
 [#figure11]
-.Catchments receive inflow via an identified inflow node. Note that nodes are not necessarily geographic features, but are rather nodes in a graph representation of the river network.
+.Catchment (C1), realized by a flowpath (red line F) and area (grey area A), receives inflow from hydro nexus node n2 and corresponding HY_Features UML classes.
 image::figures/fig11.png[]
 
-The catchment C1, shown in link:#figure10[Figure 10], contributes flow to outflow node n1. Node n2, shown in link:#figure11[Figure 11], contributes inflow to catchment C1. Networks of catchments can be constructed using this construct and the idea that two or more catchments that flow into the same downstream catchment, first flow to the same outflow node which is the inflow node of the receiving downstream catchment. In a network of dendritic catchments, outflow nodes on the network serve only one receiving catchment.
+In a network of dendritic catchments, one or more catchments may
+contribute outflow to a given hydro nexus, but only one catchment can
+receive inflow from that nexus. This hydrology-specific topological
+relationship is maintained regardless of the geometric representation of
+the hydro location which realizes the nexus. The association role names
+_inflow_ and _outflow_ are used to unambiguously describe the flow
+direction at a hydro nexus with respect to a dendritic catchment.
 
-Nodes may seem to stand alone as points of interaction in the network, but In reality, they are (potentially complex) watershed outlets, denoted as outfall features. Whether an outfall (node) is referred to as an inflow or outflow node is always in reference to a particular catchment. This means that a node serves as the outflow node of some contributing catchment(s) and the inflow node of some receiving catchment(s). In this standard, the inflow and outflow role names of the conceptual outfall (node) are used to unambiguously describe the node's role with respect to a catchment.
+Catchment networks that appear non-dendritic, such as broad river
+bottoms with complex braided channels and two or more primary inflows,
+can be modeled with HY_Features. While a catchment contributes flow to a
+single outflow hydro nexus, there is no restriction on the number of
+catchments contributing to a hydro nexus. Figure 12a illustrates a case
+where hydro nexus nodes n2 and n3 have one and two contributing
+catchments respectively, and both have two receiving catchments. Such
+situations are quite common in hydrologic systems. Examples include
+prairie pothole or ponded wetland landscapes, networked urban drainage
+systems, waterbodies with multiple outflows, and
+non-surface-contributing regions with ambiguous or complex outflows.
+While HY_Features does not attempt to model all these types of features,
+it does support non-dendritic catchments, if an application supports
+them, and it provides mechanisms to encapsulate such real-world
+complexity.
 
-In a dendritic network, the outflow node that one or more dendritic catchments flow to (which is not necessarily a single geometric point) must contribute to one and only one receiving catchment, unless it is a terminal catchment. Given that the dendritic catchment is defined as a special type of the more general catchment concept, it inherits the general nesting as defined for the catchment as shown in link:#figure7[Figure 7].
-
-Being topological nodes, inflow and outflow nodes have no explicit positions but are potentially complex watershed outlets. In fact, a node may be represented by a complex geometry with multiple parts. This is important in the case of a catchment that contains a broad river bottom with complex braided channels and two or more primary inflows. There may be no clear way to identify an inflow location, but from a topological perspective each contributing catchment can be said to contribute to the same node and that diffused inflow can be said to contribute to the catchment in question (link:#figure12[Figure 12]). Note that in this case, the complexity required to support geospatially accurate linear referencing may be lost in the interest of easy network navigation capabilities.
-
-It is worth noting that non-dendritic networks are often represented as a dendritic catchment network by introducing joint catchments that contain the non-dendritic parts. link:#figure12[Figure 12] shows an example of a network with a non-dendritic topology, where it is not possible to determine to what extent flow from catchment F contributes to catchments E, B or C (C7). C8 shows the same topology where catchments E, B, and C have been aggregated and the nodes N2 and N3 are treated as a single virtual inflow node, so that all the flow from catchments D and F accumulate in the resulting catchment X. Using this encapsulation approach, catchments can be represented using a simple tree structure where an upstream-downstream relation can be built without the need for complex hydrography between inflow and outflow nodes.
+By introducing conjoint catchments that encapsulate non-dendritic parts,
+such complex situations can also be modeled as dendritic networks of
+catchments. link:#figure12[Figure 12] shows a non-dendritic stream network, where it is
+not possible to determine to what extent flow from catchment F
+contributes to catchments E or C (Figure 12a) without additional
+information. Joining the catchments E, B, and C (Figure 12b) and
+collapsing their outflow nexuses n2 and n3 into a single virtual inflow
+hydro nexus, accumulates all the flow from catchments D and F in the
+resulting catchment X. Some implementations could go even further,
+eliminating node n2 and lumping catchment D into X as well. While not
+required, this encapsulation approach can be used to model a complex
+catchment topology as a simple dendritic network.
 
 [#figure12]
-.Encapsulation of non-dendritic stream network topology. The left figure shows a case where it is not possible to determine to what extent flow from catchment F contributes to catchments E, B or C. The right figure shows how catchments E, B, and C can be aggregated so nodes N2 and N3 are treated as a single virtual inflow node, so that all the flow from catchments D and F accumulate in the resulting catchment X.
+.Non-dendritic stream network complexity: a) non-dendritic detailed flow: b) unambiguous aggregated flow.
 image::figures/fig12.png[]
 
-[#section6_4]
-=== River reference system
-Considering any identified location on a network as the outflow node of a contributing catchment, or the inflow node of a receiving catchment, an arbitrary new location can be placed on the network in reference to the existing outfall up- or downstream. Understanding such a reference as a positioning "along a river", the linear flowpath representation of a catchment can be used for linear referencing. HY_Features defines the concept of a river reference system which has three components: 1) an origin at an inflow or outflow outfall; 2) a shape defined by the flowpath of a catchment that connects to the origin; and 3) a linear distance or relative (percentage) measurement system. Each catchment has its own reference system which can be combined as necessary using catchment topology; each river reference system must have one outfall (origin) and one representing flowpath (shape). link:#figure13[Figure 13], and Figure 14 illustrate how a newly introduced network location can be located downstream of a catchment inflow, or upstream of a catchment outflow.
+The topological pattern of a catchment network is shared with all of its
+hydrology-specific realizations, although the topological "level"
+(solid, face, edge, node) of a realization may vary. A given scheme
+topologically realize catchments as a solid bounded by inflow/outflow
+faces, a face bounded by inflow/outflow edges, or an edge bounded by
+inflow/outflow nodes. A single catchment may also be realized as a
+topological complex consisting of all of the flowpath edges, and hydro
+location nodes forming the surface drainage of that catchment. The
+topological role that each hydrology-specific realization feature plays
+may or may not correspond directly to its geometric representation. For
+example, a waterbody plays the role of a flowpath edge between its inlet
+and outlet, but may be represented geometrically as a polygon ring.
+
+=== Surface water networks
+Maps displaying a representation of a catchment are very common in
+hydrology research and engineering. Depending on the scientific concern
+and application, as well as the spatial scale of interest, different
+aspects and details of hydrology phenomena may be represented using
+application-specific map symbols. HY_Features accommodates this
+diversity with multiple alternate hydrology-specific realizations of the
+catchment and hydro nexus concepts which in turn may be represented
+alternately as geometric points, lines, polygons, or surfaces, or as
+aggregates of these geometric types. This standard is based on a
+hydrologically determined topology model of directed hydro nexuses
+acting as inflow or outflow locations for catchments which in turn
+connect them. This topological catchment network pattern can be realized
+in context-specific networks of features which each realizes a single
+catchment or hydro nexus, especially in hydrographic networks of
+waterbodies or networks of surface depressions and channels that may
+contain waterbodies. These network features may in turn have a variety
+of scale- and application-specific geometric representations. For
+example, a fixed landmark point on a waterbody, or a cross-section line
+separating a watercourse can each represent a hydro location node that
+realizes a nexus within the hydrology-specific topological _hydro
+complex_.
+
+==== Hydrographic and channel network
+Surface water flows in networks, and so hydrographic data is commonly
+organized into those same networks. Surface water networks are also
+self-similar; the patterns of rivers and deltas visible at a continental
+scale resolve continuously into similar but more detailed nested
+networks of streams, lakes, confluences, and other features as the
+spatial scale of mapping and inquiry increases. The HY_Features model of
+catchment networks and nested waterbody and channel network realizations
+is intended to address the multi-scale nature of hydrologic data and
+connect hydrologic phenomena and observations across a range of the
+scales.
+
+The basic elements of surface water networks at any scale are
+_waterbodies_ and the _channels and depressions_ through which they flow
+and in which they are contained. Following the definitions in the
+WMO/UNESCO "International Glossary of Hydrology" link:#WMO2016[[9\]] a 
+waterbody is understood as the mass of liquid water accumulated on or below 
+the land surface as a body of flowing water, which in some parts may have
+stagnant water that is not moving or flowing. The waterbody concept
+formalized in this specification is consistent with this definition, but
+focuses on surface-waterbodies only. A conceptual model capturing the
+specifics of bodies of groundwater as well as aquifers containing
+groundwater are provided by the WaterML2 Part 4 - GroundwaterML2
+specification link:#OGC2016[[6\]]. A future WaterML2 specification part 
+is expected to complete the sub-atmospheric hydrologic cycle by addressing 
+features such as recharge zones and springs that connect groundwater with 
+surface water phenomena.
+
+The container for a waterbody, a channel or depression, is commonly
+understood as a type of natural or man-made watercourse through or along
+which water may or may not flow [9]. A network of channels (or drainage
+pattern) exists independent of whether it contains water at a particular
+time. The HY_Features conceptual model accommodates both targets
+(waterbody and container) of hydrologic study by defining separately and
+then linking together waterbody features and containing land surface
+features. *Note that flow-through or standing lakes and similar features
+are considered to be types of waterbodies whose container is a
+depression.*
+
+Connected waterbodies with their associated containing channel network
+make up the hydrographic and channel networks that hydrology-specific
+realize the catchment that the networks drain. Individual waterbodies
+themselves can also be characterized in more detail along vertical
+cross- or longitudinal sections as well as within horizontal strata as
+to their distinct thermal, salinity, oxygen, and nutrient
+characteristics, etc. Such bathymetric and strata information may also
+be represented as or derived from a surface such as would be derived
+from Lidar. Waterbodies or their strata may also be recognized as
+storage reservoir features with water use, regulation, or control
+characteristics.**
+
+In order to form hydrographic or channel networks, waterbodies or
+channels that hydrologically realize catchments as topological edges
+need to be connected by way of topological nodes. The HY_Features model
+therefore connects waterbodies or channels through a hydro location
+which realizes the hydro nexus corresponding to these catchments.
+Although an entire network realizes the catchment that it drains to a
+single hydro nexus, each hydro location node connecting waterbodies or
+channels can also be thought of as realization of a hydro nexus that
+drains the sub-catchment that feeds that waterbody. The catchment
+relationships defined in the catchment model described in this standard
+can be used for both the larger catchment realized by the whole
+hydrographic network and the catchment(s) whose hydro nexuses can be
+used to connect waterbodies at hydro locations within the hydrographic
+network. While there is conceptually a hydro nexus realization at the
+outlet of every flowing waterbody, it's important to point out that not
+all waterbodies will have identified or realized hydro nexus features in
+every dataset. However, the conceptual existence of a hydro nexus and a
+hydro location which realizes it at the outlet of a waterbody is
+important to form cross-scale and cross-dataset hydro location ties
+between channels, waterbodies, and the catchments they drain.
+
+It is common practice to realize a catchment as a single main-stem
+flowpath (link:figure5[Figure 5c]) as well as a complete hydrographic or channel
+network. There is some choice in which catchments to delineate and
+realize in this way. As discussed in section 6.2.1, some
+elevation-derived hydrographic datasets define one associated drainage
+"reach-catchment" for each stream segment connecting two confluences.
+Others identify main-stem rivers that flow from their headwaters to a
+common outlet. In either case, the corresponding catchment typically
+carries the identity (name or some ID) of the main river and its outlet
+is considered the mouth of the river. The main stem flowpath serves as
+both a component of the stream network realizing a catchment and as a
+standalone realization linking the inflow and outflow of that catchment.
+Networks of flowpaths and hydro locations can in turn realize larger
+catchment networks. At small scales, complex networks of watercourses
+can have one main-stem flowpath made up of many smaller scale reaches.
+At large scales, a network made up of one reach may serve as the single
+main flowpath.
+
+Specific HY_Features classes supporting surface water networks include:
+HY_ChannelNetwork, HY_Channel, HY_Depression (in section 7.4.1),
+HY_HydrographicNetwork, HY_WaterBody, HY_WaterBodyStratum,
+HY_CrossSection, HY_LongitudinalSection, HY_Water_LiquidPhase, and
+HY_Water_SolidPhase (in section 7.4.2).
+
+==== Hydrometric network
+Water bodies are observed using monitoring stations which are typically
+physical locations with a well-established cross section they monitor.
+It is common practice to locate a monitoring station in relation to
+local landmarks and permanent reference points along a stream or in
+relation to the outlet of the monitored waterbody. The river reference
+system, described in section 7.3.3, gives a mechanism to locate such
+points along a flowpath in relation to located hydro nexuses. When
+aggregated into a network, monitoring stations within a catchment can be
+said to make up a logically connected hydrometric network which monitors
+a catchment.
+
+For the purpose of linking identified monitoring stations, (thought to
+be the sampling feature in terms of the observations and measurements
+standard) and a river or other hydrologic feature (thought to be the
+domain or sampled feature in terms of observations and measurements) a
+specific hydrometric feature participating in a hydrometric network is
+defined. The monitoring feature role of hydrometric features is unique
+in contrast to all other hydro location types in HY_Features, which
+would be used as observed domain features in observations and
+measurements.
+
+Specific HY_Features classes supporting hydrometric networks include:
+HY_HydrometricNetwork and HY_HydrometricFeature described in section 7.5
+of this standard.
+
+=== Referencing hydrologic locations along a river
+It is common practice in hydrology to reference hydrologic locations
+(typically observation stations, but also designated reaches, or flood
+plain zones) to an existing dataset, expressing the locations as a
+distance along a particular linear flowpath waterbody. Given that the
+flowpath has an established hydro nexus realization, whether located as
+a network feature or inferred through a dataset convention such as
+digitization direction, any hydrologic location can be referenced to the
+network through association with an existing outflow (or inflow)
+location and distance along the flowpath. Such a network location is
+often determined on the fly through topological and/or geometric means
+when a search is executed or as part of some automated data processing
+routine. This standard does not preclude such techniques, but does not
+attempt to address the permanence or method of establishing such network
+locations. Instead, HY_Features provides a linear referencing data model
+to facilitate relating hydrologic locations across datasets and scales.
+
+To allow expression of cross-dataset links, this standard specifies a
+system for referencing "along a river" by defining the one-dimensional
+flowpath which realizes a particular catchment as a linear element and a
+hydro location which realizes the hydro nexus of that catchment as the
+reference location. A hydrologic location can be thought of as a tie
+point between different hydrologic datasets. That is, the hydro nexuses
+in one dataset can be realized as hydro locations and referenced in
+another dataset. Similarly, hydro locations may actually be monitoring
+locations, without identified hydro nexuses - which they theoretically
+may realize. Whether used to link hydro nexuses and associated
+catchments or other types of information, an identified hydro location
+provides a way to link specific network locations between data sources.
+
+The HY_Features conceptual model defines an indirect position which has
+three properties: 1) a hydro nexus realized by a hydrologically
+significant "reference location"; 2) a "linear element" defined by the
+flowpath which starts or ends at the reference location; and 3) a
+"distance from referent" measure providing an absolute or relative
+(percentage) value. The relationship between the identified hydro nexus
+(hydro location) and catchment (flowpath) is either inlet and downstream
+catchment or outlet and upstream catchment, and can be used to provide
+upstream or downstream directionality of the distance.
+
+With a specified inflow or outflow hydro nexus as reference location and
+a specific realization of its flowpath, each catchment can support its
+own river referencing. Realized as a hydro location, a located hydro
+nexus is the potential reference location at the end of a flowpath that
+could split the original reference flowpath at the newly located hydro
+location. For example, if two bridges are thought of as the inflow and
+outflow locations of a catchment, the downstream bridge hydro location,
+which realizes an outflow hydro nexus, may form the reference location
+for stream gages upstream from the bridge and the next upstream bridge.
+Similarly, the upstream bridge hydro location, which realizes the inflow
+hydro nexus, may be the reference location for stream gages downstream
+and the next downstream bridge.
+
+Note that in these cases, the upstream or downstream orientation of the
+measurement is always declared in relation to the catchment inflow or
+outflow. Since this varies in application, the orientation is specified
+with an inflow or outflow association between the flowpath linear
+element (catchment realization) and the reference point hydro location
+(hydro nexus).
+
+Applying the indirect position model, a feature of interest can be
+related to a hydro nexus and the associated catchment by linking it to
+an existing hydro location, or as a new hydro location linked to
+flowpath linear element and hydro nexus referent. It's worth mentioning
+that a special case of hydro location that is coincident with a hydro
+nexus referent (at distance '0') could be considered a realization of
+the hydro nexus.
+
+==== Indirect position
+Provided that the network of catchments is realized as one-dimensional
+flowpaths and inflow and outflow hydro nexus locations (e.g. the
+upstream or downstream end of the flowpaths is known), a feature of
+interest can be located in the network along the linear flowpath
+catchment realization. A new location can be placed along a flowpath in
+reference to an already established inflow or outflow hydro nexus that
+bounds the flowpath. The new network location is can be expressed as a
+distance along the flowpath 'measured' from the known flowpath end.
+link:#figure13[Figure 13] shows the simplest case, where the inflow of 
+a catchment is some linear distance upstream of a located outflow 
+measured along a flowpath.
 
 [#figure13]
-.Position (yellow dot) downstream of a reference point (red dot). While referenced positions (P) are usually referenced to permanent locations like confluences (r2), they can also be considered to be the outflow of contributing catchment and thus, the origin of a river reference system of their own.
+.Inflow node referenced along a downstream flowpath
 image::figures/fig13.png[]
 
+===== Network location of features realizing a catchment hydro nexus
+In the case that the new network location is to be a hydro nexus in a
+pre-existing network, the already existing catchment would have to be
+split into catchments upstream and downstream of what was just a
+location, such as a stream gage, and is to be a hydro nexus that is
+associated with (realized by) a location (stream gage). Once inserted as
+a new hydro nexus, the upstream catchment would be realized as a
+flowpath between the location (e.g. stream gage) and the inflow of the
+now split catchment. Similarly, the downstream catchment would be
+realized by a flowpath between the new location and the outflow of the
+split catchment.
+
+In this case, the unknown network position of the new location is known
+to be the inflow or outflow hydro nexus location. link:#figure14[Figure 14] 
+shows a newly introduced hydro nexus that now splits an existing flowpath.
+Because the new network location would now be a realization of the
+outflow hydro nexus of the upstream catchment and the inflow hydro nexus
+of the downstream catchment, it's location is known to be the upstream
+or downstream end of one of the associated catchments' flowpaths.
+
 [#figure14]
-.Position (yellow dot) upstream of a reference point (red dot). Typically, r1 would be the origin and P, the referenced point; however, the river reference system model allows for the referenced point to be the origin of it’s own river reference system.
+.Newly introduced hydro nexus referenced along an upstream and downstream flowpath
 image::figures/fig14.png[]
 
-=== Hydrographic and hydrometric networks
-
-Hydrographic data is commonly organized into networks. HY_Features includes catchment realizations for the hydrographic network of waterbodies, channel network connected conveyances, and hydrometric network of monitoring stations. The following sections first describe the individual network types uniquely, then describe how these networks relate to each other in the context of the overall HY_Features model. The main function of these network models is to allow an aggregate of hydrologic features at one scale to act as a single encapsulated entity at another scale. 
-
-==== Hydrographic and channel networks
-
-Following the definitions in the UNESCO-WMO "International Glossary of Hydrology" link:#WMO2016[[9]] a water body is understood as the mass of liquid water accumulated on or below the land surface as a body of flowing water, which in some parts may have stagnant water that is not moving or flowing. The water body concept formalized in this specification is consistent with this definition, but focuses on surface water bodies only. A conceptual model capturing the specifics of bodies of groundwater as well as aquifers containing groundwater are provided by the WaterML2 Part 4 - GroundwaterML2 specification link:#OGC2016[[6]]. 
-
-A watercourse is commonly understood as a natural or man-made channel through or along which water may or may not flow [9]. A water body is generally a flowing body of water contained by a natural watercourse, but could also be in a manmade open or closed conduit [9]. Given that the channel network (or drainage pattern) exists independent of whether it contains water, HY_Features conceptually separates natural and manmade hydrographic features into the body of water and the unit that contains the water body. This distinction is helpful to separate concerns of hydrology--studying the occurrence, accumulation, and circulation of water--and hydraulics--focused on the analysis and design of watercourses. Note that flow-through lakes and lakes without outflows are considered to be water bodies whose container is modeled as a surface depression.
-
-Water bodies with their associated water courses can be aggregated into hydrographic and channel networks identified as the hydrographic or channel network of the catchment the network drains. Individual waterbodies can be described with vertical cross- or longitudinal sections. A water body may also be stratified into distinct horizontal layers for distinct thermal, salinity, oxygen, nutrient, or storage characteristics. Water may be stored and managed in reservoirs for future use, regulation, or control. Conceptually, each water body accumulating water may be managed as a reservoir. To model reservoir storage at multiple reservoir stages or elevations, HY_Features includes an association between a reservoir and its waterbody stratum. The concept of stratum could also be applied to bathymetric contours of a lake to describe the container of a lake water body. 
-
-To place waterbodies topologically or geographically in a network, the HY_Features model provides a mechanism to associate waterbodies with a realization of a catchment outfall. In the case of a hydrographic network that realizes an entire catchment, the HY_Features catchment relationships can be used for both the larger catchment realized by the whole hydrographic network and the catchment(s) whose outfalls are used to locate waterbodies within the hydrographic network. This builds the idea outlined in link:#section6_3[section 6.3] in that every identified waterbody has a conceptual catchment that can be arranged topologically within a catchment network and is described in greater detail in link:#section6_5_3[section 6.5.3].
-
-==== Hydrometric networks
-
-Water bodies are observed using monitoring stations which are typically physical locations with a well-established cross section they monitor. It is common practice to locate a monitoring station in relation to local landmarks and permanent reference points along a stream or in relation to the outlet of the monitored water body. The river reference system, described in link:#section6_4[section 6.4], gives a mechanism to locate such points in relation to establish catchment outfall locations such as confluences. When aggregated into a network, monitoring stations within a catchment can be said to make up a logically connected hydrometric network which monitors a catchment. 
-
-The purpose of HY_Features hydrometric stations and network is to support linking identified monitoring stations, (thought to be the sampling feature in terms of the observations and measurements standard) and a river or other hydrologic feature (thought to be the domain or sampled feature in terms of observations and measurements). The monitoring feature role of hydrometric features is unique in contrast to all other outfall realizations in HY_Features, which would be used as observed domain features in observations and measurements.
-
-[#section6_5_3]
-==== HydroNetwork: hydrographic network, channel network and station network - different views of catchment topology
-
-Maps displaying a representation of a catchment are very common in hydrology research and engineering. Depending on the scientific concern, different aspects of the hydrology phenomenon are represented using application specific map symbols. Respecting the separation of scientific concerns, HY_Features distinguishes between these by defining separate realizations of the catchment and outfall concepts which may be simple points, lines, or polygons, and may be complex aggregate networks made up of collections of point, line, or polygon representations. The need to support such collections across scales is supported through the general concept of the HydroNetwork described below.
- 
-The holistic idea of catchment, where a conceptual catchment has many real-world realizations, allows us to consider realizations of a catchment that correspond to different phenomena as variations of a common catchment pattern. Using this approach, the relationship of a catchment to a set of catchments can be transferred to any representation of that catchment regardless of the geometric representation in a particular data product. For example, an entire hydrographic network representation of a catchment can have simple relationships to the hydrographic network of its up and downstream catchments if the network itself is understood to adopt basic catchment characteristics. 
-
-This standard defines a hydrologically determined topology model of directed outfalls, acting as inflow or outflow nodes, and the catchment which can act as the link between them. This topological catchment network pattern can be transferred to context-specific network realizations such as hydrographic networks of water bodies or channel networks that may convey water, as well as to their various representations as (poly)lines and polygons. For example, a fixed landmark on a water body, a cross-section separating a watercourse, or a station along the network, can be considered to be outfalls (outflow nodes) of a contributing catchment (link); a flowpath representing a catchment may be drawn from an ‘inflow‘ node to the ‘outflow‘ node linking the nodes through the represented catchment. As with the hydrographic (water body) and channel (conveyance) network, the abstract catchment topology model can be applied to any logical or virtual network, e.g. a network of logically connected hydrometric stations. 
+===== Network location of features not realizing a hydro nexus
+In the case that the existing catchment network is to be preserved, the
+location to be placed cannot become a hydro nexus with associated
+catchments. If the catchment and flowpath realizing the catchment is not
+split, the indirect position is expressed as part of the known distance
+between the inflow hydro nexus and the outflow hydro nexus, measured
+along the connecting flowpath. link:figure15[Figure 15] shows a new 
+feature located along a flowpath. The location is expressed as the distance 
+measured from the located outflow. Similarly, the new location could be located
+as a distance from an upstream hydro nexus measured along the flowpath.
 
 [#figure15]
-.Cyclic nature of the HY_Features basic model
+.New location referenced along a downstream flowpath, expressed as part of the known distance from outflow node
 image::figures/fig15.png[]
 
-link:#figure15[Figure 15] illustrates the circular relationship between five functional components of the HY_Features model: the catchment concept, catchment realization, hydro networks, waterbodies, and outfalls. The cyclic nature of the basic model supports crossing scale through nesting of more or less detailed catchment realizations.
+===== Network location of features in reference to an already referenced location
+While not common in hydrographic datasets, the known reference location
+does not have to be a hydro nexus. If a hydro location has an already
+known network location, the indirect position can be expressed as part
+of the distance along the flowpath measured from such an already
+referenced location (located referent). link:#figure16[Figure 16] shows 
+a feature located along a flowpath in reference to a downstream referent that is
+located along the same flowpath relative to its outflow.
 
-==== FlowPath
+[#figure16]
+.New location referenced along a downstream flowpath, expressed distance from a located feature, and finally as part of the known distance from outflow node
+image::figures/fig16.png[]
 
-In practice, catchments are associated with a single mainstem flowpath (link:#figure5[Figure 5c]). Some elevation-derived hydrographic datasets define one flowpath per catchment such that every line connecting two confluences has a single associated drainage area. Others have an identifiable mainstem river that flows from headwaters or inflow to outflow. In either case, the main flowpath typically carries the name of the catchment and its outlet is considered the mouth of the river or catchment. HY_Features includes a simple linear realization of the catchment concept that is meant to encompass the mainstem idea.
+===== Location of features in a flowpath network
+A feature of interest can be located somewhere along a particular
+network flowpath in a flowpath network realizing a network of catchments
+in two ways: 1) as a new inflow or outflow hydro nexus node bounding a
+(newly split) flowpath at one end and in reference to the other end, or
+2) referenced upstream or downstream of a flowpath end or an already
+referenced location on a given flowpath. Figure 17, illustrates how a
+newly introduced network location can be located along an upstream
+flowpath, as an outflow node 'n1' referencing a known inflow node 'r2'
+graphically and with representative HY_Features UML. Figure 18 shows the
+location along a downstream flowpath referencing a known outflow node
+'r1'.
 
-The flowpath concept is associated with a hydrographic or channel network in that any hydrographic or channel network can have one identified flowpath connecting its inflow to outflow node. In this way, at large scales, complex networks of channels can have one mainstem flowpath made up of many smaller scale reaches. At very small scales a network made up of one reach also has a single main flowpath. In both cases, the flowpath is associated with a catchment and should be understood to be the one linear connection between inflow and outflow node. Because hydrographic and channel networks are aggregates of waterbodies and channels, it follows that the flowpath concept is related to waterbodies and channels through the networks that aggregate them.
+[#figure17]
+.Position (yellow dot) of an outflow node referencing an inflow node, expressed as a measured distance from a upstream referent (red dot) and representative UML classes.
+image::figures/fig17.png[]
 
-=== Discussion of purpose and relation to ISO standards baselines.
+[#figure18]
+.Position (yellow dot) of an inflow node relative to an outflow node, determined along a downstream flowpath, expressed as a measured distance from a downstream referent (red dot) and representative UML classes.
+image::figures/fig18.png[]
 
-The intention of this standard is to provide the conceptual basis for linkage of identified hydrologic features (catchments) encoded in data products. Given that any given real world hydrologic entity can be a subject of study over time, between organizations, and across disciplines, the identified feature is often represented in many ways in differing data products. The ability to reference such features between data products requires a scale-independent, nestable catchment model that can be visualized using common geometric shapes to represent the catchment in geographic maps and geo-schematic views. In correspondence with the fundamentals of hydrology, catchment topology is determined through the common outlet to which all waters flow from within a bounding watershed. This is in contrast to use of geometric representation for determination of catchment topology (although geometric representations may of course assist in the determination of a set of common outlets). 
+Figure 19 illustrates how the position of a feature can be determined as
+part the known distance between inflow and outflow nodes that bound a
+flowpath in upstream and downstream direction. The origin of the
+flowpath is set at one of its ends, and directed to the other. This
+approach is used in the case that the new location is not to be declared
+to be an inflow or outflow of a catchment.
 
-The hydrologic feature model described in this standard describes the hydrosphere as a scale-independent hierarchical network of catchments. The defined catchment topology follows hydrologic patterns governed by physical laws in a way that is independent of any possible geometric realization. The pattern can be replicated multiple times to build hierarchical networks of hydrologically discrete catchments. In practice, the highest-level of this hierarchy reflects a river system flowing into a sea or an internal sink and the lowest level is the smallest defined unit of study. Depending on the scientific concern of a study, the hierarchical network of catchments will be used to describe differing phenomena, but are typically visualized using common geometric shapes. 
+[#figure19]
+.Intermediate Position (yellow dot) between known inflow and outflow nodes, expressed as distance from a located upstream or downstream referent (red dots).
+image::figures/fig19.png[]
 
-==== Catchment topology, comparison with the ISO topology model
+The UML diagrams shown in Figure 17-19 illustrate that the river
+referencing system defined in this standard generally corresponds with
+the OGC standard model for Linear Referencing which is considered as the
+general framework to assign a position to a feature of interest along a
+hydrologic feature. The UML specifies fundamental properties of linear
+referencing along a flowpath to express the referenced location as a
+distance from a located referent which may be the known inflow or
+outflow hydro nexus node or another referenced location.
 
-The catchment model in this standard defines the common outlet to which all waters flow as the topological outfall of a corresponding catchment. With respect to the catchment, the topological outfall is defined as the inflow node of a receiving catchment or the outflow node of contributing catchment. The catchment forms the topological link connecting the outfall nodes located on the bounding catchment divide. Determined by the orientation of the outfall, a receiving catchment links inflow nodes to the outflow node downstream, and a contributing catchment links an outflow node to upstream inflow nodes. Repeating this topological pattern of connecting inflow and outflow nodes, a network of upper and lower catchments can be built , which can then be traced upstream or downstream. Depending on the perspective of a study, the network of upper and lower catchments is realized as hydrographic or channel network of seemingly connected watercourses, or as a network of logically connected stations. Each such catchment network view forms a hydrological system wherein the pattern of catchment and outfall (link and node) is realized as water bodies or channels and associated reference locations or stations. These realizations are represented in data products using geometric points, lines or polygons. 
+Specific HY_Features classes supporting the referencing 'along a river'
+include HY_IndirectPosition, HY_DistanceFromReferent and
+HY_DistanceDescription described in section 7.3.3 of this standard
 
-The topological concept of outfall node and catchment link applies to all defined special subtypes of a catchment. Specializations are defined with respect to (catchment) network connectivity. A dendritic catchment is defined, which is connected to other catchments through an identified outflow node which coincides with the inflow node of an associated lower catchment; an interior catchment is defined which is generally not connected to other catchments, but may temporarily participate in the network. With respect to the aggregation of catchments, a catchment aggregate is defined which encompasses dendritic catchments and envelopes interior catchments. 
+link:#table1[Table 1] provides a descriptive 'mapping' intended to provide a basic
+understanding of how the HY_Features river positioning system may
+specify the OGC standard Linear referencing model. The river positioning
+system is described in detail in section 7.3.3 of this standard, the OGC
+linear referencing model within the OGC Abstract Specification Topic 19,
+Linear referencing (aka ISO/FDIS19148:2011).
 
-A general topology model of nodes and edges is defined in ISO 19107: Spatial Schema. While consistent with typical feature geometry, this topology model is defined separate from the geometric realization and may provide a general framework to define the scale-free catchment topology using the model of nodes and edges. Such a model can be seen as being comparable to the linear shape and origin of a river reference system as well as the connecting link and node to navigate in the catchment network upstream or downstream. A catchment may be topologically realized as a solid bounded by inflow/outflow faces, each face bounded by inflow/outflow edges, and each edge bounded by inflow/outflow nodes. Each of these realizations can be represented using an appropriate geometry type. 
+[#table1]
+.Table 1: HY_Features river positioning concepts comparable with the OGC Linear referencing model
+[width="100%",cols="34%,33%,33%",]
+|=======================================================================
+a|
+*HY_Features concept* +
+(internal HYF reference)
 
-Understanding the catchment as a hydrologically determined complex, various multiple realizations of the logical catchment may be derived from the basic topological feature realization. The domain-specific feature types and properties defined in this standard to model the catchment’s topology, its realization(s) and representation(s), may also be used to express catchment topology expressed in linked data and data products. Such data and products will normally represent a specific aspect of the hydrosphere or a particular place or time where water occurs or is distributed. Furthermore, special network or routing models may be related to the hierarchical network of catchments. 
+ a|
+*Description*
 
-==== River Reference System, comparison with ISO linear referencing model
+ a|
+*OGC LR concept* +
+(internal LR reference)
 
-It is common practice in hydrology to add new features (typically observation stations, but also designated reaches, or flood plain zones) to an existing network of such features, and to reference such features along a network of watercourses. Provided that the hierarchical network of catchments is realized, and that the realized catchments have linear realizations, any feature can be referenced along this linear realization of the catchment based on catchment topology alone. This is possible considering that any location on the land surface can be an outfall of a catchment. In this case, the new location is placed as an outfall in an existing catchment network relative to an already established outfall used as a referent. This concept of an indirect position requires a reference system ‘along a river’.
+a|
+*River Referencing* (leaf package), describing the system applied to
+place a hydrologic feature on a (linear) watercourse/stream feature. The
+feature location is specified as an indirect position expressed as
+distance along the watercourse on which the feature is to be placed.
 
-This standard defines a simple linear river reference system with the linear flowpath realization of a catchment as its shape and the outfall of the catchment as its origin. Understanding the feature of interest as outfall of a corresponding catchment, the unknown position of this outfall can be determined relative to an outfall up or downstream. Each outfall is potentially the origin of its own river reference system and uses the flowpath representing a catchment between this origin and another already established outfall as its shape.
+a|
+A (hydrologic) feature of interest which is located along the locating
+one-dimensional flowpath referencing inflow and/or outflow already
+located on that flowpath, corresponds in general to the linear
+referencing along a linear element described in the OGC standard model
+for Linear referencing.
 
-A standard model for a linear referencing is described in ISO 19148: Linear Referencing.  It defines the position of an event, or referenced feature, located on a linear element (understood as directed edge in terms of the ISO 19107) as a distance relative to a referent using a particular referencing method. The indirect position concept defined in this standard is comparable to the general concept defined in ISO 19148. In the terms used by ISO 19148, a linear realization of a catchment can be understood as the linear element; the already established outfall can be thought of as the referent; and the newly referenced outfall as an event. In order to use an interpolative (percentage along a reach) linear referencing method, the linear catchment realization used as the river reference system's shape must be bounded by an inflow and outflow node.
+a|
+*Linear Referencing model* (leaf package),
+specification of a location relative to a linear element as a
+measurement along that element. This model describes allocation as
+position expressed as distance along a linear element.
 
-The ISO 19148 model is not ‘imported’ in the hydrologic feature conceptual model because this standard intends to reference the hydrologically determined catchment topology, to use terms for the origin, referent and linear element from the hydrology domain, and to include a precision and accuracy statement. 
+a|
+*Indirect Position* (7.3.3.1), position expressing the location of a
+hydrologic feature (of interest) relative to the known location of
+another feature along an axis, +
 
-==== Catchment Network Navigation, comparison with ISO network (navigation) model
+has _distance expression_ and _distance description_,
+_referenceLocation_ and an (already) _locatedReferent association._
 
-Provided that a catchment topology of inflow/outflow nodes and catchment links is defined and that the hierarchical network of catchments is expressed in a particular hydrologic dataset, the upstream-downstream tracking of the catchment network can be transferred to a related set of water bodies. This is true for any visual or data representation of flowing or stagnant water or channels containing a water body either permanently or temporarily.
+ a|
+Feature that specifies a location through referencing along a 'linear'
+hydrologic feature. +
 
-Thinking about catchments as topological edges bounded by outfall nodes, a dendritic network of catchments may be traced upstream from the sea or a sink to the inflow/outflow nodes of (multiple) upper catchments. From there, one can navigate further ‘upstream’ eventually arriving at the outflow node of the headwater catchments. Starting at a spring, the catchment network can be traced in the ‘downstream’ direction, first to the single outflow node to which the catchment contributes then further downstream eventually arriving at the inflow node of a branching (non-dendritic), estuary or delta. In a given realization, a sequence of linear flowpaths, each realizing a catchment connected in the catchment network, may be drawn as streams or watercourses, which may or may not be geometrically connected in the representation. For example, water bodies and channel parts of a particular network may be displayed using different geometric shapes, and may look connected on a map even if they are not. 
+Indirect position is expressed as 'distance from referent' located at
+the upstream or downstream end of the flowpath, or as a term describing
+this distance.
 
-In ISO 19133: Tracking and Navigation standard, a network model is defined as a complex of nodes and links specializing the directed node and directed edge types defined in ISO 19107. Based on a catchment topological realization comparable with the ISO topology model, understanding the catchment as a topological edge and the outfall as a (inflow/outflow) node, the catchment network (as well as its hydrographic, geomorphologic or hydrometric realizations) may be navigated from outfall node to outfall node along the catchment link, from fixed landmark to fixed landmark along a water body, from section to section along a channel, and from station to station along a virtual line.
+a|
+*Position Expression* (6.2.2.1) specifies a linearly referenced
+location. Fundamental properties are 'linear element', 'distance
+expression' and 'LRM' [linear referencing method] describing the 'manner
+of measurement'.
+
+a|
+ 
+
+ a|
+River referencing may be understood as a hydrology-specific referencing
+method applied to specify a location along a linear hydrologic feature.
+The river referencing results in an abstract, interpolative or
+descriptive value, which implies the usage of an appropriate method. +
+
+The 'units' and 'type' properties of the referencing method are covered
+by the HY_DistanceFromReferent data type.
+
+a|
+**Linear Referencing Method** (6.1.1.3) specifies how a linear element
+is measured. by 'name', 'type', 'units' and optional 'constraints'.
+
+a|
+*Flowpath* (7.3.2.6), realizes a catchment specifically as a path
+connecting the inflow and outflow of the catchment it realizes. +
+
+Has a _realized catchment_ association.
+
+a|
+one-dimensional topological realization of a catchment forming the
+linear element along which an indirect position is determined. +
+
+topologically the flowpath can be understood as an edge bounded by
+catchment outlet nodes
+
+ a|
+*Linear Element* (6.1.1.2) describes a feature that can be measured in a
+linear, one-dimensional, sense, incl. linear topological features such
+instances of directed edges.
+
+a|
+*Hydro Location* (7.3.2.7), in the role of any hydrologic feature to be
+located on the network through referencing another hydrologically
+significant hydro location, +
+
+Has a _referenced position association._
+
+a|
+Feature being linearly located,
+understood as 'feature event' that 'occurs' somewhere in the network of
+abstract catchments which is realized as a network of its linear
+flowpaths. +
+
+A hydro location at distance 0 from the hydro nexus referent would be of
+type inlet or outlet and could be considered a realization of a hydro
+nexus.
+
+ a|
+Linearly located *Feature* (6.1.1.5) that is located along an associated
+locating feature using a linear referencing system. A feature linearly
+located specifies where along the locating feature the located feature
+occurs (feature event)
+
+a|
+*Hydro Location* (7.3.2.7), in the role of an already located
+hydrologically significant referent that may realize the hydro nexus
+where a catchment interacts with another catchment, +
+
+Has a _realized_ _nexus_ association
+
+ a|
+Feature being used as a reference, located at the upstream or downstream
+end of a flowpath which realizes the catchment whose hydro nexus is
+realized by the located referent.
+
+a|
+*Referent* (6.1.1.4.2) specifies a known, already referenced location
+on the linear element 'from' where a distance can be measured.
+
+a|
+*Distance From Referent* (7.3.3.3), distance from a located referent as
+an absolute or interpolative value. 
+
+a|
+Data type, expressing an indirect position value  as distance along the
+flowpath 'measured' from a referent located at its upstream or
+downstream end, or elsewhere on the flowpath. +
+
+The attribute names may reflect the 'type' property of LRM, the use of
+basic data types supports the 'units' property of LRM. +
+
+a|
+*Distance Expression* (6.1.1.4) specifies the measured value from the
+start, or another known location, on the linear element along that
+element.
+
+a|
+*Distance Description* (Table B.2), describes the spatial relation
+between two locations 
+
+a|
+Terms common in hydrology to describe the
+distance between a location being placed and a location being used as a
+reference. These terms may be used to express an offset the distance
+expression may have. 
+
+a|
+*Offset* (6.1.1.4.3) qualifies the distance expression with respect to
+locations not directly located on the linear element.
+
+|=======================================================================
+
+==== Network navigation
+Realizing catchments as topological edges bounded by hydro nexus nodes,
+a network of catchments may be traced upstream from the sea or a sink
+traversing from outflow node along catchment edge to inflow node of
+(multiple) upper catchments recursively. One can navigate all the way
+'upstream' eventually arriving at the outflow node of the headwater
+catchments, which do not have an inflow hydro nexus. Starting at a
+spring, the catchment network can be traced in the 'downstream'
+direction, first to the single outflow node to which the catchment
+contributes then further downstream eventually arriving at an outflow
+node of an estuary or delta with no downstream catchment. In a given
+realization, a sequence of linear flowpaths, each realizing a catchment
+connected in the catchment network, may be drawn as streams or
+watercourses, which may or may not be geometrically connected in the
+representation.
+
+When geometrically connected, the edge-node topology described above
+could be implemented based on a geometric network made up entirely of
+geometrically connected flowpaths. In some cases, the geometric network
+is all that is required to satisfy network navigation requirements. A
+second approach is to use the geometric network to create a topological
+edge-node network. In other cases, waterbodies and channel parts of a
+particular network may not form a well-connected network or be
+represented using different types of geometry, not suited to geometric
+network traversal. In such cases, a non-geometric topological
+(node-edge) realization, made up of catchments and hydro nexuses only
+could be used.
+
+The network navigation approach described here corresponds generally to
+the standard network (navigation) model defined within ISO 19133:
+Location-based services - Tracking and navigation which is considered as
+a general framework to trace a network of catchments. Provided that a
+catchment is topologically realized comparable with the ISO topology
+model as directed edge (flowpath) and the hydro nexus as directed
+(inflow/outflow) node, the catchment network (as well as its
+hydrographic, geomorphologic or hydrometric realizations) can be
+navigated using the concepts of the ISO network (navigation) model.
+
+In terms of network navigation, the hydrographic, channel or station
+network can be thought of as a set of junctions and links that connect
+these junctions. The realization of an inflow/outflow node is comparable
+with the 0-dimensional junction associating 'incoming and outgoing
+links', and the flowpath is comparable with 1-dimensional link
+associated with a 'start' and an 'end' set by the inflow or outflow node
+
+link:#table2[Table 2] provides a descriptive 'mapping' intended to provide a basic
+understanding of how the HY_Features network navigation may specify the
+Tracking and navigation model.
+
+[#table2]
+.Table 2: HY_Features concepts comparable with the OGC Network navigation model
+[width="100%",cols="34%,33%,33%",]
+|=======================================================================
+a|
+*HY_Features concept*
+
+a|
+*Description*
+
+a|
+*ISO 19133 concept*
+
+a|
+Catchment realization network (6.3.1), aggregate of hydrologic features
+realizing a catchment
+
+a|
+The logical network of catchments interacting at hydro nexuses can be
+realized as networks of specific catchment realizations. The network of
+one-dimensional flowpaths connected by 0-dimensional inflow/outflow
+nodes can be understood as navigation network.
+
+a|
+Network (4.17), abstract structure consisting of a set of 0-dimensional
+objects called junctions, and a set of 1-dimensional objects called
+links that connect the junctions, each link being associated with a
+start (origin, source) junction and end (destination, sink) junction
+
+a|
+Flowpath (7.3.2.6), one-dimensional feature that realizes a catchment,
+associated to the _realized catchment_ |The topological realization, a
+directed edge bounded by inflow and outflow nodes can be understood as a
+connecting link between junctions. 
+
+a|
+Link (4.8), directed topological connection between two junctions 
+consisting of an edge and a direction
+
+a|
+Hydro Location (7.3.2.5), hydrologic feature that can be a realization
+of an outlet, associated to the _realized hydro nexus_
+
+a|
+The topological (0-dimensional) realization as inflow or outflow node
+forming the boundary of the flowpath realizing the corresponding
+catchment, can be understood as junction.
+
+a|
+Junction (4.6), single topological node in a network with its associated 
+collection of turns, incoming and outgoing links
+
+|=======================================================================
