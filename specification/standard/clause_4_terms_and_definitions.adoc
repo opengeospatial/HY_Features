@@ -17,7 +17,7 @@ composite curve.
 
 [NOTE]
 This definition references the definition of a _divide_ described
-as summit or boundary line <<9>>.
+as summit or boundary line link:#WMO2016[[9\]].
 
 === catchment
 A physiographic unit where hydrologic processes take place. This class
@@ -85,7 +85,7 @@ waterbodies, a linear flowpath, and an outlet (and possible inlet) node.
 === channel
 Natural or artificial waterway, clearly distinguished, which
 periodically or continuously contains moving water, or which forms a
-connecting link between two bodies of water <<9>>.
+connecting link between two bodies of water link:#WMO2016[[9\]].
 
 === channel network
 Connected set of depressions and channels that continuously or
@@ -93,12 +93,12 @@ periodically contain water.
 
 === cross section (of a stream)
 Section of a stream at right angles to the main (average) direction of
-flow <<9>>.
+flow link:#WMO2016[[9\]].
 
 === cross section (of a stream bed)
 transversal section of a stream bed in a vertical plane. This definition
 references the definition of a _bed profile_ describing the shape of a
-stream bed in a vertical plane <<9>>.
+stream bed in a vertical plane link:#WMO2016[[9\]].
 
 === data
 Documented value of some characteristics of a real-world phenomenon.
@@ -125,7 +125,7 @@ Feature of a type defined within a particular application domain. [ISO
 19156].
 
 === endorheic (drainage)
-Draining [ultimately] into interior catchments <<9>>.
+Draining [ultimately] into interior catchments link:#WMO2016[[9\]].
 
 === exorheic (drainage)
 Draining [ultimately] into the ocean.
@@ -155,13 +155,13 @@ the OGC Abstract Specification Topic 19, Linear referencing [aka ISO
 ====
 
 NOTE 3: Hydrologically, the flowpath references the _path line_ __
-described by a moving particle of water <<9>>.
+described by a moving particle of water link:#WMO2016[[9\]].
 
 === flow line (also flowline)
 Geometric property of a flowpath, usually a geometric curve.
 
 [NOTE]
-This definition references the definition of a _path-line_ <<9>>
+This definition references the definition of a _path-line_ link:#WMO2016[[9\]]
 through using the synonym __flow line__ to express the geometric
 property of a flowpath.
 
@@ -233,7 +233,7 @@ Science that deals with the waters above and below the land surfaces of
 the Earth, their occurrence, circulation and distribution, both in time
 and space, their biological, chemical and physical properties, their
 reaction with their environment, including their relation to living
-beings. <<9>>
+beings. link:#WMO2016[[9\]]
 
 === hydrometric feature
 Feature of a type which denotes a physical structure intended to observe
@@ -242,7 +242,7 @@ properties of a hydrologic feature.
 [NOTE] 
 This definition references the definition of a _hydrometric
 station_ at which data on water in rivers, lakes or reservoirs are
-obtained on physical and chemical properties of water <<9>>. A hydrometric
+obtained on physical and chemical properties of water link:#WMO2016[[9\]]. A hydrometric
 feature may be a composite station configured by arranging several
 monitoring components. Used to sample a hydrologic feature, a
 hydrometric feature may be considered a _sampling feature_ as defined in
@@ -257,11 +257,11 @@ and used for hydrologic observation of a feature such as a catchment or
 hydrographic network. This definition references the definition of a
 synonymous _hydrological network_ consisting of hydrological stations
 and observing posts situated within a catchment in such a way as to
-provide the means of studying its hydrological regime <<9>>.
+provide the means of studying its hydrological regime link:#WMO2016[[9\]].
 
 === hydrometry
 Science of the measurement and analysis of water including methods,
-techniques and instrumentation used in hydrology <<9>>.
+techniques and instrumentation used in hydrology link:#WMO2016[[9\]].
 
 === indirect position
 Position expressing the location of a feature relative to the known
@@ -276,18 +276,18 @@ already located stations.
 Catchment in which all waters are collected and drainage is endorheic;
 an interior catchment does not drain to other catchments. This
 definition is rooted in the _blind drainage_ pattern of water collecting
-in sinks or lakes not connected to streams <<9>>.
+in sinks or lakes not connected to streams link:#WMO2016[[9\]].
 
 === longitudinal section (of a stream)
 Vertical section of a stream in longitudinal direction. This definition
 is rooted in the definition of a _longitudinal section_ along a
-channel at its center line <<9>>, but generalized for all types of
+channel at its center line link:#WMO2016[[9\]], but generalized for all types of
 vertical section along a line.
 
 === longitudinal section (of a stream bed)
 Longitudinal section of a stream bed in a vertical plane. This
 definition references the definition of a _bed profile_ describing the
-shape of a stream bed in a vertical plane <<9>>.
+shape of a stream bed in a vertical plane link:#WMO2016[[9\]].
 
 === main stem (also mainstem)
 Main course along which water flows in a catchment excluding
@@ -342,7 +342,7 @@ relative to a linear element along that element' [ISO 19148].
 
 === storage (of water)
 Impounding of water in surface or underground reservoirs, for future
-use. <<9>>
+use. link:#WMO2016[[9\]]
 
 [NOTE]
 NOTE: Storage refers to a body of water from the perspective of a usable
@@ -353,13 +353,13 @@ not in the scope of the conceptual model.
 === stream
 Water, generally flowing in a natural surface channel, or in an open or
 closed conduit, a jet of water issuing from an orifice, or a body of
-flowing groundwater <<9>>.
+flowing groundwater link:#WMO2016[[9\]].
 
 === waterbody (also water body)
-Mass of water distinct from other masses of water <<9>>.
+Mass of water distinct from other masses of water link:#WMO2016[[9\]].
 
 === watercourse
-Natural or man-made channel through or along which water may flow <<9>>,
+Natural or man-made channel through or along which water may flow link:#WMO2016[[9\]],
 including large interstices in the ground, such as cave, cavern or a
 group of these in karst terrain.
 

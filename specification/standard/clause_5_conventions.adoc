@@ -38,7 +38,7 @@ and property names in lowerCamelCase.
 === WMO Terminology
 The HY_Features model uses--as far as possible--terminology recommended by
 the WMO Commission for Hydrology for use in the WMO Member countries.
-The key reference is the "International Glossary of Hydrology" <<9>> a joint 
+The key reference is the "International Glossary of Hydrology" link:#WMO2016[[9\]] a joint 
 publication of the WMO and the UNESCO (hereinafter referred to as WMO/UNESCO 
 glossary of hydrology). Wherever appropriate, terms from this glossary are 
 applied to the featureconcepts in this standard to capture meaning and 

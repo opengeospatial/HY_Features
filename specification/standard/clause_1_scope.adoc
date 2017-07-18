@@ -39,7 +39,7 @@ The initial scope has been defined by the WMO Commission for Hydrology
 the WMO Member countries and to improve the quality of data products
 based on these data by defining hydrologic features to convey their
 identification through the data processing chain "from measurement to
-hydrological information" link:#WMO2012[[8]]. +
+hydrological information" link:#WMO2012[[8\]]. +
 
 To enable semantic interoperability of hydrologic data and services, it
 is necessary to agree on common concepts and methods. The HY_Features
