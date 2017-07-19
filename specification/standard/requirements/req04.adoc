@@ -1,9 +1,0 @@
-[cols="1,4",width="90%"]
-|===
-2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
-2+|https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/namedFeature/hydrofeature[/req/hy_hydrofeature/namedFeature/hydrofeature] {set:cellbgcolor:#FFFFFF}
-|Target type |Implementation schema
-|Name |HY_HydroFeature
-|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/namedFeature/hydrofeaturename[/req/hy_hydrofeature/namedFeature/hydrofeaturename]
-|Dependency |https://github.com/opengeospatial/HY_Features/blob/master/req/hy_hydrofeature/namedFeature/hydrofeature.name[/req/hy_hydrofeature/namedFeature/hydrofeature.name]
-|===
