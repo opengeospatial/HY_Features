@@ -95,8 +95,6 @@ include::clause_6_informative_text.adoc[]
 
 include::clause_7_normative_text.adoc[]
 
-include::clause_8_media_types.adoc[]
-
 <<<
 ////
 add or remove annexes after "A" as necessary

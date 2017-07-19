@@ -1,10 +1,50 @@
-[cols="1,4",width="90%"]
-|===
-2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
-2+|https://github.com/opengeospatial/HY_Features/blob/master/req/hy_features_conceptual_model[/req/hy_features_conceptual_model] {set:cellbgcolor:#FFFFFF}
-|Target type |Implementation Schema
-|Name |HY_Features Conceptual Conformance
-|Dependency |https://inspire-twg.jrc.it/svn/iso/[/iso/19109/]
-|*Requirement 1* {set:cellbgcolor:#CACCCE} |https://github.com/opengeospatial/HY_Features/blob/master/req/%20hy_features_conceptual_model/mapping[/req/ hy_features_conceptual_model/mapping]
-{set:cellbgcolor:#FFFFFF}
-|===
+[width="100%",cols="20%,80%",]
+|=======================================================================
+a|
+*Requirements Class*
+
+ a|
+https://github.com/opengeospatial/HY_Features/blob/master/req/hy_features_conceptual_model[/req/hy_features_conceptual_model]
+
+a|
+Target types | 
+1) Implementation Schema +
+2) Implementation Schema Mapping
+
+a|
+Name |HY_Features Conceptual Conformance
+
+a|
+Dependency |/iso/19103/
+
+a|
+Dependency |/doc/AS/Topic1
+
+a|
+Dependency |/doc/AS/Topic2
+
+a|
+Dependency |/doc/AS/Topic19
+
+a|
+Dependency |https://inspire-twg.jrc.it/svn/iso[/iso/19109/]
+
+a|
+Requirement |
+/req/hy_features_conceptual_model/mapping +
+An implementation schema conforming to HY_Features SHALL implement one
+or more feature types defined by the HY_Features UML model in this
+standard, including all mandatory properties, associations, and default
+values. +
+A mapping implementation conforming to HY_Features SHALL implement
+mappings between existing feature types and one or more HY_Features
+feature types as defined in the HY_Features UML model in this standard,
+including all mandatory properties, associations, and default values.
+
+a|
+Requirement | 
+/req/hy_features_conceptual_model/GF_Feature +
+Each implemented HY_Features feature type SHALL be an instance of the
+GF_FeatureType (aka FeatureType) «metaclass»
+
+|=======================================================================
