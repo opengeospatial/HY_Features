@@ -37,5 +37,13 @@
 [11]Bureau of Meteorology: Australian Hydrological Geospatial Fabric (Geofabric) version 3.0, Product Guide, Bureau of Meteorology, Australia (2015), http://www.bom.gov.au/water/geofabric/documents/v3_0/ahgf_productguide_V3_0_release.pdf
 
 [[SANDRE2010]]
-[12] National service for water-data and reference-dataset management (2010), http://www.sandre.eaufrance.fr/concept/national-service-water-data-and-reference-dataset-management?lang=en
+[12] French National service for water-data and reference-dataset management (2010), http://www.sandre.eaufrance.fr/concept/national-service-water-data-and-reference-dataset-management?lang=en
+
+[[NRCAN2017]]
+[13] Natural Resources Canada, Centre for Topographic Information (2007), Canadian National Hydro Network (NHN),
+http://open.canada.ca/data/en/dataset/87066e9a-94ee-680a-b1ba-591f4688db7d
+
+[[SANDRE2017]]
+[14] French SANDRE data model for the Hydrographic Network :
+http://www.sandre.eaufrance.fr/notice-doc/r%C3%A9f%C3%A9rentiel-hydrographique
 	

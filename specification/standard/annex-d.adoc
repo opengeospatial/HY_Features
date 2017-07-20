@@ -1,55 +1,147 @@
 [appendix]
 :appendix-caption: Annex
-== HY_Features  - NHDPlus  Mapping
+== HY_Features - NHDPlus  Mapping
 
-This is a descriptive mapping for the USGS National Hydrography Dataset Plus (NHDPlus)[10]. It is intended to provide an understanding of the basic relationship of HY_Features concepts and the NHDPlus hydrologic feature implementation.
+This is a descriptive mapping for the USGS National Hydrography Dataset
+Plus (NHDPlus) link:#MCKAY2012[[10\]]. It is intended to provide an understanding of the
+basic relationship of HY_Features concepts and the NHDPlus hydrologic
+feature implementation.
 
 [#annexD_1]
 === Catchment Model
 
 
-[cols="1,2,6"]
-|===
-|*HY_Features Name*|*NHDPlus Name*|*Comment*
-|HY_Catchment|comid catchment|The comid catchment is the feature that takes part in PlusFlow topology table, has associated accumulated characteristics, etc. Could also be the collection of catchments that contribute to a given reachcode reach, HUC watershed outlet, or other identifiable watershed outlet.
-|HY_DendriticCatchment|comid catchment|NHDPlus catchments not following any diversions in the flow tables
-|HY_InteriorCatchment|comid catchment|Including interior catchments and not following diversions in the flow tables
-|HY_Outfall|fromNode or toNode|NHDPlus nodes are inflow (fromNode) and outflow (toNode) nodes of a given comid catchment.
-|HY_Outfallrealization|fromNode or toNode location, point location of point events, etc|HY_ReferenceLocation can be used as a reference location for any point associated with a feature. Typically this is for outfalls and monitoring locations, but may be used for many other feature types.
-|HY_CatchmentRealization|Any entity that is identified by a comid|In NHDPlus, the comid identifier represents an unrealized catchment. Any geometric or topologic data that is referenced to a comid can be said to realize that catchment. This includes upstream aggregations of the network or catchment areas to form complete watersheds.
-|HY_CatchmentArea|Not Represented|While the polygon representing a catchment might be thought of as an area, the subset of a DEM or another land cover dataset would be more in line with the meaning of CatchmentArea.
-|HY_CatchmentBoundary|comid catchment polygon|The polygon representing a comid catchment should be thought of as both the catchmentBoundary
-|HY_CartographicRealization|A map of a catchment|The NHDPlus dataset doesn't include any, but if a map view of a catchment is created at any scale, it could be said to be a cartographic visualization realization of the catchment.
-|===
+[width="100%",cols="20%,20%,60%",]
+|=======================================================================
+a|
+*HY_Features Name*
+
+ a|
+*NHDPlus Name*
+
+ a|
+*Comment*
+
+|HY_Catchment |comid catchment |The comid catchment is the feature that
+takes part in PlusFlow topology table, has associated accumulated
+characteristics, etc. Could also be the collection of catchments that
+contribute to a given reachcode reach, HUC watershed outlet, or another
+identifiable watershed outlet. Not necessarily the catchment polygon
+features, but more generally, the unit of hydrology represented by
+catchment polygons and other data keyed to the comid.
+
+|HY_DendriticCatchment |comid catchment |NHDPlus catchments not
+following any diversions in the flow tables
+
+|HY_InteriorCatchment |comid catchment |NHDPlus catchments that do not
+contribute flow.
+
+|HY_CatchmentAggregate |collection of comid catchments |Including
+interior catchments and not following diversions in the flow tables
+
+|HY_HydroNexus |fromNode or toNode |NHDPlus nodes are inflow (fromNode)
+and outflow (toNode) nodes of a given comid catchment.
+
+|HY_HydroLocation |fromNode or toNode location, point location of point
+events, etc. |HY_HydroLocation can be used as a reference location for
+any point associated with a feature. Typically, this is for hydro nexus
+locations and monitoring locations, but may be used for many other
+feature types. The downstream end and upstream end of an NHDPlus
+flowline would be considered the hydro location of a hydro nexus.
+
+|HY_CatchmentRealization |Any entity that is identified by a comid |In
+NHDPlus, the comid identifies an unrealized catchment. Any geometric or
+topologic data that is referenced to a comid can be said to realize that
+catchment. This includes upstream aggregations of the network or
+catchment areas that form complete watersheds.
+
+|HY_CatchmentArea |Not Represented |While the polygon representing a
+catchment might be thought of as an area, the subset of a DEM or another
+land cover dataset would be more in line with the meaning of
+CatchmentArea.
+
+|HY_CatchmentDivide |comid catchment polygon |The polygon representing a
+comid catchment should be thought of as the CatchmentDivide
+
+|HY_CartographicRealization |A map of a catchment |The NHDPlus dataset
+doesn't include any, but if a map view of a catchment is created at any
+scale, it could be said to be a cartographic realization of a catchment.
+|=======================================================================
 
 [#annexD_2]
 === Hydrographic Network
 
-[cols="1,2,6"]
-|===
-|*HY_Features Name*|*NHDPlus Name*|*Comment*
-|HY_Hydrographic Network|collection of flowlines and waterbodies|The collection of perennial and ephemeral flowlines as well as so-called double line streams and on-network lakes within any collection of catchments (an HY_Catchment) can be considered it's hydrographic network.
-|HY_WaterBody|Perennial flowlines and waterbodies|Perennial flowlines are thought to represent water bodies as well as waterbody polygons that represent wide streams and lakes. These features indicate that there is water contained in some channel or other container.
-|HY_ChannelNetwork|Not represente|—
-|HY_Depression|Not represented|—
-|HY_Channel|Ephemeral flowlines.|While NHD doesn't have an explicit channel concept, ephemeral flowlines can be thought of as a channel in that they indicate that water can flow there, but may not be present in the flowline container at all times.
-|HY_Reservoir|waterbodies that are reservoirs|Any waterbody that can be categorized as a reservoir 
-|HY_FlowPath|flowlines and reaches|A flowline or reach is the linear representation of a catchment. For NHD Events, the reach is the flowpath because it is the linear element used for linear referencing.
-|HY_WaterEdge|Not represented|—
-|HY_LongitudinalSection|flowline|For reachcode linear referencing, the reachcode flowpath is made up of a collection of linear segments that are flowlines
-|HY_WaterBodyStratum|Not represented|—
-|HY_Water_LiquidPhase|Not represented|—
-|HY_Water_SolidPhase|Not represented|—
-|===
+[width="100%",cols="20%,20%,60%",]
+|=======================================================================
+a|
+*HY_Features Name*
+
+ a|
+*NHDPlus Name*
+
+ a|
+*Comment*
+
+|HY_HydrographicNetwork |collection of flowlines and waterbodies |The
+collection of perennial and ephemeral flowlines as well as so-called
+double line streams and on-network lakes within any collection of
+catchments (an HY_Catchment) can be considered its hydrographic network.
+
+|HY_WaterBody |Perennial flowlines and waterbodies |Perennial flowlines
+are thought to represent waterbodies as well as waterbody polygons that
+represent wide streams and lakes. These features indicate that there is
+water contained in some channel or other container.
+
+|HY_ChannelNetwork |Not represented |
+
+|HY_Depression |Not represented |
+
+|HY_Channel |Ephemeral flowlines. |While NHD doesn't have an explicit
+channel concept, ephemeral flowlines can be thought of as a channel in
+that they indicate that water can flow there, but may not be present in
+the flowline container at all times.
+
+|HY_Reservoir |waterbodies that are reservoirs |Any waterbody that can
+be categorized as a reservoir in that it is a waterbody that has a
+management regime.
+
+|HY_FlowPath |flowlines and reaches |A flowline (or reach) is a linear
+representation of the catchment (or collection of catchments associated
+with a reach) it shares an id with. For NHD Events, the reachcode reach
+is the flowpath because it is the linear element used for linear
+referencing.
+
+|HY_LongitudinalSection |Not represented |
+
+|HY_CrossSection |Not represented |
+
+|HY_WaterBodyStratum |Not represented |
+
+|HY_Water_LiquidPhase |Not represented |
+
+|HY_Water_SolidPhase |Not represented |
+|=======================================================================
 
 [#annexD_3]
 === Hydrometric Network
 
-[cols="1,2,6"]
-|===
-|*HY_Features Name*|*NHDPlus Name*|*Comment*
-|HY_HydrometricNetwork|Not Represented|—
-|HY_HydrometricFeature|event|A hydrometric feature, such as a stream gaging station, is represented as an event.
-|HY_RiverReferenceSystem|reachcode and measure|A reachcode reach is the river reference system's shape, the origin is the outlet of the reach, and the indirect position is the measure.
-|HY_IndirectPostition|measure|The measure is an indirect position of type relative position because it is a percent.
-|===
+[width="100%",cols="20%,20%,60%",]
+|=======================================================================
+a|
+*HY_Features Name*
+
+ a|
+*NHDPlus Name*
+
+ a|
+*Comment*
+
+|HY_HydrometricNetwork |collection of events |A collection of events
+that are hydrometric features could be considered a hydrometric network.
+
+|HY_HydrometricFeature |event |A hydrometric feature, such as a stream
+gaging station, is represented as an event.
+
+|HY_IndirectPosition |measure |The measure is an indirect position of
+type relative position because it is a percent.
+|=======================================================================

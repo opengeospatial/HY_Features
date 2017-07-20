@@ -18,12 +18,12 @@ mapping methodology. +
 Annexes C-G of this document provide, nevertheless, informative mappings
 to and from HY_Features for the following hydro data models: +
 
-* Australian Hydrological Geospatial Fabric (AHGF) [11],
-* USGS National Hydrography Dataset Plus (NHD Plus)[10],
-* INSPIRE Hydrography theme [2],
+* Australian Hydrological Geospatial Fabric (AHGF) link:#BOM2015[[11\]],
+* USGS National Hydrography Dataset Plus (NHD Plus) link:#MCKAY2012[[10\]],
+* INSPIRE Hydrography theme link:#EC2000[[2\]],
 * French National Service for Water Data and Reference-dataset
-Management (SANDRE) [12],
-* Canadian National Hydrography Network (NHN) [13]
+Management (SANDRE) link:#SANDRE2010[[12\]],
+* Canadian National Hydrography Network (NHN) link:#NRCAN2017[[13\]]
 
 These mappings are intended to provide a general understanding of the
 correspondence between HY_Features concepts and existing conceptual /

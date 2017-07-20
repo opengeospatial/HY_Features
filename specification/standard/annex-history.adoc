@@ -2,12 +2,88 @@
 :appendix-caption: Annex
 == Revision History
 
-[width="90%",options="header"]
-|===
-|Date |Release |Editor | Primary clauses modified |Description
-|08-10-2014 |0.1 |Irina Dornblut |Initial version |Initial draft in OGC template
-|12-11-2014 |0.1 |Irina Dornblut |Section7, Annex D included |Editing requirements classes, Annex D included
-|15-08-2016 |0.3 |David Blodgett; Irina Dornblut |Completely revised version |Draft in OGC template
-|18-08-2016 |0.4 |Irina Dornblut |Figs7,8,9,10,11,13,14  |added
-|18-31-2016 |0.5 |David Blodgett, Darren Smith, David Arctur |Entire Document |General edit for clarity and consistency.
-|===
+[width="100%",cols="20%,20%,20%,20%,20%",]
+|=======================================================================
+|Date |Release |Author |Paragraph modified |Description
+
+|
+08.10.2014 |0.1 |Irina Dornblut |Initial version |Initial draft in OGC
+template
+
+|
+12.11.2014 |0.2 |Irina Dornblut |Section7, Annex D included |Editing
+requirements classes, Annex D included
+
+|
+15.08.2016 |0.3 |David Blodgett; Irina Dornblut |Completely revised
+version |Draft in OGC template
+
+|
+18.08.2016 |0.4 |Irina Dornblut a|
+Section 6 |Catchment + UML figures added
+
+|
+31.08.2016 |0.5 |David Blodgett, Darren Smith, David Arctur |Entire
+Document |General edit for clarity and consistency.
+
+|
+12.09.2016 |0.6 | Irina Dornblut |Entire document
+ |
+More edits for clarity and consistency
+
+Translation into American English
+
+|
+11.10.2016 |0.7
+ | 
+HYF-SWG at Orlando TC meeting
+
+Irina Dornblut
+ |
+Entire Document 
+ |
+Reconciling comments from the initial OAB review
+
+Review of conformance and requirements classes
+
+Conformance to OGC Abstract Specification standards
+
+Edits for consistency
+
+|
+11.10.2016 |0.8 |David Blodgett |Entire Document 
+ |
+Figures updated
+
+Edits for clarity
+
+|
+11.18.2016 |0.9 
+ | 
+Josh Lieberman
+
+David Blodgett
+ |
+Entire Document 
+ |
+Edits in reference to conformance and topological concepts.
+
+Class associations, attributes, and constraints formatted into tables.
+
+Conformance classes clarified.
+
+|
+9.01.2017 |0.10 |Irina Dornblut |Section 6 and 7 |Reconciling comments
+from the second OAB review
+
+|
+06.01.2017
+ |
+0.11 
+ |
+David Blodgett
+
+Irina Dornbludt
+ |
+Entire Document |Reconciled issues raised in public comment.
+|=======================================================================
