@@ -56,9 +56,21 @@ All questions regarding this submission should be directed to the editor or the 
 |Darren Smith|Australian Bureau of Meteorology
 |Bruce Simons|CSIRO Land and Water
 |David Arctur|University of Texas at Austin
+|Mickael Beaufils |French Geological Survey (BRGM)
+|Sylvain Grellet |French Geological Survey (BRGM)
+|Aitor Corchero |Eurecat
 |===
 
-[big]*v.  Changes to the OGC® Abstract Specification*
+[big]*vi.  Changes to the OGC® Abstract Specification*
 
-This standard requires no changes to the OpenGIS ® Abstract Specification.
+The HY_Features conceptual model, described in this standard, references
+concepts defined in the OGC Abstract Specification (OGC AS). Conformance
+to the OGC AS may be achieved via specialization of the relevant
+concept. An example of this kind of conformance is a geographic feature
+specialization that carries specific hydrologic feature attributes and
+associations. Conformance may also be achieved by asserting a
+correspondence or analogy between HY_Features concepts and OGC AS
+concepts. For example, the river reference system for referencing
+positions along a nominal flowpath corresponds to linear referencing
+along any linear feature element.
 

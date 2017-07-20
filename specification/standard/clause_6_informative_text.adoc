@@ -204,7 +204,7 @@ represented geometrically as a single point.
 
 A very common scheme that includes geometric representation is sometimes
 referred to as the "reach-catchment" scheme and is typified by the U.S.
-NHDPlus [10]. In this case, the catchment network forms a continuous
+NHDPlus link:#MCKAY2012[[10\]]. In this case, the catchment network forms a continuous
 coverage of incremental drainage units where each catchment corresponds
 to one and only one flowpath. This scheme comes about as a result of
 elevation derived hydrography where, at a given scale, incremental
@@ -233,7 +233,7 @@ application.
 
 Another example of a dataset-scheme is the idea of a "contracted
 catchment" and a "contracted node" which are used in the Australian
-Hydrological Geospatial Fabric [11] to describe catchments, and
+Hydrological Geospatial Fabric link:#BOM2015[[11\]] to describe catchments, and
 associated outlet locations. The word contracted is used as in a legal
 contract, meaning that a "contracted node" is one for which a contract
 that it will be realized and given a representation in future versions
@@ -442,7 +442,7 @@ surface water phenomena.
 
 The container for a waterbody, a channel or depression, is commonly
 understood as a type of natural or man-made watercourse through or along
-which water may or may not flow [9]. A network of channels (or drainage
+which water may or may not flow link:#WMO2016[[9\]]. A network of channels (or drainage
 pattern) exists independent of whether it contains water at a particular
 time. The HY_Features conceptual model accommodates both targets
 (waterbody and container) of hydrologic study by defining separately and

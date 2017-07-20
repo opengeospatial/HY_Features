@@ -1,58 +1,349 @@
 [appendix]
 :appendix-caption: Annex
-== HY_Features-AHGF Mapping
+== HY_Features  - AHGF Mapping
 
-This is a descriptive mapping for the Australian Hydrological Geospatial Fabric (AHGF) [11]. It is intended to provide an understanding of the basic relationship of HY_Features concepts and the AHGF hydrologic feature implementation.
+This is a descriptive mapping for the Australian Hydrological Geospatial
+Fabric (AHGF) link:#BOM2015[[11\]]. It is intended to provide an understanding of the
+basic relationship of HY_Features concepts and the AHGF hydrologic
+feature implementation.
 
 [#annexC_1]
 === Catchment Model
 
+[width="100%",cols="20%,20%,60%",]
+|=======================================================================
+|
+*HY_Features Name*
+ |
+*AHGF Name/Class*
+ |
+*Comment*
 
-[cols="1,2,6"]
-|===
-|*HY_Features Name*|*AHGF Class*|*Comment*
-|HY_Catchment|ConCatID|Logical features identified via ConCatID with topological relationships defined via ConNodeID (HY_Outfall). Can also be seen as the contributing set of logical features sharing a common ConCatID.
-|HY_DendriticCatchment|ConCatID|All logical HY_Catchment features are constrained to be dendritic in the Geofabric.
-|HY_InteriorCatchment|Not represented|All catchment areas defined by a particular DEM are considered to flow to a single common outlet. 
+|HY_Catchment
+ |
+ContractedCatchment
+ |
+A contracted catchment is a catchment identified via ConCatID, which
+conceptualizes a holistic unit of hydrology draining to a common outflow
+(HY_HydroNexus) with a known identity to which a persistent identifier
+is assigned (ConNodeID). This logical catchment may also have a single
+inflow, which together with the outflow, define a FlowPath for the
+catchment and take part in the AHGF topology tables
+(AHGFNodeLinkConnectivityDown and AHGFNodeLinkConnectivityUp). A
+catchment may have multiple hydrologic-realizations and is therefore not
+restricted to the single geometric representation given by
+AHGFContractedCatchment. 
 
-Note: Areas not flowing to a common outlet are aggregated with areas that do according to saddle points in the terrain model.
-|HY_CatchmentAggregate|Collections of ConNodeID|Network following connectivity via ConNodeID encapsulating divergent flows to remain dendritic in nature.
-|HY_Outfall|ConNodeID|All ConNodeID act in the role of outflow node (To_Node) for one or more ConCatID catchment(s) and most also act in the role of inflow node (From_Node) for a single ConCatID catchment.
-|HY_Outfallrealization|AHGFNetworkNode|HY_ReferenceLocation can be used as a reference location for any point associated with a feature. In reality this will normally be a realisation of a ConNodeID (with associated coordinates) or the Geofabric realisation of event locations (AHGFNetworkNode::GhostNode) used to register Hydrometric features on the network.
-|HY_CatchmentRealization|Feature identified by ConCatID|Any feature or collection of features identified by a single ConCatID. Single instances of AHGFContractedCatchment and AHGFLink as well as collections of AHGFNetworkStream, AHGFNetworkNode, AHGFCatchment (low level sub-catchments) and AHGFWaterbody. Note: features of subtype AHGFContractedCatchment::NoFlowArea do not have a ConNodeID (i.e. No HY_Outfall)
-|HY_CatchmentArea|AHGF Contracted Catchment, AHGFCatchment|A single AHGFContractedCatchment or a collection of AHGFCatchment (both 2D simple surfaces derived from a common Digital Elevation model).
-|HY_CatchmentBoundary|Not represented|Can be seen as the boundary (or boundaries) of the polygon feature(s) that realise HY_CatchmentArea.
-|HY_CartographicRealization|AHGFMappedStream|AHGFMappedStream is a feature class of the Geofabric Surface Cartography product, perhaps all feature classes in this product can be considered as HY_CartographicRealization.
-|===
+|
+ 
+ |
+'Base-level' Catchment
+ |
+Additionally, AHGF 'base-level' catchments, from which contracted
+catchments are derived, can be seen as a second set of conceptualized
+units of hydrology draining to a single common outflow and with a single
+inflow. These catchments are given a non-persistent identifier (HydroID)
+and like contracted catchments, their flow paths take part in AHGF
+topology tables (AHGFNetworkConnectivityDown and
+AHGFNetworkConnectivityUp). The polygon geometric representation of
+these catchments is provided by AHGFCatchment.
+
+|HY_DendriticCatchment
+ |
+ContractedCatchment
+ |
+All contracted catchment
+features are constrained to be dendritic in the AHGF. A contracted
+catchment's outflow can only be received by a single downstream
+contracted catchment.
+
+|
+HY_InteriorCatchment
+ |
+ContractedCatchment
+ |
+Contracted catchments that normally do not contribute flow to a
+neighboring contracted catchment or to the coast (i.e. catchments with
+potential connections to groundwater or atmospheric systems).
+
+ 
+
+'Base-level' catchments that normally do not contribute flow to a
+neighboring base-level catchment or to the coast. These catchments have
+no realized FlowPath or HydroNexus.
+
+|
+HY_CatchmentAggregate
+ |
+Collections of Contracted Catchments
+
+ |
+Sets of non-overlapping dendritic and interior contracted catchment
+features aggregated into larger encompassing catchments. Such
+aggregations are a fundamental concept in the AHGF and the primary
+reason for the creation of the contracted catchments. The AHGF
+Topographic Drainage Divisions (AWRADrainageDivision) and River Regions
+(RiverRegions) are examples of such aggregations.
+
+|
+ 
+ |
+Collections of 'Base-level' Catchments
+ |
+Contracted catchments, derived from collections of 'base-level'
+catchments, can themselves be seen as a further examples of a catchment
+aggregate.
+
+|
+HY_HydroNexus
+ |
+Subset of Contracted Nodes
+ |
+A hydrologic significant
+entity conceptualizing the outflow of a contracted catchment. All
+contracted nodes in the AHGF are determined by a set of defined business
+rules and assigned with persistent identifiers (ConNodeID). A subset of
+these contracted nodes act in the role of outflow node (ConNodeID) for
+one or more contracted catchment(s) and can also act as an inflow node
+(FConNodeID) for zero or one contracted catchment.
+
+|
+HY_HydroLocation
+ |
+AHGFNode
+
+ |
+Features in AHGFNode are the subset of contracted nodes, which realize
+instances of HY_HydroNexus. All AHGFNode features therefore act in the
+role of an outflow node (ConNodeID) for a contracted catchment and may
+also additionally act in the role of inflow node (FConNodeID) for a
+single contracted catchment. Some examples of contracted nodes that
+realize hydro nexus in the AHGF are confluences, coastal outlets,
+reservoir outlets and monitoring point stream gauges. The AHGF also
+defines a specialization of HY_HydroLocation, whereby a collection of
+disjoint points can be used to realize a single nexus, effectively
+forming a 'diffused' outflow (or inflow) for a contracted catchment.
+Instances of such specialized hydro locations, which are used for
+simplification of complex drainage patterns at the boundary of
+contracted catchment, will always realize (at least) one contracted
+node. This representative node is the node used for topological
+realization of the hydro nexus.
+
+|
+ 
+ |
+AHGFNetworkNode
+ |
+With the exception of those that coincide with contracted nodes, all
+remaining AHGFNetworkNode features are further examples of hydro
+locations in the AHGF.
+
+|
+HY_CatchmentRealization
+ |
+Feature identified by ConCatID
+ |
+Any feature, collection of features or topological data identified by a
+single ConCatID (contracted catchment). Single instances of
+AHGFContractedCatchment and AHGFLink as well as collections of
+AHGFNetworkStream, AHGFNetworkNode, AHGFCatchment (base-level
+sub-catchments) and AHGFWaterbody features sharing a common ConCatID. +
+ +
+*Note*: features of subtype AHGFContractedCatchment::NoFlowArea in the
+AHGF are special-case un-realizable contracted catchments (normally
+small islands) that do not have an associated contracted node (i.e. No
+HY_HydroNexus). +
+  +
+All AHGF 'base-level catchments have at least one catchment realization,
+being a single instance of AHGFCatchment, and many are also realized by
+a single AHGFNetworkStream.
+
+|
+HY_CatchmentArea
+ |
+Not represented
+ |
+An instance HY_CatchmentArea realizes an instance of HY_Catchment as a
+catchment area connecting its inflow and outflow and including a plane
+surface. Although the polygon representing a catchment might be thought
+of as an area, the subset of a DEM or another land cover dataset would
+be more in line with the meaning of CatchmentArea as defined by
+HY_Features. +
+Although not directly represented in the AHGF, the inherent close
+relationship between the features of AHGFContractedCatchment,
+AHGFCatchment and the DEM (9 second or 1 second) allow us to postulate a
+potential realization of a contracted catchment as the area of the DEM
+bounded by that contracted catchment.
+
+|HY_CatchmentDivide
+ |
+AHGFContractedCatchment
+ |
+The AHGFContractedCatchment polygon feature that realizes a contracted
+catchment.
+
+|
+
+ |
+AHGFCatchment
+ |
+The AHGFCatchment polygon feature that realizes a base-level catchment.
+
+|
+HY_CartographicRealization
+ |
+AHGFMappedStream
+ |
+The features of AHGFMappedStream within the AHGF Surface Cartography product, 
+provide an additional realization of both contracted catchments and base-level
+catchments. Collections of features from AHGFNetworkStream identified by
+a single ConCatID, while a realization of a contracted catchment
+themselves, are also attributed with identifiers that relate them to
+corresponding mapped stream features.
+|=======================================================================
 
 [#annexC_2]
 === Hydrographic Network
 
-[cols="1,2,6"]
-|===
-|*HY_Features Name*|*AHGF Class*|*Comment*
-|HY_Hydrographic Network|AHGFNetworkStream|Subset of AHGFNetworkStream features (subtypes: NetworkFlowSegment & NetworkWaterAreaSegment) provides a particular HY_CatchmentRealization. This network realization can be supplemented with its corresponding HY_ChannelNetwork instance.
-|HY_WaterBody|AHGFNetworkStream|AHGFNetworkStream features (subtypes: NetworkFlowSegment & NetworkWaterAreaSegment).
-|HY_ChannelNetwork|AHGFNetworkStream|Subset of AHGFNetworkStream:: NetworkArtificialFlowSegment provides a particular HY_CatchmentRealization. This network realization is only complete when combined with the corresponding HY_HydrographicNetwork instance.
-|HY_Depression|Not represented|—
-|HY_Channel|AHGFNetworkStream|AHGFNetworkStream features (subtype: NetworkArtificialFlowSegment). For version 3 products AHGFNetworkStream features are related to the relevant logical HY_Catchment via ConCatID.
-|HY_Reservoir|AHGFWaterbody::Reservoir|Reservoir subtype of AHGFWaterbody. 
-|HY_FlowPath|AHGFLink|Note: Geofabric currently has no FlowPath for headwater (AHGFContractedCatchment) areas.
-|HY_WaterEdge|Not represented|—
-|HY_LongitudinalSection|Not represented|—
-|HY_WaterBodyStratum|Not represented|—
-|HY_Water_LiquidPhase|Not represented|—
-|HY_Water_SolidPhase|Not represented|—
-|===
+[width="100%",cols="20%,20%,60%",]
+|=======================================================================
+|
+*HY_Features Name*
+ |
+*AHGF Name/Class*
+ |
+*Comment*
+
+|
+HY_Hydrographic Network
+ |
+Subsets of AHGFNetworkStream and AHGFWaterbody
+ |
+The collection of AHGFNetworkStream flow segment and water area segment
+features (subtypes: NetworkFlowSegment & NetworkWaterAreaSegment) and
+on-network AHGFWaterbody features within a particular contracted
+catchment (identified by a single ConCatID) can be seen to realize that
+catchment as its hydrographic network.
+
+|HY_WaterBody
+ |
+AHGFNetworkStream
+ 
+(subtypes: NetworkFlowSegment & NetworkWaterAreaSegment) and
+AHGFWaterbody
+ |
+AHGFNetworkStream flow segment and water area segment features and
+AHGFWaterbody features represent water bodies in the AHGF. These
+features indicate that there is water contained in some channel or other
+containing feature.
+
+|
+HY_ChannelNetwork
+ |
+AHGFNetworkStream
+ 
+(subtype: NetworkArtificialFlowSegment)
+ |
+While a complete channel network is not represented in the AHGF, the
+subset of artificial flow segment features from AHGFNetworkStream may be
+seen as being a partial channel network. Importantly, for a particular
+contracted catchment (identified by a single ConCatID) the collection of
+artificial flow segment features can be seen to realize that catchment.
+However, the HY_HydroNetwork realization for a catchment is only
+complete (i.e. fully connected) when the Hydrographic Network and
+Channel Network realizations are combined.
+
+|
+HY_Depression
+ |
+Not represented
+ |
+ 
+|
+HY_Channel
+ |
+AHGFNetworkStream
+ 
+(subtype: NetworkArtificialFlowSegment)
+ |
+The subset of artificial flow segment features from AHGFNetworkStream
+can be thought of as a partial channel network in that they indicate
+where water may flow, even though not normally present.
+
+|
+HY_Reservoir
+ |
+AHGFWaterbody
+ 
+(subtype: Reservoir)
+ |
+The subset of reservoir features from AHGFWaterbody.
+
+|
+HY_FlowPath
+ |
+AHGFLink
+ |
+Each link feature in AHGFLink realizes a contracted catchment identified
+by a single ConCatID. A link is essentially a straight line linking
+realizations of contracted nodes representing the inflow and outflow for
+the contracted catchment.
+ 
+Note: The AHGF currently does not have FlowPath features for contracted
+catchments in headwater areas.
+
+|HY_LongitudinalSection |Not represented |
+
+|HY_CrossSection |Not represented |
+
+|HY_WaterBodyStratum |Not represented |
+
+|HY_Water_LiquidPhase |Not represented |
+
+|HY_Water_SolidPhase |Not represented |
+|=======================================================================
 
 [#annexC_3]
 === Hydrometric Network
 
-[cols="1,2,6"]
-|===
-|*HY_Features Name*|*AHGF Class*|*Comment*
-|HY_HydrometricNetwork|Not represented|SPossible future plans to produce a geoschematic representation of the hydrometric features at some stage.
-|HY_HydrometricFeature|AHGFNetworkNode:: AHGFGhostNode|Ghost Nodes are a representation of Hydrometric features located on a Hydrographic Network representation. Note: Currently, V3 has a separate AHGFGhostNode feature class for ghost nodes. There are plans to include these features as part of the Hydrology Reporting Catchments product forming outfalls for AHGFContractedCatchment (HY_DendriticCatchment) features.
-|HY_RiverReferenceSystem|Not represented|Measures are not yet explicitly included in AHGF.
-|HY_IndirectPostition|Not represented|Measures are not yet explicitly included in AHGF.
-|===
+[width="100%",cols="20%,20%,60%",]
+|=======================================================================
+|
+*HY_Features Name*
+
+ |
+*AHGF Name/Class*
+
+ |
+*Comment*
+
+|HY_HydrometricNetwork |
+AHGFNode
+
+(subtype: GhostNode)
+
+ |In the AHGF, hydrometric features are a subset of AHGFNode features
+that realize contracted nodes. Thus, single instances or pairs of
+hydrometric features acting in the roles of inflows and outflows for
+contracted catchments, could be seen to form a hydrometric network which
+realizes a single contracted catchment.
+
+|HY_HydrometricFeature |
+AHGFNode
+
+(subtype: GhostNode)
+
+ |
+Hydrometric features, such as stream gaging stations, are represented as
+a subset of AHGFNode features.
+
+Note: While hydrometric features were included in earlier versions of
+the AHGF, version 3 products were the first to see them included as
+realizations of contracted nodes (i.e. to act in the role of inflow and
+outflow for contracted catchments).
+
+|HY_IndirectPosition |Not represented |Measures are not yet explicitly
+included in the AHGF. Note that monitoring stations are located 'on
+river' via realizations of contracted nodes (AHGFNode) and thus act in
+the role of inflow and outflow for contracted catchments.
+|=======================================================================
