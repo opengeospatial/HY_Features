@@ -1,5 +1,5 @@
-:Title: OGC®  WaterML 2 – Part 3:  Surface Hydrology Features (HY_Features) – Conceptual Model
-:titletext: OGC®  WaterML 2 – Part 3:  Surface Hydrology Features (HY_Features) – Conceptual Model
+:Title: OGC® WaterML 2: Part 3: - Surface Hydrology Features (HY_Features) – Conceptual Model
+:titletext: OGC® WaterML 2: Part 3: - Surface Hydrology Features (HY_Features) – Conceptual Model
 :doctype: book
 :encoding: utf-8
 :lang: en
@@ -21,10 +21,10 @@
 |Approval Date:   <yyyy-mm-dd>
 |Publication Date:   <yyyy-mm-dd>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
-|Internal reference number of this OGC(R) document:    14-111r2
-|Version: 0.5
+|Internal reference number of this OGC(R) document:    14-111r5
+|Version: 0.11
 |Category: OGC(R) Implementation Standard
-|Editor:   David Blodgett, Irina Dornblut
+|Editor:   David Blodgett, Irina Dornblut
 |===
 
 [cols = "^", frame = "none"]
