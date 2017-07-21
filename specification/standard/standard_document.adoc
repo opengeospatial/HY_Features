@@ -1,5 +1,5 @@
-:Title: OGC® WaterML 2: Part 3: - Surface Hydrology Features (HY_Features) – Conceptual Model
-:titletext: OGC® WaterML 2: Part 3: - Surface Hydrology Features (HY_Features) – Conceptual Model
+:Title: OGC® WaterML 2: Part 3 - Surface Hydrology Features (HY_Features) - Conceptual Model
+:titletext: OGC® WaterML 2: Part 3 - Surface Hydrology Features (HY_Features) - Conceptual Model
 :doctype: book
 :encoding: utf-8
 :lang: en
