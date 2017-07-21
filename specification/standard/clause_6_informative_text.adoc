@@ -434,7 +434,7 @@ stagnant water that is not moving or flowing. The waterbody concept
 formalized in this specification is consistent with this definition, but
 focuses on surface-waterbodies only. A conceptual model capturing the
 specifics of bodies of groundwater as well as aquifers containing
-groundwater are provided by the WaterML2 Part 4 - GroundwaterML2
+groundwater are provided by the WaterML2: Part 4 - GroundwaterML2
 specification link:#OGC2016[[6\]]. A future WaterML2 specification part 
 is expected to complete the sub-atmospheric hydrologic cycle by addressing 
 features such as recharge zones and springs that connect groundwater with 
