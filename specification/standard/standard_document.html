@@ -651,13 +651,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_the_hy_features_conceptual_model">7.1. The HY_Features conceptual model</a></li>
 <li><a href="#_hy_features_conceptual_model_conformance">7.2. HY_Features conceptual model conformance</a></li>
-<li><a href="#_the_hydro_feature_module">7.3. The Hydro Feature module</a>
+<li><a href="#_hydro_feature_concepts">7.3. Hydro Feature concepts</a>
 <ul class="sectlevel3">
 <li><a href="#_the_named_feature_model">7.3.1. The Named Feature model</a></li>
-<li><a href="#_the_hydrocomplex_package">7.3.2. The HydroComplex package</a></li>
+<li><a href="#_the_hydro_complex_model">7.3.2. The Hydro Complex Model</a></li>
+<li><a href="#_the_river_referencing_model">7.3.3. The River Referencing model</a></li>
 </ul>
 </li>
-<li><a href="#_the_surface_hydro_feature_model">7.4. The Surface Hydro Feature model</a>
+<li><a href="#_surface_hydro_feature_concepts">7.4. Surface Hydro Feature concepts</a>
 <ul class="sectlevel3">
 <li><a href="#_the_channel_network_model">7.4.1. The Channel Network model</a></li>
 <li><a href="#_the_hydrographic_network_model">7.4.2. The Hydrographic Network model</a></li>
@@ -665,10 +666,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_the_storage_model">7.4.4. The Storage model</a></li>
 </ul>
 </li>
-<li><a href="#_the_hydrometric_network_application_schema">7.5. The Hydrometric Network application schema</a>
+<li><a href="#_hydrometric_network_concepts">7.5. Hydrometric Network concepts</a>
 <ul class="sectlevel3">
-<li><a href="#_hydrometric_network_3">7.5.1. Hydrometric Network</a></li>
-<li><a href="#_hydrometric_feature_2">7.5.2. Hydrometric Feature</a></li>
+<li><a href="#_hydrometric_network_model">7.5.1. Hydrometric Network model</a></li>
+<li><a href="#_hydrometric_feature_model">7.5.2. Hydrometric Feature model</a></li>
 </ul>
 </li>
 </ul>
@@ -733,6 +734,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The OGC Surface Hydrology Features (HY_Features) standard defines a common conceptual information model for identification of specific hydrologic features independent of their geometric representation and scale. The model describes types of surface hydrologic features by defining fundamental relationships among various components of the hydrosphere. This includes relationships such as hierarchies of catchments, segmentation of rivers and lakes, and the hydrologically determined topological connectivity of features such as catchments and waterbodies. The standard also defines normative requirements for HY_Features implementation schemas and mappings to meet in order to be conformant with the conceptual model.</p>
 </div>
 <div class="paragraph">
+<p>The HY_Features model is based on an abstract catchment feature type that can have multiple alternate hydrology-specific realizations and geometric representations. It supports referencing information about a hydrologic feature across disparate information systems or products to help improve data integration within and among organizations. The model can be applied to cataloging of observations, model results, or other study information involving hydrologic features. The ability to represent the same catchment, river, or other hydrologic feature in several ways is critical for aggregation of cross-referenced or related features into integrated datasets and data products on global, regional, or basin scales.</p>
+</div>
+<div class="paragraph">
 <p><strong class="big">ii.    Keywords</strong></p>
 </div>
 <div class="paragraph">
@@ -780,7 +784,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Metalinkage, Australia</p>
 </li>
 <li>
-<p>BRGM, France</p>
+<p>French Geological Survey (BRGM), France</p>
 </li>
 <li>
 <p>University of Texas at Austin, USA</p>
@@ -860,14 +864,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>The HY_Features conceptual model, described in this standard, references
 concepts defined in the OGC Abstract Specification (OGC AS). Conformance
-to the OGC AS may be achieved via specialization of the relevant
-concept. An example of this kind of conformance is a geographic feature
-specialization that carries specific hydrologic feature attributes and
-associations. Conformance may also be achieved by asserting a
-correspondence or analogy between HY_Features concepts and OGC AS
-concepts. For example, the river reference system for referencing
-positions along a nominal flowpath corresponds to linear referencing
-along any linear feature element.</p>
+to the OGC AS may be achieved via specialization of the relevant concept.
+An example of this kind of conformance is a geographic feature specialization
+that carries specific hydrologic feature attributes and associations. Conformance
+may also be achieved by asserting a correspondence or analogy between HY_Features
+concepts and OGC AS concepts. For example, the river reference system for
+referencing positions along a nominal flowpath corresponds to linear referencing
+along any linear feature element.
+This standard requires no changes to the current version of the OpenGIS Abstract
+Specification.</p>
 </div>
 </div>
 </div>
@@ -1097,11 +1102,11 @@ coordinates)</p>
 </div>
 <div class="paragraph">
 <p>OGC Abstract Specification Topic 11, Metadata (aka ISO 19115-1:2014,
-Geographic Information&#8201;&#8212;&#8201;Metadata Ð Fundamentals)</p>
+Geographic Information&#8201;&#8212;&#8201;Metadata&#8201;&#8212;&#8201;Fundamentals)</p>
 </div>
 <div class="paragraph">
 <p>OGC Abstract Specification Topic 19, Geographic information - Linear
-referencing (aka ** ISO 19148:2012, Geographic Information&#8201;&#8212;&#8201;Linear
+referencing (aka ISO 19148:2012, Geographic Information&#8201;&#8212;&#8201;Linear
 referencing)</p>
 </div>
 <div class="paragraph">
@@ -1118,8 +1123,7 @@ ISO 19156:2011, Geographic Information&#8201;&#8212;&#8201;Observations and Meas
 <p>ISO 19109:2006, Geographic Information&#8201;&#8212;&#8201;Rules for application schemas</p>
 </div>
 <div class="paragraph">
-<p>ISO 19133:2005, Geographic Information&#8201;&#8212;&#8201;Location-based services Ð
-Tracking and navigation</p>
+<p>ISO 19133:2005, Geographic Information&#8201;&#8212;&#8201;Location-based services&#8201;&#8212;&#8201;Tracking and navigation</p>
 </div>
 </div>
 </div>
@@ -2247,7 +2251,7 @@ highlighted in the figures.</p>
 <div class="content">
 <img src="figures/fig9.png" alt="fig9">
 </div>
-<div class="title">Figure 9. Catchment area (grey area A) and flowpath realization (red line F) that connects catchment inflow to outflow for a defined a hydrologically significant unit (C1) and corresponding HY_Features UML classes.</div>
+<div class="title">Figure 9. Catchment area (grey area A) and flowpath realization (red line F) that connects catchment inflow to outflow for a defined hydrologically significant unit (C1) and corresponding HY_Features UML classes.</div>
 </div>
 <div id="figure10" class="imageblock">
 <div class="content">
@@ -2305,7 +2309,7 @@ catchment topology as a simple dendritic network.</p>
 <div class="content">
 <img src="figures/fig12.png" alt="fig12">
 </div>
-<div class="title">Figure 12. Non-dendritic stream network complexity: a) non-dendritic detailed flow: b) unambiguous aggregated flow.</div>
+<div class="title">Figure 12. Non-dendritic stream network complexity: a) non-dendritic detailed flow b) unambiguous aggregated flow.</div>
 </div>
 <div class="paragraph">
 <p>The topological pattern of a catchment network is shared with all of its
@@ -2401,7 +2405,7 @@ characteristics, etc. Such bathymetric and strata information may also
 be represented as or derived from a surface such as would be derived
 from Lidar. Waterbodies or their strata may also be recognized as
 storage reservoir features with water use, regulation, or control
-characteristics.**</p>
+characteristics.</p>
 </div>
 <div class="paragraph">
 <p>In order to form hydrographic or channel networks, waterbodies or
@@ -2667,7 +2671,7 @@ location along a downstream flowpath referencing a known outflow node
 <div class="content">
 <img src="figures/fig17.png" alt="fig17">
 </div>
-<div class="title">Figure 17. Position (yellow dot) of an outflow node referencing an inflow node, expressed as a measured distance from a upstream referent (red dot) and representative UML classes.</div>
+<div class="title">Figure 17. Position (yellow dot) of an outflow node referencing an inflow node, expressed as a measured distance from an upstream referent (red dot) and representative UML classes.</div>
 </div>
 <div id="figure18" class="imageblock">
 <div class="content">
@@ -2713,7 +2717,7 @@ linear referencing model within the OGC Abstract Specification Topic 19,
 Linear referencing (aka ISO/FDIS19148:2011).</p>
 </div>
 <table id="table1" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. Table 1: HY_Features river positioning concepts comparable with the OGC Linear referencing model</caption>
+<caption class="title">Table 1. HY_Features river positioning concepts comparable with the OGC Linear referencing model</caption>
 <colgroup>
 <col style="width: 34%;">
 <col style="width: 33%;">
@@ -2963,7 +2967,7 @@ understanding of how the HY_Features network navigation may specify the
 Tracking and navigation model.</p>
 </div>
 <table id="table2" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 2. Table 2: HY_Features concepts comparable with the OGC Network navigation model</caption>
+<caption class="title">Table 2. HY_Features concepts comparable with the OGC Network navigation model</caption>
 <colgroup>
 <col style="width: 34%;">
 <col style="width: 33%;">
@@ -3227,9 +3231,9 @@ their UML classes have been grouped.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_hydro_feature_module"><a class="anchor" href="#_the_hydro_feature_module"></a>7.3. The Hydro Feature module</h3>
+<h3 id="_hydro_feature_concepts"><a class="anchor" href="#_hydro_feature_concepts"></a>7.3. Hydro Feature concepts</h3>
 <div class="paragraph">
-<p>The HydroFeature module provides the core concepts of a named hydrologic
+<p>The HydroFeature application schema provides the core concepts of a named hydrologic
 feature in the Named Feature (shown in Yellow), of a hydrologic complex
 in which the union of catchment and its common outlet is realized in
 several ways by a collection of hydrologic features (shown in Blue), and
@@ -3241,7 +3245,7 @@ a one-dimensional topological, flowpath realization.</p>
 <div class="content">
 <img src="figures/fig21.png" alt="fig21">
 </div>
-<div class="title">Figure 21. Hydro Feature Module Diagram</div>
+<div class="title">Figure 21. Hydro Feature Application Schema Diagram</div>
 </div>
 <div class="paragraph">
 <p>If required, an implementation should use terms from the code lists in
@@ -3425,9 +3429,9 @@ Boolean value type</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_the_hydrocomplex_package"><a class="anchor" href="#_the_hydrocomplex_package"></a>7.3.2. The HydroComplex package</h4>
+<h4 id="_the_hydro_complex_model"><a class="anchor" href="#_the_hydro_complex_model"></a>7.3.2. The Hydro Complex Model</h4>
 <div class="paragraph">
-<p>The Hydro Complex package is a collection of hydrologic features that
+<p>The Hydro Complex model describes a collection of hydrologic features that
 form a hydrologically closed system. This includes the catchment, its
 inflow and outflow (conceptualized as hydro nexuses) as well as various
 realizations of catchment and hydro nexuses by typical hydrologic
@@ -3757,7 +3761,7 @@ catchment exists, or is nillable.</p></td>
 <div class="sect4">
 <h5 id="_interior_catchment_2"><a class="anchor" href="#_interior_catchment_2"></a>Interior Catchment</h5>
 <div class="paragraph">
-<p>The HY_InteriorCatchment feature type (Figure 32) specializes the
+<p>The HY_InteriorCatchment feature type (<a href="#figure32">Figure 32</a>) specializes the
 general HY_Catchment class as a catchment which is generally not
 connected to other catchments. This class describes the interior
 catchment as a catchment enveloped by other catchments to which it may
@@ -3818,9 +3822,9 @@ non-existing outflow.</p>
 <div class="sect4">
 <h5 id="_hydro_nexus"><a class="anchor" href="#_hydro_nexus"></a>Hydro Nexus</h5>
 <div class="paragraph">
-<p>The HY_HydroNexus feature type (Figure 33) conceptualizes a
-hydrologically determined nexus of a corresponding catchment (Figure
-26). The hydro nexus represents the place where a catchment interacts
+<p>The HY_HydroNexus feature type (<a href="#figure33">Figure 33</a>) conceptualizes a
+hydrologically determined nexus of a corresponding catchment (<a href="#figure26">Figure 26</a>).
+The hydro nexus represents the place where a catchment interacts
 with another catchment, i.e. where the outflow of a contributing
 catchment becomes inflow into a receiving catchment. A catchment may
 receive flow from several upstream catchments or contribute flow to
@@ -3908,7 +3912,7 @@ contributing catchment.</p>
 <div class="sect4">
 <h5 id="_catchment_realization"><a class="anchor" href="#_catchment_realization"></a>Catchment Realization</h5>
 <div class="paragraph">
-<p>The HY_CatchmentRealization feature type (Figure 34) is based on the
+<p>The HY_CatchmentRealization feature type (<a href="#figure34">Figure 34</a>) is based on the
 idea that there are multiple hydrology-specific perspectives of the
 holistic catchment concept that are used to describe a catchment as a
 unit of study shared across sub-domains and studies.</p>
@@ -4065,7 +4069,7 @@ of the network parts.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div><div class="paragraph">
-<p><em>catchmentBoundary</em></p>
+<p><em>catchmentDivide</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">catchment boundary that participates in the network.</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Association</p></td>
@@ -4093,7 +4097,7 @@ association.</p>
 <div class="sect4">
 <h5 id="_hydro_location"><a class="anchor" href="#_hydro_location"></a>Hydro Location</h5>
 <div class="paragraph">
-<p>The HY_HydroLocation feature type (Figure 35) conceptualizes the idea
+<p>The HY_HydroLocation feature type (<a href="#figure35">Figure 35</a>) conceptualizes the idea
 that a hydro nexus can be realized by practically any feature of
 interest. The hydro nexus concept is used to define the hydrologic
 determination of a catchment but, like the catchment concept, does not
@@ -4207,11 +4211,12 @@ river referencing defined in this standard.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== River Referencing</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_the_river_referencing_model"><a class="anchor" href="#_the_river_referencing_model"></a>7.3.3. The River Referencing model</h4>
 <div class="paragraph">
-<p>The River Referencing model (Figure 36) provides a simple model to place
+<p>The River Referencing model (<a href="#figure36">Figure 36</a>) provides a simple model to place
 a feature of interest 'on a river'. It introduces the concept of
 indirect position where a position is determined relative to an already
 established reference location. This model defines a linear river
@@ -4242,7 +4247,6 @@ flowpath. Using located referents in both directions allows placement of
 a feature of interest a percentage of the distance along a flowpath even
 if the realized catchment is not explicitly delineated.</p>
 </div>
-</div>
 <div class="sect4">
 <h5 id="_indirect_position_3"><a class="anchor" href="#_indirect_position_3"></a>Indirect Position</h5>
 <div class="paragraph">
@@ -4256,13 +4260,13 @@ from a referent that is already located on that flowpath.</p>
 </div>
 <div class="paragraph">
 <p>The (indirect) position of an outflow node referenced along an upstream
-oriented flowpath (Figure 17) can be expressed as the distance from an
+oriented flowpath (<a href="#figure17">Figure 17</a>) can be expressed as the distance from an
 upstream inflow node located on that flowpath, while the (indirect)
 position of an inflow node referenced along a downstream oriented
-flowpath (Figure 18) can be expressed as distance from a downstream
+flowpath (<a href="#figure18">Figure 18</a>) can be expressed as distance from a downstream
 outflow node located on the flowpath. An 'intermediate' position
 referencing known inflow and outflow nodes bounding a flowpath at both
-ends (Figure 19) can be expressed as part of the distance along the
+ends (<a href="#figure19">Figure 19</a>) can be expressed as part of the distance along the
 entire flowpath, measured from the upstream end of an upstream flowpath,
 and/or from the downstream end of a downstream flowpath. A position
 referencing an already referenced location on the flowpath can be
@@ -4361,12 +4365,9 @@ relative to which a position may be assigned to a feature of interest.</p>
 <p>identifies the permanent reference location, usually an existing inflow
 or outflow hydro nexus relative to which a position is assigned to a
 hydro location feature of interest.</p>
-</div>
-<div class="paragraph">
-<p> </p>
 </div></div></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div><div class="paragraph">
-<p> </p>
+<p>Association</p>
 </div></div></td>
 </tr>
 <tr>
@@ -4470,7 +4471,7 @@ Conceptual Schema.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_surface_hydro_feature_model"><a class="anchor" href="#_the_surface_hydro_feature_model"></a>7.4. The Surface Hydro Feature model</h3>
+<h3 id="_surface_hydro_feature_concepts"><a class="anchor" href="#_surface_hydro_feature_concepts"></a>7.4. Surface Hydro Feature concepts</h3>
 <div class="paragraph">
 <p>The Surface Hydro Feature application schema provides common concepts of
 hydrologic features occurring on the land surface and specifies the core
@@ -4486,10 +4487,10 @@ schema.</p>
 <div class="content">
 <img src="figures/fig37.png" alt="fig37">
 </div>
-<div class="title">Figure 37. Surface Hydro Feature - Class Diagram</div>
+<div class="title">Figure 37. Surface Hydro Feature - Application Schema Diagram</div>
 </div>
 <div class="paragraph">
-<p>The Surface Hydro Feature model (Figure 37) conceptualizes the
+<p>The Surface Hydro Feature model (<a href="#figure37">Figure 37</a>) conceptualizes the
 accumulation of water on the land surface in waterbodies (shown in
 Blue), each made unique by its origin, size, or movement. With respect
 to the management and storage of water resources, a concept of water
@@ -4516,7 +4517,7 @@ or other containers for surface-waterbodies.</p>
 <div class="paragraph">
 <p>The Surface Hydro Feature application schema contains the leaf packages:
 Channel Network, Hydrographic Network, Water Body Types and Storage.
-Figure 38 shows the external and internal dependencies.</p>
+<a href="#figure38">Figure 38</a> shows the external and internal dependencies.</p>
 </div>
 <div id="figure38" class="imageblock">
 <div class="content">
@@ -4528,7 +4529,7 @@ Figure 38 shows the external and internal dependencies.</p>
 <h4 id="_the_channel_network_model"><a class="anchor" href="#_the_channel_network_model"></a>7.4.1. The Channel Network model</h4>
 <div class="paragraph">
 <p>The Channel Network model defines a network of connected depressions and
-channels which, in its entirety, can realize a catchment (Figure 39).
+channels which, in its entirety, can realize a catchment (<a href="#figure39">Figure 39</a>).
 Usually this is a network of linear flowpaths realizing catchments
 connected to each other within the containing catchment realized by the
 entire network. This allows representation of the drainage pattern even
@@ -4551,8 +4552,8 @@ depressions, regardless of whether or not water is contained in them.</p>
 </div>
 <div class="paragraph">
 <p>A single depression or channel may realize the catchment, either as part
-of the network (Figure 39) or via a reference feature which realizes the
-conceptual hydro nexus of the catchment (Figure 40). For example, a
+of the network (<a href="#figure39">Figure 39</a>) or via a reference feature which realizes the
+conceptual hydro nexus of the catchment (<a href="#figure40">Figure 40</a>). For example, a
 point at an associated cross or longitudinal section may be considered
 to realize the outflow of the catchment which is realized by the channel
 expressed as a flowpath.</p>
@@ -4836,7 +4837,7 @@ part of.</p>
 <h4 id="_the_hydrographic_network_model"><a class="anchor" href="#_the_hydrographic_network_model"></a>7.4.2. The Hydrographic Network model</h4>
 <div class="paragraph">
 <p>The Hydrographic Network model defines a logical network of waterbodies
-which, in its entirety, realizes a catchment (Figure 41). Most
+which, in its entirety, realizes a catchment (<a href="#figure41">Figure 41</a>). Most
 typically, this is as a network of linear flowpaths realizing catchments
 connected to each other within a containing catchment that is realized
 by the entire network. This allows representation of the network of
@@ -4853,9 +4854,9 @@ the channels and depressions.</p>
 </div>
 <div class="paragraph">
 <p>A single waterbody can realize its catchment either as part of the
-hydrographic network (Figure 41), or via a reference location which
+hydrographic network (<a href="#figure41">Figure 41</a>), or via a reference location which
 realizes the hydro nexus of the catchment realized by the waterbody
-(Figure 42). For example, a fixed landmark, or a point at an associated
+(<a href="#figure42">Figure 42</a>). For example, a fixed landmark, or a point at an associated
 cross section is considered to realize the outflow of the catchment
 which is realized by the waterbody.</p>
 </div>
@@ -5234,7 +5235,7 @@ and its interaction with the open sea.</p>
 <div class="sect3">
 <h4 id="_the_storage_model"><a class="anchor" href="#_the_storage_model"></a>7.4.4. The Storage model</h4>
 <div class="paragraph">
-<p>The Storage model (Figure 43) provides a concept to describe any
+<p>The Storage model (<a href="#figure43">Figure 43</a>) provides a concept to describe any
 waterbody, in terms of a reservoir storing water for future use. The
 separation of the storage model allows description of the hydrographic
 network without the details of storage capacities that a waterbody may
@@ -5298,9 +5299,10 @@ management zone, or flood control zone.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_hydrometric_network_application_schema"><a class="anchor" href="#_the_hydrometric_network_application_schema"></a>7.5. The Hydrometric Network application schema</h3>
+<h3 id="_hydrometric_network_concepts"><a class="anchor" href="#_hydrometric_network_concepts"></a>7.5. Hydrometric Network concepts</h3>
 <div class="paragraph">
-<p>The Hydrometric Network application schema (Figure 44) defines a logical
+<p>The Hydrometric Network application schema (<a href="#figure44">Figure 44</a>
+and <a href="#figure45">Figure 45</a>) define a logical
 model to take into account a network of hydrometric stations as a
 specific realization of the catchment in the perspective of hydrologic
 observation, without the detail of an observation strategy.</p>
@@ -5335,7 +5337,7 @@ to place other features of interest relative to the hydrometric station.</p>
 <div class="title">Figure 45. Hydrometric network and hydrometric feature realizing a catchment (UML class diagram)</div>
 </div>
 <div class="sect3">
-<h4 id="_hydrometric_network_3"><a class="anchor" href="#_hydrometric_network_3"></a>7.5.1. Hydrometric Network</h4>
+<h4 id="_hydrometric_network_model"><a class="anchor" href="#_hydrometric_network_model"></a>7.5.1. Hydrometric Network model</h4>
 <div class="paragraph">
 <p>The HY_HydrometricNetwork feature type specializes the HY_HydroNetwork
 realization specifically as an aggregate of hydrometric features.
@@ -5377,12 +5379,12 @@ as part of the hydrometric network.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_hydrometric_feature_2"><a class="anchor" href="#_hydrometric_feature_2"></a>7.5.2. Hydrometric Feature</h4>
+<h4 id="_hydrometric_feature_model"><a class="anchor" href="#_hydrometric_feature_model"></a>7.5.2. Hydrometric Feature model</h4>
 <div class="paragraph">
 <p>The HY_HydrometricFeature feature type provides a concept of a
 monitoring station at which data on water are obtained that realizes the
 catchment either separately or as part of the hydrometric network
-(Figure 45). HY_HydrometricFeature has associations for the
+(<a href="#figure45">Figure 45</a>). HY_HydrometricFeature has associations for the
 <em>hydrometricNetwork</em> in which it participates, and a <em>positionOnRiver</em>.
 An <em>outlet-at-station</em> constraint emphasizes the recognition of a
 monitoring station as outlet of the catchment that is realized by the
@@ -5445,7 +5447,7 @@ station is part of.</p>
 <h3 id="annexA_1"><a class="anchor" href="#annexA_1"></a>A.1. Introduction</h3>
 <div class="paragraph">
 <p>These test suites verify the compliance of the conformance targets for
-the HY_Features conceptual module with the HY_Features specification.
+the HY_Features conceptual model with the HY_Features specification.
 Each instance of hydrologic feature data is encoded according to a
 specific implementation schema, so conformance of a schema or a mapping
 to/from such a schema with the abstract specification is defined as a
@@ -5882,7 +5884,8 @@ feature implementation.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_Catchment</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ContractedCatchment</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ContractedCatchment<br>
+'Base-level' Catchment</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A contracted catchment is a catchment identified via ConCatID, which
 conceptualizes a holistic unit of hydrology draining to a common outflow
 (HY_HydroNexus) with a known identity to which a persistent identifier
@@ -5892,12 +5895,8 @@ catchment and take part in the AHGF topology tables
 (AHGFNodeLinkConnectivityDown and AHGFNodeLinkConnectivityUp). A
 catchment may have multiple hydrologic-realizations and is therefore not
 restricted to the single geometric representation given by
-AHGFContractedCatchment.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">'Base-level' Catchment</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Additionally, AHGF 'base-level' catchments, from which contracted
+AHGFContractedCatchment.<br></p>
+<p class="tableblock">Additionally, AHGF 'base-level' catchments, from which contracted
 catchments are derived, can be seen as a second set of conceptualized
 units of hydrology draining to a single common outflow and with a single
 inflow. These catchments are given a non-persistent identifier (HydroID)
@@ -5920,25 +5919,21 @@ contracted catchment.</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Contracted catchments that normally do not contribute flow to a
 neighboring contracted catchment or to the coast (i.e. catchments with
 potential connections to groundwater or atmospheric systems).</p>
-<p class="tableblock"> </p>
 <p class="tableblock">'Base-level' catchments that normally do not contribute flow to a
 neighboring base-level catchment or to the coast. These catchments have
 no realized FlowPath or HydroNexus.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_CatchmentAggregate</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Collections of Contracted Catchments</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Collections of Contracted Catchments<br>
+Collections of 'Base-level' Catchments</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Sets of non-overlapping dendritic and interior contracted catchment
 features aggregated into larger encompassing catchments. Such
 aggregations are a fundamental concept in the AHGF and the primary
 reason for the creation of the contracted catchments. The AHGF
 Topographic Drainage Divisions (AWRADrainageDivision) and River Regions
-(RiverRegions) are examples of such aggregations.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Collections of 'Base-level' Catchments</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Contracted catchments, derived from collections of 'base-level'
+(RiverRegions) are examples of such aggregations.<br></p>
+<p class="tableblock">Contracted catchments, derived from collections of 'base-level'
 catchments, can themselves be seen as a further examples of a catchment
 aggregate.</p></td>
 </tr>
@@ -5955,7 +5950,8 @@ one or more contracted catchment(s) and can also act as an inflow node
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_HydroLocation</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">AHGFNode</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">AHGFNode<br>
+AHGFNetworkNode</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Features in AHGFNode are the subset of contracted nodes, which realize
 instances of HY_HydroNexus. All AHGFNode features therefore act in the
 role of an outflow node (ConNodeID) for a contracted catchment and may
@@ -5970,12 +5966,8 @@ Instances of such specialized hydro locations, which are used for
 simplification of complex drainage patterns at the boundary of
 contracted catchment, will always realize (at least) one contracted
 node. This representative node is the node used for topological
-realization of the hydro nexus.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">AHGFNetworkNode</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">With the exception of those that coincide with contracted nodes, all
+realization of the hydro nexus.<br></p>
+<p class="tableblock">With the exception of those that coincide with contracted nodes, all
 remaining AHGFNetworkNode features are further examples of hydro
 locations in the AHGF.</p></td>
 </tr>
@@ -6014,14 +6006,11 @@ bounded by that contracted catchment.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_CatchmentDivide</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">AHGFContractedCatchment</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">AHGFContractedCatchment<br>
+AHGFCatchment</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The AHGFContractedCatchment polygon feature that realizes a contracted
-catchment.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">AHGFCatchment</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The AHGFCatchment polygon feature that realizes a base-level catchment.</p></td>
+catchment.<br></p>
+<p class="tableblock">The AHGFCatchment polygon feature that realizes a base-level catchment.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_CartographicRealization</p></td>

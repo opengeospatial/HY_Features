@@ -6,7 +6,7 @@
 === Introduction
 
 These test suites verify the compliance of the conformance targets for
-the HY_Features conceptual module with the HY_Features specification.
+the HY_Features conceptual model with the HY_Features specification.
 Each instance of hydrologic feature data is encoded according to a
 specific implementation schema, so conformance of a schema or a mapping
 to/from such a schema with the abstract specification is defined as a

@@ -21,7 +21,8 @@ feature implementation.
 
 |HY_Catchment
  |
-ContractedCatchment
+ContractedCatchment +
+'Base-level' Catchment
  |
 A contracted catchment is a catchment identified via ConCatID, which
 conceptualizes a holistic unit of hydrology draining to a common outflow
@@ -32,13 +33,8 @@ catchment and take part in the AHGF topology tables
 (AHGFNodeLinkConnectivityDown and AHGFNodeLinkConnectivityUp). A
 catchment may have multiple hydrologic-realizations and is therefore not
 restricted to the single geometric representation given by
-AHGFContractedCatchment. 
+AHGFContractedCatchment. +
 
-|
- 
- |
-'Base-level' Catchment
- |
 Additionally, AHGF 'base-level' catchments, from which contracted
 catchments are derived, can be seen as a second set of conceptualized
 units of hydrology draining to a single common outflow and with a single
@@ -48,7 +44,8 @@ topology tables (AHGFNetworkConnectivityDown and
 AHGFNetworkConnectivityUp). The polygon geometric representation of
 these catchments is provided by AHGFCatchment.
 
-|HY_DendriticCatchment
+|
+HY_DendriticCatchment
  |
 ContractedCatchment
  |
@@ -66,8 +63,6 @@ Contracted catchments that normally do not contribute flow to a
 neighboring contracted catchment or to the coast (i.e. catchments with
 potential connections to groundwater or atmospheric systems).
 
- 
-
 'Base-level' catchments that normally do not contribute flow to a
 neighboring base-level catchment or to the coast. These catchments have
 no realized FlowPath or HydroNexus.
@@ -75,7 +70,8 @@ no realized FlowPath or HydroNexus.
 |
 HY_CatchmentAggregate
  |
-Collections of Contracted Catchments
+Collections of Contracted Catchments +
+Collections of 'Base-level' Catchments
 
  |
 Sets of non-overlapping dendritic and interior contracted catchment
@@ -83,13 +79,8 @@ features aggregated into larger encompassing catchments. Such
 aggregations are a fundamental concept in the AHGF and the primary
 reason for the creation of the contracted catchments. The AHGF
 Topographic Drainage Divisions (AWRADrainageDivision) and River Regions
-(RiverRegions) are examples of such aggregations.
+(RiverRegions) are examples of such aggregations. +
 
-|
- 
- |
-Collections of 'Base-level' Catchments
- |
 Contracted catchments, derived from collections of 'base-level'
 catchments, can themselves be seen as a further examples of a catchment
 aggregate.
@@ -110,7 +101,8 @@ one or more contracted catchment(s) and can also act as an inflow node
 |
 HY_HydroLocation
  |
-AHGFNode
+AHGFNode +
+AHGFNetworkNode
 
  |
 Features in AHGFNode are the subset of contracted nodes, which realize
@@ -127,13 +119,8 @@ Instances of such specialized hydro locations, which are used for
 simplification of complex drainage patterns at the boundary of
 contracted catchment, will always realize (at least) one contracted
 node. This representative node is the node used for topological
-realization of the hydro nexus.
+realization of the hydro nexus. +
 
-|
- 
- |
-AHGFNetworkNode
- |
 With the exception of those that coincide with contracted nodes, all
 remaining AHGFNetworkNode features are further examples of hydro
 locations in the AHGF.
@@ -177,16 +164,12 @@ bounded by that contracted catchment.
 
 |HY_CatchmentDivide
  |
-AHGFContractedCatchment
- |
-The AHGFContractedCatchment polygon feature that realizes a contracted
-catchment.
-
-|
-
- |
+AHGFContractedCatchment +
 AHGFCatchment
  |
+The AHGFContractedCatchment polygon feature that realizes a contracted
+catchment. +
+
 The AHGFCatchment polygon feature that realizes a base-level catchment.
 
 |

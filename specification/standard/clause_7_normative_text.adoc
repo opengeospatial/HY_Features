@@ -86,9 +86,9 @@ The feature types in the HY_Features conceptual model are defined below
 according to the modules and leaf packages described above into which
 their UML classes have been grouped.
 
-=== The Hydro Feature module
+=== Hydro Feature concepts
 
-The HydroFeature module provides the core concepts of a named hydrologic
+The HydroFeature application schema provides the core concepts of a named hydrologic 
 feature in the Named Feature (shown in Yellow), of a hydrologic complex
 in which the union of catchment and its common outlet is realized in
 several ways by a collection of hydrologic features (shown in Blue), and
@@ -97,7 +97,7 @@ feature 'along a river' using linear referencing (shown in Green) along
 a one-dimensional topological, flowpath realization.
 
 [#figure21]
-.Hydro Feature Module Diagram
+.Hydro Feature Application Schema Diagram
 image::figures/fig21.png[]
 
 If required, an implementation should use terms from the code lists in
@@ -230,9 +230,9 @@ _variantSpelling_
 Boolean value type |Attribute |CharacterString
 |=======================================================================
 
-==== The HydroComplex package
+==== The Hydro Complex Model
 
-The Hydro Complex package is a collection of hydrologic features that
+The Hydro Complex model describes a collection of hydrologic features that
 form a hydrologically closed system. This includes the catchment, its
 inflow and outflow (conceptualized as hydro nexuses) as well as various
 realizations of catchment and hydro nexuses by typical hydrologic
@@ -486,7 +486,7 @@ catchment exists, or is nillable. |Constraint
 
 ===== Interior Catchment
 
-The HY_InteriorCatchment feature type (Figure 32) specializes the
+The HY_InteriorCatchment feature type (link:#figure32[Figure 32]) specializes the
 general HY_Catchment class as a catchment which is generally not
 connected to other catchments. This class describes the interior
 catchment as a catchment enveloped by other catchments to which it may
@@ -532,9 +532,9 @@ _nillable_-_outflow_
 
 ===== Hydro Nexus
 
-The HY_HydroNexus feature type (Figure 33) conceptualizes a
-hydrologically determined nexus of a corresponding catchment (Figure
-26). The hydro nexus represents the place where a catchment interacts
+The HY_HydroNexus feature type (link:#figure33[Figure 33]) conceptualizes a
+hydrologically determined nexus of a corresponding catchment (link:#figure26[Figure 26]). 
+The hydro nexus represents the place where a catchment interacts
 with another catchment, i.e. where the outflow of a contributing
 catchment becomes inflow into a receiving catchment. A catchment may
 receive flow from several upstream catchments or contribute flow to
@@ -605,7 +605,7 @@ contributing catchment.
 
 ===== Catchment Realization
 
-The HY_CatchmentRealization feature type (Figure 34) is based on the
+The HY_CatchmentRealization feature type (link:#figure34[Figure 34]) is based on the
 idea that there are multiple hydrology-specific perspectives of the
 holistic catchment concept that are used to describe a catchment as a
 unit of study shared across sub-domains and studies.
@@ -733,7 +733,7 @@ _flowpath_
  |flowpath that participates in the network. |Association
 
 a|
-_catchmentBoundary_
+_catchmentDivide_
 
  |catchment boundary that participates in the network. |Association
 a|
@@ -755,7 +755,7 @@ association.
 
 ===== Hydro Location
 
-The HY_HydroLocation feature type (Figure 35) conceptualizes the idea
+The HY_HydroLocation feature type (link:#figure35[Figure 35]) conceptualizes the idea
 that a hydro nexus can be realized by practically any feature of
 interest. The hydro nexus concept is used to define the hydrologic
 determination of a catchment but, like the catchment concept, does not
@@ -848,9 +848,9 @@ Association
 |=======================================================================
 
 
-==== River Referencing
+==== The River Referencing model
 
-The River Referencing model (Figure 36) provides a simple model to place
+The River Referencing model (link:#figure36[Figure 36]) provides a simple model to place
 a feature of interest 'on a river'. It introduces the concept of
 indirect position where a position is determined relative to an already
 established reference location. This model defines a linear river
@@ -891,13 +891,13 @@ distance from the upstream and/or downstream end of the flowpath, or
 from a referent that is already located on that flowpath.
 
 The (indirect) position of an outflow node referenced along an upstream
-oriented flowpath (Figure 17) can be expressed as the distance from an
+oriented flowpath (link:#figure17[Figure 17]) can be expressed as the distance from an
 upstream inflow node located on that flowpath, while the (indirect)
 position of an inflow node referenced along a downstream oriented
-flowpath (Figure 18) can be expressed as distance from a downstream
+flowpath (link:#figure18[Figure 18]) can be expressed as distance from a downstream
 outflow node located on the flowpath. An 'intermediate' position
 referencing known inflow and outflow nodes bounding a flowpath at both
-ends (Figure 19) can be expressed as part of the distance along the
+ends (link:#figure19[Figure 19]) can be expressed as part of the distance along the
 entire flowpath, measured from the upstream end of an upstream flowpath,
 and/or from the downstream end of a downstream flowpath. A position
 referencing an already referenced location on the flowpath can be
@@ -980,11 +980,8 @@ identifies the permanent reference location, usually an existing inflow
 or outflow hydro nexus relative to which a position is assigned to a
 hydro location feature of interest.
 
- 
-
  a|
-
- 
+Association
 
 a|
 _point-Referent_
@@ -1067,7 +1064,7 @@ Conceptual Schema.
 |=======================================================================
 
 
-=== The Surface Hydro Feature model
+=== Surface Hydro Feature concepts
 
 The Surface Hydro Feature application schema provides common concepts of
 hydrologic features occurring on the land surface and specifies the core
@@ -1080,10 +1077,10 @@ relationships between surface water features defined in this application
 schema.
 
 [#figure37]
-.Surface Hydro Feature - Class Diagram
+.Surface Hydro Feature - Application Schema Diagram
 image::figures/fig37.png[]
 
-The Surface Hydro Feature model (Figure 37) conceptualizes the
+The Surface Hydro Feature model (link:#figure37[Figure 37]) conceptualizes the
 accumulation of water on the land surface in waterbodies (shown in
 Blue), each made unique by its origin, size, or movement. With respect
 to the management and storage of water resources, a concept of water
@@ -1107,7 +1104,7 @@ or other containers for surface-waterbodies.
 
 The Surface Hydro Feature application schema contains the leaf packages:
 Channel Network, Hydrographic Network, Water Body Types and Storage.
-Figure 38 shows the external and internal dependencies.
+link:#figure38[Figure 38] shows the external and internal dependencies.
 
 [#figure38]
 .Surface Hydro Feature - dependencies
@@ -1118,7 +1115,7 @@ image::figures/fig38.png[]
 ==== The Channel Network model
 
 The Channel Network model defines a network of connected depressions and
-channels which, in its entirety, can realize a catchment (Figure 39).
+channels which, in its entirety, can realize a catchment (link:#figure39[Figure 39]).
 Usually this is a network of linear flowpaths realizing catchments
 connected to each other within the containing catchment realized by the
 entire network. This allows representation of the drainage pattern even
@@ -1137,8 +1134,8 @@ allows a catchment to be realized as a network of connected channels and
 depressions, regardless of whether or not water is contained in them.
 
 A single depression or channel may realize the catchment, either as part
-of the network (Figure 39) or via a reference feature which realizes the
-conceptual hydro nexus of the catchment (Figure 40). For example, a
+of the network (link:#figure39[Figure 39]) or via a reference feature which realizes the
+conceptual hydro nexus of the catchment (link:#figure40[Figure 40]). For example, a
 point at an associated cross or longitudinal section may be considered
 to realize the outflow of the catchment which is realized by the channel
 expressed as a flowpath.
@@ -1370,7 +1367,7 @@ Constraint
 ==== The Hydrographic Network model
 
 The Hydrographic Network model defines a logical network of waterbodies
-which, in its entirety, realizes a catchment (Figure 41). Most
+which, in its entirety, realizes a catchment (link:#figure41[Figure 41]). Most
 typically, this is as a network of linear flowpaths realizing catchments
 connected to each other within a containing catchment that is realized
 by the entire network. This allows representation of the network of
@@ -1385,9 +1382,9 @@ catchment as a network of moving or standing waterbodies, regardless of
 the channels and depressions.
 
 A single waterbody can realize its catchment either as part of the
-hydrographic network (Figure 41), or via a reference location which
+hydrographic network (link:#figure41[Figure 41]), or via a reference location which
 realizes the hydro nexus of the catchment realized by the waterbody
-(Figure 42). For example, a fixed landmark, or a point at an associated
+(link:#figure42[Figure 42]). For example, a fixed landmark, or a point at an associated
 cross section is considered to realize the outflow of the catchment
 which is realized by the waterbody.
 
@@ -1705,7 +1702,7 @@ and its interaction with the open sea.
 
 ==== The Storage model
 
-The Storage model (Figure 43) provides a concept to describe any
+The Storage model (link:#figure43[Figure 43]) provides a concept to describe any
 waterbody, in terms of a reservoir storing water for future use. The
 separation of the storage model allows description of the hydrographic
 network without the details of storage capacities that a waterbody may
@@ -1754,9 +1751,10 @@ management zone, or flood control zone.
 |=======================================================================
 
 
-=== The Hydrometric Network application schema
+=== Hydrometric Network concepts
 
-The Hydrometric Network application schema (Figure 44) defines a logical
+The Hydrometric Network application schema (link:#figure44[Figure 44] 
+and link:#figure45[Figure 45]) define a logical
 model to take into account a network of hydrometric stations as a
 specific realization of the catchment in the perspective of hydrologic
 observation, without the detail of an observation strategy.
@@ -1784,7 +1782,7 @@ to place other features of interest relative to the hydrometric station.
 .Hydrometric network and hydrometric feature realizing a catchment (UML class diagram)
 image::figures/fig45.png[]
 
-==== Hydrometric Network
+==== Hydrometric Network model
 
 The HY_HydrometricNetwork feature type specializes the HY_HydroNetwork
 realization specifically as an aggregate of hydrometric features.
@@ -1816,12 +1814,12 @@ as part of the hydrometric network.
 |=======================================================================
 
 
-==== Hydrometric Feature
+==== Hydrometric Feature model
 
 The HY_HydrometricFeature feature type provides a concept of a
 monitoring station at which data on water are obtained that realizes the
 catchment either separately or as part of the hydrometric network
-(Figure 45). HY_HydrometricFeature has associations for the
+(link:#figure45[Figure 45]). HY_HydrometricFeature has associations for the
 _hydrometricNetwork_ in which it participates, and a _positionOnRiver_.
 An _outlet-at-station_ constraint emphasizes the recognition of a
 monitoring station as outlet of the catchment that is realized by the

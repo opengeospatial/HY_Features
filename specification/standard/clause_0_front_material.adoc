@@ -1,6 +1,9 @@
 [big]*i.     Abstract*
 
-The OGC Surface Hydrology Features (HY_Features) standard defines a common conceptual information model for identification of specific hydrologic features independent of their geometric representation and scale. The model describes types of surface hydrologic features by defining fundamental relationships among various components of the hydrosphere. This includes relationships such as hierarchies of catchments, segmentation of rivers and lakes, and the hydrologically determined topological connectivity of features such as catchments and waterbodies. The standard also defines normative requirements for HY_Features implementation schemas and mappings to meet in order to be conformant with the conceptual model. 
+The OGC Surface Hydrology Features (HY_Features) standard defines a common conceptual information model for identification of specific hydrologic features independent of their geometric representation and scale. The model describes types of surface hydrologic features by defining fundamental relationships among various components of the hydrosphere. This includes relationships such as hierarchies of catchments, segmentation of rivers and lakes, and the hydrologically determined topological connectivity of features such as catchments and waterbodies. The standard also defines normative requirements for HY_Features implementation schemas and mappings to meet in order to be conformant with the conceptual model.  
+
+The HY_Features model is based on an abstract catchment feature type that can have multiple alternate hydrology-specific realizations and geometric representations. It supports referencing information about a hydrologic feature across disparate information systems or products to help improve data integration within and among organizations. The model can be applied to cataloging of observations, model results, or other study information involving hydrologic features. The ability to represent the same catchment, river, or other hydrologic feature in several ways is critical for aggregation of cross-referenced or related features into integrated datasets and data products on global, regional, or basin scales.
+
 
 [big]*ii.    Keywords*
 
@@ -32,7 +35,7 @@ The following organizations submitted this Document to the Open Geospatial Conso
 
 * Metalinkage, Australia 
 
-* BRGM, France 
+* French Geological Survey (BRGM), France 
 
 * University of Texas at Austin, USA 
 
@@ -63,14 +66,16 @@ All questions regarding this submission should be directed to the editor or the 
 
 [big]*vi.  Changes to the OGC® Abstract Specification*
 
-The HY_Features conceptual model, described in this standard, references
-concepts defined in the OGC Abstract Specification (OGC AS). Conformance
-to the OGC AS may be achieved via specialization of the relevant
-concept. An example of this kind of conformance is a geographic feature
-specialization that carries specific hydrologic feature attributes and
-associations. Conformance may also be achieved by asserting a
-correspondence or analogy between HY_Features concepts and OGC AS
-concepts. For example, the river reference system for referencing
-positions along a nominal flowpath corresponds to linear referencing
-along any linear feature element.
+The HY_Features conceptual model, described in this standard, references 
+concepts defined in the OGC Abstract Specification (OGC AS). Conformance 
+to the OGC AS may be achieved via specialization of the relevant concept. 
+An example of this kind of conformance is a geographic feature specialization 
+that carries specific hydrologic feature attributes and associations. Conformance 
+may also be achieved by asserting a correspondence or analogy between HY_Features 
+concepts and OGC AS concepts. For example, the river reference system for 
+referencing positions along a nominal flowpath corresponds to linear referencing 
+along any linear feature element.  
+This standard requires no changes to the current version of the OpenGIS Abstract 
+Specification.
+
 

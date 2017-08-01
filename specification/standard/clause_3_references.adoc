@@ -16,10 +16,10 @@ OGC Abstract Specification Topic 5, Features +
 (aka ISO 19101:2002, Geographic Information -- Reference Model)
 
 OGC Abstract Specification Topic 11, Metadata (aka ISO 19115-1:2014,
-Geographic Information -- Metadata Ð Fundamentals)
+Geographic Information -- Metadata -- Fundamentals)
 
 OGC Abstract Specification Topic 19, Geographic information - Linear
-referencing (aka ** ISO 19148:2012, Geographic Information -- Linear
+referencing (aka ISO 19148:2012, Geographic Information -- Linear
 referencing)
 
 OGC Abstract Specification Topic 20, Observations and Measurements (aka
@@ -31,5 +31,5 @@ ISO 19108:2006, Geographic Information -- Temporal schema
 
 ISO 19109:2006, Geographic Information -- Rules for application schemas
 
-ISO 19133:2005, Geographic Information -- Location-based services Ð
+ISO 19133:2005, Geographic Information -- Location-based services --
 Tracking and navigation
