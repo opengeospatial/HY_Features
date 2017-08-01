@@ -324,7 +324,7 @@ representation of a topological edge. Figure 9, Figure 10, and Figure
 highlighted in the figures.
 
 [#figure9]
-.Catchment area (grey area A) and flowpath realization (red line F) that connects catchment inflow to outflow for a defined a hydrologically significant unit (C1) and corresponding HY_Features UML classes.
+.Catchment area (grey area A) and flowpath realization (red line F) that connects catchment inflow to outflow for a defined hydrologically significant unit (C1) and corresponding HY_Features UML classes.
 image::figures/fig9.png[]
 
 [#figure10]
@@ -373,7 +373,7 @@ required, this encapsulation approach can be used to model a complex
 catchment topology as a simple dendritic network.
 
 [#figure12]
-.Non-dendritic stream network complexity: a) non-dendritic detailed flow: b) unambiguous aggregated flow.
+.Non-dendritic stream network complexity: a) non-dendritic detailed flow b) unambiguous aggregated flow.
 image::figures/fig12.png[]
 
 The topological pattern of a catchment network is shared with all of its
@@ -461,7 +461,7 @@ characteristics, etc. Such bathymetric and strata information may also
 be represented as or derived from a surface such as would be derived
 from Lidar. Waterbodies or their strata may also be recognized as
 storage reservoir features with water use, regulation, or control
-characteristics.**
+characteristics.
 
 In order to form hydrographic or channel networks, waterbodies or
 channels that hydrologically realize catchments as topological edges
@@ -685,7 +685,7 @@ location along a downstream flowpath referencing a known outflow node
 'r1'.
 
 [#figure17]
-.Position (yellow dot) of an outflow node referencing an inflow node, expressed as a measured distance from a upstream referent (red dot) and representative UML classes.
+.Position (yellow dot) of an outflow node referencing an inflow node, expressed as a measured distance from an upstream referent (red dot) and representative UML classes.
 image::figures/fig17.png[]
 
 [#figure18]
@@ -724,7 +724,7 @@ linear referencing model within the OGC Abstract Specification Topic 19,
 Linear referencing (aka ISO/FDIS19148:2011).
 
 [#table1]
-.Table 1: HY_Features river positioning concepts comparable with the OGC Linear referencing model
+.HY_Features river positioning concepts comparable with the OGC Linear referencing model
 [width="100%",cols="34%,33%,33%",]
 |=======================================================================
 a|
@@ -935,7 +935,7 @@ understanding of how the HY_Features network navigation may specify the
 Tracking and navigation model.
 
 [#table2]
-.Table 2: HY_Features concepts comparable with the OGC Network navigation model
+.HY_Features concepts comparable with the OGC Network navigation model
 [width="100%",cols="34%,33%,33%",]
 |=======================================================================
 a|
