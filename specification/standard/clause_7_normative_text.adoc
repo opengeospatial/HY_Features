@@ -399,15 +399,19 @@ a|
  a|
 *Relation*
 
-|_exorheicDrainage_ |should be used to identify an exorheic-drained
-catchment which is not, but may be temporarily connected to enveloping
-catchments. |Association
+ |
+ _exorheicDrainage_ |should be used to identify an exorheic-drained
+catchment which is permanently connected to the enveloping aggregate. 
+ |
+ Association
 
 a|
 _endorheicDrainage_
 
- |should be used to identify an endorheic-drained catchment, which is
-permanently connected to the enveloping aggregate. |Association
+ |should be used to identify an endorheic-drained catchment, which is not, 
+ but may be temporarily connected to enveloping catchments 
+ |
+ Association
 |=======================================================================
 
 ===== Dendritic Catchment
