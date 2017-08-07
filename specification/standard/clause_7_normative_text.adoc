@@ -401,7 +401,7 @@ a|
 
  |
  _exorheicDrainage_ |should be used to identify an exorheic-drained
-catchment which is permanently connected to the enveloping aggregate. 
+catchment which is permanently connected to the encompassing catchment. 
  |
  Association
 
@@ -409,7 +409,7 @@ a|
 _endorheicDrainage_
 
  |should be used to identify an endorheic-drained catchment, which is not, 
- but may be temporarily connected to enveloping catchments 
+ but may be temporarily connected to the enveloping catchment. 
  |
  Association
 |=======================================================================
