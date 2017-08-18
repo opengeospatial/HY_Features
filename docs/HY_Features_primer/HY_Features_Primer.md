@@ -35,7 +35,7 @@ A conceptual feature model for surface hydrology.
 
 For more info, visit the [SWG home page.](http://www.opengeospatial.org/projects/groups/hydrofeatswg)
 
-If you are an OGC member, [get the latest spec on pending docs.](https://portal.opengeospatial.org/files/?artifact_id=74219&version=2)
+If you are an OGC member, [get the latest spec on pending docs.](https://portal.opengeospatial.org/files/?artifact_id=75138&version=1)
 
 Latest version of this [presentation here.](http://opengeospatial.github.io/HY_Features/HY_Features_primer/HY_Features_Primer.html#/)
 
