@@ -149,7 +149,7 @@ cases, they are realizations of hydro nexus features.
 
 Hydro nexuses, like catchments, are features that may have one or more
 hydrology-specific realizations that are single locations, complex
-locations, or even diffuse or indistinct geographies. In the absence of
+locations, or even diffused or indistinct geographies. In the absence of
 such realizations, systems of catchments and hydro nexuses can form a
 topological complex based on their hydrologic connectivity even if their
 topological elements are not or cannot be represented geometrically.
@@ -198,9 +198,9 @@ data system supporting hydrologic modeling. Geospatial data may be used
 to parameterize models that then run only using topological catchment
 relationships. In this kind of scheme, the topological realization may
 not correspond to a single geometric representation. For example, when
-it is modeling a diffuse area of drainage between two model units. a
-hydro nexus may take on the topological role of a node but not
-represented geometrically as a single point.
+it is modeling a diffused area of drainage between two model units, a
+hydro nexus may take on the topological role of a node without
+being represented geometrically as a single point.
 
 A very common scheme that includes geometric representation is sometimes
 referred to as the "reach-catchment" scheme and is typified by the U.S.
