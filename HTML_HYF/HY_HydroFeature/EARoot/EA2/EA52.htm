@@ -91,7 +91,7 @@ function nameClassifier(name, separator)
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue">catchmentnetwork, Context Diagram : HY_TopographicNetwork, TopographicRealisation_??, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig39_: Hydrometric Network Realisation, Fig35_: Hydrographic Network Realisation, Fig33_: Channel Network Realisation, temp_overallOverview, temp_catchmentRealization_all, check_model, NEW_hydroComplex_all, <a href="../EA1.htm">Fig21: Hydro Feature</a>, <a href="EA38.htm">Fig34: Catchment Realization</a>, <a href="EA18.htm">Hydro Complex Classes</a>, Fig39: Channel Network - Catchment - Nexus, Fig41: Hydrographic Network - Catchment - Nexus, Fig45: Hydrometric Feature - Nexus - Catchment</td>
+			<td class="ObjectDetailsValue">catchmentnetwork, Context Diagram : HY_TopographicNetwork, TopographicRealisation_??, ChannelNetwork_extended, TopographicNetworkRealisation, allClass Diagram, surfacehydronetwork, Fig39_: Hydrometric Network Realisation, Fig35_: Hydrographic Network Realisation, Fig33_: Channel Network Realisation, temp_overallOverview, temp_catchmentRealization_all, check_model, NEW_hydroComplex_all, Fig39: Channel Network - Catchment - Nexus, Fig41: Hydrographic Network - Catchment - Nexus, Fig45: Hydrometric Feature - Nexus - Catchment, <a href="../EA1.htm">Fig21: Hydro Feature</a>, <a href="EA38.htm">Fig34: Catchment Realization</a>, <a href="EA18.htm">Hydro Complex Classes</a></td>
 		</tr>
 	</table>
 	<div class="ObjectDetailsNotes">The &lt;b&gt;HY_HydroNetwork&lt;/b&gt; feature type realizes a catchment as a network of connected hydrologic features. Such a network realizes the hierarchical network of logically connected catchments contained in a larger catchment. It may be a sequence of flowpaths, an aggregate of catchment areas or a mesh of catchment divides. &lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;HY_HydroNetwork feature type specializes HY_CatchmentRealization. Through generalization it inherits the &lt;i&gt;shape&lt;/i&gt; and the &lt;i&gt;realizedCatchment&lt;/i&gt; properties, and carries the associations &lt;i&gt;flowpath&lt;/i&gt;, &lt;i&gt;catchmentDivide&lt;/i&gt; and &lt;i&gt;catchmentArea&lt;/i&gt;. The optional &lt;i&gt;shape&lt;/i&gt; of the is usually given through the individual geometry of the network parts. &lt;br /&gt;&lt;/p&gt;</div>
@@ -110,29 +110,6 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA51.htm">«FeatureType» HY_FlowPath </a><br />
-						Class &nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> &nbsp;<br />
-						&nbsp;
-					</td>
-					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> flowpath<br />
-						flowpath that participates in the network.	
-					</td>
-				</tr>
-				<tr>
-					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink33" onclick="parent.toggleDiv('detailsDIVLink33','DetailsImageLink33')" />Details:
-							<div id="detailsDIVLink33" class="DetailsDiv" >
-							&nbsp;
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="40%" class="TableRow" valign="top">
 						<a href="EA48.htm">«FeatureType» HY_CatchmentDivide</a><br />
 						Class &nbsp;
 					</td>
@@ -147,8 +124,8 @@ function nameClassifier(name, separator)
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink34" onclick="parent.toggleDiv('detailsDIVLink34','DetailsImageLink34')" />Details:
-							<div id="detailsDIVLink34" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink33" onclick="parent.toggleDiv('detailsDIVLink33','DetailsImageLink33')" />Details:
+							<div id="detailsDIVLink33" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
@@ -168,6 +145,29 @@ function nameClassifier(name, separator)
 						<strong>Name:</strong> catchmentArea<br />
 						catchment area that participates in the network.
 	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../images/minus03.gif" align="absmiddle" id="DetailsImageLink34" onclick="parent.toggleDiv('detailsDIVLink34','DetailsImageLink34')" />Details:
+							<div id="detailsDIVLink34" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA51.htm">«FeatureType» HY_FlowPath </a><br />
+						Class &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> flowpath<br />
+						flowpath that participates in the network.	
 					</td>
 				</tr>
 				<tr>
