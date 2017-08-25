@@ -103,8 +103,8 @@ stream bed in a vertical plane link:#WMO2016[[9\]].
 === data
 Documented value of some characteristics of a real-world phenomenon.
 
-=== data set
-Data compiled and arranged into a set.
+=== data set (also dataset)
+Data compiled and arranged into a set. Used in its concatenated form to indicate a specific dataset, or as data set, for non-specific sets of data.
 
 === data product
 Data set compiled for a specific purpose, e.g. for global dissemination using Web services.

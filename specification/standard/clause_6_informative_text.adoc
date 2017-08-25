@@ -302,7 +302,7 @@ interior drainage within dendritic aggregations.
 image::figures/fig7.png[]
 
 [#figure8]
-.Catchment Catchment hierarchy with smaller catchments (C1, C2, C3) part of a dendritic catchment network, which is also a catchment and corresponding HY_Features UML classes.
+.Catchment hierarchy with smaller catchments (C1, C2, C3) part of a dendritic catchment network, which is itself a catchment and corresponding HY_Features UML classes.
 image::figures/fig8.png[]
 
 === Catchment network realization
@@ -348,8 +348,7 @@ bottoms with complex braided channels and two or more primary inflows,
 can be modeled with HY_Features. While a catchment contributes flow to a
 single outflow hydro nexus, there is no restriction on the number of
 catchments contributing to a hydro nexus. Figure 12a illustrates a case
-where hydro nexus nodes n2 and n3 have one and two contributing
-catchments respectively, and both have two receiving catchments. Such
+where hydro nexus nodes n2 and n3, both have two contributing catchments and have one and two receiving catchments respectively. Such
 situations are quite common in hydrologic systems. Examples include
 prairie pothole or ponded wetland landscapes, networked urban drainage
 systems, waterbodies with multiple outflows, and
@@ -365,8 +364,7 @@ catchments. link:#figure12[Figure 12] shows a non-dendritic stream network, wher
 not possible to determine to what extent flow from catchment F
 contributes to catchments E or C (Figure 12a) without additional
 information. Joining the catchments E, B, and C (Figure 12b) and
-collapsing their outflow nexuses n2 and n3 into a single virtual inflow
-hydro nexus, accumulates all the flow from catchments D and F in the
+collapsing their inflow (/outflow) nexuses n2 and n3 into a single virtual inflow hydro nexus, accumulates all the flow from catchments D and F in the
 resulting catchment X. Some implementations could go even further,
 eliminating node n2 and lumping catchment D into X as well. While not
 required, this encapsulation approach can be used to model a complex
@@ -379,7 +377,7 @@ image::figures/fig12.png[]
 The topological pattern of a catchment network is shared with all of its
 hydrology-specific realizations, although the topological "level"
 (solid, face, edge, node) of a realization may vary. A given scheme
-topologically realize catchments as a solid bounded by inflow/outflow
+topologically realizes catchments as a solid bounded by inflow/outflow
 faces, a face bounded by inflow/outflow edges, or an edge bounded by
 inflow/outflow nodes. A single catchment may also be realized as a
 topological complex consisting of all of the flowpath edges, and hydro
