@@ -419,7 +419,7 @@ networks of streams, lakes, confluences, and other features as the
 spatial scale of mapping and inquiry increases. The HY_Features model of
 catchment networks and nested waterbody and channel network realizations
 is intended to address the multi-scale nature of hydrologic data and
-connect hydrologic phenomena and observations across a range of the
+connect hydrologic phenomena and observations across a range of these
 scales.
 
 The basic elements of surface water networks at any scale are
@@ -468,8 +468,8 @@ therefore connects waterbodies or channels through a hydro location
 which realizes the hydro nexus corresponding to these catchments.
 Although an entire network realizes the catchment that it drains to a
 single hydro nexus, each hydro location node connecting waterbodies or
-channels can also be thought of as realization of a hydro nexus that
-drains the sub-catchment that feeds that waterbody. The catchment
+channels can also be thought of as a realization of a hydro nexus that
+drains the sub-catchment which feeds that waterbody. The catchment
 relationships defined in the catchment model described in this standard
 can be used for both the larger catchment realized by the whole
 hydrographic network and the catchment(s) whose hydro nexuses can be
