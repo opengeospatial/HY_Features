@@ -595,7 +595,7 @@ element (catchment realization) and the reference point hydro location
 Applying the indirect position model, a feature of interest can be
 related to a hydro nexus and the associated catchment by linking it to
 an existing hydro location, or as a new hydro location linked to
-flowpath linear element and hydro nexus referent. It's worth mentioning
+a flowpath linear element and hydro nexus referent. It's worth mentioning
 that a special case of hydro location that is coincident with a hydro
 nexus referent (at distance '0') could be considered a realization of
 the hydro nexus.
@@ -621,10 +621,10 @@ image::figures/fig13.png[]
 In the case that the new network location is to be a hydro nexus in a
 pre-existing network, the already existing catchment would have to be
 split into catchments upstream and downstream of what was just a
-location, such as a stream gage, and is to be a hydro nexus that is
+location, such as a stream gage, and becomes a hydro nexus that is
 associated with (realized by) a location (stream gage). Once inserted as
 a new hydro nexus, the upstream catchment would be realized as a
-flowpath between the location (e.g. stream gage) and the inflow of the
+flowpath between the location (stream gage) and the inflow of the
 now split catchment. Similarly, the downstream catchment would be
 realized by a flowpath between the new location and the outflow of the
 split catchment.
