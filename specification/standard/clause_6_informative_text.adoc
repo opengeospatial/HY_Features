@@ -582,8 +582,7 @@ outflow locations of a catchment, the downstream bridge hydro location,
 which realizes an outflow hydro nexus, may form the reference location
 for stream gages upstream from the bridge and the next upstream bridge.
 Similarly, the upstream bridge hydro location, which realizes the inflow
-hydro nexus, may be the reference location for stream gages downstream
-and the next downstream bridge.
+hydro nexus, may be the reference location for stream gages downstream from the bridge and the next downstream bridge.
 
 Note that in these cases, the upstream or downstream orientation of the
 measurement is always declared in relation to the catchment inflow or
