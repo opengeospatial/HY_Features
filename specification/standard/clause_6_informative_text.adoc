@@ -601,12 +601,12 @@ the hydro nexus.
 
 ==== Indirect position
 Provided that the network of catchments is realized as one-dimensional
-flowpaths and inflow and outflow hydro nexus locations (e.g. the
+flowpaths and inflow and outflow hydro nexus locations (i.e. the
 upstream or downstream end of the flowpaths is known), a feature of
 interest can be located in the network along the linear flowpath
 catchment realization. A new location can be placed along a flowpath in
 reference to an already established inflow or outflow hydro nexus that
-bounds the flowpath. The new network location is can be expressed as a
+bounds the flowpath. The new network location can be expressed as a
 distance along the flowpath 'measured' from the known flowpath end.
 link:#figure13[Figure 13] shows the simplest case, where the inflow of 
 a catchment is some linear distance upstream of a located outflow 
@@ -633,8 +633,8 @@ to be the inflow or outflow hydro nexus location. link:#figure14[Figure 14]
 shows a newly introduced hydro nexus that now splits an existing flowpath.
 Because the new network location would now be a realization of the
 outflow hydro nexus of the upstream catchment and the inflow hydro nexus
-of the downstream catchment, it's location is known to be the upstream
-or downstream end of one of the associated catchments' flowpaths.
+of the downstream catchment, its location is known to be the upstream
+or downstream end of the associated catchments' flowpaths.
 
 [#figure14]
 .Newly introduced hydro nexus referenced along an upstream and downstream flowpath
@@ -642,7 +642,7 @@ image::figures/fig14.png[]
 
 ===== Network location of features not realizing a hydro nexus
 In the case that the existing catchment network is to be preserved, the
-location to be placed cannot become a hydro nexus with associated
+feature being located will not become a hydro nexus with associated
 catchments. If the catchment and flowpath realizing the catchment is not
 split, the indirect position is expressed as part of the known distance
 between the inflow hydro nexus and the outflow hydro nexus, measured
