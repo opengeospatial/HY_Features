@@ -694,7 +694,7 @@ part the known distance between inflow and outflow nodes that bound a
 flowpath in upstream and downstream direction. The origin of the
 flowpath is set at one of its ends, and directed to the other. This
 approach is used in the case that the new location is not to be declared
-to be an inflow or outflow of a catchment.
+to be an inflow or outflow (hydro nexus node) of a catchment.
 
 [#figure19]
 .Intermediate Position (yellow dot) between known inflow and outflow nodes, expressed as distance from a located upstream or downstream referent (red dots).
@@ -706,7 +706,7 @@ the OGC standard model for Linear Referencing which is considered as the
 general framework to assign a position to a feature of interest along a
 hydrologic feature. The UML specifies fundamental properties of linear
 referencing along a flowpath to express the referenced location as a
-distance from a located referent which may be the known inflow or
+distance from a located referent, which may be the known inflow or
 outflow hydro nexus node or another referenced location.
 
 Specific HY_Features classes supporting the referencing 'along a river'
