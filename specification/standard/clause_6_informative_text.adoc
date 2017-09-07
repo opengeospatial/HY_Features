@@ -867,7 +867,7 @@ element.
 
 a|
 *Distance Description* (Table B.2), describes the spatial relation
-between two locations 
+between two locations. 
 
 a|
 Terms common in hydrology to describe the
