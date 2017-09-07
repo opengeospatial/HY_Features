@@ -757,9 +757,8 @@ position expressed as distance along a linear element.
 a|
 *Indirect Position* (7.3.3.1), position expressing the location of a
 hydrologic feature (of interest) relative to the known location of
-another feature along an axis, +
-
-has _distance expression_ and _distance description_,
+another feature along an axis, which
+has _distance expression_, _distance description_,
 _referenceLocation_ and an (already) _locatedReferent association._
 
  a|
@@ -799,11 +798,11 @@ connecting the inflow and outflow of the catchment it realizes. +
 Has a _realized catchment_ association.
 
 a|
-one-dimensional topological realization of a catchment forming the
+One-dimensional topological realization of a catchment forming the
 linear element along which an indirect position is determined. +
 
-topologically the flowpath can be understood as an edge bounded by
-catchment outlet nodes
+Topologically the flowpath can be understood as an edge bounded by
+catchment outlet nodes.
 
  a|
 *Linear Element* (6.1.1.2) describes a feature that can be measured in a
@@ -813,7 +812,7 @@ instances of directed edges.
 a|
 *Hydro Location* (7.3.2.7), in the role of any hydrologic feature to be
 located on the network through referencing another hydrologically
-significant hydro location, +
+significant hydro location. +
 
 Has a _referenced position association._
 
