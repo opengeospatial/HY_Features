@@ -924,7 +924,7 @@ network can be thought of as a set of junctions and links that connect
 these junctions. The realization of an inflow/outflow node is comparable
 with the 0-dimensional junction associating 'incoming and outgoing
 links', and the flowpath is comparable with 1-dimensional link
-associated with a 'start' and an 'end' set by the inflow or outflow node
+associated with a 'start' and an 'end' set by the inflow or outflow node.
 
 link:#table2[Table 2] provides a descriptive 'mapping' intended to provide a basic
 understanding of how the HY_Features network navigation may specify the
@@ -945,41 +945,43 @@ a|
 
 a|
 Catchment realization network (6.3.1), aggregate of hydrologic features
-realizing a catchment
+realizing a catchment.
 
 a|
 The logical network of catchments interacting at hydro nexuses can be
 realized as networks of specific catchment realizations. The network of
 one-dimensional flowpaths connected by 0-dimensional inflow/outflow
-nodes can be understood as navigation network.
+nodes can be understood as a navigation network.
 
 a|
 Network (4.17), abstract structure consisting of a set of 0-dimensional
 objects called junctions, and a set of 1-dimensional objects called
 links that connect the junctions, each link being associated with a
-start (origin, source) junction and end (destination, sink) junction
+start (origin, source) junction and end (destination, sink) junction.
 
 a|
 Flowpath (7.3.2.6), one-dimensional feature that realizes a catchment,
-associated to the _realized catchment_ |The topological realization, a
+and is associated to the _realized catchment_.
+
+a|The topological realization, a
 directed edge bounded by inflow and outflow nodes can be understood as a
 connecting link between junctions. 
 
 a|
 Link (4.8), directed topological connection between two junctions 
-consisting of an edge and a direction
+consisting of an edge and a direction.
 
 a|
 Hydro Location (7.3.2.5), hydrologic feature that can be a realization
-of an outlet, associated to the _realized hydro nexus_
+of an outlet, associated to the _realized hydro nexus_.
 
 a|
 The topological (0-dimensional) realization as inflow or outflow node
 forming the boundary of the flowpath realizing the corresponding
-catchment, can be understood as junction.
+catchment. Can be understood as junction.
 
 a|
 Junction (4.6), single topological node in a network with its associated 
-collection of turns, incoming and outgoing links
+collection of turns, incoming and outgoing links.
 
 |=======================================================================

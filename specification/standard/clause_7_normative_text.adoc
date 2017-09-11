@@ -41,8 +41,8 @@ a|
 a|HY_HydroFeature 
 | fundamental properties and relationships between
 features governed by the physical laws of Hydrology, naming of
-hydrologic features, location of hydrologic feature along a linear
-flowpath 
+hydrologic features, location of hydrologic features along a linear
+flowpath. 
 | Named Feature +
 Hydro Complex +
 River Positioning System
@@ -50,14 +50,14 @@ River Positioning System
 a|
 HY_SurfaceHydroFeature 
 | hydrologic features on the Earth's land surface
-without the complexity and detail of hydrologic and hydraulic models 
+without the complexity and detail of hydrologic and hydraulic models. 
 | Network +
 Hydrographic Network +
 Water Body Types +
 Storage
 
 |HY_HydrometricNetwork |hydrometric network of logically connected
-hydrometric features located on or along a hydrologic feature |---
+hydrometric features located on or along a hydrologic feature. |---
 |=======================================================================
 
 The conceptual model is expressed in the Geographic Information
