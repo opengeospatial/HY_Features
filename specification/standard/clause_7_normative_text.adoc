@@ -89,12 +89,11 @@ their UML classes have been grouped.
 === Hydro Feature concepts
 
 The HydroFeature application schema provides the core concepts of a named hydrologic 
-feature in the Named Feature (shown in Yellow), of a hydrologic complex
-in which the union of catchment and its common outlet is realized in
-several ways by a collection of hydrologic features (shown in Blue), and
-of a river referencing system which allows placement of an arbitrary
+feature in the Named Feature (shown in Yellow) of a hydrologic complex.
+For each complex, the union of catchment and its common outlet is realized by a collection of hydrologic features (shown in Blue) and
+a river referencing system, which allows placement of an arbitrary
 feature 'along a river' using linear referencing (shown in Green) along
-a one-dimensional topological, flowpath realization.
+a one-dimensional topological flowpath realization.
 
 [#figure21]
 .Hydro Feature Application Schema Diagram
@@ -103,8 +102,7 @@ image::figures/fig21.png[]
 If required, an implementation should use terms from the code lists in
 Annex B of this standard, defined specifically to conform to a
 terminology common in the hydrology domain. Note that alternative code
-lists may be used but should be related to the terms in but should be
-related to the terms in Annex B.4 using an appropriate formalism.
+lists may be used but should be related to the terms in Annex B.4 using an appropriate formalism.
 
 [#figure22]
 .Hydro Feature – external dependencies
@@ -199,20 +197,20 @@ a|
 *Type*
 
 |_name_ |the individual name used in a country or region under the
-conditions of nation and language |Attribute |CharacterString
+conditions of nation and language. |Attribute |CharacterString
 
 a|
 _namesPart_
 
  |indicates whether the name applies to a part of feature only or not,
-using the Boolean value type |Attribute |CharacterString
+using the Boolean value type. |Attribute |CharacterString
 
 a|
 _preferredBy_
 
  |specifies that the name is the preferred name according to the named
 entity. The CI_Responsibility type may be used to further structure the
-information about the responsible party and their role |Attribute
+information about the responsible party and their role. |Attribute
 |CharacterString
 
 a|
@@ -227,7 +225,7 @@ a|
 _variantSpelling_
 
  |indicates whether the name is a variant spelling or not using the
-Boolean value type |Attribute |CharacterString
+Boolean value type. |Attribute |CharacterString
 |=======================================================================
 
 ==== The Hydro Complex Model
