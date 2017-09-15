@@ -318,11 +318,11 @@ _conjointCatchment_
  |catchment interacting with another catchment across an internal
 boundary, and contributing together with these to a single, common hydro
 nexus. This internal boundary may be a divide separating adjacent
-catchments, or a diffuse divide between non-delineated sub-catchments
+catchments, or a diffused divide between non-delineated sub-catchments
 within an encompassing catchment, or a fictive boundary between distant
 catchments. A dendritic network of catchments provided, where each
 catchment is determined by its single outflow, this association can be
-used to summarize diffuse inflow into a catchment, as typical for
+used to summarize diffused inflow into a catchment, as typical for
 headwater catchments, or spread outflow occurring for example in estuary
 catchments. |Association
 
