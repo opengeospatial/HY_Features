@@ -381,8 +381,7 @@ image::figures/fig30.png[]
 
 HY_CatchmentAggregate inherits through generalization the _outflow_,
 _inflow_, _containingCatchment_, _containedCatchment_,
-_conjointCatchment_, _upperCatchment_, _lowerCatchment_, and
-_catchmentRealization_ properties, and has _exorheicDrainage_ and
+_conjointCatchment_, _upperCatchment_, _lowerCatchment_, and _catchmentRealization_ properties, as well as _exorheicDrainage_ and
 _endorheicDrainage_ _associations_.
 
 .HY_CatchmentAggregate
@@ -432,7 +431,7 @@ image::figures/fig31.png[]
 HY_DendriticCatchment inherits from generalization the _code_,
 _outflow_, _inflow_, _containingCatchment_, _containedCatchment_,
 _conjointCatchment_, _upperCatchment_, _lowerCatchment_, and
-_catchmentRealization_ properties, and has an _encompassingCatchment
+_catchmentRealization_ properties, as well as an _encompassingCatchment
 association_. The dendritic nature of this feature is enforced through
 _single-outflow, single-receiving-catchment_ and
 _single-lower-catchment_ constraints.
@@ -460,7 +459,7 @@ _single-Outflow_
 
  |defines a cardinality of '1' indicating that the dendritic catchment
 contributes to one and only one single outflow. A single outflow can be
-unknown (nillable) in a particular application, for example in case of a
+unknown (nillable) in a particular application, for example in the case of a
 delta to which a virtual outflow is assigned. An implementation SHOULD
 unambiguously specify whether the outflow exists, or is nillable.
 |Constraint
@@ -471,7 +470,7 @@ _single-Receiving-Catchment_
  |defines a cardinality of '1' indicating that one and only one single
 catchment receives flow via the outflow of the catchment. A receiving
 catchment can be unknown (nillable) in a particular application, for
-example in case of the latest catchment contributing flow to the ocean
+example in the case of the last catchment in a hierarchy, contributing flow directly to the ocean
 or an internal sink. An implementation SHOULD unambiguously specify
 whether the receiving catchment exists, or is nillable. |Constraint
 
@@ -480,8 +479,8 @@ _single-Lower-Catchment_
 
  |defines a cardinality of '1' indicating that one and only one lower
 catchment exists neighboring the catchment. A lower catchment can be
-unknown (nillable) in a particular application, for example in case of
-the latest catchment contributing flow to the ocean or an internal sink.
+unknown (nillable) in a particular application, for example in the case of
+the last catchment in a hierarchy, contributing flow directly to the ocean or an internal sink.
 An implementation SHOULD unambiguously specify whether the lower
 catchment exists, or is nillable. |Constraint
 |=======================================================================
@@ -503,7 +502,7 @@ image::figures/fig32.png[]
 HY_InteriorCatchment inherits from generalization the _code_, _outflow_,
 _inflow_, _containingCatchment_, _containedCatchment_,
 _conjointCatchment_, _upperCatchment_, _lowerCatchment_, and
-_catchmentRealization_ properties, and has an _envelopingCatchment_
+_catchmentRealization_ properties, as well as an _envelopingCatchment_
 _association_. A _nillable-outflow_ constraint emphasizes the
 non-existing outflow.
 
@@ -528,7 +527,7 @@ _envelopingCatchment_
 a|
 _nillable_-_outflow_
 
- |defines a cardinality of '0' indicating the not existing outflow.
+ |defines a cardinality of '0' indicating the non-existent outflow.
 |Constraint
 |=======================================================================
 
@@ -632,11 +631,10 @@ image::figures/fig34.png[]
 The catchment realization features defined in this standard refer to
 objects on the land surface for the purpose of surface water hydrology.
 In other contexts, other types of catchment realization may exist.
-Catchment realizations that do not conform to those defined in this
+Catchment realizations that do nots conform to those defined in this
 standard, for instance realizations in 3- or 4-dimensional perspectives,
 may be implemented using the general HY_CatchmentRealization type.
-HY_CatchmentRealization carries a _shape_ attribute __ and as a
-_realizedCatchment_ _association_.
+HY_CatchmentRealization carries a _shape_ attribute and a _realizedCatchment_ association.
 
 .HY_CatchmentRealization
 [width="100%",cols="20%,65%,15%",]
