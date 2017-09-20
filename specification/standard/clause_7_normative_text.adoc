@@ -710,10 +710,9 @@ network of logically connected catchments contained in a larger
 catchment. It may be a sequence of flowpaths, an aggregate of catchment
 areas or a mesh of catchment divides. HY_HydroNetwork feature type
 specializes HY_CatchmentRealization. Through generalization it inherits
-the _shape_ and the _realizedCatchment_ properties, and carries the
+the _shape_, the _realizedCatchment_ properties, and carries the
 associations _flowpath_, _catchmentDivide_ and _catchmentArea_. The
-optional _shape_ of the is usually given through the individual geometry
-of the network parts.
+optional _shape_ of the HY_HydroNetwork is usually given through the individual geometries of the network parts.
 
 .HY_HydroNetwork
 [width="100%",cols="20%,65%,15%",]
@@ -745,10 +744,10 @@ catchment area that participates in the network.
  |Association
 |==================================================================
 
-The HY_CartographicRealization feature type realizes a catchment as set
+The HY_CartographicRealization feature type realizes a catchment as a set
 of separate cartographic layers or maps, displaying a network of
 hydrologic features which may be connected at the representation level,
-or not. Specializing HY_CatchmentRealization, it inherits from
+or not. Specializing HY_CatchmentRealization, it inherits through
 generalization the _shape_ attribute and the _realizedCatchment_
 association.
 
@@ -795,7 +794,7 @@ image::figures/fig35.png[]
 
 HY_HydroLocation carries two attributes: _shape_ and
 _hydroLocationType_. It has _referencedPosition_ and _realizedNexus_
-associations implying the _hydro-complex_ __ feature collection.
+associations implying the _hydro-complex_ feature collection.
 
 .HY_HydroLocation
 [width="100%",cols="20%,65%,15%",]
