@@ -833,11 +833,11 @@ a|
 _realizedNexus_
 
  a|
-identifies the one and only one nexus that is realized by a particular
+identifies the single nexus that is realized by a particular
 feature. Referencing the hydrologic complex containing the hydro nexus
-and all of its realizations, supports an arbitrary feature of interest
-to be recognized as outlet of a catchment, and to be placed using the
-river referencing defined in this standard.
+and all of its realizations, enables an arbitrary feature of interest
+to be recognized as an outlet of a catchment, and to be placed using the
+river referencing model defined in this standard.
 
  a|
 Association
