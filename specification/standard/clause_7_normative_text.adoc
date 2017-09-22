@@ -554,6 +554,8 @@ define a linear river reference system, where an inflow or outflow node
 is the origin and the flowpath realizing the catchment is the linear
 element along which a position can be determined.
 
+Although conceptually, a given catchment will always have a corresponding outflow hydro nexus, 0..1 cardinality is used for HY_HydroNexus in the role of outflow to provide an opportunity to use the catchment hierarchy model in implementations where the (always logically existing) nexus is not known. If required, an implementation may specify it to be 1..1.
+
 [#figure33]
 .Hydro nexus (UML class diagram)
 image::figures/fig33.png[]
@@ -905,10 +907,10 @@ from the 'located referent'.
 
 HY_IndirectPosition carries the _distanceExpression_, and
 _distanceDescription attributes_, and has _linearElement_,
-_locatedReferent_ and a _referenceLocation_ associations. A
+_locatedReferent_ and _referenceLocation_ associations. A
 _point-referent_ constraint emphasizes the topological relationship
 between the linear element and point representation of the reference
-location; a _measure-along-flowpath_ constraint defines the flowpath as
+location and a _measure-along-flowpath_ constraint defines the flowpath as
 the linear element to be used whenever a position is expressed as a
 distance from a referent.  
 
@@ -1055,7 +1057,7 @@ a|
 _precisionStatement_
 
  a|
-simple statement on the smallest unit of division on the scale of
+simple statement about the smallest unit of division on the scale of
 measurement. An implementation may use the types described in ISO 19103:
 Conceptual Schema.
 

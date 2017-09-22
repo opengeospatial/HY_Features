@@ -776,9 +776,10 @@ expression' and 'LRM' [linear referencing method] describing the 'manner
 of measurement'.
 
 a|
+_**Note**: A referencing method (feature type) is not explicitly specified by HY_Features_.
  
 
- a|
+a|
 River referencing may be understood as a hydrology-specific referencing
 method applied to specify a location along a linear hydrologic feature.
 The river referencing results in an abstract, interpolative or
