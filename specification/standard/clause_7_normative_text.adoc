@@ -140,7 +140,7 @@ Part 4 - GroundwaterML2 standard link:#OGC2016[[6\]].
 Providing a standard terminology for the typical relationships between
 hydrologic features allows the hydrosphere to be expressed in a
 consistent way across multiple data products, regardless of various
-spatial or temporal representations.**
+spatial or temporal representations.
 
 ==== The Named Feature model
 
@@ -1232,7 +1232,7 @@ The HY_Depression feature type specializes the general HY_HydroFeature
 class. It describes land lower than the surrounding land as a container
 for standing water. A depression is part of the network of channels and
 depressions forming the connecting system in which waterbodies are
-contained as parts of hydrographic network. Through generalization,
+contained as parts of a hydrographic network. Through generalization,
 HY_Depression inherits the _name_ property. It has associations for the
 _surfaceNetwork_ in which it participates, a body of _standingWater_ and
 a stratum of a _confinedWaterBody_. An _outlet-at-benchmark_ constraint
@@ -1255,8 +1255,8 @@ a|
 _surfaceNetwork_
 
  a|
-**network of surface channels and depressions, the depression is part
-of.**
+network of surface channels and depressions, the depression is part
+of.
 
  |Association
 
@@ -1281,8 +1281,8 @@ _outlet-at-benchmark_
 
  a|
 defines that a benchmark hydro location which realizes a hydro nexus,
-should be recognized as outflow of the contributing catchment realized
-by the surface network the depression is part of.
+should be recognized as the outflow of the contributing catchment realized
+by the surface network that the depression is part of.
 
  a|
 Constraint
@@ -1307,7 +1307,7 @@ _bedProfileTransversal_ and _bedProfileLongitudinal_. HY_Channel
 inherits from generalization the _confinedWaterBody_ association and the
 _outflow-at-benchmark_ constraint. An _outlet-at-profile_ constraint
 emphasizes the recognition of vertical section as the outlet of the
-catchment that is realized by the channel network.**
+catchment that is realized by the channel network.
 
 .HY_Channel
 [width="100%",cols="20%,65%,15%",]
@@ -1325,7 +1325,7 @@ a|
 _channelNetwork_
 
  a|
-*network of surface channels and depressions, the channel is part of.*
+network of surface channels and depressions, the channel is part of.
 
  |Association
 
