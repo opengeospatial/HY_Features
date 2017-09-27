@@ -1399,7 +1399,7 @@ image::figures/fig41.png[]
 
 The HY_HydrographicNetwork feature type specializes the HY_HydroNetwork
 realization defined in the Hydro Feature core model, specifically as an
-aggregate of permanent or temporary bodies standing in depressions or
+aggregate of permanent or temporary bodies of water standing in depressions or
 moving in channels. If the realized catchment is connected with other
 catchments via hydro nexuses, the hydrographic network is considered
 connected to the network realizing these catchments. This allows
@@ -1413,7 +1413,7 @@ channel network.
 HY_HydrographicNetwork has a _networkWaterBody_ _association_. Through
 generalization, it inherits the _shape_ attribute and the
 _realizedCatchment_ association as well as _flowpath,_ _catchmentDivide_
-and _catchmentArea_ associations, and. A _waterbody-flowpath_ constraint
+and _catchmentArea_ associations. A _waterbody-flowpath_ constraint
 supports the recognition of the waterbody as a flowpath realizing the
 catchment.
 
