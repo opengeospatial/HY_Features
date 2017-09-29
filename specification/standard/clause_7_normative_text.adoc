@@ -1625,7 +1625,7 @@ conceptualize the segmentation of a waterbody or a containing channel
 through vertical sections. Taking into account the conceptual separation
 of a watercourse, the cross section concept refers to both the cross
 section of a waterbody orthogonal to the direction of flow, and to the
-transversal bed profile of a channel, The longitudinal section concept
+transversal bed profile of a channel. The longitudinal section concept
 refers to both the vertical section of a waterbody along its centerline,
 and to the longitudinal bed profile of a channel.
 
@@ -1646,7 +1646,7 @@ phase water may be accumulated after melting, or as a layer of ice or
 snow on an open waterbody. The accumulation of water in the atmosphere
 or below the land surface, e.g. rain, soil moisture or groundwater, is
 not in scope of this standard, as well as the accumulation of snow and
-ice in glaciers which is subject of glaciology science.
+ice in glaciers which is the subject of glaciology science.
 
 Contextually related information models may use the HY_Water_LiquidPhase
 and HY_Water_SolidPhase feature types to build relationships to an
@@ -1666,38 +1666,35 @@ where liquid water is accumulated.
 
 The Surface Water model defines typical specializations of a waterbody
 on the land surface. Being a specialization of the HY_WaterBody class
-each subtypes inherits the _stratum_, _waterpool_, _watercourse_,
+each subtype inherits the _stratum_, _waterpool_, _watercourse_,
 _upstreamWaterBody_, _downstreamWaterBody__, fixedLandmark___,
 _streamCrossSection_ and _streamLongitudinalSection_ properties. From
-the general HY_HydroFeature class the special waterbodies inherit the
-_name_ property, which allows to handle names given to them in
+the general HY_HydroFeature class specialized waterbodies inherit the
+_name_ property, which allows the handling of names given to them in
 cross-jurisdiction and multi-lingual contexts. Each specialization is
-understood to be part of the hydrographic network. In other contexts
-other specializations, or a typical segmentation may exist, that not
-conforms to the types defined in this standard.
+understood to be part of the hydrographic network. There may be other contexts with other specializations, or where a particular segmentation exists, that does not conform to the types defined in this standard.
 
-The HY_River feature type defines the existence of body of surface
-water, participating in a hydrographic network, special due to its
+The HY_River feature type defines the existence of a body of surface
+water, participating in a hydrographic network, which is special due to its
 property to permanently or temporarily flow.
 
-The HY_Canal feature type defines the existence of body of surface
-water, participating in a hydrographic network, special due to its
+The HY_Canal feature type defines the existence of a body of surface
+water, participating in a hydrographic network, that is special due to its
 artificial origin (man-made).
 
-The HY_Lake feature type defines the existence of body of surface water,
-participating in a hydrographic network, special due to its considerable
+The HY_Lake feature type defines the existence of a body of surface water,
+participating in a hydrographic network, made special due to its considerable
 size.
 
-The HY_Impoundment feature type defines the existence of body of surface
-water, participating in a hydrographic network, special due to be formed
-by collecting water, as by a dam.
+The HY_Impoundment feature type defines the existence of a body of surface
+water, participating in a hydrographic network, seen as being special due to being formed by collecting water, for example in the case of a dam.
 
-The HY_Lagoon feature type defines the existence of body of surface
-water, participating in a hydrographic network, special due to its
+The HY_Lagoon feature type defines the existence of a body of surface
+water, participating in a hydrographic network, which is special due to its
 shallow depth and interaction with the open sea.
 
-The HY_Estuary feature type defines the existence of body of surface
-water, participating in a hydrographic network, special due to branching
+The HY_Estuary feature type defines the existence of a body of surface
+water, participating in a hydrographic network, made special due to branching
 and its interaction with the open sea.
 
 
@@ -1707,8 +1704,7 @@ The Storage model (link:#figure43[Figure 43]) provides a concept to describe any
 waterbody, in terms of a reservoir storing water for future use. The
 separation of the storage model allows description of the hydrographic
 network without the details of storage capacities that a waterbody may
-have, and vice versa, storage reservoirs can be described independent of
-their role within the hydrographic network.
+have, and subsequently, storage reservoirs can thus also be described independent of their role within the hydrographic network.
 
 [#figure43]
 .Reservoir realizing the hydro nexus (UML class diagram)
