@@ -1702,9 +1702,9 @@ and its interaction with the open sea.
 
 The Storage model (link:#figure43[Figure 43]) provides a concept to describe any
 waterbody, in terms of a reservoir storing water for future use. The
-separation of the storage model allows description of the hydrographic
+separation of the storage model allows for description of the hydrographic
 network without the details of storage capacities that a waterbody may
-have, and subsequently, storage reservoirs can thus also be described independent of their role within the hydrographic network.
+have, and conversely, storage reservoirs can also be described independent of their role within the hydrographic network.
 
 [#figure43]
 .Reservoir realizing the hydro nexus (UML class diagram)
@@ -1713,7 +1713,7 @@ image::figures/fig43.png[]
 The HY_Reservoir feature type describes the waterbody, either natural or
 man-made, used for storage, regulation and control of water resources.
 The reservoir concept refers to a volume of water managed in zones
-between operating levels. HY_Reservoir has associations bettwen a
+between operating levels. HY_Reservoir has associations between a
 reservoir and the _storedWaterBody_ and a _reservoirZone_.
 
 .HY_Reservoir
@@ -1814,12 +1814,12 @@ as part of the hydrometric network.
 ==== Hydrometric Feature model
 
 The HY_HydrometricFeature feature type provides a concept of a
-monitoring station at which data on water are obtained that realizes the
-catchment either separately or as part of the hydrometric network
+monitoring station at which data on water are obtained and that realizes the
+catchment either separately or as part of a hydrometric network
 (link:#figure45[Figure 45]). HY_HydrometricFeature has associations for the
 _hydrometricNetwork_ in which it participates, and a _positionOnRiver_.
 An _outlet-at-station_ constraint emphasizes the recognition of a
-monitoring station as outlet of the catchment that is realized by the
+monitoring station as the outlet of the catchment that is realized by the
 hydrometric network.
 
 .HY_HydrometricFeature
