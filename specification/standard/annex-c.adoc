@@ -115,7 +115,7 @@ realize hydro nexus in the AHGF are confluences, coastal outlets,
 reservoir outlets and monitoring point stream gauges. The AHGF also
 defines a specialization of HY_HydroLocation, whereby a collection of
 disjoint points can be used to realize a single nexus, effectively
-forming a 'diffused' outflow (or inflow) for a contracted catchment.
+forming a 'diffuse' outflow (or inflow) for a contracted catchment.
 Instances of such specialized hydro locations, which are used for
 simplification of complex drainage patterns at the boundary of
 contracted catchment, will always realize one contracted
