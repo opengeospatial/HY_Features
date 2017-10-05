@@ -871,9 +871,7 @@ image::figures/fig36.png[]
 
 The River Referencing system uses the one-dimensional topological
 realization of catchment within the implied hydrologic complex such that
-the feature to be placed and the already located referent are nodes on
-the boundary of the same flowpath. Given that a flowpath realizes a
-catchment between inflow and outflow nodes, the feature of interest is
+the feature to be placed and the reference location are (located) on the same flowpath. Given that a flowpath realizes a catchment between inflow and outflow nodes, the feature of interest is
 placed some distance along a flowpath, while the location being used as
 a reference location is located at the upstream or downstream end of the
 flowpath. Using located referents in both directions allows placement of
@@ -1154,8 +1152,8 @@ or periodically contain water, without imposing a particular drainage
 pattern. This allows representation of the network, even if logically
 connected features are not connected at the representation level. If the
 realized catchment is connected with other catchments via hydro nexuses,
-the channel network is considered connected to the channel network
-realizing these catchments.
+the channel network is considered to be connected to the channel networks
+that realize these catchments.
 
 HY_ChannelNetwork has _surfaceDepression_ and _surfaceChannel_
 _associations_, and carries a _drainagePattern_ attribute; it inherits

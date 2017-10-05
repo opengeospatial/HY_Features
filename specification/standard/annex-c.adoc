@@ -38,7 +38,7 @@ AHGFContractedCatchment. +
 Additionally, AHGF 'base-level' catchments, from which contracted
 catchments are derived, can be seen as a second set of conceptualized
 units of hydrology draining to a single common outflow and with a single
-inflow. These catchments are given a non-persistent identifier (HydroID)
+inflow. These catchments are attributed with a non-persistent identifier (HydroID)
 and like contracted catchments, their flow paths take part in AHGF
 topology tables (AHGFNetworkConnectivityDown and
 AHGFNetworkConnectivityUp). The polygon geometric representation of
@@ -53,6 +53,8 @@ All contracted catchment
 features are constrained to be dendritic in the AHGF. A contracted
 catchment's outflow can only be received by a single downstream
 contracted catchment.
+
+While sub-sets of AHGF base-level catchments may be dendritic, these catchments on not constrained in the same way as contracted catchments and thus contain non-dendritic relationships.
 
 |
 HY_InteriorCatchment

@@ -116,7 +116,7 @@ downstream.
 
 |nearby |located a short distance from the (reference) location.
 
-|right |located right-hand of the (reference) location when facing
+|right |located to the right-hand of the (reference) location when facing
 downstream.
 
 |upstream |located upstream of the (reference) location, e.g. in the
@@ -148,10 +148,10 @@ with many outlets.
 |parallel |main channels regularly spaced and parallel or sub-parallel
 to each other; tributaries join at very acute angles.
 
-|pinnate |featherlike, closely grouped , short tributaries (fine
+|pinnate |featherlike, closely grouped, short tributaries (fine
 texture).
 
-|radial |streams flow outward from center.
+|radial |streams that flow outward from a center.
 
 |rectangular |drainage forms a perpendicular net with the two directions
 equally developed.
@@ -173,12 +173,12 @@ a|
 *Usage Type*
 
 |conventional |accepted, used, or practiced by most people ('agreed by
-convention')
+convention').
 
-|historical |restricted to or based on fact in history
+|historical |restricted to or based on fact in history.
 
-|official |ordered or allowed by those in authority
+|official |ordered or allowed by those in authority.
 
 |vernacular |used in or suitable for speech, usually not used in formal
-writing
+writing.
 |=======================================================================
