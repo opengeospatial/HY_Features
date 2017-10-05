@@ -633,7 +633,7 @@ image::figures/fig34.png[]
 The catchment realization features defined in this standard refer to
 objects on the land surface for the purpose of surface water hydrology.
 In other contexts, other types of catchment realization may exist.
-Catchment realizations that do nots conform to those defined in this
+Catchment realizations that do not conform to those defined in this
 standard, for instance realizations in 3- or 4-dimensional perspectives,
 may be implemented using the general HY_CatchmentRealization type.
 HY_CatchmentRealization carries a _shape_ attribute and a _realizedCatchment_ association.

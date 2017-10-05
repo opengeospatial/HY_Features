@@ -11,7 +11,7 @@ This table should not be understood in terms of a 'conceptual mapping'
 of clearly defined relationships between two logical concepts, but
 rather as a simple approach to show compatibility of concepts, based on
 the meaning expressed in the definitions, and without imposing a
-particular implementation. Since each dataset that implements the
+particular implementation. Since each data set that implements the
 INSPIRE theme will have a different legacy of documentation and
 information modeling, a conceptual mapping would be expressed
 differently.  Applications implementing the INSPIRE Hydrography theme

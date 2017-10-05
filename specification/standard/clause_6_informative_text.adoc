@@ -187,7 +187,7 @@ overlapping catchment polygons that correspond to monitoring stations.
 It is very important to understand that every hydrologic feature dataset
 follows a unique "scheme" with regard to the general concepts of
 HY_Features. That is, catchments' type and role in a particular
-application or dataset, such as catchment hierarchy, upstream-downstream
+application or data set, such as catchment hierarchy, upstream-downstream
 relationships, and cross-scale realization correspondence, will vary
 according to the needs of the application.
 
@@ -213,7 +213,7 @@ flowpath. This scheme can be described using HY_Features, but many of
 its specific constraints and nuances are implementation details that
 would be specified in a profile and/or implementation of HY_Features.
 
-Considering datasets that include multiple realizations and/or
+Considering data sets that include multiple realizations and/or
 representations of features across two or more scales, the idea of the
 implementation scheme is very important. For example, consider a dataset
 that has high-resolution and low-resolution variants of
@@ -547,7 +547,7 @@ when a search is executed or as part of some automated data processing
 routine. This standard does not preclude such techniques, but does not
 attempt to address the permanence or method of establishing such network
 locations. Instead, HY_Features provides a linear referencing data model
-to facilitate relating hydrologic locations across datasets and scales.
+to facilitate relating hydrologic locations across data sets and scales.
 
 To allow expression of cross-dataset links, this standard specifies a
 system for referencing "along a river" by defining the one-dimensional

@@ -65,7 +65,7 @@ that identify hydrologic features in a wide variety of applications: +
 * to link hydrologic observations to their feature-of-interest, e.g.
 link a streamflow observation to the river or catchment being observed,
 * to allow aggregation of cross-referenced features into integrated
-datasets and data products on global, regional, or basin scales,
+data sets and data products on global, regional, or basin scales,
 * to enable systems to unambiguously link data between systems and
 domains,
 * to enable cross-domain or multi-discipline services to communicate
