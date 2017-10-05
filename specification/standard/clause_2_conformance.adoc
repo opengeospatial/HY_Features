@@ -34,8 +34,8 @@ Conformance of implementation targets with this standard shall be
 verified using all the relevant tests specified in Annex A (normative)
 of this document. The framework, concepts, and methodology for testing,
 and the criteria to be met to claim conformance are specified in the OGC
-Compliance Testing Policies and Procedures and the https://cite.opengeospatial.org/[OGC Compliance
-Testing web site].
+Compliance Testing Policies and Procedures and the 
+https://cite.opengeospatial.org/[OGC Compliance Testing web site].
 
 All requirements-classes and conformance-classes described in this
 document are owned by the HY_Features standard.

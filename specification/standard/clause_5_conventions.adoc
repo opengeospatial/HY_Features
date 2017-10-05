@@ -38,17 +38,17 @@ and property names in lowerCamelCase.
 === WMO Terminology
 The HY_Features model uses--as far as possible--terminology recommended by
 the WMO Commission for Hydrology for use in the WMO Member countries.
-The key reference is the "International Glossary of Hydrology" link:#WMO2016[[9\]] a joint 
-publication of the WMO and the UNESCO (hereinafter referred to as WMO/UNESCO 
-glossary of hydrology). Wherever appropriate, terms from this glossary are 
-applied to the featureconcepts in this standard to capture meaning and 
-contextualrelationships. The synonym approach widely used in this glossary is
-interpreted as signifying that synonymous terms are not necessarily
-synonymous in every respect. Differences in terminology were explored
-through reconciling the explicit definitions documented in the glossary
-with usage reflected in various data sets and products. The accepted
-terms were augmented with the relationships inferred from other
-terminology in order to define complex terms that do not clearly
+The key reference is the "International Glossary of Hydrology" 
+link:#WMO2016[[9\]] a joint  publication of the WMO and the UNESCO 
+(hereinafter referred to as WMO/UNESCO glossary of hydrology). Wherever 
+appropriate, terms from this glossary are applied to the featureconcepts 
+in this standard to capture meaning and contextualrelationships. The synonym 
+approach widely used in this glossary is interpreted as signifying that 
+synonymous terms are not necessarily synonymous in every respect. Differences 
+in terminology were explored through reconciling the explicit definitions 
+documented in the glossary with usage reflected in various data sets and 
+products. The accepted terms were augmented with the relationships inferred 
+from other terminology in order to define complex terms that do not clearly
 distinguish between a specific logical concept and its geometric
 representation or between a general term and its specific conceptual
 meaning. The definitions used in the conceptual model described in this

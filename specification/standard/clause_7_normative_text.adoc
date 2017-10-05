@@ -88,12 +88,13 @@ their UML classes have been grouped.
 
 === Hydro Feature concepts
 
-The HydroFeature application schema provides the core concepts of a named hydrologic 
-feature in the Named Feature (shown in Yellow) of a hydrologic complex.
-For each complex, the union of catchment and its common outlet is realized by a collection of hydrologic features (shown in Blue) and
-a river referencing system, which allows placement of an arbitrary
-feature 'along a river' using linear referencing (shown in Green) along
-a one-dimensional topological flowpath realization.
+The HydroFeature application schema provides the core concepts of a named 
+hydrologic  feature in the Named Feature (shown in Yellow) of a hydrologic 
+complex. For each complex, the union of catchment and its common outlet is 
+realized by a collection of hydrologic features (shown in Blue) and 
+a river referencing system, which allows placement of an arbitrary 
+feature 'along a river' using linear referencing (shown in Green) along 
+a one-dimensional topological flowpath realization. 
 
 [#figure21]
 .Hydro Feature Application Schema Diagram
@@ -102,7 +103,8 @@ image::figures/fig21.png[]
 If required, an implementation should use terms from the code lists in
 Annex B of this standard, defined specifically to conform to a
 terminology common in the hydrology domain. Note that alternative code
-lists may be used but should be related to the terms in Annex B.4 using an appropriate formalism.
+lists may be used but should be related to the terms in Annex B.4 using 
+an appropriate formalism.
 
 [#figure22]
 .Hydro Feature – external dependencies
@@ -147,7 +149,8 @@ spatial or temporal representations.
 The Named Feature model (link:#figure24[Figure 24]) defines the
 HY_HydroFeature type as a basic feature to reflect the properties 
 that all hydrologic features have, such as names in cross-jurisdictional 
-and multi-lingual contexts. The HY_HydroFeature type has one association: _name_.
+and multi-lingual contexts. The HY_HydroFeature type has one association: 
+_name_.
 
 [#table4]
 .HY_HydroFeature
@@ -381,7 +384,8 @@ image::figures/fig30.png[]
 
 HY_CatchmentAggregate inherits through generalization the _outflow_,
 _inflow_, _containingCatchment_, _containedCatchment_,
-_conjointCatchment_, _upperCatchment_, _lowerCatchment_, and _catchmentRealization_ properties, as well as _exorheicDrainage_ and
+_conjointCatchment_, _upperCatchment_, _lowerCatchment_, and 
+_catchmentRealization_ properties, as well as _exorheicDrainage_ and
 _endorheicDrainage_ _associations_.
 
 .HY_CatchmentAggregate
@@ -413,8 +417,8 @@ _endorheicDrainage_
 
 ===== Dendritic Catchment
 
-The HY_DendriticCatchment feature type (link:#figure31[Figure 31]) specializes the
-general HY_Catchment class as a catchment which is determined by a
+The HY_DendriticCatchment feature type (link:#figure31[Figure 31]) specializes 
+the general HY_Catchment class as a catchment which is determined by a
 single common downstream catchment. It represents the catchment as the
 topological link between an inflow and an outflow. This allows
 catchments to be connected in a dendritic network by upstream-downstream
@@ -470,9 +474,10 @@ _single-Receiving-Catchment_
  |defines a cardinality of '1' indicating that one and only one single
 catchment receives flow via the outflow of the catchment. A receiving
 catchment can be unknown (nillable) in a particular application, for
-example in the case of the last catchment in a hierarchy, contributing flow directly to the ocean
-or an internal sink. An implementation SHOULD unambiguously specify
-whether the receiving catchment exists, or is nillable. |Constraint
+example in the case of the last catchment in a hierarchy, contributing flow 
+directly to the ocean or an internal sink. An implementation SHOULD 
+unambiguously specify whether the receiving catchment exists, or is 
+nillable. |Constraint
 
 a|
 _single-Lower-Catchment_
@@ -480,15 +485,16 @@ _single-Lower-Catchment_
  |defines a cardinality of '1' indicating that one and only one lower
 catchment exists neighboring the catchment. A lower catchment can be
 unknown (nillable) in a particular application, for example in the case of
-the last catchment in a hierarchy, contributing flow directly to the ocean or an internal sink.
+the last catchment in a hierarchy, contributing flow directly to the ocean 
+or an internal sink.
 An implementation SHOULD unambiguously specify whether the lower
 catchment exists, or is nillable. |Constraint
 |=======================================================================
 
 ===== Interior Catchment
 
-The HY_InteriorCatchment feature type (link:#figure32[Figure 32]) specializes the
-general HY_Catchment class as a catchment which is generally not
+The HY_InteriorCatchment feature type (link:#figure32[Figure 32]) specializes 
+the general HY_Catchment class as a catchment which is generally not
 connected to other catchments. This class describes the interior
 catchment as a catchment enveloped by other catchments to which it may
 temporarily contribute. While the interior catchment concept precludes
@@ -534,7 +540,8 @@ _nillable_-_outflow_
 ===== Hydro Nexus
 
 The HY_HydroNexus feature type (link:#figure33[Figure 33]) conceptualizes a
-hydrologically determined nexus of a corresponding catchment (link:#figure26[Figure 26]). 
+hydrologically determined nexus of a corresponding catchment 
+(link:#figure26[Figure 26]). 
 The hydro nexus represents the place where a catchment interacts
 with another catchment, i.e. where the outflow of a contributing
 catchment becomes inflow into a receiving catchment. A catchment may
@@ -554,7 +561,11 @@ define a linear river reference system, where an inflow or outflow node
 is the origin and the flowpath realizing the catchment is the linear
 element along which a position can be determined.
 
-Although conceptually, a given catchment will always have a corresponding outflow hydro nexus, 0..1 cardinality is used for HY_HydroNexus in the role of outflow to provide an opportunity to use the catchment hierarchy model in implementations where the (always logically existing) nexus is not known. If required, an implementation may specify it to be 1..1.
+Although conceptually, a given catchment will always have a corresponding 
+outflow hydro nexus, 0..1 cardinality is used for HY_HydroNexus in the role 
+of outflow to provide an opportunity to use the catchment hierarchy model in 
+implementations where the (always logically existing) nexus is not known. 
+If required, an implementation may specify it to be 1..1.
 
 [#figure33]
 .Hydro nexus (UML class diagram)
@@ -608,8 +619,8 @@ contributing catchment.
 
 ===== Catchment Realization
 
-The HY_CatchmentRealization feature type (link:#figure34[Figure 34]) is based on the
-idea that there are multiple hydrology-specific perspectives of the
+The HY_CatchmentRealization feature type (link:#figure34[Figure 34]) is based 
+on the idea that there are multiple hydrology-specific perspectives of the
 holistic catchment concept that are used to describe a catchment as a
 unit of study shared across sub-domains and studies.
 
@@ -714,7 +725,8 @@ areas or a mesh of catchment divides. HY_HydroNetwork feature type
 specializes HY_CatchmentRealization. Through generalization it inherits
 the _shape_, the _realizedCatchment_ properties, and carries the
 associations _flowpath_, _catchmentDivide_ and _catchmentArea_. The
-optional _shape_ of the HY_HydroNetwork is usually given through the individual geometries of the network parts.
+optional _shape_ of the HY_HydroNetwork is usually given through the 
+individual geometries of the network parts.
 
 .HY_HydroNetwork
 [width="100%",cols="20%,65%,15%",]
@@ -756,8 +768,8 @@ association.
 
 ===== Hydro Location
 
-The HY_HydroLocation feature type (link:#figure35[Figure 35]) conceptualizes the idea
-that a hydro nexus can be realized by practically any feature of
+The HY_HydroLocation feature type (link:#figure35[Figure 35]) conceptualizes 
+the idea that a hydro nexus can be realized by practically any feature of
 interest. The hydro nexus concept is used to define the hydrologic
 determination of a catchment but, like the catchment concept, does not
 have inherent realization(s). Any hydrologically significant feature
@@ -851,9 +863,9 @@ Association
 
 ==== The River Referencing model
 
-The River Referencing model (link:#figure36[Figure 36]) provides a simple model to place
-a feature of interest 'on a river'. It introduces the concept of
-indirect position where a position is determined relative to an already
+The River Referencing model (link:#figure36[Figure 36]) provides a simple 
+model to place a feature of interest 'on a river'. It introduces the concept 
+of indirect position where a position is determined relative to an already
 established reference location. This model defines a linear river
 referencing system whose linear shape is given by a flowpath realizing
 the catchment between its inflow and outflow. It is important to note,
@@ -892,16 +904,16 @@ distance from the upstream and/or downstream end of the flowpath, or
 from a referent that is already located on that flowpath.
 
 The (indirect) position of an outflow node referenced along an upstream
-oriented flowpath (link:#figure17[Figure 17]) can be expressed as the distance from an
-upstream inflow node located on that flowpath, while the (indirect)
-position of an inflow node referenced along a downstream oriented
-flowpath (link:#figure18[Figure 18]) can be expressed as distance from a downstream
-outflow node located on the flowpath. An 'intermediate' position
-referencing known inflow and outflow nodes bounding a flowpath at both
-ends (link:#figure19[Figure 19]) can be expressed as part of the distance along the
-entire flowpath, measured from the upstream end of an upstream flowpath,
-and/or from the downstream end of a downstream flowpath. A position
-referencing an already referenced location on the flowpath can be
+oriented flowpath (link:#figure17[Figure 17]) can be expressed as the 
+distance from an upstream inflow node located on that flowpath, while 
+the (indirect) position of an inflow node referenced along a downstream 
+oriented flowpath (link:#figure18[Figure 18]) can be expressed as distance 
+from a downstream outflow node located on the flowpath. An 'intermediate' 
+position referencing known inflow and outflow nodes bounding a flowpath 
+at both ends (link:#figure19[Figure 19]) can be expressed as part of the 
+distance along the entire flowpath, measured from the upstream end of an 
+upstream flowpath, and/or from the downstream end of a downstream flowpath. 
+A position referencing an already referenced location on the flowpath can be
 expressed as part of the distance along the entire flowpath, measured
 from the 'located referent'.
 
@@ -1135,8 +1147,9 @@ allows a catchment to be realized as a network of connected channels and
 depressions, regardless of whether or not water is contained in them.
 
 A single depression or channel may realize the catchment, either as part
-of the network (link:#figure39[Figure 39]) or via a reference feature which realizes the
-conceptual hydro nexus of the catchment (link:#figure40[Figure 40]). For example, a
+of the network (link:#figure39[Figure 39]) or via a reference feature which 
+realizes the conceptual hydro nexus of the catchment 
+(link:#figure40[Figure 40]). For example, a 
 point at an associated cross or longitudinal section may be considered
 to realize the outflow of the catchment which is realized by the channel
 expressed as a flowpath.
@@ -1383,9 +1396,10 @@ catchment as a network of moving or standing waterbodies, regardless of
 the channels and depressions.
 
 A single waterbody can realize its catchment either as part of the
-hydrographic network (link:#figure41[Figure 41]), or via a reference location which
-realizes the hydro nexus of the catchment realized by the waterbody
-(link:#figure42[Figure 42]). For example, a fixed landmark, or a point at an associated
+hydrographic network (link:#figure41[Figure 41]), or via a reference 
+location which realizes the hydro nexus of the catchment realized by 
+the waterbody (link:#figure42[Figure 42]). 
+For example, a fixed landmark, or a point at an associated
 cross section is considered to realize the outflow of the catchment
 which is realized by the waterbody.
 
@@ -1672,7 +1686,9 @@ _streamCrossSection_ and _streamLongitudinalSection_ properties. From
 the general HY_HydroFeature class specialized waterbodies inherit the
 _name_ property, which allows the handling of names given to them in
 cross-jurisdiction and multi-lingual contexts. Each specialization is
-understood to be part of the hydrographic network. There may be other contexts with other specializations, or where a particular segmentation exists, that does not conform to the types defined in this standard.
+understood to be part of the hydrographic network. There may be other 
+contexts with other specializations, or where a particular segmentation 
+exists, that does not conform to the types defined in this standard.
 
 The HY_River feature type defines the existence of a body of surface
 water, participating in a hydrographic network, which is special due to its
@@ -1687,7 +1703,8 @@ participating in a hydrographic network, made special due to its considerable
 size.
 
 The HY_Impoundment feature type defines the existence of a body of surface
-water, participating in a hydrographic network, seen as being special due to being formed by collecting water, for example in the case of a dam.
+water, participating in a hydrographic network, seen as being special due to 
+being formed by collecting water, for example in the case of a dam.
 
 The HY_Lagoon feature type defines the existence of a body of surface
 water, participating in a hydrographic network, which is special due to its
@@ -1700,11 +1717,12 @@ and its interaction with the open sea.
 
 ==== The Storage model
 
-The Storage model (link:#figure43[Figure 43]) provides a concept to describe any
-waterbody, in terms of a reservoir storing water for future use. The
+The Storage model (link:#figure43[Figure 43]) provides a concept to describe 
+any waterbody, in terms of a reservoir storing water for future use. The
 separation of the storage model allows for description of the hydrographic
 network without the details of storage capacities that a waterbody may
-have, and conversely, storage reservoirs can also be described independent of their role within the hydrographic network.
+have, and conversely, storage reservoirs can also be described independent 
+of their role within the hydrographic network.
 
 [#figure43]
 .Reservoir realizing the hydro nexus (UML class diagram)
