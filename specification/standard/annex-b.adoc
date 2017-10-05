@@ -58,7 +58,7 @@ is extracted from a reservoir or stream.
 
 |ponor |hole or opening in the bottom or side of a depression where a
 surface stream or lake flows either partially or completely underground
-into a karst groundwater system
+into a karst groundwater system.
 
 |pour point |specified catchment outlet defined to delineate a catchment
 upslope from that point.
@@ -104,9 +104,9 @@ a|
  a|
 *Distance Description*
 
-|at |located at the (reference) location
+|at |located at the (reference) location.
 
-|between |located between two (reference) locations
+|between |located between two (reference) locations.
 
 |downstream |located downstream of the (reference) location, e.g. in the
 direction of the current in a river or stream.
@@ -114,7 +114,7 @@ direction of the current in a river or stream.
 |left |located left-hand of the (reference) location when facing
 downstream.
 
-|nearby |located in a short distance to the (reference) location.
+|nearby |located a short distance from the (reference) location.
 
 |right |located right-hand of the (reference) location when facing
 downstream.
@@ -134,12 +134,12 @@ a|
  a|
 *Drainage Pattern*
 
-|annular |main rivers have circular pattern with subsidiary channels at
+|annular |main rivers that have a circular pattern with subsidiary channels at
 right angles.
 
-|centripetal |streams flow inward to center.
+|centripetal |streams that flow inward to center.
 
-|dendritic |spreading treelike arrangement; no evident orientation of
+|dendritic |spreading treelike arrangement (when viewed in an upstream direction) converging into a single outlet downstream; no evident orientation of
 channels (random orientation).
 
 |distributary |one main channel divides into many channel-ways ending

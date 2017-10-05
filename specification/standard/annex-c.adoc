@@ -57,7 +57,8 @@ contracted catchment.
 |
 HY_InteriorCatchment
  |
-ContractedCatchment
+ContractedCatchment +
+Subset of 'Base-level' Catchment
  |
 Contracted catchments that normally do not contribute flow to a
 neighboring contracted catchment or to the coast (i.e. catchments with
@@ -76,13 +77,13 @@ Collections of 'Base-level' Catchments
  |
 Sets of non-overlapping dendritic and interior contracted catchment
 features aggregated into larger encompassing catchments. Such
-aggregations are a fundamental concept in the AHGF and the primary
+aggregations are a fundamental concept in the AHGF and a primary
 reason for the creation of the contracted catchments. The AHGF
 Topographic Drainage Divisions (AWRADrainageDivision) and River Regions
 (RiverRegions) are examples of such aggregations. +
 
 Contracted catchments, derived from collections of 'base-level'
-catchments, can themselves be seen as a further examples of a catchment
+catchments, can themselves be seen as further examples of a catchment
 aggregate.
 
 |
@@ -117,12 +118,11 @@ disjoint points can be used to realize a single nexus, effectively
 forming a 'diffused' outflow (or inflow) for a contracted catchment.
 Instances of such specialized hydro locations, which are used for
 simplification of complex drainage patterns at the boundary of
-contracted catchment, will always realize (at least) one contracted
+contracted catchment, will always realize one contracted
 node. This representative node is the node used for topological
 realization of the hydro nexus. +
 
-With the exception of those that coincide with contracted nodes, all
-remaining AHGFNetworkNode features are further examples of hydro
+All AHGFNetworkNode features are further examples of hydro
 locations in the AHGF.
 
 |
