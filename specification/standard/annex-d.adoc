@@ -31,13 +31,13 @@ features, but more generally, the unit of hydrology represented by
 catchment polygons and other data keyed to the comid.
 
 |HY_DendriticCatchment |comid catchment |NHDPlus catchments not
-following any diversions in the flow tables
+following any diversions in the flow tables.
 
 |HY_InteriorCatchment |comid catchment |NHDPlus catchments that do not
 contribute flow.
 
 |HY_CatchmentAggregate |collection of comid catchments |Including
-interior catchments and not following diversions in the flow tables
+interior catchments and not following diversions in the flow tables.
 
 |HY_HydroNexus |fromNode or toNode |NHDPlus nodes are inflow (fromNode)
 and outflow (toNode) nodes of a given comid catchment.
@@ -61,7 +61,7 @@ land cover dataset would be more in line with the meaning of
 CatchmentArea.
 
 |HY_CatchmentDivide |comid catchment polygon |The polygon representing a
-comid catchment should be thought of as the CatchmentDivide
+comid catchment should be thought of as the CatchmentDivide.
 
 |HY_CartographicRealization |A map of a catchment |The NHDPlus dataset
 doesn't include any, but if a map view of a catchment is created at any
