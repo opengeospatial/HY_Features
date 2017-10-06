@@ -73,7 +73,7 @@ HY_HydroLocation
 HydroJunction, man made feature and obstacle.
  |
 Since linear referencing is no longer supported, the hydro junctions,
-man made features, and obstacles are simply a points that can be thought
+man made features, and obstacles are simply points that can be thought
 of as hydro locations without network location.
 
 |
@@ -121,12 +121,12 @@ drainage areas associated with hydrometric stations.
 HY_HydrographicNetwork
  |
 Waterbodies and single line watercourses that correspond to a collection
-of network linear flows
+of network linear flows.
  |
-The waterbodies and single line watercourses all have corresponding
-network linear flows. (Double line streams and lakes are waterbodies
+The waterbodies and single-line watercourses all have corresponding
+network linear flows (double-line streams and lakes are waterbodies
 that are also realized by skeleton lines, which are considered as
-inferred network linear flows.) As noted earlier though the NHN networks
+inferred network linear flows). As noted earlier though, the NHN networks
 are not tied to catchments or aggregations of catchments.
 
 |
@@ -136,7 +136,7 @@ Waterbodies and single line watercourses.
  |
 Waterbody is used specifically for hydrographic features that are
 represented by polygons: lakes and double-line streams, defined by banks
-and delimiters. Single line watercourses also fall under HY_WaterBody.
+and delimiters. Single-line watercourses also fall under HY_WaterBody.
 
 |
 HY_ChannelNetwork
@@ -158,7 +158,7 @@ HY_Channel
 Not represented
  |
 The NHN does not have channels as distinct from the hydrographic
-network. Specifically the properties lists for HY_Channel are not
+network. Specifically, the properties lists for HY_Channel are not
 available.
 
 |

@@ -5,15 +5,15 @@
 This is a descriptive mapping for the French National
 Service for Water Data and Reference-dataset Management (SANDRE) link:#SANDRE2010[[12\]] on
 the basis of the data model describing the national dataset called 'BD
-Carthage' link:#SANDRE2017[[14\]]. All element name used corresponds to the XML tag
-appearing in the data model (not attribute name appearing in BD
+Carthage' link:#SANDRE2017[[14\]]. All element names used correspond to the XML tags
+appearing in the data model (and not the attribute names appearing in BD
 Carthage).
 
 It is intended to provide an understanding of the basic relationship of
 HY_Features concepts and the SANDRE hydrologic feature dictionary for
 Hydrography.
 
-Please notice that terms for SANDRE are based on French words.
+Please note that terms for SANDRE are based on French words.
 
 [#annexF_1]
 === Catchment Model
@@ -38,11 +38,10 @@ SousSecteurHydro +
 OR +
 ZoneHydro
  |
-SANDRE makes distinction between basins and various sub-basins that are
+SANDRE makes a distinction between basins and various sub-basins that are
 aggregated according to the national hydrographic codification scheme.
-All those levels can be seen as equivalent to 'contracted catchment' in
-AHGF in the sense that there is a contract on the catchment ID to
-represent a given catchment.
+All those levels can be seen as being equivalent to 'contracted catchment' in the AHGF, in the sense that there is a contract on the catchment ID that
+represents a given catchment.
 
 |
 HY_DendriticCatchment
@@ -55,7 +54,7 @@ SousSecteurHydro +
 OR +
 ZoneHydro
  |
-SANDRE: all catchments are dendritic
+SANDRE: all catchments are dendritic.
 
 |
 HY_InteriorCatchment
@@ -74,8 +73,8 @@ SecteurHydro +
 OR +
 SousSecteurHydro
  |
-SANDRE: RegionHydro are aggregation of SecteurHydro that are aggregation
-of SousSecteurHydro that are aggregation of ZoneHydro
+SANDRE: RegionHydro are aggregations of SecteurHydro that are aggregations
+of SousSecteurHydro, which in turn are aggregations of ZoneHydro.
 
 |
 HY_HydroNexus
@@ -92,7 +91,7 @@ NoeudHydrographique
  |
 Can be seen as a specific NoeudHydrographique. SANDRE does not consider
 monitoring devices (ex : hydrometricStation) as a specific
-NoeudHydrographique
+NoeudHydrographique.
 
 |
 HY_CatchmentRealization
@@ -120,9 +119,9 @@ HY_CatchmentDivide
  |
 LimiteHydroBassin
  |
-LimiteHydroBassin is the boundary of highest catchments in the 
-catchments hierarchy. For France mainland, it basically corresponds to
-the 6 big watershed dividing it (Loire, Seine, É) . It has a linear
+LimiteHydroBassin is the boundary of highest catchments in the 
+catchment hierarchy. For the French mainland, it basically corresponds to
+the six big watersheds that divide it (Loire, Seine, É). Each has a linear
 representation.
 
 |
@@ -151,16 +150,16 @@ HY_HydrographicNetwork
  |
 Not represented
  |
-Within SANDRE Channel/Waterbody are not disjoint.
+Within SANDRE Channel and Waterbody are not separated.
 
-SANDRE focuses HY_ Waterbody(ies) which identifiers are based on
-HY_Channel containing them.
+SANDRE focuses on HY_ Waterbody(ies) whos identifiers are based on
+the HY_Channel containing them.
 
-Those HY_Channel have HY_Waterbody(ies) which are permanent,
-intermittent, absent for a long period of time.
+Such HY_Channel have HY_Waterbody(ies) which are permanent,
+intermittent and absent for a long period of time.
 
 Thus permanent identifiers assigned to HY_Channel(s) are usually used as
-'proxy' to refer to given well known body of waters (HY_WaterBody).
+'proxy' to refer to a given well known body of water (HY_WaterBody).
 
 |
 HY_WaterBody
@@ -188,7 +187,7 @@ OR +
 EltHydroSurface
  |
 SANDRE: EntiteHydroSurface is an aggregation of EltHydroSurface. Both
-have a surfacic representation.
+have a representation as a surface.
 
 |
 HY_Channel
@@ -213,10 +212,10 @@ OR +
 PointEauIsole +
  |
 SANDRE: EntiteHydroSurface is an aggregation of EltHydroSurface. Both
-have a surfacic representation.
+have a representation as a surface.
 
-A subset of PointEauIsole can be used in case that a HY_Reservoir is not
-linked to the hydrographic network and is represented by a point
+A subset of PointEauIsole can be used in the case that a HY_Reservoir is not
+linked to the hydrographic network and is represented by a point.
 
 |
 HY_FlowPath
@@ -224,7 +223,7 @@ HY_FlowPath
 CoursEauPrincipal
  |
 Each HY_Catchment equivalent in SANDRE (RegionHydro, É) identifies its
-main HY_ChannelNetwork which provides a hook to providing HY_FlowPath
+main HY_ChannelNetwork, which provides a hook to providing a HY_FlowPath.
 
 |
 HY_LongitudinalSection
