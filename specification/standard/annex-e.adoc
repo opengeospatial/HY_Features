@@ -3,8 +3,8 @@
 == HY_Features-INSPIRE Hydrography Theme
 
 This table assigns core features as defined in the INSPIRE Hydrography
-theme link:#EC2000[[2\]] to HY_Features core concepts. It also indicates relationship
-between both terms and potential conditions in which they can be
+theme link:#EC2000[[2\]] to HY_Features core concepts. It also indicates relationships
+between both terms and potential conditions by which they can be
 associated.
 
 This table should not be understood in terms of a 'conceptual mapping'
@@ -18,9 +18,8 @@ differently.  Applications implementing the INSPIRE Hydrography theme
 can use this listing to understand how a particular dataset may relate
 to the HY_Features concepts. 
 
-Note than in INSPIRE a base 'HydroObject' concept has been defined. Many
-INSPIRE hydrography Features mentioned below are specialization of this
-one. Thus, they inherit a hydroid attribute which targets the topic of
+Note that in INSPIRE a base 'HydroObject' concept has been defined. Many of the 
+INSPIRE hydrography Features mentioned below are a specialization of this concept. Thus, they inherit a hydroid attribute which targets the topic of
 multiple representations of the same object: '__An identifier that is
 used to identify a hydrographic object in the real world. It provides a
 'key' for implicitly associating different representations of the
@@ -52,34 +51,31 @@ In case that HY_Catchment is realized by HY_CatchmentArea
  a|
 Area having a common outlet for its surface runoff.
 
-NOTE 1 Regarding the different classifications of drainage basins, no
-distinction is made between drainage basins / sub-basins since this will
+NOTE 1: Regarding the different classifications of drainage basins, no
+distinction is made between drainage basins and sub-basins since this will
 vary with application. It is possible to build basins from other basins.
 
-NOTE 2 The outlet of a drainage basin may be a canal or a lake.
+NOTE 2: The outlet of a drainage basin may be a canal or a lake.
 
-NOTE 3 Synonyms for drainage basin include: catchment; catchment area;
+NOTE 3: Synonyms for drainage basin include: catchment; catchment area;
 drainage area; river basin; watershed.
 
 |HY_DendriticCatchment |Is narrower than a|
 DrainageBasin
 
 
-In case that HY_Catchment is realized by HY_CatchmentArea
-
-
-With one outlet
+In case that HY_Catchment is realized by HY_CatchmentArea with one outlet
 
  a|
 Area having a common outlet for its surface runoff.
 
-NOTE 1 Regarding the different classifications of drainage basins, no
-distinction is made between drainage basins / sub-basins since this will
+NOTE 1: Regarding the different classifications of drainage basins, no
+distinction is made between drainage basins and sub-basins, since this will
 vary with application. It is possible to build basins from other basins.
 
-NOTE 2 The outlet of a drainage basin may be a canal or a lake.
+NOTE 2: The outlet of a drainage basin may be a canal or a lake.
 
-NOTE 3 Synonyms for drainage basin include: catchment; catchment area;
+NOTE 3: Synonyms for drainage basin include: catchment; catchment area;
 drainage area; river basin; watershed.
 
 |HY_InteriorCatchment a|
@@ -98,7 +94,7 @@ The area of land from which all surface run-off flows through a sequence
 of streams, rivers and, possibly, lakes into the sea at a single river
 mouth, estuary or delta.
 
-In INSPIRE, the largest 'DrainageBasin' in a system is a 'RiverBasin'
+In INSPIRE, the largest 'DrainageBasin' in a system is a 'RiverBasin'.
 
 |HY_HydroNexus |Is like a|
 HydroNode
@@ -107,33 +103,33 @@ HydroNode
  a|
 A node within the hydrographic network.
 
-NOTE May represent a physical confluence,
+Note: May represent a physical confluence,
 bifurcation/confluence/vanishing point etc., or it may be associated
 with a hydrographic point of interest or facility.
 
 
-Note that INSPIRE mandates HydroNode to have a geometry (GM_Point)
+Note also that INSPIRE mandates HydroNode to have a geometry (GM_Point).
 
 |HY_HydroLocation |Is like |HydroNode/ HydroPOI (depending on the
 useCase) a|
 In INSPIRE HydroNode and HydroPOI could (but not always) correspond to
 the representation of the same object. In case, they are disjoint
-representations, a choice will have to be made on a use case basis
+representations, a choice will have to be made on a use case basis.
 
 HydroPOI def: A natural place where water appears, disappears or changes
 its flow.
 
-EXAMPLE Fluvial points (waterfall, cascade, rapids, breaker),
+EXAMPLE: Fluvial points (waterfall, cascade, rapids, breaker),
 spring/water hole (spring, source, geyser, thermal spring, natural
 fountain, well, also fumarole, artesian), sinkhole (sinkhole, drainage
 loss).
 
-NOTE A hydro point of interest may create a flow constriction in the
+Note: A hydro point of interest may create a flow constriction in the
 network.
 
 
-Note that INSPIRE does not consider monitoring devices (ex :
-hydrometricStation) as a specific HydroPOI
+Note that INSPIRE does not consider monitoring devices (ex:
+hydrometricStation) as a specific HydroPOI.
 
 |HY_CatchmentRealization a|
 
@@ -143,13 +139,13 @@ hydrometricStation) as a specific HydroPOI
 |HY_CatchmentArea |Is like |DrainageBasin a|
 Area having a common outlet for its surface runoff.
 
-NOTE 1 Regarding the different classifications of drainage basins, no
-distinction is made between drainage basins / sub-basins since this will
+NOTE 1: Regarding the different classifications of drainage basins, no
+distinction is made between drainage basins and sub-basins since this will
 vary with application. It is possible to build basins from other basins.
 
-NOTE 2 The outlet of a drainage basin may be a canal or a lake.
+NOTE 2: The outlet of a drainage basin may be a canal or a lake.
 
-NOTE 3 Synonyms for drainage basin include: catchment; catchment area;
+NOTE 3: Synonyms for drainage basin include: catchment; catchment area;
 drainage area; river basin; watershed.
 
 |HY_CatchmentDivide a|
@@ -218,7 +214,7 @@ WatercourseLink
  a|
 A segment of a watercourse within a hydrographic network.
 
-NOTE A watercourse link may be fictitious, with no direct correspondence
+Note: A watercourse link may be fictitious, with no direct correspondence
 to a real-world object and included only to ensure a closed network.
 
 |HY_Reservoir |Is narrower than a|StandingWater
@@ -228,17 +224,17 @@ to a real-world object and included only to ensure a closed network.
 A body of water that is entirely surrounded by land.
 
 
-NOTE It may occur in a natural terrain depression in which water
+Note: It may occur in a natural terrain depression in which water
 collects, or may be impounded by a dam, or formed by its bed being
 hollowed out of the soil, or formed by embanking and/or damming up a
 natural hollow (for example: by a beaver dam). It may be connected to
-inflowing / outflowing watercourses or other standing waters.
+inflowing or outflowing watercourses or other standing waters.
 
 |HY_FlowPath |Is like a|
 WatercourseLink
 
 
- |A segment of a watercourse within a hydrographic network.  A
+ |A segment of a watercourse within a hydrographic network. A
 watercourse link may be fictitious, with no direct correspondence to a
 real-world object and included only to ensure a closed network.
 
