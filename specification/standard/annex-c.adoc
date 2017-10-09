@@ -54,13 +54,13 @@ features are constrained to be dendritic in the AHGF. A contracted
 catchment's outflow can only be received by a single downstream
 contracted catchment.
 
-While sub-sets of AHGF base-level catchments may be dendritic, these catchments on not constrained in the same way as contracted catchments and thus contain non-dendritic relationships.
+While sub-sets of AHGF base-level catchments may be dendritic, these catchments are not constrained in the same way as contracted catchments and thus contain non-dendritic relationships.
 
 |
 HY_InteriorCatchment
  |
 ContractedCatchment +
-Subset of 'Base-level' Catchment
+Subset of 'Base-level' Catchments
  |
 Contracted catchments that normally do not contribute flow to a
 neighboring contracted catchment or to the coast (i.e. catchments with
