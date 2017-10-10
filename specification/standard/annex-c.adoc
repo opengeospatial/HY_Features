@@ -21,7 +21,7 @@ feature implementation.
 
 |HY_Catchment
  |
-ContractedCatchment +
+Contracted Catchment +
 'Base-level' Catchment
  |
 A contracted catchment is a catchment identified via ConCatID, which
@@ -47,7 +47,7 @@ these catchments is provided by AHGFCatchment.
 |
 HY_DendriticCatchment
  |
-ContractedCatchment
+Contracted Catchment
  |
 All contracted catchment
 features are constrained to be dendritic in the AHGF. A contracted
@@ -59,7 +59,7 @@ While sub-sets of AHGF base-level catchments may be dendritic, these catchments 
 |
 HY_InteriorCatchment
  |
-ContractedCatchment +
+Contracted Catchment +
 Subset of 'Base-level' Catchments
  |
 Contracted catchments that normally do not contribute flow to a
@@ -73,7 +73,7 @@ no realized FlowPath or HydroNexus.
 |
 HY_CatchmentAggregate
  |
-Collections of Contracted Catchments +
+Collections of Contracted Catchment +
 Collections of 'Base-level' Catchments
 
  |
@@ -91,15 +91,18 @@ aggregate.
 |
 HY_HydroNexus
  |
-Subset of Contracted Nodes
+Subset of Contracted Node
+AHGFNetworkNode
  |
 A hydrologic significant
-entity conceptualizing the outflow of a contracted catchment. All
+entity conceptualizing the outflow of a Contracted Catchment. All
 contracted nodes in the AHGF are determined by a set of defined business
 rules and assigned with persistent identifiers (ConNodeID). A subset of
 these contracted nodes act in the role of outflow node (ConNodeID) for
 one or more contracted catchment(s) and can also act as an inflow node
 (FConNodeID) for zero or one contracted catchment.
+
+Inflow (FromNode) and outflow (ToNode) nodes of 'Base-level' catchments with a realized FlowPath.
 
 |
 HY_HydroLocation
