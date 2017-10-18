@@ -112,23 +112,22 @@ AHGFNetworkNode
 
  |
 Features in AHGFNode are the subset of contracted nodes, which realize
-instances of HY_HydroNexus. All AHGFNode features therefore act in the
-role of an outflow node (ConNodeID) for a contracted catchment and may
-also additionally act in the role of inflow node (FConNodeID) for a
+instances of HY_HydroNexus for contracted catchments. All AHGFNode features therefore act in the role of an outflow node (ConNodeID) for a contracted catchment and may
+additionally act in the role of inflow node (FConNodeID) for a
 single contracted catchment. Some examples of contracted nodes that
 realize hydro nexus in the AHGF are confluences, coastal outlets,
 reservoir outlets and monitoring point stream gauges. The AHGF also
 defines a specialization of HY_HydroLocation, whereby a collection of
-disjoint points can be used to realize a single nexus, effectively
+disjoint points (nodes from AHGFNetworkNode) can be used to realize a single nexus, effectively
 forming a 'diffused' outflow (or inflow) for a contracted catchment.
 Instances of such specialized hydro locations, which are used for
-simplification of complex drainage patterns at the boundary of
-contracted catchment, will always realize one contracted
+simplification of complex drainage patterns at the boundaries of
+contracted catchments, will always include one contracted
 node. This representative node is the node used for topological
 realization of the hydro nexus. +
 
-All AHGFNetworkNode features are further examples of hydro
-locations in the AHGF.
+AHGFNetworkNode features are further examples of hydro
+locations in the AHGF. These are representative outflow (To_Node) and inflow (From_Node) nodes for AHGF 'Base-level' catchments with a realized FlowPath and include the remaining contracted nodes not included in AHGFNode.
 
 |
 HY_CatchmentRealization
