@@ -137,15 +137,14 @@ Feature identified by ConCatID
 Any feature, collection of features or topological data identified by a
 single ConCatID (contracted catchment). Single instances of
 AHGFContractedCatchment and AHGFLink as well as collections of
-AHGFNetworkStream, AHGFNetworkNode, AHGFCatchment (base-level
-sub-catchments) and AHGFWaterbody features sharing a common ConCatID. +
+AHGFNetworkStream, AHGFNetworkNode, AHGFCatchment and AHGFWaterbody features sharing a common ConCatID. +
  +
 *Note*: features of subtype AHGFContractedCatchment::NoFlowArea in the
 AHGF are special-case un-realizable contracted catchments (normally
 small islands) that do not have an associated contracted node (i.e. No
 HY_HydroNexus). +
   +
-All AHGF 'base-level catchments have at least one catchment realization,
+All AHGF 'base-level' catchments have at least one catchment realization,
 being a single instance of AHGFCatchment, and many are also realized by
 a single AHGFNetworkStream.
 
@@ -162,9 +161,7 @@ be more in line with the meaning of CatchmentArea as defined by
 HY_Features. +
 Although not directly represented in the AHGF, the inherent close
 relationship between the features of AHGFContractedCatchment,
-AHGFCatchment and the DEM (9 second or 1 second) allow us to postulate a
-potential realization of a contracted catchment as the area of the DEM
-bounded by that contracted catchment.
+AHGFCatchment and the DEM (9 second or 1 second) from which they are derived, allow us to postulate a potential realization of a contracted catchment or base-level catchment as the area of the DEM bounded by that contracted or base-level catchment.
 
 |HY_CatchmentDivide
  |
@@ -183,7 +180,7 @@ AHGFMappedStream
  |
 The features of AHGFMappedStream within the AHGF Surface Cartography product, 
 provide an additional realization of both contracted catchments and base-level
-catchments. Collections of features from AHGFNetworkStream identified by
+catchments. These features, along with the other features in the AHGF Surface Hydrology product are specifically aimed to support cartographic realizations of contracted and base-level catchments. Collections of features from AHGFNetworkStream identified by
 a single ConCatID, while a realization of a contracted catchment
 themselves, are also attributed with identifiers that relate them to
 corresponding mapped stream features.
