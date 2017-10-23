@@ -179,11 +179,10 @@ HY_CartographicRealization
 AHGFMappedStream
  |
 The features of AHGFMappedStream within the AHGF Surface Cartography product, 
-provide an additional realization of both contracted catchments and base-level
+provide a further realization of both contracted catchments and base-level
 catchments. These features, along with the other features in the AHGF Surface Hydrology product are specifically aimed to support cartographic realizations of contracted and base-level catchments. Collections of features from AHGFNetworkStream identified by
 a single ConCatID, while a realization of a contracted catchment
-themselves, are also attributed with identifiers that relate them to
-corresponding mapped stream features.
+themselves, are also attributed with identifiers (AusHydroID) that relate them to corresponding mapped stream features.
 |=======================================================================
 
 [#annexC_2]
