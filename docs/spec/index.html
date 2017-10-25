@@ -4252,9 +4252,7 @@ the flowpath, or opposite to this.</p>
 <div class="paragraph">
 <p>The River Referencing system uses the one-dimensional topological
 realization of catchment within the implied hydrologic complex such that
-the feature to be placed and the already located referent are nodes on
-the boundary of the same flowpath. Given that a flowpath realizes a
-catchment between inflow and outflow nodes, the feature of interest is
+the feature to be placed and the reference location are (located) on the same flowpath. Given that a flowpath realizes a catchment between inflow and outflow nodes, the feature of interest is
 placed some distance along a flowpath, while the location being used as
 a reference location is located at the upstream or downstream end of the
 flowpath. Using located referents in both directions allows placement of
@@ -4589,8 +4587,8 @@ or periodically contain water, without imposing a particular drainage
 pattern. This allows representation of the network, even if logically
 connected features are not connected at the representation level. If the
 realized catchment is connected with other catchments via hydro nexuses,
-the channel network is considered connected to the channel network
-realizing these catchments.</p>
+the channel network is considered to be connected to the channel networks
+that realize these catchments.</p>
 </div>
 <div class="paragraph">
 <p>HY_ChannelNetwork has <em>surfaceDepression</em> and <em>surfaceChannel</em>
@@ -5761,7 +5759,7 @@ downstream.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">right</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">located right-hand of the (reference) location when facing
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">located to the right-hand of the (reference) location when facing
 downstream.</p></td>
 </tr>
 <tr>
@@ -5814,12 +5812,12 @@ to each other; tributaries join at very acute angles.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">pinnate</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">featherlike, closely grouped , short tributaries (fine
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">featherlike, closely grouped, short tributaries (fine
 texture).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">radial</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">streams flow outward from center.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">streams that flow outward from a center.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">rectangular</p></td>
@@ -5854,20 +5852,20 @@ angles, secondary tributaries parallel main stem.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">conventional</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">accepted, used, or practiced by most people ('agreed by
-convention')</p></td>
+convention').</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">historical</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">restricted to or based on fact in history</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">restricted to or based on fact in history.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">official</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ordered or allowed by those in authority</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ordered or allowed by those in authority.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">vernacular</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">used in or suitable for speech, usually not used in formal
-writing</p></td>
+writing.</p></td>
 </tr>
 </tbody>
 </table>
@@ -5915,7 +5913,7 @@ AHGFContractedCatchment.<br></p>
 <p class="tableblock">Additionally, AHGF 'base-level' catchments, from which contracted
 catchments are derived, can be seen as a second set of conceptualized
 units of hydrology draining to a single common outflow and with a single
-inflow. These catchments are given a non-persistent identifier (HydroID)
+inflow. These catchments are attributed with a non-persistent identifier (HydroID)
 and like contracted catchments, their flow paths take part in AHGF
 topology tables (AHGFNetworkConnectivityDown and
 AHGFNetworkConnectivityUp). The polygon geometric representation of
@@ -5927,7 +5925,8 @@ these catchments is provided by AHGFCatchment.</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">All contracted catchment
 features are constrained to be dendritic in the AHGF. A contracted
 catchment&#8217;s outflow can only be received by a single downstream
-contracted catchment.</p></td>
+contracted catchment.</p>
+<p class="tableblock">While sub-sets of AHGF base-level catchments may be dendritic, these catchments on not constrained in the same way as contracted catchments and thus contain non-dendritic relationships.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_InteriorCatchment</p></td>
@@ -6237,7 +6236,7 @@ catchment polygons and other data keyed to the comid.</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_DendriticCatchment</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">comid catchment</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">NHDPlus catchments not
-following any diversions in the flow tables</p></td>
+following any diversions in the flow tables.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_InteriorCatchment</p></td>
@@ -6249,7 +6248,7 @@ contribute flow.</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_CatchmentAggregate</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">collection of comid catchments</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Including
-interior catchments and not following diversions in the flow tables</p></td>
+interior catchments and not following diversions in the flow tables.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_HydroNexus</p></td>
@@ -6288,7 +6287,7 @@ CatchmentArea.</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_CatchmentDivide</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">comid catchment polygon</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The polygon representing a
-comid catchment should be thought of as the CatchmentDivide</p></td>
+comid catchment should be thought of as the CatchmentDivide.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_CartographicRealization</p></td>
@@ -6447,8 +6446,8 @@ type relative position because it is a percent.</p></td>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This table assigns core features as defined in the INSPIRE Hydrography
-theme <a href="#EC2000">[2]</a> to HY_Features core concepts. It also indicates relationship
-between both terms and potential conditions in which they can be
+theme <a href="#EC2000">[2]</a> to HY_Features core concepts. It also indicates relationships
+between both terms and potential conditions by which they can be
 associated.</p>
 </div>
 <div class="paragraph">
@@ -6464,9 +6463,8 @@ can use this listing to understand how a particular dataset may relate
 to the HY_Features concepts. </p>
 </div>
 <div class="paragraph">
-<p>Note than in INSPIRE a base 'HydroObject' concept has been defined. Many
-INSPIRE hydrography Features mentioned below are specialization of this
-one. Thus, they inherit a hydroid attribute which targets the topic of
+<p>Note that in INSPIRE a base 'HydroObject' concept has been defined. Many of the
+INSPIRE hydrography Features mentioned below are a specialization of this concept. Thus, they inherit a hydroid attribute which targets the topic of
 multiple representations of the same object: '<em>An identifier that is
 used to identify a hydrographic object in the real world. It provides a
 'key' for implicitly associating different representations of the
@@ -6509,15 +6507,15 @@ object.</em>'</p>
 <p>Area having a common outlet for its surface runoff.</p>
 </div>
 <div class="paragraph">
-<p>NOTE 1 Regarding the different classifications of drainage basins, no
-distinction is made between drainage basins / sub-basins since this will
+<p>NOTE 1: Regarding the different classifications of drainage basins, no
+distinction is made between drainage basins and sub-basins since this will
 vary with application. It is possible to build basins from other basins.</p>
 </div>
 <div class="paragraph">
-<p>NOTE 2 The outlet of a drainage basin may be a canal or a lake.</p>
+<p>NOTE 2: The outlet of a drainage basin may be a canal or a lake.</p>
 </div>
 <div class="paragraph">
-<p>NOTE 3 Synonyms for drainage basin include: catchment; catchment area;
+<p>NOTE 3: Synonyms for drainage basin include: catchment; catchment area;
 drainage area; river basin; watershed.</p>
 </div></div></td>
 </tr>
@@ -6528,24 +6526,21 @@ drainage area; river basin; watershed.</p>
 <p>DrainageBasin</p>
 </div>
 <div class="paragraph">
-<p>In case that HY_Catchment is realized by HY_CatchmentArea</p>
-</div>
-<div class="paragraph">
-<p>With one outlet</p>
+<p>In case that HY_Catchment is realized by HY_CatchmentArea with one outlet</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div><div class="paragraph">
 <p>Area having a common outlet for its surface runoff.</p>
 </div>
 <div class="paragraph">
-<p>NOTE 1 Regarding the different classifications of drainage basins, no
-distinction is made between drainage basins / sub-basins since this will
+<p>NOTE 1: Regarding the different classifications of drainage basins, no
+distinction is made between drainage basins and sub-basins, since this will
 vary with application. It is possible to build basins from other basins.</p>
 </div>
 <div class="paragraph">
-<p>NOTE 2 The outlet of a drainage basin may be a canal or a lake.</p>
+<p>NOTE 2: The outlet of a drainage basin may be a canal or a lake.</p>
 </div>
 <div class="paragraph">
-<p>NOTE 3 Synonyms for drainage basin include: catchment; catchment area;
+<p>NOTE 3: Synonyms for drainage basin include: catchment; catchment area;
 drainage area; river basin; watershed.</p>
 </div></div></td>
 </tr>
@@ -6570,7 +6565,7 @@ of streams, rivers and, possibly, lakes into the sea at a single river
 mouth, estuary or delta.</p>
 </div>
 <div class="paragraph">
-<p>In INSPIRE, the largest 'DrainageBasin' in a system is a 'RiverBasin'</p>
+<p>In INSPIRE, the largest 'DrainageBasin' in a system is a 'RiverBasin'.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -6583,12 +6578,12 @@ mouth, estuary or delta.</p>
 <p>A node within the hydrographic network.</p>
 </div>
 <div class="paragraph">
-<p>NOTE May represent a physical confluence,
+<p>Note: May represent a physical confluence,
 bifurcation/confluence/vanishing point etc., or it may be associated
 with a hydrographic point of interest or facility.</p>
 </div>
 <div class="paragraph">
-<p>Note that INSPIRE mandates HydroNode to have a geometry (GM_Point)</p>
+<p>Note also that INSPIRE mandates HydroNode to have a geometry (GM_Point).</p>
 </div></div></td>
 </tr>
 <tr>
@@ -6599,25 +6594,25 @@ useCase)</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div><div class="paragraph">
 <p>In INSPIRE HydroNode and HydroPOI could (but not always) correspond to
 the representation of the same object. In case, they are disjoint
-representations, a choice will have to be made on a use case basis</p>
+representations, a choice will have to be made on a use case basis.</p>
 </div>
 <div class="paragraph">
 <p>HydroPOI def: A natural place where water appears, disappears or changes
 its flow.</p>
 </div>
 <div class="paragraph">
-<p>EXAMPLE Fluvial points (waterfall, cascade, rapids, breaker),
+<p>EXAMPLE: Fluvial points (waterfall, cascade, rapids, breaker),
 spring/water hole (spring, source, geyser, thermal spring, natural
 fountain, well, also fumarole, artesian), sinkhole (sinkhole, drainage
 loss).</p>
 </div>
 <div class="paragraph">
-<p>NOTE A hydro point of interest may create a flow constriction in the
+<p>Note: A hydro point of interest may create a flow constriction in the
 network.</p>
 </div>
 <div class="paragraph">
-<p>Note that INSPIRE does not consider monitoring devices (ex :
-hydrometricStation) as a specific HydroPOI</p>
+<p>Note that INSPIRE does not consider monitoring devices (ex:
+hydrometricStation) as a specific HydroPOI.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -6634,15 +6629,15 @@ hydrometricStation) as a specific HydroPOI</p>
 <p>Area having a common outlet for its surface runoff.</p>
 </div>
 <div class="paragraph">
-<p>NOTE 1 Regarding the different classifications of drainage basins, no
-distinction is made between drainage basins / sub-basins since this will
+<p>NOTE 1: Regarding the different classifications of drainage basins, no
+distinction is made between drainage basins and sub-basins since this will
 vary with application. It is possible to build basins from other basins.</p>
 </div>
 <div class="paragraph">
-<p>NOTE 2 The outlet of a drainage basin may be a canal or a lake.</p>
+<p>NOTE 2: The outlet of a drainage basin may be a canal or a lake.</p>
 </div>
 <div class="paragraph">
-<p>NOTE 3 Synonyms for drainage basin include: catchment; catchment area;
+<p>NOTE 3: Synonyms for drainage basin include: catchment; catchment area;
 drainage area; river basin; watershed.</p>
 </div></div></td>
 </tr>
@@ -6730,7 +6725,7 @@ through a hydrographic network.</p></td>
 <p>A segment of a watercourse within a hydrographic network.</p>
 </div>
 <div class="paragraph">
-<p>NOTE A watercourse link may be fictitious, with no direct correspondence
+<p>Note: A watercourse link may be fictitious, with no direct correspondence
 to a real-world object and included only to ensure a closed network.</p>
 </div></div></td>
 </tr>
@@ -6744,11 +6739,11 @@ to a real-world object and included only to ensure a closed network.</p>
 <p>A body of water that is entirely surrounded by land.</p>
 </div>
 <div class="paragraph">
-<p>NOTE It may occur in a natural terrain depression in which water
+<p>Note: It may occur in a natural terrain depression in which water
 collects, or may be impounded by a dam, or formed by its bed being
 hollowed out of the soil, or formed by embanking and/or damming up a
 natural hollow (for example: by a beaver dam). It may be connected to
-inflowing / outflowing watercourses or other standing waters.</p>
+inflowing or outflowing watercourses or other standing waters.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -6757,7 +6752,7 @@ inflowing / outflowing watercourses or other standing waters.</p>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div><div class="paragraph">
 <p>WatercourseLink</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A segment of a watercourse within a hydrographic network.  A
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A segment of a watercourse within a hydrographic network. A
 watercourse link may be fictitious, with no direct correspondence to a
 real-world object and included only to ensure a closed network.</p></td>
 </tr>
@@ -6804,8 +6799,8 @@ real-world object and included only to ensure a closed network.</p></td>
 <p>This is a descriptive mapping for the French National
 Service for Water Data and Reference-dataset Management (SANDRE) <a href="#SANDRE2010">[12]</a> on
 the basis of the data model describing the national dataset called 'BD
-Carthage' <a href="#SANDRE2017">[14]</a>. All element name used corresponds to the XML tag
-appearing in the data model (not attribute name appearing in BD
+Carthage' <a href="#SANDRE2017">[14]</a>. All element names used correspond to the XML tags
+appearing in the data model (and not the attribute names appearing in BD
 Carthage).</p>
 </div>
 <div class="paragraph">
@@ -6814,7 +6809,7 @@ HY_Features concepts and the SANDRE hydrologic feature dictionary for
 Hydrography.</p>
 </div>
 <div class="paragraph">
-<p>Please notice that terms for SANDRE are based on French words.</p>
+<p>Please note that terms for SANDRE are based on French words.</p>
 </div>
 <div class="sect2">
 <h3 id="annexF_1"><a class="anchor" href="#annexF_1"></a>F.1. Catchment Model</h3>
@@ -6839,11 +6834,10 @@ OR<br>
 SousSecteurHydro<br>
 OR<br>
 ZoneHydro</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SANDRE makes distinction between basins and various sub-basins that are
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SANDRE makes a distinction between basins and various sub-basins that are
 aggregated according to the national hydrographic codification scheme.
-All those levels can be seen as equivalent to 'contracted catchment' in
-AHGF in the sense that there is a contract on the catchment ID to
-represent a given catchment.</p></td>
+All those levels can be seen as being equivalent to 'contracted catchment' in the AHGF, in the sense that there is a contract on the catchment ID that
+represents a given catchment.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_DendriticCatchment</p></td>
@@ -6854,7 +6848,7 @@ OR<br>
 SousSecteurHydro<br>
 OR<br>
 ZoneHydro</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SANDRE: all catchments are dendritic</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SANDRE: all catchments are dendritic.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_InteriorCatchment</p></td>
@@ -6869,8 +6863,8 @@ OR<br>
 SecteurHydro<br>
 OR<br>
 SousSecteurHydro</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SANDRE: RegionHydro are aggregation of SecteurHydro that are aggregation
-of SousSecteurHydro that are aggregation of ZoneHydro</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SANDRE: RegionHydro are aggregations of SecteurHydro that are aggregations
+of SousSecteurHydro, which in turn are aggregations of ZoneHydro.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_HydroNexus</p></td>
@@ -6883,7 +6877,7 @@ NoeudHydrographique</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">NoeudHydrographique</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Can be seen as a specific NoeudHydrographique. SANDRE does not consider
 monitoring devices (ex : hydrometricStation) as a specific
-NoeudHydrographique</p></td>
+NoeudHydrographique.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_CatchmentRealization</p></td>
@@ -6906,9 +6900,9 @@ line with the meaning of CatchmentArea.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_CatchmentDivide</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">LimiteHydroBassin</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">LimiteHydroBassin is the boundary of highest catchments in the 
-catchments hierarchy. For France mainland, it basically corresponds to
-the 6 big watershed dividing it (Loire, Seine, É) . It has a linear
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">LimiteHydroBassin is the boundary of highest catchments in the
+catchment hierarchy. For the French mainland, it basically corresponds to
+the six big watersheds that divide it (Loire, Seine, É). Each has a linear
 representation.</p></td>
 </tr>
 <tr>
@@ -6936,13 +6930,13 @@ representation.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_HydrographicNetwork</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Not represented</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Within SANDRE Channel/Waterbody are not disjoint.</p>
-<p class="tableblock">SANDRE focuses HY_ Waterbody(ies) which identifiers are based on
-HY_Channel containing them.</p>
-<p class="tableblock">Those HY_Channel have HY_Waterbody(ies) which are permanent,
-intermittent, absent for a long period of time.</p>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Within SANDRE Channel and Waterbody are not separated.</p>
+<p class="tableblock">SANDRE focuses on HY_ Waterbody(ies) whos identifiers are based on
+the HY_Channel containing them.</p>
+<p class="tableblock">Such HY_Channel have HY_Waterbody(ies) which are permanent,
+intermittent and absent for a long period of time.</p>
 <p class="tableblock">Thus permanent identifiers assigned to HY_Channel(s) are usually used as
-'proxy' to refer to given well known body of waters (HY_WaterBody).</p></td>
+'proxy' to refer to a given well known body of water (HY_WaterBody).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_WaterBody</p></td>
@@ -6964,7 +6958,7 @@ aggregation of TronconHydrograElt.</p>
 OR<br>
 EltHydroSurface</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SANDRE: EntiteHydroSurface is an aggregation of EltHydroSurface. Both
-have a surfacic representation.</p></td>
+have a representation as a surface.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_Channel</p></td>
@@ -6985,15 +6979,15 @@ EltHydroSurface<br>
 OR<br>
 PointEauIsole<br></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SANDRE: EntiteHydroSurface is an aggregation of EltHydroSurface. Both
-have a surfacic representation.</p>
-<p class="tableblock">A subset of PointEauIsole can be used in case that a HY_Reservoir is not
-linked to the hydrographic network and is represented by a point</p></td>
+have a representation as a surface.</p>
+<p class="tableblock">A subset of PointEauIsole can be used in the case that a HY_Reservoir is not
+linked to the hydrographic network and is represented by a point.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_FlowPath</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">CoursEauPrincipal</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Each HY_Catchment equivalent in SANDRE (RegionHydro, É) identifies its
-main HY_ChannelNetwork which provides a hook to providing HY_FlowPath</p></td>
+main HY_ChannelNetwork, which provides a hook to providing a HY_FlowPath.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_LongitudinalSection</p></td>
@@ -7126,7 +7120,7 @@ a hydro nexus id. NHN does not track catchment or hydro nexus identity.</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_HydroLocation</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HydroJunction, man made feature and obstacle.</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Since linear referencing is no longer supported, the hydro junctions,
-man made features, and obstacles are simply a points that can be thought
+man made features, and obstacles are simply points that can be thought
 of as hydro locations without network location.</p></td>
 </tr>
 <tr>
@@ -7171,11 +7165,11 @@ drainage areas associated with hydrometric stations.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_HydrographicNetwork</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Waterbodies and single line watercourses that correspond to a collection
-of network linear flows</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The waterbodies and single line watercourses all have corresponding
-network linear flows. (Double line streams and lakes are waterbodies
+of network linear flows.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The waterbodies and single-line watercourses all have corresponding
+network linear flows (double-line streams and lakes are waterbodies
 that are also realized by skeleton lines, which are considered as
-inferred network linear flows.) As noted earlier though the NHN networks
+inferred network linear flows). As noted earlier though, the NHN networks
 are not tied to catchments or aggregations of catchments.</p></td>
 </tr>
 <tr>
@@ -7183,7 +7177,7 @@ are not tied to catchments or aggregations of catchments.</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Waterbodies and single line watercourses.</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Waterbody is used specifically for hydrographic features that are
 represented by polygons: lakes and double-line streams, defined by banks
-and delimiters. Single line watercourses also fall under HY_WaterBody.</p></td>
+and delimiters. Single-line watercourses also fall under HY_WaterBody.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_ChannelNetwork</p></td>
@@ -7199,7 +7193,7 @@ and delimiters. Single line watercourses also fall under HY_WaterBody.</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HY_Channel</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Not represented</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The NHN does not have channels as distinct from the hydrographic
-network. Specifically the properties lists for HY_Channel are not
+network. Specifically, the properties lists for HY_Channel are not
 available.</p></td>
 </tr>
 <tr>
