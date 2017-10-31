@@ -200,47 +200,50 @@ themselves, are also attributed with identifiers (AusHydroID) that relate them t
 |
 HY_Hydrographic Network
  |
-Subsets of AHGFNetworkStream and AHGFWaterbody
+AHGFNetworkStream (subtypes: NetworkFlowSegment & NetworkWaterAreaSegment)
+
+AHGFWaterbody
+
+AHGFMappedStream (subtypes: MappedFlowSegment & MappedWaterAreaSegment)
  |
-The collection of AHGFNetworkStream flow segment and water area segment
-features (subtypes: NetworkFlowSegment & NetworkWaterAreaSegment) and
-on-network AHGFWaterbody features within a particular contracted
-catchment (identified by a single ConCatID) can be seen to realize that
-catchment as its hydrographic network.
+The collection of AHGFNetworkStream flow segment and water area segment features and on-network AHGFWaterbody features within a particular contracted catchment (identified by a single ConCatID) can be seen to realize that catchment as its hydrographic network.
+
+Similarly, collections of AHGFMappedStream flow segment and water area segment features (related to AHGFNetworkStream via AusHydroID) together with on-network AHGFWaterbody features, provide an alternative (cartographic) representation in the AHGF.
 
 |HY_WaterBody
  |
 AHGFNetworkStream
- 
-(subtypes: NetworkFlowSegment & NetworkWaterAreaSegment) and
+(subtypes: NetworkFlowSegment & NetworkWaterAreaSegment)
+
 AHGFWaterbody
+
+AHGFMappedStream
+(subtypes: MappedFlowSegment & MappedWaterAreaSegment)
  |
 AHGFNetworkStream flow segment and water area segment features and
 AHGFWaterbody features represent water bodies in the AHGF. These
 features indicate that there is water contained in some channel or other
 containing feature.
 
+Again, alternative representations of flow segment and water area segment features are provided by AHGFMappedStream.
+
 |
 HY_ChannelNetwork
  |
 AHGFNetworkStream
- 
-(subtype: NetworkArtificialFlowSegment)
+
  |
-While a complete channel network is not represented in the AHGF, the
-subset of artificial flow segment features from AHGFNetworkStream may be
-seen as being a partial channel network. Importantly, for a particular
-contracted catchment (identified by a single ConCatID) the collection of
-artificial flow segment features can be seen to realize that catchment.
-However, the HY_HydroNetwork realization for a catchment is only
-complete (i.e. fully connected) when the Hydrographic Network and
-Channel Network realizations are combined.
+When AHGFNetworkStream artificial flow segment features are combined with flow segment and water area segment features, this forms the equivalent of a complete channel network in the AHGF. THe collection of such features within a particular contracted catchment (identified by a single ConCatID) can be seen to realize that catchment as its channel network.
+
+Note: AHGFMappedStream artificial flow segment features are NOT equivalent to those in AHGFNetworkStream and have a different usage. 
 
 |
 HY_Depression
  |
 Not represented
+
  |
+Artificial flow segment features of AHGFNetworkStream are depressions in the land surface, as derived from a particular digital elevation model, where water would theoretically accumulate and flow along channels, connecting up with flow segments and water area segments to form a complete network.  
  
 |
 HY_Channel
@@ -249,9 +252,7 @@ AHGFNetworkStream
  
 (subtype: NetworkArtificialFlowSegment)
  |
-The subset of artificial flow segment features from AHGFNetworkStream
-can be thought of as a partial channel network in that they indicate
-where water may flow, even though not normally present.
+Artificial flow segment features from AHGFNetworkStream represent depressions in the land surface (according to particular digital elevation model) where water may flow, even though not normally present. When combined with the other features from the same feature class, this allows representation of the entire logical network, from source to sink (e.g. headwaters to coast).
 
 |
 HY_Reservoir
@@ -260,7 +261,7 @@ AHGFWaterbody
  
 (subtype: Reservoir)
  |
-The subset of reservoir features from AHGFWaterbody.
+Features from AHGFWaterbody with the subtype Reservoir. A subset of these features have additional attribution linking them to the Australian Bureau of Meteorology's Water Storage product.
 
 |
 HY_FlowPath
