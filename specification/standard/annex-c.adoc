@@ -22,6 +22,7 @@ feature implementation.
 |HY_Catchment
  |
 Contracted Catchment +
+
 'Base-level' Catchment
  |
 A contracted catchment is a catchment identified via ConCatID, which
@@ -60,6 +61,7 @@ While sub-sets of AHGF base-level catchments may be dendritic, these catchments 
 HY_InteriorCatchment
  |
 Contracted Catchment +
+
 Subset of 'Base-level' Catchments
  |
 Contracted catchments that normally do not contribute flow to a
@@ -74,6 +76,7 @@ no realized FlowPath or HydroNexus.
 HY_CatchmentAggregate
  |
 Collections of Contracted Catchment +
+
 Collections of 'Base-level' Catchments
 
  |
@@ -92,6 +95,7 @@ aggregate.
 HY_HydroNexus
  |
 Subset of Contracted Node
+
 AHGFNetworkNode
  |
 A hydrologic significant
@@ -108,6 +112,7 @@ Inflow (FromNode) and outflow (ToNode) nodes of 'Base-level' catchments with a r
 HY_HydroLocation
  |
 AHGFNode +
+
 AHGFNetworkNode
 
  |
@@ -166,6 +171,7 @@ AHGFCatchment and the DEM (9 second or 1 second) from which they are derived, al
 |HY_CatchmentDivide
  |
 AHGFContractedCatchment +
+
 AHGFCatchment
  |
 The AHGFContractedCatchment polygon feature that realizes a contracted
@@ -249,7 +255,6 @@ Artificial flow segment features of AHGFNetworkStream are depressions in the lan
 HY_Channel
  |
 AHGFNetworkStream
- 
 (subtype: NetworkArtificialFlowSegment)
  |
 Artificial flow segment features from AHGFNetworkStream represent depressions in the land surface (according to particular digital elevation model) where water may flow, even though not normally present. When combined with the other features from the same feature class, this allows representation of the entire logical network, from source to sink (e.g. headwaters to coast).
@@ -258,7 +263,6 @@ Artificial flow segment features from AHGFNetworkStream represent depressions in
 HY_Reservoir
  |
 AHGFWaterbody
- 
 (subtype: Reservoir)
  |
 Features from AHGFWaterbody with the subtype reservoir. A subset of these features have additional attribution linking them to the Australian Bureau of Meteorology's Water Storage product.
@@ -308,26 +312,22 @@ AHGFNode
 
 AHGFGhostNode
 
- |In the AHGF, hydrometric features are the combination of AHGFGhostNode features and those AHGFNode ghost node features that realize contracted nodes representing hydrometric stations. Thus, from a AHGF perpective, a hydrometric network can be seen as the collection of logically connected hydrometric ghost node features (from both classes), which provides a specific realization of a contracted catchment, which monitors that catchment.
+ |In the AHGF, hydrometric features are the combination of AHGFGhostNode features and those AHGFNode ghost node features that realize contracted nodes representing hydrometric stations. Thus, from a AHGF perpective, a hydrometric network can be seen as the collection of logically connected hydrometric ghost node features (from both classes), which provides a specific realization of a contracted catchment (that monitors that catchment).
 
 |HY_HydrometricFeature |
 AHGFNode
-
 (subtype: GhostNode)
 
 AHGFGhostNode
 
  |
-Hydrometric features in the AHGF are ghost node monitoring locations that realize contracted catchments either seperately (AHGFNode ghost nodes) or as part of a hydrometric network (AHGFGhostNode + AHGFNode ghost nodes). AHGFNode ghost node features are hydrometric features that act in the role of inflow and outflow hydro nexus for contracted catchments. Ghost node features of the AHGFGhostNode class are reference locations for hydrometric stations for which a hydro nexus has not (yet) been defined.
+Hydrometric features in the AHGF are ghost node monitoring locations that realize contracted catchments either seperately (AHGFNode ghost nodes), or as part of a hydrometric network (AHGFGhostNode + AHGFNode ghost nodes). AHGFNode ghost node features are hydrometric features that act in the role of inflow and outflow hydro nexus for contracted catchments. Ghost node features of the AHGFGhostNode class are reference locations for hydrometric stations for which a hydro nexus has not (yet) been defined.
 
 Note: While hydrometric features were included in earlier versions of
 the AHGF, version 3 products were the first to see them included as
-realizations of contracted nodes (i.e. to act in the role of inflow and
-outflow for contracted catchments).
+realizations acting in the role of inflow and
+outflow for contracted catchments.
 
 |HY_IndirectPosition |Not represented 
-|Measures are not yet explicitly
-included in the AHGF. Note that monitoring stations are located 'on
-river' via realizations of contracted nodes (AHGFNode) and thus act in
-the role of inflow and outflow for contracted catchments.
+|Measures are not explicitly included in the AHGF. Note however, that representative locations (AHGFGhostNode) for hydrometric stations without a corresponding hydro nexus are provided 'on river'. Thus, indirect position, as for example, a percentage of distance from a (inflow/outflow) referent along a flowpath, would be relatively straightforward to generate for said features.
 |=======================================================================
