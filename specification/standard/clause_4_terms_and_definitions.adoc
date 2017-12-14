@@ -104,11 +104,11 @@ stream bed in a vertical plane link:#WMO2016[[9\]].
 Documented value of some characteristics of a real-world phenomenon.
 
 === data set (also dataset)
-Data compiled and arranged into a set. Used in its concatenated form to 
+Data compiled and arranged into a set. Used in its concatenated form to
 indicate a specific dataset, or as data set, for non-specific sets of data.
 
 === data product
-Data set compiled for a specific purpose, e.g. for global dissemination using 
+Data set compiled for a specific purpose, e.g. for global dissemination using
 Web services.
 
 === dendritic catchment
@@ -120,7 +120,7 @@ and larger streams.
 
 === depression
 Landform lower than the surrounding land and partially or completely
-closed that is able to but does not necessarily contain water.
+closed that is able to, but does not necessarily, contain water.
 
 === domain feature
 Feature of a type defined within a particular application domain. [ISO
@@ -168,11 +168,11 @@ through using the synonym __flow line__ to express the geometric
 property of a flowpath.
 
 === hydrographic network
-Aggregate of rivers and other permanent or temporary watercourses, and 
+Aggregate of rivers and other permanent or temporary watercourses, and
 also lakes and reservoirs [WMO, 2016].
 
 [NOTE]
-Not to be confused with the network of hydrological stations and observing 
+Not to be confused with the network of hydrological stations and observing
 posts.
 
 === hydrologic complex
@@ -200,7 +200,8 @@ catchments' flowpaths. Topologically, a hydro-location can be understood
 as an inlet or outlet node located at the end of a flowpath edge. The
 hydrologic location is usually represented as a geometric point.
 
-NOTE: With respect to the river referencing system described in this
+[NOTE]
+With respect to the river referencing system described in this
 standard, a hydro-location feature can correspond to either the referent
 that specifies a 'known, already referenced location on the linear
 element' as described in the OGC Abstract Specification Topic 19, Linear
@@ -243,11 +244,11 @@ beings. link:#WMO2016[[9\]]
 Feature of a type which denotes a physical structure intended to observe
 properties of a hydrologic feature.
 
-[NOTE] 
+[NOTE]
 This definition references the definition of a _hydrometric
 station_ at which data on water in rivers, lakes or reservoirs are
-obtained on physical and chemical properties of water link:#WMO2016[[9\]]. 
-A hydrometric feature may be a composite station configured by arranging 
+obtained on physical and chemical properties of water link:#WMO2016[[9\]].
+A hydrometric feature may be a composite station configured by arranging
 several monitoring components. Used to sample a hydrologic feature, a
 hydrometric feature may be considered a _sampling feature_ as defined in
 the ISO Observation model. A sampling feature is described in general in
@@ -285,7 +286,7 @@ in sinks or lakes not connected to streams link:#WMO2016[[9\]].
 === longitudinal section (of a stream)
 Vertical section of a stream in longitudinal direction. This definition
 is rooted in the definition of a _longitudinal section_ along a
-channel at its center line link:#WMO2016[[9\]], but generalized for all 
+channel at its center line link:#WMO2016[[9\]], but generalized for all
 types of vertical section along a line.
 
 === longitudinal section (of a stream bed)
@@ -363,7 +364,6 @@ flowing groundwater link:#WMO2016[[9\]].
 Mass of water distinct from other masses of water link:#WMO2016[[9\]].
 
 === watercourse
-Natural or man-made channel through or along which water may flow 
-link:#WMO2016[[9\]], including large interstices in the ground, such 
+Natural or man-made channel through or along which water may flow
+link:#WMO2016[[9\]], including large interstices in the ground, such
 as cave, cavern or a group of these in karst terrain.
-

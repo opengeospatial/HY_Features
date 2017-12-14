@@ -92,15 +92,15 @@ are defined as instances of the general feature metaclass with their own
 sets of typical characteristics (property types and constraints) such as
 attributes, associations, or operations. +
 
-As shown in link:#figure1[Figure 1], the HY_Features conceptual model 
-defines instances of the general feature metaclass specific to the hydrology 
+As shown in link:#figure1[Figure 1], the HY_Features conceptual model
+defines instances of the general feature metaclass specific to the hydrology
 domain. A general HY_HydroFeature type is defined to carry properties such as
 identifier and name that all hydrologic features should have. Specific
 feature types are then derived from HY_HydroFeature to reflect different
 aspects of hydrology and carry properties specific to each aspect.
-link:#figure1[Figure 1] also illustrates that HY_Features features can 
-fill the role of features-of-interest or sampling features for hydrologic 
-observation data conforming to the Observation and Measurement (O&M) model 
+link:#figure1[Figure 1] also illustrates that HY_Features features can
+fill the role of features-of-interest or sampling features for hydrologic
+observation data conforming to the Observation and Measurement (O&M) model
 (ISO 19156:2011) or to hydro-specific O&M profiles such as in the OGC
 WaterML 2' suite of water-related standards. +
 
