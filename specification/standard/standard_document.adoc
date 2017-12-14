@@ -18,11 +18,11 @@
 |{set:cellbgcolor:#FFFFFF}
 |[big]*Open Geospatial Consortium*
 |Submission Date: 2017-08-17
-|Approval Date:   <yyyy-mm-dd>
+|Approval Date:   2017-10-16
 |Publication Date:   <yyyy-mm-dd>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
 |Internal reference number of this OGC(R) document:    14-111r6
-|Version: 0.11
+|Version: 1.0
 |Category: OGC(R) Implementation Standard
 |Editor:   David Blodgett, Irina Dornblut
 |===
@@ -35,7 +35,7 @@
 [cols = "^", frame = "none", grid = "none"]
 |===
 |*Copyright notice*
-|Copyright (C) 2016 Open Geospatial Consortium
+|Copyright (C) 2017 Open Geospatial Consortium
 |To obtain additional rights of use, visit http://www.opengeospatial.org/legal/
 |===
 
@@ -44,15 +44,13 @@
 |*Warning*
 |===
 
-This document is not an OGC Standard. This document is distributed for review and comment. This document is subject to change without notice and may not be referred to as an OGC Standard.
-
-Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
+This document is an OGC Member approved international standard.  This document is available on a royalty free, non-discriminatory basis. Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
 
 [width = "50%", grid = "none"]
 |===
 |Document type:   	OGC® Standard
-|Document subtype:   	if applicable
-|Document stage:   	Draft
+|Document subtype:   
+|Document stage:   	Approved
 |Document language: 	English
 |===
 
