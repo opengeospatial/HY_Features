@@ -15,7 +15,7 @@ Model_. +
 
 This document introduces the HY_Features conceptual model only. The
 normative model is a machine-readable UML artifact published by the OGC
-in conjunction with this document at: #*[insert URL here]*#. Clause 7 of
+in conjunction with this document at: http://docs.opengeospatial.org/is/14-111r6/uml/. Clause 7 of
 this document presents requirements classes (ways of conforming to the
 conceptual model) and requirements for model implementations to meet in
 order to be considered conformant with the conceptual model. Conformance

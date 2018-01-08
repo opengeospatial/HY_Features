@@ -6,7 +6,7 @@ XML schema, or special notes regarding how to read the document.
 === Identifiers
 The normative provisions in this specification are denoted by the URI
 
-http://www.opengis.net/spec/{standard}/{m.n}
+http://www.opengis.net/spec//hy-features/1.0
 
 All requirements and conformance tests that appear in this document are
 denoted by partial URIs which are relative to this base.
@@ -45,7 +45,7 @@ appropriate, terms from this glossary are applied to the feature concepts
 in this standard to capture meaning and contextual relationships. The synonym
 approach widely used in this glossary is interpreted as signifying that
 synonymous terms are not necessarily synonymous in every respect. Differences
-in terminology were explored through reconciling the explicit definitions 
+in terminology were explored through reconciling the explicit definitions
 documented in the glossary with usage reflected in various data sets and
 products. The accepted terms were augmented with the relationships inferred
 from other terminology in order to define complex terms that do not clearly

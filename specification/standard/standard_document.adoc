@@ -19,8 +19,8 @@
 |[big]*Open Geospatial Consortium*
 |Submission Date: 2017-08-17
 |Approval Date:   2017-10-16
-|Publication Date:   <yyyy-mm-dd>
-|External identifier of this OGC(R) document: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
+|Publication Date:   2018-01-08
+|External identifier of this OGC(R) document: http://www.opengis.net/doc/IS/hy-features/1.0
 |Internal reference number of this OGC(R) document:    14-111r6
 |Version: 1.0
 |Category: OGC(R) Implementation Standard
@@ -35,7 +35,7 @@
 [cols = "^", frame = "none", grid = "none"]
 |===
 |*Copyright notice*
-|Copyright (C) 2017 Open Geospatial Consortium
+|Copyright (C) 2018 Open Geospatial Consortium
 |To obtain additional rights of use, visit http://www.opengeospatial.org/legal/
 |===
 
