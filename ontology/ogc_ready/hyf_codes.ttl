@@ -1,0 +1,231 @@
+@prefix hyf:   <https://www.opengis.net/def/hy_features/ontology/hyf/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hyfcode: <https://www.opengis.net/def/hy_features/ontology/hyf/code/> .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_NameUsage/vernacular>
+        a                hyf:HY_NameUsage ;
+        skos:definition  "used in or suitable for speech, usually not used in formal writing."@en ;
+        skos:inScheme    hyfcode:HY_NameUsage .
+
+hyfcode:HY_DistanceDescription
+        a                skos:ConceptScheme ;
+        dct:isFormatOf   hyf:HY_DistanceDescription ;
+        skos:definition  "list of general terms commonly used in hydrology to describe a spatial relationship between two locations.\r\n\r\nIf required, an implementation should use terms from this code list, defined specifically to conform to a terminology common in the hydrology domain. Note that alternative code lists may be used but should be related to the terms in but should be related to the terms in this code list using an appropriate formalism."@en .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/left>
+        a                hyf:HY_DistanceDescription ;
+        skos:definition  "located left-hand of the (reference) location when facing downstream."@en ;
+        skos:inScheme    hyfcode:HY_DistanceDescription .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/injectionWell>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "Recharge well that is sunk into an aquifer and used for direct injection of water distinguished from an infiltration well. \r\n<i>(Source: injectionWell. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0677EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/inletStructure>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "structure admitting water supplies from the source or through an intake structure built upstream. \r\n<i>(Source: inlet. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0679EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+hyfcode:HY_NameUsageCollection
+        a            skos:Collection ;
+        skos:member  <https://www.opengis.net/def/hy_features/code/hyf/code/HY_NameUsage/vernacular> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_NameUsage/official> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_NameUsage/historical> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_NameUsage/conventional> .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/weir>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "Overflow structure which may be used for controlling upstream water level or for measuring discharge or for both.\r\n<i>(Source: weir. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF1396EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/middle>
+        a                hyf:HY_DistanceDescription ;
+        skos:definition  "located in the middle between two (reference) locations."@en ;
+        skos:inScheme    hyfcode:HY_DistanceDescription .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/sinkhole>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "place where water disappears underground in a limestone region. It generally implies water loss in a closed depression or blind valley. \r\n<i>(Source: sink hole. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF1116EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_NameUsage/historical>
+        a                hyf:HY_NameUsage ;
+        skos:definition  "restricted to or based on fact in history."@en ;
+        skos:inScheme    hyfcode:HY_NameUsage .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/upstream>
+        a                hyf:HY_DistanceDescription ;
+        skos:definition  "located upstream of the (reference) location, e.g. in the direction towards the source of a stream."@en ;
+        skos:inScheme    hyfcode:HY_DistanceDescription .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/downstream>
+        a                hyf:HY_DistanceDescription ;
+        skos:definition  "located downstream of the (reference) location, e.g. in the direction of the current in a river or stream."@en ;
+        skos:inScheme    hyfcode:HY_DistanceDescription .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/riverMouth>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "place of discharge of a river into a sea or a lake. \r\n<i>(Source: river mouth. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF1043EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/at>
+        a                hyf:HY_DistanceDescription ;
+        skos:definition  "located at the (reference) location"@en ;
+        skos:inScheme    hyfcode:HY_DistanceDescription .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/spring>
+        a                hyf:HY_HydroLocationType ;
+        rdfs:label       "source"@en ;
+        skos:definition  "place where water flows naturally from a rock or soil onto land or into a body of surface water. \r\n<i>(Source: spring. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF1185EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/intake>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "structure or site, the purpose of which is to control, regulate, divert, and admit water directly from the source, through an inlet built upstream. \r\n<i>(Source: intake. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0684EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/dam>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "barrier constructed across a valley for impounding water or creating a reservoir. \r\n<i>(Source: dam. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0285EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+[ a                    owl:AllDifferent ;
+  owl:distinctMembers  ( <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/barrage> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/bifurcation> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/catchmentOutlet> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/confluence> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/dam> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/diversionOfWater> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/extractionWell> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/fork> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/hydrometricStation> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/infiltrationWell> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/injectionWell> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/inletStructure> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/intake> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/outletStructure> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/ponor> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/pourPoint> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/rapids> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/referenceClimatologicalStation> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/riverMouth> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/sinkhole> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/source> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/spring> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/waterfall> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/weir> )
+] .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/right>
+        a                hyf:HY_DistanceDescription ;
+        skos:definition  "located right-hand of the (reference) location when facing downstream."@en ;
+        skos:inScheme    hyfcode:HY_DistanceDescription .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/confluence>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "joining, or the place of junction, of two or more streams.\r\n<i>(Source: confluence. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0235EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+hyfcode:HY_HydroLocationType
+        a                skos:ConceptScheme ;
+        dct:isFormatOf   hyf:HY_HydroLocationType ;
+        skos:definition  "terms identifying a Hydro Location determined to realize the conceptual nexus.\r\n\r\nIf required, an implementation should use terms from this code list, defined specifically to conform to a terminology common in the hydrology domain. Note that alternative code lists may be used but should be related to the terms in but should be related to the terms in this code list using an appropriate formalism.\r\n\r\n<b>\r\n</b>"@en .
+
+hyfcode:HY_NameUsage  a  skos:ConceptScheme ;
+        dct:isFormatOf   hyf:HY_NameUsage ;
+        skos:definition  "terms used to indicate the type of name usage.\r\n\r\nIf required, an implementation should use terms from this code list, defined specifically to conform to a terminology common in the hydrology domain. Note that alternative code lists may be used but should be related to the terms in but should be related to the terms in this code list using an appropriate formalism."@en .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/fork>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "Place where a stream divides into two or more streams, contrary to confluence where two or more streams flow together to form a larger stream. \r\n<i>\r\n</i><i>(Source: fork. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0499EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+[ a                    owl:AllDifferent ;
+  owl:distinctMembers  ( <https://www.opengis.net/def/hy_features/code/hyf/code/HY_NameUsage/conventional> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_NameUsage/historical> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_NameUsage/official> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_NameUsage/vernacular> )
+] .
+
+<http://hyfeature.org/def/hydrofeature/hyf/code>
+        a       owl:Ontology .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/bifurcation>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "division of a stream into two branches.\r\n<i>(Source: bifurcation. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0131EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/waterfall>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "vertical fall or the very steep descent of a stream of water. \r\n<i>(Source: waterfall. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF1365EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/between>
+        a                hyf:HY_DistanceDescription ;
+        skos:definition  "located between two (reference) locations"@en ;
+        skos:inScheme    hyfcode:HY_DistanceDescription .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/pourPoint>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "catchment outlet specifically defined to delineate a catchment upslope from that point."@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+hyfcode:HY_HydroLocationTypeCollection
+        a            skos:Collection ;
+        skos:member  <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/ponor> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/pourPoint> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/inletStructure> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/sinkhole> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/outletStructure> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/hydrometricStation> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/diversionOfWater> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/barrage> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/bifurcation> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/riverMouth> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/referenceClimatologicalStation> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/intake> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/dam> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/fork> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/weir> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/spring> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/confluence> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/waterfall> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/rapids> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/injectionWell> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/catchmentOutlet> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/extractionWell> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/source> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/infiltrationWell> .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/barrage>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "barrier across a stream provided with a series of gates or other control mechanisms to control the water-surface level upstream, to regulate the flow or to divert water supplies into a canal.\r\n<i>(Source: barrage. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0110EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/ponor>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "hole or opening in the bottom or side of a depression where a surface stream or lake flows either partially or completely underground into a karst groundwater system.\r\n<i>(Source: ponor. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0925N.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/infiltrationWell>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "recharge well that is sunk only into the unsaturated zone distinguished from an injection well.\r\n<i>(Source: infiltrationWell. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0670EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+hyfcode:HY_DistanceDescriptionCollection
+        a            skos:Collection ;
+        skos:member  <https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/upstream> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/right> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/nearby> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/middle> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/left> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/downstream> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/between> , <https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/at> .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/referenceClimatologicalStation>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "climatological station the data of which are intended for the purpose of determining climatic trends. This requires long periods (not less than thirty years) of homogeneous records, where man-made environmental changes have been and/or are expected to remain at a minimum. Ideally the records should be of sufficient length to enable the identification of secular changes of climate. (TR) \r\n<i>(Source: reference climatological station. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0998EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/hydrometricStation>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "station at which data on water in rivers, lakes or reservoirs are obtained on one or more of the following elements: stage, streamflow, sediment transport and deposition, water temperature and other physical properties of water, characteristics of ice cover and chemical properties of water.\r\n<i>(Source: hydrometric station. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0627EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_NameUsage/official>
+        a                hyf:HY_NameUsage ;
+        skos:definition  "ordered or allowed by those in authority."@en ;
+        skos:inScheme    hyfcode:HY_NameUsage .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/rapids>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "reach of a stream where the flow is very swift and shooting, and where the surface is usually broken by obstructions, but has no actual waterfall or cascade. \r\n<i>(Source: rapids. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0980EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_NameUsage/conventional>
+        a                hyf:HY_NameUsage ;
+        skos:definition  "accepted, used, or practiced by most people ('agreed by convention')."@en ;
+        skos:inScheme    hyfcode:HY_NameUsage .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/nearby>
+        a                hyf:HY_DistanceDescription ;
+        skos:definition  "located in a short distance to the (reference) location."@en ;
+        skos:inScheme    hyfcode:HY_DistanceDescription .
+
+[ a                    owl:AllDifferent ;
+  owl:distinctMembers  ( <https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/at> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/between> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/downstream> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/left> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/middle> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/nearby> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/right> <https://www.opengis.net/def/hy_features/code/hyf/code/HY_DistanceDescription/upstream> )
+] .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/diversionOfWater>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "transfer of water from one watercourse to another, such watercourses being either natural or man-made. \r\n<i>(Source: diversion of water (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0349EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/source>
+        a                hyf:HY_HydroLocationType ;
+        rdfs:label       "origin"@en ;
+        skos:definition  "origin of river. \r\n<i>(Source: source. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF1166EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/outletStructure>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "opening (structure) through which water flows out or is extracted from a reservoir or stream. \r\n<i>(Source: outlet. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0868EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/extractionWell>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "shaft or hole sunk, dug or drilled into the earth to extract water. \r\n<i>(Source: well. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF1397EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
+
+<https://www.opengis.net/def/hy_features/code/hyf/code/HY_HydroLocationType/catchmentOutlet>
+        a                hyf:HY_HydroLocationType ;
+        skos:definition  "common outlet for the runoff drained by the catchment.\r\n<i>(Source: confluence. (2010). In International Glossary of Hydrology Online.Retrieved May 5, 2010, from http://webworld.unesco.org/water/ihp/db/glossary/glu/EN/GF0235EN.HTM)</i>"@en ;
+        skos:inScheme    hyfcode:HY_HydroLocationType .
