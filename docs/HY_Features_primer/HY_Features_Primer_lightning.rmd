@@ -1,0 +1,281 @@
+---
+title: "HY_Features Primer Lightning"
+author: "dblodgett@usgs.gov"
+date: "11/3/2017"
+output: beamer_presentation
+---
+
+
+<style>
+.br {
+    position: fixed;
+    top: 80%;
+    left: 100%;
+}
+
+.iu {
+    position: fixed;
+    top: 150px;
+}
+.footer {
+    color: black;
+    position: fixed;
+    top: 90%;
+    text-align:right;
+    width:5%;
+}
+.footer2 {
+    color: black;
+    position: fixed;
+    top: 90%;
+    text-align:right;
+    width:5%;
+}
+
+</style>
+
+WaterML2 Part 3: Surface Hydrology Features (HY_Features)
+========================================================
+author: David L. Blodgett
+date: 10-2017
+width: 1440
+height: 900
+A conceptual feature model for surface hydrology.
+
+For more info, visit the [SWG home page.](http://www.opengeospatial.org/projects/groups/hydrofeatswg)
+
+Longer version of this [presentation here.](http://opengeospatial.github.io/HY_Features/HY_Features_primer/HY_Features_Primer.html#/)
+
+Google: "HY_Features" and look for **Hydrologic Features SWG**
+
+<div class="br" style="margin-left:-300px; margin-top:-300px;">
+  <img src="catchmentNetwork.png"></img>
+</div>
+
+========================================================
+left: 60%
+
+# **What is HY_Features?**
+
+<div class="footer2">1</div>
+
+## HY_Features is a conceptual model describing hydrology features and their relationships
+
+- **catchments, drainage networks, rivers, lakes and waterbodies.**
+  
+- **Focus is on surface water features and the networks they form.**
+
+***
+<div class="br" style="margin-left:-700px; margin-top:-250px;">
+  <img src="intro_uml.png"></img>
+</div>
+
+========================================================
+
+# **What is HY_Features for?**
+
+## HY_Features provides a common concepts for hydrologic features.
+
+<div class="br" style="margin-left:-300px; margin-top:-300px;">
+  <img src="catchmentNetwork.png"></img>
+</div>
+
+<div class="footer">2</div>
+
+========================================================
+
+# **What kinds of features are in HY_Features?**
+
+### HY_Features includes:  
+- **hydrologic unit features**,  
+- the **junction features** that join them,  
+- and the **waterbody features** that drain them.
+
+<div align="center">
+<img src="fig5.png" height=420>
+</div>
+
+<div class="footer">3</div>
+
+========================================================
+
+# **What is a catchment?**
+<br>
+## Catchment is a holistic abstract notion of a hydrologic unit (a feature type).
+<br>
+### It is a physiographic unit defined by a common outlet (and potentially an upstream inlet.)
+
+<div class="br" style="margin-left:-300px; margin-top:-300px;">
+  <img src="catchmentNetwork.png"></img>
+</div>
+
+<div class="footer">4</div>
+
+========================================================
+
+# **What is a Hydro Nexus?**
+<br>
+## A place where two or more catchments interact  
+<br>
+<br>
+### Could be anywhere, typically confluences, or gages, etc.
+
+<div class="br" style="margin-left:-640px; margin-top:-200px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Koblenz_im_Buga-Jahr_2011_-_Deutsches_Eck_01.jpg/640px-Koblenz_im_Buga-Jahr_2011_-_Deutsches_Eck_01.jpg"></img>
+</div>
+
+<div class="footer">5</div>
+
+========================================================
+left: 70%
+
+<div class="footer2">6</div>
+<br>
+## **Waterbody, Hydro Location, Catchment, and Nexus**
+<br>
+
+1. **waterbody**
+
+***
+![](sequence_1.png)
+
+========================================================
+left: 70%
+
+<div class="footer2">7</div>
+<br>
+## **Waterbody, Hydro Location, Catchment, and Nexus**
+<br>
+
+1. **waterbody**
+2. **hydrologic locations**
+
+***
+
+![](sequence_2.png)
+
+========================================================
+left: 70%
+
+<div class="footer2">8</div>
+<br>
+## **Waterbody, Hydro Location, Catchment, and Nexus**
+<br>
+
+1. **waterbody**
+2. **hydrologic locations**
+3. **divide**
+
+***
+
+![](sequence_3.png)
+
+========================================================
+left: 70%
+
+<div class="footer2">9</div>
+<br>
+## **Waterbody, Hydro Location, Catchment, and Nexus**
+<br>
+
+1. **waterbody**
+2. **hydrologic locations**
+3. **divide** around **area**
+
+***
+
+![](sequence_4.png)
+
+========================================================
+left: 70%
+
+<div class="footer2">10</div>
+<br>
+## **Waterbody, Hydro Location, Catchment, and Nexus**
+<br>
+
+1. **waterbody**
+2. **hydrologic locations**
+3. **divide** around **area**
+4. Given ID: **catchment**
+
+***
+
+![](sequence_5.png)
+
+========================================================
+left: 70%
+
+<div class="footer2">11</div>
+<br>
+## **Waterbody, Hydro Location, Catchment, and Nexus**
+<br>
+
+1. **waterbody**
+2. **hydrologic locations**
+3. **divide** around **area**
+4. Given ID: **catchment**.
+5. Identified catchment has **hydrologic nexuses**
+
+***
+
+![](sequence_6.png)
+
+========================================================
+left: 70%
+
+<div class="footer2">12</div>
+<br>
+## **Waterbody, Hydro Location, Catchment, and Nexus**
+<br>
+
+Catchment *12* has inflow hydro nexus *34* and
+outflow hydro nexus *56*.
+
+Catchment *12* is realized as a *divide*, *area* and *flowpath*.
+
+Hydro nexuses *34*, and *56* are realized as hydro locations.
+
+***
+
+![](sequence_6.png)
+
+========================================================
+left: 70%
+
+<div class="footer2">13</div>
+<br>
+## **Waterbody, Hydro Location, Catchment, and Nexus**
+<br>
+<br>
+### There might be multiple representations for each realization.
+
+***
+
+![](sequence_7.png)
+
+========================================================
+left: 70%
+
+<div class="footer2">14</div>
+<br>
+**Networks of Waterbodies and/or Channels**
+
+Waterbody network - Blue
+
+Channel network - Orange
+
+Hydro nexus hydrologic locations - Black dots
+
+Catchment Boundaries - Black Boundary
+
+<div align="center">
+  <img src="rabbit_hole.jpg"><br>
+  HY_Features goes much much deeper...
+</div>
+
+
+***
+
+![](sequence_8.png)
+
