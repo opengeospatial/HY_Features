@@ -1,8 +1,8 @@
-# OGC® WaterML 2: Part 3 - Surface Hydrology Features (HY_Features) - Conceptual Model
+# OGC WaterML 2: Part 3 - Surface Hydrology Features (HY_Features) - Conceptual Model
 
-*The specification can be [accessed here.](http://docs.opengeospatial.org/is/14-111r6/14-111r6.html)*  
+**The specification can be [accessed here: http://docs.opengeospatial.org/is/14-111r6/14-111r6.html](http://docs.opengeospatial.org/is/14-111r6/14-111r6.html)**  
 
-HY\_Features has been published as part of the [WaterML2 suite](http://www.opengeospatial.org/standards/waterml) of standards. More information about the WaterML2 standards can be found on the [Hydrology Domain Working Group wiki](https://external.opengeospatial.org/twiki_public/HydrologyDWG/WebHome)  
+[HY\_Features](http://docs.opengeospatial.org/is/14-111r6/14-111r6.html) has been published as part of the [WaterML2 suite](http://www.opengeospatial.org/standards/waterml) of standards. More information about the WaterML2 standards can be found on the [Hydrology Domain Working Group wiki](https://external.opengeospatial.org/twiki_public/HydrologyDWG/WebHome)  
 
 ### More info about HY\_Features
 
