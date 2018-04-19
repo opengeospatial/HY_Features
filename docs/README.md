@@ -10,7 +10,7 @@ A primer presentation on HY\_Features is [available here.](http://opengeospatial
 
 An html view of the HY\_Features UML model is available on this web page. It is available in several packages [described in detail in section 7.1 of the specification](http://docs.opengeospatial.org/is/14-111r6/14-111r6.html#_the_hy_features_conceptual_model). These html pages contain UML diagrams used in the HY\_Features specification and hyperlinked descriptive content for classes and relations included in the model.  
 
-[HY\_Features_Model: relation to ISO and OGC Standards](http://opengeospatial.github.io/HY_Features/HTML_HYF/HY_Features_Model/)
-[HY\_HydroFeature: catchment / nexus relationships, naming, and river referencing](http://opengeospatial.github.io/HY_Features/HTML_HYF/HY_HydroFeature/)
-[HY\_SurfaceHydroFeature: waterbodies, bathymetry, and networks](http://opengeospatial.github.io/HY_Features/HTML_HYF/SurfaceHydroFeature/)
-[HY\_HydrometricNetwork: hydrometric features relationship to catchments](http://opengeospatial.github.io/HY_Features/HTML_HYF/HY_HydrometricNetwork/)
+[HY\_Features_Model: relation to ISO and OGC Standards](http://opengeospatial.github.io/HY_Features/HTML_HYF/HY_Features_Model/)  
+[HY\_HydroFeature: catchment / nexus relationships, naming, and river referencing](http://opengeospatial.github.io/HY_Features/HTML_HYF/HY_HydroFeature/)  
+[HY\_SurfaceHydroFeature: waterbodies, bathymetry, and networks](http://opengeospatial.github.io/HY_Features/HTML_HYF/HY_SurfaceHydroFeature/)  
+[HY\_HydrometricNetwork: hydrometric features relationship to catchments](http://opengeospatial.github.io/HY_Features/HTML_HYF/HY_HydrometricNetwork/)  
