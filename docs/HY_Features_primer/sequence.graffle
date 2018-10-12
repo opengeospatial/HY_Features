@@ -2874,7 +2874,7 @@ ID: 12}</string>
 			<key>Print</key>
 			<string>YES</string>
 			<key>View</key>
-			<string>YES</string>
+			<string>NO</string>
 		</dict>
 		<dict>
 			<key>Lock</key>
@@ -2884,7 +2884,7 @@ ID: 12}</string>
 			<key>Print</key>
 			<string>YES</string>
 			<key>View</key>
-			<string>YES</string>
+			<string>NO</string>
 		</dict>
 		<dict>
 			<key>Lock</key>
@@ -3019,7 +3019,7 @@ ID: 12}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2017-06-28 11:01:52 +0000</string>
+	<string>2018-04-20 00:27:19 +0000</string>
 	<key>Modifier</key>
 	<string>Blodgett, David L.</string>
 	<key>NotesVisible</key>
@@ -3100,7 +3100,7 @@ ID: 12}</string>
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{79, 0}, {1328, 877}}</string>
+		<string>{{0, 4}, {1280, 773}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -3114,15 +3114,15 @@ ID: 12}</string>
 		<key>SidebarWidth</key>
 		<integer>239</integer>
 		<key>VisibleRegion</key>
-		<string>{{-70, 70}, {716, 490}}</string>
+		<string>{{-225, 5.5}, {1026, 631}}</string>
 		<key>Zoom</key>
-		<real>1.5</real>
+		<real>1</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
 				<string>sequence</string>
+				<real>1</real>
 				<real>1.5</real>
-				<real>2</real>
 			</array>
 		</array>
 	</dict>
