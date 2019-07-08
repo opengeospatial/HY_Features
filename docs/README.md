@@ -34,3 +34,5 @@ An HTML export of the HY\_Features UML model is available on this web page. It i
 [HY\_HydrometricNetwork: hydrometric features relationship to catchments](https://opengeospatial.github.io/HY_Features/HTML_HYF/HY_HydrometricNetwork/)  
 
 [1] ISO 19150-2:2015 Geographic information -- Ontology -- Part 2: Rules for developing ontologies in the Web Ontology Language (OWL)
+
+HY_Features was developed in github. Going forward, issues with the specification and further developments related to HY_Features will be done in [this public github repository](https://github.com/opengeospatial/HY_Features).
