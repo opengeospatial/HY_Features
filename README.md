@@ -4,7 +4,7 @@ HY\_Features has been published as part of the [WaterML2 suite](https://www.open
 
 ## [Access the specification.](https://docs.opengeospatial.org/is/14-111r6/14-111r6.html)
 
-## [Access the schema/](http://docs.opengeospatial.org/is/14-111r6/uml/)
+## [Access the schema.](http://docs.opengeospatial.org/is/14-111r6/uml/)
 
 ### [Primer Slides.](https://opengeospatial.github.io/HY_Features/HY_Features_primer/HY_Features_Primer.html)  
 
