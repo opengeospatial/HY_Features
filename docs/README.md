@@ -6,10 +6,10 @@ HY\_Features has been published as part of the [WaterML2 suite](https://www.open
 
 ### [Primer Slides.](https://opengeospatial.github.io/HY_Features/HY_Features_primer/HY_Features_Primer.html)  
 
-### [OGC Definitions Server](https://www.opengis.net/def/appschema/hy_features/hyf/) 
+### [OGC Definitions Server](https://www.opengis.net/def/schema/hy_features/hyf) 
 
 **SKOS and OWL views of HY\_Features code lists, classes, and properties can be accessed from the OGC Definitions Server.**  
-The entry point to explore the definitions server is here: [https://www.opengis.net/def/appschema/hy_features/hyf/](https://www.opengis.net/def/appschema/hy_features/hyf/)  
+The entry point to explore the definitions server is here: [https://www.opengis.net/def/schema/hy_features/hyf](https://www.opengis.net/def/schema/hy_features/hyf )  
 
 The HY\_Features specification provides a conceptual model expressed in UML. There are multiple ways this can be made available to systems implementing these concepts. The most general view is to provide a set of definitions to ground elements of physical data models in the underlying semantics of the HY\_Features models. To make these definitions accessible, URI (Web address) identifiers for each concept defined by HY\_Features is needed.  Such a facility is provided by the OGC Definitions Server, which supports the OGC URI publication policies and provides human readable (HTML) and machine readable (JSON, XML, etc.) versions of definitions.
 
