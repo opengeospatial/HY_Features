@@ -1,4 +1,4 @@
-@prefix hyf:   <https://www.opengis.net/def/hy_features/ontology/hyf/> .
+@prefix hyf:   <https://www.opengis.net/def/schema/hy_features/hyf/> .
 @prefix dct:   <http://purl.org/dc/terms/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
