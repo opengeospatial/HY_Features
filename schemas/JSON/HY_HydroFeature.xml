@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShapeChangeConfiguration xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1" xmlns:sc="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1 http://shapechange.net/resources/schema/ShapeChangeConfiguration.xsd">
+	<input id="json">
+		<parameter name="inputModelType" value="EA7"/>
+		<parameter name="inputFile" value="HY_Features.qea"/>
+		<parameter name="appSchemaName" value="HY_HydroFeature"/>
+		<parameter name="publicOnly" value="true"/>
+		<parameter name="checkingConstraints" value="disabled"/>
+		<parameter name="sortedSchemaOutput" value="true"/>
+		<xi:include href="http://shapechange.net/resources/config/StandardAliases.xml"/>
+	</input>
+	<log>
+		<parameter name="reportLevel" value="INFO"/>
+		<parameter name="logFile" value="JSON/HydroFeature_log.xml"/>
+	</log>
+	<targets>
+		<Target class="de.interactive_instruments.ShapeChange.Target.JSON.JsonSchemaTarget" mode="enabled">
+			<targetParameter name="outputDirectory" value="JSON/"/>		
+			<targetParameter name="outputFilename" value="HY_HydroFeature"/>
+			<targetParameter name="sortedOutput" value="true"/>
+			<targetParameter name="entityTypeName" value="@type"/>
+			<targetParameter name="defaultEncodingRule" value="myGeoJson"/>
+			<targetParameter name="jsonBaseUri" value="https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature"/>
+			<rules>
+				<EncodingRule name="myGeoJson" extends="defaultGeoJson">
+					<rule name="rule-json-cls-basictype"/>
+					<rule name="rule-json-cls-codelist-uri-format"/>
+					<rule name="rule-json-cls-name-as-entityType"/>
+					<rule name="rule-json-cls-name-as-entityType-union"/>
+				</EncodingRule>
+			</rules>
+			<mapEntries xmlns="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1">
+				<MapEntry type="PT_FreeText" rule="*" targetType="string" param=""/>
+				<MapEntry type="Length" rule="*" targetType="number" param=""/>
+				<MapEntry type="EXT_LocalisedCharacterString" rule="*" targetType="string" param=""/>
+				<MapEntry type="EXT_KeywordRole" rule="*" targetType="string" param=""/>
+				<MapEntry type="EXT_IdentificationCode" rule="*" targetType="string" param=""/>
+				<MapEntry type="EXT_TransliterationStandardCode" rule="*" targetType="string" param=""/>
+				<MapEntry type="EXT_LocalisedName" rule="*" targetType="string" param=""/>
+				<MapEntry type="EXT_TemporalContext" rule="*" targetType="string" param=""/>
+				<MapEntry type="EXT_SpatialContext" rule="*" targetType="string" param=""/>
+				<MapEntry type="EXT_ClassificationContext" rule="*" targetType="string" param=""/>
+				<MapEntry type="DQ_RelativeInternalPositionalAccuracy" rule="*" targetType="number" param=""/>
+				<MapEntry type="ScopedName" rule="*" targetType="string" param=""/>
+				<MapEntry type="CI_ResponsibleParty" rule="*" targetType="string" param=""/>
+				<MapEntry type="CI_Citation" rule="*" targetType="string" param=""/>
+				<MapEntry type="Area" rule="*" targetType="number" param=""/>
+				<MapEntry type="RE_Version" rule="*" targetType="string" param=""/>
+				<MapEntry type="TM_Period" rule="*" targetType="string" param=""/>
+				<MapEntry type="DirectPosition" rule="*" targetType="string" param=""/>
+				<MapEntry type="DQ_PositionalAccuracy" rule="*" targetType="number" param=""/>
+				<MapEntry type="CRS" rule="*" targetType="number" param=""/>
+				<MapEntry type="Distance" rule="*" targetType="number" param=""/>
+				<MapEntry type="Angle" rule="*" targetType="number" param=""/>
+				<MapEntry type="QuantityRange" rule="*" targetType="number" param=""/>
+				<MapEntry type="MD_Distribution" rule="*" targetType="string" param=""/>
+				<MapEntry type="MD_Metadata" rule="*" targetType="string" param=""/>
+				<MapEntry type="Probability" rule="*" targetType="number" param=""/>
+				<MapEntry type="UnitOfMeasure" rule="*" targetType="string" param=""/>
+				<MapEntry type="Velocity" rule="*" targetType="number" param=""/>	
+				<MapEntry type="GeodeticCRS" rule="*" targetType="string" param=""/>
+				<MapEntry type="VerticalCRS" rule="*" targetType="string" param=""/>
+				<MapEntry type="Weight" rule="*" targetType="number" param=""/>
+				<MapEntry type="Presence" rule="*" targetType="boolean" param=""/> 
+			</mapEntries>
+			<xi:include href="https://shapechange.net/resources/config/StandardMapEntries_JSON.xml"/>
+		</Target>
+	</targets>
+</ShapeChangeConfiguration>

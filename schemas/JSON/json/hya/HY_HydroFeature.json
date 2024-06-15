@@ -1,0 +1,812 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json",
+  "$defs": {
+    "HY_Basin": {
+      "$anchor": "HY_Basin",
+      "allOf": [
+        {
+          "$ref": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json#HY_Catchment"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "upstreamBasin": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                },
+                "code": {
+                  "type": "string"
+                },
+                "inflowNode": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "outflowNode": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "outflowNode"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "HY_BasinAggregate": {
+      "$anchor": "HY_BasinAggregate",
+      "allOf": [
+        {
+          "$ref": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json#HY_Catchment"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "subBasin": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "subBasin"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "HY_Catchment": {
+      "$anchor": "HY_Catchment",
+      "allOf": [
+        {
+          "$ref": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json#HY_HydroFeature"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "containingCatchment": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "HY_CatchmentArea": {
+      "$anchor": "HY_CatchmentArea",
+      "allOf": [
+        {
+          "$ref": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json#HY_CatchmentRepresentation"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "HY_CatchmentBoundary": {
+      "$anchor": "HY_CatchmentBoundary",
+      "allOf": [
+        {
+          "$ref": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json#HY_CatchmentRepresentation"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "HY_CatchmentRepresentation": {
+      "$anchor": "HY_CatchmentRepresentation",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string"
+            },
+            "representedCatchment": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "@type",
+            "representedCatchment"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "HY_CrossSection": {
+      "$anchor": "HY_CrossSection",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string"
+            },
+            "upstreamCrossSection": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            },
+            "crossSectionPoint": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "@type"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "HY_DistanceToRefPoint": {
+      "$anchor": "HY_DistanceToRefPoint",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string"
+            },
+            "distanceValue": {
+              "type": "number"
+            },
+            "accuracyStatement": {
+              "type": "number"
+            },
+            "precisionStatement": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "@type",
+            "distanceValue"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "HY_FlowPath": {
+      "$anchor": "HY_FlowPath",
+      "allOf": [
+        {
+          "$ref": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json#HY_CatchmentRepresentation"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "HY_Glacier": {
+      "$anchor": "HY_Glacier",
+      "allOf": [
+        {
+          "$ref": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json#HY_HydroFeature"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "HY_HydroFeature": {
+      "$anchor": "HY_HydroFeature",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string"
+            },
+            "identifier": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            },
+            "name": {
+              "type": "array",
+              "items": {
+                "$ref": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json#HY_HydroFeatureName"
+              },
+              "uniqueItems": true
+            },
+            "context": {
+              "type": "array",
+              "items": {
+                "$ref": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json#HY_HydroFeatureContext"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "@type"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "HY_HydroFeatureContext": {
+      "$anchor": "HY_HydroFeatureContext",
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "hydroFeature": {
+          "type": "string",
+          "format": "uri"
+        },
+        "classification": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "spatialContext": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "temporalContext": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "@type"
+      ]
+    },
+    "HY_HydroFeatureName": {
+      "$anchor": "HY_HydroFeatureName",
+      "type": "string"
+    },
+    "HY_HydrographicNetwork": {
+      "$anchor": "HY_HydrographicNetwork",
+      "allOf": [
+        {
+          "$ref": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json#HY_Network"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "HY_IndirectPosition": {
+      "$anchor": "HY_IndirectPosition",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string"
+            },
+            "distanceToRefPoint": {
+              "type": "string",
+              "format": "uri"
+            },
+            "relativePosition": {
+              "type": "string",
+              "format": "uri"
+            },
+            "referencePoint": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            },
+            "mileageCS": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "@type",
+            "referencePoint"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "HY_LongitudinalSection": {
+      "$anchor": "HY_LongitudinalSection",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string"
+            },
+            "longitudinalSectionPoint": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "@type"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "HY_MileageSystemAxis": {
+      "$anchor": "HY_MileageSystemAxis",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string"
+            },
+            "precision": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "@type"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "HY_Network": {
+      "$anchor": "HY_Network",
+      "allOf": [
+        {
+          "$ref": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json#HY_CatchmentRepresentation"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "HY_Outfall": {
+      "$anchor": "HY_Outfall",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string"
+            },
+            "receivingBasin": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            },
+            "contributingBasin": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            },
+            "position": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "@type",
+            "contributingBasin",
+            "position"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "HY_RefPointType": {
+      "$anchor": "HY_RefPointType",
+      "type": "string",
+      "format": "uri"
+    },
+    "HY_ReferencePoint": {
+      "$anchor": "HY_ReferencePoint",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Point.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string"
+            },
+            "refPointType": {
+              "$ref": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json#HY_RefPointType"
+            },
+            "networkLocation": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "@type"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "HY_RelativePosition": {
+      "$anchor": "HY_RelativePosition",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string"
+            },
+            "description": {
+              "$ref": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json#HY_RelativePositionDescription"
+            },
+            "percentage": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "@type"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "HY_RelativePositionDescription": {
+      "$anchor": "HY_RelativePositionDescription",
+      "type": "string",
+      "format": "uri"
+    },
+    "HY_Reservoir": {
+      "$anchor": "HY_Reservoir",
+      "allOf": [
+        {
+          "$ref": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json#HY_HydroFeature"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "HY_RiverMileageCS": {
+      "$anchor": "HY_RiverMileageCS",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string"
+            },
+            "axis": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "@type",
+            "axis"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "HY_WaterBody": {
+      "$anchor": "HY_WaterBody",
+      "allOf": [
+        {
+          "$ref": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json#HY_HydroFeature"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "hydrographicNetwork": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "hydrographicNetwork"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "HY_WaterBodySegment": {
+      "$anchor": "HY_WaterBodySegment",
+      "allOf": [
+        {
+          "$ref": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json#HY_HydroFeature"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "streamCrossSection": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                },
+                "streamLongitudinalSection": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                },
+                "upstreamSegment": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                },
+                "downstreamSegment": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                },
+                "waterBody": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "fixedLandmark": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "waterBody"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "HY_WaterBodyStratum": {
+      "$anchor": "HY_WaterBodyStratum",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string"
+            },
+            "stratumType": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            },
+            "segment": {
+              "type": "string",
+              "format": "uri"
+            },
+            "storage": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "@type",
+            "segment"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "HY_Water_LiquidPhase": {
+      "$anchor": "HY_Water_LiquidPhase",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string"
+            },
+            "accumulatingWaterBody": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "@type"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "HY_Water_SolidPhase": {
+      "$anchor": "HY_Water_SolidPhase",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string"
+            },
+            "coveredWaterBody": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            },
+            "snowmelt": {
+              "type": "string",
+              "format": "uri"
+            },
+            "accumulatingGlacier": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "@type"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "HY_Watershed": {
+      "$anchor": "HY_Watershed",
+      "allOf": [
+        {
+          "$ref": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature.json#HY_CatchmentBoundary"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "outfall": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
